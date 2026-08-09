@@ -3,11 +3,13 @@ from __future__ import annotations
 import sys
 import unittest
 from pathlib import Path
+from types import SimpleNamespace
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
 
 from creator_classifier import classify_creator
+from run_sponsor_scan import _priority_score
 from sponsor_dedupe import ExistingSponsorIndex, normalize_domain
 from sponsor_detector import detect_sponsors, to_sponsor_lead
 from sponsor_models import ChannelRecord, VideoRecord
@@ -49,6 +51,30 @@ class SponsorScannerTests(unittest.TestCase):
         lead = to_sponsor_lead(video, None, detection, "Gaming", ["Gaming"])
         index = ExistingSponsorIndex(brand_keys={"domain:nordvpn.com"})
         self.assertTrue(index.is_duplicate_brand(lead))
+
+    def test_permanent_blocklist_blocks_brand_even_if_monday_is_empty(self):
+        video = self._video("This video is sponsored by NordVPN.\nhttps://nordvpn.com/creator")
+        detection = detect_sponsors(video, {})[0]
+        lead = to_sponsor_lead(video, None, detection, "Gaming", ["Gaming"])
+        index = ExistingSponsorIndex()
+        self.assertTrue(index.is_duplicate_brand(lead))
+
+    def test_priority_niches_rank_above_generic_sponsors(self):
+        gaming = SimpleNamespace(
+            sponsor_category="Gaming",
+            creator_genre="Gaming",
+            brand_name="New Gaming Brand",
+            brand_domain="newgamingbrand.com",
+            sponsor_subcategory="",
+        )
+        generic = SimpleNamespace(
+            sponsor_category="Other",
+            creator_genre="Entertainment",
+            brand_name="Generic Brand",
+            brand_domain="genericbrand.com",
+            sponsor_subcategory="",
+        )
+        self.assertGreater(_priority_score(gaming), _priority_score(generic))
 
     def test_marketing_subdomain_normalizes_to_brand_domain(self):
         self.assertEqual(normalize_domain("https://go.nordvpn.com/deal"), "nordvpn.com")
