@@ -33,9 +33,15 @@ class DetectedSponsor:
 
 
 def _clean_brand(value: str) -> str:
+    # Remove URLs and promo copy that can get captured after phrases such as
+    # "sponsored by you - check out Land Capital: https://...".
+    value = URL_RE.sub("", value or "")
+    check_out = re.search(r"\bcheck\s+out\s+(.+)$", value, re.I)
+    if check_out:
+        value = check_out.group(1)
     value = re.sub(r"\s+", " ", value).strip(" :-–—,;()[]")
     value = re.sub(r"\s+(?:using|and\s+get|to\s+get|for\s+more|with\s+code|use\s+code).*$", "", value, flags=re.I)
-    return value[:80].strip()
+    return value[:80].strip(" :-–—,;")
 
 
 def _external_urls(description: str) -> list[tuple[str, str]]:
