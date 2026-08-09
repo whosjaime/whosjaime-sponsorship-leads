@@ -56,15 +56,20 @@ def _temperature(score: int) -> str:
 def _enrich_lead(lead: SponsorLead, enricher: BrandEnricher) -> SponsorLead:
     if lead.brand_domain:
         enrichment = enricher.enrich(lead.brand_domain)
-        if enrichment.get("domain"):
-            lead.brand_domain = normalize_domain(enrichment["domain"])
-        lead.contact_email = enrichment.get("contact_email", "")
-        lead.email_type = enrichment.get("email_type", "")
-        lead.contact_source = enrichment.get("contact_source", "")
-        lead.sponsor_category = enrichment.get("category", "Other")
-        lead.sponsor_subcategory = enrichment.get("subcategory", "")
+        if enrichment.domain:
+            lead.brand_domain = normalize_domain(enrichment.domain)
+        lead.contact_email = enrichment.contact_email
+        lead.email_type = enrichment.email_type
+        lead.contact_source = enrichment.contact_source
+        lead.sponsor_category = enrichment.category
+        lead.sponsor_subcategory = enrichment.subcategory
         lead.brand_key = make_brand_key(lead.brand_name, lead.brand_domain)
-        lead.sponsorship_key = make_sponsorship_key(lead.source_platform, lead.video_id, lead.brand_name, lead.brand_domain)
+        lead.sponsorship_key = make_sponsorship_key(
+            lead.source_platform,
+            lead.video_id,
+            lead.brand_name,
+            lead.brand_domain,
+        )
     lead.lead_score = _score_lead(lead)
     lead.lead_temperature = _temperature(lead.lead_score)
     return lead
@@ -135,8 +140,13 @@ def run() -> None:
 
     # Gate 3: FULL monday scan immediately before writes.
     final_index = monday.load_existing_index()
-    ordered = sorted(candidates.values(), key=lambda x: (x.lead_score, x.sponsored_date, bool(x.contact_email)), reverse=True)
-    created = []
+    ordered = sorted(
+        candidates.values(),
+        key=lambda x: (x.lead_score, x.sponsored_date, bool(x.contact_email)),
+        reverse=True,
+    )
+    created: list[SponsorLead] = []
+
     for lead in ordered:
         if len(created) >= config.target_daily_leads:
             break
@@ -144,23 +154,49 @@ def run() -> None:
             duplicate_count += 1
             print(f"Final duplicate gate blocked: {lead.brand_name}")
             continue
+
         try:
             result = monday.create_lead(lead)
             item = result.get("data", {}).get("create_item", {})
-            print(f"Created sponsor lead: {lead.brand_name} / monday {item.get('id', '?')} / score {lead.lead_score}")
+            print(
+                f"Created sponsor lead: {lead.brand_name} / "
+                f"monday {item.get('id', '?')} / score {lead.lead_score}"
+            )
             created.append(lead)
             final_index.add(lead)
         except Exception as exc:
             errors.append(f"monday create failed for {lead.brand_name}: {exc}")
+            continue
 
-    print(f"Sponsor scan complete: {len(created)}/{config.target_daily_leads} new leads, {duplicate_count} duplicates blocked, {rejected_count} rejected, {len(scanned_video_ids)} videos scanned.")
+        # Discord fires only after Monday confirms the NEW brand was created.
+        # Duplicate brands never reach this point, so they never get announced.
+        try:
+            discord.send_new_lead(lead)
+        except Exception as exc:
+            errors.append(f"Discord new lead notification failed for {lead.brand_name}: {exc}")
+
+    print(
+        f"Sponsor scan complete: {len(created)}/{config.target_daily_leads} new leads, "
+        f"{duplicate_count} duplicates blocked, {rejected_count} rejected, "
+        f"{len(scanned_video_ids)} videos scanned."
+    )
+
     try:
-        discord.send_daily_summary(created, duplicate_count, rejected_count, len(scanned_video_ids), errors)
+        discord.send_daily_summary(
+            created,
+            duplicate_count,
+            rejected_count,
+            len(scanned_video_ids),
+            errors,
+        )
     except Exception as exc:
         print(f"Discord summary warning: {exc}")
 
     if len(created) < config.target_daily_leads:
-        print("Qualified unique inventory was below target. The scanner did not lower quality or re-import duplicates to force 20.")
+        print(
+            "Qualified unique inventory was below target. "
+            "The scanner did not lower quality or re-import duplicates to force 20."
+        )
 
 
 if __name__ == "__main__":
