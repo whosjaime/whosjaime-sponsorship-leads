@@ -14,6 +14,23 @@ from youtube_sponsor_scanner import YouTubeSponsorScanner
 
 LOOKBACK_WINDOWS_HOURS = [24, 72, 168]
 
+# Priority targets, not hard filters. These win first when the hourly scanner
+# chooses its single lead, but another qualified sponsor can still be used as fallback.
+PRIORITY_SPONSOR_CATEGORIES = {
+    "Gaming",
+    "Consumer Tech",
+    "Software / SaaS",
+    "Cybersecurity / VPN",
+    "Food & Beverage",
+}
+PRIORITY_CREATOR_GENRES = {"Gaming", "Tech", "Food"}
+PRIORITY_BRAND_KEYWORDS = {
+    "gaming", "game", "gamer", "esports",
+    "tech", "software", "saas", "electronics", "audio", "headset", "keyboard",
+    "microphone", "mic", "computer", "app", "vpn", "cybersecurity",
+    "food", "drink", "beverage", "energy", "coffee", "snack", "meal", "soda",
+}
+
 
 def _score_lead(lead: SponsorLead) -> int:
     score = 0
@@ -41,6 +58,26 @@ def _score_lead(lead: SponsorLead) -> int:
     except ValueError:
         pass
     return min(100, score)
+
+
+def _priority_score(lead: SponsorLead) -> int:
+    score = 0
+    if lead.sponsor_category in PRIORITY_SPONSOR_CATEGORIES:
+        score += 100
+    if lead.creator_genre in PRIORITY_CREATOR_GENRES:
+        score += 25
+
+    text = " ".join(
+        [
+            lead.brand_name or "",
+            lead.brand_domain or "",
+            lead.sponsor_category or "",
+            lead.sponsor_subcategory or "",
+        ]
+    ).lower()
+    if any(keyword in text for keyword in PRIORITY_BRAND_KEYWORDS):
+        score += 50
+    return score
 
 
 def _temperature(score: int) -> str:
@@ -86,14 +123,14 @@ def run() -> None:
     enricher = BrandEnricher()
     discord = DiscordNotifier(config.discord_webhook_url)
 
-    # Gate 1: FULL monday scan before discovery.
+    # Gate 1: FULL monday scan before discovery. ExistingSponsorIndex is also
+    # permanently seeded with the team's manual duplicate/blocklist.
     existing = monday.load_existing_index()
     candidates: dict[str, SponsorLead] = {}
     duplicate_count = 0
     rejected_count = 0
     scanned_video_ids: set[str] = set()
     errors: list[str] = []
-    # Hourly mode only needs enough qualified inventory for this run's cap.
     desired_pool = config.target_daily_leads
 
     if config.enable_instagram:
@@ -125,16 +162,16 @@ def run() -> None:
                     rejected_count += 1
                     continue
 
-                # A usable public brand email is mandatory. Do not create incomplete leads.
+                # A usable public brand email is mandatory.
                 if not lead.contact_email:
                     rejected_count += 1
                     print(f"Email required; skipped: {lead.brand_name}")
                     continue
 
-                # Gate 2: check duplicates again after domain/email enrichment.
+                # Gate 2: checks both monday.com and the permanent blocklist.
                 if _blocked(existing, lead):
                     duplicate_count += 1
-                    print(f"Duplicate blocked: {lead.brand_name}")
+                    print(f"Duplicate/blocked brand skipped: {lead.brand_name}")
                     continue
 
                 if lead.lead_score < config.min_lead_score:
@@ -143,17 +180,25 @@ def run() -> None:
 
                 identity = lead.brand_key or f"brand:{lead.brand_name.strip().lower()}"
                 current = candidates.get(identity)
-                if current is None or lead.lead_score > current.lead_score:
+                if current is None or (
+                    _priority_score(lead), lead.lead_score, lead.sponsored_date
+                ) > (
+                    _priority_score(current), current.lead_score, current.sponsored_date
+                ):
                     candidates[identity] = lead
 
-        if len(candidates) >= desired_pool:
+        # If we found a priority gaming/tech/food lead, there is no reason to
+        # widen the lookback. If only non-priority leads exist, search farther
+        # back before settling for the fallback.
+        if len(candidates) >= desired_pool and any(_priority_score(lead) > 0 for lead in candidates.values()):
             break
 
-    # Gate 3: FULL monday scan immediately before writes.
+    # Gate 3: FULL monday scan immediately before writes. The permanent
+    # duplicate list is seeded here again too.
     final_index = monday.load_existing_index()
     ordered = sorted(
         candidates.values(),
-        key=lambda x: (x.lead_score, x.sponsored_date),
+        key=lambda x: (_priority_score(x), x.lead_score, x.sponsored_date),
         reverse=True,
     )
     created: list[SponsorLead] = []
@@ -163,7 +208,7 @@ def run() -> None:
             break
         if _blocked(final_index, lead):
             duplicate_count += 1
-            print(f"Final duplicate gate blocked: {lead.brand_name}")
+            print(f"Final duplicate/blocked gate skipped: {lead.brand_name}")
             continue
 
         try:
@@ -171,7 +216,8 @@ def run() -> None:
             item = result.get("data", {}).get("create_item", {})
             print(
                 f"Created sponsor lead: {lead.brand_name} / "
-                f"monday {item.get('id', '?')} / score {lead.lead_score}"
+                f"monday {item.get('id', '?')} / score {lead.lead_score} / "
+                f"priority {_priority_score(lead)}"
             )
             created.append(lead)
             final_index.add(lead)
@@ -187,7 +233,7 @@ def run() -> None:
 
     print(
         f"Sponsor scan complete: {len(created)}/{config.target_daily_leads} new leads, "
-        f"{duplicate_count} duplicates blocked, {rejected_count} rejected, "
+        f"{duplicate_count} duplicates/blocked brands, {rejected_count} rejected, "
         f"{len(scanned_video_ids)} videos scanned."
     )
 
