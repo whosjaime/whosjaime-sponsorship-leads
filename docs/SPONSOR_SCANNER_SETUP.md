@@ -1,5 +1,15 @@
 # Sponsorship Leads Setup
 
+## Client monday.com board
+
+Board: **Sponsership Leads**
+
+- `SPONSOR_MONDAY_BOARD_ID` = `18424367188`
+- `SPONSOR_MONDAY_GROUP_ID` = `topics`
+- `topics` is the top/default **New Leads** group.
+
+These values are now the code and workflow defaults, so GitHub Variables can override them later but are not required for this client board.
+
 ## 1. GitHub Secrets
 
 Add these in Settings → Secrets and variables → Actions → Secrets:
@@ -12,10 +22,10 @@ You can use `SPONSOR_MONDAY_API_KEY` instead of `SPONSOR_MONDAY_TOKEN` if prefer
 
 ## 2. GitHub Variables
 
-Add these in Settings → Secrets and variables → Actions → Variables:
+These are optional because the client board defaults are already in the project:
 
-- `SPONSOR_MONDAY_BOARD_ID`
-- `SPONSOR_MONDAY_GROUP_ID` (optional if the board has a New Leads group)
+- `SPONSOR_MONDAY_BOARD_ID` = `18424367188`
+- `SPONSOR_MONDAY_GROUP_ID` = `topics`
 - `SPONSOR_TARGET_DAILY_LEADS` = `20`
 - `SPONSOR_MIN_LEAD_SCORE` = `70`
 - `SPONSOR_SEARCH_REGION` = `US`
