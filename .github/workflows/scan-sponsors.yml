@@ -1,14 +1,14 @@
-name: Daily Sponsor Lead Scan
+name: Hourly Sponsor Lead Scan
 
 on:
   schedule:
-    - cron: "0 14 * * *"
+    - cron: "0 * * * *"
   workflow_dispatch:
     inputs:
-      target_daily_leads:
-        description: Qualified NEW sponsor companies to aim for
+      target_leads:
+        description: Maximum NEW sponsor companies to add this run
         required: true
-        default: "20"
+        default: "1"
       min_lead_score:
         description: Minimum lead quality score
         required: true
@@ -36,7 +36,8 @@ jobs:
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
           SPONSOR_MONDAY_BOARD_ID: ${{ vars.SPONSOR_MONDAY_BOARD_ID || '18424367188' }}
           SPONSOR_MONDAY_GROUP_ID: ${{ vars.SPONSOR_MONDAY_GROUP_ID || 'topics' }}
-          SPONSOR_TARGET_DAILY_LEADS: ${{ github.event.inputs.target_daily_leads || vars.SPONSOR_TARGET_DAILY_LEADS || '20' }}
+          # Scheduled runs are ALWAYS capped at one new brand, even if an old variable still says 20.
+          SPONSOR_TARGET_DAILY_LEADS: ${{ github.event_name == 'schedule' && '1' || github.event.inputs.target_leads || '1' }}
           SPONSOR_MIN_LEAD_SCORE: ${{ github.event.inputs.min_lead_score || vars.SPONSOR_MIN_LEAD_SCORE || '70' }}
           SPONSOR_SEARCH_REGION: ${{ vars.SPONSOR_SEARCH_REGION || 'US' }}
           SPONSOR_SEARCH_LANGUAGE: ${{ vars.SPONSOR_SEARCH_LANGUAGE || 'en' }}
