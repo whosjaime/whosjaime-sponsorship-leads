@@ -60,7 +60,7 @@ def load_sponsor_config() -> SponsorScannerConfig:
         monday_board_id=int(board_id_raw) if board_id_raw else DEFAULT_SPONSOR_MONDAY_BOARD_ID,
         monday_group_id=os.getenv("SPONSOR_MONDAY_GROUP_ID", DEFAULT_SPONSOR_MONDAY_GROUP_ID).strip() or DEFAULT_SPONSOR_MONDAY_GROUP_ID,
         discord_webhook_url=os.getenv("DISCORD_WEBHOOK_URL", "").strip(),
-        target_daily_leads=max(1, _int("SPONSOR_TARGET_DAILY_LEADS", 20)),
+        target_daily_leads=max(1, _int("SPONSOR_TARGET_DAILY_LEADS", 1)),
         min_lead_score=max(1, min(100, _int("SPONSOR_MIN_LEAD_SCORE", 70))),
         search_region=os.getenv("SPONSOR_SEARCH_REGION", "US").strip().upper() or "US",
         search_language=os.getenv("SPONSOR_SEARCH_LANGUAGE", "en").strip() or "en",
