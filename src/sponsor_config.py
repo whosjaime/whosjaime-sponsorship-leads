@@ -7,6 +7,9 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
+DEFAULT_SPONSOR_MONDAY_BOARD_ID = 18424367188
+DEFAULT_SPONSOR_MONDAY_GROUP_ID = "topics"
+
 
 def _int(name: str, default: int) -> int:
     raw = os.getenv(name, "").strip()
@@ -48,16 +51,14 @@ def load_sponsor_config() -> SponsorScannerConfig:
         missing.append("YOUTUBE_API_KEY")
     if not monday_token:
         missing.append("SPONSOR_MONDAY_TOKEN")
-    if not board_id_raw:
-        missing.append("SPONSOR_MONDAY_BOARD_ID")
     if missing:
         raise ValueError(f"Missing sponsor scanner configuration: {', '.join(missing)}")
 
     return SponsorScannerConfig(
         youtube_api_key=youtube_api_key,
         monday_token=monday_token,
-        monday_board_id=int(board_id_raw),
-        monday_group_id=os.getenv("SPONSOR_MONDAY_GROUP_ID", "").strip(),
+        monday_board_id=int(board_id_raw) if board_id_raw else DEFAULT_SPONSOR_MONDAY_BOARD_ID,
+        monday_group_id=os.getenv("SPONSOR_MONDAY_GROUP_ID", DEFAULT_SPONSOR_MONDAY_GROUP_ID).strip() or DEFAULT_SPONSOR_MONDAY_GROUP_ID,
         discord_webhook_url=os.getenv("DISCORD_WEBHOOK_URL", "").strip(),
         target_daily_leads=max(1, _int("SPONSOR_TARGET_DAILY_LEADS", 20)),
         min_lead_score=max(1, min(100, _int("SPONSOR_MIN_LEAD_SCORE", 70))),
