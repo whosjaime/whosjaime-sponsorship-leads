@@ -93,7 +93,8 @@ def run() -> None:
     rejected_count = 0
     scanned_video_ids: set[str] = set()
     errors: list[str] = []
-    desired_pool = max(config.target_daily_leads + 10, config.target_daily_leads * 2)
+    # Hourly mode only needs enough qualified inventory for this run's cap.
+    desired_pool = config.target_daily_leads
 
     if config.enable_instagram:
         errors.append("Instagram adapter is not active yet; YouTube ran normally.")
@@ -197,9 +198,9 @@ def run() -> None:
 
     if len(created) < config.target_daily_leads:
         print(
-            "Qualified unique inventory was below target. "
+            "Qualified unique inventory was below this run's target. "
             "The scanner did not lower quality, accept missing-email leads, "
-            "or re-import duplicates to force 20."
+            "or re-import duplicates."
         )
 
 
