@@ -9,7 +9,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
 
 from creator_classifier import classify_creator
-from run_sponsor_scan import _priority_score
+from run_sponsor_scan import _is_target_lead, _priority_score
 from sponsor_dedupe import ExistingSponsorIndex, normalize_domain
 from sponsor_detector import detect_sponsors, to_sponsor_lead
 from sponsor_models import ChannelRecord, VideoRecord
@@ -59,17 +59,44 @@ class SponsorScannerTests(unittest.TestCase):
         index = ExistingSponsorIndex()
         self.assertTrue(index.is_duplicate_brand(lead))
 
+    def test_target_niches_are_eligible(self):
+        for category in ["Gaming", "Consumer Tech", "Software / SaaS", "Cybersecurity / VPN", "Food & Beverage"]:
+            lead = SimpleNamespace(
+                sponsor_category=category,
+                brand_name="Good Brand",
+                brand_domain="goodbrand.com",
+                sponsor_subcategory="",
+            )
+            self.assertTrue(_is_target_lead(lead), category)
+
+    def test_festival_is_rejected_even_if_other_text_looks_good(self):
+        festival = SimpleNamespace(
+            sponsor_category="Entertainment",
+            brand_name="Love Groove Festival",
+            brand_domain="lovegroovefestival.com",
+            sponsor_subcategory="Live Event",
+        )
+        self.assertFalse(_is_target_lead(festival))
+
+    def test_creator_niche_does_not_make_off_niche_sponsor_eligible(self):
+        sponsor = SimpleNamespace(
+            sponsor_category="Entertainment",
+            brand_name="Random Festival",
+            brand_domain="randomfestival.com",
+            sponsor_subcategory="",
+            creator_genre="Gaming",
+        )
+        self.assertFalse(_is_target_lead(sponsor))
+
     def test_priority_niches_rank_above_generic_sponsors(self):
         gaming = SimpleNamespace(
             sponsor_category="Gaming",
-            creator_genre="Gaming",
             brand_name="New Gaming Brand",
             brand_domain="newgamingbrand.com",
             sponsor_subcategory="",
         )
         generic = SimpleNamespace(
             sponsor_category="Other",
-            creator_genre="Entertainment",
             brand_name="Generic Brand",
             brand_domain="genericbrand.com",
             sponsor_subcategory="",
