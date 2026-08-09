@@ -6,6 +6,8 @@ import requests
 
 from sponsor_models import SponsorLead
 
+OUTREACH_USER_ID = "1162376803508297771"
+
 
 class DiscordNotifier:
     def __init__(self, webhook_url: str) -> None:
@@ -16,7 +18,10 @@ class DiscordNotifier:
             return
         response = requests.post(
             self.webhook_url,
-            json={"content": content[:1990]},
+            json={
+                "content": content[:1990],
+                "allowed_mentions": {"users": [OUTREACH_USER_ID]},
+            },
             timeout=20,
         )
         if response.status_code >= 400:
@@ -34,6 +39,15 @@ class DiscordNotifier:
         except ValueError:
             return value
 
+    @staticmethod
+    def _website_url(domain: str) -> str:
+        value = (domain or "").strip()
+        if not value:
+            return "Unknown"
+        if value.startswith(("http://", "https://")):
+            return value
+        return f"https://{value}"
+
     @classmethod
     def new_lead_message(cls, lead: SponsorLead) -> str:
         subscribers = (
@@ -41,19 +55,24 @@ class DiscordNotifier:
             if lead.creator_subscribers
             else "Unknown"
         )
+        website = cls._website_url(lead.brand_domain)
 
         return "\n".join(
             [
-                "🔥 NEW SPONSOR LEAD",
-                f"Brand: {lead.brand_name}",
-                f"Email: {lead.contact_email}",
-                f"Website: {lead.brand_domain}",
-                f"Found On: {lead.source_platform}",
-                f"Creator: {lead.creator_name}",
-                f"Subscribers: {subscribers}",
-                f"Sponsored Date: {cls._display_date(lead.sponsored_date)}",
-                "Sponsored Video:",
-                lead.video_url,
+                "🔥 **NEW SPONSOR LEAD**",
+                "",
+                f"🏢 **Brand:** {lead.brand_name}",
+                f"📧 **Email:** {lead.contact_email}",
+                f"🌐 **Website:** <{website}>",
+                "",
+                f"🎥 **Found On:** {lead.source_platform}",
+                f"👤 **Creator:** {lead.creator_name}",
+                f"📊 **Subscribers:** {subscribers}",
+                f"📅 **Sponsored Date:** {cls._display_date(lead.sponsored_date)}",
+                "",
+                f"🔗 **Sponsored Video:** <{lead.video_url}>",
+                "",
+                f"✅ It has been added in **Monday.com**, <@{OUTREACH_USER_ID}> you can start outreach!",
             ]
         )
 
