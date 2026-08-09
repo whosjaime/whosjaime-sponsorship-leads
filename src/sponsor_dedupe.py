@@ -17,6 +17,98 @@ MARKETING_SUBDOMAIN_PREFIXES = {
     "affiliate", "affiliates", "promo", "offer", "offers", "creator", "creators",
 }
 
+# Brands the team already has / does not want re-imported.
+# These are treated exactly like brands already present on monday.com.
+PERMANENT_BLOCKED_BRANDS = {
+    "Notion",
+    "Wix",
+    "Shopify",
+    "Squarespace",
+    "Grammarly",
+    "Ground News",
+    "ExpressVPN",
+    "Surfshark",
+    "NordVPN",
+    "G FUEL",
+    "ScaleLab",
+    "Hostinger",
+    "Aura",
+    "CyberGhost VPN",
+    "CyberGhost",
+    "Private Internet Access (PIA)",
+    "Private Internet Access",
+    "PIA",
+    "Incogni",
+    "Morgan & Morgan",
+    "Tubi",
+    "FreshBooks",
+    "Adobe",
+    "Canva",
+    "Envato",
+    "Traverse",
+    "Doritos",
+    "Final Boss Sour",
+    "Positive Grid Amps",
+    "Ernie Ball",
+    "Skullcandy",
+    "Fishman",
+    "Shure",
+    "Lewitt",
+    "dBrand",
+    "Roland",
+    "Liquid Death",
+    "JHS Pedals",
+    "Orange Amps",
+    "Logitech",
+    "Blue Mic",
+    "Blue Microphones",
+    "RODE",
+    "Maono",
+    "sE Electronics",
+    "DoubleCup",
+    "Dr. Squatch",
+    "Displate",
+    "Scentbird",
+    "Focus Rich Clothing",
+    "Icy Ebexxin",
+    "Fender",
+    "PRS Guitars",
+    "Snif",
+    "Schecter Guitar",
+    "FDR Studios",
+    "Oakcha",
+    "Dossier",
+    "ATL Fragrance",
+    "Dedcool",
+    "Ethika",
+    "Leland Francis",
+    "Commodity Fragrances",
+    "MAJOURI",
+    "Amorlibre",
+    "Boy Smells",
+    "DUA Fragrances",
+    "Gamer Supps",
+    "GHOST",
+    "Rogue Energy",
+    "Sneak Energy",
+    "ADVANCED.gg",
+    "Monster Energy",
+    "Hype Energy",
+    "Dubby Energy",
+    "GOAT Energy",
+    "Reign Body Fuel",
+    "Rare Beauty",
+    "Tarte Cosmetics",
+    "Glossier",
+    "Tower 28 Beauty",
+    "Haus Labs",
+    "BARK",
+    "Wild One",
+    "Chewy",
+    "DrPawsShop",
+    "The Honest Kitchen",
+}
+
 
 def normalize_text(value: object) -> str:
     return re.sub(r"\s+", " ", str(value or "").strip().lower())
@@ -66,6 +158,14 @@ def make_sponsorship_key(platform: str, video_id: str, brand_name: str, brand_do
     return f"{normalize_text(platform)}:{normalize_text(video_id)}:{identity}"
 
 
+def permanent_blocked_brand_keys() -> set[str]:
+    return {
+        f"brand:{normalized}"
+        for brand in PERMANENT_BLOCKED_BRANDS
+        if (normalized := normalize_brand_name(brand))
+    }
+
+
 def lead_brand_keys(lead: SponsorLead) -> set[str]:
     keys = set()
     name = normalize_brand_name(lead.brand_name)
@@ -88,7 +188,8 @@ def lead_brand_keys(lead: SponsorLead) -> set[str]:
 
 @dataclass
 class ExistingSponsorIndex:
-    brand_keys: set[str] = field(default_factory=set)
+    # The manual blocklist is always seeded into every production duplicate index.
+    brand_keys: set[str] = field(default_factory=permanent_blocked_brand_keys)
     event_keys: set[str] = field(default_factory=set)
     protected_brand_keys: set[str] = field(default_factory=set)
 
