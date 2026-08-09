@@ -14,21 +14,28 @@ from youtube_sponsor_scanner import YouTubeSponsorScanner
 
 LOOKBACK_WINDOWS_HOURS = [24, 72, 168]
 
-# Priority targets, not hard filters. These win first when the hourly scanner
-# chooses its single lead, but another qualified sponsor can still be used as fallback.
-PRIORITY_SPONSOR_CATEGORIES = {
+# Hard target filter. The sponsor itself must fit one of these buckets.
+TARGET_SPONSOR_CATEGORIES = {
     "Gaming",
     "Consumer Tech",
     "Software / SaaS",
     "Cybersecurity / VPN",
     "Food & Beverage",
 }
-PRIORITY_CREATOR_GENRES = {"Gaming", "Tech", "Food"}
-PRIORITY_BRAND_KEYWORDS = {
-    "gaming", "game", "gamer", "esports",
-    "tech", "software", "saas", "electronics", "audio", "headset", "keyboard",
-    "microphone", "mic", "computer", "app", "vpn", "cybersecurity",
-    "food", "drink", "beverage", "energy", "coffee", "snack", "meal", "soda",
+
+TARGET_BRAND_KEYWORDS = {
+    "gaming", "gamer", "esports", "gaming gear", "gaming peripheral", "controller",
+    "software", "saas", "cloud", "web hosting", "website builder", "developer tool",
+    "cybersecurity", "vpn", "password manager", "online privacy", "identity protection",
+    "electronics", "headset", "headphones", "keyboard", "microphone", "webcam", "speaker",
+    "computer hardware", "gaming mouse", "monitor", "gadget",
+    "food", "drink", "beverage", "energy drink", "coffee", "snack", "meal", "soda",
+    "sparkling water", "hydration",
+}
+
+# Explicitly bad fits for this creator roster.
+EXCLUDED_SPONSOR_KEYWORDS = {
+    "festival", "music festival", "concert festival", "concert promoter", "event production",
 }
 
 
@@ -60,14 +67,8 @@ def _score_lead(lead: SponsorLead) -> int:
     return min(100, score)
 
 
-def _priority_score(lead: SponsorLead) -> int:
-    score = 0
-    if lead.sponsor_category in PRIORITY_SPONSOR_CATEGORIES:
-        score += 100
-    if lead.creator_genre in PRIORITY_CREATOR_GENRES:
-        score += 25
-
-    text = " ".join(
+def _target_text(lead: SponsorLead) -> str:
+    return " ".join(
         [
             lead.brand_name or "",
             lead.brand_domain or "",
@@ -75,7 +76,25 @@ def _priority_score(lead: SponsorLead) -> int:
             lead.sponsor_subcategory or "",
         ]
     ).lower()
-    if any(keyword in text for keyword in PRIORITY_BRAND_KEYWORDS):
+
+
+def _is_target_lead(lead: SponsorLead) -> bool:
+    """Only allow Gaming, Tech, or Food/Drink sponsors into Monday/Discord."""
+    text = _target_text(lead)
+    if any(keyword in text for keyword in EXCLUDED_SPONSOR_KEYWORDS):
+        return False
+    if lead.sponsor_category in TARGET_SPONSOR_CATEGORIES:
+        return True
+    return any(keyword in text for keyword in TARGET_BRAND_KEYWORDS)
+
+
+def _priority_score(lead: SponsorLead) -> int:
+    """Ranks good target sponsors; it does not make a non-target sponsor eligible."""
+    score = 0
+    if lead.sponsor_category in TARGET_SPONSOR_CATEGORIES:
+        score += 100
+    text = _target_text(lead)
+    if any(keyword in text for keyword in TARGET_BRAND_KEYWORDS):
         score += 50
     return score
 
@@ -178,6 +197,16 @@ def run() -> None:
                     rejected_count += 1
                     continue
 
+                # Hard niche gate: no festivals, random entertainment, beauty, fashion,
+                # finance, etc. The sponsor itself must fit Gaming, Tech, or Food/Drink.
+                if not _is_target_lead(lead):
+                    rejected_count += 1
+                    print(
+                        f"Outside target niches; skipped: {lead.brand_name} "
+                        f"({lead.sponsor_category or 'Other'})"
+                    )
+                    continue
+
                 identity = lead.brand_key or f"brand:{lead.brand_name.strip().lower()}"
                 current = candidates.get(identity)
                 if current is None or (
@@ -187,10 +216,7 @@ def run() -> None:
                 ):
                     candidates[identity] = lead
 
-        # If we found a priority gaming/tech/food lead, there is no reason to
-        # widen the lookback. If only non-priority leads exist, search farther
-        # back before settling for the fallback.
-        if len(candidates) >= desired_pool and any(_priority_score(lead) > 0 for lead in candidates.values()):
+        if len(candidates) >= desired_pool:
             break
 
     # Gate 3: FULL monday scan immediately before writes. The permanent
@@ -209,6 +235,10 @@ def run() -> None:
         if _blocked(final_index, lead):
             duplicate_count += 1
             print(f"Final duplicate/blocked gate skipped: {lead.brand_name}")
+            continue
+        if not _is_target_lead(lead):
+            rejected_count += 1
+            print(f"Final niche gate skipped: {lead.brand_name}")
             continue
 
         try:
@@ -244,9 +274,9 @@ def run() -> None:
 
     if len(created) < config.target_daily_leads:
         print(
-            "Qualified unique inventory was below this run's target. "
+            "Qualified unique target-niche inventory was below this run's target. "
             "The scanner did not lower quality, accept missing-email leads, "
-            "or re-import duplicates."
+            "allow off-niche sponsors, or re-import duplicates."
         )
 
 
