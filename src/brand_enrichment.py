@@ -51,28 +51,53 @@ COMMON_CONTACT_PATHS = [
     "/affiliate",
 ]
 CATEGORY_RULES = {
-    "Software / SaaS": {"software", "saas", "platform", "productivity", "workflow", "cloud", "app"},
-    "Cybersecurity / VPN": {"vpn", "cybersecurity", "online privacy", "password manager"},
+    "Software / SaaS": {
+        "software", "saas", "platform", "productivity", "workflow", "cloud", "app",
+        "web hosting", "hosting", "website builder", "developer", "coding", "automation",
+        "artificial intelligence", " ai ",
+    },
+    "Cybersecurity / VPN": {
+        "vpn", "cybersecurity", "online privacy", "password manager", "internet security",
+        "identity protection", "data breach", "privacy protection",
+    },
     "Finance": {"banking", "credit card", "investing", "finance", "payments", "insurance"},
-    "Food & Beverage": {"meal", "food", "recipe", "snack", "beverage", "coffee"},
+    "Food & Beverage": {
+        "meal", "food", "recipe", "snack", "beverage", "coffee", "drink", "energy drink",
+        "soda", "sparkling water", "hydration", "protein bar", "candy", "chips",
+    },
     "Health & Wellness": {"wellness", "health", "supplement", "vitamin", "therapy", "sleep", "fitness"},
     "Beauty": {"beauty", "skincare", "cosmetics", "makeup", "haircare"},
     "Fashion": {"fashion", "apparel", "clothing", "footwear", "jewelry"},
-    "Gaming": {"gaming", "games", "esports"},
-    "Consumer Tech": {"headphones", "keyboard", "laptop", "smartphone", "camera", "electronics", "gadget"},
+    "Gaming": {
+        "gaming", "gamer", "games", "esports", "gaming gear", "gaming peripheral",
+        "controller", "console", "pc gaming",
+    },
+    "Consumer Tech": {
+        "headphones", "headset", "keyboard", "laptop", "smartphone", "camera", "electronics",
+        "gadget", "microphone", "webcam", "speaker", "monitor", "computer hardware", "mouse",
+        "audio interface", "tech accessories",
+    },
     "Travel": {"travel", "hotel", "flight", "vacation", "tourism", "booking"},
     "Education": {"education", "learning", "course", "tutoring"},
     "Home": {"furniture", "mattress", "home", "kitchen", "cleaning", "decor"},
     "Automotive": {"automotive", "vehicle", "car", "cars", "auto"},
-    "Entertainment": {"streaming", "entertainment", "movies", "music", "podcast"},
+    "Entertainment": {
+        "streaming", "entertainment", "movies", "music", "podcast", "festival", "concert",
+        "live event", "event production", "venue",
+    },
 }
 SUBCATEGORY_RULES = {
     "VPN": {"vpn", "virtual private network"},
     "Cybersecurity": {"cybersecurity", "online security"},
     "Password Manager": {"password manager"},
     "Meal Delivery": {"meal delivery", "meal kit"},
-    "Web Hosting": {"web hosting", "hosting provider"},
+    "Energy Drink": {"energy drink"},
+    "Snacks": {"snack", "candy", "chips", "protein bar"},
+    "Coffee": {"coffee"},
+    "Web Hosting": {"web hosting", "hosting provider", "hosting"},
     "Website Builder": {"website builder"},
+    "Gaming Gear": {"gaming gear", "gaming peripheral", "controller", "gaming headset"},
+    "Audio Gear": {"microphone", "audio interface", "headphones", "speaker"},
     "Banking": {"bank account", "banking"},
     "Credit Cards": {"credit card"},
     "Supplements": {"supplement", "vitamin"},
@@ -148,7 +173,7 @@ class BrandEnricher:
 
     @staticmethod
     def _classify(text: str) -> tuple[str, str]:
-        lowered = text.lower()
+        lowered = f" {text.lower()} "
         scores = {k: sum(1 for word in v if word in lowered) for k, v in CATEGORY_RULES.items()}
         category = max(scores, key=scores.get) if scores and max(scores.values()) else "Other"
         subs = {k: sum(1 for word in v if word in lowered) for k, v in SUBCATEGORY_RULES.items()}
@@ -221,8 +246,6 @@ class BrandEnricher:
 
         ranked, all_text = self._extract_ranked_emails(pages, domain)
 
-        # If normal navigation did not expose an email, try common public contact/legal paths.
-        # This catches brands such as Fabletics that publish email on a legal/help page.
         if not ranked:
             for path in COMMON_CONTACT_PATHS:
                 url = urljoin(base_url.rstrip("/") + "/", path.lstrip("/"))
