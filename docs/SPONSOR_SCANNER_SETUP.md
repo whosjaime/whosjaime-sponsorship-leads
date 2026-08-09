@@ -6,23 +6,119 @@ Board: **Sponsership Leads**
 
 - `SPONSOR_MONDAY_BOARD_ID` = `18424367188`
 - `SPONSOR_MONDAY_GROUP_ID` = `topics`
-- `topics` is the top/default **New Leads** group.
 
-These values are now the code and workflow defaults, so GitHub Variables can override them later but are not required for this client board.
+Group IDs:
 
-## 1. GitHub Secrets
+- New Leads = `topics`
+- Contacted = `group_mm5rx4j0`
+- Negotiations = `group_mm5rve03`
+- Closed Deals = `group_mm5r7pbh`
 
-Add these in Settings → Secrets and variables → Actions → Secrets:
+The scanner creates new sponsor brands only in **New Leads**.
+
+## Exact column IDs
+
+The scanner is hard-mapped to these exact board columns:
+
+| Column | Column ID | Type | Scanner behavior |
+|---|---|---|---|
+| Brand | `name` | Item Name | Brand/company name; primary parent item |
+| Outreach Status | `color_mm5rvpv9` | Status | Set to `New Lead` only on creation |
+| Email Status | `color_mm62kst6` | Status | Never set or overwritten by scanner |
+| Brand Domain | `link_mm62hm2e` | Link | Written by scanner; used for brand dedupe |
+| Contact Email | `email_mm62m6r9` | Email | Written when a public business email is found; used for backup dedupe |
+| Platform | `dropdown_mm62y6v7` | Dropdown | YouTube in V1 |
+| Creator | `text_mm621kk9` | Text | Creator where the sponsorship was discovered |
+| Creator URL | `link_mm6239bh` | Link | Creator/channel URL |
+| Creator Subscribers | `numeric_mm62np82` | Numbers | Subscriber count |
+| Sponsored Video | `link_mm62nhcr` | Link | Sponsorship source video |
+| Sponsored Date | `date_mm626p50` | Date | Upload/publish date of sponsored content |
+| Date Found | `date_mm62megm` | Date | Date scanner discovered the brand |
+| Subitems | `subtasks_mm5reseg` | Subitems | Not written by scanner; monday automations create Creator 1 through Creator 6 |
+
+## Outreach Status labels
+
+- Awaiting
+- New Lead
+- Matching
+- Contacted
+- In Conversation
+- Discovery Call Booked
+- Discovery Call Complete
+- Agreement Sent
+- Negotiation
+- Closed Won
+- Closed Lost
+- Incorrect Email
+- Bad Match
+- Archive
+
+The scanner sets `New Lead` when it creates a brand and never updates Outreach Status afterward.
+
+## Email Status labels
+
+- Starter
+- Mid-Market
+- Enterprise
+- Manual
+- Follow-Up
+- Final Email
+
+Email Status triggers email automations, so the scanner deliberately leaves it blank and never overwrites it.
+
+## Brand-level duplicate rule
+
+**One monday parent item = one brand/company forever.**
+
+Creator identity is never used to decide whether a brand is a duplicate.
+
+Before adding any sponsor, the scanner reads the full monday board and builds the duplicate index from:
+
+1. normalized Brand/item name
+2. normalized Brand Domain
+3. Contact Email and its domain
+
+Examples that all resolve to the same brand:
+
+- `NordVPN`
+- `Nord VPN`
+- `nordvpn.com`
+- `go.nordvpn.com`
+- `partnerships@nordvpn.com`
+
+If NordVPN already exists anywhere on the board, another NordVPN sponsorship does not create another parent item regardless of the creator, video, group, or outreach status.
+
+The scanner performs duplicate checks before discovery, after brand enrichment, and again immediately before monday writes.
+
+## Creator match subitems
+
+The scanner does not populate or manage the six creator-match subitems. Existing monday automations create:
+
+- Creator 1
+- Creator 2
+- Creator 3
+- Creator 4
+- Creator 5
+- Creator 6
+
+These are for the team to match its own creators to the brand opportunity and are separate from the source Creator column on the parent sponsor item.
+
+## GitHub Secrets
+
+Required:
 
 - `YOUTUBE_API_KEY`
 - `SPONSOR_MONDAY_TOKEN`
-- `DISCORD_WEBHOOK_URL` (optional)
 
-You can use `SPONSOR_MONDAY_API_KEY` instead of `SPONSOR_MONDAY_TOKEN` if preferred.
+Optional:
 
-## 2. GitHub Variables
+- `DISCORD_WEBHOOK_URL`
 
-These are optional because the client board defaults are already in the project:
+`SPONSOR_MONDAY_API_KEY` can be used instead of `SPONSOR_MONDAY_TOKEN`.
+
+## Optional GitHub Variables
+
+The client board/group are already project defaults, but these can override them:
 
 - `SPONSOR_MONDAY_BOARD_ID` = `18424367188`
 - `SPONSOR_MONDAY_GROUP_ID` = `topics`
@@ -33,67 +129,16 @@ These are optional because the client board defaults are already in the project:
 - `ENABLE_INSTAGRAM_SPONSOR_SCAN` = `false`
 - `ENABLE_TIKTOK_SPONSOR_SCAN` = `false`
 
-## 3. Recommended monday.com columns
-
-The code identifies columns by their titles, so column IDs do not need to be hardcoded.
-
-Strongly recommended duplicate/outreach columns:
-
-- Brand
-- Brand Domain
-- Contact Email
-- Brand Key
-- Sponsorship Key
-- Outreach Status
-
-Recommended enrichment columns:
-
-- Brand Category
-- Brand Subcategory
-- Email Type
-- Email Source
-- Creator
-- Creator URL
-- Creator Subscribers
-- Creator Genre
-- Creator Tags
-- Platform
-- Sponsored Video
-- Video Title
-- Sponsored Date
-- Evidence
-- Paid Promotion
-- Lead Score
-- Temperature
-- Date Found
-
-## 4. Duplicate protection
-
-Duplicate protection is mandatory in the normal pipeline.
-
-Every run:
-
-1. Reads the full monday.com board using cursor pagination.
-2. Builds duplicate keys from brand names, normalized domains, contact emails/email domains, Brand Key, and Sponsorship Key.
-3. Discovers and enriches sponsorship candidates.
-4. Re-checks duplicates after enrichment because a redirect or email can reveal the real brand domain.
-5. Reads the full monday.com board again immediately before writes.
-6. Adds every successfully created lead to the in-memory duplicate index so another detection in the same run cannot create it again.
-
-Statuses such as Contacted, Outreach Sent, In Conversation, Call Booked, Client, Do Not Contact, Rejected, and Closed are protected.
-
-## 5. Daily schedule
+## Daily schedule
 
 `.github/workflows/scan-sponsors.yml` runs daily at `14:00 UTC` and can also be run manually from GitHub Actions.
 
-The scanner starts with the last 24 hours. If it does not have enough qualified unique sponsors, it expands to 72 hours and then 7 days. It does not lower the score threshold or re-import duplicates just to force 20 leads.
+The scanner starts with the last 24 hours. If there are not enough qualified unique sponsor brands, it expands to 72 hours and then 7 days. It does not lower quality or re-import duplicate brands just to force 20.
 
-## 6. Current sources
+## Current source
 
-YouTube is the active V1 source.
+YouTube is the active V1 source. Instagram and TikTok remain future adapters.
 
-Instagram and TikTok flags are reserved for future official API adapters. Keep them set to `false` until those adapters and credentials are added.
+## Public contact data
 
-## 7. Safety / data use
-
-The email enrichment only uses public business contact information found on a sponsor's own public website. It rejects emails from unrelated domains and does not guess private personal email addresses.
+Email enrichment only uses public business contact information found on a sponsor-owned public website. It does not guess private email addresses.
