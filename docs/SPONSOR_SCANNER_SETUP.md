@@ -88,6 +88,30 @@ If NordVPN already exists anywhere on the board, another NordVPN sponsorship doe
 
 The scanner performs duplicate checks before discovery, after brand enrichment, and again immediately before monday writes.
 
+## Permanent manual duplicate/blocklist
+
+The scanner also has a permanent manual brand blocklist in `src/sponsor_dedupe.py`.
+
+Every brand on that list is treated exactly like a brand that already exists in monday.com, even if the monday board is empty. The list includes the team-provided existing sponsor set such as Notion, Wix, Shopify, Squarespace, Grammarly, NordVPN, ExpressVPN, Surfshark, Hostinger, Canva, Adobe, G FUEL, Liquid Death, Gamer Supps, Monster Energy, Rare Beauty, Chewy, and the rest of the supplied brands.
+
+Common naming variants are normalized, and explicit aliases such as `PIA` / `Private Internet Access` and `CyberGhost` / `CyberGhost VPN` are included so they cannot be re-imported under a shorter name.
+
+## Sponsor targeting priority
+
+The hourly scanner prioritizes sponsors that fit the creator roster best.
+
+Highest priority sponsor categories:
+
+- Gaming
+- Consumer Tech
+- Software / SaaS
+- Cybersecurity / VPN
+- Food & Beverage
+
+Gaming, Tech, and Food creator channels also receive a targeting boost. Brand/domain keywords related to gaming, software, electronics, audio gear, food, beverages, energy drinks, coffee, snacks, and meals can also increase priority.
+
+This is a **priority**, not a hard filter. If no qualified gaming/tech/food-drink sponsor is available, another strong new sponsor with a real public email may still be selected for the hourly lead.
+
 ## Creator match subitems
 
 The scanner does not populate or manage the six creator-match subitems. Existing monday automations create:
@@ -131,7 +155,7 @@ The client board/group are already project defaults, but these can override them
 
 Every scheduled run can create **at most 1 new qualified brand**. If no qualified brand with a public business email is available, the run creates nothing rather than lowering quality or importing a duplicate.
 
-The scanner starts with recent sponsorship inventory and expands its lookback only when it cannot find a qualified unique brand.
+The scanner starts with recent sponsorship inventory. If it only finds non-priority sponsors, it can expand the lookback to try to find a gaming, tech, or food/drink target before using a fallback lead.
 
 ## Discord
 
