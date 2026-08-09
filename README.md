@@ -1,19 +1,18 @@
 # Sponsorship Leads
 
-Daily sponsor lead discovery for a client-facing outreach workflow.
+Hourly sponsor lead discovery for a client-facing outreach workflow.
 
 The scanner:
 
+- runs once every hour
+- adds a maximum of 1 qualified NEW sponsor company per scheduled run
 - scans recent YouTube videos for sponsorship signals and paid-promotion metadata
 - extracts sponsor/brand candidates from descriptions
-- classifies creators by genre and tags
-- categorizes sponsor brands
-- finds public business contact emails from sponsor-owned websites
-- scores leads and targets 20 qualified NEW sponsor companies per day
+- finds a public business contact email from sponsor-owned websites before a lead can be created
 - scans the full monday.com board before discovery and again before writes
-- deduplicates by brand name, domain, contact email/domain, brand key, and sponsorship event key
-- protects brands already contacted or marked do-not-contact
-- posts a Discord summary when configured
+- deduplicates at the BRAND level using brand name, domain, and contact email/domain
+- never creates a second parent item just because a different creator was sponsored
+- sends one clean Discord message only after a new brand is successfully added to monday.com
 
 YouTube is the working V1 source. Instagram and TikTok are optional future adapters.
 
