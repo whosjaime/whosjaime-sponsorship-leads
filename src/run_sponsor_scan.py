@@ -56,13 +56,13 @@ def _temperature(score: int) -> str:
 def _enrich_lead(lead: SponsorLead, enricher: BrandEnricher) -> SponsorLead:
     if lead.brand_domain:
         enrichment = enricher.enrich(lead.brand_domain)
-        if enrichment.domain:
-            lead.brand_domain = normalize_domain(enrichment.domain)
-        lead.contact_email = enrichment.contact_email
-        lead.email_type = enrichment.email_type
-        lead.contact_source = enrichment.contact_source
-        lead.sponsor_category = enrichment.category
-        lead.sponsor_subcategory = enrichment.subcategory
+        if enrichment.get("domain"):
+            lead.brand_domain = normalize_domain(enrichment["domain"])
+        lead.contact_email = enrichment.get("contact_email", "")
+        lead.email_type = enrichment.get("email_type", "")
+        lead.contact_source = enrichment.get("contact_source", "")
+        lead.sponsor_category = enrichment.get("category", "Other")
+        lead.sponsor_subcategory = enrichment.get("subcategory", "")
         lead.brand_key = make_brand_key(lead.brand_name, lead.brand_domain)
         lead.sponsorship_key = make_sponsorship_key(
             lead.source_platform,
@@ -114,27 +114,37 @@ def run() -> None:
             scanned_video_ids.add(video.video_id)
             creator = channels.get(video.channel_id)
             genre, tags = classify_creator(video, creator)
+
             for detection in detect_sponsors(video, channels):
                 lead = to_sponsor_lead(video, creator, detection, genre, tags)
                 try:
                     lead = _enrich_lead(lead, enricher)
                 except Exception as exc:
                     errors.append(f"Enrichment warning for {lead.brand_name}: {exc}")
-                    lead.lead_score = _score_lead(lead)
-                    lead.lead_temperature = _temperature(lead.lead_score)
+                    rejected_count += 1
+                    continue
+
+                # A usable public brand email is mandatory. Do not create incomplete leads.
+                if not lead.contact_email:
+                    rejected_count += 1
+                    print(f"Email required; skipped: {lead.brand_name}")
+                    continue
 
                 # Gate 2: check duplicates again after domain/email enrichment.
                 if _blocked(existing, lead):
                     duplicate_count += 1
                     print(f"Duplicate blocked: {lead.brand_name}")
                     continue
+
                 if lead.lead_score < config.min_lead_score:
                     rejected_count += 1
                     continue
+
                 identity = lead.brand_key or f"brand:{lead.brand_name.strip().lower()}"
                 current = candidates.get(identity)
                 if current is None or lead.lead_score > current.lead_score:
                     candidates[identity] = lead
+
         if len(candidates) >= desired_pool:
             break
 
@@ -142,7 +152,7 @@ def run() -> None:
     final_index = monday.load_existing_index()
     ordered = sorted(
         candidates.values(),
-        key=lambda x: (x.lead_score, x.sponsored_date, bool(x.contact_email)),
+        key=lambda x: (x.lead_score, x.sponsored_date),
         reverse=True,
     )
     created: list[SponsorLead] = []
@@ -169,7 +179,6 @@ def run() -> None:
             continue
 
         # Discord fires only after Monday confirms the NEW brand was created.
-        # Duplicate brands never reach this point, so they never get announced.
         try:
             discord.send_new_lead(lead)
         except Exception as exc:
@@ -181,21 +190,16 @@ def run() -> None:
         f"{len(scanned_video_ids)} videos scanned."
     )
 
-    try:
-        discord.send_daily_summary(
-            created,
-            duplicate_count,
-            rejected_count,
-            len(scanned_video_ids),
-            errors,
-        )
-    except Exception as exc:
-        print(f"Discord summary warning: {exc}")
+    if errors:
+        print(f"Scanner completed with {len(errors)} warning(s).")
+        for error in errors[:10]:
+            print(f"WARNING: {error}")
 
     if len(created) < config.target_daily_leads:
         print(
             "Qualified unique inventory was below target. "
-            "The scanner did not lower quality or re-import duplicates to force 20."
+            "The scanner did not lower quality, accept missing-email leads, "
+            "or re-import duplicates to force 20."
         )
 
 
