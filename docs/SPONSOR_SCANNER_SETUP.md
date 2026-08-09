@@ -18,15 +18,13 @@ The scanner creates new sponsor brands only in **New Leads**.
 
 ## Exact column IDs
 
-The scanner is hard-mapped to these exact board columns:
-
 | Column | Column ID | Type | Scanner behavior |
 |---|---|---|---|
 | Brand | `name` | Item Name | Brand/company name; primary parent item |
 | Outreach Status | `color_mm5rvpv9` | Status | Set to `New Lead` only on creation |
 | Email Status | `color_mm62kst6` | Status | Never set or overwritten by scanner |
 | Brand Domain | `link_mm62hm2e` | Link | Written by scanner; used for brand dedupe |
-| Contact Email | `email_mm62m6r9` | Email | Written when a public business email is found; used for backup dedupe |
+| Contact Email | `email_mm62m6r9` | Email | Required before a lead can be created; used for backup dedupe |
 | Platform | `dropdown_mm62y6v7` | Dropdown | YouTube in V1 |
 | Creator | `text_mm621kk9` | Text | Creator where the sponsorship was discovered |
 | Creator URL | `link_mm6239bh` | Link | Creator/channel URL |
@@ -64,7 +62,7 @@ The scanner sets `New Lead` when it creates a brand and never updates Outreach S
 - Follow-Up
 - Final Email
 
-Email Status triggers email automations, so the scanner deliberately leaves it blank and never overwrites it.
+Email Status triggers email automations, so the scanner leaves it blank and never overwrites it.
 
 ## Brand-level duplicate rule
 
@@ -109,9 +107,6 @@ Required:
 
 - `YOUTUBE_API_KEY`
 - `SPONSOR_MONDAY_TOKEN`
-
-Optional:
-
 - `DISCORD_WEBHOOK_URL`
 
 `SPONSOR_MONDAY_API_KEY` can be used instead of `SPONSOR_MONDAY_TOKEN`.
@@ -122,18 +117,40 @@ The client board/group are already project defaults, but these can override them
 
 - `SPONSOR_MONDAY_BOARD_ID` = `18424367188`
 - `SPONSOR_MONDAY_GROUP_ID` = `topics`
-- `SPONSOR_TARGET_DAILY_LEADS` = `20`
 - `SPONSOR_MIN_LEAD_SCORE` = `70`
 - `SPONSOR_SEARCH_REGION` = `US`
 - `SPONSOR_SEARCH_LANGUAGE` = `en`
 - `ENABLE_INSTAGRAM_SPONSOR_SCAN` = `false`
 - `ENABLE_TIKTOK_SPONSOR_SCAN` = `false`
 
-## Daily schedule
+`SPONSOR_TARGET_DAILY_LEADS` remains an internal compatibility setting, but the scheduled GitHub workflow hard-caps every hourly scheduled run at **1 new brand**. An old repository variable cannot make a scheduled run add 20.
 
-`.github/workflows/scan-sponsors.yml` runs daily at `14:00 UTC` and can also be run manually from GitHub Actions.
+## Hourly schedule
 
-The scanner starts with the last 24 hours. If there are not enough qualified unique sponsor brands, it expands to 72 hours and then 7 days. It does not lower quality or re-import duplicate brands just to force 20.
+`.github/workflows/scan-sponsors.yml` runs once every hour and can also be run manually from GitHub Actions.
+
+Every scheduled run can create **at most 1 new qualified brand**. If no qualified brand with a public business email is available, the run creates nothing rather than lowering quality or importing a duplicate.
+
+The scanner starts with recent sponsorship inventory and expands its lookback only when it cannot find a qualified unique brand.
+
+## Discord
+
+Discord receives one message only after a new brand is successfully created in monday.com:
+
+```text
+🔥 NEW SPONSOR LEAD
+Brand: Fabletics
+Email: support@fabletics.co.uk
+Website: fabletics.co.uk
+Found On: YouTube
+Creator: Ellen Miller
+Subscribers: 76,200
+Sponsored Date: August 9, 2026
+Sponsored Video:
+https://www.youtube.com/watch?v=zmP9iW6cygI
+```
+
+There is no daily summary message.
 
 ## Current source
 
@@ -141,4 +158,4 @@ YouTube is the active V1 source. Instagram and TikTok remain future adapters.
 
 ## Public contact data
 
-Email enrichment only uses public business contact information found on a sponsor-owned public website. It does not guess private email addresses.
+A public brand email is mandatory before a lead can be added. Email enrichment checks sponsor-owned public pages such as contact, help, support, legal, press, influencer, partnership, and affiliate pages. The scanner does not guess private email addresses.
