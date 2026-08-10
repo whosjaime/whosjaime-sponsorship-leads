@@ -31,6 +31,7 @@ jobs:
       - name: Scan public sponsorships and import NEW leads
         env:
           YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+          CREATORDB_API_KEY: ${{ secrets.CREATORDB_API_KEY }}
           SPONSOR_MONDAY_TOKEN: ${{ secrets.SPONSOR_MONDAY_TOKEN }}
           SPONSOR_MONDAY_API_KEY: ${{ secrets.SPONSOR_MONDAY_API_KEY }}
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
@@ -39,6 +40,8 @@ jobs:
           # Scheduled runs are ALWAYS capped at one new brand, even if an old variable still says 20.
           SPONSOR_TARGET_DAILY_LEADS: ${{ github.event_name == 'schedule' && '1' || github.event.inputs.target_leads || '1' }}
           SPONSOR_MIN_LEAD_SCORE: ${{ github.event.inputs.min_lead_score || vars.SPONSOR_MIN_LEAD_SCORE || '70' }}
+          SPONSOR_MAX_AGE_DAYS: ${{ vars.SPONSOR_MAX_AGE_DAYS || '30' }}
+          CREATORDB_PAGE_SIZE: ${{ vars.CREATORDB_PAGE_SIZE || '50' }}
           SPONSOR_SEARCH_REGION: ${{ vars.SPONSOR_SEARCH_REGION || 'US' }}
           SPONSOR_SEARCH_LANGUAGE: ${{ vars.SPONSOR_SEARCH_LANGUAGE || 'en' }}
           ENABLE_INSTAGRAM_SPONSOR_SCAN: ${{ vars.ENABLE_INSTAGRAM_SPONSOR_SCAN || 'false' }}
