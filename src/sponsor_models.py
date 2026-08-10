@@ -53,6 +53,8 @@ class SponsorLead:
     brand_partner_channel_id: str = ""
     sponsor_category: str = "Other"
     sponsor_subcategory: str = ""
+    contact_name: str = ""
+    contact_title: str = ""
     contact_email: str = ""
     email_type: str = ""
     contact_source: str = ""
@@ -83,6 +85,8 @@ class SponsorLead:
             "brand_partner_channel_id": self.brand_partner_channel_id,
             "sponsor_category": self.sponsor_category,
             "sponsor_subcategory": self.sponsor_subcategory,
+            "contact_name": self.contact_name,
+            "contact_title": self.contact_title,
             "contact_email": self.contact_email,
             "email_type": self.email_type,
             "contact_source": self.contact_source,
