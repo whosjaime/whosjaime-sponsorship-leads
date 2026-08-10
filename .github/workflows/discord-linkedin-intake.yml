@@ -1,0 +1,35 @@
+name: Discord LinkedIn Sponsor Intake
+
+on:
+  schedule:
+    - cron: "*/5 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: discord-linkedin-sponsor-intake
+  cancel-in-progress: false
+
+jobs:
+  process-linkedin-posts:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install -r requirements.txt
+      - name: Process LinkedIn posts submitted in Discord
+        env:
+          DISCORD_BOT_TOKEN: ${{ secrets.DISCORD_BOT_TOKEN }}
+          DISCORD_LINKEDIN_CHANNEL_ID: ${{ vars.DISCORD_LINKEDIN_CHANNEL_ID }}
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          SPONSOR_MONDAY_TOKEN: ${{ secrets.SPONSOR_MONDAY_TOKEN }}
+          SPONSOR_MONDAY_API_KEY: ${{ secrets.SPONSOR_MONDAY_API_KEY }}
+          SPONSOR_MONDAY_BOARD_ID: ${{ vars.SPONSOR_MONDAY_BOARD_ID || '18424367188' }}
+          SPONSOR_MONDAY_GROUP_ID: ${{ vars.SPONSOR_MONDAY_GROUP_ID || 'topics' }}
+          SPONSOR_LINKEDIN_SOURCE_LABEL: ${{ vars.SPONSOR_LINKEDIN_SOURCE_LABEL || 'LinkedIn' }}
+        run: python src/run_discord_linkedin_intake.py
