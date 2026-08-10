@@ -10,9 +10,9 @@ from sponsor_models import ChannelRecord, VideoRecord
 YOUTUBE_API = "https://www.googleapis.com/youtube/v3"
 SEARCH_WINDOW_SLOTS = 24
 
-# Keep the hourly scanner to exactly three search.list calls. YouTube's q parameter
-# supports Boolean OR with "|", so one combined query can cover a broad set of
-# sponsorship phrases without increasing hourly API usage.
+# Keep discovery to exactly three search.list calls. YouTube's q parameter supports
+# Boolean OR with "|", so one combined query can cover a broad set of sponsorship
+# phrases without multiplying requests.
 SPONSOR_DISCLOSURE_QUERY = (
     '"sponsored by"|"thanks to"|"brought to you by"|'
     '"in partnership with"|"partnered with"|"paid partnership"|'
@@ -78,9 +78,23 @@ class YouTubeSponsorScanner:
         published_after = current - timedelta(hours=older_edge_hours)
         return cls._rfc3339(published_after), cls._rfc3339(published_before), slot
 
+    @classmethod
+    def _full_search_window(
+        cls,
+        lookback_hours: int,
+        now: datetime | None = None,
+    ) -> tuple[str, str, int]:
+        """Return the full freshness window for the once-daily discovery batch."""
+        current = now or datetime.now(timezone.utc)
+        if current.tzinfo is None:
+            current = current.replace(tzinfo=timezone.utc)
+        current = current.astimezone(timezone.utc).replace(microsecond=0)
+        published_after = current - timedelta(hours=max(24, int(lookback_hours)))
+        return cls._rfc3339(published_after), cls._rfc3339(current), -1
+
     def _search(self, lookback_hours: int, query: str = "", paid_only: bool = False) -> list[str]:
-        # Keep this method's original public/testing interface. discover_video_ids sets
-        # one active rotating window for all three lanes in the hourly run.
+        # Keep this method's original interface. The caller chooses either an hourly
+        # rotating slice or a full-window daily batch by setting _active_search_window.
         window = self._active_search_window or self._hourly_search_window(lookback_hours)
         published_after, published_before, _ = window
         params = {
@@ -105,39 +119,54 @@ class YouTubeSponsorScanner:
             if item.get("id", {}).get("videoId")
         ]
 
-    def discover_video_ids(self, lookback_hours: int) -> list[str]:
-        """Run exactly three complementary search lanes in the current hourly slice."""
+    def _discover_ids_in_active_window(self, lookback_hours: int, label: str) -> list[str]:
         ordered_ids: list[str] = []
         seen: set[str] = set()
         failed_lanes = 0
+
+        for lane_name, query, paid_only in SEARCH_LANES:
+            try:
+                ids = self._search(lookback_hours, query=query, paid_only=paid_only)
+            except RuntimeError as exc:
+                failed_lanes += 1
+                print(f"YouTube search warning for {lane_name}: {exc}")
+                continue
+
+            print(f"YouTube {label} lane {lane_name}: {len(ids)} video IDs")
+            for video_id in ids:
+                if video_id not in seen:
+                    seen.add(video_id)
+                    ordered_ids.append(video_id)
+
+        if failed_lanes == len(SEARCH_LANES):
+            raise RuntimeError("All YouTube sponsor discovery lanes failed.")
+        return ordered_ids
+
+    def discover_video_ids(self, lookback_hours: int) -> list[str]:
+        """Legacy hourly discovery: exactly three lanes in the current rotating slice."""
         self._active_search_window = self._hourly_search_window(lookback_hours)
         published_after, published_before, slot = self._active_search_window
         print(
             f"YouTube hourly discovery window {slot + 1}/{SEARCH_WINDOW_SLOTS}: "
             f"{published_after} through {published_before}"
         )
-
         try:
-            for lane_name, query, paid_only in SEARCH_LANES:
-                try:
-                    ids = self._search(lookback_hours, query=query, paid_only=paid_only)
-                except RuntimeError as exc:
-                    failed_lanes += 1
-                    print(f"YouTube search warning for {lane_name}: {exc}")
-                    continue
-
-                print(f"YouTube lane {lane_name}: {len(ids)} video IDs")
-                for video_id in ids:
-                    if video_id not in seen:
-                        seen.add(video_id)
-                        ordered_ids.append(video_id)
+            return self._discover_ids_in_active_window(lookback_hours, "hourly")
         finally:
             self._active_search_window = None
 
-        if failed_lanes == len(SEARCH_LANES):
-            raise RuntimeError("All YouTube sponsor discovery lanes failed.")
-
-        return ordered_ids
+    def discover_batch_video_ids(self, lookback_hours: int) -> list[str]:
+        """Daily batch discovery: up to 50 results from each of the three lanes."""
+        self._active_search_window = self._full_search_window(lookback_hours)
+        published_after, published_before, _ = self._active_search_window
+        print(
+            "YouTube daily batch discovery window: "
+            f"{published_after} through {published_before}"
+        )
+        try:
+            return self._discover_ids_in_active_window(lookback_hours, "daily-batch")
+        finally:
+            self._active_search_window = None
 
     def fetch_videos(self, video_ids: list[str]) -> list[VideoRecord]:
         records = []
@@ -151,8 +180,6 @@ class YouTubeSponsorScanner:
             try:
                 data = self._get("videos", params)
             except RuntimeError:
-                # Some API projects may not expose brandPartner yet. Paid-placement
-                # details plus the video description still keep discovery functional.
                 params["part"] = "snippet,statistics,topicDetails,paidProductPlacementDetails"
                 data = self._get("videos", params)
 
@@ -215,8 +242,7 @@ class YouTubeSponsorScanner:
                 )
         return result
 
-    def discover(self, lookback_hours: int) -> tuple[list[VideoRecord], dict[str, ChannelRecord]]:
-        video_ids = self.discover_video_ids(lookback_hours)
+    def _hydrate(self, video_ids: list[str]) -> tuple[list[VideoRecord], dict[str, ChannelRecord]]:
         videos = self.fetch_videos(video_ids)
         channel_ids = [video.channel_id for video in videos]
         channel_ids.extend(
@@ -225,3 +251,9 @@ class YouTubeSponsorScanner:
             if video.brand_partner_channel_id
         )
         return videos, self.fetch_channels(channel_ids)
+
+    def discover(self, lookback_hours: int) -> tuple[list[VideoRecord], dict[str, ChannelRecord]]:
+        return self._hydrate(self.discover_video_ids(lookback_hours))
+
+    def discover_batch(self, lookback_hours: int) -> tuple[list[VideoRecord], dict[str, ChannelRecord]]:
+        return self._hydrate(self.discover_batch_video_ids(lookback_hours))
