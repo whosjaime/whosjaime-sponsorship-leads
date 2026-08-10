@@ -1,0 +1,43 @@
+name: Daily Affiliate Discord Digest
+
+on:
+  schedule:
+    # Run at both possible UTC equivalents of 11:00 America/Toronto.
+    # The Python guard posts only when Toronto local time is actually 11:00.
+    - cron: "0 15,16 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-affiliate-discord-digest
+  cancel-in-progress: false
+
+jobs:
+  send-affiliates:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install -r requirements.txt
+      - name: Send daily affiliate opportunities
+        env:
+          AFFILIATE_DISCORD_WEBHOOK_URL: ${{ secrets.AFFILIATE_DISCORD_WEBHOOK_URL }}
+          GITHUB_EVENT_NAME: ${{ github.event_name }}
+        run: python src/send_daily_affiliates.py
+      - name: Persist affiliate duplicate ledger
+        if: github.event_name == 'schedule'
+        run: |
+          if git diff --quiet -- data/affiliate_duplicates.json; then
+            echo "No affiliate duplicate updates to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/affiliate_duplicates.json
+          git commit -m "Update affiliate duplicate ledger"
+          git push
