@@ -8,12 +8,15 @@ from sponsor_models import ChannelRecord, SponsorLead, VideoRecord
 
 SPONSOR_PATTERNS = [
     re.compile(r"(?:this\s+(?:video|episode)\s+is\s+)?sponsored\s+by\s+([^\n\r.!?|]{2,80})", re.I),
-    re.compile(r"(?:thanks|thank\s+you)\s+to\s+([^\n\r.!?|]{2,80}?)\s+for\s+(?:sponsoring|supporting)\b", re.I),
-    re.compile(r"(?:in\s+partnership\s+with|partnered\s+with|brought\s+to\s+you\s+by)\s+([^\n\r.!?|]{2,80})", re.I),
+    re.compile(r"(?:thanks|thank\s+you|special\s+thanks)\s+to\s+([^\n\r.!?|]{2,80}?)\s+for\s+(?:sponsoring|supporting|partnering\s+with)\b", re.I),
+    re.compile(r"(?:in\s+partnership\s+with|partnered\s+with|paid\s+partnership\s+with|brought\s+to\s+you\s+by|presented\s+by|supported\s+by|powered\s+by)\s+([^\n\r.!?|]{2,80})", re.I),
     re.compile(r"(?:today'?s\s+sponsor\s+is|sponsor\s+of\s+today'?s\s+(?:video|episode)\s+is)\s+([^\n\r.!?|]{2,80})", re.I),
 ]
 URL_RE = re.compile(r"https?://[^\s<>{}\[\]\"']+", re.I)
-AD_SIGNAL_RE = re.compile(r"(?:^|\s)#(?:ad|sponsored|partner)(?:\s|$)|paid\s+partnership", re.I)
+AD_SIGNAL_RE = re.compile(
+    r"(?:^|\s)#(?:ad|sponsored|partner|paid)(?:\s|$)|paid\s+(?:partnership|promotion)|sponsored\s+content",
+    re.I,
+)
 NON_SPONSOR_DOMAINS = {
     "youtube.com", "youtu.be", "instagram.com", "tiktok.com", "twitter.com", "x.com", "facebook.com",
     "threads.net", "discord.com", "discord.gg", "twitch.tv", "patreon.com", "linktr.ee", "beacons.ai",
