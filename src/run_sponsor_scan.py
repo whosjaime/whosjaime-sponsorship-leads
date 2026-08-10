@@ -3,7 +3,6 @@ from __future__ import annotations
 from datetime import date
 
 from brand_enrichment import BrandEnricher
-from creatomap_active_sponsors import CreatomapActiveSponsorSource
 from creatordb_active_sponsors import CreatorDBActiveSponsorSource
 from creator_classifier import classify_creator
 from discord_notifier import DiscordNotifier
@@ -12,9 +11,11 @@ from sponsor_dedupe import ExistingSponsorIndex, make_brand_key, make_sponsorshi
 from sponsor_detector import detect_sponsors, to_sponsor_lead
 from sponsor_models import SponsorLead
 from sponsor_monday_client import SponsorMondayClient
-from youtube_sponsor_scanner import YouTubeSponsorScanner
+from youtube_sponsor_scanner import SEARCH_LANES, YouTubeSponsorScanner
 
-LOOKBACK_WINDOWS_HOURS = [24, 72, 168]
+# Launch-safe discovery uses one YouTube discovery pass per hourly run. The default
+# active-sponsor window remains 30 days, but SPONSOR_MAX_AGE_DAYS can make it stricter.
+MAX_NATIVE_YOUTUBE_LOOKBACK_DAYS = 30
 
 # Hard target filter. The sponsor itself must fit one of these buckets.
 TARGET_SPONSOR_CATEGORIES = {
@@ -35,7 +36,6 @@ TARGET_BRAND_KEYWORDS = {
     "sparkling water", "hydration",
 }
 
-# Explicitly bad fits for this creator roster.
 EXCLUDED_SPONSOR_KEYWORDS = {
     "festival", "music festival", "concert festival", "concert promoter", "event production",
 }
@@ -69,12 +69,7 @@ def _score_lead(lead: SponsorLead) -> int:
     if "ad/sponsored disclosure" in signals:
         score += 12
 
-    # External indexes are used only as brand-activity sources. These signals mean
-    # a specific recent sponsored YouTube video was attributed to the brand.
-    if "Creatomap recent sponsorship" in signals:
-        score += 35
-    if "Creatomap video evidence" in signals:
-        score += 25
+    # CreatorDB remains optional future coverage only; launch does not depend on it.
     if "CreatorDB sponsored content" in signals:
         score += 35
     if "partnered brand attribution" in signals:
@@ -119,7 +114,7 @@ def _is_target_lead(lead: SponsorLead) -> bool:
 
 
 def _priority_score(lead: SponsorLead) -> int:
-    """Ranks good target sponsors; it does not make a non-target sponsor eligible."""
+    """Rank target sponsors by fit and how recently they were actively sponsoring."""
     score = 0
     if lead.sponsor_category in TARGET_SPONSOR_CATEGORIES:
         score += 100
@@ -176,13 +171,6 @@ def run() -> None:
     config = load_sponsor_config()
     monday = SponsorMondayClient(config.monday_token, config.monday_board_id, config.monday_group_id)
     youtube = YouTubeSponsorScanner(config.youtube_api_key, config.search_region, config.search_language)
-
-    # No account, API key, or approval is required for Creatomap. It publishes a public
-    # JSON API specifically for sponsor/brand/creator sponsorship data.
-    creatomap = CreatomapActiveSponsorSource()
-
-    # CreatorDB remains optional extra coverage if access is ever granted, but launch
-    # does not depend on it.
     creatordb = (
         CreatorDBActiveSponsorSource(config.creatordb_api_key, config.creatordb_page_size)
         if config.creatordb_api_key
@@ -198,7 +186,6 @@ def run() -> None:
     duplicate_count = 0
     rejected_count = 0
     scanned_video_ids: set[str] = set()
-    creatomap_content_count = 0
     creatordb_content_count = 0
     errors: list[str] = []
     desired_pool = config.target_daily_leads
@@ -246,8 +233,6 @@ def run() -> None:
             )
             return
 
-        # Hard niche gate: no festivals, random entertainment, beauty, fashion,
-        # finance, etc. The sponsor itself must fit Gaming, Tech, or Food/Drink.
         if not _is_target_lead(lead):
             rejected_count += 1
             print(
@@ -269,72 +254,51 @@ def run() -> None:
                 f"{lead.brand_name} / {lead.sponsored_date}"
             )
 
-    # Source 1: YouTube's own most recent paid-placement / sponsorship signals.
-    # We start with 24h, then use the zero-wait Creatomap API before widening the
-    # native YouTube lookback. This improves coverage without requiring another key.
-    for window_index, lookback in enumerate(LOOKBACK_WINDOWS_HOURS):
-        print(f"Scanning YouTube sponsorships from the last {lookback} hours...")
+    # Launch source: one native YouTube pass, using exactly three search.list lanes.
+    # The three lanes cover: all declared paid placements, combined sponsor-disclosure
+    # language, and target-niche paid placements. This avoids relying on a third-party
+    # service and avoids repeating multiple lookback searches each hour.
+    search_days = min(config.max_sponsor_age_days, MAX_NATIVE_YOUTUBE_LOOKBACK_DAYS)
+    lookback_hours = max(24, search_days * 24)
+    print(
+        f"Scanning active YouTube sponsorships from the last {search_days} days "
+        f"using {len(SEARCH_LANES)} discovery lanes..."
+    )
+
+    try:
+        videos, channels = youtube.discover(lookback_hours)
+    except Exception as exc:
+        errors.append(f"YouTube active sponsor scan failed: {exc}")
+        videos, channels = [], {}
+
+    for video in videos:
+        if video.video_id in scanned_video_ids:
+            continue
+        scanned_video_ids.add(video.video_id)
+        creator = channels.get(video.channel_id)
+        genre, tags = classify_creator(video, creator)
+
+        for detection in detect_sponsors(video, channels):
+            lead = to_sponsor_lead(video, creator, detection, genre, tags)
+            consider_lead(lead, "YouTube")
+
+    # Optional extra coverage only. Nothing about launch depends on getting access.
+    if len(candidates) < desired_pool and creatordb is not None:
+        print(
+            "Native YouTube inventory was below target; checking optional CreatorDB "
+            f"coverage from the last {config.max_sponsor_age_days} days..."
+        )
         try:
-            videos, channels = youtube.discover(lookback)
+            creatordb_leads = creatordb.discover(config.max_sponsor_age_days)
+            creatordb_content_count = len(creatordb_leads)
         except Exception as exc:
-            errors.append(f"YouTube {lookback}h scan failed: {exc}")
-            videos, channels = [], {}
+            errors.append(f"CreatorDB active sponsor scan failed: {exc}")
+            creatordb_leads = []
 
-        for video in videos:
-            if video.video_id in scanned_video_ids:
-                continue
-            scanned_video_ids.add(video.video_id)
-            creator = channels.get(video.channel_id)
-            genre, tags = classify_creator(video, creator)
-
-            for detection in detect_sponsors(video, channels):
-                lead = to_sponsor_lead(video, creator, detection, genre, tags)
-                consider_lead(lead, "YouTube")
-
-        if len(candidates) >= desired_pool:
-            break
-
-        if window_index == 0:
-            # Source 2: Creatomap public API. No approval, login or key required.
-            print(
-                "YouTube inventory was below target; checking Creatomap public API for "
-                f"recent sponsorship video evidence from the last {config.max_sponsor_age_days} days..."
-            )
-            try:
-                creatomap_leads = creatomap.discover(config.max_sponsor_age_days)
-                creatomap_content_count = len(creatomap_leads)
-            except Exception as exc:
-                errors.append(f"Creatomap active sponsor scan failed: {exc}")
-                creatomap_leads = []
-
-            for lead in creatomap_leads:
-                consider_lead(lead, "Creatomap")
-                if len(candidates) >= desired_pool:
-                    break
-
+        for lead in creatordb_leads:
+            consider_lead(lead, "CreatorDB")
             if len(candidates) >= desired_pool:
                 break
-
-            # Source 3: CreatorDB only if a key happens to be available later.
-            if creatordb is not None:
-                print(
-                    "Creatomap inventory was below target; checking optional CreatorDB "
-                    f"coverage from the last {config.max_sponsor_age_days} days..."
-                )
-                try:
-                    creatordb_leads = creatordb.discover(config.max_sponsor_age_days)
-                    creatordb_content_count = len(creatordb_leads)
-                except Exception as exc:
-                    errors.append(f"CreatorDB active sponsor scan failed: {exc}")
-                    creatordb_leads = []
-
-                for lead in creatordb_leads:
-                    consider_lead(lead, "CreatorDB")
-                    if len(candidates) >= desired_pool:
-                        break
-
-                if len(candidates) >= desired_pool:
-                    break
 
     # Gate 3: FULL monday scan immediately before writes. The permanent
     # duplicate list is seeded here again too.
@@ -386,12 +350,11 @@ def run() -> None:
         f"Sponsor scan complete: {len(created)}/{config.target_daily_leads} new leads, "
         f"{duplicate_count} duplicates/blocked brands, {rejected_count} rejected, "
         f"{len(scanned_video_ids)} YouTube videos scanned, "
-        f"{creatomap_content_count} Creatomap sponsor events considered, "
-        f"{creatordb_content_count} CreatorDB sponsor events considered."
+        f"{creatordb_content_count} optional CreatorDB sponsor events considered."
     )
 
     if creatordb is None:
-        print("CreatorDB is optional and disabled; Creatomap requires no key and remains active.")
+        print("CreatorDB is optional and disabled; launch uses the native YouTube API only.")
 
     if errors:
         print(f"Scanner completed with {len(errors)} warning(s).")
