@@ -10,15 +10,18 @@ from sponsor_models import ChannelRecord, VideoRecord
 YOUTUBE_API = "https://www.googleapis.com/youtube/v3"
 
 # Keep the hourly scanner to exactly three search.list calls. YouTube's q parameter
-# supports Boolean OR with "|", so one combined query replaces six separate phrase
-# searches without losing the sponsor-disclosure patterns we care about.
+# supports Boolean OR with "|", so one combined query can cover a broad set of
+# sponsorship phrases without increasing hourly API usage.
 SPONSOR_DISCLOSURE_QUERY = (
     '"sponsored by"|"thanks to"|"brought to you by"|'
-    '"in partnership with"|#sponsored|#ad'
+    '"in partnership with"|"partnered with"|"paid partnership"|'
+    '"presented by"|"supported by"|"powered by"|#sponsored|#ad|#partner'
 )
 TARGET_PAID_QUERY = (
-    'gaming|software|saas|vpn|hosting|headset|keyboard|microphone|webcam|'
-    '"energy drink"|beverage|snack|coffee|tech'
+    'gaming|game|esports|pc|computer|gpu|monitor|mouse|controller|headset|keyboard|'
+    'microphone|webcam|speaker|earbuds|audio|chair|desk|software|saas|app|browser|'
+    'ai|cloud|productivity|developer|coding|vpn|cybersecurity|privacy|password|hosting|'
+    'food|meal|snack|protein|candy|chips|coffee|beverage|drink|soda|hydration|tech'
 )
 SEARCH_LANES = (
     ("paid-placement", "", True),
