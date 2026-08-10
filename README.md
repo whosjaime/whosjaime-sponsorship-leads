@@ -7,13 +7,12 @@ The scanner:
 - runs once every hour
 - adds a maximum of 1 qualified NEW sponsor company per scheduled run
 - looks for brands that are actively sponsoring content now, not generic creator-directory entries
-- scans recent YouTube videos for sponsorship signals and paid-promotion metadata
-- uses Creatomap's public sponsor API as a zero-wait second source when the freshest YouTube scan is below target
-- can optionally use CreatorDB as additional coverage later if an API key becomes available
+- uses the official YouTube Data API already configured for the project
+- runs exactly 3 YouTube sponsorship search lanes per scheduled scan
+- searches declared paid placements, combined sponsor-disclosure language, and target-niche paid placements
 - requires sponsorship evidence to be no older than 30 days by default
-- requires actual YouTube video evidence from external sponsorship indexes before a lead is eligible
 - treats creator/channel details only as proof of the sponsorship, not as a lead-quality signal
-- extracts or receives the sponsor/brand domain from the sponsored content
+- extracts the sponsor/brand domain from the sponsored content
 - finds a public business contact email from sponsor-owned websites before a lead can be created
 - scans the full monday.com board before discovery and again before writes
 - deduplicates at the BRAND level using brand name, domain, and contact email/domain
@@ -21,13 +20,8 @@ The scanner:
 - only allows Gaming, Consumer Tech, Software/SaaS, Cybersecurity/VPN, and Food & Beverage sponsors
 - sends one clean Discord message only after a new brand is successfully added to monday.com
 
-Source order:
+Launch does not require a CreatorDB account, Creatomap scraper, or any other third-party sponsorship database.
 
-1. Native YouTube sponsorship discovery from the last 24 hours
-2. Creatomap public API (no login, approval, or API key)
-3. CreatorDB only when `CREATORDB_API_KEY` is configured
-4. Wider native YouTube lookbacks when the run still has no qualified new brand
-
-Launch does not depend on CreatorDB access.
+CreatorDB remains optional extra coverage if `CREATORDB_API_KEY` is ever configured, but the scheduled production scanner works without it.
 
 See `docs/SPONSOR_SCANNER_SETUP.md` for setup.
