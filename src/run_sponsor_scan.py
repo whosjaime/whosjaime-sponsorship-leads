@@ -6,6 +6,7 @@ from brand_enrichment import BrandEnricher
 from creatordb_active_sponsors import CreatorDBActiveSponsorSource
 from creator_classifier import classify_creator
 from discord_notifier import DiscordNotifier
+from researched_sponsor_source import ResearchedSponsorSource
 from sponsor_config import load_sponsor_config
 from sponsor_dedupe import ExistingSponsorIndex, make_brand_key, make_sponsorship_key, normalize_domain
 from sponsor_detector import detect_sponsors, to_sponsor_lead
@@ -68,6 +69,13 @@ def _score_lead(lead: SponsorLead) -> int:
         score += 20
     if "ad/sponsored disclosure" in signals:
         score += 12
+
+    # Daily researched candidates are admitted only when the queue contains direct
+    # public YouTube sponsorship evidence. They still pass every normal production gate.
+    if "Daily researched sponsorship" in signals:
+        score += 35
+    if "verified public sponsorship evidence" in signals:
+        score += 25
 
     # CreatorDB remains optional future coverage only; launch does not depend on it.
     if "CreatorDB sponsored content" in signals:
@@ -171,6 +179,7 @@ def run() -> None:
     config = load_sponsor_config()
     monday = SponsorMondayClient(config.monday_token, config.monday_board_id, config.monday_group_id)
     youtube = YouTubeSponsorScanner(config.youtube_api_key, config.search_region, config.search_language)
+    researched = ResearchedSponsorSource()
     creatordb = (
         CreatorDBActiveSponsorSource(config.creatordb_api_key, config.creatordb_page_size)
         if config.creatordb_api_key
@@ -186,6 +195,7 @@ def run() -> None:
     duplicate_count = 0
     rejected_count = 0
     scanned_video_ids: set[str] = set()
+    researched_content_count = 0
     creatordb_content_count = 0
     errors: list[str] = []
     desired_pool = config.target_daily_leads
@@ -253,6 +263,19 @@ def run() -> None:
                 f"Qualified active sponsor candidate via {discovery_source}: "
                 f"{lead.brand_name} / {lead.sponsored_date}"
             )
+
+    # Source 0: a small daily research queue maintained separately from automated
+    # YouTube discovery. This lets manually/web-researched sponsor evidence enter the
+    # exact same production gates without bypassing dedupe, niche or email checks.
+    try:
+        researched_leads = researched.load()
+        researched_content_count = len(researched_leads)
+    except Exception as exc:
+        errors.append(f"Researched sponsor queue failed: {exc}")
+        researched_leads = []
+
+    for lead in researched_leads:
+        consider_lead(lead, "Daily Research")
 
     # Launch source: one native YouTube pass, using exactly three search.list lanes.
     # The three lanes cover: all declared paid placements, combined sponsor-disclosure
@@ -349,12 +372,13 @@ def run() -> None:
     print(
         f"Sponsor scan complete: {len(created)}/{config.target_daily_leads} new leads, "
         f"{duplicate_count} duplicates/blocked brands, {rejected_count} rejected, "
+        f"{researched_content_count} daily-research candidates considered, "
         f"{len(scanned_video_ids)} YouTube videos scanned, "
         f"{creatordb_content_count} optional CreatorDB sponsor events considered."
     )
 
     if creatordb is None:
-        print("CreatorDB is optional and disabled; launch uses the native YouTube API only.")
+        print("CreatorDB is optional and disabled; launch uses the native YouTube API plus the daily research queue.")
 
     if errors:
         print(f"Scanner completed with {len(errors)} warning(s).")

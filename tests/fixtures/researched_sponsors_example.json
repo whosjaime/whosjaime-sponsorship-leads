@@ -1,0 +1,13 @@
+[
+  {
+    "brand_name": "Example Gaming Gear",
+    "brand_domain": "examplegaming.com",
+    "sponsored_date": "2026-08-09",
+    "video_url": "https://www.youtube.com/watch?v=abcDEF12345",
+    "creator_name": "Example Creator",
+    "creator_url": "https://www.youtube.com/@examplecreator",
+    "creator_subscribers": 500000,
+    "video_title": "Example sponsored video",
+    "evidence": "Public YouTube video contains a clear sponsorship disclosure."
+  }
+]
