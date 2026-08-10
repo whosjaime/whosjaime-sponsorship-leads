@@ -38,6 +38,7 @@ class YouTubeSponsorScanner:
         self.language = language
         self.session = requests.Session()
         self.session.headers.update({"User-Agent": "SponsorLeadScanner/1.0"})
+        self._active_search_window: tuple[str, str, int] | None = None
 
     def _get(self, endpoint: str, params: dict) -> dict:
         response = self.session.get(
@@ -61,13 +62,7 @@ class YouTubeSponsorScanner:
         lookback_hours: int,
         now: datetime | None = None,
     ) -> tuple[str, str, int]:
-        """Return one of 24 rotating time slices across the allowed lookback.
-
-        Previously every hourly run asked YouTube for the newest 50 results across the
-        entire 30-day window. That repeatedly surfaced the same videos after the first
-        few runs. Rotating publishedAfter/publishedBefore windows makes each hour inspect
-        a different part of the same freshness window without adding API calls.
-        """
+        """Return one of 24 rotating time slices across the allowed lookback."""
         current = now or datetime.now(timezone.utc)
         if current.tzinfo is None:
             current = current.replace(tzinfo=timezone.utc)
@@ -83,13 +78,11 @@ class YouTubeSponsorScanner:
         published_after = current - timedelta(hours=older_edge_hours)
         return cls._rfc3339(published_after), cls._rfc3339(published_before), slot
 
-    def _search(
-        self,
-        published_after: str,
-        published_before: str,
-        query: str = "",
-        paid_only: bool = False,
-    ) -> list[str]:
+    def _search(self, lookback_hours: int, query: str = "", paid_only: bool = False) -> list[str]:
+        # Keep this method's original public/testing interface. discover_video_ids sets
+        # one active rotating window for all three lanes in the hourly run.
+        window = self._active_search_window or self._hourly_search_window(lookback_hours)
+        published_after, published_before, _ = window
         params = {
             "part": "snippet",
             "type": "video",
@@ -117,30 +110,29 @@ class YouTubeSponsorScanner:
         ordered_ids: list[str] = []
         seen: set[str] = set()
         failed_lanes = 0
-        published_after, published_before, slot = self._hourly_search_window(lookback_hours)
+        self._active_search_window = self._hourly_search_window(lookback_hours)
+        published_after, published_before, slot = self._active_search_window
         print(
             f"YouTube hourly discovery window {slot + 1}/{SEARCH_WINDOW_SLOTS}: "
             f"{published_after} through {published_before}"
         )
 
-        for lane_name, query, paid_only in SEARCH_LANES:
-            try:
-                ids = self._search(
-                    published_after,
-                    published_before,
-                    query=query,
-                    paid_only=paid_only,
-                )
-            except RuntimeError as exc:
-                failed_lanes += 1
-                print(f"YouTube search warning for {lane_name}: {exc}")
-                continue
+        try:
+            for lane_name, query, paid_only in SEARCH_LANES:
+                try:
+                    ids = self._search(lookback_hours, query=query, paid_only=paid_only)
+                except RuntimeError as exc:
+                    failed_lanes += 1
+                    print(f"YouTube search warning for {lane_name}: {exc}")
+                    continue
 
-            print(f"YouTube lane {lane_name}: {len(ids)} video IDs")
-            for video_id in ids:
-                if video_id not in seen:
-                    seen.add(video_id)
-                    ordered_ids.append(video_id)
+                print(f"YouTube lane {lane_name}: {len(ids)} video IDs")
+                for video_id in ids:
+                    if video_id not in seen:
+                        seen.add(video_id)
+                        ordered_ids.append(video_id)
+        finally:
+            self._active_search_window = None
 
         if failed_lanes == len(SEARCH_LANES):
             raise RuntimeError("All YouTube sponsor discovery lanes failed.")
