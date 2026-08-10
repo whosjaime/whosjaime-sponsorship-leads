@@ -5,7 +5,8 @@ import unittest
 from pathlib import Path
 from unittest.mock import Mock
 
-from sponsor_models import SponsorLead
+from run_sponsor_discovery_batch import _hydrate_creator_metrics
+from sponsor_models import ChannelRecord, SponsorLead, VideoRecord
 from sponsor_queue import MAX_QUEUE_SIZE, load_queue, merge_unique, save_queue
 from youtube_sponsor_scanner import SEARCH_LANES, YouTubeSponsorScanner
 
@@ -68,6 +69,56 @@ class SponsorQueueTests(unittest.TestCase):
         self.assertEqual(scanner._search.call_count, 3)
         self.assertEqual(len(ids), 150)
         self.assertIsNone(scanner._active_search_window)
+
+    def test_missing_researched_subscribers_are_hydrated_from_youtube_channel(self):
+        lead = _lead(1)
+        lead.creator_name = "Research Name"
+        lead.creator_channel_id = ""
+        lead.creator_url = ""
+        lead.creator_subscribers = 0
+
+        scanner = Mock()
+        scanner.fetch_videos.return_value = [
+            VideoRecord(
+                platform="YouTube",
+                video_id=lead.video_id,
+                video_url=lead.video_url,
+                title="Sponsored video",
+                description="",
+                published_at="2026-08-10T00:00:00Z",
+                channel_id="UC_REAL_CREATOR",
+                channel_title="Real Creator",
+            )
+        ]
+        scanner.fetch_channels.return_value = {
+            "UC_REAL_CREATOR": ChannelRecord(
+                channel_id="UC_REAL_CREATOR",
+                title="Real Creator",
+                description="",
+                subscriber_count=245678,
+            )
+        }
+
+        _hydrate_creator_metrics([lead], scanner)
+
+        self.assertEqual(lead.creator_name, "Real Creator")
+        self.assertEqual(lead.creator_channel_id, "UC_REAL_CREATOR")
+        self.assertEqual(
+            lead.creator_url,
+            "https://www.youtube.com/channel/UC_REAL_CREATOR",
+        )
+        self.assertEqual(lead.creator_subscribers, 245678)
+        scanner.fetch_videos.assert_called_once_with([lead.video_id])
+        scanner.fetch_channels.assert_called_once_with(["UC_REAL_CREATOR"])
+
+    def test_complete_creator_metrics_do_not_make_extra_youtube_calls(self):
+        lead = _lead(1)
+        scanner = Mock()
+
+        _hydrate_creator_metrics([lead], scanner)
+
+        scanner.fetch_videos.assert_not_called()
+        scanner.fetch_channels.assert_not_called()
 
 
 if __name__ == "__main__":
