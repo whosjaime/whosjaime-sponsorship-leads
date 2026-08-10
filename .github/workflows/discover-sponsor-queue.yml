@@ -2,7 +2,7 @@ name: Daily Sponsor Queue Discovery
 
 on:
   schedule:
-    - cron: "15 4 * * *"
+    - cron: "15 10 * * *"
       timezone: "America/Toronto"
   workflow_dispatch:
   push:
