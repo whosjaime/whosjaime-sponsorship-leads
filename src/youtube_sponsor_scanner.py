@@ -8,6 +8,7 @@ from sponsor_models import ChannelRecord, VideoRecord
 
 
 YOUTUBE_API = "https://www.googleapis.com/youtube/v3"
+SEARCH_WINDOW_SLOTS = 24
 
 # Keep the hourly scanner to exactly three search.list calls. YouTube's q parameter
 # supports Boolean OR with "|", so one combined query can cover a broad set of
@@ -37,6 +38,7 @@ class YouTubeSponsorScanner:
         self.language = language
         self.session = requests.Session()
         self.session.headers.update({"User-Agent": "SponsorLeadScanner/1.0"})
+        self._active_search_window: tuple[str, str, int] | None = None
 
     def _get(self, endpoint: str, params: dict) -> dict:
         response = self.session.get(
@@ -51,17 +53,43 @@ class YouTubeSponsorScanner:
         return response.json()
 
     @staticmethod
-    def _published_after(hours: int) -> str:
-        value = datetime.now(timezone.utc) - timedelta(hours=hours)
+    def _rfc3339(value: datetime) -> str:
         return value.replace(microsecond=0).isoformat().replace("+00:00", "Z")
 
+    @classmethod
+    def _hourly_search_window(
+        cls,
+        lookback_hours: int,
+        now: datetime | None = None,
+    ) -> tuple[str, str, int]:
+        """Return one of 24 rotating time slices across the allowed lookback."""
+        current = now or datetime.now(timezone.utc)
+        if current.tzinfo is None:
+            current = current.replace(tzinfo=timezone.utc)
+        current = current.astimezone(timezone.utc).replace(microsecond=0)
+
+        total_hours = max(24, int(lookback_hours))
+        slot_width_hours = total_hours / SEARCH_WINDOW_SLOTS
+        slot = current.hour % SEARCH_WINDOW_SLOTS
+
+        younger_edge_hours = slot * slot_width_hours
+        older_edge_hours = min(total_hours, (slot + 1) * slot_width_hours)
+        published_before = current - timedelta(hours=younger_edge_hours)
+        published_after = current - timedelta(hours=older_edge_hours)
+        return cls._rfc3339(published_after), cls._rfc3339(published_before), slot
+
     def _search(self, lookback_hours: int, query: str = "", paid_only: bool = False) -> list[str]:
+        # Keep this method's original public/testing interface. discover_video_ids sets
+        # one active rotating window for all three lanes in the hourly run.
+        window = self._active_search_window or self._hourly_search_window(lookback_hours)
+        published_after, published_before, _ = window
         params = {
             "part": "snippet",
             "type": "video",
             "order": "date",
             "maxResults": 50,
-            "publishedAfter": self._published_after(lookback_hours),
+            "publishedAfter": published_after,
+            "publishedBefore": published_before,
             "regionCode": self.region,
             "relevanceLanguage": self.language,
             "safeSearch": "moderate",
@@ -78,22 +106,36 @@ class YouTubeSponsorScanner:
         ]
 
     def discover_video_ids(self, lookback_hours: int) -> list[str]:
-        """Run exactly three complementary search lanes and deduplicate video IDs."""
+        """Run exactly three complementary search lanes in the current hourly slice."""
         ordered_ids: list[str] = []
         seen: set[str] = set()
+        failed_lanes = 0
+        self._active_search_window = self._hourly_search_window(lookback_hours)
+        published_after, published_before, slot = self._active_search_window
+        print(
+            f"YouTube hourly discovery window {slot + 1}/{SEARCH_WINDOW_SLOTS}: "
+            f"{published_after} through {published_before}"
+        )
 
-        for lane_name, query, paid_only in SEARCH_LANES:
-            try:
-                ids = self._search(lookback_hours, query=query, paid_only=paid_only)
-            except RuntimeError as exc:
-                print(f"YouTube search warning for {lane_name}: {exc}")
-                continue
+        try:
+            for lane_name, query, paid_only in SEARCH_LANES:
+                try:
+                    ids = self._search(lookback_hours, query=query, paid_only=paid_only)
+                except RuntimeError as exc:
+                    failed_lanes += 1
+                    print(f"YouTube search warning for {lane_name}: {exc}")
+                    continue
 
-            print(f"YouTube lane {lane_name}: {len(ids)} video IDs")
-            for video_id in ids:
-                if video_id not in seen:
-                    seen.add(video_id)
-                    ordered_ids.append(video_id)
+                print(f"YouTube lane {lane_name}: {len(ids)} video IDs")
+                for video_id in ids:
+                    if video_id not in seen:
+                        seen.add(video_id)
+                        ordered_ids.append(video_id)
+        finally:
+            self._active_search_window = None
+
+        if failed_lanes == len(SEARCH_LANES):
+            raise RuntimeError("All YouTube sponsor discovery lanes failed.")
 
         return ordered_ids
 
