@@ -46,4 +46,17 @@ jobs:
           SPONSOR_SEARCH_LANGUAGE: ${{ vars.SPONSOR_SEARCH_LANGUAGE || 'en' }}
           ENABLE_INSTAGRAM_SPONSOR_SCAN: ${{ vars.ENABLE_INSTAGRAM_SPONSOR_SCAN || 'false' }}
           ENABLE_TIKTOK_SPONSOR_SCAN: ${{ vars.ENABLE_TIKTOK_SPONSOR_SCAN || 'false' }}
-        run: python src/run_sponsor_scan.py
+        shell: bash
+        run: |
+          set -o pipefail
+          python src/run_sponsor_scan.py | tee sponsor_scan.log
+          if grep -Eq 'WARNING: (YouTube active sponsor scan failed|monday create failed|Discord new lead notification failed)' sponsor_scan.log; then
+            echo "Critical sponsor scanner warning detected; failing this run so Discord can alert us."
+            exit 1
+          fi
+      - name: Alert Discord if sponsor scanner breaks
+        if: failure()
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          GITHUB_RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: python src/discord_scan_failure_alert.py
