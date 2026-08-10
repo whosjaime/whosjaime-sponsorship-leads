@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import sys
 import unittest
+from datetime import date, timedelta
 from pathlib import Path
 from types import SimpleNamespace
 
@@ -9,7 +10,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
 
 from creator_classifier import classify_creator
-from run_sponsor_scan import _is_target_lead, _priority_score
+from run_sponsor_scan import _is_recent_sponsorship, _is_target_lead, _priority_score
 from sponsor_dedupe import ExistingSponsorIndex, normalize_domain
 from sponsor_detector import detect_sponsors, to_sponsor_lead
 from sponsor_models import ChannelRecord, VideoRecord
@@ -94,14 +95,28 @@ class SponsorScannerTests(unittest.TestCase):
             brand_name="New Gaming Brand",
             brand_domain="newgamingbrand.com",
             sponsor_subcategory="",
+            sponsored_date=date.today().isoformat(),
         )
         generic = SimpleNamespace(
             sponsor_category="Other",
             brand_name="Generic Brand",
             brand_domain="genericbrand.com",
             sponsor_subcategory="",
+            sponsored_date=date.today().isoformat(),
         )
         self.assertGreater(_priority_score(gaming), _priority_score(generic))
+
+    def test_recent_sponsorship_is_eligible(self):
+        lead = SimpleNamespace(sponsored_date=(date.today() - timedelta(days=7)).isoformat())
+        self.assertTrue(_is_recent_sponsorship(lead, 30))
+
+    def test_old_sponsorship_is_rejected(self):
+        lead = SimpleNamespace(sponsored_date=(date.today() - timedelta(days=31)).isoformat())
+        self.assertFalse(_is_recent_sponsorship(lead, 30))
+
+    def test_undated_sponsorship_is_rejected(self):
+        lead = SimpleNamespace(sponsored_date="")
+        self.assertFalse(_is_recent_sponsorship(lead, 30))
 
     def test_marketing_subdomain_normalizes_to_brand_domain(self):
         self.assertEqual(normalize_domain("https://go.nordvpn.com/deal"), "nordvpn.com")
