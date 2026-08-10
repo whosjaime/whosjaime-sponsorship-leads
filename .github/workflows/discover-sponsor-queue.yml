@@ -36,7 +36,6 @@ jobs:
           CREATORDB_API_KEY: ${{ secrets.CREATORDB_API_KEY }}
           SPONSOR_MONDAY_TOKEN: ${{ secrets.SPONSOR_MONDAY_TOKEN }}
           SPONSOR_MONDAY_API_KEY: ${{ secrets.SPONSOR_MONDAY_API_KEY }}
-          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
           SPONSOR_MONDAY_BOARD_ID: ${{ vars.SPONSOR_MONDAY_BOARD_ID || '18424367188' }}
           SPONSOR_MONDAY_GROUP_ID: ${{ vars.SPONSOR_MONDAY_GROUP_ID || 'topics' }}
           SPONSOR_MIN_LEAD_SCORE: ${{ vars.SPONSOR_MIN_LEAD_SCORE || '70' }}
@@ -59,15 +58,3 @@ jobs:
           git add data/sponsor_queue.json
           git commit -m "Refresh daily sponsor queue [skip ci]"
           git push origin HEAD:main
-      - name: Post sponsor queue summary to Discord
-        if: success()
-        env:
-          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
-          SPONSOR_BATCH_LOG: sponsor_batch.log
-        run: python src/discord_sponsor_queue_status.py
-      - name: Alert Discord if sponsor discovery breaks
-        if: failure()
-        env:
-          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
-          GITHUB_RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
-        run: python src/discord_scan_failure_alert.py
