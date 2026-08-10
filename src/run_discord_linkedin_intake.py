@@ -1,12 +1,13 @@
 from __future__ import annotations
 
+import json
 import os
 
 from brand_enrichment import BrandEnricher
 from discord_linkedin_intake import DiscordLinkedInClient, candidate_to_lead, parse_linkedin_discord_message
 from discord_notifier import DiscordNotifier
 from sponsor_dedupe import make_brand_key, make_sponsorship_key, normalize_domain
-from sponsor_monday_client import SponsorMondayClient
+from sponsor_monday_client import SponsorMondayClient, WRITABLE_FIELDS
 
 DEFAULT_BOARD_ID = 18424367188
 DEFAULT_GROUP_ID = "topics"
@@ -43,6 +44,61 @@ def _enrich(lead, enricher: BrandEnricher):
         "LinkedIn", lead.video_id, lead.brand_name, lead.brand_domain
     )
     return lead
+
+
+def _create_manual_lead(monday: SponsorMondayClient, lead):
+    """Create a manually submitted lead and allow only this path to add dropdown labels.
+
+    This is primarily so the board can add `LinkedIn` to Found On the first time the
+    intake is used. The normal automated YouTube scanner keeps create_labels_if_missing
+    disabled.
+    """
+    columns, _ = monday.load_schema()
+    raw = {
+        "outreach_status": "New Lead",
+        "brand_domain": lead.brand_domain,
+        "contact_email": lead.contact_email,
+        "source_platform": lead.source_platform,
+        "creator_name": lead.creator_name,
+        "creator_url": lead.creator_url,
+        "creator_subscribers": lead.creator_subscribers,
+        "video_url": lead.video_url,
+        "sponsored_date": lead.sponsored_date,
+        "date_found": lead.date_found,
+    }
+
+    values = {}
+    for field in WRITABLE_FIELDS:
+        column = columns[field]
+        formatted = monday._format_value(column, field, raw.get(field), lead)
+        if formatted not in (None, "", {}):
+            values[column.id] = formatted
+
+    mutation = """
+    mutation CreateManualSponsorLead(
+      $board_id: ID!,
+      $group_id: String,
+      $item_name: String!,
+      $column_values: JSON!
+    ) {
+      create_item(
+        board_id: $board_id,
+        group_id: $group_id,
+        item_name: $item_name,
+        column_values: $column_values,
+        create_labels_if_missing: true
+      ) { id name }
+    }
+    """
+    return monday._request(
+        mutation,
+        {
+            "board_id": monday.board_id,
+            "group_id": monday.resolved_group_id() or None,
+            "item_name": lead.brand_name,
+            "column_values": json.dumps(values),
+        },
+    )
 
 
 def run() -> None:
@@ -114,7 +170,7 @@ def run() -> None:
             continue
 
         try:
-            result = monday.create_lead(lead)
+            result = _create_manual_lead(monday, lead)
             item = result.get("data", {}).get("create_item", {})
             print(
                 f"Created manual LinkedIn sponsor lead: {lead.brand_name} / "
