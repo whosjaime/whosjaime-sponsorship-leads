@@ -1,14 +1,15 @@
-name: Hourly Sponsor Queue Dispatch
+name: Daily Sponsor Queue Discovery
 
 on:
   schedule:
-    - cron: "0 * * * *"
+    - cron: "15 4 * * *"
+      timezone: "America/Toronto"
   workflow_dispatch:
   push:
     branches:
       - main
     paths:
-      - ".github/sponsor-dispatch-trigger"
+      - ".github/sponsor-batch-trigger"
 
 permissions:
   contents: write
@@ -18,9 +19,9 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  dispatch-sponsor:
+  build-sponsor-queue:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 50
     steps:
       - uses: actions/checkout@v4
         with:
@@ -29,9 +30,10 @@ jobs:
         with:
           python-version: "3.11"
       - run: pip install -r requirements.txt
-      - name: Deliver next qualified queued sponsor
+      - name: Discover and qualify today's sponsor queue
         env:
           YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+          CREATORDB_API_KEY: ${{ secrets.CREATORDB_API_KEY }}
           SPONSOR_MONDAY_TOKEN: ${{ secrets.SPONSOR_MONDAY_TOKEN }}
           SPONSOR_MONDAY_API_KEY: ${{ secrets.SPONSOR_MONDAY_API_KEY }}
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
@@ -39,9 +41,14 @@ jobs:
           SPONSOR_MONDAY_GROUP_ID: ${{ vars.SPONSOR_MONDAY_GROUP_ID || 'topics' }}
           SPONSOR_MIN_LEAD_SCORE: ${{ vars.SPONSOR_MIN_LEAD_SCORE || '70' }}
           SPONSOR_MAX_AGE_DAYS: ${{ vars.SPONSOR_MAX_AGE_DAYS || '30' }}
-        run: python src/run_sponsor_queue_dispatch.py
-      - name: Persist updated sponsor queue
-        if: success()
+          CREATORDB_PAGE_SIZE: ${{ vars.CREATORDB_PAGE_SIZE || '50' }}
+          SPONSOR_SEARCH_REGION: ${{ vars.SPONSOR_SEARCH_REGION || 'US' }}
+          SPONSOR_SEARCH_LANGUAGE: ${{ vars.SPONSOR_SEARCH_LANGUAGE || 'en' }}
+        shell: bash
+        run: |
+          set -o pipefail
+          python src/run_sponsor_discovery_batch.py | tee sponsor_batch.log
+      - name: Persist refreshed sponsor queue
         run: |
           if git diff --quiet -- data/sponsor_queue.json; then
             echo "Sponsor queue unchanged."
@@ -50,9 +57,15 @@ jobs:
           git config user.name "sponsor-queue-bot"
           git config user.email "actions@users.noreply.github.com"
           git add data/sponsor_queue.json
-          git commit -m "Consume hourly sponsor queue item [skip ci]"
+          git commit -m "Refresh daily sponsor queue [skip ci]"
           git push origin HEAD:main
-      - name: Alert Discord if sponsor delivery breaks
+      - name: Post sponsor queue summary to Discord
+        if: success()
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          SPONSOR_BATCH_LOG: sponsor_batch.log
+        run: python src/discord_sponsor_queue_status.py
+      - name: Alert Discord if sponsor discovery breaks
         if: failure()
         env:
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
