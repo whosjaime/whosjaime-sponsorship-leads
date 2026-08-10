@@ -14,7 +14,11 @@ Each candidate should use this shape:
   "creator_url": "https://www.youtube.com/@example",
   "creator_subscribers": 500000,
   "video_title": "Example sponsored video",
-  "evidence": "Public YouTube video contains a clear sponsorship disclosure."
+  "evidence": "Public YouTube video contains a clear sponsorship disclosure.",
+  "contact_name": "Jane Smith",
+  "contact_title": "Creator Partnerships",
+  "contact_email": "jane@example.com",
+  "contact_source_url": "https://example.com/team"
 }
 ```
 
@@ -25,10 +29,16 @@ Required intake fields:
 - `sponsored_date`
 - a direct YouTube `video_url`
 
+Named contact fields are optional, but preferred. Daily research should prioritize public professional contacts in Creator Partnerships, Influencer Marketing, Brand Partnerships, Partnerships, Affiliate Marketing, Growth, Social, or Marketing. A publicly listed named company work email is preferred over generic `info@`, `support@`, or `hello@` inboxes.
+
+Only public professional contact information should be used. Do not guess an email from a naming pattern, infer a private address, use leaked data, or scrape LinkedIn. The loader only preserves a researched contact email when its email domain matches the sponsor domain. Otherwise it is discarded and normal sponsor-owned website enrichment is used instead.
+
+When a verified researched named work email exists, the scanner preserves it even if normal website enrichment also finds a generic address. Named contacts also receive a ranking boost when otherwise similar sponsor candidates are compared.
+
 The queue is not a bypass or allowlist. On every hourly run, each researched candidate still must pass:
 
 1. sponsor-owned website enrichment
-2. public business email discovery
+2. public business email requirement
 3. maximum sponsorship age
 4. permanent do-not-reach-out/blocklist
 5. full monday.com brand dedupe
