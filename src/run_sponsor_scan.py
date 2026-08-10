@@ -3,6 +3,7 @@ from __future__ import annotations
 from datetime import date
 
 from brand_enrichment import BrandEnricher
+from creatomap_active_sponsors import CreatomapActiveSponsorSource
 from creatordb_active_sponsors import CreatorDBActiveSponsorSource
 from creator_classifier import classify_creator
 from discord_notifier import DiscordNotifier
@@ -68,8 +69,12 @@ def _score_lead(lead: SponsorLead) -> int:
     if "ad/sponsored disclosure" in signals:
         score += 12
 
-    # CreatorDB is used as a brand-activity source. These signals mean the content
-    # was indexed as sponsored and a specific brand was attributed to it.
+    # External indexes are used only as brand-activity sources. These signals mean
+    # a specific recent sponsored YouTube video was attributed to the brand.
+    if "Creatomap recent sponsorship" in signals:
+        score += 35
+    if "Creatomap video evidence" in signals:
+        score += 25
     if "CreatorDB sponsored content" in signals:
         score += 35
     if "partnered brand attribution" in signals:
@@ -171,6 +176,13 @@ def run() -> None:
     config = load_sponsor_config()
     monday = SponsorMondayClient(config.monday_token, config.monday_board_id, config.monday_group_id)
     youtube = YouTubeSponsorScanner(config.youtube_api_key, config.search_region, config.search_language)
+
+    # No account, API key, or approval is required for Creatomap. It publishes a public
+    # JSON API specifically for sponsor/brand/creator sponsorship data.
+    creatomap = CreatomapActiveSponsorSource()
+
+    # CreatorDB remains optional extra coverage if access is ever granted, but launch
+    # does not depend on it.
     creatordb = (
         CreatorDBActiveSponsorSource(config.creatordb_api_key, config.creatordb_page_size)
         if config.creatordb_api_key
@@ -186,6 +198,7 @@ def run() -> None:
     duplicate_count = 0
     rejected_count = 0
     scanned_video_ids: set[str] = set()
+    creatomap_content_count = 0
     creatordb_content_count = 0
     errors: list[str] = []
     desired_pool = config.target_daily_leads
@@ -256,9 +269,9 @@ def run() -> None:
                 f"{lead.brand_name} / {lead.sponsored_date}"
             )
 
-    # Source 1: YouTube's own recent paid-placement / sponsorship signals.
-    # Start with 24h. If that is not enough, CreatorDB gets a chance before we
-    # widen the native YouTube lookback to 72h and 7d.
+    # Source 1: YouTube's own most recent paid-placement / sponsorship signals.
+    # We start with 24h, then use the zero-wait Creatomap API before widening the
+    # native YouTube lookback. This improves coverage without requiring another key.
     for window_index, lookback in enumerate(LOOKBACK_WINDOWS_HOURS):
         print(f"Scanning YouTube sponsorships from the last {lookback} hours...")
         try:
@@ -281,28 +294,47 @@ def run() -> None:
         if len(candidates) >= desired_pool:
             break
 
-        # Source 2: CreatorDB's cross-creator sponsored-content index. This is a
-        # fallback/coverage expansion, not a creator-discovery feature. It searches
-        # recent sponsored content and gives us the attributed brand/domain.
-        if window_index == 0 and creatordb is not None:
+        if window_index == 0:
+            # Source 2: Creatomap public API. No approval, login or key required.
             print(
-                "YouTube inventory was below target; checking CreatorDB for active "
-                f"sponsorships from the last {config.max_sponsor_age_days} days..."
+                "YouTube inventory was below target; checking Creatomap public API for "
+                f"recent sponsorship video evidence from the last {config.max_sponsor_age_days} days..."
             )
             try:
-                creatordb_leads = creatordb.discover(config.max_sponsor_age_days)
-                creatordb_content_count = len(creatordb_leads)
+                creatomap_leads = creatomap.discover(config.max_sponsor_age_days)
+                creatomap_content_count = len(creatomap_leads)
             except Exception as exc:
-                errors.append(f"CreatorDB active sponsor scan failed: {exc}")
-                creatordb_leads = []
+                errors.append(f"Creatomap active sponsor scan failed: {exc}")
+                creatomap_leads = []
 
-            for lead in creatordb_leads:
-                consider_lead(lead, "CreatorDB")
+            for lead in creatomap_leads:
+                consider_lead(lead, "Creatomap")
                 if len(candidates) >= desired_pool:
                     break
 
             if len(candidates) >= desired_pool:
                 break
+
+            # Source 3: CreatorDB only if a key happens to be available later.
+            if creatordb is not None:
+                print(
+                    "Creatomap inventory was below target; checking optional CreatorDB "
+                    f"coverage from the last {config.max_sponsor_age_days} days..."
+                )
+                try:
+                    creatordb_leads = creatordb.discover(config.max_sponsor_age_days)
+                    creatordb_content_count = len(creatordb_leads)
+                except Exception as exc:
+                    errors.append(f"CreatorDB active sponsor scan failed: {exc}")
+                    creatordb_leads = []
+
+                for lead in creatordb_leads:
+                    consider_lead(lead, "CreatorDB")
+                    if len(candidates) >= desired_pool:
+                        break
+
+                if len(candidates) >= desired_pool:
+                    break
 
     # Gate 3: FULL monday scan immediately before writes. The permanent
     # duplicate list is seeded here again too.
@@ -354,11 +386,12 @@ def run() -> None:
         f"Sponsor scan complete: {len(created)}/{config.target_daily_leads} new leads, "
         f"{duplicate_count} duplicates/blocked brands, {rejected_count} rejected, "
         f"{len(scanned_video_ids)} YouTube videos scanned, "
+        f"{creatomap_content_count} Creatomap sponsor events considered, "
         f"{creatordb_content_count} CreatorDB sponsor events considered."
     )
 
     if creatordb is None:
-        print("CreatorDB fallback is disabled because CREATORDB_API_KEY is not configured.")
+        print("CreatorDB is optional and disabled; Creatomap requires no key and remains active.")
 
     if errors:
         print(f"Scanner completed with {len(errors)} warning(s).")
