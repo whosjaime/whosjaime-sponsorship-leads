@@ -50,10 +50,11 @@ class DiscordNotifier:
 
     @classmethod
     def new_lead_message(cls, lead: SponsorLead) -> str:
+        is_linkedin = (lead.source_platform or "").strip().lower() == "linkedin"
         subscribers = (
             f"{lead.creator_subscribers:,}"
             if lead.creator_subscribers
-            else "Unknown"
+            else ("N/A" if is_linkedin else "Unknown")
         )
         website = cls._website_url(lead.brand_domain)
         contact = ""
@@ -71,15 +72,20 @@ class DiscordNotifier:
             lines.append(f"👤 **Contact:** {contact}")
         lines.extend(
             [
-                f"📧 **Email:** {lead.contact_email}",
+                f"📧 **Email:** {lead.contact_email or 'Not found yet'}",
                 f"🌐 **Website:** <{website}>",
                 "",
                 f"🎥 **Found On:** {lead.source_platform}",
-                f"👤 **Creator:** {lead.creator_name}",
-                f"📊 **Subscribers:** {subscribers}",
+                f"👤 **{'Poster' if is_linkedin else 'Creator'}:** {lead.creator_name}",
+            ]
+        )
+        if not is_linkedin:
+            lines.append(f"📊 **Subscribers:** {subscribers}")
+        lines.extend(
+            [
                 f"📅 **Sponsored Date:** {cls._display_date(lead.sponsored_date)}",
                 "",
-                f"🔗 **Sponsored Video:** <{lead.video_url}>",
+                f"🔗 **{'Sponsorship Post' if is_linkedin else 'Sponsored Video'}:** <{lead.video_url}>",
                 "",
                 f"✅ It has been added in **Monday.com**, <@{OUTREACH_USER_ID}> you can start outreach!",
             ]
