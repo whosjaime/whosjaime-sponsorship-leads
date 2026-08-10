@@ -14,7 +14,8 @@ SPONSOR_PATTERNS = [
 ]
 URL_RE = re.compile(r"https?://[^\s<>{}\[\]\"']+", re.I)
 AD_SIGNAL_RE = re.compile(
-    r"(?:^|\s)#(?:ad|sponsored|partner|paid)(?:\s|$)|paid\s+(?:partnership|promotion)|sponsored\s+content",
+    r"(?:^|[\s,;|])#(?:ad|ads|sponsored|sponsor|partner|paid|advertisement|paidpartnership|paidpromotion)(?=$|[\s,.;:!?|])"
+    r"|paid\s+(?:partnership|promotion)|sponsored\s+content",
     re.I,
 )
 NON_SPONSOR_DOMAINS = {
@@ -94,10 +95,21 @@ def _brand_from_domain(domain: str) -> str:
     return re.sub(r"[-_]", " ", core).strip().title()
 
 
+def _ad_signal_text(video: VideoRecord) -> str:
+    """Search visible metadata plus YouTube tag metadata for sponsorship disclosures."""
+    return "\n".join(
+        [
+            video.title or "",
+            video.description or "",
+            " ".join(video.tags or []),
+        ]
+    )
+
+
 def detect_sponsors(video: VideoRecord, channels: dict[str, ChannelRecord]) -> list[DetectedSponsor]:
     description = video.description or ""
     detections = []
-    ad_signal = bool(AD_SIGNAL_RE.search(description))
+    ad_signal = bool(AD_SIGNAL_RE.search(_ad_signal_text(video)))
     for pattern in SPONSOR_PATTERNS:
         for match in pattern.finditer(description):
             brand_name = _clean_brand(match.group(1))
