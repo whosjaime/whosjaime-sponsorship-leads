@@ -76,6 +76,8 @@ def _score_lead(lead: SponsorLead) -> int:
         score += 35
     if "verified public sponsorship evidence" in signals:
         score += 25
+    if "verified named public work email" in signals:
+        score += 5
 
     # CreatorDB remains optional future coverage only; launch does not depend on it.
     if "CreatorDB sponsored content" in signals:
@@ -122,13 +124,19 @@ def _is_target_lead(lead: SponsorLead) -> bool:
 
 
 def _priority_score(lead: SponsorLead) -> int:
-    """Rank target sponsors by fit and how recently they were actively sponsoring."""
+    """Rank target sponsors by fit, recency, and outreach contact quality."""
     score = 0
     if lead.sponsor_category in TARGET_SPONSOR_CATEGORIES:
         score += 100
     text = _target_text(lead)
     if any(keyword in text for keyword in TARGET_BRAND_KEYWORDS):
         score += 50
+
+    # Prefer actionable named contacts over generic inboxes when sponsor quality is equal.
+    if lead.contact_email and lead.contact_name:
+        score += 25
+    elif lead.contact_email:
+        score += 5
 
     age_days = _sponsorship_age_days(lead)
     if age_days is not None:
@@ -151,12 +159,25 @@ def _temperature(score: int) -> str:
 
 def _enrich_lead(lead: SponsorLead, enricher: BrandEnricher) -> SponsorLead:
     if lead.brand_domain:
+        # Daily research can supply a verified named work email. Preserve it while
+        # still using website enrichment for domain normalization and niche classification.
+        preferred_email = lead.contact_email
+        preferred_email_type = lead.email_type
+        preferred_source = lead.contact_source
+
         enrichment = enricher.enrich(lead.brand_domain)
         if enrichment.get("domain"):
             lead.brand_domain = normalize_domain(enrichment["domain"])
-        lead.contact_email = enrichment.get("contact_email", "")
-        lead.email_type = enrichment.get("email_type", "")
-        lead.contact_source = enrichment.get("contact_source", "")
+
+        if preferred_email:
+            lead.contact_email = preferred_email
+            lead.email_type = preferred_email_type or "Named public work email"
+            lead.contact_source = preferred_source or enrichment.get("contact_source", "")
+        else:
+            lead.contact_email = enrichment.get("contact_email", "")
+            lead.email_type = enrichment.get("email_type", "")
+            lead.contact_source = enrichment.get("contact_source", "")
+
         lead.sponsor_category = enrichment.get("category", "Other")
         lead.sponsor_subcategory = enrichment.get("subcategory", "")
         lead.brand_key = make_brand_key(lead.brand_name, lead.brand_domain)

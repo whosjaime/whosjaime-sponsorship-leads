@@ -56,12 +56,21 @@ class DiscordNotifier:
             else "Unknown"
         )
         website = cls._website_url(lead.brand_domain)
+        contact = ""
+        if lead.contact_name:
+            contact = lead.contact_name
+            if lead.contact_title:
+                contact += f" — {lead.contact_title}"
 
-        return "\n".join(
+        lines = [
+            "🔥 **NEW SPONSOR LEAD**",
+            "",
+            f"🏢 **Brand:** {lead.brand_name}",
+        ]
+        if contact:
+            lines.append(f"👤 **Contact:** {contact}")
+        lines.extend(
             [
-                "🔥 **NEW SPONSOR LEAD**",
-                "",
-                f"🏢 **Brand:** {lead.brand_name}",
                 f"📧 **Email:** {lead.contact_email}",
                 f"🌐 **Website:** <{website}>",
                 "",
@@ -75,6 +84,7 @@ class DiscordNotifier:
                 f"✅ It has been added in **Monday.com**, <@{OUTREACH_USER_ID}> you can start outreach!",
             ]
         )
+        return "\n".join(lines)
 
     def send_new_lead(self, lead: SponsorLead) -> None:
         self._post(self.new_lead_message(lead))

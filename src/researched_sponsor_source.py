@@ -4,7 +4,7 @@ import json
 from pathlib import Path
 from urllib.parse import parse_qs, urlparse
 
-from sponsor_dedupe import normalize_domain
+from sponsor_dedupe import email_domain, normalize_domain
 from sponsor_models import SponsorLead
 
 DEFAULT_RESEARCH_QUEUE = Path(__file__).resolve().parents[1] / "data" / "researched_sponsors.json"
@@ -16,6 +16,7 @@ class ResearchedSponsorSource:
     The queue is only an intake source. Every candidate still goes through the normal
     sponsor pipeline: website enrichment, public-email requirement, freshness check,
     niche filter, permanent blocklist, full monday.com dedupe, and final write gate.
+    A researched named work email is accepted only when its domain matches the sponsor.
     """
 
     def __init__(self, path: str | Path = DEFAULT_RESEARCH_QUEUE) -> None:
@@ -42,6 +43,19 @@ class ResearchedSponsorSource:
             return int(float(value or 0))
         except (TypeError, ValueError):
             return 0
+
+    @staticmethod
+    def _verified_contact(item: dict, brand_domain: str) -> tuple[str, str, str, str]:
+        contact_email = str(item.get("contact_email") or "").strip().lower()
+        if not contact_email or email_domain(contact_email) != brand_domain:
+            return "", "", "", ""
+
+        return (
+            str(item.get("contact_name") or "").strip(),
+            str(item.get("contact_title") or "").strip(),
+            contact_email,
+            str(item.get("contact_source_url") or item.get("contact_source") or "").strip(),
+        )
 
     def load(self) -> list[SponsorLead]:
         if not self.path.exists():
@@ -76,6 +90,10 @@ class ResearchedSponsorSource:
                 continue
             seen.add(identity)
 
+            contact_name, contact_title, contact_email, contact_source = self._verified_contact(
+                item, brand_domain
+            )
+
             leads.append(
                 SponsorLead(
                     brand_name=brand_name,
@@ -93,10 +111,15 @@ class ResearchedSponsorSource:
                     sponsored_date=sponsored_date,
                     evidence=str(item.get("evidence") or "Daily researched public sponsorship evidence.").strip(),
                     paid_product_placement=bool(item.get("paid_product_placement", False)),
+                    contact_name=contact_name,
+                    contact_title=contact_title,
+                    contact_email=contact_email,
+                    email_type="Named public work email" if contact_email and contact_name else ("Public work email" if contact_email else ""),
+                    contact_source=contact_source,
                     signals=[
                         "Daily researched sponsorship",
                         "verified public sponsorship evidence",
-                    ],
+                    ] + (["verified named public work email"] if contact_email and contact_name else []),
                 )
             )
 

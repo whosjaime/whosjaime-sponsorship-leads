@@ -96,6 +96,8 @@ class SponsorScannerTests(unittest.TestCase):
             brand_domain="newgamingbrand.com",
             sponsor_subcategory="",
             sponsored_date=date.today().isoformat(),
+            contact_email="",
+            contact_name="",
         )
         generic = SimpleNamespace(
             sponsor_category="Other",
@@ -103,6 +105,8 @@ class SponsorScannerTests(unittest.TestCase):
             brand_domain="genericbrand.com",
             sponsor_subcategory="",
             sponsored_date=date.today().isoformat(),
+            contact_email="",
+            contact_name="",
         )
         self.assertGreater(_priority_score(gaming), _priority_score(generic))
 
