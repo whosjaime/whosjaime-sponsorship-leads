@@ -52,9 +52,3 @@ jobs:
           git add data/sponsor_queue.json
           git commit -m "Consume hourly sponsor queue item [skip ci]"
           git push origin HEAD:main
-      - name: Alert Discord if sponsor delivery breaks
-        if: failure()
-        env:
-          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
-          GITHUB_RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
-        run: python src/discord_scan_failure_alert.py
