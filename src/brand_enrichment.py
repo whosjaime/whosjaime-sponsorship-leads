@@ -33,49 +33,69 @@ BLOCKED_LOCALPARTS = {
 CONTACT_HINTS = {
     "contact", "help", "support", "legal", "impressum", "partnership", "partner",
     "sponsor", "creator", "influencer", "affiliate", "marketing", "press", "media",
-    "about", "company",
+    "ambassador", "collab", "brand", "about", "company",
 }
 COMMON_CONTACT_PATHS = [
     "/contact",
     "/contact-us",
+    "/partnerships",
+    "/partners",
+    "/brand-partnerships",
+    "/creator-partnerships",
+    "/creators",
+    "/creator-program",
+    "/influencers",
+    "/ambassadors",
+    "/collaborate",
+    "/collabs",
+    "/affiliate",
+    "/affiliates",
+    "/influencer-program",
+    "/influencer-sign-up",
+    "/marketing",
+    "/press",
+    "/media",
     "/help",
     "/help/contact",
     "/help/legal",
     "/legal",
     "/hilfe/impressum",
     "/impressum",
-    "/press",
     "/prensa",
-    "/influencer-program",
-    "/influencer-sign-up",
-    "/affiliate",
 ]
 CATEGORY_RULES = {
     "Software / SaaS": {
         "software", "saas", "platform", "productivity", "workflow", "cloud", "app",
-        "web hosting", "hosting", "website builder", "developer", "coding", "automation",
-        "artificial intelligence", " ai ",
+        "mobile app", "browser", "web app", "web hosting", "hosting", "website builder",
+        "developer", "developer tool", "devtool", "coding", "automation", "api", "no-code",
+        "artificial intelligence", " ai ", "ai tool", "cloud storage", "project management",
+        "design software", "editing software", "streaming software",
     },
     "Cybersecurity / VPN": {
         "vpn", "cybersecurity", "online privacy", "password manager", "internet security",
-        "identity protection", "data breach", "privacy protection",
+        "identity protection", "data breach", "privacy protection", "antivirus", "malware",
+        "identity theft", "secure browsing",
     },
     "Finance": {"banking", "credit card", "investing", "finance", "payments", "insurance"},
     "Food & Beverage": {
         "meal", "food", "recipe", "snack", "beverage", "coffee", "drink", "energy drink",
-        "soda", "sparkling water", "hydration", "protein bar", "candy", "chips",
+        "soda", "sparkling water", "hydration", "protein bar", "protein snack", "candy", "chips",
+        "meal delivery", "meal kit", "jerky", "hot sauce", "sauce", "snack bar", "nutrition bar",
     },
     "Health & Wellness": {"wellness", "health", "supplement", "vitamin", "therapy", "sleep", "fitness"},
     "Beauty": {"beauty", "skincare", "cosmetics", "makeup", "haircare"},
     "Fashion": {"fashion", "apparel", "clothing", "footwear", "jewelry"},
     "Gaming": {
         "gaming", "gamer", "games", "esports", "gaming gear", "gaming peripheral",
-        "controller", "console", "pc gaming",
+        "controller", "console", "pc gaming", "game server", "game hosting", "gaming chair",
+        "gaming desk", "game key", "gaming accessories",
     },
     "Consumer Tech": {
-        "headphones", "headset", "keyboard", "laptop", "smartphone", "camera", "electronics",
+        "headphones", "headset", "earbuds", "keyboard", "laptop", "smartphone", "camera", "electronics",
         "gadget", "microphone", "webcam", "speaker", "monitor", "computer hardware", "mouse",
-        "audio interface", "tech accessories",
+        "audio interface", "tech accessories", "charger", "power bank", "router", "ssd", "storage",
+        "gpu", "graphics card", "cpu", "processor", "capture card", "smart home", "wearable",
+        "phone accessory", "mousepad", "desk", "gaming chair",
     },
     "Travel": {"travel", "hotel", "flight", "vacation", "tourism", "booking"},
     "Education": {"education", "learning", "course", "tutoring"},
@@ -88,16 +108,18 @@ CATEGORY_RULES = {
 }
 SUBCATEGORY_RULES = {
     "VPN": {"vpn", "virtual private network"},
-    "Cybersecurity": {"cybersecurity", "online security"},
+    "Cybersecurity": {"cybersecurity", "online security", "antivirus", "malware"},
     "Password Manager": {"password manager"},
     "Meal Delivery": {"meal delivery", "meal kit"},
     "Energy Drink": {"energy drink"},
-    "Snacks": {"snack", "candy", "chips", "protein bar"},
+    "Snacks": {"snack", "candy", "chips", "protein bar", "jerky", "nutrition bar"},
     "Coffee": {"coffee"},
     "Web Hosting": {"web hosting", "hosting provider", "hosting"},
     "Website Builder": {"website builder"},
-    "Gaming Gear": {"gaming gear", "gaming peripheral", "controller", "gaming headset"},
-    "Audio Gear": {"microphone", "audio interface", "headphones", "speaker"},
+    "AI / Productivity": {"ai tool", "artificial intelligence", "productivity", "workflow", "automation"},
+    "Gaming Gear": {"gaming gear", "gaming peripheral", "controller", "gaming headset", "gaming chair"},
+    "Computer Hardware": {"gpu", "graphics card", "cpu", "processor", "ssd", "computer hardware"},
+    "Audio Gear": {"microphone", "audio interface", "headphones", "earbuds", "speaker"},
     "Banking": {"bank account", "banking"},
     "Credit Cards": {"credit card"},
     "Supplements": {"supplement", "vitamin"},
@@ -233,7 +255,7 @@ class BrandEnricher:
                 clean = absolute.split("#", 1)[0]
                 if clean not in seen_urls and clean not in relevant:
                     relevant.append(clean)
-            if len(relevant) >= 10:
+            if len(relevant) >= 14:
                 break
 
         for url in relevant:
