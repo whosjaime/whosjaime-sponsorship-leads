@@ -25,7 +25,8 @@ def _identity(lead: SponsorLead) -> str:
 
 
 def run() -> None:
-    config = load_sponsor_config()
+    # Discovery does not send Discord messages. The hourly dispatcher owns the webhook.
+    config = load_sponsor_config(require_discord=False)
     monday = SponsorMondayClient(config.monday_token, config.monday_board_id, config.monday_group_id)
     youtube = YouTubeSponsorScanner(config.youtube_api_key, config.search_region, config.search_language)
     researched = ResearchedSponsorSource()
@@ -112,15 +113,19 @@ def run() -> None:
         consider(lead, "Daily Research")
 
     # Main discovery: exactly 3 search.list calls, each asking for up to 50 results,
-    # across the full active-sponsor freshness window. This can inspect up to 150 raw
-    # search results before cross-lane dedupe, instead of repeating searches every hour.
+    # across the full active-sponsor freshness window. A YouTube outage/quota issue must
+    # not erase otherwise-qualified researched sponsors that are already ready to queue.
     search_days = min(config.max_sponsor_age_days, MAX_NATIVE_YOUTUBE_LOOKBACK_DAYS)
     lookback_hours = max(24, search_days * 24)
     print(
         f"Building sponsor queue from up to {len(SEARCH_LANES) * 50} YouTube search results "
         f"across the last {search_days} days..."
     )
-    videos, channels = youtube.discover_batch(lookback_hours)
+    try:
+        videos, channels = youtube.discover_batch(lookback_hours)
+    except Exception as exc:
+        print(f"WARNING: YouTube daily sponsor discovery failed: {exc}")
+        videos, channels = [], {}
 
     for video in videos:
         if video.video_id in scanned_video_ids:
@@ -148,7 +153,6 @@ def run() -> None:
         reverse=True,
     )
     combined = [*valid_existing, *incoming]
-    # Re-sort the entire queue so strongest current opportunities go out first.
     combined.sort(
         key=lambda lead: (_priority_score(lead), lead.lead_score, lead.sponsored_date),
         reverse=True,
