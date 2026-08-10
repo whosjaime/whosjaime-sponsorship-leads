@@ -18,6 +18,24 @@ class YouTubeHourlyWindowTests(unittest.TestCase):
         self.assertEqual(after, "2026-08-02T17:00:00Z")
         self.assertEqual(before, "2026-08-03T23:00:00Z")
 
+    def test_search_uses_active_rotating_window_as_youtube_bounds(self):
+        scanner = YouTubeSponsorScanner("test-key")
+        scanner._active_search_window = (
+            "2026-08-02T17:00:00Z",
+            "2026-08-03T23:00:00Z",
+            5,
+        )
+        scanner._get = Mock(return_value={"items": []})
+
+        scanner._search(30 * 24, query="#ad", paid_only=True)
+
+        endpoint, params = scanner._get.call_args.args
+        self.assertEqual(endpoint, "search")
+        self.assertEqual(params["publishedAfter"], "2026-08-02T17:00:00Z")
+        self.assertEqual(params["publishedBefore"], "2026-08-03T23:00:00Z")
+        self.assertEqual(params["q"], "#ad")
+        self.assertEqual(params["videoPaidProductPlacement"], "true")
+
     def test_each_run_keeps_exactly_three_search_calls_in_one_rotating_slice(self):
         scanner = YouTubeSponsorScanner("test-key")
         scanner._hourly_search_window = Mock(
@@ -31,8 +49,8 @@ class YouTubeHourlyWindowTests(unittest.TestCase):
         self.assertEqual(scanner._search.call_count, 3)
         self.assertEqual(ids, ["a", "b", "c", "d"])
         for call in scanner._search.call_args_list:
-            self.assertEqual(call.args[0], "2026-08-02T17:00:00Z")
-            self.assertEqual(call.args[1], "2026-08-03T23:00:00Z")
+            self.assertEqual(call.args[0], 30 * 24)
+        self.assertIsNone(scanner._active_search_window)
 
     def test_all_failed_search_lanes_raise_instead_of_silent_zero_inventory(self):
         scanner = YouTubeSponsorScanner("test-key")
@@ -44,6 +62,7 @@ class YouTubeHourlyWindowTests(unittest.TestCase):
         with self.assertRaisesRegex(RuntimeError, "All YouTube sponsor discovery lanes failed"):
             scanner.discover_video_ids(30 * 24)
         self.assertEqual(scanner._search.call_count, 3)
+        self.assertIsNone(scanner._active_search_window)
 
 
 if __name__ == "__main__":
