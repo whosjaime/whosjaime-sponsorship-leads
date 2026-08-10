@@ -1,16 +1,19 @@
 from __future__ import annotations
 
 from discord_notifier import DiscordNotifier
+from run_sponsor_discovery_batch import _hydrate_creator_metrics
 from run_sponsor_scan import _blocked, _is_recent_sponsorship, _is_target_lead
 from sponsor_config import load_sponsor_config
 from sponsor_monday_client import SponsorMondayClient
 from sponsor_queue import load_queue, save_queue
+from youtube_sponsor_scanner import YouTubeSponsorScanner
 
 
 def run() -> None:
     config = load_sponsor_config()
     monday = SponsorMondayClient(config.monday_token, config.monday_board_id, config.monday_group_id)
     discord = DiscordNotifier(config.discord_webhook_url)
+    youtube = YouTubeSponsorScanner(config.youtube_api_key, config.search_region, config.search_language)
     queue = load_queue()
     index = monday.load_existing_index()
 
@@ -20,6 +23,11 @@ def run() -> None:
 
     while queue:
         lead = queue.pop(0)
+
+        # Last-mile safety net: old queue items or externally researched records may
+        # still have a zero/unknown creator subscriber count. Hydrate the sponsored
+        # video's creator before Monday and Discord see the lead.
+        _hydrate_creator_metrics([lead], youtube)
 
         # Every delivery gets the production gates again in case Monday changed after
         # the daily discovery batch or a queued sponsorship aged out.
@@ -44,7 +52,8 @@ def run() -> None:
             item = result.get("data", {}).get("create_item", {})
             print(
                 f"Created queued sponsor lead: {lead.brand_name} / "
-                f"monday {item.get('id', '?')} / score {lead.lead_score}"
+                f"monday {item.get('id', '?')} / score {lead.lead_score} / "
+                f"creator subscribers {lead.creator_subscribers or 0:,}"
             )
             created = 1
             index.add(lead)
