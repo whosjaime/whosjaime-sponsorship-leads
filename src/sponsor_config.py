@@ -26,12 +26,15 @@ def _bool(name: str, default: bool = False) -> bool:
 @dataclass(frozen=True)
 class SponsorScannerConfig:
     youtube_api_key: str
+    creatordb_api_key: str
     monday_token: str
     monday_board_id: int
     monday_group_id: str
     discord_webhook_url: str
     target_daily_leads: int
     min_lead_score: int
+    max_sponsor_age_days: int
+    creatordb_page_size: int
     search_region: str
     search_language: str
     enable_instagram: bool
@@ -56,12 +59,15 @@ def load_sponsor_config() -> SponsorScannerConfig:
 
     return SponsorScannerConfig(
         youtube_api_key=youtube_api_key,
+        creatordb_api_key=os.getenv("CREATORDB_API_KEY", "").strip(),
         monday_token=monday_token,
         monday_board_id=int(board_id_raw) if board_id_raw else DEFAULT_SPONSOR_MONDAY_BOARD_ID,
         monday_group_id=os.getenv("SPONSOR_MONDAY_GROUP_ID", DEFAULT_SPONSOR_MONDAY_GROUP_ID).strip() or DEFAULT_SPONSOR_MONDAY_GROUP_ID,
         discord_webhook_url=os.getenv("DISCORD_WEBHOOK_URL", "").strip(),
         target_daily_leads=max(1, _int("SPONSOR_TARGET_DAILY_LEADS", 1)),
         min_lead_score=max(1, min(100, _int("SPONSOR_MIN_LEAD_SCORE", 70))),
+        max_sponsor_age_days=max(1, min(365, _int("SPONSOR_MAX_AGE_DAYS", 30))),
+        creatordb_page_size=max(1, min(100, _int("CREATORDB_PAGE_SIZE", 50))),
         search_region=os.getenv("SPONSOR_SEARCH_REGION", "US").strip().upper() or "US",
         search_language=os.getenv("SPONSOR_SEARCH_LANGUAGE", "en").strip() or "en",
         enable_instagram=_bool("ENABLE_INSTAGRAM_SPONSOR_SCAN", False),

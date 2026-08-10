@@ -1,5 +1,54 @@
 # Sponsorship Leads Setup
 
+## What the scanner is for
+
+This project finds **brands actively spending on creator sponsorships**, not creators to recruit.
+
+Creator/channel/video fields are kept only as evidence showing where the active sponsorship was found. Creator niche, creator size, and creator identity do not make a sponsor eligible.
+
+A lead must pass all of these gates before it reaches monday.com:
+
+1. recent sponsorship evidence
+2. a usable sponsor/brand domain
+3. a public business contact email on a sponsor-owned domain
+4. Gaming, Consumer Tech, Software/SaaS, Cybersecurity/VPN, or Food & Beverage fit
+5. minimum lead score
+6. permanent blocklist check
+7. full monday.com brand-level duplicate check
+
+## Active sponsorship freshness
+
+`SPONSOR_MAX_AGE_DAYS` defaults to `30`.
+
+Sponsorship evidence older than that is rejected. Missing or invalid sponsorship dates are also rejected.
+
+The final monday write repeats the freshness check so stale evidence cannot enter the board even if it was accepted earlier in a run.
+
+## Discovery sources
+
+### 1. YouTube
+
+YouTube is always enabled and remains the primary source.
+
+The scanner searches recent YouTube content using paid-product-placement metadata plus explicit sponsorship phrases/disclosures. It starts with the last 24 hours and can widen to 72 hours and 7 days if qualified inventory is low.
+
+### 2. CreatorDB — optional coverage source
+
+If `CREATORDB_API_KEY` is configured and the freshest native YouTube scan is below the run target, the scanner queries CreatorDB's YouTube sponsored-content index.
+
+CreatorDB is used specifically to find **recent sponsored content with an attributed partnered brand/domain**. It is not used as a creator-directory lead source.
+
+The query filters for:
+
+- `isSponsored = true`
+- publish time within `SPONSOR_MAX_AGE_DAYS`
+- standard YouTube videos
+- newest content first
+
+The scanner then sends those brand domains through the same email enrichment, niche, score, freshness, permanent blocklist, and monday dedupe gates as native YouTube discoveries.
+
+If `CREATORDB_API_KEY` is missing, this source is skipped cleanly and the existing YouTube scanner continues normally.
+
 ## Client monday.com board
 
 Board: **Sponsership Leads**
@@ -25,12 +74,12 @@ The scanner creates new sponsor brands only in **New Leads**.
 | Email Status | `color_mm62kst6` | Status | Never set or overwritten by scanner |
 | Brand Domain | `link_mm62hm2e` | Link | Written by scanner; used for brand dedupe |
 | Contact Email | `email_mm62m6r9` | Email | Required before a lead can be created; used for backup dedupe |
-| Platform | `dropdown_mm62y6v7` | Dropdown | YouTube in V1 |
-| Creator | `text_mm621kk9` | Text | Creator where the sponsorship was discovered |
-| Creator URL | `link_mm6239bh` | Link | Creator/channel URL |
-| Creator Subscribers | `numeric_mm62np82` | Numbers | Subscriber count |
-| Sponsored Video | `link_mm62nhcr` | Link | Sponsorship source video |
-| Sponsored Date | `date_mm626p50` | Date | Upload/publish date of sponsored content |
+| Platform | `dropdown_mm62y6v7` | Dropdown | YouTube |
+| Creator | `text_mm621kk9` | Text | Evidence: creator where sponsorship was observed |
+| Creator URL | `link_mm6239bh` | Link | Evidence: source creator/channel URL |
+| Creator Subscribers | `numeric_mm62np82` | Numbers | Evidence/context only; not used to qualify the lead |
+| Sponsored Video | `link_mm62nhcr` | Link | Sponsorship evidence URL |
+| Sponsored Date | `date_mm626p50` | Date | Publish date used by freshness gate |
 | Date Found | `date_mm62megm` | Date | Date scanner discovered the brand |
 | Subitems | `subtasks_mm5reseg` | Subitems | Not written by scanner; monday automations create Creator 1 through Creator 6 |
 
@@ -84,7 +133,7 @@ Examples that all resolve to the same brand:
 - `go.nordvpn.com`
 - `partnerships@nordvpn.com`
 
-If NordVPN already exists anywhere on the board, another NordVPN sponsorship does not create another parent item regardless of the creator, video, group, or outreach status.
+If NordVPN already exists anywhere on the board, another NordVPN sponsorship does not create another parent item regardless of creator, video, group, or outreach status.
 
 The scanner performs duplicate checks before discovery, after brand enrichment, and again immediately before monday writes.
 
@@ -92,15 +141,11 @@ The scanner performs duplicate checks before discovery, after brand enrichment, 
 
 The scanner also has a permanent manual brand blocklist in `src/sponsor_dedupe.py`.
 
-Every brand on that list is treated exactly like a brand that already exists in monday.com, even if the monday board is empty. The list includes the team-provided existing sponsor set such as Notion, Wix, Shopify, Squarespace, Grammarly, NordVPN, ExpressVPN, Surfshark, Hostinger, Canva, Adobe, G FUEL, Liquid Death, Gamer Supps, Monster Energy, Rare Beauty, Chewy, and the rest of the supplied brands.
+Every brand on that list is treated exactly like a brand already present in monday.com, even if the monday board is empty. Common naming variants and explicit aliases are normalized so a blocked brand cannot be re-imported under a shorter or alternate name.
 
-Common naming variants are normalized, and explicit aliases such as `PIA` / `Private Internet Access` and `CyberGhost` / `CyberGhost VPN` are included so they cannot be re-imported under a shorter name.
+## Hard sponsor niche filter
 
-## Sponsor targeting priority
-
-The hourly scanner prioritizes sponsors that fit the creator roster best.
-
-Highest priority sponsor categories:
+Only these sponsor categories are eligible:
 
 - Gaming
 - Consumer Tech
@@ -108,11 +153,13 @@ Highest priority sponsor categories:
 - Cybersecurity / VPN
 - Food & Beverage
 
-Gaming, Tech, and Food creator channels also receive a targeting boost. Brand/domain keywords related to gaming, software, electronics, audio gear, food, beverages, energy drinks, coffee, snacks, and meals can also increase priority.
+Brand/domain keywords for gaming hardware, software, hosting, privacy/security, electronics/audio gear, food, beverages, energy drinks, coffee, snacks, and meals can help classify a target brand.
 
-This is a **priority**, not a hard filter. If no qualified gaming/tech/food-drink sponsor is available, another strong new sponsor with a real public email may still be selected for the hourly lead.
+Festivals and event-production sponsors are explicitly rejected. Off-niche sponsors do not become eligible because they sponsored a gaming/tech creator.
 
 ## Creator match subitems
+
+The source Creator field on the parent is only sponsorship evidence.
 
 The scanner does not populate or manage the six creator-match subitems. Existing monday automations create:
 
@@ -123,7 +170,7 @@ The scanner does not populate or manage the six creator-match subitems. Existing
 - Creator 5
 - Creator 6
 
-These are for the team to match its own creators to the brand opportunity and are separate from the source Creator column on the parent sponsor item.
+Those subitems are where the team matches its own creators to the sponsor opportunity.
 
 ## GitHub Secrets
 
@@ -135,27 +182,31 @@ Required:
 
 `SPONSOR_MONDAY_API_KEY` can be used instead of `SPONSOR_MONDAY_TOKEN`.
 
-## Optional GitHub Variables
+Optional second source:
 
-The client board/group are already project defaults, but these can override them:
+- `CREATORDB_API_KEY`
+
+No CreatorDB secret is required for the existing YouTube scanner to run.
+
+## Optional GitHub Variables
 
 - `SPONSOR_MONDAY_BOARD_ID` = `18424367188`
 - `SPONSOR_MONDAY_GROUP_ID` = `topics`
 - `SPONSOR_MIN_LEAD_SCORE` = `70`
+- `SPONSOR_MAX_AGE_DAYS` = `30`
+- `CREATORDB_PAGE_SIZE` = `50`
 - `SPONSOR_SEARCH_REGION` = `US`
 - `SPONSOR_SEARCH_LANGUAGE` = `en`
 - `ENABLE_INSTAGRAM_SPONSOR_SCAN` = `false`
 - `ENABLE_TIKTOK_SPONSOR_SCAN` = `false`
 
-`SPONSOR_TARGET_DAILY_LEADS` remains an internal compatibility setting, but the scheduled GitHub workflow hard-caps every hourly scheduled run at **1 new brand**. An old repository variable cannot make a scheduled run add 20.
+`SPONSOR_TARGET_DAILY_LEADS` remains an internal compatibility setting, but the scheduled GitHub workflow hard-caps every hourly scheduled run at **1 new brand**.
 
 ## Hourly schedule
 
 `.github/workflows/scan-sponsors.yml` runs once every hour and can also be run manually from GitHub Actions.
 
-Every scheduled run can create **at most 1 new qualified brand**. If no qualified brand with a public business email is available, the run creates nothing rather than lowering quality or importing a duplicate.
-
-The scanner starts with recent sponsorship inventory. If it only finds non-priority sponsors, it can expand the lookback to try to find a gaming, tech, or food/drink target before using a fallback lead.
+Every scheduled run can create **at most 1 new qualified brand**. If no active qualified brand with a public business email is available, the run creates nothing rather than lowering quality, importing stale sponsorships, or importing a duplicate.
 
 ## Discord
 
@@ -176,10 +227,8 @@ https://www.youtube.com/watch?v=zmP9iW6cygI
 
 There is no daily summary message.
 
-## Current source
-
-YouTube is the active V1 source. Instagram and TikTok remain future adapters.
-
 ## Public contact data
 
-A public brand email is mandatory before a lead can be added. Email enrichment checks sponsor-owned public pages such as contact, help, support, legal, press, influencer, partnership, and affiliate pages. The scanner does not guess private email addresses.
+A public brand email is mandatory before a lead can be added. Email enrichment checks sponsor-owned public pages such as contact, help, support, legal, press, influencer, partnership, and affiliate pages.
+
+The scanner does not guess private email addresses.
