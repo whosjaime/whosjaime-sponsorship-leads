@@ -71,6 +71,9 @@ class SponsorQueueReliabilityTests(unittest.TestCase):
         monday = Mock()
         monday.load_existing_index.return_value = Mock()
         youtube = Mock()
+        # Creator hydration is best-effort and must not weaken the original guarantee:
+        # researched leads still survive a YouTube outage.
+        youtube.fetch_videos.return_value = []
         youtube.discover_batch.side_effect = RuntimeError("temporary YouTube failure")
         researched = Mock()
         researched.load.return_value = [lead]
