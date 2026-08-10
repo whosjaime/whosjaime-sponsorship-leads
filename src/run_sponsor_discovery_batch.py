@@ -20,8 +20,66 @@ from sponsor_queue import MAX_QUEUE_SIZE, load_queue, save_queue
 from youtube_sponsor_scanner import SEARCH_LANES, YouTubeSponsorScanner
 
 
+BEAUTY_QUEUE_LIMIT = 2
+BEAUTY_QUEUE_POSITIONS = (5, 15)
+BEAUTY_KEYWORDS = {
+    "beauty",
+    "skincare",
+    "skin care",
+    "cosmetics",
+    "makeup",
+    "haircare",
+    "hair care",
+}
+
+
 def _identity(lead: SponsorLead) -> str:
     return (lead.brand_key or lead.brand_domain or lead.brand_name).strip().lower()
+
+
+def _is_beauty_lead(lead: SponsorLead) -> bool:
+    if (lead.sponsor_category or "").strip().lower() == "beauty":
+        return True
+    text = " ".join(
+        [
+            lead.brand_name or "",
+            lead.brand_domain or "",
+            lead.sponsor_category or "",
+            lead.sponsor_subcategory or "",
+        ]
+    ).lower()
+    return any(keyword in text for keyword in BEAUTY_KEYWORDS)
+
+
+def _is_queue_target_lead(lead: SponsorLead) -> bool:
+    """Core sponsor niches plus a deliberately limited beauty exception."""
+    return _is_target_lead(lead) or _is_beauty_lead(lead)
+
+
+def _build_balanced_queue(leads: list[SponsorLead]) -> list[SponsorLead]:
+    """Keep beauty occasional: max two leads, spaced through the daily queue."""
+    beauty: list[SponsorLead] = []
+    core: list[SponsorLead] = []
+    seen: set[str] = set()
+
+    for lead in leads:
+        identity = _identity(lead)
+        if not identity or identity in seen:
+            continue
+        seen.add(identity)
+        if _is_beauty_lead(lead):
+            if len(beauty) < BEAUTY_QUEUE_LIMIT:
+                beauty.append(lead)
+        else:
+            core.append(lead)
+
+    core_slots = max(0, MAX_QUEUE_SIZE - len(beauty))
+    final_queue = core[:core_slots]
+    for index, lead in enumerate(beauty):
+        desired_position = BEAUTY_QUEUE_POSITIONS[min(index, len(BEAUTY_QUEUE_POSITIONS) - 1)]
+        final_queue.insert(min(desired_position, len(final_queue)), lead)
+
+    return final_queue[:MAX_QUEUE_SIZE]
 
 
 def _hydrate_creator_metrics(
@@ -142,7 +200,7 @@ def run() -> None:
             continue
         if not lead.contact_email:
             continue
-        if not _is_target_lead(lead):
+        if not _is_queue_target_lead(lead):
             continue
         if _blocked(monday_index, lead):
             continue
@@ -176,7 +234,7 @@ def run() -> None:
         if lead.lead_score < config.min_lead_score:
             rejected_count += 1
             return
-        if not _is_target_lead(lead):
+        if not _is_queue_target_lead(lead):
             rejected_count += 1
             return
 
@@ -243,20 +301,12 @@ def run() -> None:
         reverse=True,
     )
 
-    final_queue: list[SponsorLead] = []
-    seen: set[str] = set()
-    for lead in combined:
-        identity = _identity(lead)
-        if not identity or identity in seen:
-            continue
-        seen.add(identity)
-        final_queue.append(lead)
-        if len(final_queue) >= MAX_QUEUE_SIZE:
-            break
+    final_queue = _build_balanced_queue(combined)
+    beauty_count = sum(1 for lead in final_queue if _is_beauty_lead(lead))
 
     save_queue(final_queue)
     print(
-        f"SPONSOR_QUEUE_READY: {len(final_queue)} queued, "
+        f"SPONSOR_QUEUE_READY: {len(final_queue)} queued ({beauty_count} beauty), "
         f"{len(scanned_video_ids)} YouTube videos hydrated, "
         f"{duplicate_count} duplicate/blocked, {rejected_count} rejected."
     )
