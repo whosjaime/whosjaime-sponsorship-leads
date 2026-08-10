@@ -1,12 +1,16 @@
 from __future__ import annotations
 
 from discord_notifier import DiscordNotifier
-from run_sponsor_discovery_batch import _hydrate_creator_metrics, _is_queue_target_lead
-from run_sponsor_scan import _blocked, _is_recent_sponsorship
+from run_sponsor_discovery_batch import _hydrate_creator_metrics, _is_beauty_lead
+from run_sponsor_scan import _blocked, _is_recent_sponsorship, _is_target_lead
 from sponsor_config import load_sponsor_config
 from sponsor_monday_client import SponsorMondayClient
 from sponsor_queue import load_queue, save_queue
 from youtube_sponsor_scanner import YouTubeSponsorScanner
+
+
+def _is_dispatch_target_lead(lead) -> bool:
+    return _is_target_lead(lead) or _is_beauty_lead(lead)
 
 
 def run() -> None:
@@ -40,7 +44,7 @@ def run() -> None:
         if lead.lead_score < config.min_lead_score:
             skipped += 1
             continue
-        if not _is_queue_target_lead(lead):
+        if not _is_dispatch_target_lead(lead):
             skipped += 1
             continue
         if _blocked(index, lead):
