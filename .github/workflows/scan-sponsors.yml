@@ -13,6 +13,11 @@ on:
         description: Minimum lead quality score
         required: true
         default: "70"
+  push:
+    branches:
+      - main
+    paths:
+      - ".github/sponsor-scan-trigger"
 
 concurrency:
   group: sponsor-lead-scanner
@@ -54,6 +59,12 @@ jobs:
             echo "Critical sponsor scanner warning detected; failing this run so Discord can alert us."
             exit 1
           fi
+      - name: Tell Discord when a successful scan finds zero new leads
+        if: success()
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          SPONSOR_SCAN_LOG: sponsor_scan.log
+        run: python src/discord_scan_zero_status.py
       - name: Alert Discord if sponsor scanner breaks
         if: failure()
         env:
