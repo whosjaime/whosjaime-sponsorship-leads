@@ -67,7 +67,7 @@ def run() -> None:
     errors: list[str] = []
 
     # Discord returns newest first. Process oldest first so multiple manual submissions
-    # preserve the order Jaime dropped them into the intake channel.
+    # preserve the order they were dropped into the intake channel.
     for message in reversed(messages):
         if (message.get("author") or {}).get("bot"):
             continue
@@ -95,6 +95,7 @@ def run() -> None:
             continue
 
         lead = candidate_to_lead(candidate)
+        lead.source_platform = os.getenv("SPONSOR_LINKEDIN_SOURCE_LABEL", "LinkedIn").strip() or "LinkedIn"
         try:
             lead = _enrich(lead, enricher)
         except Exception as exc:
@@ -113,7 +114,7 @@ def run() -> None:
             continue
 
         try:
-            result = monday.create_lead(lead, create_labels_if_missing=True)
+            result = monday.create_lead(lead)
             item = result.get("data", {}).get("create_item", {})
             print(
                 f"Created manual LinkedIn sponsor lead: {lead.brand_name} / "
