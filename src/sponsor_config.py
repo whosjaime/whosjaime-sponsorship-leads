@@ -47,6 +47,7 @@ def load_sponsor_config() -> SponsorScannerConfig:
         os.getenv("SPONSOR_MONDAY_TOKEN", "").strip()
         or os.getenv("SPONSOR_MONDAY_API_KEY", "").strip()
     )
+    discord_webhook_url = os.getenv("DISCORD_WEBHOOK_URL", "").strip()
     board_id_raw = os.getenv("SPONSOR_MONDAY_BOARD_ID", "").strip()
 
     missing = []
@@ -54,6 +55,8 @@ def load_sponsor_config() -> SponsorScannerConfig:
         missing.append("YOUTUBE_API_KEY")
     if not monday_token:
         missing.append("SPONSOR_MONDAY_TOKEN")
+    if not discord_webhook_url:
+        missing.append("DISCORD_WEBHOOK_URL")
     if missing:
         raise ValueError(f"Missing sponsor scanner configuration: {', '.join(missing)}")
 
@@ -63,7 +66,7 @@ def load_sponsor_config() -> SponsorScannerConfig:
         monday_token=monday_token,
         monday_board_id=int(board_id_raw) if board_id_raw else DEFAULT_SPONSOR_MONDAY_BOARD_ID,
         monday_group_id=os.getenv("SPONSOR_MONDAY_GROUP_ID", DEFAULT_SPONSOR_MONDAY_GROUP_ID).strip() or DEFAULT_SPONSOR_MONDAY_GROUP_ID,
-        discord_webhook_url=os.getenv("DISCORD_WEBHOOK_URL", "").strip(),
+        discord_webhook_url=discord_webhook_url,
         target_daily_leads=max(1, _int("SPONSOR_TARGET_DAILY_LEADS", 1)),
         min_lead_score=max(1, min(100, _int("SPONSOR_MIN_LEAD_SCORE", 70))),
         max_sponsor_age_days=max(1, min(365, _int("SPONSOR_MAX_AGE_DAYS", 30))),
