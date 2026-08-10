@@ -24,6 +24,86 @@ def _identity(lead: SponsorLead) -> str:
     return (lead.brand_key or lead.brand_domain or lead.brand_name).strip().lower()
 
 
+def _hydrate_creator_metrics(
+    leads: list[SponsorLead],
+    youtube: YouTubeSponsorScanner,
+) -> None:
+    """Fill missing YouTube creator metadata before leads enter the delivery queue.
+
+    Daily researched sponsor records intentionally focus on sponsor evidence and may not
+    know a creator's channel ID or subscriber count. Hydrate those values from the
+    sponsored video itself so Monday and Discord never have to guess from a zero value.
+    Existing queue leftovers are hydrated too, which repairs leads queued before this
+    behavior was added.
+    """
+    needs_hydration = [
+        lead
+        for lead in leads
+        if (lead.source_platform or "").strip().lower() == "youtube"
+        and lead.video_id
+        and (
+            not lead.creator_channel_id
+            or not lead.creator_url
+            or int(lead.creator_subscribers or 0) <= 0
+        )
+    ]
+    if not needs_hydration:
+        return
+
+    video_ids = list(dict.fromkeys(lead.video_id for lead in needs_hydration if lead.video_id))
+    try:
+        videos = youtube.fetch_videos(video_ids)
+    except Exception as exc:
+        print(f"WARNING: Creator metric video hydration failed: {exc}")
+        return
+
+    video_by_id = {video.video_id: video for video in videos if video.video_id}
+    channel_ids = list(
+        dict.fromkeys(
+            video.channel_id
+            for video in videos
+            if video.channel_id
+        )
+    )
+    try:
+        channels = youtube.fetch_channels(channel_ids) if channel_ids else {}
+    except Exception as exc:
+        print(f"WARNING: Creator metric channel hydration failed: {exc}")
+        channels = {}
+
+    hydrated = 0
+    for lead in needs_hydration:
+        video = video_by_id.get(lead.video_id)
+        if video is None:
+            continue
+
+        if video.channel_id:
+            lead.creator_channel_id = video.channel_id
+            lead.creator_url = f"https://www.youtube.com/channel/{video.channel_id}"
+
+        creator = channels.get(video.channel_id)
+        if creator is not None:
+            if creator.title:
+                lead.creator_name = creator.title
+            if int(creator.subscriber_count or 0) > 0:
+                lead.creator_subscribers = int(creator.subscriber_count)
+        elif video.channel_title and not lead.creator_name:
+            lead.creator_name = video.channel_title
+
+        if not lead.video_title and video.title:
+            lead.video_title = video.title
+
+        hydrated += 1
+        print(
+            f"Hydrated creator metrics: {lead.creator_name or 'Unknown creator'} / "
+            f"{lead.creator_subscribers or 0:,} subscribers"
+        )
+
+    print(
+        f"Creator metric hydration: updated {hydrated}/{len(needs_hydration)} queued/researched leads."
+    )
+
+
 def run() -> None:
     # Discovery does not send Discord messages. The hourly dispatcher owns the webhook.
     config = load_sponsor_config(require_discord=False)
@@ -39,6 +119,16 @@ def run() -> None:
 
     monday_index = monday.load_existing_index()
     existing_queue = load_queue()
+
+    # Load research before queue validation so both newly researched leads and leftovers
+    # from a previous build can have missing creator/subscriber data repaired in one batch.
+    try:
+        researched_leads = researched.load()
+    except Exception as exc:
+        print(f"WARNING: Researched sponsor queue failed: {exc}")
+        researched_leads = []
+
+    _hydrate_creator_metrics([*existing_queue, *researched_leads], youtube)
 
     # Revalidate leftovers before topping the queue up. Nothing in the queue is allowed
     # to bypass freshness, email, niche, Monday, or permanent-blocklist rules.
@@ -104,11 +194,6 @@ def run() -> None:
             print(f"Queued candidate via {source}: {lead.brand_name} / score {lead.lead_score}")
 
     # Keep the manually researched source in the same queue, but do not let it bypass gates.
-    try:
-        researched_leads = researched.load()
-    except Exception as exc:
-        print(f"WARNING: Researched sponsor queue failed: {exc}")
-        researched_leads = []
     for lead in researched_leads:
         consider(lead, "Daily Research")
 
