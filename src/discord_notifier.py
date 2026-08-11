@@ -6,8 +6,6 @@ import requests
 
 from sponsor_models import SponsorLead
 
-OUTREACH_USER_ID = "1162376803508297771"
-
 
 class DiscordNotifier:
     def __init__(self, webhook_url: str) -> None:
@@ -18,10 +16,7 @@ class DiscordNotifier:
             return
         response = requests.post(
             self.webhook_url,
-            json={
-                "content": content[:1990],
-                "allowed_mentions": {"users": [OUTREACH_USER_ID]},
-            },
+            json={"content": content[:1990]},
             timeout=20,
         )
         if response.status_code >= 400:
@@ -86,8 +81,6 @@ class DiscordNotifier:
                 f"📅 **Sponsored Date:** {cls._display_date(lead.sponsored_date)}",
                 "",
                 f"🔗 **{'Sponsorship Post' if is_linkedin else 'Sponsored Video'}:** <{lead.video_url}>",
-                "",
-                f"✅ It has been added in **Monday.com**, <@{OUTREACH_USER_ID}> you can start outreach!",
             ]
         )
         return "\n".join(lines)
