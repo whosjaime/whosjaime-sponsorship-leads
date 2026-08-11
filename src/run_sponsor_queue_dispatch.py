@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from discord_notifier import DiscordNotifier
-from run_sponsor_discovery_batch import _hydrate_creator_metrics, _is_beauty_lead
+from run_sponsor_discovery_batch import _hydrate_creator_metrics, _is_beauty_lead, _is_music_lead
 from run_sponsor_scan import _blocked, _is_recent_sponsorship, _is_target_lead
 from sponsor_config import load_sponsor_config
 from sponsor_monday_client import SponsorMondayClient
@@ -10,7 +10,7 @@ from youtube_sponsor_scanner import YouTubeSponsorScanner
 
 
 def _is_dispatch_target_lead(lead) -> bool:
-    return _is_target_lead(lead) or _is_beauty_lead(lead)
+    return _is_target_lead(lead) or _is_beauty_lead(lead) or _is_music_lead(lead)
 
 
 def run() -> None:

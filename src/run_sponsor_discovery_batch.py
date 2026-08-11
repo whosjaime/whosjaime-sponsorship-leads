@@ -32,33 +32,90 @@ BEAUTY_KEYWORDS = {
     "hair care",
 }
 
+MUSIC_QUEUE_LIMIT = 2
+MUSIC_QUEUE_POSITIONS = (9, 19)
+MUSIC_KEYWORDS = {
+    "music gear",
+    "musical instrument",
+    "musical instruments",
+    "guitar",
+    "guitars",
+    "bass guitar",
+    "drum",
+    "drums",
+    "piano",
+    "synthesizer",
+    "synth",
+    "amplifier",
+    "guitar amp",
+    "guitar pedal",
+    "pedalboard",
+    "guitar strings",
+    "instrument strings",
+    "recording gear",
+    "studio gear",
+    "music production",
+    "music software",
+    "audio interface",
+    "daw",
+    "vst",
+    "audio plugin",
+    "music plugin",
+    "producer tool",
+    "artist tool",
+}
+MUSIC_EXCLUDED_KEYWORDS = {
+    "music festival",
+    "concert festival",
+    "festival",
+    "concert promoter",
+    "event production",
+    "ticketing",
+    "venue",
+}
+
 
 def _identity(lead: SponsorLead) -> str:
     return (lead.brand_key or lead.brand_domain or lead.brand_name).strip().lower()
 
 
-def _is_beauty_lead(lead: SponsorLead) -> bool:
-    if (lead.sponsor_category or "").strip().lower() == "beauty":
-        return True
-    text = " ".join(
+def _lead_text(lead: SponsorLead) -> str:
+    return " ".join(
         [
             lead.brand_name or "",
             lead.brand_domain or "",
             lead.sponsor_category or "",
             lead.sponsor_subcategory or "",
+            lead.evidence or "",
         ]
     ).lower()
+
+
+def _is_beauty_lead(lead: SponsorLead) -> bool:
+    if (lead.sponsor_category or "").strip().lower() == "beauty":
+        return True
+    text = _lead_text(lead)
     return any(keyword in text for keyword in BEAUTY_KEYWORDS)
 
 
+def _is_music_lead(lead: SponsorLead) -> bool:
+    text = _lead_text(lead)
+    if any(keyword in text for keyword in MUSIC_EXCLUDED_KEYWORDS):
+        return False
+    if (lead.sponsor_category or "").strip().lower() == "music":
+        return True
+    return any(keyword in text for keyword in MUSIC_KEYWORDS)
+
+
 def _is_queue_target_lead(lead: SponsorLead) -> bool:
-    """Core sponsor niches plus a deliberately limited beauty exception."""
-    return _is_target_lead(lead) or _is_beauty_lead(lead)
+    """Core sponsor niches plus deliberately limited Beauty and Music exceptions."""
+    return _is_target_lead(lead) or _is_beauty_lead(lead) or _is_music_lead(lead)
 
 
 def _build_balanced_queue(leads: list[SponsorLead]) -> list[SponsorLead]:
-    """Keep beauty occasional: max two leads, spaced through the daily queue."""
+    """Keep Beauty and Music occasional and spaced through the daily queue."""
     beauty: list[SponsorLead] = []
+    music: list[SponsorLead] = []
     core: list[SponsorLead] = []
     seen: set[str] = set()
 
@@ -70,13 +127,24 @@ def _build_balanced_queue(leads: list[SponsorLead]) -> list[SponsorLead]:
         if _is_beauty_lead(lead):
             if len(beauty) < BEAUTY_QUEUE_LIMIT:
                 beauty.append(lead)
+        elif _is_music_lead(lead):
+            if len(music) < MUSIC_QUEUE_LIMIT:
+                music.append(lead)
         else:
             core.append(lead)
 
-    core_slots = max(0, MAX_QUEUE_SIZE - len(beauty))
+    core_slots = max(0, MAX_QUEUE_SIZE - len(beauty) - len(music))
     final_queue = core[:core_slots]
+
+    placements: list[tuple[int, SponsorLead]] = []
     for index, lead in enumerate(beauty):
-        desired_position = BEAUTY_QUEUE_POSITIONS[min(index, len(BEAUTY_QUEUE_POSITIONS) - 1)]
+        position = BEAUTY_QUEUE_POSITIONS[min(index, len(BEAUTY_QUEUE_POSITIONS) - 1)]
+        placements.append((position, lead))
+    for index, lead in enumerate(music):
+        position = MUSIC_QUEUE_POSITIONS[min(index, len(MUSIC_QUEUE_POSITIONS) - 1)]
+        placements.append((position, lead))
+
+    for desired_position, lead in sorted(placements, key=lambda item: item[0]):
         final_queue.insert(min(desired_position, len(final_queue)), lead)
 
     return final_queue[:MAX_QUEUE_SIZE]
@@ -214,12 +282,19 @@ def run() -> None:
 
     def consider(lead: SponsorLead, source: str) -> None:
         nonlocal rejected_count, duplicate_count
+        original_category = (lead.sponsor_category or "").strip()
         try:
             lead = _enrich_lead(lead, enricher)
         except Exception as exc:
             rejected_count += 1
             print(f"Batch enrichment skipped {lead.brand_name}: {exc}")
             return
+
+        # Research can deliberately classify a verified sponsor as Music. Generic brand
+        # websites often get labelled Entertainment/Other by broad text classification,
+        # so preserve the curated Music classification for this secondary lane.
+        if original_category.lower() == "music" and lead.sponsor_category in {"Other", "Entertainment"}:
+            lead.sponsor_category = "Music"
 
         if not _is_recent_sponsorship(lead, config.max_sponsor_age_days):
             rejected_count += 1
@@ -303,10 +378,12 @@ def run() -> None:
 
     final_queue = _build_balanced_queue(combined)
     beauty_count = sum(1 for lead in final_queue if _is_beauty_lead(lead))
+    music_count = sum(1 for lead in final_queue if _is_music_lead(lead))
 
     save_queue(final_queue)
     print(
-        f"SPONSOR_QUEUE_READY: {len(final_queue)} queued ({beauty_count} beauty), "
+        f"SPONSOR_QUEUE_READY: {len(final_queue)} queued "
+        f"({beauty_count} beauty, {music_count} music), "
         f"{len(scanned_video_ids)} YouTube videos hydrated, "
         f"{duplicate_count} duplicate/blocked, {rejected_count} rejected."
     )
