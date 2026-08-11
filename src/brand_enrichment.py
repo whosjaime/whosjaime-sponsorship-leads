@@ -10,22 +10,30 @@ import requests
 from sponsor_dedupe import normalize_domain, normalize_email
 
 EMAIL_RE = re.compile(r"[A-Z0-9._%+\-]+@[A-Z0-9.\-]+\.[A-Z]{2,}", re.I)
+
+# Outreach relevance comes first. Generic support/contact inboxes are only fallbacks.
 PREFERRED_EMAILS = {
-    "sponsorship": (100, "Sponsorships"),
-    "sponsor": (98, "Sponsorships"),
-    "partnership": (96, "Partnerships"),
-    "creator": (92, "Creator Partnerships"),
-    "influencer": (90, "Influencer Marketing"),
-    "marketing": (84, "Marketing"),
-    "bizdev": (82, "Business Development"),
-    "business": (78, "Business"),
-    "press": (65, "Press"),
-    "media": (64, "Media"),
-    "hello": (58, "General"),
-    "info": (55, "General"),
-    "contact": (55, "General"),
-    "support": (35, "Support"),
+    "sponsorship": (120, "Sponsorships"),
+    "sponsor": (118, "Sponsorships"),
+    "partnership": (116, "Partnerships"),
+    "partner": (114, "Partnerships"),
+    "creator": (112, "Creator Partnerships"),
+    "influencer": (110, "Influencer Marketing"),
+    "collab": (108, "Creator Partnerships"),
+    "ambassador": (106, "Creator Partnerships"),
+    "affiliate": (104, "Affiliate Partnerships"),
+    "marketing": (96, "Marketing"),
+    "bizdev": (92, "Business Development"),
+    "business": (88, "Business"),
+    "brand": (86, "Brand Partnerships"),
+    "press": (70, "Press"),
+    "media": (68, "Media"),
+    "hello": (52, "General"),
+    "info": (50, "General"),
+    "contact": (48, "General"),
+    "support": (20, "Support"),
 }
+DIRECT_EMAIL_SCORE = 86
 BLOCKED_LOCALPARTS = {
     "noreply", "no-reply", "donotreply", "privacy", "legal", "abuse",
     "security", "careers", "jobs", "hr", "billing",
@@ -35,24 +43,35 @@ CONTACT_HINTS = {
     "sponsor", "creator", "influencer", "affiliate", "marketing", "press", "media",
     "ambassador", "collab", "brand", "about", "company",
 }
-COMMON_CONTACT_PATHS = [
-    "/contact",
-    "/contact-us",
+
+# Always probe these high-intent paths before accepting a generic inbox found elsewhere.
+DIRECT_CONTACT_PATHS = [
+    "/sponsorships",
+    "/sponsors",
     "/partnerships",
     "/partners",
     "/brand-partnerships",
     "/creator-partnerships",
+    "/creator-partnership",
     "/creators",
     "/creator-program",
     "/influencers",
+    "/influencer-program",
+    "/influencer-sign-up",
     "/ambassadors",
     "/collaborate",
     "/collabs",
     "/affiliate",
     "/affiliates",
-    "/influencer-program",
-    "/influencer-sign-up",
     "/marketing",
+]
+
+# Keep the historical full path list for compatibility. Direct paths are fetched first;
+# the second pass skips anything already seen and only adds generic fallbacks.
+COMMON_CONTACT_PATHS = [
+    *DIRECT_CONTACT_PATHS,
+    "/contact",
+    "/contact-us",
     "/press",
     "/media",
     "/help",
@@ -187,11 +206,15 @@ class BrandEnricher:
         local, host = email.rsplit("@", 1)
         if local.lower() in BLOCKED_LOCALPARTS or not self._same_domain(host, domain):
             return -1, ""
-        best = (45, "Public Business Contact")
-        for keyword, scored in PREFERRED_EMAILS.items():
-            if keyword in local.lower() and scored[0] > best[0]:
-                best = scored
-        return best
+
+        matches = [
+            scored
+            for keyword, scored in PREFERRED_EMAILS.items()
+            if keyword in local.lower()
+        ]
+        if matches:
+            return max(matches, key=lambda value: value[0])
+        return 45, "Public Business Contact"
 
     @staticmethod
     def _classify(text: str) -> tuple[str, str]:
@@ -213,9 +236,41 @@ class BrandEnricher:
                 email = normalize_email(email).strip(".,;:()[]<>")
                 score, email_type = self._rank_email(email, domain)
                 if score >= 0:
+                    # A named/public work email found on an explicit partnerships or
+                    # creator page is more useful than a generic homepage inbox.
+                    source_lower = source.lower()
+                    if score == 45 and any(
+                        hint in source_lower
+                        for hint in ("partnership", "sponsor", "creator", "influencer", "collab", "affiliate")
+                    ):
+                        score = 82
+                        email_type = "Partnership Page Contact"
                     ranked.append((score, email, email_type, source))
         ranked.sort(key=lambda x: (-x[0], x[1]))
         return ranked, all_text
+
+    def _fetch_paths(
+        self,
+        base_url: str,
+        domain: str,
+        paths: list[str],
+        seen_urls: set[str],
+        pages: list[tuple[str, str]],
+    ) -> None:
+        for path in paths:
+            url = urljoin(base_url.rstrip("/") + "/", path.lstrip("/"))
+            if url in seen_urls:
+                continue
+            fetched_url, page = self._fetch(url)
+            if not page:
+                continue
+            clean = (fetched_url or url).split("#", 1)[0]
+            if clean in seen_urls:
+                continue
+            if not self._same_domain(urlparse(clean).netloc, domain):
+                continue
+            seen_urls.add(clean)
+            pages.append((clean, page))
 
     def enrich(self, domain: str) -> dict:
         domain = normalize_domain(domain)
@@ -266,24 +321,15 @@ class BrandEnricher:
                     seen_urls.add(clean)
                     pages.append((clean, page))
 
+        # Critical behavior: always probe direct outreach pages before accepting
+        # contact@ / info@ / support@ found on the homepage.
+        self._fetch_paths(base_url, domain, DIRECT_CONTACT_PATHS, seen_urls, pages)
         ranked, all_text = self._extract_ranked_emails(pages, domain)
 
-        if not ranked:
-            for path in COMMON_CONTACT_PATHS:
-                url = urljoin(base_url.rstrip("/") + "/", path.lstrip("/"))
-                if url in seen_urls:
-                    continue
-                fetched_url, page = self._fetch(url)
-                if not page:
-                    continue
-                clean = (fetched_url or url).split("#", 1)[0]
-                if clean in seen_urls:
-                    continue
-                if not self._same_domain(urlparse(clean).netloc, domain):
-                    continue
-                seen_urls.add(clean)
-                pages.append((clean, page))
-
+        # Only spend time on generic contact/help/legal paths when a strong direct
+        # sponsorship/partnership/creator/marketing address was not found.
+        if not ranked or ranked[0][0] < DIRECT_EMAIL_SCORE:
+            self._fetch_paths(base_url, domain, COMMON_CONTACT_PATHS, seen_urls, pages)
             ranked, all_text = self._extract_ranked_emails(pages, domain)
 
         best = ranked[0] if ranked else None
