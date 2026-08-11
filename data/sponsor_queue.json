@@ -1,42 +1,5 @@
 [
   {
-    "brand_name": "Davia",
-    "brand_domain": "davia.ai",
-    "source_platform": "YouTube",
-    "creator_name": "Monkeyes",
-    "creator_url": "https://www.youtube.com/channel/UCpv45W_0L9VTI-ip9Z533Wg",
-    "creator_channel_id": "UCpv45W_0L9VTI-ip9Z533Wg",
-    "creator_subscribers": 13100,
-    "creator_genre": "Gaming",
-    "creator_tags": [
-      "Gaming",
-      "Tech"
-    ],
-    "video_id": "cIGiPv8RefE",
-    "video_url": "https://www.youtube.com/watch?v=cIGiPv8RefE",
-    "video_title": "l'IA de MACRON peut-elle UNIFIER l'EUROPE ?!! #gaming #gamingfr #video #Davia #ia #macron  #france",
-    "sponsored_date": "2026-08-11",
-    "evidence": "Paid promotion/ad disclosure with external sponsor link",
-    "paid_product_placement": true,
-    "brand_partner_channel_id": "",
-    "sponsor_category": "Software / SaaS",
-    "sponsor_subcategory": "Web Hosting",
-    "contact_name": "",
-    "contact_title": "",
-    "contact_email": "contact@davia.ai",
-    "email_type": "General",
-    "contact_source": "https://davia.ai/",
-    "lead_score": 73,
-    "lead_temperature": "Warm",
-    "sponsorship_key": "youtube:cigipv8refe:davia.ai",
-    "brand_key": "domain:davia.ai",
-    "signals": [
-      "YouTube paid product placement",
-      "sponsor domain found"
-    ],
-    "date_found": "2026-08-11"
-  },
-  {
     "brand_name": "Ekrishikendra",
     "brand_domain": "ekrishikendra.com",
     "source_platform": "YouTube",
