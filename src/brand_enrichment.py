@@ -66,7 +66,10 @@ DIRECT_CONTACT_PATHS = [
     "/marketing",
 ]
 
+# Keep the historical full path list for compatibility. Direct paths are fetched first;
+# the second pass skips anything already seen and only adds generic fallbacks.
 COMMON_CONTACT_PATHS = [
+    *DIRECT_CONTACT_PATHS,
     "/contact",
     "/contact-us",
     "/press",
@@ -203,11 +206,15 @@ class BrandEnricher:
         local, host = email.rsplit("@", 1)
         if local.lower() in BLOCKED_LOCALPARTS or not self._same_domain(host, domain):
             return -1, ""
-        best = (45, "Public Business Contact")
-        for keyword, scored in PREFERRED_EMAILS.items():
-            if keyword in local.lower() and scored[0] > best[0]:
-                best = scored
-        return best
+
+        matches = [
+            scored
+            for keyword, scored in PREFERRED_EMAILS.items()
+            if keyword in local.lower()
+        ]
+        if matches:
+            return max(matches, key=lambda value: value[0])
+        return 45, "Public Business Contact"
 
     @staticmethod
     def _classify(text: str) -> tuple[str, str]:
