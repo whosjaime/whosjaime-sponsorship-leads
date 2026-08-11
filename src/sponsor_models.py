@@ -20,6 +20,8 @@ class VideoRecord:
     paid_product_placement: bool = False
     brand_partner_channel_id: str = ""
     view_count: int = 0
+    default_language: str = ""
+    default_audio_language: str = ""
 
 
 @dataclass

@@ -93,8 +93,8 @@ class YouTubeSponsorScanner:
         return cls._rfc3339(published_after), cls._rfc3339(current), -1
 
     def _search(self, lookback_hours: int, query: str = "", paid_only: bool = False) -> list[str]:
-        # Keep this method's original interface. The caller chooses either an hourly
-        # rotating slice or a full-window daily batch by setting _active_search_window.
+        # relevanceLanguage is only a ranking preference in YouTube's API, not a strict
+        # language filter. The hydrated video language is checked later before queueing.
         window = self._active_search_window or self._hourly_search_window(lookback_hours)
         published_after, published_before, _ = window
         params = {
@@ -202,6 +202,8 @@ class YouTubeSponsorScanner:
                         published_at=snippet.get("publishedAt", ""),
                         channel_id=snippet.get("channelId", ""),
                         channel_title=snippet.get("channelTitle", ""),
+                        default_language=snippet.get("defaultLanguage", "") or "",
+                        default_audio_language=snippet.get("defaultAudioLanguage", "") or "",
                         tags=snippet.get("tags", []) or [],
                         category_id=snippet.get("categoryId", ""),
                         topic_categories=item.get("topicDetails", {}).get("topicCategories", []) or [],

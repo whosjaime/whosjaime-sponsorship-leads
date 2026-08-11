@@ -21,6 +21,7 @@ from sponsor_queue import (
     load_queue,
     save_queue,
 )
+from video_language_filter import is_english_video
 from youtube_sponsor_scanner import SEARCH_LANES, YouTubeSponsorScanner
 
 
@@ -331,6 +332,19 @@ def run() -> None:
         if video.video_id in scanned_video_ids:
             continue
         scanned_video_ids.add(video.video_id)
+
+        # YouTube's relevanceLanguage=en is not a strict filter. Enforce English after
+        # hydration using the video's audio/metadata language and an obvious-script
+        # fallback when creators did not set language metadata.
+        if not is_english_video(video):
+            rejected_count += 1
+            language = video.default_audio_language or video.default_language or "metadata/script check"
+            print(
+                f"Non-English YouTube video skipped: {video.channel_title} / "
+                f"{video.title[:100]} / language {language}"
+            )
+            continue
+
         creator = channels.get(video.channel_id)
         genre, tags = classify_creator(video, creator)
         for detection in detect_sponsors(video, channels):
