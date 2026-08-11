@@ -5,7 +5,14 @@ from run_sponsor_discovery_batch import _hydrate_creator_metrics, _is_beauty_lea
 from run_sponsor_scan import _blocked, _is_recent_sponsorship, _is_target_lead
 from sponsor_config import load_sponsor_config
 from sponsor_monday_client import SponsorMondayClient
-from sponsor_queue import load_queue, save_queue
+from sponsor_queue import (
+    is_already_sent,
+    load_queue,
+    load_sent_keys,
+    mark_sent,
+    save_queue,
+    save_sent_keys,
+)
 from youtube_sponsor_scanner import YouTubeSponsorScanner
 
 
@@ -19,7 +26,12 @@ def run() -> None:
     discord = DiscordNotifier(config.discord_webhook_url)
     youtube = YouTubeSponsorScanner(config.youtube_api_key, config.search_region, config.search_language)
     queue = load_queue()
+    sent_keys = load_sent_keys()
     index = monday.load_existing_index()
+
+    # Seed the bot's permanent sent ledger from every brand already present in Monday.
+    # This makes the ledger useful immediately instead of only for future deliveries.
+    sent_keys.update(index.brand_keys)
 
     skipped = 0
     created = 0
@@ -27,6 +39,13 @@ def run() -> None:
 
     while queue:
         lead = queue.pop(0)
+
+        # Permanent idempotency layer. This is independent of the queue and protects
+        # against rebuilds, workflow retries, renamed queue records, and Monday lag.
+        if is_already_sent(lead, sent_keys):
+            skipped += 1
+            print(f"Permanent sent-ledger duplicate skipped: {lead.brand_name}")
+            continue
 
         # Last-mile safety net: old queue items or externally researched records may
         # still have a zero/unknown creator subscriber count. Hydrate the sponsored
@@ -48,8 +67,20 @@ def run() -> None:
             skipped += 1
             continue
         if _blocked(index, lead):
+            sent_keys.update(index.brand_keys)
             skipped += 1
             continue
+
+        # Re-read Monday immediately before creation. This closes the small window where
+        # a manual add or another intake lane could create the same brand after startup.
+        latest_index = monday.load_existing_index()
+        sent_keys.update(latest_index.brand_keys)
+        if is_already_sent(lead, sent_keys) or _blocked(latest_index, lead):
+            skipped += 1
+            print(f"Last-second Monday/sent-ledger duplicate skipped: {lead.brand_name}")
+            index = latest_index
+            continue
+        index = latest_index
 
         try:
             result = monday.create_lead(lead)
@@ -61,6 +92,8 @@ def run() -> None:
             )
             created = 1
             index.add(lead)
+            # Mark before Discord. If Discord fails, this brand must still never retry.
+            mark_sent(lead, sent_keys)
         except Exception as exc:
             last_error = exc
             print(f"WARNING: monday create failed for {lead.brand_name}: {exc}")
@@ -78,9 +111,10 @@ def run() -> None:
         break
 
     save_queue(queue)
+    save_sent_keys(sent_keys)
     print(
         f"SPONSOR_QUEUE_DISPATCH: {created} created, {skipped} stale/duplicate/rejected removed, "
-        f"{len(queue)} remaining."
+        f"{len(queue)} remaining, {len(sent_keys)} permanent sent keys."
     )
 
     if last_error is not None:
