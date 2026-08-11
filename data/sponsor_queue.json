@@ -1,43 +1,5 @@
 [
   {
-    "brand_name": "Ekrishikendra",
-    "brand_domain": "ekrishikendra.com",
-    "source_platform": "YouTube",
-    "creator_name": "कृषि भारत | Krishi Bharat",
-    "creator_url": "https://www.youtube.com/channel/UCNo2owtfo2ogaUTmrlnUpGw",
-    "creator_channel_id": "UCNo2owtfo2ogaUTmrlnUpGw",
-    "creator_subscribers": 96,
-    "creator_genre": "Tech",
-    "creator_tags": [
-      "Short Form",
-      "Tech",
-      "Lifestyle"
-    ],
-    "video_id": "fa6T6Ub2kXo",
-    "video_url": "https://www.youtube.com/watch?v=fa6T6Ub2kXo",
-    "video_title": "खेती का भविष्य! धान की निराई करेगा AI Robot 🤖🌾 | Smart Farming #Shortsध 🤖 Weeder for Paddy Farming",
-    "sponsored_date": "2026-08-11",
-    "evidence": "Paid promotion/ad disclosure with external sponsor link",
-    "paid_product_placement": true,
-    "brand_partner_channel_id": "",
-    "sponsor_category": "Software / SaaS",
-    "sponsor_subcategory": "AI / Productivity",
-    "contact_name": "",
-    "contact_title": "",
-    "contact_email": "info@ekrishikendra.com",
-    "email_type": "General",
-    "contact_source": "https://www.ekrishikendra.com/contact",
-    "lead_score": 73,
-    "lead_temperature": "Warm",
-    "sponsorship_key": "youtube:fa6t6ub2kxo:ekrishikendra.com",
-    "brand_key": "domain:ekrishikendra.com",
-    "signals": [
-      "YouTube paid product placement",
-      "sponsor domain found"
-    ],
-    "date_found": "2026-08-11"
-  },
-  {
     "brand_name": "BisectHosting",
     "brand_domain": "bisecthosting.com",
     "source_platform": "YouTube",
