@@ -1,182 +1,182 @@
 [
   {
-    "brand_name": "Minecraft",
+    "brand_name": "B&H Photo Video",
     "brand_size": "large",
-    "category": "Gaming",
-    "commission": "5% on eligible Minecraft Marketplace purchases",
-    "website": "https://www.minecraft.net/",
-    "apply_url": "https://www.minecraft.net/en-us/affiliates",
-    "source_url": "https://www.minecraft.net/en-us/affiliates"
+    "category": "Consumer Tech / Creator Gear",
+    "commission": "2% base commission; up to 8% on 3,000+ eligible products",
+    "website": "https://www.bhphotovideo.com/",
+    "apply_url": "https://affiliates.bhphotovideo.com/app/",
+    "source_url": "https://www.bhphotovideo.com/c/find/shared/affiliates.jsp"
   },
   {
-    "brand_name": "Adobe",
+    "brand_name": "Newegg",
     "brand_size": "large",
-    "category": "Software / Creator Tools",
-    "commission": "85% of the first month's subscription price on eligible plans",
-    "website": "https://www.adobe.com/",
-    "apply_url": "https://www.adobe.com/pr/affiliates.html",
-    "source_url": "https://www.adobe.com/pr/affiliates.html"
-  },
-  {
-    "brand_name": "CapCut",
-    "brand_size": "large",
-    "category": "Software / Creator Tools",
-    "commission": "Up to 35% recurring commission",
-    "website": "https://www.capcut.com/",
-    "apply_url": "https://www.capcut.com/partners/affiliate-program",
-    "source_url": "https://www.capcut.com/partners/affiliate-program"
-  },
-  {
-    "brand_name": "Razer",
-    "brand_size": "large",
-    "category": "Gaming / Consumer Tech",
+    "category": "Gaming / Consumer Tech / PC Gear",
     "commission": "Not publicly listed",
-    "website": "https://www.razer.com/",
-    "apply_url": "https://www.razer.com/affiliate",
-    "source_url": "https://www.razer.com/affiliate"
+    "website": "https://www.newegg.com/",
+    "apply_url": "https://www.newegg.com/promotions/affiliate_program/affiliate.html",
+    "source_url": "https://www.newegg.com/promotions/affiliate_program/affiliate.html"
   },
   {
-    "brand_name": "HyperX",
+    "brand_name": "NordVPN",
     "brand_size": "large",
-    "category": "Gaming / Consumer Tech",
+    "category": "Cybersecurity / VPN",
+    "commission": "100% on new 1-month plans; 40% on new 1-year and 2-year plans; 30% on renewals",
+    "website": "https://nordvpn.com/",
+    "apply_url": "https://nordvpn.com/affiliate/",
+    "source_url": "https://nordvpn.com/affiliate/"
+  },
+  {
+    "brand_name": "Surfshark",
+    "brand_size": "large",
+    "category": "Cybersecurity / VPN",
+    "commission": "Starts at 40% revenue share on new sales",
+    "website": "https://surfshark.com/",
+    "apply_url": "https://surfshark.com/affiliate",
+    "source_url": "https://surfshark.com/affiliate"
+  },
+  {
+    "brand_name": "HelloFresh",
+    "brand_size": "large",
+    "category": "Food & Drinks / Meal Kits",
     "commission": "Not publicly listed",
-    "website": "https://hyperx.com/",
-    "apply_url": "https://hyperxcreators.sideqik.com/",
-    "source_url": "https://hyperxcreators.sideqik.com/"
+    "website": "https://www.hellofresh.ca/",
+    "apply_url": "https://www.hellofresh.ca/about/affiliates",
+    "source_url": "https://www.hellofresh.ca/about/affiliates"
   },
   {
-    "brand_name": "Riverside",
+    "brand_name": "Hostinger",
     "brand_size": "mid-size",
-    "category": "Software / Creator Tools",
-    "commission": "Up to 20% per referred subscription",
-    "website": "https://riverside.com/",
-    "apply_url": "https://riverside.com/affiliate-program",
-    "source_url": "https://riverside.com/affiliate-program"
+    "category": "Software / Web Hosting / Creator Tools",
+    "commission": "Starts at 40% and increases with sales volume",
+    "website": "https://www.hostinger.com/",
+    "apply_url": "https://affiliates.hostinger.com/",
+    "source_url": "https://www.hostinger.com/affiliates"
   },
   {
-    "brand_name": "Descript",
+    "brand_name": "VEED",
     "brand_size": "mid-size",
-    "category": "Software / Creator Tools",
-    "commission": "$25 per new subscriber referred",
-    "website": "https://www.descript.com/",
-    "apply_url": "https://www.descript.com/affiliate",
-    "source_url": "https://www.descript.com/affiliate"
+    "category": "Software / Creator Tools / Video",
+    "commission": "20% initial commission + 20% recurring; bonus commissions up to 50%",
+    "website": "https://www.veed.io/",
+    "apply_url": "https://www.veed.io/affiliate",
+    "source_url": "https://www.veed.io/affiliate"
   },
   {
-    "brand_name": "Streamlabs",
+    "brand_name": "ElevenLabs",
     "brand_size": "mid-size",
-    "category": "Streaming / Creator Tools",
-    "commission": "$20 for annual Ultra conversions; $10 for monthly Ultra conversions",
-    "website": "https://streamlabs.com/",
-    "apply_url": "https://streamlabs.com/affiliates",
-    "source_url": "https://streamlabs.com/affiliates"
+    "category": "AI / Creator Tools / Audio",
+    "commission": "22% of payments for the first 12 months on Starter, Creator, Pro, and Scale plans; 11% on Business",
+    "website": "https://elevenlabs.io/",
+    "apply_url": "https://elevenlabs.io/affiliates",
+    "source_url": "https://elevenlabs.io/affiliates"
   },
   {
-    "brand_name": "Artlist",
+    "brand_name": "Webflow",
     "brand_size": "mid-size",
+    "category": "Software / Website Builder / Creator Tools",
+    "commission": "50% revenue share on a new customer's first eligible subscription for up to 12 months",
+    "website": "https://webflow.com/",
+    "apply_url": "https://webflow.com/solutions/affiliates",
+    "source_url": "https://webflow.com/solutions/affiliates"
+  },
+  {
+    "brand_name": "Grammarly",
+    "brand_size": "mid-size",
+    "category": "Software / Writing / Creator Tools",
+    "commission": "Not publicly listed",
+    "website": "https://www.grammarly.com/",
+    "apply_url": "https://www.grammarly.com/affiliates",
+    "source_url": "https://www.grammarly.com/affiliates"
+  },
+  {
+    "brand_name": "Semrush",
+    "brand_size": "mid-size",
+    "category": "Software / Marketing / Creator Tools",
+    "commission": "$100-$300 per qualifying sale depending on product, plus $10 for many free-trial activations",
+    "website": "https://www.semrush.com/",
+    "apply_url": "https://www.semrush.com/lp/affiliate-program/en/",
+    "source_url": "https://www.semrush.com/lp/affiliate-program/en/"
+  },
+  {
+    "brand_name": "Kinsta",
+    "brand_size": "mid-size",
+    "category": "Software / Web Hosting",
+    "commission": "$50-$500 one-time bonus plus 10% lifetime monthly recurring commission on Managed WordPress Hosting referrals",
+    "website": "https://kinsta.com/",
+    "apply_url": "https://kinsta.com/affiliates/",
+    "source_url": "https://kinsta.com/affiliates/"
+  },
+  {
+    "brand_name": "Manychat",
+    "brand_size": "mid-size",
+    "category": "Software / Social Media / Creator Tools",
+    "commission": "30%-50% recurring commission for the first 12 months, based on tier",
+    "website": "https://manychat.com/",
+    "apply_url": "https://manychat.partnerstack.com/",
+    "source_url": "https://manychat.com/affiliate/"
+  },
+  {
+    "brand_name": "OpusClip",
+    "brand_size": "emerging",
+    "category": "AI / Creator Tools / Video",
+    "commission": "25% recurring commission through the first year of each new subscriber",
+    "website": "https://www.opus.pro/",
+    "apply_url": "https://www.opus.pro/affiliate",
+    "source_url": "https://www.opus.pro/affiliate"
+  },
+  {
+    "brand_name": "Metricool",
+    "brand_size": "emerging",
+    "category": "Software / Social Media / Creator Tools",
+    "commission": "25% of subscriptions up to $100 per user at Tier 1; 50% up to $300 per user at Tier 2",
+    "website": "https://metricool.com/",
+    "apply_url": "https://metricool.com/affiliate-program/",
+    "source_url": "https://metricool.com/affiliate-program/"
+  },
+  {
+    "brand_name": "Framer",
+    "brand_size": "emerging",
+    "category": "Software / Website Builder / Creator Tools",
+    "commission": "Not publicly listed",
+    "website": "https://www.framer.com/",
+    "apply_url": "https://www.framer.com/help/articles/how-the-creator-program-works/",
+    "source_url": "https://www.framer.com/help/articles/how-the-creator-program-works/"
+  },
+  {
+    "brand_name": "Typefully",
+    "brand_size": "emerging",
+    "category": "Software / Social Media / Creator Tools",
+    "commission": "20% recurring commission",
+    "website": "https://typefully.com/",
+    "apply_url": "https://affiliates.typefully.com/signup",
+    "source_url": "https://support.typefully.com/en/articles/8718317-typefully-s-affiliate-program"
+  },
+  {
+    "brand_name": "Uppbeat",
+    "brand_size": "emerging",
     "category": "Music / Creator Tools",
-    "commission": "Not publicly listed",
-    "website": "https://artlist.io/",
-    "apply_url": "https://lp-p.artlist.io/agencies/agency-contact/",
-    "source_url": "https://help.artlist.io/hc/en-us/articles/29507775230877-Become-an-Artlist-Ambassador"
+    "commission": "30% commission on paid referrals",
+    "website": "https://uppbeat.io/",
+    "apply_url": "https://uppbeat.io/refer-and-earn",
+    "source_url": "https://uppbeat.io/refer-and-earn"
   },
   {
-    "brand_name": "Epidemic Sound",
-    "brand_size": "mid-size",
+    "brand_name": "Soundstripe",
+    "brand_size": "emerging",
     "category": "Music / Creator Tools",
-    "commission": "50/50 revenue split for qualifying Ambassadors after 12 paying referrals",
-    "website": "https://www.epidemicsound.com/",
-    "apply_url": "https://www.epidemicsound.com/community-program/",
-    "source_url": "https://www.epidemicsound.com/community-program/"
+    "commission": "40% of each sale to a referred new subscriber",
+    "website": "https://www.soundstripe.com/",
+    "apply_url": "https://www.soundstripe.com/partners",
+    "source_url": "https://www.soundstripe.com/partners"
   },
   {
-    "brand_name": "Endgame Gear",
-    "brand_size": "mid-size",
-    "category": "Gaming / PC Gear",
-    "commission": "Up to 5% commission",
-    "website": "https://www.endgamegear.com/",
-    "apply_url": "https://ui.awin.com/merchant-profile/39628",
-    "source_url": "https://ui.awin.com/merchant-profile/39628?setLocale=en_US"
-  },
-  {
-    "brand_name": "G2A",
-    "brand_size": "mid-size",
-    "category": "Gaming / Digital Marketplace",
-    "commission": "3.85% general commission",
-    "website": "https://www.g2a.com/",
-    "apply_url": "https://ui.awin.com/merchant-profile/15562",
-    "source_url": "https://ui.awin.com/merchant-profile/15562?setLocale=en_US"
-  },
-  {
-    "brand_name": "Kit",
-    "brand_size": "mid-size",
-    "category": "Software / Creator Tools",
-    "commission": "50% commission for up to 12 months on qualifying referrals",
-    "website": "https://kit.com/",
-    "apply_url": "https://market.partnerstack.com/page/kit",
-    "source_url": "https://market.partnerstack.com/page/kit"
-  },
-  {
-    "brand_name": "AULA",
+    "brand_name": "Tella",
     "brand_size": "emerging",
-    "category": "Gaming / PC Gear",
-    "commission": "Not publicly listed",
-    "website": "https://aulagaming.com/",
-    "apply_url": "https://ui.awin.com/merchant-profile/123064",
-    "source_url": "https://ui.awin.com/merchant-profile/123064"
-  },
-  {
-    "brand_name": "GiiKER",
-    "brand_size": "emerging",
-    "category": "Gaming / Tech Toys",
-    "commission": "Up to 10% commission",
-    "website": "https://www.giiker.com/",
-    "apply_url": "https://ui.awin.com/merchant-profile/98387",
-    "source_url": "https://ui.awin.com/merchant-profile/98387"
-  },
-  {
-    "brand_name": "CircuitMess",
-    "brand_size": "emerging",
-    "category": "Consumer Tech / STEM",
-    "commission": "Not publicly listed",
-    "website": "https://circuitmess.com/",
-    "apply_url": "https://ui.awin.com/merchant-profile/124978",
-    "source_url": "https://ui.awin.com/merchant-profile/124978"
-  },
-  {
-    "brand_name": "CAFFYN",
-    "brand_size": "emerging",
-    "category": "Food & Drinks / Energy",
-    "commission": "25% on first orders + 5% lifetime commission on future orders",
-    "website": "https://www.getcaffyn.com/",
-    "apply_url": "https://www.getcaffyn.com/pages/affiliate",
-    "source_url": "https://www.getcaffyn.com/pages/affiliate"
-  },
-  {
-    "brand_name": "PixVerse",
-    "brand_size": "emerging",
-    "category": "AI / Creator Tools",
-    "commission": "30% recurring commission for 12 months; 35% at Super Affiliate tier",
-    "website": "https://pixverse.ai/",
-    "apply_url": "https://pixverse.ai/en/affiliate",
-    "source_url": "https://pixverse.ai/en/affiliate"
-  },
-  {
-    "brand_name": "Flixier",
-    "brand_size": "emerging",
-    "category": "Software / Creator Tools",
-    "commission": "50% on monthly plans and 25% on annual plans",
-    "website": "https://flixier.com/",
-    "apply_url": "https://flixier.com/affiliate-program",
-    "source_url": "https://flixier.com/affiliate-program"
-  },
-  {
-    "brand_name": "Mosaic",
-    "brand_size": "emerging",
-    "category": "AI / Creator Tools",
-    "commission": "20% revenue share",
-    "website": "https://mosaic.so/",
-    "apply_url": "https://mosaic.so/partners",
-    "source_url": "https://mosaic.so/partners"
+    "category": "Software / Creator Tools / Video",
+    "commission": "30% recurring commission with no expiration date",
+    "website": "https://www.tella.com/",
+    "apply_url": "https://www.tella.com/affiliate-program",
+    "source_url": "https://www.tella.com/affiliate-program"
   }
 ]
