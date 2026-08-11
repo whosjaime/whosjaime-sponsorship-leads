@@ -11,19 +11,19 @@ from sponsor_models import SponsorLead
 
 
 class SponsorQueueReliabilityTests(unittest.TestCase):
-    def test_discovery_config_does_not_require_discord_webhook(self):
+    def test_discovery_config_requires_neither_discord_nor_monday(self):
         env = {
             "YOUTUBE_API_KEY": "youtube-key",
-            "SPONSOR_MONDAY_TOKEN": "monday-key",
+            "SPONSOR_MONDAY_TOKEN": "",
             "DISCORD_WEBHOOK_URL": "",
         }
         with patch.dict(os.environ, env, clear=True):
-            config = load_sponsor_config(require_discord=False)
+            config = load_sponsor_config(require_discord=False, require_monday=False)
             self.assertEqual(config.youtube_api_key, "youtube-key")
-            self.assertEqual(config.monday_token, "monday-key")
+            self.assertEqual(config.monday_token, "")
             self.assertEqual(config.discord_webhook_url, "")
 
-    def test_delivery_config_still_requires_discord_webhook(self):
+    def test_delivery_config_still_requires_monday_and_discord(self):
         env = {
             "YOUTUBE_API_KEY": "youtube-key",
             "SPONSOR_MONDAY_TOKEN": "monday-key",
@@ -57,9 +57,6 @@ class SponsorQueueReliabilityTests(unittest.TestCase):
             brand_key="domain:example.com",
         )
         config = SimpleNamespace(
-            monday_token="monday",
-            monday_board_id=18424367188,
-            monday_group_id="topics",
             youtube_api_key="youtube",
             search_region="US",
             search_language="en",
@@ -68,11 +65,7 @@ class SponsorQueueReliabilityTests(unittest.TestCase):
             max_sponsor_age_days=30,
             min_lead_score=70,
         )
-        monday = Mock()
-        monday.load_existing_index.return_value = Mock()
         youtube = Mock()
-        # Creator hydration is best-effort and must not weaken the original guarantee:
-        # researched leads still survive a YouTube outage.
         youtube.fetch_videos.return_value = []
         youtube.discover_batch.side_effect = RuntimeError("temporary YouTube failure")
         researched = Mock()
@@ -80,15 +73,14 @@ class SponsorQueueReliabilityTests(unittest.TestCase):
 
         with (
             patch.object(batch, "load_sponsor_config", return_value=config),
-            patch.object(batch, "SponsorMondayClient", return_value=monday),
             patch.object(batch, "YouTubeSponsorScanner", return_value=youtube),
             patch.object(batch, "ResearchedSponsorSource", return_value=researched),
             patch.object(batch, "BrandEnricher", return_value=Mock()),
             patch.object(batch, "load_queue", return_value=[]),
+            patch.object(batch, "load_duplicate_keys", return_value=set()),
             patch.object(batch, "_enrich_lead", side_effect=lambda item, _: item),
             patch.object(batch, "_is_recent_sponsorship", return_value=True),
             patch.object(batch, "_is_target_lead", return_value=True),
-            patch.object(batch, "_blocked", return_value=False),
             patch.object(batch, "_priority_score", return_value=100),
             patch.object(batch, "save_queue") as save_queue,
         ):
@@ -98,10 +90,12 @@ class SponsorQueueReliabilityTests(unittest.TestCase):
         self.assertEqual(len(saved), 1)
         self.assertEqual(saved[0].brand_name, "Example Brand")
 
-    def test_daily_batch_runs_after_research_window(self):
+    def test_daily_batch_has_no_monday_duplicate_dependency(self):
         workflow = Path(".github/workflows/discover-sponsor-queue.yml").read_text(encoding="utf-8")
         self.assertIn('cron: "15 10 * * *"', workflow)
         self.assertIn('timezone: "America/Toronto"', workflow)
+        self.assertNotIn("SPONSOR_MONDAY_TOKEN", workflow)
+        self.assertNotIn("SPONSOR_MONDAY_API_KEY", workflow)
         self.assertNotIn("discord_sponsor_queue_status.py", workflow)
 
 
