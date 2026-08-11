@@ -60,7 +60,11 @@ class SponsorSentLedgerTests(unittest.TestCase):
             path = Path(tmp) / "sent.json"
             save_sent_keys(set(), path)
             duplicate_keys = load_duplicate_keys(path)
-        blocked = SponsorLead(brand_name="Notion", brand_domain="notion.so")
+        blocked = _lead()
+        blocked.brand_name = "Notion"
+        blocked.brand_domain = "notion.so"
+        blocked.brand_key = "domain:notion.so"
+        blocked.contact_email = "partnerships@notion.so"
         self.assertTrue(is_duplicate(blocked, duplicate_keys))
 
     def test_hourly_dispatch_never_touches_monday_for_duplicate_in_github_ledger(self):
