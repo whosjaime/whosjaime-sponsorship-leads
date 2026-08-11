@@ -14,14 +14,14 @@ class VideoRecord:
     published_at: str
     channel_id: str
     channel_title: str
-    default_language: str = ""
-    default_audio_language: str = ""
     tags: list[str] = field(default_factory=list)
     category_id: str = ""
     topic_categories: list[str] = field(default_factory=list)
     paid_product_placement: bool = False
     brand_partner_channel_id: str = ""
     view_count: int = 0
+    default_language: str = ""
+    default_audio_language: str = ""
 
 
 @dataclass
