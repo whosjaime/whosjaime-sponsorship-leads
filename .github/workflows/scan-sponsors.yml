@@ -40,15 +40,16 @@ jobs:
           SPONSOR_MIN_LEAD_SCORE: ${{ vars.SPONSOR_MIN_LEAD_SCORE || '70' }}
           SPONSOR_MAX_AGE_DAYS: ${{ vars.SPONSOR_MAX_AGE_DAYS || '30' }}
         run: python src/run_sponsor_queue_dispatch.py
-      - name: Persist updated sponsor queue
-        if: success()
+      - name: Persist sponsor queue and permanent sent ledger
+        if: always()
         run: |
-          if git diff --quiet -- data/sponsor_queue.json; then
-            echo "Sponsor queue unchanged."
+          if git diff --quiet -- data/sponsor_queue.json data/sent_sponsor_keys.json; then
+            echo "Sponsor queue and sent ledger unchanged."
             exit 0
           fi
           git config user.name "sponsor-queue-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add data/sponsor_queue.json
-          git commit -m "Consume hourly sponsor queue item [skip ci]"
+          git add data/sponsor_queue.json data/sent_sponsor_keys.json
+          git commit -m "Persist sponsor queue and sent ledger [skip ci]"
+          git pull --rebase origin main
           git push origin HEAD:main
