@@ -8,6 +8,13 @@ from discord_linkedin_intake import DiscordLinkedInClient, candidate_to_lead, pa
 from discord_notifier import DiscordNotifier
 from sponsor_dedupe import make_brand_key, make_sponsorship_key, normalize_domain
 from sponsor_monday_client import SponsorMondayClient, WRITABLE_FIELDS
+from sponsor_queue import (
+    is_duplicate,
+    load_duplicate_keys,
+    load_sent_keys,
+    mark_sent,
+    save_sent_keys,
+)
 
 DEFAULT_BOARD_ID = 18424367188
 DEFAULT_GROUP_ID = "topics"
@@ -47,12 +54,6 @@ def _enrich(lead, enricher: BrandEnricher):
 
 
 def _create_manual_lead(monday: SponsorMondayClient, lead):
-    """Create a manually submitted lead and allow only this path to add dropdown labels.
-
-    This is primarily so the board can add `LinkedIn` to Found On the first time the
-    intake is used. The normal automated YouTube scanner keeps create_labels_if_missing
-    disabled.
-    """
     columns, _ = monday.load_schema()
     raw = {
         "outreach_status": "New Lead",
@@ -114,7 +115,8 @@ def run() -> None:
     notifier = DiscordNotifier(_required("DISCORD_WEBHOOK_URL"))
     enricher = BrandEnricher()
 
-    existing = monday.load_existing_index()
+    sent_keys = load_sent_keys()
+    duplicate_keys = load_duplicate_keys()
     messages = discord_bot.fetch_recent_messages(limit=50)
     processed = 0
     created = 0
@@ -122,8 +124,6 @@ def run() -> None:
     duplicates = 0
     errors: list[str] = []
 
-    # Discord returns newest first. Process oldest first so multiple manual submissions
-    # preserve the order they were dropped into the intake channel.
     for message in reversed(messages):
         if (message.get("author") or {}).get("bot"):
             continue
@@ -152,16 +152,23 @@ def run() -> None:
 
         lead = candidate_to_lead(candidate)
         lead.source_platform = os.getenv("SPONSOR_LINKEDIN_SOURCE_LABEL", "LinkedIn").strip() or "LinkedIn"
+
+        # GitHub duplicate gate comes before website research or Monday.
+        if is_duplicate(lead, duplicate_keys):
+            duplicates += 1
+            try:
+                discord_bot.add_reaction(candidate.message_id, "🔁")
+            except Exception as exc:
+                errors.append(f"Could not mark duplicate LinkedIn message {candidate.message_id}: {exc}")
+            continue
+
         try:
             lead = _enrich(lead, enricher)
         except Exception as exc:
-            # A manually selected LinkedIn lead can still enter Monday with the sponsor
-            # identity/evidence even when its website blocks automated contact research.
             errors.append(f"Brand enrichment warning for {lead.brand_name}: {exc}")
 
-        # Manual intake still NEVER bypasses the permanent do-not-reach-out list or
-        # existing Monday brand identity. ExistingSponsorIndex is seeded with both.
-        if existing.is_duplicate_brand(lead) or existing.is_protected(lead):
+        # Check again after canonical domain/email enrichment.
+        if is_duplicate(lead, duplicate_keys):
             duplicates += 1
             try:
                 discord_bot.add_reaction(candidate.message_id, "🔁")
@@ -176,8 +183,12 @@ def run() -> None:
                 f"Created manual LinkedIn sponsor lead: {lead.brand_name} / "
                 f"monday {item.get('id', '?')} / email {lead.contact_email or 'not found'}"
             )
-            existing.add(lead, protected=True)
             created += 1
+
+            # Successful Monday create immediately becomes permanent GitHub duplicate history.
+            mark_sent(lead, sent_keys)
+            duplicate_keys.update(sent_keys)
+            save_sent_keys(sent_keys)
         except Exception as exc:
             errors.append(f"Monday create failed for LinkedIn lead {lead.brand_name}: {exc}")
             continue
@@ -192,9 +203,10 @@ def run() -> None:
         except Exception as exc:
             errors.append(f"Could not mark successful LinkedIn message {candidate.message_id}: {exc}")
 
+    save_sent_keys(sent_keys)
     print(
         f"LinkedIn Discord intake complete: {processed} submitted post(s), {created} created, "
-        f"{duplicates} duplicate/blocked, {unresolved} need website hint, {len(errors)} warning(s)."
+        f"{duplicates} GitHub duplicate/blocked, {unresolved} need website hint, {len(errors)} warning(s)."
     )
     for error in errors[:20]:
         print(f"WARNING: {error}")
