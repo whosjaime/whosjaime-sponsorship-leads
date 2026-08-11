@@ -3,7 +3,7 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
-from sponsor_dedupe import lead_brand_keys, normalize_text
+from sponsor_dedupe import lead_brand_keys, normalize_text, permanent_blocked_brand_keys
 from sponsor_models import SponsorLead
 
 QUEUE_PATH = Path("data/sponsor_queue.json")
@@ -39,7 +39,7 @@ def save_queue(leads: list[SponsorLead], path: Path = QUEUE_PATH) -> None:
 
 
 def load_sent_keys(path: Path = SENT_KEYS_PATH) -> set[str]:
-    """Load the bot's permanent record of sponsor identities already delivered."""
+    """Load the GitHub source-of-truth record of sponsor identities already delivered."""
     if not path.exists():
         return set()
     try:
@@ -55,10 +55,19 @@ def load_sent_keys(path: Path = SENT_KEYS_PATH) -> set[str]:
     }
 
 
+def load_duplicate_keys(path: Path = SENT_KEYS_PATH) -> set[str]:
+    """Authoritative duplicate keys: sent history plus the permanent GitHub blocklist."""
+    return load_sent_keys(path) | permanent_blocked_brand_keys()
+
+
 def save_sent_keys(keys: set[str], path: Path = SENT_KEYS_PATH) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     payload = sorted({normalize_text(key) for key in keys if normalize_text(key)})
     path.write_text(json.dumps(payload, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+
+
+def is_duplicate(lead: SponsorLead, duplicate_keys: set[str]) -> bool:
+    return bool(lead_brand_keys(lead) & duplicate_keys)
 
 
 def is_already_sent(lead: SponsorLead, sent_keys: set[str]) -> bool:
