@@ -41,7 +41,10 @@ class SponsorScannerConfig:
     enable_tiktok: bool
 
 
-def load_sponsor_config(require_discord: bool = True) -> SponsorScannerConfig:
+def load_sponsor_config(
+    require_discord: bool = True,
+    require_monday: bool = True,
+) -> SponsorScannerConfig:
     youtube_api_key = os.getenv("YOUTUBE_API_KEY", "").strip()
     monday_token = (
         os.getenv("SPONSOR_MONDAY_TOKEN", "").strip()
@@ -53,7 +56,7 @@ def load_sponsor_config(require_discord: bool = True) -> SponsorScannerConfig:
     missing = []
     if not youtube_api_key:
         missing.append("YOUTUBE_API_KEY")
-    if not monday_token:
+    if require_monday and not monday_token:
         missing.append("SPONSOR_MONDAY_TOKEN")
     if require_discord and not discord_webhook_url:
         missing.append("DISCORD_WEBHOOK_URL")
