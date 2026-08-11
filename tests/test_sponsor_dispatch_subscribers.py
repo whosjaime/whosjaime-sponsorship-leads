@@ -42,10 +42,7 @@ class SponsorDispatchSubscriberTests(unittest.TestCase):
             min_lead_score=70,
         )
 
-        index = Mock()
-        index.brand_keys = set()
         monday = Mock()
-        monday.load_existing_index.return_value = index
 
         def create_lead(item):
             self.assertEqual(item.creator_subscribers, 321456)
@@ -68,22 +65,23 @@ class SponsorDispatchSubscriberTests(unittest.TestCase):
             patch.object(dispatch, "YouTubeSponsorScanner", return_value=youtube),
             patch.object(dispatch, "load_queue", return_value=[lead]),
             patch.object(dispatch, "load_sent_keys", return_value=set()),
+            patch.object(dispatch, "load_duplicate_keys", return_value=set()),
             patch.object(dispatch, "save_queue") as save_queue,
             patch.object(dispatch, "save_sent_keys") as save_sent_keys,
             patch.object(dispatch, "_hydrate_creator_metrics", side_effect=hydrate) as hydration,
             patch.object(dispatch, "_is_recent_sponsorship", return_value=True),
             patch.object(dispatch, "_is_target_lead", return_value=True),
-            patch.object(dispatch, "_blocked", return_value=False),
         ):
             dispatch.run()
 
         hydration.assert_called_once()
+        monday.load_existing_index.assert_not_called()
         monday.create_lead.assert_called_once()
         discord.send_new_lead.assert_called_once()
         sent_lead = discord.send_new_lead.call_args.args[0]
         self.assertEqual(sent_lead.creator_subscribers, 321456)
         save_queue.assert_called_once_with([])
-        save_sent_keys.assert_called_once()
+        self.assertGreaterEqual(save_sent_keys.call_count, 1)
         saved_keys = save_sent_keys.call_args.args[0]
         self.assertIn("domain:example.com", saved_keys)
 
