@@ -1,44 +1,5 @@
 [
   {
-    "brand_name": "Doubleholo",
-    "brand_domain": "doubleholo.com",
-    "source_platform": "YouTube",
-    "creator_name": "Poke_Universe ",
-    "creator_url": "https://www.youtube.com/channel/UCioZt-3ql32RPc9-9loT5vA",
-    "creator_channel_id": "UCioZt-3ql32RPc9-9loT5vA",
-    "creator_subscribers": 18,
-    "creator_genre": "Gaming",
-    "creator_tags": [
-      "Gaming",
-      "Short Form",
-      "Lifestyle"
-    ],
-    "video_id": "pup6zy59WS0",
-    "video_url": "https://www.youtube.com/watch?v=pup6zy59WS0",
-    "video_title": "This kid has 1000$ Sitting in his binder #pokemon #ad #pokemontcg #pokemoncards #pokemontcglive",
-    "sponsored_date": "2026-08-10",
-    "evidence": "Paid promotion/ad disclosure with external sponsor link",
-    "paid_product_placement": true,
-    "brand_partner_channel_id": "",
-    "sponsor_category": "Software / SaaS",
-    "sponsor_subcategory": "",
-    "contact_name": "",
-    "contact_title": "",
-    "contact_email": "support@doubleholo.com",
-    "email_type": "Public Business Contact",
-    "contact_source": "https://doubleholo.com/",
-    "lead_score": 85,
-    "lead_temperature": "Hot",
-    "sponsorship_key": "youtube:pup6zy59ws0:doubleholo.com",
-    "brand_key": "domain:doubleholo.com",
-    "signals": [
-      "ad/sponsored disclosure",
-      "YouTube paid product placement",
-      "sponsor domain found"
-    ],
-    "date_found": "2026-08-10"
-  },
-  {
     "brand_name": "Proton VPN",
     "brand_domain": "protonvpn.com",
     "source_platform": "YouTube",
