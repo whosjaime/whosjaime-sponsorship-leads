@@ -28,10 +28,11 @@ class GitHubDuplicateAuthorityTests(unittest.TestCase):
         self.assertIn("load_duplicate_keys()", dispatch)
         self.assertIn("load_duplicate_keys()", linkedin)
 
-    def test_only_bootstrap_script_migrates_historical_monday_duplicate_index(self):
-        bootstrap = Path("src/bootstrap_sponsor_duplicate_ledger.py").read_text(encoding="utf-8")
-        self.assertIn("load_existing_index()", bootstrap)
-        self.assertIn("save_sent_keys(sent_keys)", bootstrap)
+    def test_one_time_monday_bootstrap_is_removed_after_migration(self):
+        self.assertFalse(Path("src/bootstrap_sponsor_duplicate_ledger.py").exists())
+        self.assertFalse(Path(".github/workflows/bootstrap-sponsor-duplicates.yml").exists())
+        self.assertFalse(Path(".github/sponsor-duplicate-bootstrap-trigger").exists())
+        self.assertTrue(Path("data/sent_sponsor_keys.json").exists())
 
 
 if __name__ == "__main__":
