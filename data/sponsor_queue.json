@@ -1,5 +1,43 @@
 [
   {
+    "brand_name": "PC Specialist",
+    "brand_domain": "bitly.com",
+    "source_platform": "YouTube",
+    "creator_name": "TheRunningManZ",
+    "creator_url": "https://www.youtube.com/channel/UC4TP_rKc6AYFC3gbD1VS90w",
+    "creator_channel_id": "UC4TP_rKc6AYFC3gbD1VS90w",
+    "creator_subscribers": 605000,
+    "creator_genre": "Gaming",
+    "creator_tags": [
+      "Gaming",
+      "Streaming"
+    ],
+    "video_id": "t6sIl6DmXYs",
+    "video_url": "https://www.youtube.com/watch?v=t6sIl6DmXYs",
+    "video_title": "Deerisle - Solo Questing PT6! 4k Livestream",
+    "sponsored_date": "2026-08-11",
+    "evidence": "partnered with PC Specialist",
+    "paid_product_placement": true,
+    "brand_partner_channel_id": "",
+    "sponsor_category": "Software / SaaS",
+    "sponsor_subcategory": "AI / Productivity",
+    "contact_name": "",
+    "contact_title": "",
+    "contact_email": "press@bitly.com",
+    "email_type": "Press",
+    "contact_source": "https://bitly.com/pages/contact",
+    "lead_score": 100,
+    "lead_temperature": "Very Hot",
+    "sponsorship_key": "youtube:t6sil6dmxys:bitly.com",
+    "brand_key": "domain:bitly.com",
+    "signals": [
+      "explicit sponsor phrase",
+      "YouTube paid product placement",
+      "sponsor domain found"
+    ],
+    "date_found": "2026-08-12"
+  },
+  {
     "brand_name": "Ixl",
     "brand_domain": "ixl.com",
     "source_platform": "YouTube",
@@ -32,6 +70,46 @@
     "brand_key": "domain:ixl.com",
     "signals": [
       "ad/sponsored disclosure",
+      "YouTube paid product placement",
+      "sponsor domain found"
+    ],
+    "date_found": "2026-08-12"
+  },
+  {
+    "brand_name": "Streamlabs",
+    "brand_domain": "streamlabs.com",
+    "source_platform": "YouTube",
+    "creator_name": "Slasher1o3",
+    "creator_url": "https://www.youtube.com/channel/UCBuNSLGbIoO9869Z0MhlP5Q",
+    "creator_channel_id": "UCBuNSLGbIoO9869Z0MhlP5Q",
+    "creator_subscribers": 1990,
+    "creator_genre": "Entertainment",
+    "creator_tags": [
+      "Entertainment",
+      "Fortnite",
+      "Streaming",
+      "Short Form",
+      "Lifestyle"
+    ],
+    "video_id": "G6VDQSLAKxU",
+    "video_url": "https://www.youtube.com/watch?v=G6VDQSLAKxU",
+    "video_title": "Yonna Stands On Business with Kai Cenat 😂😂😂 #yonna #twitch #shorts",
+    "sponsored_date": "2026-08-12",
+    "evidence": "Paid promotion/ad disclosure with external sponsor link",
+    "paid_product_placement": true,
+    "brand_partner_channel_id": "",
+    "sponsor_category": "Software / SaaS",
+    "sponsor_subcategory": "Computer Hardware",
+    "contact_name": "",
+    "contact_title": "",
+    "contact_email": "bd@streamlabs.com",
+    "email_type": "Partnership Page Contact",
+    "contact_source": "https://streamlabs.com/sponsorships",
+    "lead_score": 73,
+    "lead_temperature": "Warm",
+    "sponsorship_key": "youtube:g6vdqslakxu:streamlabs.com",
+    "brand_key": "domain:streamlabs.com",
+    "signals": [
       "YouTube paid product placement",
       "sponsor domain found"
     ],
