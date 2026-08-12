@@ -1,7 +1,10 @@
 from __future__ import annotations
 
+import sys
 import unittest
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 
 from creator_classifier import classify_creator
 from run_sponsor_discovery_batch import (
