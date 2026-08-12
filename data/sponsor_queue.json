@@ -1,43 +1,5 @@
 [
   {
-    "brand_name": "Ixl",
-    "brand_domain": "ixl.com",
-    "source_platform": "YouTube",
-    "creator_name": "Farmhouse on Boone",
-    "creator_url": "https://www.youtube.com/channel/UCFfhvjvRMWDeJhX88dv-EmQ",
-    "creator_channel_id": "UCFfhvjvRMWDeJhX88dv-EmQ",
-    "creator_subscribers": 739000,
-    "creator_genre": "Food",
-    "creator_tags": [
-      "Food",
-      "Lifestyle"
-    ],
-    "video_id": "Yi4kF47AahI",
-    "video_url": "https://www.youtube.com/watch?v=Yi4kF47AahI",
-    "video_title": "Feeding my family of 11",
-    "sponsored_date": "2026-08-11",
-    "evidence": "Paid promotion/ad disclosure with external sponsor link",
-    "paid_product_placement": true,
-    "brand_partner_channel_id": "",
-    "sponsor_category": "Software / SaaS",
-    "sponsor_subcategory": "Credit Cards",
-    "contact_name": "",
-    "contact_title": "",
-    "contact_email": "press@ixl.com",
-    "email_type": "Press",
-    "contact_source": "https://www.ixl.com/contact",
-    "lead_score": 85,
-    "lead_temperature": "Hot",
-    "sponsorship_key": "youtube:yi4kf47aahi:ixl.com",
-    "brand_key": "domain:ixl.com",
-    "signals": [
-      "ad/sponsored disclosure",
-      "YouTube paid product placement",
-      "sponsor domain found"
-    ],
-    "date_found": "2026-08-12"
-  },
-  {
     "brand_name": "Streamlabs",
     "brand_domain": "streamlabs.com",
     "source_platform": "YouTube",
