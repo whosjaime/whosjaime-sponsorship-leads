@@ -51,6 +51,7 @@
   "brand:ghost",
   "brand:glossier",
   "brand:goatenergy",
+  "brand:gologin",
   "brand:grammarly",
   "brand:groundnews",
   "brand:hauslabs",
@@ -125,6 +126,7 @@
   "domain:epidemicsound.com",
   "domain:factor75.com",
   "domain:fanduel.com",
+  "domain:gologin.com",
   "domain:hellofresh.com",
   "domain:huel.com",
   "domain:instant-gaming.com",
@@ -162,6 +164,7 @@
   "email:press@fanduel.com",
   "email:press@ixl.com",
   "email:support@doubleholo.com",
+  "email:support@gologin.com",
   "email:support@instant-gaming.com",
   "email:support@vidiq.com"
 ]
