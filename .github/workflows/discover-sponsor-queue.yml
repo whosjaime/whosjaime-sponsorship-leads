@@ -1,8 +1,14 @@
-name: Daily Sponsor Queue Discovery
+name: Sponsor Queue Top-Up
 
 on:
   schedule:
+    - cron: "15 4 * * *"
+      timezone: "America/Toronto"
     - cron: "15 10 * * *"
+      timezone: "America/Toronto"
+    - cron: "15 16 * * *"
+      timezone: "America/Toronto"
+    - cron: "15 22 * * *"
       timezone: "America/Toronto"
   workflow_dispatch:
   push:
@@ -30,7 +36,7 @@ jobs:
         with:
           python-version: "3.11"
       - run: pip install -r requirements.txt
-      - name: Discover and qualify today's sponsor queue
+      - name: Top up and diversify sponsor queue
         env:
           YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
           CREATORDB_API_KEY: ${{ secrets.CREATORDB_API_KEY }}
@@ -52,6 +58,6 @@ jobs:
           git config user.name "sponsor-queue-bot"
           git config user.email "actions@users.noreply.github.com"
           git add data/sponsor_queue.json
-          git commit -m "Refresh daily sponsor queue [skip ci]"
+          git commit -m "Refresh sponsor queue [skip ci]"
           git pull --rebase origin main
           git push origin HEAD:main

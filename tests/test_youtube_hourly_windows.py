@@ -59,7 +59,7 @@ class YouTubeHourlyWindowTests(unittest.TestCase):
         )
         scanner._search = Mock(side_effect=RuntimeError("quota/API failure"))
 
-        with self.assertRaisesRegex(RuntimeError, "All YouTube sponsor discovery lanes failed"):
+        with self.assertRaisesRegex(RuntimeError, r"All YouTube .*sponsor discovery lanes failed"):
             scanner.discover_video_ids(30 * 24)
         self.assertEqual(scanner._search.call_count, 3)
         self.assertIsNone(scanner._active_search_window)

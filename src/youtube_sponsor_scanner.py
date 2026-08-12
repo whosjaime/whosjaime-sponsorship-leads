@@ -10,9 +10,6 @@ from sponsor_models import ChannelRecord, VideoRecord
 YOUTUBE_API = "https://www.googleapis.com/youtube/v3"
 SEARCH_WINDOW_SLOTS = 24
 
-# Keep discovery to exactly three search.list calls. YouTube's q parameter supports
-# Boolean OR with "|", so one combined query can cover a broad set of sponsorship
-# phrases without multiplying requests.
 SPONSOR_DISCLOSURE_QUERY = (
     '"sponsored by"|"thanks to"|"brought to you by"|'
     '"in partnership with"|"partnered with"|"paid partnership"|'
@@ -28,6 +25,26 @@ SEARCH_LANES = (
     ("paid-placement", "", True),
     ("sponsor-disclosures", SPONSOR_DISCLOSURE_QUERY, False),
     ("target-niche-paid", TARGET_PAID_QUERY, True),
+)
+
+# Only used when the main queue is running low. These lanes deliberately search
+# creator/niche areas the main pool under-serves instead of lowering the quality gate.
+BACKUP_STREAM_VLOG_QUERY = (
+    'streamer|streaming|livestream|"live stream"|twitch|vlog|lifestyle|reaction|'
+    'challenge|"family vlog"|"day in my life"|"week in my life"'
+)
+BACKUP_BEAUTY_MUSIC_QUERY = (
+    'beauty|makeup|skincare|cosmetics|haircare|music|musician|producer|guitar|'
+    'recording|"audio interface"|plugin|daw|synth|piano|drums'
+)
+BACKUP_CREATOR_QUERY = (
+    'creator|youtube|influencer|reaction|comedy|prank|family|travel|fashion|fitness|'
+    'home|outdoors|pets|streaming|vlog'
+)
+BACKUP_SEARCH_LANES = (
+    ("backup-stream-vlog-paid", BACKUP_STREAM_VLOG_QUERY, True),
+    ("backup-beauty-music-paid", BACKUP_BEAUTY_MUSIC_QUERY, True),
+    ("backup-creator-paid", BACKUP_CREATOR_QUERY, True),
 )
 
 
@@ -62,7 +79,6 @@ class YouTubeSponsorScanner:
         lookback_hours: int,
         now: datetime | None = None,
     ) -> tuple[str, str, int]:
-        """Return one of 24 rotating time slices across the allowed lookback."""
         current = now or datetime.now(timezone.utc)
         if current.tzinfo is None:
             current = current.replace(tzinfo=timezone.utc)
@@ -84,7 +100,6 @@ class YouTubeSponsorScanner:
         lookback_hours: int,
         now: datetime | None = None,
     ) -> tuple[str, str, int]:
-        """Return the full freshness window for the once-daily discovery batch."""
         current = now or datetime.now(timezone.utc)
         if current.tzinfo is None:
             current = current.replace(tzinfo=timezone.utc)
@@ -93,8 +108,6 @@ class YouTubeSponsorScanner:
         return cls._rfc3339(published_after), cls._rfc3339(current), -1
 
     def _search(self, lookback_hours: int, query: str = "", paid_only: bool = False) -> list[str]:
-        # relevanceLanguage is only a ranking preference in YouTube's API, not a strict
-        # language filter. The hydrated video language is checked later before queueing.
         window = self._active_search_window or self._hourly_search_window(lookback_hours)
         published_after, published_before, _ = window
         params = {
@@ -119,12 +132,17 @@ class YouTubeSponsorScanner:
             if item.get("id", {}).get("videoId")
         ]
 
-    def _discover_ids_in_active_window(self, lookback_hours: int, label: str) -> list[str]:
+    def _discover_ids_in_active_window(
+        self,
+        lookback_hours: int,
+        label: str,
+        lanes: tuple[tuple[str, str, bool], ...] = SEARCH_LANES,
+    ) -> list[str]:
         ordered_ids: list[str] = []
         seen: set[str] = set()
         failed_lanes = 0
 
-        for lane_name, query, paid_only in SEARCH_LANES:
+        for lane_name, query, paid_only in lanes:
             try:
                 ids = self._search(lookback_hours, query=query, paid_only=paid_only)
             except RuntimeError as exc:
@@ -138,12 +156,11 @@ class YouTubeSponsorScanner:
                     seen.add(video_id)
                     ordered_ids.append(video_id)
 
-        if failed_lanes == len(SEARCH_LANES):
-            raise RuntimeError("All YouTube sponsor discovery lanes failed.")
+        if failed_lanes == len(lanes):
+            raise RuntimeError(f"All YouTube {label} sponsor discovery lanes failed.")
         return ordered_ids
 
     def discover_video_ids(self, lookback_hours: int) -> list[str]:
-        """Legacy hourly discovery: exactly three lanes in the current rotating slice."""
         self._active_search_window = self._hourly_search_window(lookback_hours)
         published_after, published_before, slot = self._active_search_window
         print(
@@ -156,15 +173,31 @@ class YouTubeSponsorScanner:
             self._active_search_window = None
 
     def discover_batch_video_ids(self, lookback_hours: int) -> list[str]:
-        """Daily batch discovery: up to 50 results from each of the three lanes."""
         self._active_search_window = self._full_search_window(lookback_hours)
         published_after, published_before, _ = self._active_search_window
         print(
-            "YouTube daily batch discovery window: "
+            "YouTube main batch discovery window: "
             f"{published_after} through {published_before}"
         )
         try:
-            return self._discover_ids_in_active_window(lookback_hours, "daily-batch")
+            return self._discover_ids_in_active_window(lookback_hours, "main-batch")
+        finally:
+            self._active_search_window = None
+
+    def discover_backup_batch_video_ids(self, lookback_hours: int) -> list[str]:
+        """Targeted backup inventory for streaming/vlog/beauty/music and adjacent creators."""
+        self._active_search_window = self._full_search_window(lookback_hours)
+        published_after, published_before, _ = self._active_search_window
+        print(
+            "YouTube backup batch discovery window: "
+            f"{published_after} through {published_before}"
+        )
+        try:
+            return self._discover_ids_in_active_window(
+                lookback_hours,
+                "backup-batch",
+                lanes=BACKUP_SEARCH_LANES,
+            )
         finally:
             self._active_search_window = None
 
@@ -259,3 +292,6 @@ class YouTubeSponsorScanner:
 
     def discover_batch(self, lookback_hours: int) -> tuple[list[VideoRecord], dict[str, ChannelRecord]]:
         return self._hydrate(self.discover_batch_video_ids(lookback_hours))
+
+    def discover_backup_batch(self, lookback_hours: int) -> tuple[list[VideoRecord], dict[str, ChannelRecord]]:
+        return self._hydrate(self.discover_backup_batch_video_ids(lookback_hours))
