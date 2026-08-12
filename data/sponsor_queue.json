@@ -1,44 +1,5 @@
 [
   {
-    "brand_name": "Prizepicks",
-    "brand_domain": "prizepicks.com",
-    "source_platform": "YouTube",
-    "creator_name": "Raiders Report by Chat Sports",
-    "creator_url": "https://www.youtube.com/channel/UC2zTXqHLEz56OG0EvS9SiFA",
-    "creator_channel_id": "UC2zTXqHLEz56OG0EvS9SiFA",
-    "creator_subscribers": 226000,
-    "creator_genre": "Sports",
-    "creator_tags": [
-      "Sports",
-      "Reactions",
-      "Short Form"
-    ],
-    "video_id": "pXxQqdQvwsg",
-    "video_url": "https://www.youtube.com/watch?v=pXxQqdQvwsg",
-    "video_title": "Fernando Mendoza See You Soon! NEW Raiders Depth Chart Reaction & Training Camp Practice News",
-    "sponsored_date": "2026-08-11",
-    "evidence": "Paid promotion/ad disclosure with external sponsor link",
-    "paid_product_placement": true,
-    "brand_partner_channel_id": "",
-    "sponsor_category": "Consumer Tech",
-    "sponsor_subcategory": "Computer Hardware",
-    "contact_name": "",
-    "contact_title": "",
-    "contact_email": "media@prizepicks.com",
-    "email_type": "Media",
-    "contact_source": "https://www.prizepicks.com/about",
-    "lead_score": 85,
-    "lead_temperature": "Hot",
-    "sponsorship_key": "youtube:pxxqqdqvwsg:prizepicks.com",
-    "brand_key": "domain:prizepicks.com",
-    "signals": [
-      "ad/sponsored disclosure",
-      "YouTube paid product placement",
-      "sponsor domain found"
-    ],
-    "date_found": "2026-08-12"
-  },
-  {
     "brand_name": "Ixl",
     "brand_domain": "ixl.com",
     "source_platform": "YouTube",
