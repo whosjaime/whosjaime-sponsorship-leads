@@ -1,43 +1,5 @@
 [
   {
-    "brand_name": "Retroware",
-    "brand_domain": "retroware.com",
-    "source_platform": "YouTube",
-    "creator_name": "Cinemassacre",
-    "creator_url": "https://www.youtube.com/channel/UC0M0rxSz3IF0CsSour1iWmw",
-    "creator_channel_id": "UC0M0rxSz3IF0CsSour1iWmw",
-    "creator_subscribers": 4020000,
-    "creator_genre": "Gaming",
-    "creator_tags": [
-      "Gaming",
-      "Comedy",
-      "Long Form"
-    ],
-    "video_id": "1mVmTa3KefQ",
-    "video_url": "https://www.youtube.com/watch?v=1mVmTa3KefQ",
-    "video_title": "Beating Bubble Bobble (NES) - Angry Video Game Nerd (AVGN)",
-    "sponsored_date": "2026-08-12",
-    "evidence": "Paid promotion/ad disclosure with external sponsor link",
-    "paid_product_placement": true,
-    "brand_partner_channel_id": "",
-    "sponsor_category": "Software / SaaS",
-    "sponsor_subcategory": "Computer Hardware",
-    "contact_name": "",
-    "contact_title": "",
-    "contact_email": "products@retroware.com",
-    "email_type": "Public Business Contact",
-    "contact_source": "https://retroware.com/pages/contact",
-    "lead_score": 73,
-    "lead_temperature": "Warm",
-    "sponsorship_key": "youtube:1mvmta3kefq:retroware.com",
-    "brand_key": "domain:retroware.com",
-    "signals": [
-      "YouTube paid product placement",
-      "sponsor domain found"
-    ],
-    "date_found": "2026-08-12"
-  },
-  {
     "brand_name": "Donttellcomedy",
     "brand_domain": "donttellcomedy.com",
     "source_platform": "YouTube",
