@@ -1,43 +1,5 @@
 [
   {
-    "brand_name": "Bluechew",
-    "brand_domain": "bluechew.com",
-    "source_platform": "YouTube",
-    "creator_name": "Bad Friends",
-    "creator_url": "https://www.youtube.com/channel/UCRBpynZV0b7ww2XMCfC17qg",
-    "creator_channel_id": "UCRBpynZV0b7ww2XMCfC17qg",
-    "creator_subscribers": 2470000,
-    "creator_genre": "Entertainment",
-    "creator_tags": [
-      "Entertainment",
-      "Comedy",
-      "Long Form"
-    ],
-    "video_id": "1DKGtW9jDIw",
-    "video_url": "https://www.youtube.com/watch?v=1DKGtW9jDIw",
-    "video_title": "Ed Begley Jr vs. Howie Mandel | The Bad Game Show",
-    "sponsored_date": "2026-08-12",
-    "evidence": "Paid promotion/ad disclosure with external sponsor link",
-    "paid_product_placement": true,
-    "brand_partner_channel_id": "",
-    "sponsor_category": "Software / SaaS",
-    "sponsor_subcategory": "Supplements",
-    "contact_name": "",
-    "contact_title": "",
-    "contact_email": "support@bluechew.com",
-    "email_type": "Support",
-    "contact_source": "https://bluechew.com/",
-    "lead_score": 73,
-    "lead_temperature": "Warm",
-    "sponsorship_key": "youtube:1dkgtw9jdiw:bluechew.com",
-    "brand_key": "domain:bluechew.com",
-    "signals": [
-      "YouTube paid product placement",
-      "sponsor domain found"
-    ],
-    "date_found": "2026-08-12"
-  },
-  {
     "brand_name": "Retroware",
     "brand_domain": "retroware.com",
     "source_platform": "YouTube",
