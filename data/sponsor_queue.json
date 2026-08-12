@@ -1,41 +1,5 @@
 [
   {
-    "brand_name": "Donttellcomedy",
-    "brand_domain": "donttellcomedy.com",
-    "source_platform": "YouTube",
-    "creator_name": "Don't Tell Comedy",
-    "creator_url": "https://www.youtube.com/channel/UC7MgijK9WL_EqCo1juUERwg",
-    "creator_channel_id": "UC7MgijK9WL_EqCo1juUERwg",
-    "creator_subscribers": 2390000,
-    "creator_genre": "Comedy",
-    "creator_tags": [
-      "Comedy"
-    ],
-    "video_id": "8FMnbXPYcGg",
-    "video_url": "https://www.youtube.com/watch?v=8FMnbXPYcGg",
-    "video_title": "Fat Shamed By My Doctor | Ella Horwedel | Stand Up Comedy",
-    "sponsored_date": "2026-08-12",
-    "evidence": "Paid promotion/ad disclosure with external sponsor link",
-    "paid_product_placement": true,
-    "brand_partner_channel_id": "",
-    "sponsor_category": "Software / SaaS",
-    "sponsor_subcategory": "Coffee",
-    "contact_name": "",
-    "contact_title": "",
-    "contact_email": "support@donttellcomedy.com",
-    "email_type": "Support",
-    "contact_source": "https://www.donttellcomedy.com:443/contact/",
-    "lead_score": 73,
-    "lead_temperature": "Warm",
-    "sponsorship_key": "youtube:8fmnbxpycgg:donttellcomedy.com",
-    "brand_key": "domain:donttellcomedy.com",
-    "signals": [
-      "YouTube paid product placement",
-      "sponsor domain found"
-    ],
-    "date_found": "2026-08-12"
-  },
-  {
     "brand_name": "Creativecommons",
     "brand_domain": "creativecommons.org",
     "source_platform": "YouTube",
