@@ -1,11 +1,182 @@
 [
   {
-    "brand_name": "Instant Gaming",
+    "brand_name": "Lenovo",
     "brand_size": "large",
-    "category": "Gaming / Video Games",
+    "category": "Gaming / Consumer Tech / PC Gear",
+    "commission": "Minimum 2% on eligible Lenovo sales; Legion rates include 3% on PCs, 5% on gaming accessories, and 1% on outlet sales",
+    "website": "https://www.lenovo.com/",
+    "apply_url": "https://www.lenovo.com/us/en/affiliate-program/resources/",
+    "source_url": "https://www.lenovo.com/us/en/affiliate-program/resources/"
+  },
+  {
+    "brand_name": "Shopify",
+    "brand_size": "large",
+    "category": "Software / Ecommerce / Creator Tools",
     "commission": "Not publicly listed",
-    "website": "https://www.instant-gaming.com/",
-    "apply_url": "https://www.instant-gaming.com/en/support/",
-    "source_url": "https://www.instant-gaming.com/en/support/"
+    "website": "https://www.shopify.com/",
+    "apply_url": "https://www.shopify.com/affiliates",
+    "source_url": "https://help.shopify.com/en/affiliates/about"
+  },
+  {
+    "brand_name": "Squarespace",
+    "brand_size": "large",
+    "category": "Software / Website Builder / Creator Tools",
+    "commission": "Not publicly listed",
+    "website": "https://www.squarespace.com/",
+    "apply_url": "https://www.squarespace.com/affiliates",
+    "source_url": "https://support.squarespace.com/hc/en-us/articles/4424080134413-Squarespace-Affiliate-Program-vs-Squarespace-Circle-referral-payments"
+  },
+  {
+    "brand_name": "Tarte Cosmetics",
+    "brand_size": "large",
+    "category": "Beauty / Makeup / Skincare",
+    "commission": "Not publicly listed",
+    "website": "https://tartecosmetics.com/",
+    "apply_url": "https://shopmy.us/signup?autoSubmitCode=true&smscode=TARTE-2026",
+    "source_url": "https://tartecosmetics.com/pages/affiliates"
+  },
+  {
+    "brand_name": "Glossier",
+    "brand_size": "large",
+    "category": "Beauty / Skincare / Makeup / Fragrance",
+    "commission": "Not publicly listed",
+    "website": "https://www.glossier.com/",
+    "apply_url": "https://www.glossier.com/pages/affiliates",
+    "source_url": "https://www.glossier.com/en-gp/pages/affiliates-terms"
+  },
+  {
+    "brand_name": "Secretlab",
+    "brand_size": "mid-size",
+    "category": "Gaming / PC Gear / Gaming Furniture",
+    "commission": "Up to 12% per sale",
+    "website": "https://secretlab.co/",
+    "apply_url": "https://secretlab.co/pages/affiliates",
+    "source_url": "https://secretlab.co/pages/affiliates"
+  },
+  {
+    "brand_name": "Keychron",
+    "brand_size": "mid-size",
+    "category": "Gaming / Consumer Tech / Keyboards & Mice",
+    "commission": "Not publicly listed",
+    "website": "https://www.keychron.com/",
+    "apply_url": "https://affiliate.keychron.com/",
+    "source_url": "https://www.keychron.com/pages/contact-us"
+  },
+  {
+    "brand_name": "Later",
+    "brand_size": "mid-size",
+    "category": "Software / Social Media / Creator Tools",
+    "commission": "Not publicly listed",
+    "website": "https://later.com/",
+    "apply_url": "https://later.com/partners/",
+    "source_url": "https://later.com/partners/"
+  },
+  {
+    "brand_name": "Thinkific",
+    "brand_size": "mid-size",
+    "category": "Software / Courses / Creator Tools",
+    "commission": "30% lifetime recurring on standard paid plans; Plus plans pay $150 recurring per month",
+    "website": "https://www.thinkific.com/",
+    "apply_url": "https://www.thinkific.com/affiliates/",
+    "source_url": "https://www.thinkific.com/affiliates/"
+  },
+  {
+    "brand_name": "Kajabi",
+    "brand_size": "mid-size",
+    "category": "Software / Courses / Creator Business",
+    "commission": "30% lifetime commission for each activated referral",
+    "website": "https://kajabi.com/",
+    "apply_url": "https://partners.kajabi.com/",
+    "source_url": "https://partners.kajabi.com/"
+  },
+  {
+    "brand_name": "Splice",
+    "brand_size": "mid-size",
+    "category": "Music / Creator Tools / Music Production",
+    "commission": "Not publicly listed",
+    "website": "https://splice.com/",
+    "apply_url": "https://splice.com/affiliates",
+    "source_url": "https://splice.com/affiliates"
+  },
+  {
+    "brand_name": "DistroKid",
+    "brand_size": "mid-size",
+    "category": "Music / Creator Tools / Music Distribution",
+    "commission": "Not publicly listed",
+    "website": "https://distrokid.com/",
+    "apply_url": "https://app.impact.com/campaign-campaign-info-v2/DistroKid.brand",
+    "source_url": "https://support.distrokid.com/hc/en-us/articles/50266142300307-How-to-Become-an-Affiliate-or-Influencer-with-DistroKid"
+  },
+  {
+    "brand_name": "ButcherBox",
+    "brand_size": "mid-size",
+    "category": "Food & Drinks / Meat & Meal Delivery",
+    "commission": "Not publicly listed",
+    "website": "https://www.butcherbox.com/",
+    "apply_url": "https://app.impact.com/campaign-promo-signup/ButcherBox.brand?execution=e2s1",
+    "source_url": "https://www.butcherbox.com/pages/affiliate-program"
+  },
+  {
+    "brand_name": "beehiiv",
+    "brand_size": "emerging",
+    "category": "Software / Newsletter / Creator Tools",
+    "commission": "Up to 60% of referral revenue for 12 months",
+    "website": "https://www.beehiiv.com/",
+    "apply_url": "https://www.beehiiv.com/partners/affiliate",
+    "source_url": "https://www.beehiiv.com/partners"
+  },
+  {
+    "brand_name": "Spocket",
+    "brand_size": "emerging",
+    "category": "Software / Ecommerce / Dropshipping",
+    "commission": "Up to 50% commission",
+    "website": "https://www.spocket.co/",
+    "apply_url": "https://www.spocket.co/affiliates",
+    "source_url": "https://www.spocket.co/affiliates"
+  },
+  {
+    "brand_name": "LANDR",
+    "brand_size": "emerging",
+    "category": "Music / Creator Tools / Music Production",
+    "commission": "$15 per successful referral",
+    "website": "https://www.landr.com/",
+    "apply_url": "https://www.landr.com/referral-program",
+    "source_url": "https://www.landr.com/referral-program"
+  },
+  {
+    "brand_name": "Plugin Boutique",
+    "brand_size": "emerging",
+    "category": "Music / Creator Tools / Audio Plugins",
+    "commission": "Not publicly listed",
+    "website": "https://www.pluginboutique.com/",
+    "apply_url": "https://loopmasters.postaffiliatepro.com/affiliates/signup.php",
+    "source_url": "https://help.pluginboutique.com/hc/en-us/articles/6232502500756-Do-you-have-an-affiliate-program"
+  },
+  {
+    "brand_name": "StreamYard",
+    "brand_size": "emerging",
+    "category": "Streaming / Software / Creator Tools",
+    "commission": "25% recurring commission on subscriptions sold",
+    "website": "https://streamyard.com/",
+    "apply_url": "https://partners.streamyard.com/",
+    "source_url": "https://partners.streamyard.com/"
+  },
+  {
+    "brand_name": "Pictory",
+    "brand_size": "emerging",
+    "category": "AI / Video / Creator Tools",
+    "commission": "40% one-time commission on the referral's first payment",
+    "website": "https://pictory.ai/",
+    "apply_url": "https://partners.pictory.ai/signup/40690",
+    "source_url": "https://partners.pictory.ai/signup/40690"
+  },
+  {
+    "brand_name": "InVideo",
+    "brand_size": "emerging",
+    "category": "AI / Video / Creator Tools",
+    "commission": "50% on monthly plans and 25% on annual plans for the first billing cycle",
+    "website": "https://invideo.io/",
+    "apply_url": "https://invideo.io/make/affiliate-program/",
+    "source_url": "https://help.invideo.io/en/articles/9673802-is-there-a-referral-program-or-affiliate-rewards"
   }
 ]
