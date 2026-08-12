@@ -12,6 +12,10 @@ GENRE_KEYWORDS = {
         "call of duty", "warzone", "gta", "pokemon", "nintendo", "xbox", "playstation",
         "steam", "esports", "speedrun",
     },
+    "Streaming": {
+        "streamer", "streaming", "livestream", "live stream", "twitch", "kick stream",
+        "youtube live", "stream highlights", "stream highlights", "live reaction",
+    },
     "Tech": {
         "tech", "technology", "iphone", "android", "computer", "pc build", "laptop",
         "software", "ai", "artificial intelligence", "coding", "developer", "gadgets",
@@ -56,10 +60,11 @@ TAG_KEYWORDS = {
     "Family Friendly": {"family friendly", "family-friendly", "kid friendly", "kid-friendly"},
     "Challenges": {"challenge", "challenges"}, "Pranks": {"prank", "pranks"},
     "Comedy": {"comedy", "funny", "skit", "humor"}, "Reactions": {"reaction", "reacts", "reacting"},
+    "Streaming": {"streamer", "streaming", "livestream", "live stream", "twitch", "youtube live"},
     "Long Form": {"documentary", "episode", "full video", "long form", "long-form"},
     "Short Form": {"shorts", "short form", "short-form", "tiktok", "reels"},
     "Tech": {"tech", "technology", "software", "ai", "gadgets"},
-    "Lifestyle": {"lifestyle", "vlog", "day in my life"},
+    "Lifestyle": {"lifestyle", "vlog", "day in my life", "week in my life", "daily vlog"},
 }
 
 
