@@ -1,43 +1,5 @@
 [
   {
-    "brand_name": "Dubby",
-    "brand_domain": "dubby.gg",
-    "source_platform": "YouTube",
-    "creator_name": "EJCross",
-    "creator_url": "https://www.youtube.com/channel/UCJnIZ4anwBASGP-NIFykL0w",
-    "creator_channel_id": "UCJnIZ4anwBASGP-NIFykL0w",
-    "creator_subscribers": 144,
-    "creator_genre": "Sports",
-    "creator_tags": [
-      "Sports",
-      "Streaming",
-      "Short Form"
-    ],
-    "video_id": "UgFxcdQYBvU",
-    "video_url": "https://www.youtube.com/watch?v=UgFxcdQYBvU",
-    "video_title": "Day 17 Beating Every RL Bot (I LOST)  #rocketleague #rlchamp #gaming #rl",
-    "sponsored_date": "2026-08-12",
-    "evidence": "Paid promotion/ad disclosure with external sponsor link",
-    "paid_product_placement": true,
-    "brand_partner_channel_id": "",
-    "sponsor_category": "Software / SaaS",
-    "sponsor_subcategory": "Energy Drink",
-    "contact_name": "",
-    "contact_title": "",
-    "contact_email": "contact@dubby.gg",
-    "email_type": "General",
-    "contact_source": "https://www.dubby.gg/",
-    "lead_score": 73,
-    "lead_temperature": "Warm",
-    "sponsorship_key": "youtube:ugfxcdqybvu:dubby.gg",
-    "brand_key": "domain:dubby.gg",
-    "signals": [
-      "YouTube paid product placement",
-      "sponsor domain found"
-    ],
-    "date_found": "2026-08-12"
-  },
-  {
     "brand_name": "Akkogear",
     "brand_domain": "en.akkogear.com",
     "source_platform": "YouTube",
