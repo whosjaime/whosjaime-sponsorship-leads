@@ -109,6 +109,7 @@
   "brand:traverse",
   "brand:tubi",
   "brand:ugreen",
+  "brand:vidiq",
   "brand:wildone",
   "brand:wix",
   "domain:asus.com",
@@ -136,6 +137,7 @@
   "domain:rayconglobal.com",
   "domain:streamlabs.com",
   "domain:ugreen.com",
+  "domain:vidiq.com",
   "email:affiliate@ugreen.com",
   "email:bd@streamlabs.com",
   "email:business-support@factor75.com",
@@ -160,5 +162,6 @@
   "email:press@fanduel.com",
   "email:press@ixl.com",
   "email:support@doubleholo.com",
-  "email:support@instant-gaming.com"
+  "email:support@instant-gaming.com",
+  "email:support@vidiq.com"
 ]
