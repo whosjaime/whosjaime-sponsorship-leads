@@ -1,45 +1,5 @@
 [
   {
-    "brand_name": "Akkogear",
-    "brand_domain": "en.akkogear.com",
-    "source_platform": "YouTube",
-    "creator_name": "kiuuuu",
-    "creator_url": "https://www.youtube.com/channel/UC1-wmsVinqguyZ3ZFKNU7iw",
-    "creator_channel_id": "UC1-wmsVinqguyZ3ZFKNU7iw",
-    "creator_subscribers": 12500,
-    "creator_genre": "Fashion",
-    "creator_tags": [
-      "Fashion",
-      "Roblox",
-      "Short Form",
-      "Tech",
-      "Lifestyle"
-    ],
-    "video_id": "NRTNZxIH5_s",
-    "video_url": "https://www.youtube.com/watch?v=NRTNZxIH5_s",
-    "video_title": "my melody keyboard asmr 🎀 #shorts #aesthetic #keyboardasmr #unboxingasmr #asmr #fyp #explore",
-    "sponsored_date": "2026-08-12",
-    "evidence": "Paid promotion/ad disclosure with external sponsor link",
-    "paid_product_placement": true,
-    "brand_partner_channel_id": "",
-    "sponsor_category": "Software / SaaS",
-    "sponsor_subcategory": "Snacks",
-    "contact_name": "",
-    "contact_title": "",
-    "contact_email": "mktg@akkogear.com",
-    "email_type": "Public Business Contact",
-    "contact_source": "https://en.akkogear.com/press-kit/",
-    "lead_score": 73,
-    "lead_temperature": "Warm",
-    "sponsorship_key": "youtube:nrtnzxih5_s:en.akkogear.com",
-    "brand_key": "domain:en.akkogear.com",
-    "signals": [
-      "YouTube paid product placement",
-      "sponsor domain found"
-    ],
-    "date_found": "2026-08-12"
-  },
-  {
     "brand_name": "Yt",
     "brand_domain": "agentio.com",
     "source_platform": "YouTube",
