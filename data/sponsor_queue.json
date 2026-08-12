@@ -1,46 +1,5 @@
 [
   {
-    "brand_name": "Yt",
-    "brand_domain": "agentio.com",
-    "source_platform": "YouTube",
-    "creator_name": "Michelle Mana",
-    "creator_url": "https://www.youtube.com/channel/UC63RRlHYc5hAbffz1A3FCKg",
-    "creator_channel_id": "UC63RRlHYc5hAbffz1A3FCKg",
-    "creator_subscribers": 144000,
-    "creator_genre": "Entertainment",
-    "creator_tags": [
-      "Entertainment",
-      "Reactions",
-      "Streaming",
-      "Short Form",
-      "Tech",
-      "Lifestyle"
-    ],
-    "video_id": "BULJ8dsBDQI",
-    "video_url": "https://www.youtube.com/watch?v=BULJ8dsBDQI",
-    "video_title": "The Daddy & Daughter Dream Team Gets WAY More Disturbing…",
-    "sponsored_date": "2026-08-11",
-    "evidence": "Paid promotion/ad disclosure with external sponsor link",
-    "paid_product_placement": true,
-    "brand_partner_channel_id": "",
-    "sponsor_category": "Software / SaaS",
-    "sponsor_subcategory": "AI / Productivity",
-    "contact_name": "",
-    "contact_title": "",
-    "contact_email": "creators@agentio.com",
-    "email_type": "Creator Partnerships",
-    "contact_source": "https://www.agentio.com:443/creators",
-    "lead_score": 73,
-    "lead_temperature": "Warm",
-    "sponsorship_key": "youtube:bulj8dsbdqi:agentio.com",
-    "brand_key": "domain:agentio.com",
-    "signals": [
-      "YouTube paid product placement",
-      "sponsor domain found"
-    ],
-    "date_found": "2026-08-12"
-  },
-  {
     "brand_name": "Shopmy",
     "brand_domain": "shopmy.us",
     "source_platform": "YouTube",
