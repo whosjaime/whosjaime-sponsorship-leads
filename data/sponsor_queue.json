@@ -1,44 +1,5 @@
 [
   {
-    "brand_name": "Bear Mattress",
-    "brand_domain": "bearmattress.com",
-    "source_platform": "YouTube",
-    "creator_name": "David Lombardi",
-    "creator_url": "https://www.youtube.com/channel/UCkDZB2Cy0KiJmvoC-PTfM2A",
-    "creator_channel_id": "UCkDZB2Cy0KiJmvoC-PTfM2A",
-    "creator_subscribers": 105000,
-    "creator_genre": "Sports",
-    "creator_tags": [
-      "Sports",
-      "Reactions",
-      "Short Form"
-    ],
-    "video_id": "rkxGjXyC9TM",
-    "video_url": "https://www.youtube.com/watch?v=rkxGjXyC9TM",
-    "video_title": "49ers vs Titans FIGHT REACTION: No chill and Brock Purdy DOMINANCE...",
-    "sponsored_date": "2026-08-11",
-    "evidence": "Thank you to Bear Mattress for sponsoring",
-    "paid_product_placement": true,
-    "brand_partner_channel_id": "",
-    "sponsor_category": "Software / SaaS",
-    "sponsor_subcategory": "Web Hosting",
-    "contact_name": "",
-    "contact_title": "",
-    "contact_email": "partnerships@bearmattress.com",
-    "email_type": "Partnerships",
-    "contact_source": "https://www.bearmattress.com/pages/contact",
-    "lead_score": 100,
-    "lead_temperature": "Very Hot",
-    "sponsorship_key": "youtube:rkxgjxyc9tm:bearmattress.com",
-    "brand_key": "domain:bearmattress.com",
-    "signals": [
-      "explicit sponsor phrase",
-      "YouTube paid product placement",
-      "sponsor domain found"
-    ],
-    "date_found": "2026-08-12"
-  },
-  {
     "brand_name": "Prizepicks",
     "brand_domain": "prizepicks.com",
     "source_platform": "YouTube",
