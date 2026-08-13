@@ -1,43 +1,5 @@
 [
   {
-    "brand_name": "FFRF",
-    "brand_domain": "ffrf.org",
-    "source_platform": "YouTube",
-    "creator_name": "Don Lemon",
-    "creator_url": "https://www.youtube.com/channel/UCXs0PlIGUDSXfBaF7j-1euA",
-    "creator_channel_id": "UCXs0PlIGUDSXfBaF7j-1euA",
-    "creator_subscribers": 1430000,
-    "creator_genre": "Entertainment",
-    "creator_tags": [
-      "Entertainment",
-      "Long Form"
-    ],
-    "video_id": "G6DsWwJo3T8",
-    "video_url": "https://www.youtube.com/watch?v=G6DsWwJo3T8",
-    "video_title": "Lemon LIVE at 5 | BREAKING: Nolan Wells' Family Demands Federal Investigation",
-    "sponsored_date": "2026-08-13",
-    "evidence": "This episode is sponsored by FFRF",
-    "paid_product_placement": true,
-    "brand_partner_channel_id": "",
-    "sponsor_category": "Software / SaaS",
-    "sponsor_subcategory": "Audio Gear",
-    "contact_name": "",
-    "contact_title": "",
-    "contact_email": "info@ffrf.org",
-    "email_type": "General",
-    "contact_source": "https://ffrf.org/about/freedom-from-religion-foundation-privacy-statement/",
-    "lead_score": 100,
-    "lead_temperature": "Very Hot",
-    "sponsorship_key": "youtube:g6dswwjo3t8:ffrf.org",
-    "brand_key": "domain:ffrf.org",
-    "signals": [
-      "explicit sponsor phrase",
-      "YouTube paid product placement",
-      "sponsor domain found"
-    ],
-    "date_found": "2026-08-13"
-  },
-  {
     "brand_name": "FlexiSpot",
     "brand_domain": "flexispot.com",
     "source_platform": "YouTube",
