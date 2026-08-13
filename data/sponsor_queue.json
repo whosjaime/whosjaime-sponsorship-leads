@@ -1,44 +1,5 @@
 [
   {
-    "brand_name": "Teenage",
-    "brand_domain": "teenage.engineering",
-    "source_platform": "YouTube",
-    "creator_name": "TAETRO",
-    "creator_url": "https://www.youtube.com/channel/UCNRFvq0JOm5VqHIBDDQgkMA",
-    "creator_channel_id": "UCNRFvq0JOm5VqHIBDDQgkMA",
-    "creator_subscribers": 406000,
-    "creator_genre": "Music",
-    "creator_tags": [
-      "Music",
-      "Streaming",
-      "Tech",
-      "Lifestyle"
-    ],
-    "video_id": "T-ujnVY9TYI",
-    "video_url": "https://www.youtube.com/watch?v=T-ujnVY9TYI",
-    "video_title": "This Cheap Little Synth Is Actually Really Good",
-    "sponsored_date": "2026-08-12",
-    "evidence": "Paid promotion/ad disclosure with external sponsor link",
-    "paid_product_placement": true,
-    "brand_partner_channel_id": "",
-    "sponsor_category": "Consumer Tech",
-    "sponsor_subcategory": "Audio Gear",
-    "contact_name": "",
-    "contact_title": "",
-    "contact_email": "press@teenage.engineering",
-    "email_type": "Press",
-    "contact_source": "https://teenage.engineering/press",
-    "lead_score": 73,
-    "lead_temperature": "Warm",
-    "sponsorship_key": "youtube:t-ujnvy9tyi:teenage.engineering",
-    "brand_key": "domain:teenage.engineering",
-    "signals": [
-      "YouTube paid product placement",
-      "sponsor domain found"
-    ],
-    "date_found": "2026-08-12"
-  },
-  {
     "brand_name": "Liberlive",
     "brand_domain": "liberlive.com",
     "source_platform": "YouTube",
