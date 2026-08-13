@@ -1,0 +1,59 @@
+name: Manual Monday Sponsor Bulk
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - ".github/monday-bulk-trigger"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sponsor-lead-queue
+  cancel-in-progress: false
+
+jobs:
+  monday-only-bulk:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install -r requirements.txt
+      - name: Send current sponsor queue to Monday only
+        env:
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+          SPONSOR_MONDAY_TOKEN: ${{ secrets.SPONSOR_MONDAY_TOKEN }}
+          SPONSOR_MONDAY_API_KEY: ${{ secrets.SPONSOR_MONDAY_API_KEY }}
+          DISCORD_WEBHOOK_URL: https://example.invalid/disabled
+          SPONSOR_MONDAY_BOARD_ID: ${{ vars.SPONSOR_MONDAY_BOARD_ID || '18424367188' }}
+          SPONSOR_MONDAY_GROUP_ID: ${{ vars.SPONSOR_MONDAY_GROUP_ID || 'topics' }}
+          SPONSOR_MIN_LEAD_SCORE: ${{ vars.SPONSOR_MIN_LEAD_SCORE || '70' }}
+          SPONSOR_MAX_AGE_DAYS: ${{ vars.SPONSOR_MAX_AGE_DAYS || '30' }}
+        shell: bash
+        run: |
+          for i in $(seq 1 24); do
+            if [ ! -s data/sponsor_queue.json ] || [ "$(cat data/sponsor_queue.json)" = "[]" ]; then
+              break
+            fi
+            python src/run_sponsor_queue_dispatch.py || true
+          done
+      - name: Persist queue and sent ledger
+        if: always()
+        run: |
+          if git diff --quiet -- data/sponsor_queue.json data/sent_sponsor_keys.json; then
+            echo "No sponsor state changes."
+            exit 0
+          fi
+          git config user.name "sponsor-queue-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/sponsor_queue.json data/sent_sponsor_keys.json
+          git commit -m "Manual Monday sponsor bulk [skip ci]"
+          git pull --rebase origin main
+          git push origin HEAD:main
