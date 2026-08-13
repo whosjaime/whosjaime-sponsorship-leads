@@ -125,6 +125,23 @@ CATEGORY_RULES = {
         "live event", "event production", "venue",
     },
 }
+
+# These verticals commonly describe themselves as a "platform", "app", or set of
+# "tools". Those generic words must never be enough to relabel the underlying business
+# as SaaS/tech. They intentionally remain outside the automatic sponsor target set.
+VERTICAL_OVERRIDES = {
+    "Real Estate / Property": {
+        "real estate", "real-estate", "property listing", "property listings",
+        "property search", "buy property", "buy a home", "buy a house", "home buying",
+        "home buyer", "homebuyer", "real estate agent", "licensed agents", "brokerage",
+        "property manager", "property managers", "mortgage broker",
+    },
+    "Agriculture / Farming": {
+        "agriculture", "agricultural", "farming", "farmers", "agritech", "agri-tech",
+        "farm management", "agricultural marketplace", "crop management",
+    },
+}
+
 SUBCATEGORY_RULES = {
     "VPN": {"vpn", "virtual private network"},
     "Cybersecurity": {"cybersecurity", "online security", "antivirus", "malware"},
@@ -219,6 +236,12 @@ class BrandEnricher:
     @staticmethod
     def _classify(text: str) -> tuple[str, str]:
         lowered = f" {text.lower()} "
+
+        # Vertical identity beats generic implementation words such as platform/app.
+        for category, keywords in VERTICAL_OVERRIDES.items():
+            if any(keyword in lowered for keyword in keywords):
+                return category, ""
+
         scores = {k: sum(1 for word in v if word in lowered) for k, v in CATEGORY_RULES.items()}
         category = max(scores, key=scores.get) if scores and max(scores.values()) else "Other"
         subs = {k: sum(1 for word in v if word in lowered) for k, v in SUBCATEGORY_RULES.items()}
