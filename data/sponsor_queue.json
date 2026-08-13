@@ -1,44 +1,5 @@
 [
   {
-    "brand_name": "Neural4D",
-    "brand_domain": "neural4d.com",
-    "source_platform": "YouTube",
-    "creator_name": "MrPrints",
-    "creator_url": "https://www.youtube.com/channel/UChPQaib1VqsjhtATLZMspyg",
-    "creator_channel_id": "UChPQaib1VqsjhtATLZMspyg",
-    "creator_subscribers": 67100,
-    "creator_genre": "Home",
-    "creator_tags": [
-      "Home",
-      "Short Form",
-      "Tech",
-      "Lifestyle"
-    ],
-    "video_id": "PMU5m2gD9gA",
-    "video_url": "https://www.youtube.com/watch?v=PMU5m2gD9gA",
-    "video_title": "3 MUST SEE Pokeballs! #3dprinting #N4D #neural4d",
-    "sponsored_date": "2026-08-12",
-    "evidence": "Paid promotion/ad disclosure with external sponsor link",
-    "paid_product_placement": true,
-    "brand_partner_channel_id": "",
-    "sponsor_category": "Software / SaaS",
-    "sponsor_subcategory": "AI / Productivity",
-    "contact_name": "",
-    "contact_title": "",
-    "contact_email": "support@neural4d.com",
-    "email_type": "Support",
-    "contact_source": "https://www.neural4d.com/home",
-    "lead_score": 73,
-    "lead_temperature": "Warm",
-    "sponsorship_key": "youtube:pmu5m2gd9ga:neural4d.com",
-    "brand_key": "domain:neural4d.com",
-    "signals": [
-      "YouTube paid product placement",
-      "sponsor domain found"
-    ],
-    "date_found": "2026-08-12"
-  },
-  {
     "brand_name": "Teenage",
     "brand_domain": "teenage.engineering",
     "source_platform": "YouTube",
