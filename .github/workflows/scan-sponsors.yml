@@ -1,6 +1,5 @@
 name: Hourly Sponsor Queue Dispatch
 
-# Manual catch-up pulse 2 of 3.
 on:
   schedule:
     - cron: "0 * * * *"
@@ -10,7 +9,6 @@ on:
       - main
     paths:
       - ".github/sponsor-dispatch-trigger"
-      - ".github/workflows/scan-sponsors.yml"
 
 permissions:
   contents: write
