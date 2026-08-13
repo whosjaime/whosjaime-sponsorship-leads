@@ -9,7 +9,6 @@ on:
       - main
     paths:
       - ".github/sponsor-dispatch-trigger"
-      - ".github/sponsor-batch-trigger"
 
 permissions:
   contents: write
