@@ -1,47 +1,5 @@
 [
   {
-    "brand_name": "Creativecommons",
-    "brand_domain": "creativecommons.org",
-    "source_platform": "YouTube",
-    "creator_name": "Reel Rejects",
-    "creator_url": "https://www.youtube.com/channel/UC7_WiJnJxpm4MRNesRttzWg",
-    "creator_channel_id": "UC7_WiJnJxpm4MRNesRttzWg",
-    "creator_subscribers": 1480000,
-    "creator_genre": "Entertainment",
-    "creator_tags": [
-      "Entertainment",
-      "Challenges",
-      "Pranks",
-      "Comedy",
-      "Reactions",
-      "Streaming",
-      "Short Form"
-    ],
-    "video_id": "fw94DYIof_A",
-    "video_url": "https://www.youtube.com/watch?v=fw94DYIof_A",
-    "video_title": "JACKASS: BEST AND LAST MOVIE REACTION – DISGUSTING, DANGEROUS & HILARIOUS! - REVIEW",
-    "sponsored_date": "2026-08-12",
-    "evidence": "Paid promotion/ad disclosure with external sponsor link",
-    "paid_product_placement": true,
-    "brand_partner_channel_id": "",
-    "sponsor_category": "Software / SaaS",
-    "sponsor_subcategory": "AI / Productivity",
-    "contact_name": "",
-    "contact_title": "",
-    "contact_email": "catharina@creativecommons.org",
-    "email_type": "Partnership Page Contact",
-    "contact_source": "https://creativecommons.org/2009/04/15/creators-celebrate-local-creative-commons-licenses-in-the-czech-republic/",
-    "lead_score": 73,
-    "lead_temperature": "Warm",
-    "sponsorship_key": "youtube:fw94dyiof_a:creativecommons.org",
-    "brand_key": "domain:creativecommons.org",
-    "signals": [
-      "YouTube paid product placement",
-      "sponsor domain found"
-    ],
-    "date_found": "2026-08-12"
-  },
-  {
     "brand_name": "Neural4D",
     "brand_domain": "neural4d.com",
     "source_platform": "YouTube",
