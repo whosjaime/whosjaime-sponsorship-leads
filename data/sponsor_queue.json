@@ -1,42 +1,5 @@
 [
   {
-    "brand_name": "Genspark",
-    "brand_domain": "genspark.ai",
-    "source_platform": "YouTube",
-    "creator_name": "Make Money Matt",
-    "creator_url": "https://www.youtube.com/channel/UCcNrmSXswsMJzuaSQknziTw",
-    "creator_channel_id": "UCcNrmSXswsMJzuaSQknziTw",
-    "creator_subscribers": 961000,
-    "creator_genre": "Tech",
-    "creator_tags": [
-      "Tech",
-      "Lifestyle"
-    ],
-    "video_id": "xjS2mrfCv6Y",
-    "video_url": "https://www.youtube.com/watch?v=xjS2mrfCv6Y",
-    "video_title": "0 Subscribers + Genspark = Monetized YouTube Channel",
-    "sponsored_date": "2026-08-12",
-    "evidence": "Paid promotion/ad disclosure with external sponsor link",
-    "paid_product_placement": true,
-    "brand_partner_channel_id": "",
-    "sponsor_category": "Software / SaaS",
-    "sponsor_subcategory": "AI / Productivity",
-    "contact_name": "",
-    "contact_title": "",
-    "contact_email": "enterprise@genspark.ai",
-    "email_type": "Public Business Contact",
-    "contact_source": "https://www.genspark.ai/helpcenter",
-    "lead_score": 73,
-    "lead_temperature": "Warm",
-    "sponsorship_key": "youtube:xjs2mrfcv6y:genspark.ai",
-    "brand_key": "domain:genspark.ai",
-    "signals": [
-      "YouTube paid product placement",
-      "sponsor domain found"
-    ],
-    "date_found": "2026-08-12"
-  },
-  {
     "brand_name": "Shopmy",
     "brand_domain": "shopmy.us",
     "source_platform": "YouTube",
