@@ -1,43 +1,5 @@
 [
   {
-    "brand_name": "Liberlive",
-    "brand_domain": "liberlive.com",
-    "source_platform": "YouTube",
-    "creator_name": "Cowboy Biker Adventures",
-    "creator_url": "https://www.youtube.com/channel/UCGh8x14FOk8vyiaN3hB2MWg",
-    "creator_channel_id": "UCGh8x14FOk8vyiaN3hB2MWg",
-    "creator_subscribers": 13400,
-    "creator_genre": "Entertainment",
-    "creator_tags": [
-      "Entertainment",
-      "Tech",
-      "Lifestyle"
-    ],
-    "video_id": "8uxnGNSrz2o",
-    "video_url": "https://www.youtube.com/watch?v=8uxnGNSrz2o",
-    "video_title": "Week 1: LiberLive C-1 Guitar FREE Giveaway August 12, 2026 to August 17, 2026",
-    "sponsored_date": "2026-08-13",
-    "evidence": "Paid promotion/ad disclosure with external sponsor link",
-    "paid_product_placement": true,
-    "brand_partner_channel_id": "",
-    "sponsor_category": "Software / SaaS",
-    "sponsor_subcategory": "Computer Hardware",
-    "contact_name": "",
-    "contact_title": "",
-    "contact_email": "marketing@liberlive.com",
-    "email_type": "Marketing",
-    "contact_source": "https://liberlive.com/",
-    "lead_score": 73,
-    "lead_temperature": "Warm",
-    "sponsorship_key": "youtube:8uxngnsrz2o:liberlive.com",
-    "brand_key": "domain:liberlive.com",
-    "signals": [
-      "YouTube paid product placement",
-      "sponsor domain found"
-    ],
-    "date_found": "2026-08-13"
-  },
-  {
     "brand_name": "Genspark",
     "brand_domain": "genspark.ai",
     "source_platform": "YouTube",
