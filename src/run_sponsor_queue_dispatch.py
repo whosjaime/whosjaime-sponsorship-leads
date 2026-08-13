@@ -17,7 +17,31 @@ from sponsor_queue import (
 from youtube_sponsor_scanner import YouTubeSponsorScanner
 
 
+RELIGION_BLOCK_TERMS = (
+    "religion", "religious", "ffrf", "freedom from religion",
+    "church", "ministry", "ministries", "bible", "biblical",
+    "christian", "christianity", "catholic", "evangelical",
+    "islamic", "muslim", "mosque", "jewish", "judaism", "synagogue",
+    "atheist", "atheism", "mormon", "latter-day saints", "scientology",
+)
+
+
+def _is_religion_sponsor(lead) -> bool:
+    text = " ".join(
+        [
+            lead.brand_name or "",
+            lead.brand_domain or "",
+            lead.sponsor_category or "",
+            lead.sponsor_subcategory or "",
+            lead.evidence or "",
+        ]
+    ).lower()
+    return any(term in text for term in RELIGION_BLOCK_TERMS)
+
+
 def _is_dispatch_target_lead(lead) -> bool:
+    if _is_religion_sponsor(lead):
+        return False
     return _is_target_lead(lead) or _is_beauty_lead(lead) or _is_music_lead(lead)
 
 
@@ -37,6 +61,12 @@ def run() -> None:
     while queue:
         lead = queue.pop(0)
 
+        # Final policy gate: never deliver religion or anti-religion advocacy sponsors.
+        if _is_religion_sponsor(lead):
+            skipped += 1
+            print(f"Religion-policy sponsor skipped before delivery: {lead.brand_name}")
+            continue
+
         # GitHub is the duplicate source of truth. This runs before YouTube hydration,
         # Monday API calls, or Discord so duplicate brands cost nothing and never post.
         if is_duplicate(lead, duplicate_keys):
@@ -47,6 +77,10 @@ def run() -> None:
         _hydrate_creator_metrics([lead], youtube)
 
         # Hydration/enrichment can reveal stronger identity data, so check GitHub again.
+        if _is_religion_sponsor(lead):
+            skipped += 1
+            print(f"Religion-policy sponsor skipped after hydration: {lead.brand_name}")
+            continue
         if is_duplicate(lead, duplicate_keys):
             skipped += 1
             print(f"GitHub duplicate skipped after creator hydration: {lead.brand_name}")
