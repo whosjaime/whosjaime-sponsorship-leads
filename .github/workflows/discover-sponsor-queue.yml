@@ -2,14 +2,7 @@ name: Sponsor Queue Top-Up
 
 on:
   schedule:
-    - cron: "15 4 * * *"
-      timezone: "America/Toronto"
-    - cron: "15 10 * * *"
-      timezone: "America/Toronto"
-    - cron: "15 16 * * *"
-      timezone: "America/Toronto"
-    - cron: "15 22 * * *"
-      timezone: "America/Toronto"
+    - cron: "15 * * * *"
   workflow_dispatch:
   push:
     branches:
