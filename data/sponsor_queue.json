@@ -1,42 +1,5 @@
 [
   {
-    "brand_name": "Vinyl",
-    "brand_domain": "vinyl.com",
-    "source_platform": "YouTube",
-    "creator_name": "Musically Malnourished",
-    "creator_url": "https://www.youtube.com/channel/UCnKQPmWAvmfGosDzbe_XbuA",
-    "creator_channel_id": "UCnKQPmWAvmfGosDzbe_XbuA",
-    "creator_subscribers": 30500,
-    "creator_genre": "Music",
-    "creator_tags": [
-      "Music",
-      "Reactions"
-    ],
-    "video_id": "qNqSjZKgcGg",
-    "video_url": "https://www.youtube.com/watch?v=qNqSjZKgcGg",
-    "video_title": "Lauryn Hill: The Miseducation of Lauryn Hill | Full Album Reaction (First Time Listening)",
-    "sponsored_date": "2026-08-12",
-    "evidence": "Paid promotion/ad disclosure with external sponsor link",
-    "paid_product_placement": true,
-    "brand_partner_channel_id": "",
-    "sponsor_category": "Software / SaaS",
-    "sponsor_subcategory": "Computer Hardware",
-    "contact_name": "",
-    "contact_title": "",
-    "contact_email": "support@vinyl.com",
-    "email_type": "Support",
-    "contact_source": "https://vinyl.com/",
-    "lead_score": 73,
-    "lead_temperature": "Warm",
-    "sponsorship_key": "youtube:qnqsjzkgcgg:vinyl.com",
-    "brand_key": "domain:vinyl.com",
-    "signals": [
-      "YouTube paid product placement",
-      "sponsor domain found"
-    ],
-    "date_found": "2026-08-13"
-  },
-  {
     "brand_name": "Kindafunny",
     "brand_domain": "kindafunny.com",
     "source_platform": "YouTube",

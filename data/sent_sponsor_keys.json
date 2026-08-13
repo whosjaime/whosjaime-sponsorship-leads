@@ -124,6 +124,7 @@
   "brand:tubi",
   "brand:ugreen",
   "brand:vidiq",
+  "brand:vinyl",
   "brand:wildone",
   "brand:wix",
   "brand:yt",
@@ -169,6 +170,7 @@
   "domain:tp-link.com",
   "domain:ugreen.com",
   "domain:vidiq.com",
+  "domain:vinyl.com",
   "email:affiliate@ugreen.com",
   "email:affiliates@semrush.com",
   "email:bd@streamlabs.com",
@@ -209,5 +211,6 @@
   "email:support@gologin.com",
   "email:support@instant-gaming.com",
   "email:support@neural4d.com",
-  "email:support@vidiq.com"
+  "email:support@vidiq.com",
+  "email:support@vinyl.com"
 ]
