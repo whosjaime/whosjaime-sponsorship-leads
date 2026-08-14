@@ -85,14 +85,14 @@ class SponsorScannerTests(unittest.TestCase):
             )
             self.assertFalse(_is_target_lead(lead), f"{category} / {subcategory}")
 
-    def test_physical_hardware_can_survive_bad_saas_classification(self):
+    def test_digital_category_is_rejected_even_if_subcategory_looks_like_hardware(self):
         lead = SimpleNamespace(
             sponsor_category="Software / SaaS",
-            brand_name="Hardware Brand",
-            brand_domain="hardwarebrand.com",
+            brand_name="Misclassified Software Brand",
+            brand_domain="softwarebrand.com",
             sponsor_subcategory="Computer Hardware",
         )
-        self.assertTrue(_is_target_lead(lead))
+        self.assertFalse(_is_target_lead(lead))
 
     def test_festival_is_rejected_even_if_other_text_looks_good(self):
         festival = SimpleNamespace(

@@ -130,15 +130,16 @@ def _is_physical_tech_product(lead: SponsorLead) -> bool:
 
 
 def _is_target_lead(lead: SponsorLead) -> bool:
-    """Allow Gaming, Food/Drink, and physical tech products; reject digital-tech services."""
+    """Allow Gaming, Food/Drink, and physical tech products; reject all digital-tech services."""
     text = _target_text(lead)
     if any(keyword in text for keyword in EXCLUDED_SPONSOR_KEYWORDS):
         return False
 
-    # Digital tech is blocked unless the enriched metadata clearly identifies an
-    # actual physical product/hardware sponsor. This preserves hardware companies that
-    # were misclassified while excluding SaaS, coding, AI, VPN, and cybersecurity leads.
-    if lead.sponsor_category in DIGITAL_TECH_CATEGORIES and not _is_physical_tech_product(lead):
+    # Hard policy: digital-tech categories never enter the automatic queue. We prefer
+    # missing an occasional misclassified hardware company over sending SaaS/AI/VPN
+    # filler. Real product companies should classify as Consumer Tech or match a
+    # physical-product keyword outside these digital categories.
+    if lead.sponsor_category in DIGITAL_TECH_CATEGORIES:
         return False
 
     if lead.sponsor_category in TARGET_SPONSOR_CATEGORIES:
