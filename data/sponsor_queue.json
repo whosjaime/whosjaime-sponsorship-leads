@@ -1,1 +1,75 @@
-[]
+[
+  {
+    "brand_name": "Jdtheot",
+    "brand_domain": "jdtheot.com",
+    "source_platform": "YouTube",
+    "creator_name": "JD The OT Product Reviews",
+    "creator_url": "https://www.youtube.com/channel/UCzJ3x4HxVmFjSzMghGmyqDg",
+    "creator_channel_id": "UCzJ3x4HxVmFjSzMghGmyqDg",
+    "creator_subscribers": 342,
+    "creator_genre": "Tech",
+    "creator_tags": [
+      "Streaming",
+      "Tech",
+      "Lifestyle"
+    ],
+    "video_id": "RCzFJTdummg",
+    "video_url": "https://www.youtube.com/watch?v=RCzFJTdummg",
+    "video_title": "This MAONO P2 Has 48V Phantom Power Built In #MAONOP2 #podcastequipment #homestudio",
+    "sponsored_date": "2026-08-10",
+    "evidence": "Paid promotion/ad disclosure with external sponsor link",
+    "paid_product_placement": true,
+    "brand_partner_channel_id": "",
+    "sponsor_category": "Health & Wellness",
+    "sponsor_subcategory": "Audio Gear",
+    "contact_name": "",
+    "contact_title": "",
+    "contact_email": "info@jdtheot.com",
+    "email_type": "General",
+    "contact_source": "https://jdtheot.com/",
+    "lead_score": 85,
+    "lead_temperature": "Hot",
+    "sponsorship_key": "youtube:rczfjtdummg:jdtheot.com",
+    "brand_key": "domain:jdtheot.com",
+    "signals": [
+      "ad/sponsored disclosure",
+      "YouTube paid product placement",
+      "sponsor domain found"
+    ],
+    "date_found": "2026-08-14"
+  },
+  {
+    "brand_name": "WOLFBOX",
+    "brand_domain": "wolfbox.com",
+    "source_platform": "YouTube",
+    "creator_name": "TechLinked",
+    "creator_url": "https://www.youtube.com/channel/UCeeFfhMcJa1kjtfZAGskOCA",
+    "creator_channel_id": "UCeeFfhMcJa1kjtfZAGskOCA",
+    "creator_subscribers": 1980000,
+    "creator_genre": "",
+    "creator_tags": [],
+    "video_id": "_BTCppk-kao",
+    "video_url": "https://www.youtube.com/watch?v=_BTCppk-kao",
+    "video_title": "Linus' Hot Take",
+    "sponsored_date": "2026-07-18",
+    "evidence": "TechLinked's YouTube description promotes the WOLFBOX HyperFlow 60D with a dedicated creator promo code during the sponsored segment.",
+    "paid_product_placement": true,
+    "brand_partner_channel_id": "",
+    "sponsor_category": "Consumer Tech",
+    "sponsor_subcategory": "Gaming Gear",
+    "contact_name": "",
+    "contact_title": "",
+    "contact_email": "branding@wolfbox.com",
+    "email_type": "Public work email",
+    "contact_source": "https://wolfbox.com/pages/contact-us",
+    "lead_score": 100,
+    "lead_temperature": "Very Hot",
+    "sponsorship_key": "youtube:_btcppk-kao:wolfbox.com",
+    "brand_key": "domain:wolfbox.com",
+    "signals": [
+      "Daily researched sponsorship",
+      "verified public sponsorship evidence"
+    ],
+    "date_found": "2026-08-14"
+  }
+]
