@@ -1,41 +1,5 @@
 [
   {
-    "brand_name": "Thenation",
-    "brand_domain": "thenation.com",
-    "source_platform": "YouTube",
-    "creator_name": "The Majority Report w/ Sam Seder",
-    "creator_url": "https://www.youtube.com/channel/UC-3jIAlnQmbbVMV6gR7K8aQ",
-    "creator_channel_id": "UC-3jIAlnQmbbVMV6gR7K8aQ",
-    "creator_subscribers": 2080000,
-    "creator_genre": "Entertainment",
-    "creator_tags": [
-      "Entertainment"
-    ],
-    "video_id": "F6beywCQeio",
-    "video_url": "https://www.youtube.com/watch?v=F6beywCQeio",
-    "video_title": "Casual Friday w/ Jeet Heer | MR Live",
-    "sponsored_date": "2026-08-14",
-    "evidence": "Paid promotion/ad disclosure with external sponsor link",
-    "paid_product_placement": true,
-    "brand_partner_channel_id": "",
-    "sponsor_category": "Software / SaaS",
-    "sponsor_subcategory": "Gaming Gear",
-    "contact_name": "",
-    "contact_title": "",
-    "contact_email": "press@thenation.com",
-    "email_type": "Press",
-    "contact_source": "https://www.thenation.com/about-us-and-contact/",
-    "lead_score": 73,
-    "lead_temperature": "Warm",
-    "sponsorship_key": "youtube:f6beywcqeio:thenation.com",
-    "brand_key": "domain:thenation.com",
-    "signals": [
-      "YouTube paid product placement",
-      "sponsor domain found"
-    ],
-    "date_found": "2026-08-14"
-  },
-  {
     "brand_name": "Runable",
     "brand_domain": "runable.com",
     "source_platform": "YouTube",
