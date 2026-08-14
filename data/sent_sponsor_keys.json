@@ -78,6 +78,7 @@
   "brand:instantgaming",
   "brand:ixl",
   "brand:jhspedals",
+  "brand:jolli",
   "brand:klaviyo",
   "brand:lelandfrancis",
   "brand:lewitt",
@@ -177,6 +178,7 @@
   "domain:instant-gaming.com",
   "domain:ixl.com",
   "domain:joindeleteme.com",
+  "domain:jolli.ai",
   "domain:klaviyo.com",
   "domain:liberlive.com",
   "domain:magicspoon.com",
@@ -252,6 +254,7 @@
   "email:support@gologin.com",
   "email:support@greptile.com",
   "email:support@instant-gaming.com",
+  "email:support@jolli.ai",
   "email:support@neural4d.com",
   "email:support@vidiq.com",
   "email:support@vinyl.com"
