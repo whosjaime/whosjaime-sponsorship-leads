@@ -18,10 +18,9 @@ class SponsorDeliveryWorkflowTests(unittest.TestCase):
         self.assertNotIn("discord_scan_failure_alert.py", workflow)
         self.assertNotIn("SPONSOR SCANNER ERROR", workflow)
 
-    def test_daily_discovery_builds_queue_without_discord_status_noise(self):
+    def test_hourly_discovery_builds_queue_without_discord_status_noise(self):
         workflow = Path(".github/workflows/discover-sponsor-queue.yml").read_text(encoding="utf-8")
-        self.assertIn('cron: "15 10 * * *"', workflow)
-        self.assertIn('timezone: "America/Toronto"', workflow)
+        self.assertIn('cron: "15 * * * *"', workflow)
         self.assertIn("run_sponsor_discovery_batch.py", workflow)
         self.assertNotIn("discord_sponsor_queue_status.py", workflow)
         self.assertNotIn("discord_scan_failure_alert.py", workflow)

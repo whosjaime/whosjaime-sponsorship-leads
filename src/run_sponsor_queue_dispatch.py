@@ -10,6 +10,7 @@ from sponsor_queue import (
     load_duplicate_keys,
     load_queue,
     load_sent_keys,
+    mark_creator_used,
     mark_sent,
     save_queue,
     save_sent_keys,
@@ -109,9 +110,11 @@ def run() -> None:
             )
             created = 1
 
-            # The successful Monday create is the point of no return. Record it locally
-            # before Discord so a Discord failure/retry can never resend the sponsor.
+            # The successful Monday create is the point of no return. Record the brand
+            # permanently and the creator temporarily before Discord, so retries cannot
+            # resend the sponsor or immediately recycle the same YouTube channel.
             mark_sent(lead, sent_keys)
+            mark_creator_used(lead, sent_keys)
             duplicate_keys.update(sent_keys)
             save_sent_keys(sent_keys)
         except Exception as exc:
