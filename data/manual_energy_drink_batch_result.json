@@ -1,0 +1,62 @@
+[
+  {
+    "brand": "CELSIUS",
+    "status": "created",
+    "monday_item_id": "12809447941",
+    "email": "ambassador@celsius.com"
+  },
+  {
+    "brand": "C4 Energy",
+    "status": "created",
+    "monday_item_id": "12809377235",
+    "email": "support@cellucor.com"
+  },
+  {
+    "brand": "Alani Nu",
+    "status": "created",
+    "monday_item_id": "12809501905",
+    "email": "pressalaninu@alaninu.com"
+  },
+  {
+    "brand": "RYSE Energy",
+    "status": "created",
+    "monday_item_id": "12809466724",
+    "email": "athletes@rysesupps.com"
+  },
+  {
+    "brand": "GORGIE",
+    "status": "created",
+    "monday_item_id": "12809389915",
+    "email": "sales@getgorgie.com"
+  },
+  {
+    "brand": "Bloom Sparkling Energy",
+    "status": "created",
+    "monday_item_id": "12809377379",
+    "email": "help@bloomnu.com"
+  },
+  {
+    "brand": "Accelerator Active Energy",
+    "status": "created",
+    "monday_item_id": "12809428054",
+    "email": "info@drinkaccelerator.com"
+  },
+  {
+    "brand": "ZOA Energy",
+    "status": "created",
+    "monday_item_id": "12809377172",
+    "email": "zoa@louhammond.com"
+  },
+  {
+    "brand": "GURU Energy",
+    "status": "created",
+    "monday_item_id": "12809377193",
+    "email": "sponsorships@guruenergy.com"
+  },
+  {
+    "brand": "NOCCO",
+    "status": "created",
+    "monday_item_id": "12809501216",
+    "email": "info.us@nocco.com"
+  }
+]
