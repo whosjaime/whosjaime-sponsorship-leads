@@ -90,10 +90,9 @@ class SponsorQueueReliabilityTests(unittest.TestCase):
         self.assertEqual(len(saved), 1)
         self.assertEqual(saved[0].brand_name, "Example Brand")
 
-    def test_daily_batch_has_no_monday_duplicate_dependency(self):
+    def test_hourly_top_up_has_no_monday_duplicate_dependency(self):
         workflow = Path(".github/workflows/discover-sponsor-queue.yml").read_text(encoding="utf-8")
-        self.assertIn('cron: "15 10 * * *"', workflow)
-        self.assertIn('timezone: "America/Toronto"', workflow)
+        self.assertIn('cron: "15 * * * *"', workflow)
         self.assertNotIn("SPONSOR_MONDAY_TOKEN", workflow)
         self.assertNotIn("SPONSOR_MONDAY_API_KEY", workflow)
         self.assertNotIn("discord_sponsor_queue_status.py", workflow)
