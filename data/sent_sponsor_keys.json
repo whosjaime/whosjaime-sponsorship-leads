@@ -101,6 +101,7 @@
   "brand:pcspecialist",
   "brand:pia",
   "brand:positivegridamps",
+  "brand:privacycom",
   "brand:privateinternetaccess",
   "brand:privateinternetaccesspia",
   "brand:prizepicks",
@@ -188,6 +189,7 @@
   "domain:mux.com",
   "domain:neural4d.com",
   "domain:opera.com",
+  "domain:privacy.com",
   "domain:prizepicks.com",
   "domain:protonvpn.com",
   "domain:rayconglobal.com",
@@ -262,6 +264,7 @@
   "email:support@instant-gaming.com",
   "email:support@jolli.ai",
   "email:support@neural4d.com",
+  "email:support@privacy.com",
   "email:support@vidiq.com",
   "email:support@vinyl.com"
 ]
