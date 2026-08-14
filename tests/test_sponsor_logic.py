@@ -61,7 +61,7 @@ class SponsorScannerTests(unittest.TestCase):
         self.assertTrue(index.is_duplicate_brand(lead))
 
     def test_target_niches_are_eligible(self):
-        for category in ["Gaming", "Consumer Tech", "Software / SaaS", "Cybersecurity / VPN", "Food & Beverage"]:
+        for category in ["Gaming", "Consumer Tech", "Food & Beverage"]:
             lead = SimpleNamespace(
                 sponsor_category=category,
                 brand_name="Good Brand",
@@ -69,6 +69,30 @@ class SponsorScannerTests(unittest.TestCase):
                 sponsor_subcategory="",
             )
             self.assertTrue(_is_target_lead(lead), category)
+
+    def test_digital_tech_services_are_not_target_leads(self):
+        for category, subcategory in [
+            ("Software / SaaS", "AI / Productivity"),
+            ("Software / SaaS", "Web Hosting"),
+            ("Cybersecurity / VPN", "VPN"),
+            ("Cybersecurity / VPN", "Password Manager"),
+        ]:
+            lead = SimpleNamespace(
+                sponsor_category=category,
+                brand_name="Digital Service",
+                brand_domain="digitalservice.com",
+                sponsor_subcategory=subcategory,
+            )
+            self.assertFalse(_is_target_lead(lead), f"{category} / {subcategory}")
+
+    def test_physical_hardware_can_survive_bad_saas_classification(self):
+        lead = SimpleNamespace(
+            sponsor_category="Software / SaaS",
+            brand_name="Hardware Brand",
+            brand_domain="hardwarebrand.com",
+            sponsor_subcategory="Computer Hardware",
+        )
+        self.assertTrue(_is_target_lead(lead))
 
     def test_festival_is_rejected_even_if_other_text_looks_good(self):
         festival = SimpleNamespace(
