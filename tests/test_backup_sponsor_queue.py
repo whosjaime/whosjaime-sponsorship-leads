@@ -106,11 +106,10 @@ class BackupSponsorQueueTests(unittest.TestCase):
         self.assertFalse(_secondary_coverage_missing(leads))
         self.assertTrue(_secondary_coverage_missing(leads[:-1]))
 
-    def test_queue_top_up_runs_four_times_daily(self):
+    def test_queue_top_up_runs_hourly_at_fifteen(self):
         workflow = (ROOT / ".github/workflows/discover-sponsor-queue.yml").read_text(encoding="utf-8")
-        for hour in (4, 10, 16, 22):
-            self.assertIn(f'cron: "15 {hour} * * *"', workflow)
-        self.assertEqual(workflow.count('timezone: "America/Toronto"'), 4)
+        self.assertIn('cron: "15 * * * *"', workflow)
+        self.assertNotIn('timezone: "America/Toronto"', workflow)
 
 
 if __name__ == "__main__":
