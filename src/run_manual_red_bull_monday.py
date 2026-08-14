@@ -28,7 +28,7 @@ def run() -> None:
     lead = SponsorLead(
         brand_name="Red Bull",
         brand_domain="https://www.redbull.com/ca-en/support-hub/media-and-platforms",
-        source_platform="LinkedIn",
+        source_platform="",
         creator_name="",
         creator_url="",
         creator_channel_id="",
