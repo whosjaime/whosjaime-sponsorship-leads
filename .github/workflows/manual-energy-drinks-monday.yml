@@ -14,8 +14,8 @@ permissions:
   contents: write
 
 concurrency:
-  group: sponsor-lead-queue
-  cancel-in-progress: false
+  group: manual-energy-drink-monday
+  cancel-in-progress: true
 
 jobs:
   import-energy-drinks:
