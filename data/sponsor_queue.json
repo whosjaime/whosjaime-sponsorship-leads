@@ -34,45 +34,6 @@
     "date_found": "2026-08-13"
   },
   {
-    "brand_name": "Rocketmoney",
-    "brand_domain": "rocketmoney.com",
-    "source_platform": "YouTube",
-    "creator_name": "Sevy",
-    "creator_url": "https://www.youtube.com/channel/UC-2O84hJLKm8CqqsZygV-lA",
-    "creator_channel_id": "UC-2O84hJLKm8CqqsZygV-lA",
-    "creator_subscribers": 300000,
-    "creator_genre": "Entertainment",
-    "creator_tags": [
-      "Entertainment",
-      "Reactions",
-      "Streaming"
-    ],
-    "video_id": "9ZJx4QwwICs",
-    "video_url": "https://www.youtube.com/watch?v=9ZJx4QwwICs",
-    "video_title": "RONOVA IS FINALLY HERE... (Genshin 7.0 ACT 2 FULL REACTION)",
-    "sponsored_date": "2026-08-13",
-    "evidence": "Paid promotion/ad disclosure with external sponsor link",
-    "paid_product_placement": true,
-    "brand_partner_channel_id": "",
-    "sponsor_category": "Software / SaaS",
-    "sponsor_subcategory": "VPN",
-    "contact_name": "",
-    "contact_title": "",
-    "contact_email": "affiliates@rocketmoney.com",
-    "email_type": "Affiliate Partnerships",
-    "contact_source": "https://www.rocketmoney.com/affiliates",
-    "lead_score": 85,
-    "lead_temperature": "Hot",
-    "sponsorship_key": "youtube:9zjx4qwwics:rocketmoney.com",
-    "brand_key": "domain:rocketmoney.com",
-    "signals": [
-      "ad/sponsored disclosure",
-      "YouTube paid product placement",
-      "sponsor domain found"
-    ],
-    "date_found": "2026-08-14"
-  },
-  {
     "brand_name": "Incogniton",
     "brand_domain": "incogniton.com",
     "source_platform": "YouTube",
@@ -141,6 +102,45 @@
     "date_found": "2026-08-13"
   },
   {
+    "brand_name": "Rocketmoney",
+    "brand_domain": "rocketmoney.com",
+    "source_platform": "YouTube",
+    "creator_name": "Sevy",
+    "creator_url": "https://www.youtube.com/channel/UC-2O84hJLKm8CqqsZygV-lA",
+    "creator_channel_id": "UC-2O84hJLKm8CqqsZygV-lA",
+    "creator_subscribers": 300000,
+    "creator_genre": "Entertainment",
+    "creator_tags": [
+      "Entertainment",
+      "Reactions",
+      "Streaming"
+    ],
+    "video_id": "9ZJx4QwwICs",
+    "video_url": "https://www.youtube.com/watch?v=9ZJx4QwwICs",
+    "video_title": "RONOVA IS FINALLY HERE... (Genshin 7.0 ACT 2 FULL REACTION)",
+    "sponsored_date": "2026-08-13",
+    "evidence": "Paid promotion/ad disclosure with external sponsor link",
+    "paid_product_placement": true,
+    "brand_partner_channel_id": "",
+    "sponsor_category": "Software / SaaS",
+    "sponsor_subcategory": "VPN",
+    "contact_name": "",
+    "contact_title": "",
+    "contact_email": "affiliates@rocketmoney.com",
+    "email_type": "Affiliate Partnerships",
+    "contact_source": "https://www.rocketmoney.com/affiliates",
+    "lead_score": 85,
+    "lead_temperature": "Hot",
+    "sponsorship_key": "youtube:9zjx4qwwics:rocketmoney.com",
+    "brand_key": "domain:rocketmoney.com",
+    "signals": [
+      "ad/sponsored disclosure",
+      "YouTube paid product placement",
+      "sponsor domain found"
+    ],
+    "date_found": "2026-08-14"
+  },
+  {
     "brand_name": "Anijam",
     "brand_domain": "anijam.ai",
     "source_platform": "YouTube",
@@ -173,45 +173,6 @@
       "verified public sponsorship evidence"
     ],
     "date_found": "2026-08-13"
-  },
-  {
-    "brand_name": "Lyons Tea Exchange",
-    "brand_domain": "amazon.com",
-    "source_platform": "YouTube",
-    "creator_name": "Kristen Kasper",
-    "creator_url": "https://www.youtube.com/channel/UCLaE0_0kjP8A3KZ4ZGWg_ag",
-    "creator_channel_id": "UCLaE0_0kjP8A3KZ4ZGWg_ag",
-    "creator_subscribers": 144000,
-    "creator_genre": "Entertainment",
-    "creator_tags": [
-      "Entertainment",
-      "Short Form",
-      "Lifestyle"
-    ],
-    "video_id": "VognVJi6HkI",
-    "video_url": "https://www.youtube.com/watch?v=VognVJi6HkI",
-    "video_title": "DAY IN THE LIFE VLOG // unpack with me & back to school",
-    "sponsored_date": "2026-08-14",
-    "evidence": "this video is sponsored by Lyons Tea Exchange",
-    "paid_product_placement": true,
-    "brand_partner_channel_id": "",
-    "sponsor_category": "Software / SaaS",
-    "sponsor_subcategory": "Snacks",
-    "contact_name": "",
-    "contact_title": "",
-    "contact_email": "api-services-support@amazon.com",
-    "email_type": "Support",
-    "contact_source": "https://www.amazon.com/",
-    "lead_score": 100,
-    "lead_temperature": "Very Hot",
-    "sponsorship_key": "youtube:vognvji6hki:amazon.com",
-    "brand_key": "domain:amazon.com",
-    "signals": [
-      "explicit sponsor phrase",
-      "YouTube paid product placement",
-      "sponsor domain found"
-    ],
-    "date_found": "2026-08-14"
   },
   {
     "brand_name": "Runable",
@@ -280,6 +241,45 @@
       "verified public sponsorship evidence"
     ],
     "date_found": "2026-08-13"
+  },
+  {
+    "brand_name": "Lyons Tea Exchange",
+    "brand_domain": "amazon.com",
+    "source_platform": "YouTube",
+    "creator_name": "Kristen Kasper",
+    "creator_url": "https://www.youtube.com/channel/UCLaE0_0kjP8A3KZ4ZGWg_ag",
+    "creator_channel_id": "UCLaE0_0kjP8A3KZ4ZGWg_ag",
+    "creator_subscribers": 144000,
+    "creator_genre": "Entertainment",
+    "creator_tags": [
+      "Entertainment",
+      "Short Form",
+      "Lifestyle"
+    ],
+    "video_id": "VognVJi6HkI",
+    "video_url": "https://www.youtube.com/watch?v=VognVJi6HkI",
+    "video_title": "DAY IN THE LIFE VLOG // unpack with me & back to school",
+    "sponsored_date": "2026-08-14",
+    "evidence": "this video is sponsored by Lyons Tea Exchange",
+    "paid_product_placement": true,
+    "brand_partner_channel_id": "",
+    "sponsor_category": "Software / SaaS",
+    "sponsor_subcategory": "Snacks",
+    "contact_name": "",
+    "contact_title": "",
+    "contact_email": "api-services-support@amazon.com",
+    "email_type": "Support",
+    "contact_source": "https://www.amazon.com/",
+    "lead_score": 100,
+    "lead_temperature": "Very Hot",
+    "sponsorship_key": "youtube:vognvji6hki:amazon.com",
+    "brand_key": "domain:amazon.com",
+    "signals": [
+      "explicit sponsor phrase",
+      "YouTube paid product placement",
+      "sponsor domain found"
+    ],
+    "date_found": "2026-08-14"
   },
   {
     "brand_name": "Jawa",
@@ -384,46 +384,6 @@
     "date_found": "2026-08-13"
   },
   {
-    "brand_name": "Bodybraincoffee",
-    "brand_domain": "bodybraincoffee.com",
-    "source_platform": "YouTube",
-    "creator_name": "Story Warz",
-    "creator_url": "https://www.youtube.com/channel/UCbXpnTZENdVsnyL6TSKRcAg",
-    "creator_channel_id": "UCbXpnTZENdVsnyL6TSKRcAg",
-    "creator_subscribers": 178000,
-    "creator_genre": "Entertainment",
-    "creator_tags": [
-      "Entertainment",
-      "Comedy",
-      "Streaming",
-      "Long Form",
-      "Short Form"
-    ],
-    "video_id": "o8R9ybckl_c",
-    "video_url": "https://www.youtube.com/watch?v=o8R9ybckl_c",
-    "video_title": "Jay Chandrasekhar vs Kevin Heffernan vs Joe List | Story Warz | Episode 106 | Police",
-    "sponsored_date": "2026-08-14",
-    "evidence": "Paid promotion/ad disclosure with external sponsor link",
-    "paid_product_placement": true,
-    "brand_partner_channel_id": "",
-    "sponsor_category": "Software / SaaS",
-    "sponsor_subcategory": "Coffee",
-    "contact_name": "",
-    "contact_title": "",
-    "contact_email": "support@bodybraincoffee.com",
-    "email_type": "Support",
-    "contact_source": "https://bodybraincoffee.com/pages/contact",
-    "lead_score": 73,
-    "lead_temperature": "Warm",
-    "sponsorship_key": "youtube:o8r9ybckl_c:bodybraincoffee.com",
-    "brand_key": "domain:bodybraincoffee.com",
-    "signals": [
-      "YouTube paid product placement",
-      "sponsor domain found"
-    ],
-    "date_found": "2026-08-14"
-  },
-  {
     "brand_name": "Mobbin",
     "brand_domain": "mobbin.com",
     "source_platform": "YouTube",
@@ -492,6 +452,46 @@
     "date_found": "2026-08-13"
   },
   {
+    "brand_name": "Bodybraincoffee",
+    "brand_domain": "bodybraincoffee.com",
+    "source_platform": "YouTube",
+    "creator_name": "Story Warz",
+    "creator_url": "https://www.youtube.com/channel/UCbXpnTZENdVsnyL6TSKRcAg",
+    "creator_channel_id": "UCbXpnTZENdVsnyL6TSKRcAg",
+    "creator_subscribers": 178000,
+    "creator_genre": "Entertainment",
+    "creator_tags": [
+      "Entertainment",
+      "Comedy",
+      "Streaming",
+      "Long Form",
+      "Short Form"
+    ],
+    "video_id": "o8R9ybckl_c",
+    "video_url": "https://www.youtube.com/watch?v=o8R9ybckl_c",
+    "video_title": "Jay Chandrasekhar vs Kevin Heffernan vs Joe List | Story Warz | Episode 106 | Police",
+    "sponsored_date": "2026-08-14",
+    "evidence": "Paid promotion/ad disclosure with external sponsor link",
+    "paid_product_placement": true,
+    "brand_partner_channel_id": "",
+    "sponsor_category": "Software / SaaS",
+    "sponsor_subcategory": "Coffee",
+    "contact_name": "",
+    "contact_title": "",
+    "contact_email": "support@bodybraincoffee.com",
+    "email_type": "Support",
+    "contact_source": "https://bodybraincoffee.com/pages/contact",
+    "lead_score": 73,
+    "lead_temperature": "Warm",
+    "sponsorship_key": "youtube:o8r9ybckl_c:bodybraincoffee.com",
+    "brand_key": "domain:bodybraincoffee.com",
+    "signals": [
+      "YouTube paid product placement",
+      "sponsor domain found"
+    ],
+    "date_found": "2026-08-14"
+  },
+  {
     "brand_name": "Archera",
     "brand_domain": "archera.ai",
     "source_platform": "YouTube",
@@ -524,47 +524,6 @@
       "verified public sponsorship evidence"
     ],
     "date_found": "2026-08-13"
-  },
-  {
-    "brand_name": "2026 Toyota RAV4",
-    "brand_domain": "toyota.com",
-    "source_platform": "YouTube",
-    "creator_name": "Business Insider",
-    "creator_url": "https://www.youtube.com/channel/UCcyq283he07B7_KUX07mmtA",
-    "creator_channel_id": "UCcyq283he07B7_KUX07mmtA",
-    "creator_subscribers": 10500000,
-    "creator_genre": "Entertainment",
-    "creator_tags": [
-      "Entertainment",
-      "Long Form",
-      "Short Form",
-      "Tech",
-      "Lifestyle"
-    ],
-    "video_id": "CmOButWKtt4",
-    "video_url": "https://www.youtube.com/watch?v=CmOButWKtt4",
-    "video_title": "The Creator Behind Outdoor Anthony Has a Workday Unlike Most People’s",
-    "sponsored_date": "2026-08-13",
-    "evidence": "Sponsored by 2026 Toyota RAV4",
-    "paid_product_placement": true,
-    "brand_partner_channel_id": "",
-    "sponsor_category": "Software / SaaS",
-    "sponsor_subcategory": "Computer Hardware",
-    "contact_name": "",
-    "contact_title": "",
-    "contact_email": "dmca@toyota.com",
-    "email_type": "Public Business Contact",
-    "contact_source": "https://www.toyota.com/support/legal-terms/",
-    "lead_score": 100,
-    "lead_temperature": "Very Hot",
-    "sponsorship_key": "youtube:cmobutwktt4:toyota.com",
-    "brand_key": "domain:toyota.com",
-    "signals": [
-      "explicit sponsor phrase",
-      "YouTube paid product placement",
-      "sponsor domain found"
-    ],
-    "date_found": "2026-08-14"
   },
   {
     "brand_name": "Traycer",
@@ -631,6 +590,47 @@
     "signals": [
       "Daily researched sponsorship",
       "verified public sponsorship evidence"
+    ],
+    "date_found": "2026-08-14"
+  },
+  {
+    "brand_name": "2026 Toyota RAV4",
+    "brand_domain": "toyota.com",
+    "source_platform": "YouTube",
+    "creator_name": "Business Insider",
+    "creator_url": "https://www.youtube.com/channel/UCcyq283he07B7_KUX07mmtA",
+    "creator_channel_id": "UCcyq283he07B7_KUX07mmtA",
+    "creator_subscribers": 10500000,
+    "creator_genre": "Entertainment",
+    "creator_tags": [
+      "Entertainment",
+      "Long Form",
+      "Short Form",
+      "Tech",
+      "Lifestyle"
+    ],
+    "video_id": "CmOButWKtt4",
+    "video_url": "https://www.youtube.com/watch?v=CmOButWKtt4",
+    "video_title": "The Creator Behind Outdoor Anthony Has a Workday Unlike Most People’s",
+    "sponsored_date": "2026-08-13",
+    "evidence": "Sponsored by 2026 Toyota RAV4",
+    "paid_product_placement": true,
+    "brand_partner_channel_id": "",
+    "sponsor_category": "Software / SaaS",
+    "sponsor_subcategory": "Computer Hardware",
+    "contact_name": "",
+    "contact_title": "",
+    "contact_email": "dmca@toyota.com",
+    "email_type": "Public Business Contact",
+    "contact_source": "https://www.toyota.com/support/legal-terms/",
+    "lead_score": 100,
+    "lead_temperature": "Very Hot",
+    "sponsorship_key": "youtube:cmobutwktt4:toyota.com",
+    "brand_key": "domain:toyota.com",
+    "signals": [
+      "explicit sponsor phrase",
+      "YouTube paid product placement",
+      "sponsor domain found"
     ],
     "date_found": "2026-08-14"
   },
