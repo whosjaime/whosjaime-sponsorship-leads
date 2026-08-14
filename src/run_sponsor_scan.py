@@ -18,21 +18,32 @@ from youtube_sponsor_scanner import SEARCH_LANES, YouTubeSponsorScanner
 # active-sponsor window remains 30 days, but SPONSOR_MAX_AGE_DAYS can make it stricter.
 MAX_NATIVE_YOUTUBE_LOOKBACK_DAYS = 30
 
-# Hard target filter. The sponsor itself must fit one of these buckets.
+# Tech means physical consumer products/hardware only. Software, SaaS, AI tools,
+# developer platforms, VPNs, and cybersecurity services are not automatic targets.
 TARGET_SPONSOR_CATEGORIES = {
     "Gaming",
     "Consumer Tech",
+    "Food & Beverage",
+}
+
+DIGITAL_TECH_CATEGORIES = {
     "Software / SaaS",
     "Cybersecurity / VPN",
-    "Food & Beverage",
+}
+
+PHYSICAL_TECH_KEYWORDS = {
+    "electronics", "hardware", "computer hardware", "pc hardware", "gaming gear",
+    "gaming peripheral", "keyboard", "mechanical keyboard", "mouse", "gaming mouse",
+    "mousepad", "headset", "headphones", "earbuds", "microphone", "webcam", "camera",
+    "monitor", "display", "speaker", "audio interface", "capture card", "graphics card",
+    "gpu", "cpu", "processor", "ssd", "storage drive", "laptop", "computer", "pc",
+    "smartphone", "phone accessory", "charger", "power bank", "router", "smart home",
+    "wearable", "controller", "console", "tech accessory", "tech accessories",
 }
 
 TARGET_BRAND_KEYWORDS = {
     "gaming", "gamer", "esports", "gaming gear", "gaming peripheral", "controller",
-    "software", "saas", "cloud", "web hosting", "website builder", "developer tool",
-    "cybersecurity", "vpn", "password manager", "online privacy", "identity protection",
-    "electronics", "headset", "headphones", "keyboard", "microphone", "webcam", "speaker",
-    "computer hardware", "gaming mouse", "monitor", "gadget",
+    *PHYSICAL_TECH_KEYWORDS,
     "food", "drink", "beverage", "energy drink", "coffee", "snack", "meal", "soda",
     "sparkling water", "hydration",
 }
@@ -113,12 +124,26 @@ def _target_text(lead: SponsorLead) -> str:
     ).lower()
 
 
+def _is_physical_tech_product(lead: SponsorLead) -> bool:
+    text = _target_text(lead)
+    return any(keyword in text for keyword in PHYSICAL_TECH_KEYWORDS)
+
+
 def _is_target_lead(lead: SponsorLead) -> bool:
-    """Only allow Gaming, Tech, or Food/Drink sponsors into Monday/Discord."""
+    """Allow Gaming, Food/Drink, and physical tech products; reject digital-tech services."""
     text = _target_text(lead)
     if any(keyword in text for keyword in EXCLUDED_SPONSOR_KEYWORDS):
         return False
+
+    # Digital tech is blocked unless the enriched metadata clearly identifies an
+    # actual physical product/hardware sponsor. This preserves hardware companies that
+    # were misclassified while excluding SaaS, coding, AI, VPN, and cybersecurity leads.
+    if lead.sponsor_category in DIGITAL_TECH_CATEGORIES and not _is_physical_tech_product(lead):
+        return False
+
     if lead.sponsor_category in TARGET_SPONSOR_CATEGORIES:
+        return True
+    if _is_physical_tech_product(lead):
         return True
     return any(keyword in text for keyword in TARGET_BRAND_KEYWORDS)
 
@@ -126,7 +151,7 @@ def _is_target_lead(lead: SponsorLead) -> bool:
 def _priority_score(lead: SponsorLead) -> int:
     """Rank target sponsors by fit, recency, and outreach contact quality."""
     score = 0
-    if lead.sponsor_category in TARGET_SPONSOR_CATEGORIES:
+    if lead.sponsor_category in TARGET_SPONSOR_CATEGORIES or _is_physical_tech_product(lead):
         score += 100
     text = _target_text(lead)
     if any(keyword in text for keyword in TARGET_BRAND_KEYWORDS):
