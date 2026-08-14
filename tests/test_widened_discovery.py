@@ -36,9 +36,11 @@ class WidenedSponsorDiscoveryTests(unittest.TestCase):
         for phrase in ["partnered with", "paid partnership", "presented by", "supported by", "powered by"]:
             self.assertIn(phrase, SPONSOR_DISCLOSURE_QUERY)
 
-    def test_target_paid_query_is_broader_but_on_niche(self):
-        for keyword in ["gpu", "browser", "cybersecurity", "protein", "hydration", "earbuds"]:
+    def test_target_paid_query_focuses_on_physical_products_not_digital_tech(self):
+        for keyword in ["gpu", "keyboard", "monitor", "camera", "charger", "protein", "hydration", "earbuds"]:
             self.assertIn(keyword, TARGET_PAID_QUERY)
+        for blocked in ["software", "saas", "browser", "developer", "coding", "vpn", "cybersecurity"]:
+            self.assertNotIn(blocked, TARGET_PAID_QUERY)
 
     def test_presented_by_phrase_detects_sponsor(self):
         video = self._video("This video is presented by NovaGear.\nhttps://novagear.com/creator #ad")

@@ -15,11 +15,13 @@ SPONSOR_DISCLOSURE_QUERY = (
     '"in partnership with"|"partnered with"|"paid partnership"|'
     '"presented by"|"supported by"|"powered by"|#sponsored|#ad|#partner'
 )
+# The targeted lane intentionally excludes SaaS, coding, AI tools, VPNs, and
+# cybersecurity services. "Tech" here means physical products/hardware only.
 TARGET_PAID_QUERY = (
-    'gaming|game|esports|pc|computer|gpu|monitor|mouse|controller|headset|keyboard|'
-    'microphone|webcam|speaker|earbuds|audio|chair|desk|software|saas|app|browser|'
-    'ai|cloud|productivity|developer|coding|vpn|cybersecurity|privacy|password|hosting|'
-    'food|meal|snack|protein|candy|chips|coffee|beverage|drink|soda|hydration|tech'
+    'gaming|game|esports|pc|computer|hardware|gpu|cpu|ssd|monitor|mouse|controller|'
+    'headset|headphones|keyboard|microphone|webcam|camera|speaker|earbuds|audio|'
+    'capture card|charger|power bank|router|smartphone|laptop|wearable|chair|desk|'
+    'food|meal|snack|protein|candy|chips|coffee|beverage|drink|soda|hydration'
 )
 SEARCH_LANES = (
     ("paid-placement", "", True),
