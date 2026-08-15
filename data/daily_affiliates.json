@@ -1,182 +1,182 @@
 [
   {
-    "brand_name": "Sephora",
+    "brand_name": "ASUS",
     "brand_size": "large",
-    "category": "Beauty / Makeup / Skincare / Fragrance",
-    "commission": "Not publicly listed",
-    "website": "https://www.sephora.com/",
-    "apply_url": "https://www.sephora.com/beauty/affiliates",
-    "source_url": "https://www.sephora.com/beauty/affiliates"
+    "category": "Gaming / Consumer Tech / PC Components / Laptops",
+    "commission": "1% default commission; increased rates may be available for select partners and categories",
+    "website": "https://www.asus.com/",
+    "apply_url": "https://ui.awin.com/merchant-profile/31828",
+    "source_url": "https://ui.awin.com/merchant-profile/31828"
   },
   {
-    "brand_name": "iHerb",
+    "brand_name": "Blizzard Gear Store",
     "brand_size": "large",
-    "category": "Health / Wellness / Beauty / Nutrition",
-    "commission": "Up to 25% commission on referred sales",
-    "website": "https://www.iherb.com/",
-    "apply_url": "https://www.iherb.com/info/affiliates",
-    "source_url": "https://www.iherb.com/info/affiliates"
+    "category": "Gaming / Merchandise / Collectibles",
+    "commission": "Not publicly listed",
+    "website": "https://gear.blizzard.com/",
+    "apply_url": "https://ui.awin.com/merchant-profile/64570",
+    "source_url": "https://ui.awin.com/merchant-profile/64570"
   },
   {
-    "brand_name": "Anker",
+    "brand_name": "DAZN Creators Canada",
     "brand_size": "large",
-    "category": "Consumer Tech / Chargers / Power / Accessories",
-    "commission": "8% commission on qualifying sales",
-    "website": "https://www.anker.com/",
-    "apply_url": "https://www.anker.com/ca/become-an-affiliate",
-    "source_url": "https://www.anker.com/ca/become-an-affiliate"
+    "category": "Streaming / Sports / Entertainment",
+    "commission": "Not publicly listed",
+    "website": "https://www.dazn.com/",
+    "apply_url": "https://ui.awin.com/merchant-profile/126293",
+    "source_url": "https://ui.awin.com/merchant-profile/126293"
   },
   {
-    "brand_name": "HubSpot",
+    "brand_name": "ClickUp",
     "brand_size": "large",
-    "category": "Software / CRM / Marketing / Creator Business",
-    "commission": "30% recurring commission for up to 1 year",
-    "website": "https://www.hubspot.com/",
-    "apply_url": "https://www.hubspot.com/partners/affiliates",
-    "source_url": "https://www.hubspot.com/partners/affiliates"
+    "category": "Software / Productivity / Creator Tools",
+    "commission": "Up to $25 per qualifying new free workspace referral",
+    "website": "https://clickup.com/",
+    "apply_url": "https://clickup.com/partners/affiliates",
+    "source_url": "https://clickup.com/partners/affiliates"
   },
   {
-    "brand_name": "Turtle Beach",
+    "brand_name": "Miro",
     "brand_size": "large",
-    "category": "Gaming / PC Gear / Headsets / Controllers",
+    "category": "Software / Collaboration / Creator Tools",
+    "commission": "$10-$40 per qualifying corporate free-trial signup, depending on GEO",
+    "website": "https://miro.com/",
+    "apply_url": "https://miro.com/affiliates/join-our-program/",
+    "source_url": "https://miro.com/affiliates/join-our-program/"
+  },
+  {
+    "brand_name": "Fanatical",
+    "brand_size": "mid-size",
+    "category": "Gaming / PC Games / Digital Store",
     "commission": "Not publicly listed",
-    "website": "https://www.turtlebeach.com/",
-    "apply_url": "https://www.turtlebeach.com/pages/influencers",
-    "source_url": "https://www.turtlebeach.com/pages/influencers"
+    "website": "https://www.fanatical.com/",
+    "apply_url": "https://www.fanatical.com/en/affiliates",
+    "source_url": "https://www.fanatical.com/en/affiliates"
   },
   {
-    "brand_name": "SCUF Gaming",
+    "brand_name": "Scan Computers",
     "brand_size": "mid-size",
-    "category": "Gaming / Controllers / PC & Console Gear",
+    "category": "Gaming / Consumer Tech / PC Components / Creator Gear",
+    "commission": "1% standard commission; increases may be available based on performance",
+    "website": "https://www.scan.co.uk/",
+    "apply_url": "https://ui.awin.com/merchant-profile/15473",
+    "source_url": "https://ui.awin.com/merchant-profile/15473"
+  },
+  {
+    "brand_name": "PC Case Gear",
+    "brand_size": "mid-size",
+    "category": "Gaming / Consumer Tech / PC Hardware",
+    "commission": "Up to 5% commission",
+    "website": "https://www.pccasegear.com/",
+    "apply_url": "https://ui.awin.com/merchant-profile/33135",
+    "source_url": "https://ui.awin.com/merchant-profile/33135"
+  },
+  {
+    "brand_name": "Overclockers UK",
+    "brand_size": "mid-size",
+    "category": "Gaming / PC Systems / Components / Hardware",
     "commission": "Not publicly listed",
-    "website": "https://www.scufgaming.com/",
-    "apply_url": "https://www.scufgaming.com/us/en/s/affiliate",
-    "source_url": "https://www.scufgaming.com/us/en/s/affiliate"
+    "website": "https://www.overclockers.co.uk/",
+    "apply_url": "https://ui.awin.com/merchant-profile/28821",
+    "source_url": "https://ui.awin.com/merchant-profile/28821"
   },
   {
-    "brand_name": "UGREEN",
+    "brand_name": "Todoist",
     "brand_size": "mid-size",
-    "category": "Consumer Tech / PC Gear / Chargers / Hubs",
-    "commission": "8%-15% commission on validated referred sales",
-    "website": "https://www.ugreen.com/",
-    "apply_url": "https://ca.ugreen.com/pages/affiliate",
-    "source_url": "https://ca.ugreen.com/pages/affiliate"
-  },
-  {
-    "brand_name": "Govee",
-    "brand_size": "mid-size",
-    "category": "Consumer Tech / Gaming Setup / Smart Lighting",
+    "category": "Software / Productivity / Creator Tools",
     "commission": "Not publicly listed",
-    "website": "https://www.govee.com/",
-    "apply_url": "https://ca.govee.com/pages/affiliate",
-    "source_url": "https://ca.govee.com/pages/affiliate"
+    "website": "https://www.todoist.com/",
+    "apply_url": "https://www.todoist.com/channelpartners",
+    "source_url": "https://www.todoist.com/channelpartners"
   },
   {
-    "brand_name": "Huel",
+    "brand_name": "beyerdynamic",
     "brand_size": "mid-size",
-    "category": "Food & Drinks / Nutrition / Meal Replacement",
+    "category": "Consumer Tech / Audio / Gaming / Creator Gear",
     "commission": "Not publicly listed",
-    "website": "https://huel.com/",
-    "apply_url": "https://huel.com/partnerships",
-    "source_url": "https://huel.com/pages/affiliate-program-faq"
+    "website": "https://www.beyerdynamic.com/",
+    "apply_url": "https://ui.awin.com/merchant-profile/95259",
+    "source_url": "https://ui.awin.com/merchant-profile/95259"
   },
   {
-    "brand_name": "ActiveCampaign",
+    "brand_name": "OneXPlayer",
     "brand_size": "mid-size",
-    "category": "Software / Email Marketing / CRM / Creator Tools",
-    "commission": "30% recurring commission for up to 12 months per eligible referral",
-    "website": "https://www.activecampaign.com/",
-    "apply_url": "https://www.activecampaign.com/partners/affiliate",
-    "source_url": "https://help.activecampaign.com/hc/en-us/articles/115000065864-Affiliate-program"
+    "category": "Gaming / Handheld PCs / Consumer Tech",
+    "commission": "Up to 1.5% commission",
+    "website": "https://www.onexplayer.com/",
+    "apply_url": "https://ui.awin.com/merchant-profile/97359",
+    "source_url": "https://ui.awin.com/merchant-profile/97359"
   },
   {
-    "brand_name": "Teachable",
+    "brand_name": "OneOdio",
     "brand_size": "mid-size",
-    "category": "Software / Courses / Creator Business",
-    "commission": "30% recurring commission for the first year of each referred sale",
-    "website": "https://www.teachable.com/",
-    "apply_url": "https://www.teachable.com/partners",
-    "source_url": "https://www.teachable.com/partners"
+    "category": "Consumer Tech / Headphones / Audio / Creator Gear",
+    "commission": "10%-15% commission",
+    "website": "https://www.oneodio.com/",
+    "apply_url": "https://ui.awin.com/merchant-profile/114832",
+    "source_url": "https://ui.awin.com/merchant-profile/114832"
   },
   {
-    "brand_name": "Reverb",
-    "brand_size": "mid-size",
-    "category": "Music / Instruments / Creator Gear Marketplace",
-    "commission": "Not publicly listed",
-    "website": "https://reverb.com/",
-    "apply_url": "https://reverb.com/selling/how-to-join-the-reverb-affiliate-program",
-    "source_url": "https://help.reverb.com/hc/en-us/articles/41988354456347-Does-Reverb-have-an-affiliate-or-influencer-program"
-  },
-  {
-    "brand_name": "YesStyle",
-    "brand_size": "mid-size",
-    "category": "Beauty / Fashion / K-Beauty",
-    "commission": "Up to 10% through the general affiliate program; influencer program can reach up to 11%",
-    "website": "https://www.yesstyle.com/",
-    "apply_url": "https://www.yesstyle.com/en/affiliate-program.html",
-    "source_url": "https://www.yesstyle.com/en/affiliate-program.html"
-  },
-  {
-    "brand_name": "Waves Audio",
+    "brand_name": "Blacklyte",
     "brand_size": "emerging",
-    "category": "Music / Audio Plugins / Creator Tools",
+    "category": "Gaming / Gaming Chairs / Desks / Setup Gear",
+    "commission": "8%-15% commission",
+    "website": "https://blacklyte.com/",
+    "apply_url": "https://ui.awin.com/merchant-profile/99001",
+    "source_url": "https://ui.awin.com/merchant-profile/99001"
+  },
+  {
+    "brand_name": "Gigatech Gaming",
+    "brand_size": "emerging",
+    "category": "Gaming / Gaming PCs / Consumer Tech",
+    "commission": "5% commission",
+    "website": "https://gigatechgaming.com/",
+    "apply_url": "https://ui.awin.com/merchant-profile/98721",
+    "source_url": "https://ui.awin.com/merchant-profile/98721"
+  },
+  {
+    "brand_name": "X-raypad",
+    "brand_size": "emerging",
+    "category": "Gaming / Mousepads / PC Accessories",
+    "commission": "5%-8% commission",
+    "website": "https://shop.x-raypad.com/",
+    "apply_url": "https://ui.awin.com/merchant-profile/85187",
+    "source_url": "https://ui.awin.com/merchant-profile/85187"
+  },
+  {
+    "brand_name": "GamingKit",
+    "brand_size": "emerging",
+    "category": "Gaming / PC Accessories / Streaming Gear",
     "commission": "Not publicly listed",
-    "website": "https://www.waves.com/",
-    "apply_url": "https://www.waves.com/affiliate-program",
-    "source_url": "https://www.waves.com/affiliate-program"
+    "website": "https://gamingkit.co.uk/",
+    "apply_url": "https://ui.awin.com/merchant-profile/124146",
+    "source_url": "https://ui.awin.com/merchant-profile/124146"
   },
   {
-    "brand_name": "STYLEVANA",
+    "brand_name": "Serafim",
     "brand_size": "emerging",
-    "category": "Beauty / Skincare / K-Beauty",
+    "category": "Gaming / Mobile Gaming / Controllers / Consumer Tech",
     "commission": "Not publicly listed",
-    "website": "https://www.stylevana.com/",
-    "apply_url": "https://www.stylevana.com/en_EU/affiliate-program",
-    "source_url": "https://www.stylevana.com/en_EU/affiliate-program"
+    "website": "https://serafim-tech.com/",
+    "apply_url": "https://ui.awin.com/merchant-profile/122034",
+    "source_url": "https://ui.awin.com/merchant-profile/122034"
   },
   {
-    "brand_name": "Creative Market",
+    "brand_name": "Dowinx",
     "brand_size": "emerging",
-    "category": "Software / Digital Assets / Design / Creator Tools",
-    "commission": "20% on new-customer purchases, 10% on returning-customer purchases, and 30% on membership signups",
-    "website": "https://creativemarket.com/",
-    "apply_url": "https://creativemarket.com/affiliates",
-    "source_url": "https://creativemarket.com/affiliates"
+    "category": "Gaming / Gaming Chairs / Setup Gear",
+    "commission": "8% commission",
+    "website": "https://dowinx.com/",
+    "apply_url": "https://ui.awin.com/merchant-profile/107524",
+    "source_url": "https://ui.awin.com/merchant-profile/107524"
   },
   {
-    "brand_name": "Motion Array",
+    "brand_name": "Beelink",
     "brand_size": "emerging",
-    "category": "Software / Video / Templates / Creator Tools",
+    "category": "Consumer Tech / Mini PCs / Creator & Gaming Hardware",
     "commission": "Not publicly listed",
-    "website": "https://motionarray.com/",
-    "apply_url": "https://help.motionarray.com/hc/en-us/articles/9333593224093-What-is-the-Affiliate-Program",
-    "source_url": "https://help.motionarray.com/hc/en-us/articles/9333593224093-What-is-the-Affiliate-Program"
-  },
-  {
-    "brand_name": "TubeBuddy",
-    "brand_size": "emerging",
-    "category": "Software / YouTube / Creator Tools",
-    "commission": "Not publicly listed",
-    "website": "https://www.tubebuddy.com/",
-    "apply_url": "https://www.tubebuddy.com/affiliateprogram",
-    "source_url": "https://support.tubebuddy.com/hc/en-us/articles/9323294149275-Creating-an-Affiliate-Code-for-TubeBuddy"
-  },
-  {
-    "brand_name": "systeme.io",
-    "brand_size": "emerging",
-    "category": "Software / Funnels / Email / Creator Business",
-    "commission": "60% lifetime commission on systeme.io subscription and course sales",
-    "website": "https://systeme.io/",
-    "apply_url": "https://systeme.io/affiliate-program-af488683",
-    "source_url": "https://help.systeme.io/article/162-how-the-systeme-io-affiliate-program-works"
-  },
-  {
-    "brand_name": "Stan Store",
-    "brand_size": "emerging",
-    "category": "Software / Creator Store / Digital Products",
-    "commission": "20% recurring commission for as long as the referred creator remains subscribed",
-    "website": "https://stan.store/",
-    "apply_url": "https://help.stan.store/article/89-what-is-stans-referral-program",
-    "source_url": "https://help.stan.store/article/89-what-is-stans-referral-program"
+    "website": "https://www.bee-link.com/",
+    "apply_url": "https://ui.awin.com/merchant-profile/34449",
+    "source_url": "https://ui.awin.com/merchant-profile/34449"
   }
 ]
