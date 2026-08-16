@@ -1,182 +1,182 @@
 [
   {
-    "brand_name": "ASUS",
+    "brand_name": "Best Buy Canada",
     "brand_size": "large",
-    "category": "Gaming / Consumer Tech / PC Components / Laptops",
-    "commission": "1% default commission; increased rates may be available for select partners and categories",
-    "website": "https://www.asus.com/",
-    "apply_url": "https://ui.awin.com/merchant-profile/31828",
-    "source_url": "https://ui.awin.com/merchant-profile/31828"
+    "category": "Consumer Tech / Gaming / PC Gear / Electronics",
+    "commission": "Not publicly listed",
+    "website": "https://www.bestbuy.ca/",
+    "apply_url": "https://www.bestbuy.ca/en-ca/about/affiliate-program/blt82df225e80ec75e9",
+    "source_url": "https://www.bestbuy.ca/en-ca/about/affiliate-program/blt82df225e80ec75e9"
   },
   {
-    "brand_name": "Blizzard Gear Store",
+    "brand_name": "Amazon.ca",
     "brand_size": "large",
-    "category": "Gaming / Merchandise / Collectibles",
-    "commission": "Not publicly listed",
-    "website": "https://gear.blizzard.com/",
-    "apply_url": "https://ui.awin.com/merchant-profile/64570",
-    "source_url": "https://ui.awin.com/merchant-profile/64570"
+    "category": "Consumer Tech / Gaming / Creator Gear / General Retail",
+    "commission": "Up to 10% depending on product category",
+    "website": "https://www.amazon.ca/",
+    "apply_url": "https://associates.amazon.ca/",
+    "source_url": "https://associates.amazon.ca/"
   },
   {
-    "brand_name": "DAZN Creators Canada",
+    "brand_name": "Walmart Canada",
     "brand_size": "large",
-    "category": "Streaming / Sports / Entertainment",
+    "category": "Consumer Tech / Gaming / Food & Drinks / General Retail",
     "commission": "Not publicly listed",
-    "website": "https://www.dazn.com/",
-    "apply_url": "https://ui.awin.com/merchant-profile/126293",
-    "source_url": "https://ui.awin.com/merchant-profile/126293"
+    "website": "https://www.walmart.ca/",
+    "apply_url": "https://www.walmart.ca/en/cp/discovery-pages/discovery-pages-GM/affiliate-program/6000208941216",
+    "source_url": "https://www.walmart.ca/en/cp/discovery-pages/discovery-pages-GM/affiliate-program/6000208941216"
   },
   {
-    "brand_name": "ClickUp",
+    "brand_name": "Acer",
     "brand_size": "large",
-    "category": "Software / Productivity / Creator Tools",
-    "commission": "Up to $25 per qualifying new free workspace referral",
-    "website": "https://clickup.com/",
-    "apply_url": "https://clickup.com/partners/affiliates",
-    "source_url": "https://clickup.com/partners/affiliates"
+    "category": "Gaming / Consumer Tech / PCs / Laptops / Monitors",
+    "commission": "Up to 4% commission on affiliate sales",
+    "website": "https://store.acer.com/en-ca/",
+    "apply_url": "https://store.acer.com/en-ca/partner-program",
+    "source_url": "https://store.acer.com/en-ca/partner-program"
   },
   {
-    "brand_name": "Miro",
+    "brand_name": "GoPro",
     "brand_size": "large",
-    "category": "Software / Collaboration / Creator Tools",
-    "commission": "$10-$40 per qualifying corporate free-trial signup, depending on GEO",
-    "website": "https://miro.com/",
-    "apply_url": "https://miro.com/affiliates/join-our-program/",
-    "source_url": "https://miro.com/affiliates/join-our-program/"
+    "category": "Consumer Tech / Cameras / Creator Gear",
+    "commission": "3% commission",
+    "website": "https://gopro.com/",
+    "apply_url": "https://gopro.com/fr/ca/legal/gopro-affiliate-program",
+    "source_url": "https://gopro.com/fr/ca/legal/gopro-affiliate-program"
   },
   {
-    "brand_name": "Fanatical",
+    "brand_name": "Adorama",
     "brand_size": "mid-size",
-    "category": "Gaming / PC Games / Digital Store",
+    "category": "Consumer Tech / Cameras / Audio / Computers / Creator Gear",
+    "commission": "2% base commission with performance-based incentives",
+    "website": "https://www.adorama.com/",
+    "apply_url": "https://www.adorama.com/g/adorama-affiliate-program",
+    "source_url": "https://www.adorama.com/g/adorama-affiliate-program"
+  },
+  {
+    "brand_name": "ORIGIN PC",
+    "brand_size": "mid-size",
+    "category": "Gaming / Custom PCs / PC Hardware",
     "commission": "Not publicly listed",
-    "website": "https://www.fanatical.com/",
-    "apply_url": "https://www.fanatical.com/en/affiliates",
-    "source_url": "https://www.fanatical.com/en/affiliates"
+    "website": "https://www.originpc.com/",
+    "apply_url": "https://www.originpc.com/affiliates/register/",
+    "source_url": "https://www.originpc.com/affiliates/register/"
   },
   {
-    "brand_name": "Scan Computers",
+    "brand_name": "MINISFORUM",
     "brand_size": "mid-size",
-    "category": "Gaming / Consumer Tech / PC Components / Creator Gear",
-    "commission": "1% standard commission; increases may be available based on performance",
-    "website": "https://www.scan.co.uk/",
-    "apply_url": "https://ui.awin.com/merchant-profile/15473",
-    "source_url": "https://ui.awin.com/merchant-profile/15473"
+    "category": "Consumer Tech / Mini PCs / Gaming & Creator Hardware",
+    "commission": "2% commission on qualified sales",
+    "website": "https://store.minisforum.com/",
+    "apply_url": "https://store.minisforum.com/en-ca/pages/affiliate",
+    "source_url": "https://store.minisforum.com/en-ca/pages/affiliate"
   },
   {
-    "brand_name": "PC Case Gear",
+    "brand_name": "Creative Fabrica",
     "brand_size": "mid-size",
-    "category": "Gaming / Consumer Tech / PC Hardware",
-    "commission": "Up to 5% commission",
-    "website": "https://www.pccasegear.com/",
-    "apply_url": "https://ui.awin.com/merchant-profile/33135",
-    "source_url": "https://ui.awin.com/merchant-profile/33135"
+    "category": "Creator Tools / Design Assets / Fonts / Graphics",
+    "commission": "25% on first-year subscription fees and single sales; 20% on subscription extensions",
+    "website": "https://www.creativefabrica.com/",
+    "apply_url": "https://www.creativefabrica.com/affiliates",
+    "source_url": "https://www.creativefabrica.com/affiliates"
   },
   {
-    "brand_name": "Overclockers UK",
+    "brand_name": "Ecamm",
     "brand_size": "mid-size",
-    "category": "Gaming / PC Systems / Components / Hardware",
+    "category": "Streaming / Software / Creator Tools / Video",
+    "commission": "30% on new subscriptions; monthly subscriptions can earn recurring commission for up to 12 months",
+    "website": "https://www.ecamm.com/",
+    "apply_url": "https://affiliates.ecamm.com/",
+    "source_url": "https://support.ecamm.com/en/articles/3217764-ecamm-affiliate-program"
+  },
+  {
+    "brand_name": "Royal Canadian Mint",
+    "brand_size": "mid-size",
+    "category": "Collectibles / Gifts / Lifestyle",
+    "commission": "3.5% commission on sales",
+    "website": "https://www.mint.ca/",
+    "apply_url": "https://www.mint.ca/en/affiliate-program",
+    "source_url": "https://www.mint.ca/en/affiliate-program"
+  },
+  {
+    "brand_name": "Placeit",
+    "brand_size": "mid-size",
+    "category": "Creator Tools / Mockups / Design / Video",
     "commission": "Not publicly listed",
-    "website": "https://www.overclockers.co.uk/",
-    "apply_url": "https://ui.awin.com/merchant-profile/28821",
-    "source_url": "https://ui.awin.com/merchant-profile/28821"
+    "website": "https://placeit.net/",
+    "apply_url": "https://placeit.net/affiliate-program",
+    "source_url": "https://help.placeit.net/hc/en-us/articles/37799765027993-How-can-I-become-a-Placeit-affiliate"
   },
   {
-    "brand_name": "Todoist",
+    "brand_name": "Glorious Gaming",
     "brand_size": "mid-size",
-    "category": "Software / Productivity / Creator Tools",
+    "category": "Gaming / Keyboards / Mice / PC Accessories",
     "commission": "Not publicly listed",
-    "website": "https://www.todoist.com/",
-    "apply_url": "https://www.todoist.com/channelpartners",
-    "source_url": "https://www.todoist.com/channelpartners"
+    "website": "https://www.gloriousgaming.com/",
+    "apply_url": "https://www.gloriousgaming.com/en-ca/pages/influencer-program",
+    "source_url": "https://www.gloriousgaming.com/en-ca/pages/influencer-program"
   },
   {
-    "brand_name": "beyerdynamic",
-    "brand_size": "mid-size",
-    "category": "Consumer Tech / Audio / Gaming / Creator Gear",
+    "brand_name": "Fourthwall",
+    "brand_size": "emerging",
+    "category": "Creator Tools / Merch / Memberships / Ecommerce",
+    "commission": "Tiered referral rewards; Affiliate Plus can earn up to 10% of physical product costs plus smaller shares of digital and membership sales",
+    "website": "https://fourthwall.com/",
+    "apply_url": "https://fourthwall.com/referral-program",
+    "source_url": "https://fourthwall.com/referral-program"
+  },
+  {
+    "brand_name": "Ghost Keyboards",
+    "brand_size": "emerging",
+    "category": "Gaming / Keyboards / PC Accessories",
+    "commission": "Up to 20% commission",
+    "website": "https://ca.ghostkeyboards.com/",
+    "apply_url": "https://ca.ghostkeyboards.com/pages/collab",
+    "source_url": "https://ca.ghostkeyboards.com/pages/collab"
+  },
+  {
+    "brand_name": "GOOD TO GO Snacks",
+    "brand_size": "emerging",
+    "category": "Food & Drinks / Snacks / Wellness",
+    "commission": "15% commission on sales generated with the affiliate code",
+    "website": "https://goodtogosnacks.ca/",
+    "apply_url": "https://goodtogosnacks.ca/fr/pages/affiliate-program",
+    "source_url": "https://goodtogosnacks.ca/fr/pages/affiliate-program"
+  },
+  {
+    "brand_name": "Oh Canada Candy",
+    "brand_size": "emerging",
+    "category": "Food & Drinks / Candy / Snacks",
     "commission": "Not publicly listed",
-    "website": "https://www.beyerdynamic.com/",
-    "apply_url": "https://ui.awin.com/merchant-profile/95259",
-    "source_url": "https://ui.awin.com/merchant-profile/95259"
+    "website": "https://ohcanadacandy.com/",
+    "apply_url": "https://ohcanadacandy.com/pages/collab",
+    "source_url": "https://ohcanadacandy.com/pages/collab"
   },
   {
-    "brand_name": "OneXPlayer",
-    "brand_size": "mid-size",
-    "category": "Gaming / Handheld PCs / Consumer Tech",
-    "commission": "Up to 1.5% commission",
-    "website": "https://www.onexplayer.com/",
-    "apply_url": "https://ui.awin.com/merchant-profile/97359",
-    "source_url": "https://ui.awin.com/merchant-profile/97359"
-  },
-  {
-    "brand_name": "OneOdio",
-    "brand_size": "mid-size",
-    "category": "Consumer Tech / Headphones / Audio / Creator Gear",
-    "commission": "10%-15% commission",
-    "website": "https://www.oneodio.com/",
-    "apply_url": "https://ui.awin.com/merchant-profile/114832",
-    "source_url": "https://ui.awin.com/merchant-profile/114832"
-  },
-  {
-    "brand_name": "Blacklyte",
+    "brand_name": "EATABLE Popcorn",
     "brand_size": "emerging",
-    "category": "Gaming / Gaming Chairs / Desks / Setup Gear",
-    "commission": "8%-15% commission",
-    "website": "https://blacklyte.com/",
-    "apply_url": "https://ui.awin.com/merchant-profile/99001",
-    "source_url": "https://ui.awin.com/merchant-profile/99001"
-  },
-  {
-    "brand_name": "Gigatech Gaming",
-    "brand_size": "emerging",
-    "category": "Gaming / Gaming PCs / Consumer Tech",
-    "commission": "5% commission",
-    "website": "https://gigatechgaming.com/",
-    "apply_url": "https://ui.awin.com/merchant-profile/98721",
-    "source_url": "https://ui.awin.com/merchant-profile/98721"
-  },
-  {
-    "brand_name": "X-raypad",
-    "brand_size": "emerging",
-    "category": "Gaming / Mousepads / PC Accessories",
-    "commission": "5%-8% commission",
-    "website": "https://shop.x-raypad.com/",
-    "apply_url": "https://ui.awin.com/merchant-profile/85187",
-    "source_url": "https://ui.awin.com/merchant-profile/85187"
-  },
-  {
-    "brand_name": "GamingKit",
-    "brand_size": "emerging",
-    "category": "Gaming / PC Accessories / Streaming Gear",
+    "category": "Food & Drinks / Snacks / Gourmet Popcorn",
     "commission": "Not publicly listed",
-    "website": "https://gamingkit.co.uk/",
-    "apply_url": "https://ui.awin.com/merchant-profile/124146",
-    "source_url": "https://ui.awin.com/merchant-profile/124146"
+    "website": "https://eatable.com/",
+    "apply_url": "https://eatable.kickbooster.me/",
+    "source_url": "https://eatable.com/pages/eatable-creators"
   },
   {
-    "brand_name": "Serafim",
+    "brand_name": "GamerTech",
     "brand_size": "emerging",
-    "category": "Gaming / Mobile Gaming / Controllers / Consumer Tech",
+    "category": "Gaming / Custom PCs / Consumer Tech",
     "commission": "Not publicly listed",
-    "website": "https://serafim-tech.com/",
-    "apply_url": "https://ui.awin.com/merchant-profile/122034",
-    "source_url": "https://ui.awin.com/merchant-profile/122034"
+    "website": "https://gamertech.ca/",
+    "apply_url": "https://gamertech.ca/pages/affiliate",
+    "source_url": "https://gamertech.ca/pages/affiliate"
   },
   {
-    "brand_name": "Dowinx",
+    "brand_name": "Carzan Meats",
     "brand_size": "emerging",
-    "category": "Gaming / Gaming Chairs / Setup Gear",
-    "commission": "8% commission",
-    "website": "https://dowinx.com/",
-    "apply_url": "https://ui.awin.com/merchant-profile/107524",
-    "source_url": "https://ui.awin.com/merchant-profile/107524"
-  },
-  {
-    "brand_name": "Beelink",
-    "brand_size": "emerging",
-    "category": "Consumer Tech / Mini PCs / Creator & Gaming Hardware",
+    "category": "Food & Drinks / Beef Jerky / Snacks",
     "commission": "Not publicly listed",
-    "website": "https://www.bee-link.com/",
-    "apply_url": "https://ui.awin.com/merchant-profile/34449",
-    "source_url": "https://ui.awin.com/merchant-profile/34449"
+    "website": "https://carzanmeats.ca/",
+    "apply_url": "https://carzanmeats.ca/pages/collab",
+    "source_url": "https://carzanmeats.ca/pages/collab"
   }
 ]
