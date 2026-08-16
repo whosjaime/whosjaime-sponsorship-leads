@@ -1,1 +1,78 @@
-[]
+[
+  {
+    "brand_name": "Jdtheot",
+    "brand_domain": "jdtheot.com",
+    "source_platform": "YouTube",
+    "creator_name": "JD The OT Product Reviews",
+    "creator_url": "https://www.youtube.com/channel/UCzJ3x4HxVmFjSzMghGmyqDg",
+    "creator_channel_id": "UCzJ3x4HxVmFjSzMghGmyqDg",
+    "creator_subscribers": 342,
+    "creator_genre": "Tech",
+    "creator_tags": [
+      "Streaming",
+      "Tech",
+      "Lifestyle"
+    ],
+    "video_id": "RCzFJTdummg",
+    "video_url": "https://www.youtube.com/watch?v=RCzFJTdummg",
+    "video_title": "This MAONO P2 Has 48V Phantom Power Built In #MAONOP2 #podcastequipment #homestudio",
+    "sponsored_date": "2026-08-10",
+    "evidence": "Paid promotion/ad disclosure with external sponsor link",
+    "paid_product_placement": true,
+    "brand_partner_channel_id": "",
+    "sponsor_category": "Health & Wellness",
+    "sponsor_subcategory": "Audio Gear",
+    "contact_name": "",
+    "contact_title": "",
+    "contact_email": "info@jdtheot.com",
+    "email_type": "General",
+    "contact_source": "https://jdtheot.com/",
+    "lead_score": 85,
+    "lead_temperature": "Hot",
+    "sponsorship_key": "youtube:rczfjtdummg:jdtheot.com",
+    "brand_key": "domain:jdtheot.com",
+    "signals": [
+      "ad/sponsored disclosure",
+      "YouTube paid product placement",
+      "sponsor domain found"
+    ],
+    "date_found": "2026-08-16"
+  },
+  {
+    "brand_name": "Waterdrop",
+    "brand_domain": "waterdrop.com",
+    "source_platform": "YouTube",
+    "creator_name": "Caroline McQuistin",
+    "creator_url": "https://www.youtube.com/channel/UCD1DbObsY0XqKRiSJc0GVGA",
+    "creator_channel_id": "UCD1DbObsY0XqKRiSJc0GVGA",
+    "creator_subscribers": 78300,
+    "creator_genre": "Entertainment",
+    "creator_tags": [
+      "Entertainment",
+      "Lifestyle"
+    ],
+    "video_id": "L_DPWHO-MLw",
+    "video_url": "https://www.youtube.com/watch?v=L_DPWHO-MLw",
+    "video_title": "Life in rural Scotland vlog | Live music, home renovations, local seafood ",
+    "sponsored_date": "2026-08-16",
+    "evidence": "Paid promotion/ad disclosure with external sponsor link",
+    "paid_product_placement": true,
+    "brand_partner_channel_id": "",
+    "sponsor_category": "Food & Beverage",
+    "sponsor_subcategory": "Computer Hardware",
+    "contact_name": "",
+    "contact_title": "",
+    "contact_email": "influencer@waterdrop.com",
+    "email_type": "Influencer Marketing",
+    "contact_source": "https://www.waterdrop.com/pages/press",
+    "lead_score": 73,
+    "lead_temperature": "Warm",
+    "sponsorship_key": "youtube:l_dpwho-mlw:waterdrop.com",
+    "brand_key": "domain:waterdrop.com",
+    "signals": [
+      "YouTube paid product placement",
+      "sponsor domain found"
+    ],
+    "date_found": "2026-08-16"
+  }
+]
