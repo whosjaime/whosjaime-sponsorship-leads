@@ -1,45 +1,5 @@
 [
   {
-    "brand_name": "Sandyvans",
-    "brand_domain": "sandyvans.com",
-    "source_platform": "YouTube",
-    "creator_name": "BotezLive",
-    "creator_url": "https://www.youtube.com/channel/UCAn8NrZ-J4CRfwodajqFYoQ",
-    "creator_channel_id": "UCAn8NrZ-J4CRfwodajqFYoQ",
-    "creator_subscribers": 1990000,
-    "creator_genre": "Entertainment",
-    "creator_tags": [
-      "Entertainment",
-      "Challenges",
-      "Comedy",
-      "Streaming",
-      "Lifestyle"
-    ],
-    "video_id": "26mS_5kwMx4",
-    "video_url": "https://www.youtube.com/watch?v=26mS_5kwMx4",
-    "video_title": "new vlog out now 🚐",
-    "sponsored_date": "2026-08-15",
-    "evidence": "Paid promotion/ad disclosure with external sponsor link",
-    "paid_product_placement": true,
-    "brand_partner_channel_id": "",
-    "sponsor_category": "Consumer Tech",
-    "sponsor_subcategory": "Computer Hardware",
-    "contact_name": "",
-    "contact_title": "",
-    "contact_email": "products@sandyvans.com",
-    "email_type": "Partnership Page Contact",
-    "contact_source": "https://sandyvans.com/pages/brand-collaborations",
-    "lead_score": 73,
-    "lead_temperature": "Warm",
-    "sponsorship_key": "youtube:26ms_5kwmx4:sandyvans.com",
-    "brand_key": "domain:sandyvans.com",
-    "signals": [
-      "YouTube paid product placement",
-      "sponsor domain found"
-    ],
-    "date_found": "2026-08-16"
-  },
-  {
     "brand_name": "Jdtheot",
     "brand_domain": "jdtheot.com",
     "source_platform": "YouTube",
