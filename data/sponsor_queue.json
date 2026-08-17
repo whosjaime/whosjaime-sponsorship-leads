@@ -1,45 +1,5 @@
 [
   {
-    "brand_name": "Fenty Beauty",
-    "brand_domain": "fentybeauty.com",
-    "source_platform": "YouTube",
-    "creator_name": "ur mom ashley",
-    "creator_url": "https://www.youtube.com/channel/UC1zACndCursf-RTGr9YvQmQ",
-    "creator_channel_id": "UC1zACndCursf-RTGr9YvQmQ",
-    "creator_subscribers": 2120000,
-    "creator_genre": "Food",
-    "creator_tags": [
-      "Food",
-      "Streaming",
-      "Short Form",
-      "Lifestyle"
-    ],
-    "video_id": "VV8WIdm2zx4",
-    "video_url": "https://www.youtube.com/watch?v=VV8WIdm2zx4",
-    "video_title": "day in my life LA vs. NYC vlog *I'm balancing a lot lol*",
-    "sponsored_date": "2026-08-05",
-    "evidence": "this video is Sponsored by Fenty Beauty",
-    "paid_product_placement": true,
-    "brand_partner_channel_id": "",
-    "sponsor_category": "Consumer Tech",
-    "sponsor_subcategory": "Computer Hardware",
-    "contact_name": "",
-    "contact_title": "",
-    "contact_email": "customerservice@fentybeauty.com",
-    "email_type": "Public Business Contact",
-    "contact_source": "https://fentybeauty.com/pages/about-the-brands",
-    "lead_score": 100,
-    "lead_temperature": "Very Hot",
-    "sponsorship_key": "youtube:vv8widm2zx4:fentybeauty.com",
-    "brand_key": "domain:fentybeauty.com",
-    "signals": [
-      "explicit sponsor phrase",
-      "YouTube paid product placement",
-      "sponsor domain found"
-    ],
-    "date_found": "2026-08-17"
-  },
-  {
     "brand_name": "Airalo",
     "brand_domain": "airalo.com",
     "source_platform": "YouTube",
