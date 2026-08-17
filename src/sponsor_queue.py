@@ -4,6 +4,7 @@ import json
 from datetime import date, timedelta
 from pathlib import Path
 
+from outreach_contact_policy import is_qualified_outreach_contact
 from sponsor_dedupe import lead_brand_keys, normalize_text, permanent_blocked_brand_keys
 from sponsor_models import SponsorLead
 
@@ -16,7 +17,6 @@ CREATOR_COOLDOWN_DAYS = 7
 SOFTWARE_QUEUE_LIMIT = 4
 TECH_FAMILY_QUEUE_LIMIT = 8
 CODING_QUEUE_LIMIT = 2
-GENERIC_SUPPORT_QUEUE_LIMIT = 2
 
 TECH_FAMILY_CATEGORIES = {
     "software / saas",
@@ -145,12 +145,6 @@ def _is_coding_or_dev_lead(lead: SponsorLead) -> bool:
     return any(term in padded for term in CODING_DEV_TERMS)
 
 
-def _is_generic_support_contact(lead: SponsorLead) -> bool:
-    email_type = normalize_text(lead.email_type)
-    local = normalize_text(lead.contact_email).split("@", 1)[0]
-    return email_type == "support" or local in {"support", "service", "help", "helpdesk"}
-
-
 def _queue_bucket(lead: SponsorLead) -> str:
     category = normalize_text(lead.sponsor_category)
     genre = normalize_text(lead.creator_genre)
@@ -181,7 +175,7 @@ def _queue_bucket(lead: SponsorLead) -> str:
 
 
 def diversify_queue(leads: list[SponsorLead], sent_keys: set[str] | None = None) -> list[SponsorLead]:
-    """Apply hard creator/category caps, then round-robin categories for visible variety."""
+    """Apply contact quality, creator/category caps, then round-robin visible variety."""
     history = sent_keys if sent_keys is not None else load_sent_keys()
     recent_creators = recent_creator_identities(history)
 
@@ -190,7 +184,6 @@ def diversify_queue(leads: list[SponsorLead], sent_keys: set[str] | None = None)
     software_count = 0
     tech_family_count = 0
     coding_count = 0
-    support_count = 0
 
     bucket_order = [
         "gaming",
@@ -206,6 +199,12 @@ def diversify_queue(leads: list[SponsorLead], sent_keys: set[str] | None = None)
     buckets: dict[str, list[SponsorLead]] = {name: [] for name in bucket_order}
 
     for lead in leads:
+        # Hard outreach policy: a public email is not enough. Only sponsor,
+        # partnership, creator/influencer, brand, ambassador/affiliate, marketing,
+        # business-development, or clearly role-linked named contacts may enter.
+        if not is_qualified_outreach_contact(lead):
+            continue
+
         brand_identity = (lead.brand_key or lead.brand_domain or lead.brand_name).strip().lower()
         if not brand_identity or brand_identity in seen_brands:
             continue
@@ -218,18 +217,12 @@ def diversify_queue(leads: list[SponsorLead], sent_keys: set[str] | None = None)
         is_software = category == "software / saas"
         is_tech_family = category in TECH_FAMILY_CATEGORIES
         is_coding = _is_coding_or_dev_lead(lead)
-        is_support = _is_generic_support_contact(lead)
 
         if is_software and software_count >= SOFTWARE_QUEUE_LIMIT:
             continue
         if is_tech_family and tech_family_count >= TECH_FAMILY_QUEUE_LIMIT:
             continue
         if is_coding and coding_count >= CODING_QUEUE_LIMIT:
-            continue
-        # Coding/dev leads with only a generic support inbox are especially weak filler.
-        if is_coding and is_support:
-            continue
-        if is_support and support_count >= GENERIC_SUPPORT_QUEUE_LIMIT:
             continue
 
         seen_brands.add(brand_identity)
@@ -241,8 +234,6 @@ def diversify_queue(leads: list[SponsorLead], sent_keys: set[str] | None = None)
             tech_family_count += 1
         if is_coding:
             coding_count += 1
-        if is_support:
-            support_count += 1
 
         bucket = _queue_bucket(lead)
         buckets.setdefault(bucket, []).append(lead)
@@ -278,8 +269,8 @@ def load_queue(path: Path = QUEUE_PATH) -> list[SponsorLead]:
             leads.append(SponsorLead(**item))
         except TypeError:
             continue
-    # Even an old queue file is diversity-filtered at read time, so the dispatcher
-    # cannot send repeated creators or a tech-heavy wall before the next top-up saves it.
+    # Old queue files are policy-filtered at read time, so generic customer-service
+    # contacts, repeated creators, and overrepresented categories cannot dispatch.
     return diversify_queue(leads, load_sent_keys())
 
 
