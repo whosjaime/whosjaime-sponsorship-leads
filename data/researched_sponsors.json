@@ -10,7 +10,7 @@
     "video_url": "https://www.youtube.com/watch?v=eLCF6LdkzAQ",
     "video_title": "This Just Keeps Happening",
     "sponsored_date": "2026-07-21",
-    "evidence": "TechLinked's public English-language YouTube video description explicitly thanks Micro Center for sponsoring the video and links its Back to School promotion.",
+    "evidence": "TechLinked's public English-language YouTube video description explicitly thanks Micro Center for sponsoring the video and links its Back to School promotion. Micro Center is a physical consumer-tech retailer focused on computers, PC parts and peripherals.",
     "paid_product_placement": true,
     "contact_email": "influencers@microcenter.com",
     "contact_source_url": "https://community.microcenter.com/discussion/14936/sponsership"
@@ -30,22 +30,6 @@
     "paid_product_placement": true,
     "contact_email": "corporate.pressinquiry@amd.com",
     "contact_source_url": "https://newsroom.amd.com/"
-  },
-  {
-    "brand_name": "E-WIN Racing",
-    "brand_domain": "ewinracing.com",
-    "creator_name": "Militia Gaming Community",
-    "creator_url": "https://www.youtube.com/@militiagamingcommunity",
-    "creator_channel_id": "",
-    "creator_genre": "Gaming",
-    "creator_tags": ["gaming", "racing games", "gaming chairs", "gaming furniture"],
-    "video_url": "https://www.youtube.com/watch?v=InKIRVT7DwE",
-    "video_title": "Motorfest Daily: Porsche 356 (story Reward) Is It Worth It?",
-    "sponsored_date": "2026-08-14",
-    "evidence": "This public English-language YouTube gaming video dated August 14, 2026 carries an E-WIN Racing sponsorship for the brand's physical gaming-chair/furniture products.",
-    "paid_product_placement": true,
-    "contact_email": "lauren@ewinracing.com",
-    "contact_source_url": "https://www.ewinracing.com/pages/affiliate"
   },
   {
     "brand_name": "Manukora",
@@ -74,7 +58,7 @@
     "video_url": "https://www.youtube.com/watch?v=YHSPuK1prOA",
     "video_title": "Last Week Tonight…(NFL Version)",
     "sponsored_date": "2026-08-07",
-    "evidence": "The public English-language YouTube video description states, 'Thanks to MANSCAPED for sponsoring today's video,' and promotes the physical Beard Hedger Plus grooming product with the creator's code.",
+    "evidence": "The public English-language YouTube video description states that MANSCAPED sponsored the video and promotes the physical Beard Hedger Plus grooming product with the creator's code.",
     "paid_product_placement": true,
     "contact_email": "allison@manscaped.com",
     "contact_source_url": "https://www.sec.gov/Archives/edgar/data/1900650/000121390022038551/ea162702-425_brightlights.htm"
@@ -90,7 +74,7 @@
     "video_url": "https://www.youtube.com/watch?v=Ef4FxMOw4Ng",
     "video_title": "ASMR Play With Me! Dressing Up My Dolls 🧸",
     "sponsored_date": "2026-08-14",
-    "evidence": "The public English-language YouTube video description explicitly says, 'Thank you Helix Sleep for sponsoring!' Helix sells physical mattresses and sleep products.",
+    "evidence": "The public English-language YouTube video description explicitly thanks Helix Sleep for sponsoring. Helix sells physical mattresses and sleep products.",
     "paid_product_placement": true,
     "contact_email": "partnerships@helixsleep.com",
     "contact_source_url": "https://helixsleep.com/pages/contact-us"
@@ -106,7 +90,7 @@
     "video_url": "https://www.youtube.com/watch?v=s_tkMm5U9aY",
     "video_title": "How Your Immune System Works & How to Improve It | Dr. Max Krummel",
     "sponsored_date": "2026-08-03",
-    "evidence": "This public English-language Huberman Lab YouTube episode dated August 3, 2026 carries a Joovv sponsorship. Joovv sells physical medical-grade red-light therapy devices and operates a public affiliate/partner program.",
+    "evidence": "This public English-language Huberman Lab YouTube episode dated August 3, 2026 carries a Joovv sponsorship. Joovv sells physical red-light therapy devices and operates a public affiliate/partner program.",
     "paid_product_placement": true,
     "contact_email": "help@joovv.com",
     "contact_source_url": "https://joovv.com/pages/learn-about-affiliate-program"
@@ -122,9 +106,57 @@
     "video_url": "https://www.youtube.com/watch?v=sPu1NkQwpao",
     "video_title": "The Best Creed Fragrances For The High Heat 🔥",
     "sponsored_date": "2026-07-25",
-    "evidence": "This public English-language YouTube video dated July 25, 2026 is disclosed as sponsored by INTO THE AM. The sponsor is a physical apparel/fashion brand with a strong history of creator sponsorships, including gaming and entertainment channels.",
+    "evidence": "This public English-language YouTube video dated July 25, 2026 is disclosed as sponsored by INTO THE AM, a physical apparel/fashion brand with creator sponsorship activity across entertainment and lifestyle channels.",
     "paid_product_placement": true,
     "contact_email": "support@intotheam.com",
     "contact_source_url": "https://intotheam.com/en-ca/account/register"
+  },
+  {
+    "brand_name": "LMNT",
+    "brand_domain": "drinklmnt.com",
+    "creator_name": "Millennial Farmer",
+    "creator_url": "https://www.youtube.com/@MillennialFarmer",
+    "creator_channel_id": "",
+    "creator_genre": "Lifestyle / Agriculture",
+    "creator_tags": ["lifestyle", "farming", "food and beverage", "hydration", "outdoors"],
+    "video_url": "https://www.youtube.com/watch?v=fgck1taPAF4",
+    "video_title": "New Farm Equipment Isn't Green",
+    "sponsored_date": "2026-08-12",
+    "evidence": "The public English-language YouTube video dated August 12, 2026 includes an LMNT sponsor integration and a creator-specific DrinkLMNT link offering an LMNT sample pack. LMNT is a physical electrolyte drink-mix brand.",
+    "paid_product_placement": true,
+    "contact_email": "hello@drinklmnt.com",
+    "contact_source_url": "https://drinklmnt.com/pages/faq"
+  },
+  {
+    "brand_name": "Quince",
+    "brand_domain": "quince.com",
+    "creator_name": "DIY Wife",
+    "creator_url": "https://www.youtube.com/@diywife",
+    "creator_channel_id": "",
+    "creator_genre": "DIY / Home / Lifestyle",
+    "creator_tags": ["DIY", "home", "lifestyle", "fashion", "home goods"],
+    "video_url": "https://www.youtube.com/watch?v=GEn4t-0YoA8",
+    "video_title": "This New Build Is Going To Be Incredible... (ep. 53)",
+    "sponsored_date": "2026-08-14",
+    "evidence": "The public English-language DIY Wife YouTube video dated August 14, 2026 is disclosed as sponsored by Quince. Quince sells physical apparel, accessories and home goods.",
+    "paid_product_placement": true,
+    "contact_email": "press@onequince.com",
+    "contact_source_url": "https://www.prnewswire.com/news-releases/quince-partners-exclusively-with-aap-rocky-on-dont-be-dumb-vinyl-and-limited-edition-apparel-302661930.html"
+  },
+  {
+    "brand_name": "Cozy Earth",
+    "brand_domain": "cozyearth.com",
+    "creator_name": "The Dr. John Delony Show",
+    "creator_url": "https://www.youtube.com/@thedrjohndelonyshow",
+    "creator_channel_id": "",
+    "creator_genre": "Health / Relationships / Lifestyle",
+    "creator_tags": ["health", "relationships", "lifestyle", "home", "bedding", "loungewear"],
+    "video_url": "https://www.youtube.com/watch?v=L73rMnJW92E",
+    "video_title": "Caller: “Reconnect With My Abusive Dad?”",
+    "sponsored_date": "2026-08-08",
+    "evidence": "The public English-language YouTube video dated August 8, 2026 carries a Cozy Earth sponsorship. Cozy Earth sells physical bamboo bedding, towels and loungewear and maintains active creator/affiliate programs.",
+    "paid_product_placement": true,
+    "contact_email": "erik.darby@cozyearth.com",
+    "contact_source_url": "https://medialink.highpointmarket.org/pr-contacts/c"
   }
 ]
