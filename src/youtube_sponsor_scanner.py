@@ -10,9 +10,14 @@ from sponsor_models import ChannelRecord, VideoRecord
 YOUTUBE_API = "https://www.googleapis.com/youtube/v3"
 SEARCH_WINDOW_SLOTS = 24
 
-# Keep this intentionally simple. The previous heavily quoted OR query was
-# returning zero results in live runs even across a 30-day window.
-SPONSOR_DISCLOSURE_QUERY = 'sponsored|sponsor|#sponsored|#ad|partner|"paid partnership"'
+# Keep broad unquoted terms first so live search has a wider match surface, while
+# preserving the explicit disclosure phrases used by the detector/tests.
+SPONSOR_DISCLOSURE_QUERY = (
+    'sponsored|sponsor|partner|#sponsored|#ad|#partner|'
+    '"sponsored by"|"thanks to"|"brought to you by"|'
+    '"in partnership with"|"partnered with"|"paid partnership"|'
+    '"presented by"|"supported by"|"powered by"'
+)
 # The targeted lane intentionally excludes SaaS, coding, AI tools, VPNs, and
 # cybersecurity services. "Tech" here means physical products/hardware only.
 TARGET_PAID_QUERY = (
