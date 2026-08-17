@@ -1,43 +1,5 @@
 [
   {
-    "brand_name": "Meritbeauty",
-    "brand_domain": "meritbeauty.com",
-    "source_platform": "YouTube",
-    "creator_name": "Karla Espinosa",
-    "creator_url": "https://www.youtube.com/channel/UCsACNR3tyCcwso1h6I8r5zw",
-    "creator_channel_id": "UCsACNR3tyCcwso1h6I8r5zw",
-    "creator_subscribers": 349000,
-    "creator_genre": "Entertainment",
-    "creator_tags": [
-      "Entertainment",
-      "Short Form",
-      "Lifestyle"
-    ],
-    "video_id": "6e4HP9jiJfo",
-    "video_url": "https://www.youtube.com/watch?v=6e4HP9jiJfo",
-    "video_title": "how to become the *BEST* version of yourself!🌱 monthly reset, self care, & deep cleaning!",
-    "sponsored_date": "2026-08-11",
-    "evidence": "Paid promotion/ad disclosure with external sponsor link",
-    "paid_product_placement": true,
-    "brand_partner_channel_id": "",
-    "sponsor_category": "Software / SaaS",
-    "sponsor_subcategory": "AI / Productivity",
-    "contact_name": "",
-    "contact_title": "",
-    "contact_email": "hi@meritbeauty.com",
-    "email_type": "Public Business Contact",
-    "contact_source": "https://www.meritbeauty.com/pages/contact-us",
-    "lead_score": 73,
-    "lead_temperature": "Warm",
-    "sponsorship_key": "youtube:6e4hp9jijfo:meritbeauty.com",
-    "brand_key": "domain:meritbeauty.com",
-    "signals": [
-      "YouTube paid product placement",
-      "sponsor domain found"
-    ],
-    "date_found": "2026-08-17"
-  },
-  {
     "brand_name": "Pcbway",
     "brand_domain": "pcbway.com",
     "source_platform": "YouTube",
