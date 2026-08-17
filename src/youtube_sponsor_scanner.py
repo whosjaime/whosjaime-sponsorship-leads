@@ -10,10 +10,13 @@ from sponsor_models import ChannelRecord, VideoRecord
 YOUTUBE_API = "https://www.googleapis.com/youtube/v3"
 SEARCH_WINDOW_SLOTS = 24
 
+# Keep broad unquoted terms first so live search has a wider match surface, while
+# preserving the explicit disclosure phrases used by the detector/tests.
 SPONSOR_DISCLOSURE_QUERY = (
+    'sponsored|sponsor|partner|#sponsored|#ad|#partner|'
     '"sponsored by"|"thanks to"|"brought to you by"|'
     '"in partnership with"|"partnered with"|"paid partnership"|'
-    '"presented by"|"supported by"|"powered by"|#sponsored|#ad|#partner'
+    '"presented by"|"supported by"|"powered by"'
 )
 # The targeted lane intentionally excludes SaaS, coding, AI tools, VPNs, and
 # cybersecurity services. "Tech" here means physical products/hardware only.
@@ -115,13 +118,18 @@ class YouTubeSponsorScanner:
         params = {
             "part": "snippet",
             "type": "video",
-            "order": "date",
+            # Query lanes should favor relevant sponsor integrations over the newest
+            # random paid content. The date window still enforces freshness.
+            "order": "relevance" if query else "date",
             "maxResults": 50,
             "publishedAfter": published_after,
             "publishedBefore": published_before,
             "regionCode": self.region,
             "relevanceLanguage": self.language,
             "safeSearch": "moderate",
+            # Sponsored integrations we want are overwhelmingly long-form. This
+            # prevents paid Shorts from consuming nearly the entire search pool.
+            "videoDuration": "long",
         }
         if query:
             params["q"] = query
