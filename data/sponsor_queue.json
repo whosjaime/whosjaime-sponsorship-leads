@@ -1,1 +1,79 @@
-[]
+[
+  {
+    "brand_name": "Jdtheot",
+    "brand_domain": "jdtheot.com",
+    "source_platform": "YouTube",
+    "creator_name": "JD The OT Product Reviews",
+    "creator_url": "https://www.youtube.com/channel/UCzJ3x4HxVmFjSzMghGmyqDg",
+    "creator_channel_id": "UCzJ3x4HxVmFjSzMghGmyqDg",
+    "creator_subscribers": 342,
+    "creator_genre": "Tech",
+    "creator_tags": [
+      "Streaming",
+      "Tech",
+      "Lifestyle"
+    ],
+    "video_id": "RCzFJTdummg",
+    "video_url": "https://www.youtube.com/watch?v=RCzFJTdummg",
+    "video_title": "This MAONO P2 Has 48V Phantom Power Built In #MAONOP2 #podcastequipment #homestudio",
+    "sponsored_date": "2026-08-10",
+    "evidence": "Paid promotion/ad disclosure with external sponsor link",
+    "paid_product_placement": true,
+    "brand_partner_channel_id": "",
+    "sponsor_category": "Health & Wellness",
+    "sponsor_subcategory": "Audio Gear",
+    "contact_name": "",
+    "contact_title": "",
+    "contact_email": "info@jdtheot.com",
+    "email_type": "General",
+    "contact_source": "https://jdtheot.com/",
+    "lead_score": 85,
+    "lead_temperature": "Hot",
+    "sponsorship_key": "youtube:rczfjtdummg:jdtheot.com",
+    "brand_key": "domain:jdtheot.com",
+    "signals": [
+      "ad/sponsored disclosure",
+      "YouTube paid product placement",
+      "sponsor domain found"
+    ],
+    "date_found": "2026-08-17"
+  },
+  {
+    "brand_name": "Ktcplay",
+    "brand_domain": "us.ktcplay.com",
+    "source_platform": "YouTube",
+    "creator_name": "Nomad Brad ",
+    "creator_url": "https://www.youtube.com/channel/UC9Qzh2HydRzlEaAFMYDyA9A",
+    "creator_channel_id": "UC9Qzh2HydRzlEaAFMYDyA9A",
+    "creator_subscribers": 140000,
+    "creator_genre": "Gaming",
+    "creator_tags": [
+      "Gaming",
+      "Tech",
+      "Lifestyle"
+    ],
+    "video_id": "96gHZqdqfd4",
+    "video_url": "https://www.youtube.com/watch?v=96gHZqdqfd4",
+    "video_title": "Im DONE with Washington Vanlife! Leaving in my box truck Tiny Home",
+    "sponsored_date": "2026-08-16",
+    "evidence": "Paid promotion/ad disclosure with external sponsor link",
+    "paid_product_placement": true,
+    "brand_partner_channel_id": "",
+    "sponsor_category": "Consumer Tech",
+    "sponsor_subcategory": "Audio Gear",
+    "contact_name": "",
+    "contact_title": "",
+    "contact_email": "support@ktcplay.com",
+    "email_type": "Support",
+    "contact_source": "https://us.ktcplay.com/",
+    "lead_score": 73,
+    "lead_temperature": "Warm",
+    "sponsorship_key": "youtube:96ghzqdqfd4:us.ktcplay.com",
+    "brand_key": "domain:us.ktcplay.com",
+    "signals": [
+      "YouTube paid product placement",
+      "sponsor domain found"
+    ],
+    "date_found": "2026-08-17"
+  }
+]
