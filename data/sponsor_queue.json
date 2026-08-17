@@ -1,43 +1,5 @@
 [
   {
-    "brand_name": "Airalo",
-    "brand_domain": "airalo.com",
-    "source_platform": "YouTube",
-    "creator_name": "Sophie Jayne",
-    "creator_url": "https://www.youtube.com/channel/UCXVVwb-CgnwYkhlfn9X4Z-Q",
-    "creator_channel_id": "UCXVVwb-CgnwYkhlfn9X4Z-Q",
-    "creator_subscribers": 324000,
-    "creator_genre": "Entertainment",
-    "creator_tags": [
-      "Entertainment",
-      "Short Form",
-      "Lifestyle"
-    ],
-    "video_id": "aM0dpM76vJA",
-    "video_url": "https://www.youtube.com/watch?v=aM0dpM76vJA",
-    "video_title": "boston vlog! 🐿️ walking the city, book stores, harvard, red sox game, coffee shops",
-    "sponsored_date": "2026-08-16",
-    "evidence": "Paid promotion/ad disclosure with external sponsor link",
-    "paid_product_placement": true,
-    "brand_partner_channel_id": "",
-    "sponsor_category": "Food & Beverage",
-    "sponsor_subcategory": "Snacks",
-    "contact_name": "",
-    "contact_title": "",
-    "contact_email": "press@airalo.com",
-    "email_type": "Press",
-    "contact_source": "https://www.airalo.com/about-us/media-center",
-    "lead_score": 73,
-    "lead_temperature": "Warm",
-    "sponsorship_key": "youtube:am0dpm76vja:airalo.com",
-    "brand_key": "domain:airalo.com",
-    "signals": [
-      "YouTube paid product placement",
-      "sponsor domain found"
-    ],
-    "date_found": "2026-08-17"
-  },
-  {
     "brand_name": "Meritbeauty",
     "brand_domain": "meritbeauty.com",
     "source_platform": "YouTube",
