@@ -1,182 +1,182 @@
 [
   {
-    "brand_name": "Best Buy Canada",
+    "brand_name": "Logitech",
     "brand_size": "large",
-    "category": "Consumer Tech / Gaming / PC Gear / Electronics",
-    "commission": "Not publicly listed",
-    "website": "https://www.bestbuy.ca/",
-    "apply_url": "https://www.bestbuy.ca/en-ca/about/affiliate-program/blt82df225e80ec75e9",
-    "source_url": "https://www.bestbuy.ca/en-ca/about/affiliate-program/blt82df225e80ec75e9"
+    "category": "Gaming / Consumer Tech / Creator Gear / PC Accessories",
+    "commission": "4%–10% standard commission depending on product brand",
+    "website": "https://www.logitech.com/",
+    "apply_url": "https://www.logitech.com/en-us/promo/affiliate-program.html",
+    "source_url": "https://www.logitech.com/en-us/promo/affiliate-program.html"
   },
   {
-    "brand_name": "Amazon.ca",
+    "brand_name": "HP",
     "brand_size": "large",
-    "category": "Consumer Tech / Gaming / Creator Gear / General Retail",
-    "commission": "Up to 10% depending on product category",
-    "website": "https://www.amazon.ca/",
-    "apply_url": "https://associates.amazon.ca/",
-    "source_url": "https://associates.amazon.ca/"
+    "category": "Consumer Tech / Gaming / PCs / Laptops / Accessories",
+    "commission": "Not publicly listed",
+    "website": "https://www.hp.com/",
+    "apply_url": "https://www.hp.com/us-en/shop/cv/affiliate-program",
+    "source_url": "https://www.hp.com/us-en/shop/cv/affiliate-program"
   },
   {
-    "brand_name": "Walmart Canada",
+    "brand_name": "DJI",
     "brand_size": "large",
-    "category": "Consumer Tech / Gaming / Food & Drinks / General Retail",
-    "commission": "Not publicly listed",
-    "website": "https://www.walmart.ca/",
-    "apply_url": "https://www.walmart.ca/en/cp/discovery-pages/discovery-pages-GM/affiliate-program/6000208941216",
-    "source_url": "https://www.walmart.ca/en/cp/discovery-pages/discovery-pages-GM/affiliate-program/6000208941216"
+    "category": "Consumer Tech / Cameras / Drones / Creator Gear",
+    "commission": "2% on eligible drone products and 5% on eligible handheld products",
+    "website": "https://www.dji.com/",
+    "apply_url": "https://u.dji.com/",
+    "source_url": "https://u.dji.com/en/quick_start_guide"
   },
   {
-    "brand_name": "Acer",
+    "brand_name": "Insta360",
     "brand_size": "large",
-    "category": "Gaming / Consumer Tech / PCs / Laptops / Monitors",
-    "commission": "Up to 4% commission on affiliate sales",
-    "website": "https://store.acer.com/en-ca/",
-    "apply_url": "https://store.acer.com/en-ca/partner-program",
-    "source_url": "https://store.acer.com/en-ca/partner-program"
+    "category": "Consumer Tech / Cameras / Creator Gear / Action Cameras",
+    "commission": "5% average commission",
+    "website": "https://www.insta360.com/",
+    "apply_url": "https://store.insta360.com/ca/affiliate/intro",
+    "source_url": "https://store.insta360.com/ca/affiliate/intro"
   },
   {
-    "brand_name": "GoPro",
+    "brand_name": "Vitamix",
     "brand_size": "large",
-    "category": "Consumer Tech / Cameras / Creator Gear",
-    "commission": "3% commission",
-    "website": "https://gopro.com/",
-    "apply_url": "https://gopro.com/fr/ca/legal/gopro-affiliate-program",
-    "source_url": "https://gopro.com/fr/ca/legal/gopro-affiliate-program"
-  },
-  {
-    "brand_name": "Adorama",
-    "brand_size": "mid-size",
-    "category": "Consumer Tech / Cameras / Audio / Computers / Creator Gear",
-    "commission": "2% base commission with performance-based incentives",
-    "website": "https://www.adorama.com/",
-    "apply_url": "https://www.adorama.com/g/adorama-affiliate-program",
-    "source_url": "https://www.adorama.com/g/adorama-affiliate-program"
-  },
-  {
-    "brand_name": "ORIGIN PC",
-    "brand_size": "mid-size",
-    "category": "Gaming / Custom PCs / PC Hardware",
+    "category": "Food & Drinks / Kitchen Appliances / Lifestyle",
     "commission": "Not publicly listed",
-    "website": "https://www.originpc.com/",
-    "apply_url": "https://www.originpc.com/affiliates/register/",
-    "source_url": "https://www.originpc.com/affiliates/register/"
+    "website": "https://www.vitamix.com/ca/en_us/",
+    "apply_url": "https://www.vitamix.com/ca/en_us/owners-resources/affiliates",
+    "source_url": "https://www.vitamix.com/ca/en_us/owners-resources/affiliates"
   },
   {
-    "brand_name": "MINISFORUM",
+    "brand_name": "RØDE",
     "brand_size": "mid-size",
-    "category": "Consumer Tech / Mini PCs / Gaming & Creator Hardware",
-    "commission": "2% commission on qualified sales",
-    "website": "https://store.minisforum.com/",
-    "apply_url": "https://store.minisforum.com/en-ca/pages/affiliate",
-    "source_url": "https://store.minisforum.com/en-ca/pages/affiliate"
+    "category": "Consumer Tech / Audio / Microphones / Creator Gear",
+    "commission": "15% commission on affiliate sales",
+    "website": "https://rode.com/",
+    "apply_url": "https://help.rode.com/hc/en-us/articles/14241968264079-How-to-Request-Sponsorship-or-Partnership-with-R%C3%98DE",
+    "source_url": "https://help.rode.com/hc/en-us/articles/14241968264079-How-to-Request-Sponsorship-or-Partnership-with-R%C3%98DE"
   },
   {
-    "brand_name": "Creative Fabrica",
+    "brand_name": "Belkin",
     "brand_size": "mid-size",
-    "category": "Creator Tools / Design Assets / Fonts / Graphics",
-    "commission": "25% on first-year subscription fees and single sales; 20% on subscription extensions",
-    "website": "https://www.creativefabrica.com/",
-    "apply_url": "https://www.creativefabrica.com/affiliates",
-    "source_url": "https://www.creativefabrica.com/affiliates"
+    "category": "Consumer Tech / Mobile Accessories / Chargers / Creator Gear",
+    "commission": "Up to 8% commission on sales",
+    "website": "https://www.belkin.com/",
+    "apply_url": "https://www.belkin.com/company/affiliates/",
+    "source_url": "https://www.belkin.com/company/affiliates/"
   },
   {
-    "brand_name": "Ecamm",
+    "brand_name": "PowerA",
     "brand_size": "mid-size",
-    "category": "Streaming / Software / Creator Tools / Video",
-    "commission": "30% on new subscriptions; monthly subscriptions can earn recurring commission for up to 12 months",
-    "website": "https://www.ecamm.com/",
-    "apply_url": "https://affiliates.ecamm.com/",
-    "source_url": "https://support.ecamm.com/en/articles/3217764-ecamm-affiliate-program"
+    "category": "Gaming / Controllers / Console Accessories",
+    "commission": "Up to 10% commission on sales",
+    "website": "https://www.powera.com/",
+    "apply_url": "https://www.powera.com/affiliates/",
+    "source_url": "https://www.powera.com/affiliates/"
   },
   {
-    "brand_name": "Royal Canadian Mint",
+    "brand_name": "Thrustmaster",
     "brand_size": "mid-size",
-    "category": "Collectibles / Gifts / Lifestyle",
-    "commission": "3.5% commission on sales",
-    "website": "https://www.mint.ca/",
-    "apply_url": "https://www.mint.ca/en/affiliate-program",
-    "source_url": "https://www.mint.ca/en/affiliate-program"
+    "category": "Gaming / Racing & Flight Sim / Controllers / PC Gear",
+    "commission": "3%–10% commission on eligible eShop sales",
+    "website": "https://www.thrustmaster.com/",
+    "apply_url": "https://affiliate.thrustmaster.com/",
+    "source_url": "https://www.thrustmaster.com/fr-ca/affiliate/"
   },
   {
-    "brand_name": "Placeit",
+    "brand_name": "REDMAGIC",
     "brand_size": "mid-size",
-    "category": "Creator Tools / Mockups / Design / Video",
+    "category": "Gaming / Consumer Tech / Gaming Phones / Mobile Gear",
     "commission": "Not publicly listed",
-    "website": "https://placeit.net/",
-    "apply_url": "https://placeit.net/affiliate-program",
-    "source_url": "https://help.placeit.net/hc/en-us/articles/37799765027993-How-can-I-become-a-Placeit-affiliate"
+    "website": "https://ca.redmagic.gg/",
+    "apply_url": "https://ca.redmagic.gg/pages/redmagic-affiliate-program",
+    "source_url": "https://ca.redmagic.gg/pages/redmagic-affiliate-program"
   },
   {
-    "brand_name": "Glorious Gaming",
+    "brand_name": "Filmora",
     "brand_size": "mid-size",
-    "category": "Gaming / Keyboards / Mice / PC Accessories",
+    "category": "Software / Video Editing / Creator Tools / AI",
+    "commission": "30%–50% on desktop products; 30% on mobile products",
+    "website": "https://filmora.wondershare.com/",
+    "apply_url": "https://filmora.wondershare.com/creator-monetization-program.html",
+    "source_url": "https://filmora.wondershare.com/creator-monetization-program.html"
+  },
+  {
+    "brand_name": "Voicemod",
+    "brand_size": "mid-size",
+    "category": "Gaming / Streaming / Audio / Creator Tools",
+    "commission": "5% revenue share at Affiliate tier; 20% at Partner tier",
+    "website": "https://www.voicemod.net/",
+    "apply_url": "https://partners.voicemod.net/signup",
+    "source_url": "https://www.voicemod.net/en/creator-program/"
+  },
+  {
+    "brand_name": "AppSumo",
+    "brand_size": "mid-size",
+    "category": "Software / Creator Tools / Business Tools / Marketplace",
+    "commission": "100% of a new customer's sale up to $50; returning customer commissions vary from 0%–15%",
+    "website": "https://appsumo.com/",
+    "apply_url": "https://appsumo.com/p/affiliates",
+    "source_url": "https://appsumo.com/p/affiliates"
+  },
+  {
+    "brand_name": "ALOHA",
+    "brand_size": "emerging",
+    "category": "Food & Drinks / Protein Bars / Drinks / Wellness",
     "commission": "Not publicly listed",
-    "website": "https://www.gloriousgaming.com/",
-    "apply_url": "https://www.gloriousgaming.com/en-ca/pages/influencer-program",
-    "source_url": "https://www.gloriousgaming.com/en-ca/pages/influencer-program"
+    "website": "https://aloha.com/",
+    "apply_url": "https://aloha.com/en-ca/pages/aloha-collective",
+    "source_url": "https://aloha.com/en-ca/pages/aloha-collective"
   },
   {
-    "brand_name": "Fourthwall",
+    "brand_name": "SocialBee",
     "brand_size": "emerging",
-    "category": "Creator Tools / Merch / Memberships / Ecommerce",
-    "commission": "Tiered referral rewards; Affiliate Plus can earn up to 10% of physical product costs plus smaller shares of digital and membership sales",
-    "website": "https://fourthwall.com/",
-    "apply_url": "https://fourthwall.com/referral-program",
-    "source_url": "https://fourthwall.com/referral-program"
+    "category": "Software / Social Media / Creator Tools",
+    "commission": "20% monthly recurring commission in perpetuity on tool plans; 10% on ConciergeBee services",
+    "website": "https://socialbee.com/",
+    "apply_url": "https://socialbee.com/partner/affiliate/",
+    "source_url": "https://socialbee.com/partner/affiliate/"
   },
   {
-    "brand_name": "Ghost Keyboards",
+    "brand_name": "Murf AI",
     "brand_size": "emerging",
-    "category": "Gaming / Keyboards / PC Accessories",
-    "commission": "Up to 20% commission",
-    "website": "https://ca.ghostkeyboards.com/",
-    "apply_url": "https://ca.ghostkeyboards.com/pages/collab",
-    "source_url": "https://ca.ghostkeyboards.com/pages/collab"
+    "category": "AI / Audio / Voiceover / Creator Tools",
+    "commission": "20% recurring commission for up to 24 months",
+    "website": "https://murf.ai/",
+    "apply_url": "https://murf.ai/partner-with-us/affiliate",
+    "source_url": "https://murf.ai/partner-with-us/affiliate"
   },
   {
-    "brand_name": "GOOD TO GO Snacks",
+    "brand_name": "Captivate.fm",
     "brand_size": "emerging",
-    "category": "Food & Drinks / Snacks / Wellness",
-    "commission": "15% commission on sales generated with the affiliate code",
-    "website": "https://goodtogosnacks.ca/",
-    "apply_url": "https://goodtogosnacks.ca/fr/pages/affiliate-program",
-    "source_url": "https://goodtogosnacks.ca/fr/pages/affiliate-program"
+    "category": "Podcasting / Audio / Creator Tools / Software",
+    "commission": "25% recurring commission for the lifetime of each referred podcaster",
+    "website": "https://www.captivate.fm/",
+    "apply_url": "https://affiliate.captivate.fm/",
+    "source_url": "https://affiliate.captivate.fm/"
   },
   {
-    "brand_name": "Oh Canada Candy",
+    "brand_name": "Castos",
     "brand_size": "emerging",
-    "category": "Food & Drinks / Candy / Snacks",
+    "category": "Podcasting / Audio / Creator Tools / Software",
+    "commission": "25% on podcast hosting spend for the first 12 months; 10% on production and launch services",
+    "website": "https://castos.com/",
+    "apply_url": "https://castos.com/affiliates/",
+    "source_url": "https://castos.com/affiliates/"
+  },
+  {
+    "brand_name": "Snappa",
+    "brand_size": "emerging",
+    "category": "Design / Graphics / Social Media / Creator Tools",
     "commission": "Not publicly listed",
-    "website": "https://ohcanadacandy.com/",
-    "apply_url": "https://ohcanadacandy.com/pages/collab",
-    "source_url": "https://ohcanadacandy.com/pages/collab"
+    "website": "https://snappa.com/",
+    "apply_url": "https://snappa.com/affiliates",
+    "source_url": "https://kb.snappa.com/article/40-do-you-have-an-affiliate-program"
   },
   {
-    "brand_name": "EATABLE Popcorn",
+    "brand_name": "Krisp",
     "brand_size": "emerging",
-    "category": "Food & Drinks / Snacks / Gourmet Popcorn",
-    "commission": "Not publicly listed",
-    "website": "https://eatable.com/",
-    "apply_url": "https://eatable.kickbooster.me/",
-    "source_url": "https://eatable.com/pages/eatable-creators"
-  },
-  {
-    "brand_name": "GamerTech",
-    "brand_size": "emerging",
-    "category": "Gaming / Custom PCs / Consumer Tech",
-    "commission": "Not publicly listed",
-    "website": "https://gamertech.ca/",
-    "apply_url": "https://gamertech.ca/pages/affiliate",
-    "source_url": "https://gamertech.ca/pages/affiliate"
-  },
-  {
-    "brand_name": "Carzan Meats",
-    "brand_size": "emerging",
-    "category": "Food & Drinks / Beef Jerky / Snacks",
-    "commission": "Not publicly listed",
-    "website": "https://carzanmeats.ca/",
-    "apply_url": "https://carzanmeats.ca/pages/collab",
-    "source_url": "https://carzanmeats.ca/pages/collab"
+    "category": "AI / Audio / Meeting Tools / Creator Software",
+    "commission": "Up to 30% recurring commission for the first 12 months",
+    "website": "https://krisp.ai/",
+    "apply_url": "https://krisp.ai/affiliate-program/",
+    "source_url": "https://krisp.ai/affiliate-program/"
   }
 ]
