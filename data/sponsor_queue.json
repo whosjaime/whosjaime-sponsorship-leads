@@ -1,1 +1,33 @@
-[]
+[
+  {
+    "brand_name": "Micro Center",
+    "brand_domain": "microcenter.com",
+    "source_platform": "YouTube",
+    "creator_name": "TechLinked",
+    "creator_url": "https://www.youtube.com/@techlinked",
+    "creator_channel_id": "UCEEi1JkjTfZagskOCA",
+    "creator_subscribers": 0,
+    "creator_genre": "Tech",
+    "creator_tags": ["Tech", "Gaming", "Consumer Tech"],
+    "video_id": "eLCF6LdkzAQ",
+    "video_url": "https://www.youtube.com/watch?v=eLCF6LdkzAQ",
+    "video_title": "This Just Keeps Happening",
+    "sponsored_date": "2026-07-21",
+    "evidence": "TechLinked's public English-language YouTube video description explicitly thanks Micro Center for sponsoring the video and links its Back to School promotion.",
+    "paid_product_placement": true,
+    "brand_partner_channel_id": "",
+    "sponsor_category": "Consumer Tech",
+    "sponsor_subcategory": "Computer Hardware",
+    "contact_name": "",
+    "contact_title": "Influencer Partnerships",
+    "contact_email": "influencers@microcenter.com",
+    "email_type": "Influencer Marketing",
+    "contact_source": "https://community.microcenter.com/discussion/14936/sponsership",
+    "lead_score": 96,
+    "lead_temperature": "Very Hot",
+    "sponsorship_key": "youtube:elcf6ldkzaq:microcenter.com",
+    "brand_key": "domain:microcenter.com",
+    "signals": ["Daily researched sponsorship", "verified public sponsorship evidence", "YouTube paid product placement"],
+    "date_found": "2026-08-17"
+  }
+]
