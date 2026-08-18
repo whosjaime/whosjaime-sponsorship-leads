@@ -1,0 +1,85 @@
+name: Sponsor Catch-Up 2026-08-18
+
+on:
+  schedule:
+    - cron: "*/5 * * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sponsor-lead-queue
+  cancel-in-progress: false
+
+jobs:
+  catch-up:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - name: Check date and completion marker
+        id: gate
+        shell: bash
+        run: |
+          TORONTO_DATE=$(TZ=America/Toronto date +%F)
+          if [ "$TORONTO_DATE" != "2026-08-18" ]; then
+            echo "run=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          if [ -f data/catchup_2026-08-18.done ]; then
+            echo "run=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          echo "run=true" >> "$GITHUB_OUTPUT"
+      - uses: actions/setup-python@v5
+        if: steps.gate.outputs.run == 'true'
+        with:
+          python-version: "3.11"
+      - run: pip install -r requirements.txt
+        if: steps.gate.outputs.run == 'true'
+      - name: Rebuild sponsor queue from researched inventory
+        if: steps.gate.outputs.run == 'true'
+        env:
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+          CREATORDB_API_KEY: ${{ secrets.CREATORDB_API_KEY }}
+          SPONSOR_MIN_LEAD_SCORE: ${{ vars.SPONSOR_MIN_LEAD_SCORE || '70' }}
+          SPONSOR_MAX_AGE_DAYS: ${{ vars.SPONSOR_MAX_AGE_DAYS || '30' }}
+          CREATORDB_PAGE_SIZE: ${{ vars.CREATORDB_PAGE_SIZE || '50' }}
+          SPONSOR_SEARCH_REGION: ${{ vars.SPONSOR_SEARCH_REGION || 'US' }}
+          SPONSOR_SEARCH_LANGUAGE: ${{ vars.SPONSOR_SEARCH_LANGUAGE || 'en' }}
+        run: python src/run_sponsor_discovery_batch.py
+      - name: Dispatch seven missed sponsors to Monday and Discord
+        if: steps.gate.outputs.run == 'true'
+        env:
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+          SPONSOR_MONDAY_TOKEN: ${{ secrets.SPONSOR_MONDAY_TOKEN }}
+          SPONSOR_MONDAY_API_KEY: ${{ secrets.SPONSOR_MONDAY_API_KEY }}
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          SPONSOR_MONDAY_BOARD_ID: ${{ vars.SPONSOR_MONDAY_BOARD_ID || '18424367188' }}
+          SPONSOR_MONDAY_GROUP_ID: ${{ vars.SPONSOR_MONDAY_GROUP_ID || 'topics' }}
+          SPONSOR_MIN_LEAD_SCORE: ${{ vars.SPONSOR_MIN_LEAD_SCORE || '70' }}
+          SPONSOR_MAX_AGE_DAYS: ${{ vars.SPONSOR_MAX_AGE_DAYS || '30' }}
+        shell: bash
+        run: |
+          for i in $(seq 1 7); do
+            if [ ! -s data/sponsor_queue.json ] || [ "$(cat data/sponsor_queue.json)" = "[]" ]; then
+              break
+            fi
+            python src/run_sponsor_queue_dispatch.py
+          done
+      - name: Mark completed and persist sponsor state
+        if: steps.gate.outputs.run == 'true'
+        shell: bash
+        run: |
+          touch data/catchup_2026-08-18.done
+          git config user.name "sponsor-queue-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/sponsor_queue.json data/sent_sponsor_keys.json data/catchup_2026-08-18.done
+          if git diff --cached --quiet; then
+            exit 0
+          fi
+          git commit -m "Complete Aug 18 sponsor catch-up [skip ci]"
+          git pull --rebase origin main
+          git push origin HEAD:main
