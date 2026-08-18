@@ -286,5 +286,53 @@
     "paid_product_placement": true,
     "contact_email": "marketing@tomtoc.com",
     "contact_source_url": "https://jp.tomtoc.com/pages/ambassador-apply"
+  },
+  {
+    "brand_name": "Sim-Lab",
+    "brand_domain": "sim-lab.eu",
+    "creator_name": "Rory Alexander",
+    "creator_url": "https://www.youtube.com/@RoryAlexander",
+    "creator_channel_id": "",
+    "creator_genre": "Gaming / Sim Racing",
+    "creator_tags": ["gaming", "sim racing", "racing", "cockpits", "gaming hardware", "physical consumer tech"],
+    "video_url": "https://youtube.com/watch?v=c-acNZnKEZ8",
+    "video_title": "🔴live - Gran Turismo 7: Brand New Daily Races",
+    "sponsored_date": "2026-08-03",
+    "evidence": "SponsorRadar identifies Sim-Lab as an active 2026 gaming sponsor and records its Sim-Lab P1X Pro creator offer in Rory Alexander's August 3, 2026 English-language YouTube video. Sim-Lab sells tangible sim-racing cockpits, wheels and pedals. Its official affiliate program is active for social media and video creators and publishes affiliates@sim-lab.eu. The permanent GitHub sent/block ledger and current research inventory were rechecked immediately before addition and contained no Sim-Lab key.",
+    "paid_product_placement": true,
+    "contact_email": "affiliates@sim-lab.eu",
+    "contact_source_url": "https://sim-lab.us/pages/affiliates"
+  },
+  {
+    "brand_name": "BLUETTI",
+    "brand_domain": "bluettipower.com",
+    "creator_name": "jay legere",
+    "creator_url": "https://www.youtube.com/@jaylegere",
+    "creator_channel_id": "",
+    "creator_genre": "Lifestyle / Vlog / Off-Grid",
+    "creator_tags": ["lifestyle", "vlog", "off-grid", "outdoors", "portable power", "physical consumer tech"],
+    "video_url": "https://youtube.com/watch?v=6V0cDL8-Qp8",
+    "video_title": "2 Years Full-Time Outdoor YouTuber. Pleasure, Pain, Finances and the Future",
+    "sponsored_date": "2026-08-09",
+    "evidence": "SponsorRadar identifies BLUETTI as the sponsor of jay legere's August 9, 2026 English-language YouTube video and records repeated current BLUETTI creator spend on the channel. BLUETTI sells tangible portable power stations and solar-energy hardware. Its official contact page specifically publishes marketing@bluetti.com for Press, Marketing and Influencer Cooperation, and its active affiliate program explicitly recruits influencers. The permanent GitHub sent/block ledger and current research inventory were rechecked immediately before addition and contained no BLUETTI key.",
+    "paid_product_placement": true,
+    "contact_email": "marketing@bluetti.com",
+    "contact_source_url": "https://www.bluettipower.com/pages/contact-us/"
+  },
+  {
+    "brand_name": "Reolink",
+    "brand_domain": "reolink.com",
+    "creator_name": "Wanderer001 Reviews",
+    "creator_url": "https://www.youtube.com/@Wanderer001Reviews",
+    "creator_channel_id": "",
+    "creator_genre": "Physical Consumer Tech / Home",
+    "creator_tags": ["physical consumer tech", "security cameras", "smart home", "home", "reviews", "consumer hardware"],
+    "video_url": "https://youtube.com/watch?v=qxM5BOd6eK8",
+    "video_title": "Reolink Video Doorbell 2nd Gen Review - Everything You Need To Know",
+    "sponsored_date": "2026-08-08",
+    "evidence": "SponsorRadar identifies Reolink as an active 2026 creator sponsor and records an August 8, 2026 English-language YouTube promotion by Wanderer001 Reviews with a creator-specific Reolink discount code. Reolink sells tangible security cameras, doorbells and NVR hardware. Its official affiliate program explicitly recruits YouTube channels and publishes affiliate@reolink.com as the affiliate manager contact. The permanent GitHub sent/block ledger and current research inventory were rechecked immediately before addition and contained no Reolink key.",
+    "paid_product_placement": true,
+    "contact_email": "affiliate@reolink.com",
+    "contact_source_url": "https://reolink.com/__/affiliate/"
   }
 ]
