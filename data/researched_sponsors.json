@@ -158,5 +158,21 @@
     "paid_product_placement": true,
     "contact_email": "affiliates@justbats.com",
     "contact_source_url": "https://www.justbats.com/affiliates/"
+  },
+  {
+    "brand_name": "Ritual",
+    "brand_domain": "ritual.com",
+    "creator_name": "Nick Viall",
+    "creator_url": "https://www.youtube.com/@viallfiles",
+    "creator_channel_id": "",
+    "creator_genre": "Entertainment / Podcast / Lifestyle",
+    "creator_tags": ["entertainment", "podcast", "lifestyle", "wellness", "health"],
+    "video_url": "https://www.youtube.com/watch?v=QNeHWJafFkE",
+    "video_title": "In The City Reunion W/ Kenny And Whitney, Monica & Alex Talk The Ultimatum",
+    "sponsored_date": "2026-07-21",
+    "evidence": "SponsorRadar records Ritual sponsoring Nick Viall's July 21, 2026 English-language YouTube video with a creator-specific Ritual offer. Ritual's official Partner With Us page says it works with creators, reviews affiliate applications on an ongoing basis, publishes affiliates@ritual.com for affiliate questions, and partnerships@ritual.com for other partnership ideas. The permanent GitHub sent/block ledger was checked before addition and contains no Ritual brand or ritual.com domain key.",
+    "paid_product_placement": true,
+    "contact_email": "partnerships@ritual.com",
+    "contact_source_url": "https://ritual.com/pages/partner-with-us"
   }
 ]
