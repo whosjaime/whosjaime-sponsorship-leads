@@ -1,1 +1,33 @@
-[]
+[
+  {
+    "brand_name": "LMNT",
+    "brand_domain": "drinklmnt.com",
+    "source_platform": "YouTube",
+    "creator_name": "Lex Fridman",
+    "creator_url": "https://www.youtube.com/@lexfridman",
+    "creator_channel_id": "UCSHZKyawb77ixDdsGog4iWA",
+    "creator_subscribers": 0,
+    "creator_genre": "Podcast / Interviews",
+    "creator_tags": ["podcast", "interviews", "science", "health", "food and beverage"],
+    "video_id": "XyXBwO5jYpw",
+    "video_url": "https://www.youtube.com/watch?v=XyXBwO5jYpw",
+    "video_title": "Gary Gallagher: American Civil War, Slavery, Lincoln, Grant & Lee | Lex Fridman Podcast #499",
+    "sponsored_date": "2026-07-28",
+    "evidence": "Public English-language episode sponsorship evidence. Qualified outreach contact: Blake Brown, Head of Health Partnerships / Senior Partnerships Manager at LMNT; public partnership-team context provides blake@drinklmnt.com.",
+    "paid_product_placement": true,
+    "brand_partner_channel_id": "",
+    "sponsor_category": "Food & Beverage",
+    "sponsor_subcategory": "Hydration",
+    "contact_name": "Blake Brown",
+    "contact_title": "Head of Health Partnerships / Senior Partnerships Manager",
+    "contact_email": "blake@drinklmnt.com",
+    "email_type": "Partnerships",
+    "contact_source": "https://www.linkedin.com/in/robb-wolf-008b996a",
+    "lead_score": 100,
+    "lead_temperature": "Very Hot",
+    "sponsorship_key": "youtube:xyxbwo5jypw:drinklmnt.com",
+    "brand_key": "domain:drinklmnt.com",
+    "signals": ["Daily researched sponsorship", "verified public sponsorship evidence", "verified named public work email", "YouTube paid product placement"],
+    "date_found": "2026-08-17"
+  }
+]
