@@ -126,5 +126,37 @@
     "paid_product_placement": true,
     "contact_email": "bizdev@eightsleep.com",
     "contact_source_url": "https://www.eightsleep.com/de/referral-terms-conditions/"
+  },
+  {
+    "brand_name": "Vessi",
+    "brand_domain": "vessi.com",
+    "creator_name": "Foundation Disc Golf",
+    "creator_url": "https://www.youtube.com/@foundationdg",
+    "creator_channel_id": "UC_p7Tr6a_LWrIFIdhkYFm3A",
+    "creator_genre": "Sports / Lifestyle",
+    "creator_tags": ["sports", "lifestyle", "travel", "footwear", "outdoors"],
+    "video_url": "https://www.youtube.com/watch?v=gLvomqLpEwE",
+    "video_title": "Can 20 Year Old Gyro Beat New MVP Plastic?!",
+    "sponsored_date": "2026-07-29",
+    "evidence": "SponsorRadar lists Vessi as the sponsor/promotional partner on Foundation Disc Golf's July 29, 2026 English-language YouTube video, with a creator-specific Vessi offer in the description. Vessi's official contact page publishes partnerships@vessi.com specifically for partnership enquiries and separately lists its ambassador program.",
+    "paid_product_placement": true,
+    "contact_email": "partnerships@vessi.com",
+    "contact_source_url": "https://vessi.com/pages/contact"
+  },
+  {
+    "brand_name": "EcoFlow",
+    "brand_domain": "ecoflow.com",
+    "creator_name": "WayPoint Survival",
+    "creator_url": "https://www.youtube.com/@WayPointSurvival",
+    "creator_channel_id": "",
+    "creator_genre": "Survival / Outdoors / Tech",
+    "creator_tags": ["survival", "outdoors", "physical consumer tech", "power stations", "preparedness"],
+    "video_url": "https://www.youtube.com/watch?v=hqWERG-jPSU",
+    "video_title": "Ecoflow Delta Pro Ultra Review - Get Ready Now!",
+    "sponsored_date": "2026-07-30",
+    "evidence": "SponsorRadar lists EcoFlow as the sponsor/promotional partner on WayPoint Survival's July 30, 2026 English-language YouTube video. EcoFlow sells tangible portable power stations and home power hardware. EcoFlow's official U.S. contact page publishes Influencer@ecoflow.com specifically for YouTube and TikTok influencer collaboration, plus contentpartners@ecoflow.com for social-media content partnerships.",
+    "paid_product_placement": true,
+    "contact_email": "Influencer@ecoflow.com",
+    "contact_source_url": "https://www.ecoflow.com/us/contact-us"
   }
 ]
