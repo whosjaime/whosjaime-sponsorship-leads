@@ -8,8 +8,8 @@ permissions:
   contents: write
 
 concurrency:
-  group: sponsor-lead-queue
-  cancel-in-progress: false
+  group: sponsor-catchup-2026-08-18
+  cancel-in-progress: true
 
 jobs:
   catch-up:
