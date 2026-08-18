@@ -1,1 +1,33 @@
-[]
+[
+  {
+    "brand_name": "Gamer Advantage",
+    "brand_domain": "gameradvantage.com",
+    "source_platform": "YouTube",
+    "creator_name": "Mike Rxqe",
+    "creator_url": "https://www.youtube.com/@rxqe",
+    "creator_channel_id": "",
+    "creator_subscribers": 0,
+    "creator_genre": "Gaming",
+    "creator_tags": ["gaming", "eyewear", "blue light glasses", "PC", "streaming"],
+    "video_id": "I2m7lwDxFdc",
+    "video_url": "https://www.youtube.com/watch?v=I2m7lwDxFdc",
+    "video_title": "THE BLACK OPS 1 and 2 PC EXPERIENCE",
+    "sponsored_date": "2026-08-07",
+    "evidence": "SponsorRadar records Gamer Advantage promotion/sponsorship activity on Mike Rxqe's August 7, 2026 English-language YouTube video with a creator-specific Gamer Advantage referral and discount offer. Gamer Advantage's official Partner Program reports hundreds of active partners, creator campaigns and sponsorship opportunities, and directs applications to partnerships@gameradvantage.com.",
+    "paid_product_placement": true,
+    "brand_partner_channel_id": "",
+    "sponsor_category": "Gaming",
+    "sponsor_subcategory": "Gaming Eyewear",
+    "contact_name": "",
+    "contact_title": "",
+    "contact_email": "partnerships@gameradvantage.com",
+    "email_type": "Partnerships",
+    "contact_source": "https://gameradvantage.com/pages/partner",
+    "lead_score": 100,
+    "lead_temperature": "Very Hot",
+    "sponsorship_key": "youtube:i2m7lwdxfdc:gameradvantage.com",
+    "brand_key": "domain:gameradvantage.com",
+    "signals": ["verified public sponsorship evidence", "Daily researched sponsorship", "YouTube paid product placement", "sponsor domain found"],
+    "date_found": "2026-08-18"
+  }
+]
