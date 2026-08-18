@@ -190,5 +190,21 @@
     "paid_product_placement": true,
     "contact_email": "affiliate@xgimi.com",
     "contact_source_url": "https://us.xgimi.com/pages/affiliate-guide"
+  },
+  {
+    "brand_name": "Cure Hydration",
+    "brand_domain": "curehydration.com",
+    "creator_name": "Beth Grace Moore",
+    "creator_url": "https://www.youtube.com/@bethgracemoore",
+    "creator_channel_id": "",
+    "creator_genre": "Lifestyle / Vlog / Wellness",
+    "creator_tags": ["lifestyle", "vlog", "wellness", "food/drink", "family", "hydration"],
+    "video_url": "https://youtube.com/watch?v=mNw6nfTMPsE",
+    "video_title": "Second Trimester Week In My Life | Home Reset + Boston Girls Trip",
+    "sponsored_date": "2026-08-13",
+    "evidence": "SponsorRadar identifies Cure Hydration as the sponsor of Beth Grace Moore's August 13, 2026 English-language YouTube video. Cure Hydration sells physical electrolyte drink mixes and its official site currently promotes an Ambassador program with ambassador@curehydration.com as the dedicated outreach contact. The permanent GitHub sent/block ledger was checked immediately before addition and contained no Cure Hydration or curehydration.com key.",
+    "paid_product_placement": true,
+    "contact_email": "ambassador@curehydration.com",
+    "contact_source_url": "https://www.curehydration.com/pages/contact"
   }
 ]
