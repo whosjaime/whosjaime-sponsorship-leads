@@ -1,1 +1,33 @@
-[]
+[
+  {
+    "brand_name": "MAINGEAR",
+    "brand_domain": "maingear.com",
+    "source_platform": "YouTube",
+    "creator_name": "FightinCowboy",
+    "creator_url": "https://www.youtube.com/@FightinCowboy",
+    "creator_channel_id": "",
+    "creator_subscribers": 0,
+    "creator_genre": "Gaming",
+    "creator_tags": ["gaming", "PC hardware", "RPG", "gameplay", "creator tech"],
+    "video_id": "IDhKk_lUC5Y",
+    "video_url": "https://www.youtube.com/watch?v=IDhKk_lUC5Y",
+    "video_title": "Beast Of Reincarnation - Let's Play Part 35: The Capital",
+    "sponsored_date": "2026-08-14",
+    "evidence": "SponsorRadar records MAINGEAR sponsoring FightinCowboy's August 14, 2026 English-language YouTube video, whose description promotes MAINGEAR gaming PCs through a creator-specific link. MAINGEAR's official sponsorship FAQ confirms it reviews sponsorship applications and directs applicants to affiliate@maingear.com.",
+    "paid_product_placement": true,
+    "brand_partner_channel_id": "",
+    "sponsor_category": "Gaming",
+    "sponsor_subcategory": "Gaming PC Hardware",
+    "contact_name": "",
+    "contact_title": "",
+    "contact_email": "affiliate@maingear.com",
+    "email_type": "Affiliate Partnerships",
+    "contact_source": "https://help.maingear.com/article/41-does-maingear-offer-sponsorships",
+    "lead_score": 95,
+    "lead_temperature": "Very Hot",
+    "sponsorship_key": "youtube:idhkk_luc5y:maingear.com",
+    "brand_key": "domain:maingear.com",
+    "signals": ["Daily researched sponsorship", "verified public sponsorship evidence", "sponsor domain found"],
+    "date_found": "2026-08-18"
+  }
+]
