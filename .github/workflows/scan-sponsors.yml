@@ -14,7 +14,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: sponsor-lead-queue
+  group: sponsor-queue-dispatch
   cancel-in-progress: false
 
 jobs:
