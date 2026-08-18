@@ -1,182 +1,182 @@
 [
   {
-    "brand_name": "Logitech",
+    "brand_name": "eBay",
     "brand_size": "large",
-    "category": "Gaming / Consumer Tech / Creator Gear / PC Accessories",
-    "commission": "4%–10% standard commission depending on product brand",
-    "website": "https://www.logitech.com/",
-    "apply_url": "https://www.logitech.com/en-us/promo/affiliate-program.html",
-    "source_url": "https://www.logitech.com/en-us/promo/affiliate-program.html"
+    "category": "Ecommerce / Consumer Tech / Gaming / Marketplace",
+    "commission": "Varies by category; commissions can be up to 4% of the item sale price",
+    "website": "https://www.ebay.com/",
+    "apply_url": "https://partnernetwork.ebay.com/",
+    "source_url": "https://www.ebay.com/sellercenter/growth/ebay-partner-network"
   },
   {
-    "brand_name": "HP",
+    "brand_name": "Microsoft",
     "brand_size": "large",
-    "category": "Consumer Tech / Gaming / PCs / Laptops / Accessories",
+    "category": "Gaming / Consumer Tech / Software / Microsoft Store",
     "commission": "Not publicly listed",
-    "website": "https://www.hp.com/",
-    "apply_url": "https://www.hp.com/us-en/shop/cv/affiliate-program",
-    "source_url": "https://www.hp.com/us-en/shop/cv/affiliate-program"
+    "website": "https://www.microsoft.com/",
+    "apply_url": "https://partner.microsoft.com/en-us/explore/consumer",
+    "source_url": "https://learn.microsoft.com/en-us/windows/uwp/monetize/run-app-experiments-with-a-b-testing"
   },
   {
-    "brand_name": "DJI",
+    "brand_name": "Etsy",
     "brand_size": "large",
-    "category": "Consumer Tech / Cameras / Drones / Creator Gear",
-    "commission": "2% on eligible drone products and 5% on eligible handheld products",
-    "website": "https://www.dji.com/",
-    "apply_url": "https://u.dji.com/",
-    "source_url": "https://u.dji.com/en/quick_start_guide"
+    "category": "Ecommerce / Lifestyle / Creator Marketplace",
+    "commission": "Not publicly listed",
+    "website": "https://www.etsy.com/",
+    "apply_url": "https://www.etsy.com/affiliates",
+    "source_url": "https://www.etsy.com/affiliates"
   },
   {
-    "brand_name": "Insta360",
+    "brand_name": "Udemy",
     "brand_size": "large",
-    "category": "Consumer Tech / Cameras / Creator Gear / Action Cameras",
-    "commission": "5% average commission",
-    "website": "https://www.insta360.com/",
-    "apply_url": "https://store.insta360.com/ca/affiliate/intro",
-    "source_url": "https://store.insta360.com/ca/affiliate/intro"
+    "category": "Software / Education / Creator Tools / Online Courses",
+    "commission": "Not publicly listed",
+    "website": "https://www.udemy.com/",
+    "apply_url": "https://www.udemy.com/affiliate/",
+    "source_url": "https://www.udemy.com/affiliate/"
   },
   {
-    "brand_name": "Vitamix",
+    "brand_name": "Coursera",
     "brand_size": "large",
-    "category": "Food & Drinks / Kitchen Appliances / Lifestyle",
+    "category": "Software / Education / Creator Tools / Online Courses",
+    "commission": "15%–45% baseline commission on eligible purchases",
+    "website": "https://www.coursera.org/",
+    "apply_url": "https://www.coursera.org/about/affiliates",
+    "source_url": "https://www.coursera.org/about/affiliates"
+  },
+  {
+    "brand_name": "Green Man Gaming",
+    "brand_size": "mid-size",
+    "category": "Gaming / PC Games / Digital Games",
+    "commission": "Starts at up to 5% per sale; 10% on Green Man Gaming Bundle sales",
+    "website": "https://www.greenmangaming.com/",
+    "apply_url": "https://www.greenmangaming.com/affiliates/",
+    "source_url": "https://www.greenmangaming.com/affiliates/"
+  },
+  {
+    "brand_name": "Eneba",
+    "brand_size": "mid-size",
+    "category": "Gaming / Digital Games / Gift Cards / Marketplace",
+    "commission": "2%–5% standard revenue share per referred sale, with potential increases for performance",
+    "website": "https://www.eneba.com/",
+    "apply_url": "https://www.eneba.com/us/become-affiliate",
+    "source_url": "https://www.eneba.com/us/become-affiliate"
+  },
+  {
+    "brand_name": "Kinguin",
+    "brand_size": "mid-size",
+    "category": "Gaming / Digital Games / Software Marketplace",
     "commission": "Not publicly listed",
-    "website": "https://www.vitamix.com/ca/en_us/",
-    "apply_url": "https://www.vitamix.com/ca/en_us/owners-resources/affiliates",
-    "source_url": "https://www.vitamix.com/ca/en_us/owners-resources/affiliates"
+    "website": "https://www.kinguin.net/",
+    "apply_url": "https://www.kinguin.net/campaign/partners",
+    "source_url": "https://www.kinguin.net/campaign/partners"
   },
   {
-    "brand_name": "RØDE",
+    "brand_name": "Proton",
     "brand_size": "mid-size",
-    "category": "Consumer Tech / Audio / Microphones / Creator Gear",
-    "commission": "15% commission on affiliate sales",
-    "website": "https://rode.com/",
-    "apply_url": "https://help.rode.com/hc/en-us/articles/14241968264079-How-to-Request-Sponsorship-or-Partnership-with-R%C3%98DE",
-    "source_url": "https://help.rode.com/hc/en-us/articles/14241968264079-How-to-Request-Sponsorship-or-Partnership-with-R%C3%98DE"
+    "category": "Software / Privacy / VPN / Email / Cloud Storage",
+    "commission": "30% on many new subscriptions and renewals; Proton VPN pays 100% on new 1-month plans and 40% on new 1- or 2-year plans",
+    "website": "https://proton.me/",
+    "apply_url": "https://proton.me/partners/affiliates",
+    "source_url": "https://proton.me/partners/affiliates"
   },
   {
-    "brand_name": "Belkin",
+    "brand_name": "pCloud",
     "brand_size": "mid-size",
-    "category": "Consumer Tech / Mobile Accessories / Chargers / Creator Gear",
-    "commission": "Up to 8% commission on sales",
-    "website": "https://www.belkin.com/",
-    "apply_url": "https://www.belkin.com/company/affiliates/",
-    "source_url": "https://www.belkin.com/company/affiliates/"
+    "category": "Software / Cloud Storage / Creator Tools / Productivity",
+    "commission": "20% of one-time Lifetime plan payments or 20% recurring on monthly and annual subscription payments",
+    "website": "https://www.pcloud.com/",
+    "apply_url": "https://www.pcloud.com/affiliate",
+    "source_url": "https://www.pcloud.com/affiliate"
   },
   {
-    "brand_name": "PowerA",
+    "brand_name": "AVerMedia",
     "brand_size": "mid-size",
-    "category": "Gaming / Controllers / Console Accessories",
-    "commission": "Up to 10% commission on sales",
-    "website": "https://www.powera.com/",
-    "apply_url": "https://www.powera.com/affiliates/",
-    "source_url": "https://www.powera.com/affiliates/"
-  },
-  {
-    "brand_name": "Thrustmaster",
-    "brand_size": "mid-size",
-    "category": "Gaming / Racing & Flight Sim / Controllers / PC Gear",
-    "commission": "3%–10% commission on eligible eShop sales",
-    "website": "https://www.thrustmaster.com/",
-    "apply_url": "https://affiliate.thrustmaster.com/",
-    "source_url": "https://www.thrustmaster.com/fr-ca/affiliate/"
-  },
-  {
-    "brand_name": "REDMAGIC",
-    "brand_size": "mid-size",
-    "category": "Gaming / Consumer Tech / Gaming Phones / Mobile Gear",
+    "category": "Consumer Tech / Streaming / Capture Cards / Creator Gear",
     "commission": "Not publicly listed",
-    "website": "https://ca.redmagic.gg/",
-    "apply_url": "https://ca.redmagic.gg/pages/redmagic-affiliate-program",
-    "source_url": "https://ca.redmagic.gg/pages/redmagic-affiliate-program"
+    "website": "https://www.avermedia.com/",
+    "apply_url": "https://www.avermedia.com/event/partnership_program/",
+    "source_url": "https://www.avermedia.com/event/partnership_program/"
   },
   {
-    "brand_name": "Filmora",
+    "brand_name": "KontrolFreek",
     "brand_size": "mid-size",
-    "category": "Software / Video Editing / Creator Tools / AI",
-    "commission": "30%–50% on desktop products; 30% on mobile products",
-    "website": "https://filmora.wondershare.com/",
-    "apply_url": "https://filmora.wondershare.com/creator-monetization-program.html",
-    "source_url": "https://filmora.wondershare.com/creator-monetization-program.html"
+    "category": "Gaming / Controllers / Console Accessories / Creator Program",
+    "commission": "10% royalty on sales driven through a creator's unique discount code or link",
+    "website": "https://www.kontrolfreek.com/",
+    "apply_url": "https://www.kontrolfreek.com/pages/creators",
+    "source_url": "https://www.kontrolfreek.com/pages/creators"
   },
   {
-    "brand_name": "Voicemod",
+    "brand_name": "XSplit",
     "brand_size": "mid-size",
-    "category": "Gaming / Streaming / Audio / Creator Tools",
-    "commission": "5% revenue share at Affiliate tier; 20% at Partner tier",
-    "website": "https://www.voicemod.net/",
-    "apply_url": "https://partners.voicemod.net/signup",
-    "source_url": "https://www.voicemod.net/en/creator-program/"
+    "category": "Streaming / Software / Creator Tools / Broadcasting",
+    "commission": "20% revenue share on every payment made by a referral, including recurring subscriptions",
+    "website": "https://www.xsplit.com/",
+    "apply_url": "https://partner.xsplit.com/signup",
+    "source_url": "https://www.xsplit.com/affiliate"
   },
   {
-    "brand_name": "AppSumo",
-    "brand_size": "mid-size",
-    "category": "Software / Creator Tools / Business Tools / Marketplace",
-    "commission": "100% of a new customer's sale up to $50; returning customer commissions vary from 0%–15%",
-    "website": "https://appsumo.com/",
-    "apply_url": "https://appsumo.com/p/affiliates",
-    "source_url": "https://appsumo.com/p/affiliates"
-  },
-  {
-    "brand_name": "ALOHA",
+    "brand_name": "EPOMAKER",
     "brand_size": "emerging",
-    "category": "Food & Drinks / Protein Bars / Drinks / Wellness",
+    "category": "Gaming / Consumer Tech / Mechanical Keyboards / PC Gear",
+    "commission": "5% commission on each referred sale",
+    "website": "https://epomaker.com/",
+    "apply_url": "https://epomaker.com/pages/standard-affiliate",
+    "source_url": "https://epomaker.com/pages/standard-affiliate"
+  },
+  {
+    "brand_name": "NuPhy",
+    "brand_size": "emerging",
+    "category": "Gaming / Consumer Tech / Mechanical Keyboards / PC Gear",
     "commission": "Not publicly listed",
-    "website": "https://aloha.com/",
-    "apply_url": "https://aloha.com/en-ca/pages/aloha-collective",
-    "source_url": "https://aloha.com/en-ca/pages/aloha-collective"
+    "website": "https://nuphy.com/",
+    "apply_url": "https://nuphy.com/pages/register-affiliate-account",
+    "source_url": "https://nuphy.com/pages/register-affiliate-account"
   },
   {
-    "brand_name": "SocialBee",
+    "brand_name": "Linsoul Audio",
     "brand_size": "emerging",
-    "category": "Software / Social Media / Creator Tools",
-    "commission": "20% monthly recurring commission in perpetuity on tool plans; 10% on ConciergeBee services",
-    "website": "https://socialbee.com/",
-    "apply_url": "https://socialbee.com/partner/affiliate/",
-    "source_url": "https://socialbee.com/partner/affiliate/"
+    "category": "Consumer Tech / Audio / Headphones / Creator Gear",
+    "commission": "5%–18% per referred sale based on performance",
+    "website": "https://www.linsoul.com/",
+    "apply_url": "https://www.linsoul.com/pages/affiliate-program",
+    "source_url": "https://www.linsoul.com/pages/affiliate-program"
   },
   {
-    "brand_name": "Murf AI",
+    "brand_name": "Audio46",
     "brand_size": "emerging",
-    "category": "AI / Audio / Voiceover / Creator Tools",
-    "commission": "20% recurring commission for up to 24 months",
-    "website": "https://murf.ai/",
-    "apply_url": "https://murf.ai/partner-with-us/affiliate",
-    "source_url": "https://murf.ai/partner-with-us/affiliate"
-  },
-  {
-    "brand_name": "Captivate.fm",
-    "brand_size": "emerging",
-    "category": "Podcasting / Audio / Creator Tools / Software",
-    "commission": "25% recurring commission for the lifetime of each referred podcaster",
-    "website": "https://www.captivate.fm/",
-    "apply_url": "https://affiliate.captivate.fm/",
-    "source_url": "https://affiliate.captivate.fm/"
-  },
-  {
-    "brand_name": "Castos",
-    "brand_size": "emerging",
-    "category": "Podcasting / Audio / Creator Tools / Software",
-    "commission": "25% on podcast hosting spend for the first 12 months; 10% on production and launch services",
-    "website": "https://castos.com/",
-    "apply_url": "https://castos.com/affiliates/",
-    "source_url": "https://castos.com/affiliates/"
-  },
-  {
-    "brand_name": "Snappa",
-    "brand_size": "emerging",
-    "category": "Design / Graphics / Social Media / Creator Tools",
+    "category": "Consumer Tech / Audio / Headphones / Creator Gear",
     "commission": "Not publicly listed",
-    "website": "https://snappa.com/",
-    "apply_url": "https://snappa.com/affiliates",
-    "source_url": "https://kb.snappa.com/article/40-do-you-have-an-affiliate-program"
+    "website": "https://audio46.com/",
+    "apply_url": "https://audio46.com/pages/affiliate",
+    "source_url": "https://audio46.com/pages/affiliate"
   },
   {
-    "brand_name": "Krisp",
+    "brand_name": "CableMod",
     "brand_size": "emerging",
-    "category": "AI / Audio / Meeting Tools / Creator Software",
-    "commission": "Up to 30% recurring commission for the first 12 months",
-    "website": "https://krisp.ai/",
-    "apply_url": "https://krisp.ai/affiliate-program/",
-    "source_url": "https://krisp.ai/affiliate-program/"
+    "category": "Gaming / Consumer Tech / PC Gear / Custom Cables",
+    "commission": "10% on keyboard cables and 2% on other qualifying Global Store products",
+    "website": "https://cablemod.com/",
+    "apply_url": "https://store.cablemod.com/affiliate/",
+    "source_url": "https://store.cablemod.com/affiliate-terms-conditions/"
+  },
+  {
+    "brand_name": "Insense",
+    "brand_size": "emerging",
+    "category": "Software / Influencer Marketing / UGC / Creator Tools",
+    "commission": "Up to $150 per self-service client referral; qualifying service referrals pay $270–$420",
+    "website": "https://insense.pro/",
+    "apply_url": "https://insense.pro/affiliates-influencers",
+    "source_url": "https://insense.pro/affiliates-influencers"
+  },
+  {
+    "brand_name": "Pulsar Gaming Gears",
+    "brand_size": "emerging",
+    "category": "Gaming / Consumer Tech / Mice / Keyboards / PC Gear",
+    "commission": "Up to 5% commission on referred sales",
+    "website": "https://www.pulsar.gg/",
+    "apply_url": "https://eu.pulsar.gg/pages/affiliate",
+    "source_url": "https://eu.pulsar.gg/pages/affiliate"
   }
 ]
