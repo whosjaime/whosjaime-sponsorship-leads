@@ -1,21 +1,5 @@
 [
   {
-    "brand_name": "Micro Center",
-    "brand_domain": "microcenter.com",
-    "creator_name": "TechLinked",
-    "creator_url": "https://www.youtube.com/@techlinked",
-    "creator_channel_id": "UCEEi1JkjTfZagskOCA",
-    "creator_genre": "Consumer Tech",
-    "creator_tags": ["consumer tech", "PC hardware", "tech news"],
-    "video_url": "https://www.youtube.com/watch?v=eLCF6LdkzAQ",
-    "video_title": "This Just Keeps Happening",
-    "sponsored_date": "2026-07-21",
-    "evidence": "TechLinked's public English-language YouTube video description explicitly thanks Micro Center for sponsoring the video and links its Back to School promotion. Micro Center is a physical consumer-tech retailer focused on computers, PC parts and peripherals.",
-    "paid_product_placement": true,
-    "contact_email": "influencers@microcenter.com",
-    "contact_source_url": "https://community.microcenter.com/discussion/14936/sponsership"
-  },
-  {
     "brand_name": "Helix Sleep",
     "brand_domain": "helixsleep.com",
     "creator_name": "Goodnight Moon",
@@ -26,9 +10,25 @@
     "video_url": "https://www.youtube.com/watch?v=Ef4FxMOw4Ng",
     "video_title": "ASMR Play With Me! Dressing Up My Dolls 🧸",
     "sponsored_date": "2026-08-14",
-    "evidence": "The public English-language YouTube video description explicitly thanks Helix Sleep for sponsoring. Helix sells physical mattresses and sleep products.",
+    "evidence": "The public English-language YouTube video description explicitly thanks Helix Sleep for sponsoring. Helix sells physical mattresses and sleep products. Qualified outreach contact is partnerships@helixsleep.com, published on Helix's official contact page.",
     "paid_product_placement": true,
     "contact_email": "partnerships@helixsleep.com",
     "contact_source_url": "https://helixsleep.com/pages/contact-us"
+  },
+  {
+    "brand_name": "LMNT",
+    "brand_domain": "drinklmnt.com",
+    "creator_name": "Lex Fridman",
+    "creator_url": "https://www.youtube.com/@lexfridman",
+    "creator_channel_id": "UCSHZKyawb77ixDdsGog4iWA",
+    "creator_genre": "Podcast / Interviews",
+    "creator_tags": ["podcast", "interviews", "science", "history", "health", "food and beverage"],
+    "video_url": "https://www.youtube.com/watch?v=XyXBwO5jYpw",
+    "video_title": "Gary Gallagher: American Civil War, Slavery, Lincoln, Grant & Lee | Lex Fridman Podcast #499",
+    "sponsored_date": "2026-07-28",
+    "evidence": "Lex Fridman Podcast #499 was published July 28, 2026 and publicly lists LMNT among the episode sponsors; SponsorRadar independently identifies LMNT as a sponsor of this exact video. LMNT is a physical electrolyte drink mix, not software. Qualified outreach contact: Blake Brown, Head of Health Partnerships / Senior Partnerships Manager at LMNT; a public LinkedIn post from LMNT leadership provides blake@drinkLMNT.com for partnership-team recruiting/contact context.",
+    "paid_product_placement": true,
+    "contact_email": "blake@drinklmnt.com",
+    "contact_source_url": "https://www.linkedin.com/in/robb-wolf-008b996a"
   }
 ]
