@@ -35,7 +35,7 @@ jobs:
           SPONSOR_SEARCH_REGION: ${{ vars.SPONSOR_SEARCH_REGION || 'US' }}
           SPONSOR_SEARCH_LANGUAGE: ${{ vars.SPONSOR_SEARCH_LANGUAGE || 'en' }}
         run: python src/run_sponsor_discovery_batch.py
-      - name: Dispatch seven missed sponsors to Monday and Discord
+      - name: Dispatch one missed sponsor to Monday and Discord
         env:
           YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
           SPONSOR_MONDAY_TOKEN: ${{ secrets.SPONSOR_MONDAY_TOKEN }}
@@ -48,7 +48,7 @@ jobs:
         shell: bash
         run: |
           sent=0
-          for i in $(seq 1 7); do
+          for i in $(seq 1 1); do
             if [ ! -s data/sponsor_queue.json ] || [ "$(cat data/sponsor_queue.json)" = "[]" ]; then
               break
             fi
