@@ -222,5 +222,53 @@
     "paid_product_placement": true,
     "contact_email": "affiliate@sharge.com",
     "contact_source_url": "https://sharge.com/pages/affiliate-program"
+  },
+  {
+    "brand_name": "LiberNovo",
+    "brand_domain": "libernovo.com",
+    "creator_name": "Hipyo Tech",
+    "creator_url": "https://www.youtube.com/@hipyotech",
+    "creator_channel_id": "",
+    "creator_genre": "Gaming / Physical Consumer Tech",
+    "creator_tags": ["gaming", "creator setup", "ergonomic chair", "physical consumer tech", "streaming", "desk setup"],
+    "video_url": "https://youtube.com/watch?v=lVhbKjO-p7s",
+    "video_title": "She Wanted a Free Gaming PC... (I Made Her Build It Herself)",
+    "sponsored_date": "2026-06-28",
+    "evidence": "SponsorRadar identifies LiberNovo as the sponsor of Hipyo Tech's June 28, 2026 English-language YouTube video. LiberNovo sells tangible ergonomic chairs and currently operates an official affiliate program. Its official collaboration page explicitly invites influencers and partners to email influencer@libernovo.com. The permanent GitHub sponsor ledger/blocklist was rechecked immediately before addition and contained no LiberNovo brand or libernovo.com domain key.",
+    "paid_product_placement": true,
+    "contact_email": "influencer@libernovo.com",
+    "contact_source_url": "https://libernovo.com/blogs/collabs/how-can-i-collaborate-with-libernovo-as-an-influencer-or-partner"
+  },
+  {
+    "brand_name": "EPOMAKER",
+    "brand_domain": "epomaker.com",
+    "creator_name": "Andrew Ethan Zeng",
+    "creator_url": "https://www.youtube.com/@andrewethanzeng",
+    "creator_channel_id": "",
+    "creator_genre": "Physical Consumer Tech / Gaming",
+    "creator_tags": ["mechanical keyboards", "gaming", "desk setup", "physical consumer tech", "creator gear", "tech reviews"],
+    "video_url": "https://youtube.com/watch?v=TNXYnpBZr7Q",
+    "video_title": "Best Mechanical Keyboard Under $80? (epomaker Th99 Pro)",
+    "sponsored_date": "2026-06-30",
+    "evidence": "SponsorRadar identifies EPOMAKER as the sponsor of Andrew Ethan Zeng's June 30, 2026 English-language YouTube video and tracks EPOMAKER as an active 2026 creator sponsor. EPOMAKER sells tangible mechanical keyboards and accessories. Its official contact page explicitly routes KOL, affiliate and creator collaborations to community@epomaker.com and states the affiliate program is open to YouTube, Reddit and TikTok creators. The permanent GitHub sponsor ledger/blocklist was rechecked immediately before addition and contained no EPOMAKER brand or epomaker.com domain key.",
+    "paid_product_placement": true,
+    "contact_email": "community@epomaker.com",
+    "contact_source_url": "https://epomaker.com/pages/contact-us"
+  },
+  {
+    "brand_name": "XREAL",
+    "brand_domain": "xreal.com",
+    "creator_name": "Formula DRIFT",
+    "creator_url": "https://www.youtube.com/@formuladrift",
+    "creator_channel_id": "",
+    "creator_genre": "Automotive / Physical Consumer Tech",
+    "creator_tags": ["automotive", "AR glasses", "wearables", "physical consumer tech", "sports", "lifestyle"],
+    "video_url": "https://youtube.com/watch?v=heuEwZADnjI",
+    "video_title": "The Outerzone Podcast - Vaughn Gittin Jr.",
+    "sponsored_date": "2026-07-15",
+    "evidence": "SponsorRadar identifies XREAL promotion/sponsorship activity on Formula DRIFT's July 15, 2026 English-language YouTube episode with a creator-specific XREAL partner link. XREAL sells tangible AR glasses and accessories. XREAL's official contact page publishes business@xreal.com specifically for Business Partnership inquiries, with a named North American business-partnership contact also listed. The permanent GitHub sponsor ledger/blocklist was rechecked immediately before addition and contained no XREAL brand or xreal.com domain key.",
+    "paid_product_placement": true,
+    "contact_email": "business@xreal.com",
+    "contact_source_url": "https://www.xreal.com/it/contact-us"
   }
 ]
