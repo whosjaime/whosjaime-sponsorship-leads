@@ -64,22 +64,6 @@
     "contact_source_url": "https://gameradvantage.com/pages/partner"
   },
   {
-    "brand_name": "White Fox Boutique",
-    "brand_domain": "whitefoxboutique.com",
-    "creator_name": "Sophie DiLoreto",
-    "creator_url": "https://www.youtube.com/@sophiediloreto",
-    "creator_channel_id": "UCT_30NAKXw8JbSwjd_4y0lw",
-    "creator_genre": "Lifestyle / Fashion",
-    "creator_tags": ["fashion", "lifestyle", "vlog", "women's apparel", "seasonal style"],
-    "video_url": "https://www.youtube.com/watch?v=tiM07SQQrtw",
-    "video_title": "ULTIMATE GUIDE TO ROMANTICIZING FALL ☕️ how to have a pinterest autumn",
-    "sponsored_date": "2026-08-08",
-    "evidence": "SponsorRadar records White Fox Boutique sponsorship activity on Sophie DiLoreto's August 8, 2026 English-language YouTube video with a creator-specific White Fox discount code. White Fox Boutique's official contact page has a dedicated Marketing & Influencer Enquiries section inviting collaborations at collabs@whitefoxboutique.com.",
-    "paid_product_placement": true,
-    "contact_email": "collabs@whitefoxboutique.com",
-    "contact_source_url": "https://whitefoxboutique.ca/pages/contact-us"
-  },
-  {
     "brand_name": "Sundays for Dogs",
     "brand_domain": "sundaysfordogs.com",
     "creator_name": "RUDAN BROTHERS",
@@ -144,19 +128,35 @@
     "contact_source_url": "https://vessi.com/pages/contact"
   },
   {
-    "brand_name": "EcoFlow",
-    "brand_domain": "ecoflow.com",
-    "creator_name": "WayPoint Survival",
-    "creator_url": "https://www.youtube.com/@WayPointSurvival",
+    "brand_name": "Typhur",
+    "brand_domain": "typhur.com",
+    "creator_name": "Tom Horsman",
+    "creator_url": "https://www.youtube.com/@TomHorsmanAmateurBBQ",
     "creator_channel_id": "",
-    "creator_genre": "Survival / Outdoors / Tech",
-    "creator_tags": ["survival", "outdoors", "physical consumer tech", "power stations", "preparedness"],
-    "video_url": "https://www.youtube.com/watch?v=hqWERG-jPSU",
-    "video_title": "Ecoflow Delta Pro Ultra Review - Get Ready Now!",
-    "sponsored_date": "2026-07-30",
-    "evidence": "SponsorRadar lists EcoFlow as the sponsor/promotional partner on WayPoint Survival's July 30, 2026 English-language YouTube video. EcoFlow sells tangible portable power stations and home power hardware. EcoFlow's official U.S. contact page publishes Influencer@ecoflow.com specifically for YouTube and TikTok influencer collaboration, plus contentpartners@ecoflow.com for social-media content partnerships.",
+    "creator_genre": "Food / BBQ / Consumer Kitchen Tech",
+    "creator_tags": ["food", "BBQ", "cooking", "kitchen appliances", "physical consumer tech"],
+    "video_url": "https://www.youtube.com/watch?v=f3Wu0fjMadI",
+    "video_title": "Review Of The Typhur Dome 2 Air Fryer! / Upper And Lower Heating Elements! / Self Cleaning!",
+    "sponsored_date": "2026-06-23",
+    "evidence": "SponsorRadar identifies Typhur promotion/sponsorship activity on Tom Horsman's June 23, 2026 English-language YouTube video with creator-specific code HORSMAN10. Typhur sells tangible kitchen appliances and currently operates an official affiliate program explicitly open to food and cooking creators, with affiliate@typhur.com published for program questions.",
     "paid_product_placement": true,
-    "contact_email": "Influencer@ecoflow.com",
-    "contact_source_url": "https://www.ecoflow.com/us/contact-us"
+    "contact_email": "affiliate@typhur.com",
+    "contact_source_url": "https://www.typhur.com/affiliate-program"
+  },
+  {
+    "brand_name": "JustBats",
+    "brand_domain": "justbats.com",
+    "creator_name": "Snap Softball by Coach Dan Blewett",
+    "creator_url": "https://www.youtube.com/channel/UCcLPfvQesLM6lVrBkZ14kng",
+    "creator_channel_id": "UCcLPfvQesLM6lVrBkZ14kng",
+    "creator_genre": "Sports / Softball",
+    "creator_tags": ["sports", "softball", "baseball", "sporting goods", "coaching"],
+    "video_url": "https://www.youtube.com/watch?v=vLuUhH8Wf5A",
+    "video_title": "Easton Hype Fire Slow Pitch Bats Are Very Average",
+    "sponsored_date": "2026-06-23",
+    "evidence": "SponsorRadar identifies JustBats as the sponsor of Snap Softball by Coach Dan Blewett's June 23, 2026 English-language YouTube video, whose sponsorship evidence explicitly thanks JustBats. JustBats currently operates an official affiliate program for eligible influencers with dedicated in-house affiliate management and publishes affiliates@justbats.com for program assistance.",
+    "paid_product_placement": true,
+    "contact_email": "affiliates@justbats.com",
+    "contact_source_url": "https://www.justbats.com/affiliates/"
   }
 ]
