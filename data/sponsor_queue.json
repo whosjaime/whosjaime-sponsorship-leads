@@ -1,1 +1,36 @@
-[]
+[
+  {
+    "brand_name": "Typology",
+    "brand_domain": "typology.com",
+    "source_platform": "YouTube",
+    "creator_name": "How To Renovate A Chateau",
+    "creator_url": "https://www.youtube.com/channel/UCEqU-Ts-hxmpnlWgRMgd2MQ",
+    "creator_channel_id": "UCEqU-Ts-hxmpnlWgRMgd2MQ",
+    "creator_subscribers": 574000,
+    "creator_genre": "",
+    "creator_tags": [],
+    "video_id": "QqmOTlw6Njg",
+    "video_url": "https://youtube.com/watch?v=QqmOTlw6Njg",
+    "video_title": "Sailing To France’s Most Beautiful Hidden Places",
+    "sponsored_date": "2026-07-26",
+    "evidence": "SponsorRadar identifies Typology as the sponsor of How To Renovate A Chateau's July 26, 2026 English-language YouTube video with an explicit AD disclosure and creator-specific offer. Typology sells physical skincare and cosmetics. Typology's official partnership page explicitly directs influencer collaboration inquiries to partnerships@typology.com, and its current affiliate program confirms active structured partnerships.",
+    "paid_product_placement": true,
+    "brand_partner_channel_id": "",
+    "sponsor_category": "Other",
+    "sponsor_subcategory": "",
+    "contact_name": "",
+    "contact_title": "",
+    "contact_email": "partnerships@typology.com",
+    "email_type": "Public work email",
+    "contact_source": "https://www.typology.com/support/demandes-de-partenariat",
+    "lead_score": 100,
+    "lead_temperature": "Very Hot",
+    "sponsorship_key": "youtube:qqmotlw6njg:typology.com",
+    "brand_key": "domain:typology.com",
+    "signals": [
+      "Daily researched sponsorship",
+      "verified public sponsorship evidence"
+    ],
+    "date_found": "2026-08-18"
+  }
+]
