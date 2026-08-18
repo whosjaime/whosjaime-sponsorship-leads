@@ -334,5 +334,21 @@
     "paid_product_placement": true,
     "contact_email": "affiliate@reolink.com",
     "contact_source_url": "https://reolink.com/__/affiliate/"
+  },
+  {
+    "brand_name": "ButcherBox",
+    "brand_domain": "butcherbox.com",
+    "creator_name": "Mind Pump Show",
+    "creator_url": "https://www.youtube.com/@mindpumpshow",
+    "creator_channel_id": "",
+    "creator_genre": "Health / Fitness / Podcast",
+    "creator_tags": ["health", "fitness", "podcast", "food", "nutrition", "lifestyle"],
+    "video_url": "https://podcasts.apple.com/ie/podcast/2899-how-to-lose-15-pounds-in-90-days-the-5-step-fat/id954100822?i=1000776326922",
+    "video_title": "2899: How to Lose 15 Pounds in 90 Days | The 5-Step Fat Loss Formula",
+    "sponsored_date": "2026-07-11",
+    "evidence": "SponsorRadar identifies ButcherBox as the sponsor of Mind Pump Show's July 11, 2026 English-language episode 'How To Lose 15 Pounds In 90 Days | The 5-step Fat Loss Formula | Mind Pump 2899.' Apple Podcasts independently confirms the episode and date. Because the sponsorship is within 60 days rather than 30, it is paired with ButcherBox's currently active official affiliate program, which offers product for promotional placements and publishes partnerships@butcherbox.com for program questions and other partnership opportunities. The permanent GitHub sent/block ledger and current research inventory were rechecked immediately before addition and contained no ButcherBox key.",
+    "paid_product_placement": true,
+    "contact_email": "partnerships@butcherbox.com",
+    "contact_source_url": "https://www.butcherbox.com/pages/affiliate-program"
   }
 ]
