@@ -1,34 +1,18 @@
 [
   {
-    "brand_name": "DREO",
-    "brand_domain": "dreo.com",
-    "creator_name": "Jenna Phipps",
-    "creator_url": "https://www.youtube.com/@jennaphipps",
+    "brand_name": "VITURE",
+    "brand_domain": "viture.com",
+    "creator_name": "Josh Cahill",
+    "creator_url": "https://www.youtube.com/@JoshCahill",
     "creator_channel_id": "",
-    "creator_genre": "DIY / Lifestyle / Home",
-    "creator_tags": ["DIY", "lifestyle", "home", "renovation", "physical consumer tech", "smart home"],
-    "video_url": "https://sponsorradar.com/channels/jennaphipps",
-    "video_title": "our home looks completely different (ep.122)",
-    "sponsored_date": "2026-07-01",
-    "evidence": "SponsorRadar records DREO sponsoring Jenna Phipps' July 1, 2026 English-language YouTube video 'our home looks completely different (ep.122)'. DREO sells tangible home appliances and physical smart-home products. DREO's official Contact Us page explicitly lists influencer@dreo.com for Influencer & Partnerships and affiliate@dreo.com for Affiliate outreach; its official affiliate program also actively recruits partners. The GitHub repository was searched immediately before staging and no DREO/dreo.com match surfaced.",
+    "creator_genre": "Travel / Aviation / Lifestyle",
+    "creator_tags": ["travel", "aviation", "lifestyle", "gaming", "XR glasses", "physical consumer tech"],
+    "video_url": "https://sponsorradar.com/brands/viture",
+    "video_title": "Bizarre! The World’s Cheapest Business Class!",
+    "sponsored_date": "2026-07-18",
+    "evidence": "SponsorRadar records VITURE sponsoring Josh Cahill's July 18, 2026 English-language YouTube video 'Bizarre! The World’s Cheapest Business Class!' with a creator-specific VITURE offer in the description. VITURE sells tangible XR gaming/display glasses. VITURE's official contact page publishes marketing@viture.com specifically for Creator Inquiries and bd@viture.com for Business Partnerships. The current researched inventory and permanent sent ledger were checked immediately before staging and contained no VITURE/viture.com match.",
     "paid_product_placement": true,
-    "contact_email": "influencer@dreo.com",
-    "contact_source_url": "https://www.dreo.com/pages/contact-us"
-  },
-  {
-    "brand_name": "Midea",
-    "brand_domain": "midea.com",
-    "creator_name": "She's In Her Apron",
-    "creator_url": "https://www.youtube.com/@ShesInHerApron",
-    "creator_channel_id": "",
-    "creator_genre": "Food / Homemaking / Lifestyle",
-    "creator_tags": ["food", "homemaking", "lifestyle", "home appliances", "freezer meals", "physical consumer tech"],
-    "video_url": "https://sponsorradar.com/channels/shesinherapron",
-    "video_title": "It's Too Hot To Cook! This Freezer System ALWAYS Saves Dinner!",
-    "sponsored_date": "2026-06-26",
-    "evidence": "SponsorRadar records Midea sponsoring She's In Her Apron's June 26, 2026 English-language YouTube video 'It's Too Hot To Cook! This Freezer System ALWAYS Saves Dinner!'. Midea sells tangible home appliances and physical consumer hardware. Midea's official Brandbook publishes marketing@midea.com as an HQ marketing contact used for official social-media account coordination. The GitHub repository was searched immediately before staging and no Midea/midea.com match surfaced.",
-    "paid_product_placement": true,
-    "contact_email": "marketing@midea.com",
-    "contact_source_url": "https://brandbook.midea.com/guidelines/digital/social-midea/social-media-guidelines"
+    "contact_email": "marketing@viture.com",
+    "contact_source_url": "https://www.viture.com/contact"
   }
 ]
