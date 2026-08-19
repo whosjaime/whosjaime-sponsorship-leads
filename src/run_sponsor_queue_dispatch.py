@@ -32,6 +32,46 @@ RELIGION_BLOCK_TERMS = (
     "atheist", "atheism", "mormon", "latter-day saints", "scientology",
 )
 
+DISALLOWED_DIGITAL_CATEGORIES = {
+    "software / saas",
+    "cybersecurity / vpn",
+    "ai software",
+    "developer tools",
+    "web hosting",
+    "cloud software",
+}
+
+APPROVED_SPONSOR_CATEGORIES = {
+    "gaming",
+    "consumer tech",
+    "physical consumer tech",
+    "food & beverage",
+    "food/drink",
+    "fashion",
+    "home",
+    "home & garden",
+    "health & wellness",
+    "wellness",
+    "travel",
+    "pet",
+    "pets",
+    "fragrance",
+    "beauty",
+    "music",
+    "entertainment",
+    "lifestyle",
+    "sports",
+    "fitness",
+}
+
+APPROVED_NONTECH_KEYWORDS = {
+    "mattress", "sleep", "home", "furniture", "chair", "cookware", "kitchen",
+    "food", "drink", "beverage", "snack", "coffee", "hydration", "supplement",
+    "wellness", "fitness", "apparel", "clothing", "fashion", "shoes", "footwear",
+    "travel", "hotel", "resort", "luggage", "pet", "dog", "cat", "fragrance",
+    "perfume", "cologne", "beauty", "skincare", "makeup", "sports", "outdoor",
+}
+
 
 def _is_religion_sponsor(lead) -> bool:
     text = " ".join(
@@ -49,7 +89,31 @@ def _is_religion_sponsor(lead) -> bool:
 def _is_dispatch_target_lead(lead) -> bool:
     if _is_religion_sponsor(lead):
         return False
-    return _is_target_lead(lead) or _is_beauty_lead(lead) or _is_music_lead(lead)
+
+    category = (lead.sponsor_category or "").strip().lower()
+    text = " ".join(
+        [
+            lead.brand_name or "",
+            lead.brand_domain or "",
+            lead.sponsor_category or "",
+            lead.sponsor_subcategory or "",
+            lead.evidence or "",
+        ]
+    ).lower()
+
+    # Permanent rule: digital-tech services never dispatch automatically.
+    if category in DISALLOWED_DIGITAL_CATEGORIES:
+        return False
+    if any(term in text for term in (" vpn ", " saas ", "developer tool", "coding tool", "web hosting", "password manager")):
+        return False
+
+    # Keep the original high-priority gaming/food/physical-tech gate, but also allow
+    # the non-tech sponsor categories explicitly approved for the research pipeline.
+    if _is_target_lead(lead) or _is_beauty_lead(lead) or _is_music_lead(lead):
+        return True
+    if category in APPROVED_SPONSOR_CATEGORIES:
+        return True
+    return any(keyword in text for keyword in APPROVED_NONTECH_KEYWORDS)
 
 
 def _load_pending() -> dict:
@@ -179,6 +243,7 @@ def run() -> None:
             continue
         if not _is_dispatch_target_lead(lead):
             skipped += 1
+            print(f"Approved-category gate skipped: {lead.brand_name} / {lead.sponsor_category}")
             queue.pop(0)
             continue
 
