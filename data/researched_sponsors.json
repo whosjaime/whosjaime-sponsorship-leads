@@ -1089,5 +1089,50 @@
     "paid_product_placement": true,
     "contact_email": "marketing@shelly.com",
     "contact_source_url": "https://corporate.shelly.com/en/contact"
+  },
+  {
+    "brand_name": "Nuki",
+    "brand_domain": "nuki.io",
+    "creator_name": "Mark's Tech",
+    "creator_url": "https://www.youtube.com/@markstech",
+    "creator_channel_id": "",
+    "creator_genre": "Physical Consumer Tech / Smart Home",
+    "creator_tags": [
+      "physical consumer tech",
+      "smart home",
+      "home",
+      "electronics",
+      "tech reviews"
+    ],
+    "video_url": "https://sponsorradar.com/channels/markstech",
+    "video_title": "S26 Ultra vs OPPO Find X9 Ultra! Who's the REAL Ultra?!",
+    "sponsored_date": "2026-07-03",
+    "evidence": "SponsorRadar records Nuki sponsoring Mark's Tech's July 3, 2026 English-language YouTube video. Nuki sells tangible smart-lock and access-control hardware. Nuki's official US About Us page publishes marketing-us@nuki.io specifically for Marketing and separately lists sales/business-partnership contacts. The GitHub repository was searched immediately before staging and no Nuki/nuki.io entry surfaced.",
+    "paid_product_placement": true,
+    "contact_email": "marketing-us@nuki.io",
+    "contact_source_url": "https://nuki.io/en-us/company/about-us"
+  },
+  {
+    "brand_name": "Z Grills",
+    "brand_domain": "zgrills.com",
+    "creator_name": "Best Life and Beyond",
+    "creator_url": "https://www.youtube.com/@bestlifeandbeyondofficial",
+    "creator_channel_id": "",
+    "creator_genre": "Travel / Lifestyle / Food",
+    "creator_tags": [
+      "travel",
+      "lifestyle",
+      "food",
+      "outdoor cooking",
+      "home",
+      "grilling"
+    ],
+    "video_url": "https://sponsorradar.com/channels/bestlifeandbeyondofficial",
+    "video_title": "First Time Using A Pellet Grill... We Didn’t Expect Ribs This Good!",
+    "sponsored_date": "2026-07-24",
+    "evidence": "SponsorRadar records Z Grills sponsoring Best Life and Beyond's July 24, 2026 English-language YouTube video. Z Grills sells tangible pellet grills and outdoor cooking hardware. Its official Affiliate Program explicitly recruits reviewers, content creators and influencers on YouTube and social platforms and publishes affiliate@zgrills.com as the dedicated program contact. The GitHub repository was searched immediately before staging and no Z Grills/zgrills.com entry surfaced.",
+    "paid_product_placement": true,
+    "contact_email": "affiliate@zgrills.com",
+    "contact_source_url": "https://www.zgrills.com/pages/affiliate-program"
   }
 ]
