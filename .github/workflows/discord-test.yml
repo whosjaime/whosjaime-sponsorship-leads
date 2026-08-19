@@ -1,0 +1,27 @@
+name: Discord Test
+
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  discord-test:
+    if: startsWith(github.event.issue.title, 'RUN DISCORD TEST')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send labeled Discord test
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+        shell: bash
+        run: |
+          if [ -z "$DISCORD_WEBHOOK_URL" ]; then
+            echo "DISCORD_WEBHOOK_URL is missing"
+            exit 1
+          fi
+          payload='{"content":"🧪 **TEST SPONSOR MESSAGE**\nThis is a test from the sponsorship pipeline. No Monday.com item was created and this is not a real sponsor lead."}'
+          code=$(curl -sS -o /tmp/discord_test_response.txt -w "%{http_code}" -H "Content-Type: application/json" -d "$payload" "$DISCORD_WEBHOOK_URL")
+          echo "Discord HTTP status: $code"
+          cat /tmp/discord_test_response.txt || true
+          if [ "$code" -lt 200 ] || [ "$code" -ge 300 ]; then
+            exit 1
+          fi
