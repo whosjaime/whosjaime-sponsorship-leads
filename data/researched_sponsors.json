@@ -1568,5 +1568,49 @@
     "paid_product_placement": true,
     "contact_email": "influencer@obsbot.com",
     "contact_source_url": "https://www.obsbot.co.kr/kr/influencer-program"
+  },
+  {
+    "brand_name": "PECRON",
+    "brand_domain": "pecron.com",
+    "creator_name": "Projects With Everyday Dave",
+    "creator_url": "https://www.youtube.com/@ProjectsWithEverydayDave",
+    "creator_channel_id": "",
+    "creator_genre": "DIY / Home / Physical Consumer Tech",
+    "creator_tags": [
+      "DIY",
+      "home",
+      "solar",
+      "portable power",
+      "physical consumer tech"
+    ],
+    "video_url": "https://sponsorradar.com/brands/pecron",
+    "video_title": "Is Pecron's F500 Actually Better Than DIY Solar? Here's the Truth",
+    "sponsored_date": "2026-08-08",
+    "evidence": "SponsorRadar records PECRON sponsoring Projects With Everyday Dave's August 8, 2026 English-language YouTube video 'Is Pecron's F500 Actually Better Than DIY Solar? Here's the Truth,' with a creator-specific PECRON F500LFP discount code. PECRON sells tangible portable power stations and solar generators. PECRON's official Ambassador/Affiliate Program explicitly recruits social media influencers and content creators and publishes herman@pecron.com for deeper business collaboration; its official FAQ identifies the same address as the Marketing Manager for business and partnership inquiries. The GitHub repository was rechecked immediately before staging and surfaced no PECRON/pecron.com match.",
+    "paid_product_placement": true,
+    "contact_email": "herman@pecron.com",
+    "contact_source_url": "https://www.pecron.com/pages/affiliate-program"
+  },
+  {
+    "brand_name": "xTool",
+    "brand_domain": "xtool.com",
+    "creator_name": "Halfass Kustoms",
+    "creator_url": "https://www.youtube.com/@HalfassKustoms",
+    "creator_channel_id": "",
+    "creator_genre": "DIY / Automotive / Physical Consumer Tech",
+    "creator_tags": [
+      "DIY",
+      "automotive",
+      "laser engraving",
+      "fabrication",
+      "physical consumer tech"
+    ],
+    "video_url": "https://sponsorradar.com/brands/xtool",
+    "video_title": "Adjusting the Wheelbase on the ‘38 Plymouth Suburban!",
+    "sponsored_date": "2026-08-05",
+    "evidence": "SponsorRadar records xTool sponsorship activity on Halfass Kustoms' August 5, 2026 English-language YouTube video 'Adjusting the Wheelbase on the ‘38 Plymouth Suburban!' with a creator-specific xTool X1 Pro link and discount code. xTool sells tangible laser engravers, cutters and fabrication hardware. xTool's official Partner/Affiliate pages explicitly recruit content creators and influencers and publish partner@xtool.com for partnerships and marketing@xtool.com for creative/marketing collaboration. The GitHub repository was rechecked immediately before staging and surfaced no xTool/xtool.com match.",
+    "paid_product_placement": true,
+    "contact_email": "partner@xtool.com",
+    "contact_source_url": "https://ca.xtool.com/pages/xtool-partner"
   }
 ]
