@@ -1478,5 +1478,28 @@
     "paid_product_placement": true,
     "contact_email": "juncy.zeng@level8cases.com",
     "contact_source_url": "https://www.level8.com.cn/service.html"
+  },
+  {
+    "brand_name": "WORX",
+    "brand_domain": "worx.com",
+    "creator_name": "Ambition Strikes",
+    "creator_url": "https://www.youtube.com/@AmbitionStrikes",
+    "creator_channel_id": "",
+    "creator_genre": "DIY / Off-Grid / Lifestyle",
+    "creator_tags": [
+      "DIY",
+      "off-grid",
+      "home",
+      "tools",
+      "lifestyle",
+      "physical consumer hardware"
+    ],
+    "video_url": "https://sponsorradar.com/channels/ambitionstrikes",
+    "video_title": "I Bought A Firefighting Jet Boat! Will It Run After 15 Years?",
+    "sponsored_date": "2026-07-19",
+    "evidence": "SponsorRadar records Ambition Strikes' July 19, 2026 English-language YouTube video 'I Bought A Firefighting Jet Boat! Will It Run After 15 Years?' as sponsored by WORX, with an explicit ad disclosure and creator-specific WORX 40V Brushless Circular Saw link. WORX sells tangible power tools and lawn/garden hardware. WORX's official UK site currently operates an affiliate program that explicitly invites social-media partners, while WORX Canada's official contact page publishes marketing@worx.ca as its Marketing contact. The GitHub repository was rechecked immediately before staging and surfaced no WORX/worx.com match.",
+    "paid_product_placement": true,
+    "contact_email": "marketing@worx.ca",
+    "contact_source_url": "https://worx.ca/contact"
   }
 ]
