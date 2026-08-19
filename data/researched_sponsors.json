@@ -861,5 +861,28 @@
     "paid_product_placement": true,
     "contact_email": "influencer@birdfy.com",
     "contact_source_url": "https://www.birdfy.com/pages/contact"
+  },
+  {
+    "brand_name": "American Blossom Linens",
+    "brand_domain": "americanblossomlinens.com",
+    "creator_name": "Homesteading Family",
+    "creator_url": "https://www.youtube.com/@HomesteadingFamily",
+    "creator_channel_id": "",
+    "creator_genre": "DIY / Homestead / Family Lifestyle",
+    "creator_tags": [
+      "home",
+      "homestead",
+      "family",
+      "lifestyle",
+      "bedding",
+      "home goods"
+    ],
+    "video_url": "https://homesteadingfamily.com/healthy-living/4/",
+    "video_title": "8 Reasons Your Canning Jars Didn't Seal",
+    "sponsored_date": "2026-07-11",
+    "evidence": "Homesteading Family's July 11, 2026 English-language episode explicitly states that the episode is sponsored by American Blossom Linens and includes a creator-specific discount code. SponsorRadar independently lists American Blossom Linens as the sponsor of that July 11 video. American Blossom Linens currently operates an official affiliate program for social-media publishers and publishes affiliate@americanblossomlinens.com as the dedicated program contact. The permanent GitHub sponsor ledger/blocklist was checked before addition and contained no American Blossom Linens or americanblossomlinens.com key.",
+    "paid_product_placement": true,
+    "contact_email": "affiliate@americanblossomlinens.com",
+    "contact_source_url": "https://americanblossomlinens.com/pages/affiliate"
   }
 ]
