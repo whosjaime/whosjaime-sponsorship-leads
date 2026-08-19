@@ -1318,5 +1318,28 @@
     "paid_product_placement": true,
     "contact_email": "affiliate@revopoint3d.com",
     "contact_source_url": "https://global.revopoint3d.com/en-uk/pages/affiliate-program"
+  },
+  {
+    "brand_name": "Wayfair",
+    "brand_domain": "wayfair.com",
+    "creator_name": "She's In Her Apron",
+    "creator_url": "https://www.youtube.com/@shesinherapron",
+    "creator_channel_id": "",
+    "creator_genre": "Food / Home / Lifestyle",
+    "creator_tags": [
+      "home",
+      "lifestyle",
+      "organization",
+      "pantry",
+      "family",
+      "food"
+    ],
+    "video_url": "https://sponsorradar.com/channels/shesinherapron",
+    "video_title": "Small Pantry? Do THIS Instead of Cramming Everything In",
+    "sponsored_date": "2026-07-13",
+    "evidence": "SponsorRadar records Wayfair sponsoring She's In Her Apron's July 13, 2026 English-language YouTube video 'Small Pantry? Do THIS Instead of Cramming Everything In'. Wayfair currently operates an official Creator program with paid opportunities and its official brand contact page explicitly publishes influencers@wayfair.com for Influencer Relations. The GitHub repository was rechecked immediately before staging and surfaced no Wayfair/wayfair.com match.",
+    "paid_product_placement": true,
+    "contact_email": "influencers@wayfair.com",
+    "contact_source_url": "https://www.wayfair.com/m/brand-logos"
   }
 ]
