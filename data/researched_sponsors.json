@@ -1681,5 +1681,30 @@
     "paid_product_placement": true,
     "contact_email": "marketing@nanit.com",
     "contact_source_url": "https://www.nanit.com/pages/nanit-next-chapter-sweepstakes-rules"
+  },
+  {
+    "brand_name": "Endy",
+    "brand_domain": "endy.com",
+    "creator_name": "TikTok creator collaborators (Endy Petit campaign)",
+    "creator_url": "https://ads.tiktok.com/business/en-CA/inspiration/endy-petit-ca",
+    "creator_channel_id": "",
+    "creator_genre": "Lifestyle / Family / Home",
+    "creator_tags": [
+      "lifestyle",
+      "family",
+      "parenting",
+      "home",
+      "sleep",
+      "TikTok",
+      "creator partnerships"
+    ],
+    "video_url": "https://ads.tiktok.com/business/en-CA/inspiration/endy-petit-ca",
+    "video_title": "Endy Petit TikTok creator Spark Ads campaign",
+    "sponsored_date": "2026-07-20",
+    "evidence": "TikTok for Business published Endy's July 20, 2026 case study documenting an active Endy Petit campaign targeting parents and families. The case study states Endy collaborated with creators to run Spark Ads, which is direct public evidence of current paid creator campaign spend. Endy's official Customer Care page publishes collabs@endy.com for PR & Collaborations and partnerships@endy.com for Retail & Business Partnerships; collabs@endy.com is the qualified creator/collaboration outreach contact used here. GitHub brand/domain search was rechecked immediately before staging and surfaced no Endy/endy.com match.",
+    "paid_product_placement": true,
+    "contact_email": "collabs@endy.com",
+    "contact_source_url": "https://answers.endy.com/hc/en-ca/",
+    "source_platform": "TikTok"
   }
 ]
