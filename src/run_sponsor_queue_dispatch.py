@@ -1,10 +1,14 @@
 from __future__ import annotations
 
+import json
+from pathlib import Path
+
 from discord_notifier import DiscordNotifier
 from run_sponsor_discovery_batch import _hydrate_creator_metrics, _is_beauty_lead, _is_music_lead
 from run_sponsor_scan import _is_recent_sponsorship, _is_target_lead
 from sponsor_config import load_sponsor_config
 from sponsor_monday_client import SponsorMondayClient
+from sponsor_models import SponsorLead
 from sponsor_queue import (
     is_duplicate,
     load_duplicate_keys,
@@ -17,6 +21,8 @@ from sponsor_queue import (
 )
 from youtube_sponsor_scanner import YouTubeSponsorScanner
 
+
+PENDING_PATH = Path("data/sponsor_delivery_pending.json")
 
 RELIGION_BLOCK_TERMS = (
     "religion", "religious", "ffrf", "freedom from religion",
@@ -46,6 +52,50 @@ def _is_dispatch_target_lead(lead) -> bool:
     return _is_target_lead(lead) or _is_beauty_lead(lead) or _is_music_lead(lead)
 
 
+def _load_pending() -> dict:
+    if not PENDING_PATH.exists():
+        return {}
+    try:
+        raw = json.loads(PENDING_PATH.read_text(encoding="utf-8"))
+    except (json.JSONDecodeError, OSError):
+        return {}
+    return raw if isinstance(raw, dict) else {}
+
+
+def _save_pending(payload: dict) -> None:
+    PENDING_PATH.parent.mkdir(parents=True, exist_ok=True)
+    PENDING_PATH.write_text(json.dumps(payload, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+
+
+def _same_lead(a: SponsorLead, b: SponsorLead) -> bool:
+    return bool(
+        (a.sponsorship_key and a.sponsorship_key == b.sponsorship_key)
+        or (a.brand_key and a.brand_key == b.brand_key)
+        or (a.brand_domain and a.brand_domain.lower() == b.brand_domain.lower())
+    )
+
+
+def _remove_matching(queue: list[SponsorLead], lead: SponsorLead) -> list[SponsorLead]:
+    removed = False
+    kept: list[SponsorLead] = []
+    for item in queue:
+        if not removed and _same_lead(item, lead):
+            removed = True
+            continue
+        kept.append(item)
+    return kept
+
+
+def _complete_delivery(lead: SponsorLead, queue: list[SponsorLead], sent_keys: set[str]) -> list[SponsorLead]:
+    mark_sent(lead, sent_keys)
+    mark_creator_used(lead, sent_keys)
+    save_sent_keys(sent_keys)
+    queue = _remove_matching(queue, lead)
+    save_queue(queue)
+    _save_pending({})
+    return queue
+
+
 def run() -> None:
     config = load_sponsor_config()
     monday = SponsorMondayClient(config.monday_token, config.monday_board_id, config.monday_group_id)
@@ -57,88 +107,126 @@ def run() -> None:
 
     skipped = 0
     created = 0
-    last_error: Exception | None = None
+
+    # Resume a partial delivery safely. If Monday already succeeded on a previous run,
+    # retry Discord only; do not create another Monday item.
+    pending = _load_pending()
+    if pending.get("lead"):
+        try:
+            lead = SponsorLead(**pending["lead"])
+        except TypeError:
+            _save_pending({})
+        else:
+            print(
+                f"Resuming pending sponsor delivery after Monday success: {lead.brand_name} / "
+                f"monday {pending.get('monday_item_id', '?')}"
+            )
+            try:
+                discord.send_new_lead(lead)
+            except Exception as exc:
+                save_queue(queue)
+                save_sent_keys(sent_keys)
+                _save_pending(pending)
+                raise RuntimeError(f"Discord retry failed for {lead.brand_name}: {exc}") from exc
+
+            queue = _complete_delivery(lead, queue, sent_keys)
+            print(
+                f"SPONSOR_QUEUE_DISPATCH: 1 delivered from pending checkpoint, "
+                f"{len(queue)} remaining, {len(sent_keys)} GitHub sent keys."
+            )
+            return
 
     while queue:
-        lead = queue.pop(0)
+        lead = queue[0]
 
-        # Final policy gate: never deliver religion or anti-religion advocacy sponsors.
+        # Invalid or permanently blocked leads may be removed immediately because they
+        # are not delivery candidates and should never be retried.
         if _is_religion_sponsor(lead):
             skipped += 1
             print(f"Religion-policy sponsor skipped before delivery: {lead.brand_name}")
+            queue.pop(0)
             continue
 
-        # GitHub is the duplicate source of truth. This runs before YouTube hydration,
-        # Monday API calls, or Discord so duplicate brands cost nothing and never post.
         if is_duplicate(lead, duplicate_keys):
             skipped += 1
             print(f"GitHub duplicate/blocklist skipped before delivery: {lead.brand_name}")
+            queue.pop(0)
             continue
 
         _hydrate_creator_metrics([lead], youtube)
 
-        # Hydration/enrichment can reveal stronger identity data, so check GitHub again.
         if _is_religion_sponsor(lead):
             skipped += 1
             print(f"Religion-policy sponsor skipped after hydration: {lead.brand_name}")
+            queue.pop(0)
             continue
         if is_duplicate(lead, duplicate_keys):
             skipped += 1
             print(f"GitHub duplicate skipped after creator hydration: {lead.brand_name}")
+            queue.pop(0)
             continue
         if not _is_recent_sponsorship(lead, config.max_sponsor_age_days):
             skipped += 1
+            queue.pop(0)
             continue
         if not lead.contact_email:
             skipped += 1
+            queue.pop(0)
             continue
         if lead.lead_score < config.min_lead_score:
             skipped += 1
+            queue.pop(0)
             continue
         if not _is_dispatch_target_lead(lead):
             skipped += 1
+            queue.pop(0)
             continue
 
-        # Monday is now only the destination. It is not queried to decide duplicates.
+        # Delivery is transactional: keep the lead in queue until BOTH destinations
+        # succeed. Monday success is checkpointed so a Discord retry does not create a
+        # duplicate Monday item.
         try:
             result = monday.create_lead(lead)
             item = result.get("data", {}).get("create_item", {})
+            item_id = str(item.get("id", ""))
             print(
                 f"Created queued sponsor lead: {lead.brand_name} / "
-                f"monday {item.get('id', '?')} / score {lead.lead_score} / "
+                f"monday {item_id or '?'} / score {lead.lead_score} / "
                 f"creator subscribers {lead.creator_subscribers or 0:,}"
             )
             created = 1
-
-            # The successful Monday create is the point of no return. Record the brand
-            # permanently and the creator temporarily before Discord, so retries cannot
-            # resend the sponsor or immediately recycle the same YouTube channel.
-            mark_sent(lead, sent_keys)
-            mark_creator_used(lead, sent_keys)
-            duplicate_keys.update(sent_keys)
-            save_sent_keys(sent_keys)
+            _save_pending(
+                {
+                    "stage": "monday_created",
+                    "monday_item_id": item_id,
+                    "lead": lead.as_dict(),
+                }
+            )
         except Exception as exc:
-            last_error = exc
-            print(f"WARNING: monday create failed for {lead.brand_name}: {exc}")
-            queue.insert(0, lead)
-            break
+            save_queue(queue)
+            save_sent_keys(sent_keys)
+            _save_pending({})
+            raise RuntimeError(f"Monday create failed for {lead.brand_name}: {exc}") from exc
 
         try:
             discord.send_new_lead(lead)
         except Exception as exc:
-            last_error = exc
-            print(f"WARNING: Discord new lead notification failed for {lead.brand_name}: {exc}")
+            # Keep both queue and pending checkpoint intact. Next run retries Discord
+            # only and will not create another Monday item.
+            save_queue(queue)
+            save_sent_keys(sent_keys)
+            raise RuntimeError(f"Discord new lead notification failed for {lead.brand_name}: {exc}") from exc
+
+        queue = _complete_delivery(lead, queue, sent_keys)
+        duplicate_keys.update(sent_keys)
         break
 
     save_queue(queue)
     save_sent_keys(sent_keys)
     print(
-        f"SPONSOR_QUEUE_DISPATCH: {created} created, {skipped} duplicate/stale/rejected removed, "
+        f"SPONSOR_QUEUE_DISPATCH: {created} delivered, {skipped} duplicate/stale/rejected removed, "
         f"{len(queue)} remaining, {len(sent_keys)} GitHub sent keys."
     )
-
-    if last_error is not None:
-        raise RuntimeError(str(last_error))
 
 
 if __name__ == "__main__":
