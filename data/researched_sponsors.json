@@ -884,5 +884,75 @@
     "paid_product_placement": true,
     "contact_email": "affiliate@americanblossomlinens.com",
     "contact_source_url": "https://americanblossomlinens.com/pages/affiliate"
+  },
+  {
+    "brand_name": "Aqara",
+    "brand_domain": "aqara.com",
+    "creator_name": "All About Survival",
+    "creator_url": "https://www.youtube.com/@AllAboutSurvival",
+    "creator_channel_id": "",
+    "creator_genre": "Physical Consumer Tech / Smart Home",
+    "creator_tags": [
+      "physical consumer tech",
+      "smart home",
+      "security",
+      "hardware",
+      "home",
+      "technology"
+    ],
+    "video_url": "https://getsponsored.io/sponsors/aqara",
+    "video_title": "17 Home Defense Gadgets Every Criminal Hopes You Never Buy",
+    "sponsored_date": "2026-07-02",
+    "evidence": "GetSponsored records Aqara sponsoring All About Survival's July 2, 2026 English-language YouTube video and tracks 45 Aqara sponsorships across 34 creators, with July 2026 as its latest campaign month. Aqara is a tangible smart-home hardware brand. Aqara's official contact page publishes marketing@aqara.com specifically for Marketing. The permanent GitHub sponsor ledger and current researched inventory were searched immediately before staging and no Aqara entry surfaced.",
+    "paid_product_placement": true,
+    "contact_email": "marketing@aqara.com",
+    "contact_source_url": "https://www.aqara.com/en/about-us/contact-us/"
+  },
+  {
+    "brand_name": "Govee",
+    "brand_domain": "govee.com",
+    "creator_name": "TechZone",
+    "creator_url": "https://www.youtube.com/@TechZone",
+    "creator_channel_id": "",
+    "creator_genre": "Physical Consumer Tech / Lifestyle",
+    "creator_tags": [
+      "physical consumer tech",
+      "smart lighting",
+      "smart home",
+      "hardware",
+      "lifestyle",
+      "technology"
+    ],
+    "video_url": "https://getsponsored.io/sponsors/govee",
+    "video_title": "SMART GADGETS THAT WILL UPGRADE YOUR LIFE",
+    "sponsored_date": "2026-07-04",
+    "evidence": "GetSponsored records Govee sponsoring TechZone's July 4, 2026 English-language YouTube video and tracks 41 Govee sponsorships across 32 creators. Govee sells tangible smart lighting and smart-home hardware. Govee's official affiliate program is explicitly open to streamers and content creators and publishes affiliate@govee.com for affiliate partnership questions. The permanent GitHub sponsor ledger and current researched inventory were searched immediately before staging and no Govee entry surfaced.",
+    "paid_product_placement": true,
+    "contact_email": "affiliate@govee.com",
+    "contact_source_url": "https://ca.govee.com/pages/affiliate"
+  },
+  {
+    "brand_name": "Lexar",
+    "brand_domain": "lexar.com",
+    "creator_name": "Anthony Gugliotta",
+    "creator_url": "https://www.youtube.com/@AnthonyGugliotta",
+    "creator_channel_id": "",
+    "creator_genre": "Physical Consumer Tech / Creator Gear",
+    "creator_tags": [
+      "physical consumer tech",
+      "storage",
+      "SSD",
+      "memory cards",
+      "creator gear",
+      "photography",
+      "video"
+    ],
+    "video_url": "https://getsponsored.io/sponsors/lexar",
+    "video_title": "I built my FASTEST editing PC EVER (ft: ASUS ProArt)",
+    "sponsored_date": "2026-07-08",
+    "evidence": "GetSponsored records Lexar sponsoring Anthony Gugliotta's July 8, 2026 English-language YouTube video and tracks 47 Lexar sponsorships across 14 creators. Lexar sells tangible storage hardware including SSDs, memory cards and card readers. Lexar's official site has a creator partnership request program and its official contact page publishes lexarBM@lexar.com for Brand and Marketing. The permanent GitHub sponsor ledger and current researched inventory were searched immediately before staging and no Lexar entry surfaced.",
+    "paid_product_placement": true,
+    "contact_email": "lexarBM@lexar.com",
+    "contact_source_url": "https://www.lexar.com/global/contact/"
   }
 ]
