@@ -14,5 +14,21 @@
     "paid_product_placement": true,
     "contact_email": "influencer@dreo.com",
     "contact_source_url": "https://www.dreo.com/pages/contact-us"
+  },
+  {
+    "brand_name": "Midea",
+    "brand_domain": "midea.com",
+    "creator_name": "She's In Her Apron",
+    "creator_url": "https://www.youtube.com/@ShesInHerApron",
+    "creator_channel_id": "",
+    "creator_genre": "Food / Homemaking / Lifestyle",
+    "creator_tags": ["food", "homemaking", "lifestyle", "home appliances", "freezer meals", "physical consumer tech"],
+    "video_url": "https://sponsorradar.com/channels/shesinherapron",
+    "video_title": "It's Too Hot To Cook! This Freezer System ALWAYS Saves Dinner!",
+    "sponsored_date": "2026-06-26",
+    "evidence": "SponsorRadar records Midea sponsoring She's In Her Apron's June 26, 2026 English-language YouTube video 'It's Too Hot To Cook! This Freezer System ALWAYS Saves Dinner!'. Midea sells tangible home appliances and physical consumer hardware. Midea's official Brandbook publishes marketing@midea.com as an HQ marketing contact used for official social-media account coordination. The GitHub repository was searched immediately before staging and no Midea/midea.com match surfaced.",
+    "paid_product_placement": true,
+    "contact_email": "marketing@midea.com",
+    "contact_source_url": "https://brandbook.midea.com/guidelines/digital/social-midea/social-media-guidelines"
   }
 ]
