@@ -1657,5 +1657,29 @@
     "paid_product_placement": true,
     "contact_email": "marketing@feedbacksports.com",
     "contact_source_url": "https://feedbacksports.com/pages/dealer-resources"
+  },
+  {
+    "brand_name": "Nanit",
+    "brand_domain": "nanit.com",
+    "creator_name": "KKandbabyJ",
+    "creator_url": "https://www.youtube.com/@kkandbabyj",
+    "creator_channel_id": "",
+    "creator_genre": "Lifestyle / Family / Vlog",
+    "creator_tags": [
+      "lifestyle",
+      "family",
+      "vlog",
+      "parenting",
+      "baby",
+      "home",
+      "physical consumer tech"
+    ],
+    "video_url": "https://sponsorradar.com/channels/kkandbabyj",
+    "video_title": "back to school shopping!! first year of hybrid home schooling! 🏫",
+    "sponsored_date": "2026-07-31",
+    "evidence": "SponsorRadar records Nanit as the sponsor of KKandbabyJ's July 31, 2026 English-language YouTube video 'back to school shopping!! first year of hybrid home schooling! 🏫'. Nanit sells tangible baby-monitor and nursery hardware. Nanit's official website publicly publishes marketing@nanit.com as a Marketing contact. The GitHub repository was rechecked immediately before staging and surfaced no Nanit/nanit.com match.",
+    "paid_product_placement": true,
+    "contact_email": "marketing@nanit.com",
+    "contact_source_url": "https://www.nanit.com/pages/nanit-next-chapter-sweepstakes-rules"
   }
 ]
