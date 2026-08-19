@@ -1,18 +1,34 @@
 [
   {
-    "brand_name": "VITURE",
-    "brand_domain": "viture.com",
-    "creator_name": "Josh Cahill",
-    "creator_url": "https://www.youtube.com/@JoshCahill",
+    "brand_name": "Halara",
+    "brand_domain": "halara.com",
+    "creator_name": "The Seasonal Homestead",
+    "creator_url": "https://www.youtube.com/@TheSeasonalHomestead",
     "creator_channel_id": "",
-    "creator_genre": "Travel / Aviation / Lifestyle",
-    "creator_tags": ["travel", "aviation", "lifestyle", "gaming", "XR glasses", "physical consumer tech"],
-    "video_url": "https://sponsorradar.com/brands/viture",
-    "video_title": "Bizarre! The World’s Cheapest Business Class!",
-    "sponsored_date": "2026-07-18",
-    "evidence": "SponsorRadar records VITURE sponsoring Josh Cahill's July 18, 2026 English-language YouTube video 'Bizarre! The World’s Cheapest Business Class!' with a creator-specific VITURE offer in the description. VITURE sells tangible XR gaming/display glasses. VITURE's official contact page publishes marketing@viture.com specifically for Creator Inquiries and bd@viture.com for Business Partnerships. The current researched inventory and permanent sent ledger were checked immediately before staging and contained no VITURE/viture.com match.",
+    "creator_genre": "Lifestyle / Homestead / Family",
+    "creator_tags": ["lifestyle", "homestead", "family", "fashion", "athleisure", "vlog"],
+    "video_url": "https://sponsorradar.com/channels/theseasonalhomestead",
+    "video_title": "Prepping to Preserve 3,000 lbs of Food! (Huge Pantry Stock Up)🫙",
+    "sponsored_date": "2026-07-09",
+    "evidence": "SponsorRadar records Halara sponsoring The Seasonal Homestead's July 9, 2026 English-language YouTube video 'Prepping to Preserve 3,000 lbs of Food! (Huge Pantry Stock Up)🫙'. SponsorRadar also shows Halara as an active creator buyer with 308 tracked YouTube deals across 187 channels and July 2026 as its latest tracked deal month. Halara's official contact page publishes collaboration@halara.com specifically for Business Inquiries, and its official affiliate program is active. The GitHub repository was rechecked immediately before staging and contained no Halara/halara.com match.",
     "paid_product_placement": true,
-    "contact_email": "marketing@viture.com",
-    "contact_source_url": "https://www.viture.com/contact"
+    "contact_email": "collaboration@halara.com",
+    "contact_source_url": "https://www.halara.com/uk/foot/contact-us"
+  },
+  {
+    "brand_name": "ResortPass",
+    "brand_domain": "resortpass.com",
+    "creator_name": "The Aguilars",
+    "creator_url": "https://www.youtube.com/@theaguilarsofficial",
+    "creator_channel_id": "",
+    "creator_genre": "Lifestyle / Family / Travel",
+    "creator_tags": ["lifestyle", "family", "travel", "vlog", "experiences", "hospitality"],
+    "video_url": "https://sponsorradar.com/channels/theaguilarsofficial",
+    "video_title": "My Husband Had No Idea His Best Friend Was Waiting In Vegas! 😭❤️",
+    "sponsored_date": "2026-07-16",
+    "evidence": "SponsorRadar records ResortPass sponsoring The Aguilars' July 16, 2026 English-language YouTube video 'My Husband Had No Idea His Best Friend Was Waiting In Vegas! 😭❤️'. ResortPass's official affiliate program explicitly welcomes influencers and creators, provides a creator commission tier, and publishes affiliates@resortpass.com for ResortPass/partnership inquiries; its official partner contact page also lists marketing@resortpass.com for Marketing + Partnerships. The GitHub repository was rechecked immediately before staging and contained no ResortPass/resortpass.com match.",
+    "paid_product_placement": true,
+    "contact_email": "affiliates@resortpass.com",
+    "contact_source_url": "https://affiliates.resortpass.com/"
   }
 ]
