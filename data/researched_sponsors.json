@@ -1180,5 +1180,28 @@
     "paid_product_placement": true,
     "contact_email": "marketing@midea.com",
     "contact_source_url": "https://brandbook.midea.com/guidelines/digital/social-midea/social-media-guidelines"
+  },
+  {
+    "brand_name": "VITURE",
+    "brand_domain": "viture.com",
+    "creator_name": "Josh Cahill",
+    "creator_url": "https://www.youtube.com/@JoshCahill",
+    "creator_channel_id": "",
+    "creator_genre": "Travel / Aviation / Lifestyle",
+    "creator_tags": [
+      "travel",
+      "aviation",
+      "lifestyle",
+      "gaming",
+      "XR glasses",
+      "physical consumer tech"
+    ],
+    "video_url": "https://sponsorradar.com/brands/viture",
+    "video_title": "Bizarre! The World’s Cheapest Business Class!",
+    "sponsored_date": "2026-07-18",
+    "evidence": "SponsorRadar records VITURE sponsoring Josh Cahill's July 18, 2026 English-language YouTube video 'Bizarre! The World’s Cheapest Business Class!' with a creator-specific VITURE offer in the description. VITURE sells tangible XR gaming/display glasses. VITURE's official contact page publishes marketing@viture.com specifically for Creator Inquiries and bd@viture.com for Business Partnerships. The current researched inventory and permanent sent ledger were checked immediately before staging and contained no VITURE/viture.com match.",
+    "paid_product_placement": true,
+    "contact_email": "marketing@viture.com",
+    "contact_source_url": "https://www.viture.com/contact"
   }
 ]
