@@ -977,5 +977,49 @@
     "paid_product_placement": true,
     "contact_email": "marketing@jackery.com",
     "contact_source_url": "https://www.jackery.com/pages/contact"
+  },
+  {
+    "brand_name": "Tapo",
+    "brand_domain": "tapo.com",
+    "creator_name": "Paul Hibbert (Hibbert Home Tech)",
+    "creator_url": "https://www.youtube.com/@paulhibbert",
+    "creator_channel_id": "",
+    "creator_genre": "Smart Home / Physical Consumer Tech",
+    "creator_tags": [
+      "smart home",
+      "home",
+      "physical consumer tech",
+      "security cameras",
+      "home automation"
+    ],
+    "video_url": "https://sponsorradar.com/brands/tapo",
+    "video_title": "Tapo Just Changed Everything",
+    "sponsored_date": "2026-08-01",
+    "evidence": "SponsorRadar records Tapo sponsoring Paul Hibbert (Hibbert Home Tech)'s August 1, 2026 English-language YouTube video, explicitly identifying the video as sponsored by Tapo. Tapo sells tangible smart-home cameras, locks, hubs and related hardware. Tapo's official US affiliate program explicitly works with social-media influencers, publishers and content creators and publishes affiliates.shopus@tp-link.com for affiliate eligibility/contact. The GitHub repository was searched immediately before staging and no Tapo/tapo.com entry surfaced.",
+    "paid_product_placement": true,
+    "contact_email": "affiliates.shopus@tp-link.com",
+    "contact_source_url": "https://us.store.tapo.com/pages/affiliates"
+  },
+  {
+    "brand_name": "Dreame",
+    "brand_domain": "dreametech.com",
+    "creator_name": "Andréa Matillano",
+    "creator_url": "https://www.youtube.com/@AndreaMatillano",
+    "creator_channel_id": "",
+    "creator_genre": "Beauty / Lifestyle / Home",
+    "creator_tags": [
+      "beauty",
+      "lifestyle",
+      "home",
+      "physical consumer tech",
+      "appliances"
+    ],
+    "video_url": "https://sponsorradar.com/brands/dreame",
+    "video_title": "These are the BEST drugstore dupes EVER 🫢",
+    "sponsored_date": "2026-08-07",
+    "evidence": "SponsorRadar records Dreame sponsoring Andréa Matillano's August 7, 2026 English-language YouTube video with an explicit sponsor thank-you. Dreame sells tangible home appliances and robotics. Dreame's official North America contact page publishes marketing.na@dreame.tech specifically for marketing inquiries, and its official affiliate program explicitly welcomes YouTube and Instagram influencers and publishes affiliate@dreame.tech. The GitHub repository was searched immediately before staging and no Dreame/dreametech entry surfaced.",
+    "paid_product_placement": true,
+    "contact_email": "marketing.na@dreame.tech",
+    "contact_source_url": "https://www.dreametech.com/pages/dreame-contact-us/1000"
   }
 ]
