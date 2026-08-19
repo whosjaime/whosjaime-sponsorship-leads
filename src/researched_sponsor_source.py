@@ -93,6 +93,9 @@ class ResearchedSponsorSource:
             contact_name, contact_title, contact_email, contact_source = self._verified_contact(
                 item, brand_domain
             )
+            creator_genre = str(item.get("creator_genre") or "").strip()
+            raw_tags = item.get("creator_tags") or []
+            creator_tags = [str(tag).strip() for tag in raw_tags if str(tag).strip()] if isinstance(raw_tags, list) else []
 
             leads.append(
                 SponsorLead(
@@ -103,8 +106,8 @@ class ResearchedSponsorSource:
                     creator_url=str(item.get("creator_url") or "").strip(),
                     creator_channel_id=str(item.get("creator_channel_id") or "").strip(),
                     creator_subscribers=self._int(item.get("creator_subscribers")),
-                    creator_genre="",
-                    creator_tags=[],
+                    creator_genre=creator_genre,
+                    creator_tags=creator_tags,
                     video_id=video_id,
                     video_url=video_url,
                     video_title=str(item.get("video_title") or "").strip(),
