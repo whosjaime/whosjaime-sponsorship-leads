@@ -10,7 +10,7 @@ permissions:
 
 concurrency:
   group: sponsor-catchup-immediate
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   catch-up:
