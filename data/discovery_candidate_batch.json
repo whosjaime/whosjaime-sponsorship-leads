@@ -1,34 +1,18 @@
 [
   {
-    "brand_name": "Momentous",
-    "brand_domain": "livemomentous.com",
-    "creator_name": "Habits & Hustle w/ Jennifer Cohen",
-    "creator_url": "https://www.youtube.com/@habitsandhustle",
+    "brand_name": "Nanit",
+    "brand_domain": "nanit.com",
+    "creator_name": "KKandbabyJ",
+    "creator_url": "https://www.youtube.com/@kkandbabyj",
     "creator_channel_id": "",
-    "creator_genre": "Health / Wellness / Lifestyle",
-    "creator_tags": ["health", "wellness", "fitness", "supplements", "podcast", "lifestyle"],
-    "video_url": "https://sponsorradar.com/brands/livemomentous/get-sponsored",
-    "video_title": "Jon Gordon: The Psychology of Optimism, Better Habits, and Stronger Leadership",
-    "sponsored_date": "2026-08-04",
-    "evidence": "SponsorRadar records Momentous/Livemomentous as an active creator sponsor with an August 2026 tracked deal on Habits & Hustle w/ Jennifer Cohen for 'Jon Gordon: The Psychology of Optimism, Better Habits, and Stronger Leadership'; the episode was published August 4, 2026. Momentous sells physical health and performance supplements. Its official Affiliate & Ambassador Program explicitly recruits creators, affiliates and ambassadors, offers campaign opportunities and paid partnership progression, and publishes affiliates@livemomentous.com for program questions. The GitHub repository was rechecked immediately before staging and surfaced no Momentous/livemomentous.com match.",
+    "creator_genre": "Lifestyle / Family / Vlog",
+    "creator_tags": ["lifestyle", "family", "vlog", "parenting", "baby", "home", "physical consumer tech"],
+    "video_url": "https://sponsorradar.com/channels/kkandbabyj",
+    "video_title": "back to school shopping!! first year of hybrid home schooling! 🏫",
+    "sponsored_date": "2026-07-31",
+    "evidence": "SponsorRadar records Nanit as the sponsor of KKandbabyJ's July 31, 2026 English-language YouTube video 'back to school shopping!! first year of hybrid home schooling! 🏫'. Nanit sells tangible baby-monitor and nursery hardware. Nanit's official website publicly publishes marketing@nanit.com as a Marketing contact. The GitHub repository was rechecked immediately before staging and surfaced no Nanit/nanit.com match.",
     "paid_product_placement": true,
-    "contact_email": "affiliates@livemomentous.com",
-    "contact_source_url": "https://www.livemomentous.com/en-ca/pages/affiliate-partnerships"
-  },
-  {
-    "brand_name": "Feedback Sports",
-    "brand_domain": "feedbacksports.com",
-    "creator_name": "BikeRadar",
-    "creator_url": "https://www.youtube.com/@bikeradar",
-    "creator_channel_id": "",
-    "creator_genre": "Cycling / Sports / Physical Consumer Gear",
-    "creator_tags": ["cycling", "sports", "bike gear", "outdoors", "physical consumer products"],
-    "video_url": "https://sponsorradar.com/channels/bikeradar",
-    "video_title": "25c Tyres Are BACK At The Tour De France – This Is Why | BikeRadar Podcast",
-    "sponsored_date": "2026-07-09",
-    "evidence": "SponsorRadar and BikeRadar's public episode listing identify Feedback Sports as the sponsor of BikeRadar's July 9, 2026 English-language video '25c Tyres Are BACK At The Tour De France – This Is Why | BikeRadar Podcast.' Feedback Sports sells tangible bicycle repair stands, trainers, storage and cycling accessories. Because the direct sponsorship is within 60 days rather than 30, current activity is corroborated by Feedback Sports' official live Partnerships page and current contact form with a dedicated 'Marketing Request (Athletes, Teams, Sponsorship, Industry)' route. Its official dealer/marketing resources publish marketing@feedbacksports.com for marketing partners. The GitHub repository was rechecked immediately before staging and surfaced no Feedback Sports/feedbacksports.com match.",
-    "paid_product_placement": true,
-    "contact_email": "marketing@feedbacksports.com",
-    "contact_source_url": "https://feedbacksports.com/pages/dealer-resources"
+    "contact_email": "marketing@nanit.com",
+    "contact_source_url": "https://www.nanit.com/pages/nanit-next-chapter-sweepstakes-rules"
   }
 ]
