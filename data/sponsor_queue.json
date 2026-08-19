@@ -1,1 +1,44 @@
-[]
+[
+  {
+    "brand_name": "Jomashop",
+    "brand_domain": "jomashop.com",
+    "source_platform": "YouTube",
+    "creator_name": "Gents Scents",
+    "creator_url": "https://www.youtube.com/@gentsscents",
+    "creator_channel_id": "UC9IImcLkUdmURWtQhxu8VwQ",
+    "creator_subscribers": 0,
+    "creator_genre": "Fragrance / Men's Lifestyle",
+    "creator_tags": [
+      "fragrance",
+      "men's lifestyle",
+      "beauty",
+      "fashion",
+      "reviews",
+      "luxury"
+    ],
+    "video_id": "wns5I7-ikqA",
+    "video_url": "https://www.youtube.com/watch?v=wns5I7-ikqA",
+    "video_title": "10 Cheap Clone Fragrances So Good They Destroy The Original",
+    "sponsored_date": "2026-07-29",
+    "evidence": "SponsorRadar records Jomashop promotion/sponsorship activity on Gents Scents' July 29, 2026 English-language YouTube video and Jomashop's official affiliate program explicitly recruits content creators and influencers for collaborations.",
+    "paid_product_placement": true,
+    "brand_partner_channel_id": "",
+    "sponsor_category": "Fashion",
+    "sponsor_subcategory": "Accessories / Fragrance Retail",
+    "contact_name": "",
+    "contact_title": "Affiliate Partnerships",
+    "contact_email": "affiliate@jomashop.com",
+    "email_type": "Affiliate Partnerships",
+    "contact_source": "https://help.jomashop.com/hc/en-us/articles/11923106976027-Affiliate-Program",
+    "lead_score": 95,
+    "lead_temperature": "Very Hot",
+    "sponsorship_key": "youtube:wns5i7-ikqa:jomashop.com",
+    "brand_key": "domain:jomashop.com",
+    "signals": [
+      "Daily researched sponsorship",
+      "verified public sponsorship evidence",
+      "qualified affiliate partnerships contact"
+    ],
+    "date_found": "2026-08-19"
+  }
+]
