@@ -1021,5 +1021,73 @@
     "paid_product_placement": true,
     "contact_email": "marketing.na@dreame.tech",
     "contact_source_url": "https://www.dreametech.com/pages/dreame-contact-us/1000"
+  },
+  {
+    "brand_name": "New West KnifeWorks",
+    "brand_domain": "newwestknifeworks.com",
+    "creator_name": "The Dawgfatha's BBQ",
+    "creator_url": "https://www.youtube.com/@thedawgfathasbbq",
+    "creator_channel_id": "",
+    "creator_genre": "Food / BBQ / Outdoor Cooking",
+    "creator_tags": [
+      "food",
+      "BBQ",
+      "cooking",
+      "kitchen",
+      "outdoors",
+      "lifestyle"
+    ],
+    "video_url": "https://sponsorradar.com/channels/thedawgfathasbbq",
+    "video_title": "Grilled Chicken DUNKED in Alabama White Sauce… This Shouldn’t Be This Good!",
+    "sponsored_date": "2026-07-08",
+    "evidence": "SponsorRadar records New West KnifeWorks sponsoring The Dawgfatha's BBQ's July 8, 2026 English-language YouTube video. New West KnifeWorks sells tangible premium knives and culinary tools. Its official Affiliate Program explicitly invites food bloggers, culinary influencers and kitchen/lifestyle content creators and publishes dmooney@newwestknifeworks.com for affiliate-program questions. The GitHub repository was searched immediately before staging and no New West KnifeWorks/newwestknifeworks.com entry surfaced.",
+    "paid_product_placement": true,
+    "contact_email": "dmooney@newwestknifeworks.com",
+    "contact_source_url": "https://www.newwestknifeworks.com/pages/affiliate-program"
+  },
+  {
+    "brand_name": "Big Horn Outdoors",
+    "brand_domain": "bighornoutdoor.com",
+    "creator_name": "Cooking With Jack Show",
+    "creator_url": "https://www.youtube.com/@CookingWithJackShow",
+    "creator_channel_id": "",
+    "creator_genre": "Food / Cooking / Outdoor Cooking",
+    "creator_tags": [
+      "food",
+      "cooking",
+      "grilling",
+      "outdoor cooking",
+      "grills",
+      "physical products"
+    ],
+    "video_url": "https://sponsorradar.com/channels/cookingwithjackshow",
+    "video_title": "BIGHORN INFRARED GRILL - PRODUCT REVIEW",
+    "sponsored_date": "2026-07-12",
+    "evidence": "SponsorRadar records Big Horn Outdoors sponsoring Cooking With Jack Show's July 12, 2026 English-language YouTube video. Big Horn Outdoors sells tangible grills, pizza ovens and outdoor cooking hardware. Its official Affiliate Program says it works with social-network owners and promotional partners, provides a dedicated affiliate manager, and publishes sandra@bighornoutdoor.com for affiliate-program questions; the official contact page separately lists marketing@bighornoutdoor.com for collabs. The GitHub repository was searched immediately before staging and no Big Horn Outdoors/bighornoutdoor.com entry surfaced.",
+    "paid_product_placement": true,
+    "contact_email": "sandra@bighornoutdoor.com",
+    "contact_source_url": "https://bighornoutdoor.com/pages/affiliate-page"
+  },
+  {
+    "brand_name": "Shelly",
+    "brand_domain": "shelly.com",
+    "creator_name": "Paul Hibbert (Hibbert Home Tech)",
+    "creator_url": "https://www.youtube.com/@paulhibbert",
+    "creator_channel_id": "",
+    "creator_genre": "Smart Home / Physical Consumer Tech",
+    "creator_tags": [
+      "smart home",
+      "home automation",
+      "physical consumer tech",
+      "home",
+      "electronics"
+    ],
+    "video_url": "https://sponsorradar.com/channels/paulhibbert",
+    "video_title": "I Waited So Long For This",
+    "sponsored_date": "2026-07-25",
+    "evidence": "SponsorRadar records Shelly sponsoring Paul Hibbert (Hibbert Home Tech)'s July 25, 2026 English-language YouTube video. Shelly is a physical smart-home hardware brand selling relays, sensors and automation devices. Shelly Group's official contact page publishes marketing@shelly.com specifically for Marketing & Public Relations; Shelly's official support site also confirms an active partner channel. The GitHub repository was searched immediately before staging and no Shelly/shelly.com entry surfaced.",
+    "paid_product_placement": true,
+    "contact_email": "marketing@shelly.com",
+    "contact_source_url": "https://corporate.shelly.com/en/contact"
   }
 ]
