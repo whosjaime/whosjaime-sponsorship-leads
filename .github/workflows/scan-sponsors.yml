@@ -20,7 +20,7 @@ concurrency:
 jobs:
   dispatch-sponsor:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 60
     steps:
       - uses: actions/checkout@v4
         with:
@@ -29,6 +29,23 @@ jobs:
         with:
           python-version: "3.11"
       - run: pip install -r requirements.txt
+      - name: Ensure sponsor queue has a qualified candidate
+        env:
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+          CREATORDB_API_KEY: ${{ secrets.CREATORDB_API_KEY }}
+          SPONSOR_MIN_LEAD_SCORE: ${{ vars.SPONSOR_MIN_LEAD_SCORE || '70' }}
+          SPONSOR_MAX_AGE_DAYS: ${{ vars.SPONSOR_MAX_AGE_DAYS || '30' }}
+          CREATORDB_PAGE_SIZE: ${{ vars.CREATORDB_PAGE_SIZE || '50' }}
+          SPONSOR_SEARCH_REGION: ${{ vars.SPONSOR_SEARCH_REGION || 'US' }}
+          SPONSOR_SEARCH_LANGUAGE: ${{ vars.SPONSOR_SEARCH_LANGUAGE || 'en' }}
+        shell: bash
+        run: |
+          if [ ! -s data/sponsor_queue.json ] || [ "$(cat data/sponsor_queue.json)" = "[]" ]; then
+            echo "Sponsor queue empty; rebuilding from researched inventory/discovery before dispatch."
+            python src/run_sponsor_discovery_batch.py
+          else
+            echo "Sponsor queue already has candidates."
+          fi
       - name: Deliver next qualified queued sponsor
         env:
           YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
