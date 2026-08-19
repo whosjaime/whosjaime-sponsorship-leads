@@ -1412,5 +1412,71 @@
     "contact_title": "HexClad Affiliate Team Contact",
     "contact_email": "jade@fsmediahouse.com",
     "contact_source_url": "https://ui.awin.com/merchant-profile-terms/21679"
+  },
+  {
+    "brand_name": "Aeptom",
+    "brand_domain": "aeptom.com",
+    "creator_name": "Kayla Lashae Vlogs",
+    "creator_url": "https://www.youtube.com/@kaylalashaevlogs",
+    "creator_channel_id": "",
+    "creator_genre": "Lifestyle / Vlog / Home",
+    "creator_tags": [
+      "lifestyle",
+      "vlog",
+      "home",
+      "bedding",
+      "home decor"
+    ],
+    "video_url": "https://sponsorradar.com/channels/kaylalashaevlogs",
+    "video_title": "FALL HOME DECOR VLOG 🍂 Home Goods shopping, aesthetic bedding refresh, Trader Joe's haul & AEPTOM",
+    "sponsored_date": "2026-08-01",
+    "evidence": "SponsorRadar records Kayla Lashae Vlogs' August 1, 2026 English-language YouTube video 'FALL HOME DECOR VLOG 🍂 Home Goods shopping, aesthetic bedding refresh, Trader Joe's haul & AEPTOM' as sponsored by Aeptom. Aeptom is a physical home/bedding brand; its official Affiliate Program is active with dedicated affiliate management, and its official contact page publishes marketing@aeptom.com for Marketing and affiliates@aeptom.com for Affiliates. The GitHub repository was rechecked immediately before staging and surfaced no Aeptom or aeptom.com match.",
+    "paid_product_placement": true,
+    "contact_email": "marketing@aeptom.com",
+    "contact_source_url": "https://aeptom.com/en-ca/pages/contact-us"
+  },
+  {
+    "brand_name": "Ohuhu",
+    "brand_domain": "ohuhu.com",
+    "creator_name": "Sophie DiLoreto",
+    "creator_url": "https://www.youtube.com/@sophiediloreto",
+    "creator_channel_id": "",
+    "creator_genre": "Lifestyle / Vlog / Art",
+    "creator_tags": [
+      "lifestyle",
+      "vlog",
+      "art",
+      "markers",
+      "creative hobbies"
+    ],
+    "video_url": "https://www.youtube.com/watch?v=9Tx7s6s5aiE",
+    "video_title": "REPLACING DOOMSCROLLING WITH REAL LIFE 🎨 hobbies, productivity, & self care",
+    "sponsored_date": "2026-07-07",
+    "evidence": "SponsorRadar records Sophie DiLoreto's July 7, 2026 English-language YouTube video 'REPLACING DOOMSCROLLING WITH REAL LIFE 🎨 hobbies, productivity, & self care' as sponsored by Ohuhu. Ohuhu sells physical art supplies and its official affiliate program welcomes KOLs, bloggers, online communities and content creators, explicitly directing program questions to marketing@ohuhu.com. The GitHub repository was rechecked immediately before staging and surfaced no Ohuhu or ohuhu.com match.",
+    "paid_product_placement": true,
+    "contact_email": "marketing@ohuhu.com",
+    "contact_source_url": "https://ohuhu.com/pages/affiliate"
+  },
+  {
+    "brand_name": "Level8 Luggage",
+    "brand_domain": "level8cases.com",
+    "creator_name": "Nonstop Eurotrip",
+    "creator_url": "https://www.youtube.com/@nonstopeurotrip",
+    "creator_channel_id": "",
+    "creator_genre": "Travel",
+    "creator_tags": [
+      "travel",
+      "trains",
+      "luggage",
+      "travel gear",
+      "transport"
+    ],
+    "video_url": "https://www.youtube.com/watch?v=-Y2syahNMik",
+    "video_title": "Should You Take China's MOST POPULAR Sleeper Train Route?",
+    "sponsored_date": "2026-07-10",
+    "evidence": "SponsorRadar records Nonstop Eurotrip's July 10, 2026 English-language YouTube video 'Should You Take China's MOST POPULAR Sleeper Train Route?' as sponsored by Level8 Luggage, and tracks repeated Level8 sponsorships on the channel. LEVEL8 sells physical luggage/travel gear; its official site publishes juncy.zeng@level8cases.com specifically for Brand Cooperation / cross-brand collaborations. The GitHub repository was rechecked immediately before staging and surfaced no Level8 or level8cases.com match.",
+    "paid_product_placement": true,
+    "contact_email": "juncy.zeng@level8cases.com",
+    "contact_source_url": "https://www.level8.com.cn/service.html"
   }
 ]
