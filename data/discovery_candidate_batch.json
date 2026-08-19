@@ -1,18 +1,18 @@
 [
   {
-    "brand_name": "Leesa",
-    "brand_domain": "leesa.com",
-    "creator_name": "Taylor Wynn",
-    "creator_url": "https://www.youtube.com/@taylorwynn",
-    "creator_channel_id": "UCkJHb4rTNd8PIMD9S0UPCiw",
-    "creator_genre": "Lifestyle / Vlog / Beauty",
-    "creator_tags": ["lifestyle", "vlog", "home", "beauty", "travel", "sleep"],
-    "video_url": "https://sponsorradar.com/channels/taylorwynn",
-    "video_title": "RESET AT HOME VLOG ✈️ cleaning, laundry, unpacking suitcases + what makeup I used & what I DIDN'T",
-    "sponsored_date": "2026-07-15",
-    "evidence": "SponsorRadar records Leesa sponsoring Taylor Wynn's July 15, 2026 English-language YouTube video. Leesa sells tangible mattresses, bedding, and sleep products. Leesa's official Affiliate Program actively recruits social and website publishers, provides a dedicated affiliate manager, and publishes affiliates@leesa.com for program questions. The GitHub repository was searched immediately before staging and no Leesa/leesa.com/affiliates@leesa.com entry surfaced.",
+    "brand_name": "DREO",
+    "brand_domain": "dreo.com",
+    "creator_name": "Jenna Phipps",
+    "creator_url": "https://www.youtube.com/@jennaphipps",
+    "creator_channel_id": "",
+    "creator_genre": "DIY / Lifestyle / Home",
+    "creator_tags": ["DIY", "lifestyle", "home", "renovation", "physical consumer tech", "smart home"],
+    "video_url": "https://sponsorradar.com/channels/jennaphipps",
+    "video_title": "our home looks completely different (ep.122)",
+    "sponsored_date": "2026-07-01",
+    "evidence": "SponsorRadar records DREO sponsoring Jenna Phipps' July 1, 2026 English-language YouTube video 'our home looks completely different (ep.122)'. DREO sells tangible home appliances and physical smart-home products. DREO's official Contact Us page explicitly lists influencer@dreo.com for Influencer & Partnerships and affiliate@dreo.com for Affiliate outreach; its official affiliate program also actively recruits partners. The GitHub repository was searched immediately before staging and no DREO/dreo.com match surfaced.",
     "paid_product_placement": true,
-    "contact_email": "affiliates@leesa.com",
-    "contact_source_url": "https://www.leesa.com/pages/affiliates"
+    "contact_email": "influencer@dreo.com",
+    "contact_source_url": "https://www.dreo.com/pages/contact-us"
   }
 ]
