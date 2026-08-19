@@ -1,1 +1,40 @@
-[]
+[
+  {
+    "brand_name": "Aeroband",
+    "brand_domain": "aeroband.net",
+    "source_platform": "YouTube",
+    "creator_name": "Laura Mazon Franqui Guitar",
+    "creator_url": "https://www.youtube.com/channel/UCPJ2eeYKX9cXQdgZYbxN8fA",
+    "creator_channel_id": "UCPJ2eeYKX9cXQdgZYbxN8fA",
+    "creator_subscribers": 9530,
+    "creator_genre": "Music",
+    "creator_tags": [
+      "Music",
+      "Long Form",
+      "Tech"
+    ],
+    "video_id": "x2Ygna1tvG8",
+    "video_url": "https://www.youtube.com/watch?v=x2Ygna1tvG8",
+    "video_title": "Didn’t Expect This Guitar to Sound Like THAT… | AeroBand Review",
+    "sponsored_date": "2026-08-18",
+    "evidence": "Paid promotion/ad disclosure with external sponsor link",
+    "paid_product_placement": true,
+    "brand_partner_channel_id": "",
+    "sponsor_category": "Consumer Tech",
+    "sponsor_subcategory": "Audio Gear",
+    "contact_name": "",
+    "contact_title": "",
+    "contact_email": "influencer@aeroband.net",
+    "email_type": "Influencer Marketing",
+    "contact_source": "https://www.aeroband.net/",
+    "lead_score": 73,
+    "lead_temperature": "Warm",
+    "sponsorship_key": "youtube:x2ygna1tvg8:aeroband.net",
+    "brand_key": "domain:aeroband.net",
+    "signals": [
+      "YouTube paid product placement",
+      "sponsor domain found"
+    ],
+    "date_found": "2026-08-19"
+  }
+]
