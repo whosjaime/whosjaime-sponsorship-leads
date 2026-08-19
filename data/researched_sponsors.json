@@ -1341,5 +1341,76 @@
     "paid_product_placement": true,
     "contact_email": "influencers@wayfair.com",
     "contact_source_url": "https://www.wayfair.com/m/brand-logos"
+  },
+  {
+    "brand_name": "Wahoo Fitness",
+    "brand_domain": "wahoofitness.com",
+    "creator_name": "The Running Channel",
+    "creator_url": "https://www.youtube.com/@runningchannel",
+    "creator_channel_id": "",
+    "creator_genre": "Health & Fitness / Running",
+    "creator_tags": [
+      "health",
+      "fitness",
+      "running",
+      "wearables",
+      "physical consumer tech",
+      "sports"
+    ],
+    "video_url": "https://www.youtube.com/watch?v=2Lbo7QVDahw",
+    "video_title": "The Fastest Way To Improve Running Economy",
+    "sponsored_date": "2026-08-13",
+    "evidence": "SponsorRadar's current The Running Channel sponsorship page lists 'The Fastest Way To Improve Running Economy' as sponsored by Wahoo on August 13, 2026. Wahoo sells tangible fitness hardware and its official contact page explicitly lists partnerships@wahoofitness.com for Partnership Inquiries and marketing@wahoofitness.com for Marketing Inquiries. The GitHub repository was rechecked immediately before staging and surfaced no Wahoo Fitness or wahoofitness.com match.",
+    "paid_product_placement": true,
+    "contact_email": "partnerships@wahoofitness.com",
+    "contact_source_url": "https://ca.wahoofitness.com/contact-us"
+  },
+  {
+    "brand_name": "Science In Sport",
+    "brand_domain": "scienceinsport.com",
+    "creator_name": "The Running Channel",
+    "creator_url": "https://www.youtube.com/@runningchannel",
+    "creator_channel_id": "",
+    "creator_genre": "Health & Fitness / Running",
+    "creator_tags": [
+      "health",
+      "fitness",
+      "running",
+      "sports nutrition",
+      "food/drink",
+      "wellness"
+    ],
+    "video_url": "https://www.youtube.com/watch?v=JFu00klXSc0",
+    "video_title": "The Secret To Boosting Your VO2 Max",
+    "sponsored_date": "2026-07-30",
+    "evidence": "SponsorRadar's current The Running Channel sponsorship page lists 'The Secret To Boosting Your VO2 Max' as sponsored by Science In Sport on July 30, 2026. Science In Sport sells physical sports nutrition products and its official customer-care/help pages explicitly route sponsorship inquiries to sponsorship@scienceinsport.com; the brand also operates its current Team SiS creator collaboration program. The GitHub repository was rechecked immediately before staging and surfaced no Science In Sport or scienceinsport.com match.",
+    "paid_product_placement": true,
+    "contact_email": "sponsorship@scienceinsport.com",
+    "contact_source_url": "https://www.scienceinsport.com/de/customer-care"
+  },
+  {
+    "brand_name": "HexClad",
+    "brand_domain": "hexclad.com",
+    "creator_name": "Men With The Pot",
+    "creator_url": "https://www.youtube.com/@menwiththepot",
+    "creator_channel_id": "",
+    "creator_genre": "Food & Cooking / Outdoor",
+    "creator_tags": [
+      "food",
+      "cooking",
+      "outdoor cooking",
+      "kitchen",
+      "cookware",
+      "lifestyle"
+    ],
+    "video_url": "https://www.youtube.com/watch?v=qjhEZFl8ffU",
+    "video_title": "Catch & Cook: Rainbow Trout & Baby Potatoes in Rich Stock",
+    "sponsored_date": "2026-07-20",
+    "evidence": "SponsorRadar records Men With The Pot's July 20, 2026 English-language YouTube video 'Catch & Cook: Rainbow Trout & Baby Potatoes in Rich Stock' as sponsored by HexClad. HexClad currently operates official Influencer Affiliate and Creator Partnership programs. Its Awin affiliate program terms publish Jade Mayberry at jade@fsmediahouse.com as the affiliate-team contact for brand-guideline and creative-asset requests. The GitHub repository was rechecked immediately before staging and surfaced no HexClad or hexclad.com match.",
+    "paid_product_placement": true,
+    "contact_name": "Jade Mayberry",
+    "contact_title": "HexClad Affiliate Team Contact",
+    "contact_email": "jade@fsmediahouse.com",
+    "contact_source_url": "https://ui.awin.com/merchant-profile-terms/21679"
   }
 ]
