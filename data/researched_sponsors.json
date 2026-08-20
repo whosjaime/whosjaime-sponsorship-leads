@@ -1872,5 +1872,55 @@
     "contact_email": "affiliate@klook.com",
     "contact_source_url": "https://affiliate.klook.com/",
     "source_platform": "YouTube"
+  },
+  {
+    "brand_name": "Turtle Beach",
+    "brand_domain": "turtlebeach.com",
+    "creator_name": "Ali-A",
+    "creator_url": "https://www.youtube.com/@AliA",
+    "creator_channel_id": "",
+    "creator_genre": "Gaming",
+    "creator_tags": [
+      "gaming",
+      "Fortnite",
+      "controllers",
+      "headsets",
+      "gaming peripherals",
+      "creator hardware"
+    ],
+    "video_url": "https://sponsorradar.com/brands/turtle-beach",
+    "video_title": "Recent Ali-A Turtle Beach creator integration",
+    "sponsored_date": "2026-07-30",
+    "evidence": "SponsorRadar records Turtle Beach creator integrations with Ali-A on July 30, 2026 and shows Turtle Beach as an active 2026 gaming sponsor with hundreds of tracked placements. Turtle Beach's official Creators program explicitly offers financial sponsorships to creator partners. Turtle Beach Corporation's official March 2026 marketing announcement publicly lists Keith Hennessey, Sr. Director, Communications & Partnerships – International, at keith.hennessey@turtlebeach.com. GitHub brand search was rechecked immediately before staging and surfaced no Turtle Beach match.",
+    "paid_product_placement": true,
+    "contact_name": "Keith Hennessey",
+    "contact_title": "Sr. Director, Communications & Partnerships – International",
+    "contact_email": "keith.hennessey@turtlebeach.com",
+    "contact_source_url": "https://corp.turtlebeach.com/news/news-details/2026/TURTLE-BEACH-ACCELERATES-BRAND-TRANSFORMATION-WITH-NEW-MARKETING-LEADERSHIP-HIRES-2026-k4OYuxcMam/default.aspx",
+    "source_platform": "YouTube"
+  },
+  {
+    "brand_name": "Needed",
+    "brand_domain": "thisisneeded.com",
+    "creator_name": "Pine and Prospect Home",
+    "creator_url": "https://www.youtube.com/@PineandProspectHome",
+    "creator_channel_id": "",
+    "creator_genre": "Lifestyle / Home / Family",
+    "creator_tags": [
+      "lifestyle",
+      "home",
+      "family",
+      "motherhood",
+      "wellness",
+      "vlog"
+    ],
+    "video_url": "https://sponsorradar.com/brands/needed-1",
+    "video_title": "A Day Of Antique Shopping + My Favorite Vintage Finds!",
+    "sponsored_date": "2026-07-24",
+    "evidence": "SponsorRadar records Needed sponsoring Pine and Prospect Home's July 24, 2026 English-language YouTube video with an explicit sponsor acknowledgement. Needed's official Partner Hub confirms active paid creator campaigns, TikTok Shop and YouTube Shopping creator participation, UGC opportunities and paid partnerships, and publicly lists ambassadors@thisisneeded.com for creator partner support. GitHub brand search was rechecked immediately before staging and surfaced no Needed match.",
+    "paid_product_placement": true,
+    "contact_email": "ambassadors@thisisneeded.com",
+    "contact_source_url": "https://neededpartnerhub.com/",
+    "source_platform": "YouTube"
   }
 ]
