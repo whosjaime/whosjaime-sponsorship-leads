@@ -1,0 +1,81 @@
+name: Merge Discovery Staging
+
+on:
+  push:
+    paths:
+      - 'data/discovery_staging.json'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: merge-discovery-staging
+  cancel-in-progress: false
+
+jobs:
+  merge:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Merge staged sponsors safely
+        run: |
+          python - <<'PY'
+          import json, re
+          from pathlib import Path
+
+          research_path = Path('data/researched_sponsors.json')
+          staging_path = Path('data/discovery_staging.json')
+          sent_path = Path('data/sent_sponsor_keys.json')
+
+          research = json.loads(research_path.read_text()) if research_path.exists() else []
+          staged = json.loads(staging_path.read_text()) if staging_path.exists() else []
+          sent = set(json.loads(sent_path.read_text())) if sent_path.exists() else set()
+
+          def norm_brand(v):
+              return re.sub(r'[^a-z0-9]+', '', (v or '').lower())
+          def norm_domain(v):
+              d = (v or '').lower().strip()
+              d = d.removeprefix('https://').removeprefix('http://').split('/')[0]
+              return d.removeprefix('www.')
+
+          existing_brands = {norm_brand(x.get('brand_name')) for x in research if isinstance(x, dict)}
+          existing_domains = {norm_domain(x.get('brand_domain')) for x in research if isinstance(x, dict)}
+
+          added = 0
+          for item in staged:
+              if not isinstance(item, dict):
+                  continue
+              b = norm_brand(item.get('brand_name'))
+              d = norm_domain(item.get('brand_domain'))
+              if not b or not d:
+                  continue
+              if f'brand:{b}' in sent or f'domain:{d}' in sent:
+                  continue
+              if b in existing_brands or d in existing_domains:
+                  continue
+              research.append(item)
+              existing_brands.add(b)
+              existing_domains.add(d)
+              added += 1
+
+          research_path.write_text(json.dumps(research, indent=2, ensure_ascii=False) + '\n')
+          staging_path.write_text('[]\n')
+          print(f'Added {added} sponsor(s).')
+          PY
+      - name: Commit merged inventory
+        run: |
+          git config user.name "sponsor-discovery-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/researched_sponsors.json data/discovery_staging.json
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+            exit 0
+          fi
+          git commit -m "Merge verified discovery sponsors [skip ci]"
+          git pull --rebase origin main
+          git push origin HEAD:main
