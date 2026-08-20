@@ -2176,5 +2176,55 @@
     "paid_product_placement": true,
     "contact_email": "marketing@vasco-electronics.com",
     "contact_source_url": "https://vasco-translator.com/contact"
+  },
+  {
+    "brand_name": "Speediance",
+    "brand_domain": "speediance.com",
+    "creator_name": "Michelle Choi",
+    "creator_url": "https://www.youtube.com/@michellechoii",
+    "creator_channel_id": "",
+    "creator_genre": "Lifestyle / Vlog / Fitness",
+    "creator_tags": [
+      "lifestyle",
+      "vlog",
+      "fitness",
+      "home gym",
+      "physical consumer tech"
+    ],
+    "sponsor_category": "Health & Wellness",
+    "video_url": "https://youtube.com/watch?v=5nbNEEFfQ1I",
+    "video_title": "Homebody In New York | A Chaotic Summer In Nyc, Stressful Wedding Countdown, Becoming A Bts Army!",
+    "sponsored_date": "2026-08-07",
+    "evidence": "SponsorRadar identifies Speediance as the sponsor of Michelle Choi's August 7, 2026 English-language YouTube video; the sponsorship disclosure explicitly thanks Speediance. SponsorRadar tracks 27 Speediance sponsorships across 20 creators with deals as recent as August 2026. Speediance sells physical smart home-gym equipment. Its official affiliate program explicitly recruits creators, trainers, and home-gym users and publishes affiliate@speediance.com for affiliate partnership inquiries. GitHub repo search was rechecked immediately before staging and surfaced no Speediance match.",
+    "paid_product_placement": true,
+    "contact_title": "Affiliate Partnerships",
+    "contact_email": "affiliate@speediance.com",
+    "contact_source_url": "https://www.speediance.com/pages/affiliate",
+    "source_platform": "YouTube"
+  },
+  {
+    "brand_name": "SHINING 3D",
+    "brand_domain": "shining3d.com",
+    "creator_name": "BigTime",
+    "creator_url": "https://www.youtube.com/@bigtimebigtimebigtime",
+    "creator_channel_id": "",
+    "creator_genre": "Automotive / Engineering",
+    "creator_tags": [
+      "automotive",
+      "engineering",
+      "3D scanning",
+      "maker",
+      "physical consumer tech"
+    ],
+    "sponsor_category": "Consumer Tech",
+    "video_url": "https://youtube.com/watch?v=Gi98ZJu1VAI",
+    "video_title": "Replacing Our Limited Slip With A Magnet",
+    "sponsored_date": "2026-07-31",
+    "evidence": "SponsorRadar identifies SHINING 3D as the sponsor of BigTime's July 31, 2026 English-language YouTube video, where the description promotes SHINING 3D's EinScan Rigil scanner with a creator-specific offer. SponsorRadar tracks six SHINING 3D sponsorships across three creators in 2026. SHINING 3D sells physical 3D scanners and printers. Its official website publishes marketing@shining3d.com specifically for marketing cooperations. GitHub repo search was rechecked immediately before staging and surfaced no SHINING 3D match.",
+    "paid_product_placement": true,
+    "contact_title": "Marketing Cooperations",
+    "contact_email": "marketing@shining3d.com",
+    "contact_source_url": "https://www.shining3d.com/get-a-quote",
+    "source_platform": "YouTube"
   }
 ]
