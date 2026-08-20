@@ -1,0 +1,40 @@
+[
+  {
+    "brand_name": "HOTWAV",
+    "brand_domain": "hotwav.com",
+    "sponsor_category": "Technology",
+    "creator_name": "Teoh on Tech",
+    "creator_url": "https://www.youtube.com/@teohontech7141",
+    "creator_channel_id": "",
+    "creator_subscribers": 86500,
+    "creator_genre": "Technology",
+    "creator_tags": ["physical consumer tech", "tablets", "rugged devices", "gadgets"],
+    "video_url": "https://youtube.com/watch?v=qJW54FKTikM",
+    "video_title": "Hotwav R9 Pro Max (review): Best Of Rugged Tablet?",
+    "sponsored_date": "2026-07-29",
+    "evidence": "SponsorRadar identifies HOTWAV as the sponsor of Teoh on Tech's July 29, 2026 English-language YouTube review. HOTWAV sells physical smartphones, rugged phones and tablets. HOTWAV's official contact page publishes marketing@hotwav.com specifically for Marketing/Promotion Collaborations, and its official affiliate program is active for social-media promoters.",
+    "paid_product_placement": true,
+    "contact_email": "marketing@hotwav.com",
+    "contact_source_url": "https://www.hotwav.com/pages/contact-us",
+    "source_platform": "YouTube"
+  },
+  {
+    "brand_name": "UPERFECT",
+    "brand_domain": "uperfectmonitor.com",
+    "sponsor_category": "Technology",
+    "creator_name": "Teoh on Tech",
+    "creator_url": "https://www.youtube.com/@teohontech7141",
+    "creator_channel_id": "",
+    "creator_subscribers": 86500,
+    "creator_genre": "Technology",
+    "creator_tags": ["physical consumer tech", "portable monitors", "display hardware", "gadgets"],
+    "video_url": "https://youtube.com/watch?v=nIgb7M8O4so",
+    "video_title": "Uperfect 14-inch Portable Touchscreen Oled (review)",
+    "sponsored_date": "2026-07-12",
+    "evidence": "SponsorRadar identifies UPERFECT as the sponsor of Teoh on Tech's July 12, 2026 English-language YouTube review. UPERFECT sells physical portable-monitor/display hardware. Its official site maintains an active creator-collaboration page and publishes marketing@uperfectmonitor.com specifically for Marketing & Partnerships / creator collaborations.",
+    "paid_product_placement": true,
+    "contact_email": "marketing@uperfectmonitor.com",
+    "contact_source_url": "https://uperfect.com/policies/contact-information",
+    "source_platform": "YouTube"
+  }
+]
