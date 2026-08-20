@@ -55,5 +55,24 @@
     "contact_email": "aurorazhuo@laifentech.com",
     "contact_source_url": "https://www.laifentech.com/pages/affiliate",
     "source_platform": "YouTube"
+  },
+  {
+    "brand_name": "TUXEDO Computers",
+    "brand_domain": "tuxedocomputers.com",
+    "creator_name": "The Linux Experiment",
+    "creator_url": "https://www.youtube.com/@thelinuxexp",
+    "creator_channel_id": "",
+    "creator_genre": "Technology / Linux",
+    "creator_tags": ["technology", "Linux", "PC hardware", "laptops", "physical consumer tech"],
+    "sponsor_category": "Consumer Tech",
+    "video_url": "https://youtube.com/watch?v=BJM_2amAj6w",
+    "video_title": "Big changes coming to KDE & GNOME, tons of apps & services getting Linux clients - Linux Weekly News",
+    "sponsored_date": "2026-08-15",
+    "evidence": "SponsorRadar identifies TUXEDO Computers as the sponsor of The Linux Experiment's August 15, 2026 English-language YouTube video and shows TUXEDO as a repeat active buyer with 28 tracked sponsorships on the channel. TUXEDO sells physical Linux laptops and desktop PCs. TUXEDO's official site states that presse@tuxedocomputers.com handles press and marketing inquiries. GitHub brand/domain search was rechecked immediately before staging and surfaced no TUXEDO Computers/tuxedocomputers.com match.",
+    "paid_product_placement": true,
+    "contact_title": "Marketing Inquiries",
+    "contact_email": "presse@tuxedocomputers.com",
+    "contact_source_url": "https://www.tuxedocomputers.com/en/Infos/News",
+    "source_platform": "YouTube"
   }
 ]
