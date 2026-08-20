@@ -1848,5 +1848,29 @@
     "contact_email": "teamsamsung@samsung.com",
     "contact_source_url": "https://www.samsung.com/ca/team-samsung/",
     "source_platform": "YouTube"
+  },
+  {
+    "brand_name": "Klook",
+    "brand_domain": "klook.com",
+    "creator_name": "Hazel Quing",
+    "creator_url": "https://www.youtube.com/@hazelquing",
+    "creator_channel_id": "",
+    "creator_genre": "Lifestyle / Vlog / Travel",
+    "creator_tags": [
+      "travel",
+      "lifestyle",
+      "vlog",
+      "Korea",
+      "experiences",
+      "travel booking"
+    ],
+    "video_url": "https://sponsorradar.com/channels/hazelquing",
+    "video_title": "Living in Korea | furniture shopping, apt update, getting my library card, some changes",
+    "sponsored_date": "2026-08-08",
+    "evidence": "SponsorRadar records Klook sponsoring Hazel Quing's August 8, 2026 English-language YouTube video and shows Klook as her dominant active sponsor with 44 tracked placements. Klook's official Affiliate Program explicitly serves travel writers, creators and publishers, provides creator referral codes, and publishes affiliate@klook.com for program inquiries. GitHub brand/domain search was rechecked immediately before staging and surfaced no Klook/klook.com match.",
+    "paid_product_placement": true,
+    "contact_email": "affiliate@klook.com",
+    "contact_source_url": "https://affiliate.klook.com/",
+    "source_platform": "YouTube"
   }
 ]
