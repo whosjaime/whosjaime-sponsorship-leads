@@ -1,0 +1,85 @@
+name: Merge Research Discovery Staging
+
+on:
+  push:
+    paths:
+      - 'data/research_discovery_staging_*.json'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: merge-research-discovery-staging
+  cancel-in-progress: false
+
+jobs:
+  merge:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Merge staged researched sponsors safely
+        shell: bash
+        run: |
+          python - <<'PY'
+          import glob, json, re
+          from pathlib import Path
+
+          researched_path = Path('data/researched_sponsors.json')
+          sent_path = Path('data/sent_sponsor_keys.json')
+          researched = json.loads(researched_path.read_text()) if researched_path.exists() else []
+          sent = set(json.loads(sent_path.read_text())) if sent_path.exists() else set()
+
+          def key_text(value):
+              return re.sub(r'[^a-z0-9]+', '', (value or '').lower())
+
+          existing_brands = {key_text(x.get('brand_name')) for x in researched if isinstance(x, dict)}
+          existing_domains = {str(x.get('brand_domain') or '').lower().strip() for x in researched if isinstance(x, dict)}
+
+          added = 0
+          for filename in sorted(glob.glob('data/research_discovery_staging_*.json')):
+              try:
+                  items = json.loads(Path(filename).read_text())
+              except Exception:
+                  continue
+              if not isinstance(items, list):
+                  continue
+              for item in items:
+                  if not isinstance(item, dict):
+                      continue
+                  brand = key_text(item.get('brand_name'))
+                  domain = str(item.get('brand_domain') or '').lower().strip()
+                  if not brand or not domain:
+                      continue
+                  if brand in existing_brands or domain in existing_domains:
+                      continue
+                  if f'brand:{brand}' in sent or f'domain:{domain}' in sent:
+                      continue
+                  researched.append(item)
+                  existing_brands.add(brand)
+                  existing_domains.add(domain)
+                  added += 1
+
+          researched_path.write_text(json.dumps(researched, indent=2, ensure_ascii=False) + '\n')
+          for filename in glob.glob('data/research_discovery_staging_*.json'):
+              Path(filename).unlink(missing_ok=True)
+          print(f'Added {added} verified researched sponsors.')
+          PY
+      - name: Persist merge
+        shell: bash
+        run: |
+          git config user.name "sponsor-research-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/researched_sponsors.json data/research_discovery_staging_*.json || true
+          if git diff --cached --quiet; then
+            echo "No research changes to persist."
+            exit 0
+          fi
+          git commit -m "Merge verified sponsor research staging [skip ci]"
+          git pull --rebase origin main
+          git push origin HEAD:main
