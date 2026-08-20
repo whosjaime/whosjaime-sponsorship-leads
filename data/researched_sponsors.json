@@ -2076,5 +2076,30 @@
     "source_platform": "YouTube",
     "sponsor_category": "Entertainment",
     "discovery_checked_at": "2026-08-20"
+  },
+  {
+    "brand_name": "Hohem",
+    "brand_domain": "hohem.com",
+    "creator_name": "Learn Online Video",
+    "creator_url": "https://www.youtube.com/@learnonlinevideo",
+    "creator_channel_id": "",
+    "creator_genre": "Education / Creator Tech",
+    "creator_tags": [
+      "creator tech",
+      "filmmaking",
+      "camera gear",
+      "smartphone gimbal",
+      "physical consumer tech"
+    ],
+    "sponsor_category": "Consumer Tech",
+    "video_url": "https://youtube.com/watch?v=nY_px1u96Us",
+    "video_title": "I Pushed an iPhone 17 Pro Max to Its Cinematic Limits",
+    "sponsored_date": "2026-06-23",
+    "evidence": "SponsorRadar identifies Hohem as the sponsor of Learn Online Video's June 23, 2026 English-language YouTube video. Learn Online Video has about 1.69M subscribers. Hohem sells physical smartphone and camera gimbals, and Hohem's official site lists marketing@hohem.com specifically for Marketing & Partnerships and maintains an Affiliate Program. GitHub brand and domain searches were rechecked immediately before staging and surfaced no Hohem/hohem.com match.",
+    "paid_product_placement": true,
+    "contact_title": "Marketing & Partnerships",
+    "contact_email": "marketing@hohem.com",
+    "contact_source_url": "https://www.hohem.com/about",
+    "source_platform": "YouTube"
   }
 ]
