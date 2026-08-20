@@ -2024,5 +2024,31 @@
     "contact_email": "affiliate@baseus.com",
     "contact_source_url": "https://www.baseus.com/pages/affiliate-program",
     "source_platform": "YouTube"
+  },
+  {
+    "brand_name": "We Are Wild",
+    "brand_domain": "wearewild.com",
+    "creator_name": "Georgia Richards",
+    "creator_url": "https://youtube.com/@georgialrichards",
+    "creator_channel_id": "",
+    "creator_genre": "Lifestyle / Vlog",
+    "creator_tags": [
+      "lifestyle",
+      "vlog",
+      "beauty",
+      "personal care",
+      "deodorant"
+    ],
+    "sponsor_category": "Beauty",
+    "video_url": "https://youtube.com/watch?v=dZtj3yg28iM",
+    "video_title": "a cozy week in july 🌷(fighting the winter scaries)",
+    "sponsored_date": "2026-07-08",
+    "evidence": "SponsorRadar records We Are Wild sponsoring Georgia Richards' July 8, 2026 English-language YouTube video. Georgia Richards is a lifestyle/vlog creator with about 98K subscribers. Wild's official affiliate/partnership materials confirm a separate influencer program and publish ioanna@wearewild.com for partnerships opportunities running through its Brand Partnerships programme or externally. GitHub brand/domain search was rechecked immediately before staging and surfaced no We Are Wild/wearewild.com match.",
+    "paid_product_placement": true,
+    "contact_name": "Ioanna",
+    "contact_title": "Brand Partnerships contact",
+    "contact_email": "ioanna@wearewild.com",
+    "contact_source_url": "https://ui.awin.com/merchant-profile-terms/125828",
+    "source_platform": "YouTube"
   }
 ]
