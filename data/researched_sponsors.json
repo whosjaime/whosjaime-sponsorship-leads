@@ -2101,5 +2101,30 @@
     "contact_email": "marketing@hohem.com",
     "contact_source_url": "https://www.hohem.com/about",
     "source_platform": "YouTube"
+  },
+  {
+    "brand_name": "Laifen",
+    "brand_domain": "laifentech.com",
+    "creator_name": "Justin Hickox",
+    "creator_url": "https://www.youtube.com/@justinhickox",
+    "creator_channel_id": "",
+    "creator_genre": "Beauty / Hair / Lifestyle",
+    "creator_tags": [
+      "beauty",
+      "hair",
+      "lifestyle",
+      "hair tools",
+      "physical consumer tech"
+    ],
+    "sponsor_category": "Beauty",
+    "video_url": "https://youtube.com/watch?v=vDUjeMe8P7I",
+    "video_title": "Youthful Looking Women Over 50 AVOID These 5 Hair Mistakes!",
+    "sponsored_date": "2026-06-23",
+    "evidence": "SponsorRadar identifies Laifen Tech as the sponsor of Justin Hickox's June 23, 2026 English-language YouTube video and shows Laifen as a repeat sponsor on the channel. Laifen sells physical consumer hardware including high-speed hair dryers and electric toothbrushes. Laifen's official affiliate program explicitly supports creators and publishes aurorazhuo@laifentech.com for program questions; its official contact materials also publish globalmarketing@laifentech.com for overseas marketing collaborations. GitHub brand/domain search and the permanent sent ledger were checked immediately before staging and surfaced no Laifen/laifentech.com match.",
+    "paid_product_placement": true,
+    "contact_title": "Affiliate / Creator Partnerships",
+    "contact_email": "aurorazhuo@laifentech.com",
+    "contact_source_url": "https://www.laifentech.com/pages/affiliate",
+    "source_platform": "YouTube"
   }
 ]
