@@ -1999,5 +1999,30 @@
     "contact_email": "affiliate@vegogarden.com",
     "contact_source_url": "https://www.vegogarden.com/pages/affiliate-program",
     "source_platform": "YouTube"
+  },
+  {
+    "brand_name": "Baseus",
+    "brand_domain": "baseus.com",
+    "creator_name": "Karl Watson: Travel Documentaries",
+    "creator_url": "",
+    "creator_channel_id": "",
+    "creator_genre": "Travel / Lifestyle",
+    "creator_tags": [
+      "travel",
+      "lifestyle",
+      "consumer tech",
+      "charging",
+      "power bank",
+      "physical hardware"
+    ],
+    "sponsor_category": "Consumer Tech",
+    "video_url": "https://youtube.com/watch?v=V_985bQpP9k",
+    "video_title": "2 Weeks In Indonesia 🇮🇩 Ep 1 - Jakarta, East Java, Gili T",
+    "sponsored_date": "2026-08-07",
+    "evidence": "SponsorRadar records Baseus sponsoring Karl Watson: Travel Documentaries on August 7, 2026 with a creator-specific Baseus deal/code. SponsorRadar currently shows Baseus with 103 tracked YouTube sponsorships across 70 creators and multiple August 2026 placements. Baseus sells tangible consumer hardware including power banks, chargers, cables, hubs, headphones and security cameras. Baseus' official Affiliate Program explicitly accepts social media influencers and publishes affiliate@baseus.com for affiliate-program inquiries; its official Creator Program also states it seeks long-term creator partnerships including paid promotions. GitHub brand/domain search was rechecked immediately before staging and surfaced no Baseus/baseus.com match.",
+    "paid_product_placement": true,
+    "contact_email": "affiliate@baseus.com",
+    "contact_source_url": "https://www.baseus.com/pages/affiliate-program",
+    "source_platform": "YouTube"
   }
 ]
