@@ -57,6 +57,45 @@ class ResearchedSponsorSource:
             str(item.get("contact_source_url") or item.get("contact_source") or "").strip(),
         )
 
+    @staticmethod
+    def _infer_category(item: dict, creator_genre: str, creator_tags: list[str]) -> str:
+        explicit = str(item.get("sponsor_category") or item.get("category") or "").strip()
+        if explicit:
+            return explicit
+
+        text = " ".join(
+            [
+                str(item.get("brand_name") or ""),
+                str(item.get("evidence") or ""),
+                creator_genre,
+                *creator_tags,
+            ]
+        ).lower()
+
+        if any(term in text for term in ("gaming", "gamer", "esports", "controller")):
+            return "Gaming"
+        if any(term in text for term in ("food", "drink", "beverage", "coffee", "snack", "cooking", "bbq", "hydration")):
+            return "Food & Beverage"
+        if any(term in text for term in ("keyboard", "mouse", "headset", "microphone", "camera", "monitor", "display", "charger", "power bank", "smart home", "hardware", "consumer tech", "wearable", "projector", "pc hardware")):
+            return "Consumer Tech"
+        if any(term in text for term in ("beauty", "makeup", "cosmetic", "skincare", "haircare")):
+            return "Beauty"
+        if any(term in text for term in ("fashion", "apparel", "clothing", "footwear", "luggage", "fragrance", "luxury")):
+            return "Fashion"
+        if any(term in text for term in ("health", "wellness", "fitness", "sleep", "mattress", "supplement")):
+            return "Health & Wellness"
+        if any(term in text for term in ("travel", "hotel", "resort", "vacation", "airline")):
+            return "Travel"
+        if any(term in text for term in ("pet", "dog", "cat")):
+            return "Home"
+        if any(term in text for term in ("home", "kitchen", "furniture", "cookware", "appliance", "homestead")):
+            return "Home"
+        if any(term in text for term in ("music", "guitar", "instrument", "drum", "synth")):
+            return "Music"
+        if any(term in text for term in ("entertainment", "reaction", "streaming", "vlog", "lifestyle")):
+            return "Entertainment"
+        return "Other"
+
     def load(self) -> list[SponsorLead]:
         if not self.path.exists():
             return []
@@ -96,6 +135,7 @@ class ResearchedSponsorSource:
             creator_genre = str(item.get("creator_genre") or "").strip()
             raw_tags = item.get("creator_tags") or []
             creator_tags = [str(tag).strip() for tag in raw_tags if str(tag).strip()] if isinstance(raw_tags, list) else []
+            sponsor_category = self._infer_category(item, creator_genre, creator_tags)
 
             leads.append(
                 SponsorLead(
@@ -114,6 +154,8 @@ class ResearchedSponsorSource:
                     sponsored_date=sponsored_date,
                     evidence=str(item.get("evidence") or "Daily researched public sponsorship evidence.").strip(),
                     paid_product_placement=bool(item.get("paid_product_placement", False)),
+                    sponsor_category=sponsor_category,
+                    sponsor_subcategory=str(item.get("sponsor_subcategory") or "").strip(),
                     contact_name=contact_name,
                     contact_title=contact_title,
                     contact_email=contact_email,
