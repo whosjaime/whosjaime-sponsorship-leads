@@ -2323,5 +2323,31 @@
     "contact_email": "partnerships@hungryroot.com",
     "contact_source_url": "https://support.hungryroot.com/hc/en-us/articles/4411134454675-I-m-interested-in-partnering-with-Hungryroot",
     "source_platform": "YouTube"
+  },
+  {
+    "brand_name": "KIWI design",
+    "brand_domain": "kiwidesign.com",
+    "creator_name": "Sk0l",
+    "creator_url": "https://www.youtube.com/@sk0l",
+    "creator_channel_id": "UCKMYOFqv1K3Q2YBYn1QFDkQ",
+    "creator_subscribers": 74800,
+    "creator_genre": "Gaming / VR",
+    "creator_tags": [
+      "gaming",
+      "VR",
+      "Meta Quest",
+      "XR accessories",
+      "physical consumer tech"
+    ],
+    "sponsor_category": "Consumer Tech",
+    "video_url": "https://www.youtube.com/watch?v=44-MazMHOgs",
+    "video_title": "New Hero X Hero Trading Update! (new Secrets You Missed)",
+    "sponsored_date": "2026-08-14",
+    "evidence": "SponsorRadar identifies KIWI design as the sponsor of Sk0l's August 14, 2026 English-language YouTube video and shows KIWI design as Sk0l's top sponsor with 58 tracked sponsored videos. KIWI design sells tangible VR/XR accessories. Its official Influencer Program instructs creators to send their social content to affiliate@kiwidesign.com, establishing a qualified affiliate/creator outreach contact. GitHub brand/domain/email dedupe was rechecked immediately before staging and surfaced no KIWI design match.",
+    "paid_product_placement": true,
+    "contact_title": "Influencer / Affiliate Program",
+    "contact_email": "affiliate@kiwidesign.com",
+    "contact_source_url": "https://www.kiwidesign.com/en-eu/pages/call-for-entries",
+    "source_platform": "YouTube"
   }
 ]
