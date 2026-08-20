@@ -1706,5 +1706,30 @@
     "contact_email": "collabs@endy.com",
     "contact_source_url": "https://answers.endy.com/hc/en-ca/",
     "source_platform": "TikTok"
+  },
+  {
+    "brand_name": "AUTOTERM",
+    "brand_domain": "autoterm.com",
+    "creator_name": "TREAD the globe",
+    "creator_url": "https://www.youtube.com/@TREADtheglobe",
+    "creator_channel_id": "",
+    "creator_genre": "Travel / Vanlife / Overlanding",
+    "creator_tags": [
+      "travel",
+      "vanlife",
+      "overlanding",
+      "RV",
+      "campervan",
+      "physical consumer hardware",
+      "heating"
+    ],
+    "video_url": "https://sponsorradar.com/channels/treadtheglobe",
+    "video_title": "New Zealand's Wild West Coast Took Us By Surprise [s11-e20]",
+    "sponsored_date": "2026-08-02",
+    "evidence": "SponsorRadar records AUTOTERM sponsoring TREAD the globe's August 2, 2026 English-language YouTube video and shows repeated AUTOTERM sponsorship activity on the channel throughout July and August 2026. AUTOTERM manufactures tangible autonomous heating systems for campervans, RVs, marine and off-grid vehicles. AUTOTERM's official website publishes marketing@autoterm.com as the Marketing Department contact, and its B2B/Partnerships pages show an active partner program. GitHub brand/domain search was rechecked immediately before staging and surfaced no AUTOTERM/autoterm.com match.",
+    "paid_product_placement": true,
+    "contact_email": "marketing@autoterm.com",
+    "contact_source_url": "https://autoterm.com/trademark-guidlines",
+    "source_platform": "YouTube"
   }
 ]
