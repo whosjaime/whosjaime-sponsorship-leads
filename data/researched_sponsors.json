@@ -2226,5 +2226,29 @@
     "contact_email": "marketing@shining3d.com",
     "contact_source_url": "https://www.shining3d.com/get-a-quote",
     "source_platform": "YouTube"
+  },
+  {
+    "brand_name": "Hollyland",
+    "brand_domain": "hollyland.com",
+    "sponsor_category": "Technology",
+    "creator_name": "CineD",
+    "creator_url": "https://www.youtube.com/@CineD",
+    "creator_channel_id": "",
+    "creator_genre": "Filmmaking / Technology",
+    "creator_tags": [
+      "filmmaking",
+      "camera gear",
+      "audio",
+      "creator tech",
+      "physical consumer tech"
+    ],
+    "video_url": "https://www.youtube.com/watch?v=JUfmH0yeDj8",
+    "video_title": "ARRI Sells Its Rental Business | DJI 'Front Companies' Fined | Sony RX10 V – Focus Check ep125",
+    "sponsored_date": "2026-07-16",
+    "evidence": "CineD's July 16, 2026 English-language Focus Check episode explicitly states that the episode is sponsored by Hollyland at 32:53. SponsorRadar independently lists the same video among Hollyland's recent sponsored YouTube placements and reports 183 tracked sponsorships across 84 creators. Hollyland sells physical creator hardware including wireless microphones, video transmission systems, cameras and intercoms. Hollyland's official affiliate program explicitly invites content creators and publishes affiliate@hollyland.com; its official contact page separately lists marketing@hollyland.com for Marketing Cooperation.",
+    "paid_product_placement": true,
+    "contact_email": "affiliate@hollyland.com",
+    "contact_source_url": "https://store.hollyland.com/en-ca/pages/hollyland-affiliate-program",
+    "evidence_source_url": "https://www.cined.com/arri-sells-its-rental-business-dji-front-companies-fined-sony-rx10-v-focus-check-ep125/"
   }
 ]
