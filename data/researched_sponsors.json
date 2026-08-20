@@ -2151,5 +2151,30 @@
     "contact_email": "presse@tuxedocomputers.com",
     "contact_source_url": "https://www.tuxedocomputers.com/en/Infos/News",
     "source_platform": "YouTube"
+  },
+  {
+    "brand_name": "Vasco Electronics",
+    "brand_domain": "vasco-electronics.com",
+    "sponsor_category": "Travel",
+    "sponsor_subcategory": "Physical Consumer Tech / Translation Hardware",
+    "source_platform": "YouTube",
+    "creator_name": "Blackman Da Traveller",
+    "creator_url": "https://www.youtube.com/@blackmandatraveller",
+    "creator_channel_id": "",
+    "creator_genre": "Travel",
+    "creator_tags": [
+      "travel",
+      "vlog",
+      "international travel",
+      "consumer hardware",
+      "translation"
+    ],
+    "video_url": "https://www.youtube.com/watch?v=njD6A2s1jbc",
+    "video_title": "A Side Of Pakistan Most People Don't See",
+    "sponsored_date": "2026-07-28",
+    "evidence": "SponsorRadar detects Vasco sponsoring Blackman Da Traveller's July 28, 2026 English-language YouTube video and four additional July 2026 videos on the same channel. Vasco sells physical electronic translator devices. Vasco's official contact page lists marketing@vasco-electronics.com specifically for Marketing.",
+    "paid_product_placement": true,
+    "contact_email": "marketing@vasco-electronics.com",
+    "contact_source_url": "https://vasco-translator.com/contact"
   }
 ]
