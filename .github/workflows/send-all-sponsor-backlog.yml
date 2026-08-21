@@ -1,0 +1,110 @@
+name: Send All Sponsor Backlog
+
+on:
+  issues:
+    types: [opened]
+
+permissions:
+  contents: write
+  issues: read
+
+concurrency:
+  group: sponsor-backlog-drain
+  cancel-in-progress: false
+
+jobs:
+  drain:
+    if: startsWith(github.event.issue.title, 'RUN ALL SPONSOR BACKLOG NOW')
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -r requirements.txt
+
+      - name: Drain every qualified unsent researched sponsor
+        env:
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+          CREATORDB_API_KEY: ${{ secrets.CREATORDB_API_KEY }}
+          SPONSOR_MONDAY_TOKEN: ${{ secrets.SPONSOR_MONDAY_TOKEN }}
+          SPONSOR_MONDAY_API_KEY: ${{ secrets.SPONSOR_MONDAY_API_KEY }}
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          SPONSOR_MONDAY_BOARD_ID: ${{ vars.SPONSOR_MONDAY_BOARD_ID || '18424367188' }}
+          SPONSOR_MONDAY_GROUP_ID: ${{ vars.SPONSOR_MONDAY_GROUP_ID || 'topics' }}
+          SPONSOR_MIN_LEAD_SCORE: ${{ vars.SPONSOR_MIN_LEAD_SCORE || '70' }}
+          SPONSOR_MAX_AGE_DAYS: ${{ vars.SPONSOR_MAX_AGE_DAYS || '30' }}
+          CREATORDB_PAGE_SIZE: ${{ vars.CREATORDB_PAGE_SIZE || '50' }}
+          SPONSOR_SEARCH_REGION: ${{ vars.SPONSOR_SEARCH_REGION || 'US' }}
+          SPONSOR_SEARCH_LANGUAGE: ${{ vars.SPONSOR_SEARCH_LANGUAGE || 'en' }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          delivered=0
+          for i in $(seq 1 60); do
+            # Resume any Monday-success checkpoint before doing anything else.
+            if [ -s data/sponsor_delivery_pending.json ] && [ "$(cat data/sponsor_delivery_pending.json)" != "{}" ]; then
+              python src/run_sponsor_queue_dispatch.py
+              delivered=$((delivered+1))
+              continue
+            fi
+
+            # Rebuild/refill from researched inventory whenever the live queue is empty.
+            if [ ! -s data/sponsor_queue.json ] || [ "$(cat data/sponsor_queue.json)" = "[]" ]; then
+              python src/run_sponsor_discovery_batch.py
+            fi
+
+            # Nothing qualified remains after refill: backlog is drained.
+            if [ ! -s data/sponsor_queue.json ] || [ "$(cat data/sponsor_queue.json)" = "[]" ]; then
+              echo "No qualified unsent sponsors remain."
+              break
+            fi
+
+            before=$(python - <<'PY'
+import json
+from pathlib import Path
+p=Path('data/sent_sponsor_keys.json')
+try:
+    d=json.loads(p.read_text())
+except Exception:
+    d=[]
+print(len(d) if isinstance(d, list) else len(d.keys()) if isinstance(d, dict) else 0)
+PY
+)
+            python src/run_sponsor_queue_dispatch.py
+            after=$(python - <<'PY'
+import json
+from pathlib import Path
+p=Path('data/sent_sponsor_keys.json')
+try:
+    d=json.loads(p.read_text())
+except Exception:
+    d=[]
+print(len(d) if isinstance(d, list) else len(d.keys()) if isinstance(d, dict) else 0)
+PY
+)
+            if [ "$after" -le "$before" ]; then
+              echo "ERROR: dispatch did not increase sent ledger; stopping backlog drain."
+              exit 1
+            fi
+            delivered=$((delivered+1))
+          done
+          echo "Backlog deliveries completed: $delivered"
+
+      - name: Persist drained sponsor state
+        if: always()
+        shell: bash
+        run: |
+          git config user.name "sponsor-queue-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/sponsor_queue.json data/sent_sponsor_keys.json data/sponsor_delivery_pending.json
+          if git diff --cached --quiet; then
+            echo "No sponsor delivery state changes."
+            exit 0
+          fi
+          git commit -m "Drain qualified sponsor backlog to Monday and Discord [skip ci]"
+          git pull --rebase origin main
+          git push origin HEAD:main
