@@ -45,12 +45,11 @@ class DiscordNotifier:
 
     @classmethod
     def new_lead_message(cls, lead: SponsorLead) -> str:
-        is_linkedin = (lead.source_platform or "").strip().lower() == "linkedin"
-        subscribers = (
-            f"{lead.creator_subscribers:,}"
-            if lead.creator_subscribers
-            else ("N/A" if is_linkedin else "Unknown")
-        )
+        platform = (lead.source_platform or "").strip().lower()
+        is_linkedin = platform == "linkedin"
+        is_tiktok = platform == "tiktok"
+        audience = f"{lead.creator_subscribers:,}" if lead.creator_subscribers else "Unknown"
+        audience_label = "Followers" if is_tiktok else "Subscribers"
         website = cls._website_url(lead.brand_domain)
         contact = ""
         if lead.contact_name:
@@ -75,7 +74,7 @@ class DiscordNotifier:
             ]
         )
         if not is_linkedin:
-            lines.append(f"📊 **Subscribers:** {subscribers}")
+            lines.append(f"📊 **{audience_label}:** {audience}")
         lines.extend(
             [
                 f"📅 **Sponsored Date:** {cls._display_date(lead.sponsored_date)}",
