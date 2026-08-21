@@ -1,44 +1,5 @@
 [
   {
-    "brand_name": "ESR",
-    "brand_domain": "esrtech.com",
-    "source_platform": "YouTube",
-    "creator_name": "Tech Dad",
-    "creator_url": "https://www.youtube.com/channel/UCeVf8KaEFbse6aof4OeYAtQ",
-    "creator_channel_id": "UCeVf8KaEFbse6aof4OeYAtQ",
-    "creator_subscribers": 60900,
-    "creator_genre": "Technology",
-    "creator_tags": [
-      "physical consumer tech",
-      "mobile accessories",
-      "iPad",
-      "chargers"
-    ],
-    "video_id": "QHfw5EqFBxA",
-    "video_url": "https://www.youtube.com/watch?v=QHfw5EqFBxA",
-    "video_title": "An Ipad Pencil That Is Better Than Apple…and Also Cheaper. Esr Geo Digital Pencil Review!",
-    "sponsored_date": "2026-08-13",
-    "evidence": "SponsorRadar records ESR sponsoring Tech Dad on August 13, 2026 and shows 238 tracked YouTube sponsorships across 116 creators, with multiple August 2026 deals. ESR sells tangible mobile-device accessories. ESR's official contact page publishes influencer@esrtech.com specifically for Influencer Collaborations and affiliate@esrtech.com for its Affiliate Program. GitHub brand/domain dedupe was rechecked before staging and surfaced no ESR match.",
-    "paid_product_placement": true,
-    "brand_partner_channel_id": "",
-    "sponsor_category": "Consumer Tech",
-    "sponsor_subcategory": "Computer Hardware",
-    "contact_name": "",
-    "contact_title": "Influencer Collaborations",
-    "contact_email": "influencer@esrtech.com",
-    "email_type": "Public work email",
-    "contact_source": "https://www.esrtech.com/apps/help/home",
-    "lead_score": 100,
-    "lead_temperature": "Very Hot",
-    "sponsorship_key": "youtube:qhfw5eqfbxa:esrtech.com",
-    "brand_key": "domain:esrtech.com",
-    "signals": [
-      "Daily researched sponsorship",
-      "verified public sponsorship evidence"
-    ],
-    "date_found": "2026-08-20"
-  },
-  {
     "brand_name": "PITAKA",
     "brand_domain": "ipitaka.com",
     "source_platform": "YouTube",
