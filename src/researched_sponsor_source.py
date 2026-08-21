@@ -67,6 +67,16 @@ class ResearchedSponsorSource:
             str(item.get("contact_source_url") or item.get("contact_source") or "").strip(),
         )
 
+    @staticmethod
+    def _platform_label(value: str) -> str:
+        key = (value or "YouTube").strip().lower()
+        labels = {
+            "youtube": "YouTube",
+            "tiktok": "TikTok",
+            "instagram": "Instagram",
+        }
+        return labels.get(key, (value or "YouTube").strip())
+
     def load(self) -> list[SponsorLead]:
         if not self.path.exists():
             return []
@@ -85,7 +95,7 @@ class ResearchedSponsorSource:
             brand_name = str(item.get("brand_name") or "").strip()
             brand_domain = normalize_domain(str(item.get("brand_domain") or ""))
             sponsored_date = str(item.get("sponsored_date") or "").strip()[:10]
-            source_platform = str(item.get("source_platform") or "YouTube").strip().title()
+            source_platform = self._platform_label(str(item.get("source_platform") or "YouTube"))
             content_url = str(item.get("video_url") or item.get("source_url") or item.get("post_url") or "").strip()
             content_id = str(item.get("video_id") or item.get("content_id") or "").strip() or self._content_id(content_url, source_platform)
 
