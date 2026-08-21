@@ -1,1 +1,33 @@
-[]
+[
+  {
+    "brand_name": "Caraway",
+    "brand_domain": "carawayhome.com",
+    "source_platform": "YouTube",
+    "creator_name": "Good Simple Living",
+    "creator_url": "https://www.youtube.com/@goodsimpleliving",
+    "creator_channel_id": "",
+    "creator_subscribers": 0,
+    "creator_genre": "DIY / Homestead / Family Lifestyle",
+    "creator_tags": ["home", "kitchen", "lifestyle", "DIY", "homestead", "family"],
+    "video_id": "C-OrJrOV-FQ",
+    "video_url": "https://www.youtube.com/watch?v=C-OrJrOV-FQ",
+    "video_title": "Breaking Ground! Our New Home Build Starts Now!",
+    "sponsored_date": "2026-07-11",
+    "evidence": "SponsorRadar identifies Caraway Home as the sponsor of Good Simple Living's July 11, 2026 English-language YouTube video. Caraway's official affiliate program is active, provides free products and commissions, and publishes aleksandra@carawayhome.com as the program contact.",
+    "paid_product_placement": true,
+    "brand_partner_channel_id": "",
+    "sponsor_category": "Home",
+    "sponsor_subcategory": "Cookware / Kitchen",
+    "contact_name": "Aleksandra",
+    "contact_title": "Affiliate Program Contact",
+    "contact_email": "aleksandra@carawayhome.com",
+    "email_type": "affiliate",
+    "contact_source": "https://www.carawayhome.com/affiliate",
+    "lead_score": 95,
+    "lead_temperature": "Hot",
+    "sponsorship_key": "youtube:C-OrJrOV-FQ:caraway",
+    "brand_key": "caraway",
+    "signals": ["recent_sponsorship", "official_affiliate_contact", "english_creator_evidence", "home_lifestyle_fit"],
+    "date_found": "2026-08-21"
+  }
+]
