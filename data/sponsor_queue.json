@@ -1,45 +1,5 @@
 [
   {
-    "brand_name": "Jones Road Beauty",
-    "brand_domain": "jonesroadbeauty.com",
-    "source_platform": "YouTube",
-    "creator_name": "The Science of Self-Care",
-    "creator_url": "https://www.youtube.com/channel/UCt6WGAfsiLu-F7cxOfDx0vg",
-    "creator_channel_id": "UCt6WGAfsiLu-F7cxOfDx0vg",
-    "creator_subscribers": 243000,
-    "creator_genre": "Health & Fitness / Lifestyle",
-    "creator_tags": [
-      "health",
-      "wellness",
-      "lifestyle",
-      "beauty",
-      "self-care"
-    ],
-    "video_id": "J1BU_Nl_avk",
-    "video_url": "https://www.youtube.com/watch?v=J1BU_Nl_avk",
-    "video_title": "I tried Korea's most advanced Glass Skin facial - is this legit??",
-    "sponsored_date": "2026-08-12",
-    "evidence": "SponsorRadar records Jones Road Beauty as the sponsor of The Science of Self-Care's August 12, 2026 English-language YouTube video. Jones Road Beauty's official contact page lists marketing@jonesroadbeauty.com specifically under Press and Partnerships.",
-    "paid_product_placement": true,
-    "brand_partner_channel_id": "",
-    "sponsor_category": "Consumer Tech",
-    "sponsor_subcategory": "Computer Hardware",
-    "contact_name": "",
-    "contact_title": "",
-    "contact_email": "marketing@jonesroadbeauty.com",
-    "email_type": "Public work email",
-    "contact_source": "https://www.jonesroadbeauty.com/pages/contact-us",
-    "lead_score": 100,
-    "lead_temperature": "Very Hot",
-    "sponsorship_key": "youtube:j1bu_nl_avk:jonesroadbeauty.com",
-    "brand_key": "domain:jonesroadbeauty.com",
-    "signals": [
-      "Daily researched sponsorship",
-      "verified public YouTube sponsorship evidence"
-    ],
-    "date_found": "2026-08-21"
-  },
-  {
     "brand_name": "Saramonic",
     "brand_domain": "saramonic.com",
     "source_platform": "YouTube",
