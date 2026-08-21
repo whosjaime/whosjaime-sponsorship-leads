@@ -63,22 +63,48 @@ jobs:
                       return parts[-1]
               return ''
 
+          def api_get(endpoint, params):
+              params = dict(params)
+              params['key'] = youtube_key
+              with urlopen('https://www.googleapis.com/youtube/v3/' + endpoint + '?' + urlencode(params), timeout=20) as response:
+                  return json.load(response)
+
+          def resolve_channel_id(item):
+              channel_id = str(item.get('creator_channel_id') or '').strip()
+              if channel_id:
+                  return channel_id
+              creator_url = str(item.get('creator_url') or '').strip()
+              m = re.search(r'youtube\.com/@([^/?#]+)', creator_url, flags=re.I)
+              if not m or not youtube_key:
+                  return ''
+              handle = m.group(1)
+              try:
+                  payload = api_get('channels', {'part': 'id', 'forHandle': handle, 'maxResults': 1})
+              except Exception as exc:
+                  print(f'YouTube handle resolution failed for {item.get("brand_name")}: {exc}')
+                  return ''
+              rows = payload.get('items', [])
+              if not rows:
+                  return ''
+              channel_id = str(rows[0].get('id') or '').strip()
+              if channel_id:
+                  item['creator_channel_id'] = channel_id
+              return channel_id
+
           def resolve_youtube_video(item):
               if youtube_id(item.get('video_url')):
                   item['source_platform'] = 'YouTube'
                   item['video_id'] = youtube_id(item.get('video_url'))
                   return True
-              channel_id = str(item.get('creator_channel_id') or '').strip()
+              channel_id = resolve_channel_id(item)
               title = str(item.get('video_title') or '').strip()
               if not youtube_key or not channel_id or not title:
                   return False
-              params = urlencode({
-                  'part': 'snippet', 'channelId': channel_id, 'q': title,
-                  'type': 'video', 'maxResults': 10, 'order': 'date', 'key': youtube_key,
-              })
               try:
-                  with urlopen('https://www.googleapis.com/youtube/v3/search?' + params, timeout=20) as response:
-                      payload = json.load(response)
+                  payload = api_get('search', {
+                      'part': 'snippet', 'channelId': channel_id, 'q': title,
+                      'type': 'video', 'maxResults': 10, 'order': 'date',
+                  })
               except Exception as exc:
                   print(f'YouTube resolution failed for {item.get("brand_name")}: {exc}')
                   return False
