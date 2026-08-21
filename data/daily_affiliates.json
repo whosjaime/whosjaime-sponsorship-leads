@@ -1,182 +1,182 @@
 [
   {
-    "brand_name": "Alibaba.com",
+    "brand_name": "Automattic",
     "brand_size": "large",
-    "category": "Consumer Tech / Ecommerce / Electronics / Creator Business",
-    "commission": "6.91% on qualifying new-buyer orders under $5,000 and 2.59% on qualifying existing-buyer orders under $5,000; fixed payouts apply above those thresholds",
-    "website": "https://www.alibaba.com/",
-    "apply_url": "https://ui.awin.com/merchant-profile/17940",
-    "source_url": "https://ui.awin.com/merchant-profile/17940/commission-groups"
+    "category": "Software / Website / Ecommerce / Creator Tools",
+    "commission": "Up to $300 per referral; percentage-based offers vary by product and reach up to 40%",
+    "website": "https://automattic.com/",
+    "apply_url": "https://automattic.com/creators/",
+    "source_url": "https://automattic.com/creators/"
   },
   {
-    "brand_name": "Sennheiser",
+    "brand_name": "Elementor",
     "brand_size": "large",
+    "category": "Software / Website Builder / WordPress / Creator Tools",
+    "commission": "45% on first purchases of Editor Pro and Elementor Host; 55% on eligible Elementor One first purchases during the current launch offer",
+    "website": "https://elementor.com/",
+    "apply_url": "https://elementor.com/affiliates/signup/",
+    "source_url": "https://elementor.com/affiliates/"
+  },
+  {
+    "brand_name": "Bitdefender",
+    "brand_size": "large",
+    "category": "Software / Cybersecurity / VPN / Creator Security",
+    "commission": "Base offer starts at 20% revenue share for new consumer customers and 50% commission for business products; custom deals may vary",
+    "website": "https://www.bitdefender.com/",
+    "apply_url": "https://www.bitdefender.com/en-ca/partners/affiliate-partners",
+    "source_url": "https://www.bitdefender.com/en-ca/partners/affiliate-partners"
+  },
+  {
+    "brand_name": "Malwarebytes",
+    "brand_size": "large",
+    "category": "Software / Cybersecurity / Privacy / Consumer Tech",
+    "commission": "Up to 30% commission per sale",
+    "website": "https://www.malwarebytes.com/",
+    "apply_url": "https://www.malwarebytes.com/affiliates",
+    "source_url": "https://www.malwarebytes.com/affiliates"
+  },
+  {
+    "brand_name": "1Password",
+    "brand_size": "large",
+    "category": "Software / Password Manager / Cybersecurity / Productivity",
+    "commission": "$2 per completed signup plus 25% of the first year or first month's payment, with a $2 minimum",
+    "website": "https://1password.com/",
+    "apply_url": "https://1password.com/affiliate",
+    "source_url": "https://1password.com/affiliate"
+  },
+  {
+    "brand_name": "Shokz",
+    "brand_size": "mid-size",
     "category": "Consumer Tech / Audio / Headphones / Creator Gear",
-    "commission": "5% of qualifying sales",
-    "website": "https://www.sennheiser-hearing.com/",
-    "apply_url": "https://www.flexoffers.com/affiliate-programs/sennheiser-canada-inc-affiliate-program/",
-    "source_url": "https://www.flexoffers.com/affiliate-programs/sennheiser-canada-inc-affiliate-program/"
+    "commission": "Minimum 5% on eligible sales, with rates up to 10%",
+    "website": "https://ca.shokz.com/",
+    "apply_url": "https://ca.shokz.com/pages/become-an-affiliate",
+    "source_url": "https://ca.shokz.com/pages/become-an-affiliate"
   },
   {
-    "brand_name": "Redragon",
-    "brand_size": "large",
-    "category": "Gaming / PC Gear / Keyboards / Mice / Headsets",
-    "commission": "5% commission on qualifying sales",
-    "website": "https://redragonshop.com/",
-    "apply_url": "https://ui.awin.com/merchant-profile/76584",
-    "source_url": "https://ui.awin.com/merchant-profile/76584"
+    "brand_name": "FreshBooks",
+    "brand_size": "mid-size",
+    "category": "Software / Accounting / Freelancer / Creator Business",
+    "commission": "Up to $200 per paid subscriber",
+    "website": "https://www.freshbooks.com/",
+    "apply_url": "https://www.freshbooks.com/affiliate-program",
+    "source_url": "https://www.freshbooks.com/affiliate-program"
   },
   {
-    "brand_name": "Fizz",
-    "brand_size": "large",
-    "category": "Consumer Tech / Mobile / Internet / Telecom",
+    "brand_name": "Printify",
+    "brand_size": "mid-size",
+    "category": "Software / Print-on-Demand / Ecommerce / Creator Merch",
+    "commission": "5% on referred orders for 12 months",
+    "website": "https://printify.com/",
+    "apply_url": "https://printify.com/affiliate/",
+    "source_url": "https://printify.com/affiliate/"
+  },
+  {
+    "brand_name": "JLab",
+    "brand_size": "mid-size",
+    "category": "Consumer Tech / Audio / Earbuds / Headphones / Gaming",
     "commission": "Not publicly listed",
-    "website": "https://fizz.ca/",
-    "apply_url": "https://ui.awin.com/merchant-profile/119373",
-    "source_url": "https://ui.awin.com/merchant-profile-terms/119373"
+    "website": "https://www.jlab.com/",
+    "apply_url": "https://www.jlab.com/pages/jlab-affiliate-program",
+    "source_url": "https://www.jlab.com/pages/jlab-affiliate-program"
   },
   {
-    "brand_name": "The Twister Group",
-    "brand_size": "large",
-    "category": "Consumer Tech / Electronics / Computers / Gaming",
-    "commission": "4% on items under $99, 3% on items from $100-$499, and 2% on items over $500",
-    "website": "https://www.thetwistergroup.com/",
-    "apply_url": "https://ui.awin.com/merchant-profile/4009",
-    "source_url": "https://ui.awin.com/merchant-profile/4009"
-  },
-  {
-    "brand_name": "Velocity Micro",
+    "brand_name": "NOMAD",
     "brand_size": "mid-size",
-    "category": "Gaming / PCs / Workstations / Consumer Tech",
+    "category": "Consumer Tech / Mobile Accessories / Apple Accessories / Everyday Carry",
+    "commission": "15% baseline commission",
+    "website": "https://nomadgoods.com/",
+    "apply_url": "https://nomadgoods.com/ca/pages/affiliate-and-partners",
+    "source_url": "https://nomadgoods.com/ca/pages/affiliate-and-partners"
+  },
+  {
+    "brand_name": "WP Rocket",
+    "brand_size": "mid-size",
+    "category": "Software / WordPress / Website Performance / Creator Tools",
+    "commission": "20% commission per sale",
+    "website": "https://wp-rocket.me/",
+    "apply_url": "https://wp-rocket.me/wp-rocket-affiliate-program/",
+    "source_url": "https://wp-rocket.me/wp-rocket-affiliate-program/"
+  },
+  {
+    "brand_name": "ThemeIsle",
+    "brand_size": "mid-size",
+    "category": "Software / WordPress / Themes & Plugins / Creator Tools",
+    "commission": "55% commission on qualifying sales",
+    "website": "https://themeisle.com/",
+    "apply_url": "https://themeisle.com/affiliates/",
+    "source_url": "https://themeisle.com/affiliates/"
+  },
+  {
+    "brand_name": "Twelve South",
+    "brand_size": "mid-size",
+    "category": "Consumer Tech / Apple Accessories / Mobile & Desk Gear",
     "commission": "Not publicly listed",
-    "website": "https://www.velocitymicro.com/",
-    "apply_url": "https://ui.awin.com/merchant-profile/61963",
-    "source_url": "https://ui.awin.com/merchant-profile/61963"
+    "website": "https://www.twelvesouth.com/",
+    "apply_url": "https://www.twelvesouth.com/pages/affiliates",
+    "source_url": "https://www.twelvesouth.com/pages/affiliates"
   },
   {
-    "brand_name": "TECKNET",
-    "brand_size": "mid-size",
-    "category": "Consumer Tech / PC Accessories / Keyboards / Mice / Audio",
+    "brand_name": "SocialPilot",
+    "brand_size": "emerging",
+    "category": "Software / Social Media / Creator Tools / Marketing",
+    "commission": "20% recurring commission for one year",
+    "website": "https://www.socialpilot.co/",
+    "apply_url": "https://affiliate.socialpilot.co/",
+    "source_url": "https://www.socialpilot.co/affiliate"
+  },
+  {
+    "brand_name": "Akko",
+    "brand_size": "emerging",
+    "category": "Gaming / PC Gear / Mechanical Keyboards / Accessories",
     "commission": "Not publicly listed",
-    "website": "https://www.tecknet.com/",
-    "apply_url": "https://ui.awin.com/merchant-profile/61099",
-    "source_url": "https://ui.awin.com/merchant-profile/61099"
+    "website": "https://en.akkogear.com/",
+    "apply_url": "https://en.akkogear.com/affiliate-apply/",
+    "source_url": "https://en.akkogear.com/affiliate-apply/"
   },
   {
-    "brand_name": "Inside Tech",
-    "brand_size": "mid-size",
-    "category": "Consumer Tech / PCs / Mini PCs / Computer Hardware",
-    "commission": "Up to 3% commission on qualifying sales",
-    "website": "https://inside-tech.co.uk/",
-    "apply_url": "https://ui.awin.com/merchant-profile/74528",
-    "source_url": "https://ui.awin.com/merchant-profile/74528"
+    "brand_name": "Publer",
+    "brand_size": "emerging",
+    "category": "Software / Social Media / Creator Tools / Scheduling",
+    "commission": "Up to 70% on new paying customers plus up to 30% recurring commission",
+    "website": "https://publer.com/",
+    "apply_url": "https://publer.com/ambassador",
+    "source_url": "https://publer.com/ambassador"
   },
   {
-    "brand_name": "Inateck",
-    "brand_size": "mid-size",
-    "category": "Consumer Tech / PC Accessories / Hubs / Keyboards / Storage",
-    "commission": "6%-8% base commission",
-    "website": "https://www.inateck.com/",
-    "apply_url": "https://ui.awin.com/merchant-profile/94339",
-    "source_url": "https://ui.awin.com/merchant-profile/94339"
+    "brand_name": "Mangools",
+    "brand_size": "emerging",
+    "category": "Software / SEO / Creator Tools / Marketing",
+    "commission": "25%-35% recurring commission based on affiliate tier",
+    "website": "https://mangools.com/",
+    "apply_url": "https://mangools.com/affiliate-program",
+    "source_url": "https://mangools.com/affiliate-program"
   },
   {
-    "brand_name": "Bean Box",
-    "brand_size": "mid-size",
-    "category": "Food & Drinks / Coffee / Subscriptions / Gifts",
+    "brand_name": "Missinglettr",
+    "brand_size": "emerging",
+    "category": "Software / Social Media / Content Marketing / Creator Tools",
+    "commission": "30% recurring commission",
+    "website": "https://missinglettr.com/",
+    "apply_url": "https://missinglettr.com/affiliate/signup/",
+    "source_url": "https://missinglettr.com/affiliate/signup/"
+  },
+  {
+    "brand_name": "The Carbon Bar",
+    "brand_size": "emerging",
+    "category": "Food & Drinks / BBQ / Meal Delivery / Local Food",
     "commission": "Not publicly listed",
-    "website": "https://beanbox.com/",
-    "apply_url": "https://ui.awin.com/merchant-profile/88885",
-    "source_url": "https://ui.awin.com/merchant-profile/88885"
+    "website": "https://shop.thecarbonbar.ca/",
+    "apply_url": "https://shop.thecarbonbar.ca/pages/affiliate-program",
+    "source_url": "https://shop.thecarbonbar.ca/pages/affiliate-program"
   },
   {
-    "brand_name": "1st in Coffee",
-    "brand_size": "mid-size",
-    "category": "Food & Drinks / Coffee / Espresso Machines / Kitchen Gear",
-    "commission": "Not publicly listed",
-    "website": "https://www.1stincoffee.com/",
-    "apply_url": "https://ui.awin.com/merchant-profile/65964",
-    "source_url": "https://ui.awin.com/merchant-profile/65964"
-  },
-  {
-    "brand_name": "Coffee.org",
-    "brand_size": "mid-size",
-    "category": "Food & Drinks / Coffee / Tea / Coffee Gear",
-    "commission": "8% commission on qualifying sales",
-    "website": "https://www.coffee.org/",
-    "apply_url": "https://ui.awin.com/merchant-profile/4059",
-    "source_url": "https://ui.awin.com/merchant-profile/4059"
-  },
-  {
-    "brand_name": "Status Audio",
-    "brand_size": "mid-size",
-    "category": "Consumer Tech / Audio / Headphones / Earbuds",
-    "commission": "10% commission on qualifying sales",
-    "website": "https://www.status.co/",
-    "apply_url": "https://ui.awin.com/merchant-profile/77862",
-    "source_url": "https://ui.awin.com/merchant-profile/77862"
-  },
-  {
-    "brand_name": "GeekShare",
+    "brand_name": "ContentStudio",
     "brand_size": "emerging",
-    "category": "Gaming / Nintendo Switch / Console Accessories",
-    "commission": "Up to 8% commission",
-    "website": "https://geekshare.com/",
-    "apply_url": "https://ui.awin.com/merchant-profile/124946",
-    "source_url": "https://ui.awin.com/merchant-profile/124946"
-  },
-  {
-    "brand_name": "EasySMX",
-    "brand_size": "emerging",
-    "category": "Gaming / Controllers / Mice / Headsets / PC Gear",
-    "commission": "Not publicly listed",
-    "website": "https://www.easysmx.com/",
-    "apply_url": "https://ui.awin.com/merchant-profile/90411",
-    "source_url": "https://ui.awin.com/merchant-profile/90411"
-  },
-  {
-    "brand_name": "QRD Game",
-    "brand_size": "emerging",
-    "category": "Gaming / Controllers / Console Accessories",
-    "commission": "10% commission on qualifying sales",
-    "website": "https://qrdgame.com/",
-    "apply_url": "https://ui.awin.com/merchant-profile/57149",
-    "source_url": "https://ui.awin.com/merchant-profile/57149"
-  },
-  {
-    "brand_name": "Ajazz",
-    "brand_size": "emerging",
-    "category": "Gaming / Mechanical Keyboards / Gaming Mice / PC Gear",
-    "commission": "5%-10% commission depending on volume and performance",
-    "website": "https://ajazzstore.com/",
-    "apply_url": "https://ui.awin.com/merchant-profile/99219",
-    "source_url": "https://ui.awin.com/merchant-profile/99219"
-  },
-  {
-    "brand_name": "New Bee",
-    "brand_size": "emerging",
-    "category": "Consumer Tech / Audio / Wireless Headsets / Creator Gear",
-    "commission": "10%-20% commission",
-    "website": "https://www.newbeeglobal.com/",
-    "apply_url": "https://ui.awin.com/merchant-profile/128073",
-    "source_url": "https://ui.awin.com/merchant-profile/128073"
-  },
-  {
-    "brand_name": "Groovz Audio",
-    "brand_size": "emerging",
-    "category": "Consumer Tech / Audio / Earbuds / Speakers",
-    "commission": "20% commission on confirmed sales",
-    "website": "https://groovzaudio.com/",
-    "apply_url": "https://ui.awin.com/merchant-profile/110124",
-    "source_url": "https://ui.awin.com/merchant-profile-terms/110124"
-  },
-  {
-    "brand_name": "Incredibrew Coffee",
-    "brand_size": "emerging",
-    "category": "Food & Drinks / Coffee / Creator Lifestyle",
-    "commission": "20% commission on eligible purchases",
-    "website": "https://incredibrewcoffee.com/",
-    "apply_url": "https://ui.awin.com/merchant-profile/120617",
-    "source_url": "https://ui.awin.com/merchant-profile/120617"
+    "category": "Software / Social Media / Creator Tools / AI Marketing",
+    "commission": "30% recurring commission for the first year",
+    "website": "https://contentstudio.io/",
+    "apply_url": "https://contentstudio.firstpromoter.com/",
+    "source_url": "https://contentstudio.io/affiliate-program"
   }
 ]
