@@ -1,0 +1,23 @@
+[
+  {
+    "brand_name": "Target",
+    "brand_domain": "target.com",
+    "source_platform": "TikTok",
+    "creator_name": "ninersslifeee",
+    "creator_url": "https://www.tiktok.com/@ninersslifeee",
+    "creator_channel_id": "",
+    "creator_subscribers": 0,
+    "creator_genre": "Lifestyle / Home",
+    "creator_tags": ["lifestyle", "home", "dorm", "retail", "shopping"],
+    "video_url": "https://www.tiktok.com/@ninersslifeee/video/7668414610130750734",
+    "video_title": "Target dorm-room paid creator partnership",
+    "sponsored_date": "2026-07-30",
+    "evidence": "CollabFeed tracks this specific public TikTok post by @ninersslifeee as a Target paid creator partnership in Home & DIY / Dorm Room, posted July 30, 2026. Target's official Partners terms publish targetcreators@target.com for creator-program questions, and Target's official Club Target program confirms an active creator community and paid/commission creator infrastructure.",
+    "paid_product_placement": true,
+    "sponsor_category": "Home",
+    "sponsor_subcategory": "Retail / Home & Lifestyle",
+    "contact_email": "targetcreators@target.com",
+    "contact_source_url": "https://partners.target.com/termsandconditions",
+    "discovery_source_url": "https://collabfeed.io/brands/target"
+  }
+]
