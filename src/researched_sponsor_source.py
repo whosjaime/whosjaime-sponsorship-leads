@@ -5,10 +5,29 @@ import re
 from pathlib import Path
 from urllib.parse import parse_qs, urlparse
 
+import requests
+
 from sponsor_dedupe import email_domain, normalize_domain
 from sponsor_models import SponsorLead
 
 DEFAULT_RESEARCH_QUEUE = Path(__file__).resolve().parents[1] / "data" / "researched_sponsors.json"
+
+# These brands are intentionally excluded from the automated queue because they are
+# enterprise-scale buyers that are not a realistic fit for the current creator roster.
+MEGA_ENTERPRISE_DOMAINS = {
+    "target.com",
+    "walmart.com",
+    "amazon.com",
+    "apple.com",
+    "google.com",
+    "meta.com",
+    "microsoft.com",
+    "nike.com",
+    "adidas.com",
+    "samsung.com",
+    "coca-cola.com",
+    "pepsi.com",
+}
 
 
 class ResearchedSponsorSource:
@@ -77,6 +96,55 @@ class ResearchedSponsorSource:
         }
         return labels.get(key, (value or "YouTube").strip())
 
+    @staticmethod
+    def _tiktok_followers(creator_url: str) -> int:
+        """Best-effort public TikTok profile follower hydration.
+
+        TikTok embeds followerCount in its public profile HTML/JSON. If TikTok changes
+        markup or blocks the request, return 0 rather than inventing a value.
+        """
+        url = (creator_url or "").strip()
+        if not url or "tiktok.com/@" not in url.lower():
+            return 0
+        try:
+            response = requests.get(
+                url,
+                headers={
+                    "User-Agent": (
+                        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+                        "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131 Safari/537.36"
+                    )
+                },
+                timeout=15,
+            )
+            if response.status_code >= 400:
+                return 0
+            text = response.text
+        except requests.RequestException:
+            return 0
+
+        handle_match = re.search(r"tiktok\.com/@([^/?#]+)", url, re.I)
+        handle = handle_match.group(1) if handle_match else ""
+        patterns = []
+        if handle:
+            patterns.append(
+                rf'"uniqueId"\s*:\s*"{re.escape(handle)}".{{0,8000}}?"followerCount"\s*:\s*(\d+)'
+            )
+        patterns.extend(
+            [
+                r'"followerCount"\s*:\s*(\d+)',
+                r'"follower_count"\s*:\s*(\d+)',
+            ]
+        )
+        for pattern in patterns:
+            match = re.search(pattern, text, re.I | re.S)
+            if match:
+                try:
+                    return int(match.group(1))
+                except (TypeError, ValueError):
+                    pass
+        return 0
+
     def load(self) -> list[SponsorLead]:
         if not self.path.exists():
             return []
@@ -101,6 +169,8 @@ class ResearchedSponsorSource:
 
             if not brand_name or not brand_domain or not sponsored_date or not content_url or not content_id:
                 continue
+            if brand_domain in MEGA_ENTERPRISE_DOMAINS:
+                continue
             if source_platform.lower() not in {"youtube", "tiktok", "instagram"}:
                 continue
 
@@ -112,6 +182,10 @@ class ResearchedSponsorSource:
             contact_name, contact_title, contact_email, contact_source = self._verified_contact(item, brand_domain)
             raw_tags = item.get("creator_tags") or []
             creator_tags = [str(tag).strip() for tag in raw_tags if str(tag).strip()] if isinstance(raw_tags, list) else []
+            creator_url = str(item.get("creator_url") or "").strip()
+            audience_count = self._int(item.get("creator_followers") or item.get("creator_subscribers"))
+            if source_platform == "TikTok" and audience_count <= 0:
+                audience_count = self._tiktok_followers(creator_url)
 
             leads.append(
                 SponsorLead(
@@ -119,9 +193,9 @@ class ResearchedSponsorSource:
                     brand_domain=brand_domain,
                     source_platform=source_platform,
                     creator_name=str(item.get("creator_name") or "").strip(),
-                    creator_url=str(item.get("creator_url") or "").strip(),
+                    creator_url=creator_url,
                     creator_channel_id=str(item.get("creator_channel_id") or "").strip(),
-                    creator_subscribers=self._int(item.get("creator_subscribers")),
+                    creator_subscribers=audience_count,
                     creator_genre=str(item.get("creator_genre") or "").strip(),
                     creator_tags=creator_tags,
                     video_id=content_id,
