@@ -45,47 +45,25 @@ jobs:
           set -euo pipefail
           delivered=0
           for i in $(seq 1 60); do
-            # Resume any Monday-success checkpoint before doing anything else.
             if [ -s data/sponsor_delivery_pending.json ] && [ "$(cat data/sponsor_delivery_pending.json)" != "{}" ]; then
               python src/run_sponsor_queue_dispatch.py
               delivered=$((delivered+1))
               continue
             fi
 
-            # Rebuild/refill from researched inventory whenever the live queue is empty.
             if [ ! -s data/sponsor_queue.json ] || [ "$(cat data/sponsor_queue.json)" = "[]" ]; then
               python src/run_sponsor_discovery_batch.py
             fi
 
-            # Nothing qualified remains after refill: backlog is drained.
             if [ ! -s data/sponsor_queue.json ] || [ "$(cat data/sponsor_queue.json)" = "[]" ]; then
               echo "No qualified unsent sponsors remain."
               break
             fi
 
-            before=$(python - <<'PY'
-import json
-from pathlib import Path
-p=Path('data/sent_sponsor_keys.json')
-try:
-    d=json.loads(p.read_text())
-except Exception:
-    d=[]
-print(len(d) if isinstance(d, list) else len(d.keys()) if isinstance(d, dict) else 0)
-PY
-)
+            before=$(python -c "import json,pathlib; p=pathlib.Path('data/sent_sponsor_keys.json'); d=json.loads(p.read_text()) if p.exists() else []; print(len(d) if isinstance(d,(list,dict)) else 0)")
             python src/run_sponsor_queue_dispatch.py
-            after=$(python - <<'PY'
-import json
-from pathlib import Path
-p=Path('data/sent_sponsor_keys.json')
-try:
-    d=json.loads(p.read_text())
-except Exception:
-    d=[]
-print(len(d) if isinstance(d, list) else len(d.keys()) if isinstance(d, dict) else 0)
-PY
-)
+            after=$(python -c "import json,pathlib; p=pathlib.Path('data/sent_sponsor_keys.json'); d=json.loads(p.read_text()) if p.exists() else []; print(len(d) if isinstance(d,(list,dict)) else 0)")
+
             if [ "$after" -le "$before" ]; then
               echo "ERROR: dispatch did not increase sent ledger; stopping backlog drain."
               exit 1
