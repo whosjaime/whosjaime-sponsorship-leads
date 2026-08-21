@@ -2529,5 +2529,28 @@
     "sponsor_subcategory": "3D Printers / Maker Hardware",
     "contact_email": "marketing@elegoo.com",
     "contact_source_url": "https://us.elegoo.com/pages/contact-us"
+  },
+  {
+    "brand_name": "Gozney",
+    "brand_domain": "gozney.com",
+    "sponsor_category": "Food & Drink",
+    "creator_name": "MATTY MATHESON",
+    "creator_url": "https://www.youtube.com/@mattymatheson",
+    "creator_channel_id": "",
+    "creator_genre": "Food / Cooking",
+    "creator_tags": [
+      "food",
+      "cooking",
+      "pizza",
+      "outdoor cooking",
+      "kitchen hardware"
+    ],
+    "video_url": "https://www.youtube.com/watch?v=w3uy1YtYS3c",
+    "video_title": "I Made the Best Steak & Potatoes… in a Pizza Oven?!",
+    "sponsored_date": "2026-08-16",
+    "evidence": "SponsorRadar identifies Gozney as the sponsor of MATTY MATHESON's August 16, 2026 English-language YouTube video and shows Gozney as a repeat sponsor on the channel. Gozney sells physical pizza ovens and outdoor cooking hardware. Its current Awin affiliate profile explicitly welcomes publishers/social creators and publishes affiliates@gozney.com for program questions.",
+    "paid_product_placement": true,
+    "contact_email": "affiliates@gozney.com",
+    "contact_source_url": "https://ui.awin.com/merchant-profile/16803"
   }
 ]
