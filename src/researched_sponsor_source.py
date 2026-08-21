@@ -186,6 +186,8 @@ class ResearchedSponsorSource:
             audience_count = self._int(item.get("creator_followers") or item.get("creator_subscribers"))
             if source_platform == "TikTok" and audience_count <= 0:
                 audience_count = self._tiktok_followers(creator_url)
+            if source_platform == "TikTok" and audience_count <= 0:
+                continue
 
             leads.append(
                 SponsorLead(
