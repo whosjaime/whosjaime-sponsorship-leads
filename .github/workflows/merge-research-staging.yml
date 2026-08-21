@@ -32,7 +32,7 @@ jobs:
           import glob, json, os, re
           from difflib import SequenceMatcher
           from pathlib import Path
-          from urllib.parse import urlencode
+          from urllib.parse import urlencode, urlparse
           from urllib.request import urlopen
 
           researched_path = Path('data/researched_sponsors.json')
@@ -49,21 +49,32 @@ jobs:
               m = re.search(r'(?:youtube\.com/watch\?v=|youtu\.be/)([A-Za-z0-9_-]{6,})', value)
               return m.group(1) if m else ''
 
+          def direct_social_id(item):
+              platform = str(item.get('source_platform') or '').strip().lower()
+              url = str(item.get('video_url') or item.get('source_url') or item.get('post_url') or '').strip()
+              parsed = urlparse(url)
+              host = parsed.netloc.lower()
+              if platform == 'tiktok' and 'tiktok.com' in host:
+                  m = re.search(r'/video/(\d+)', parsed.path)
+                  return m.group(1) if m else ''
+              if platform == 'instagram' and 'instagram.com' in host:
+                  parts = [part for part in parsed.path.split('/') if part]
+                  if len(parts) >= 2 and parts[-2] in {'reel', 'reels', 'p'}:
+                      return parts[-1]
+              return ''
+
           def resolve_youtube_video(item):
               if youtube_id(item.get('video_url')):
+                  item['source_platform'] = 'YouTube'
+                  item['video_id'] = youtube_id(item.get('video_url'))
                   return True
               channel_id = str(item.get('creator_channel_id') or '').strip()
               title = str(item.get('video_title') or '').strip()
               if not youtube_key or not channel_id or not title:
                   return False
               params = urlencode({
-                  'part': 'snippet',
-                  'channelId': channel_id,
-                  'q': title,
-                  'type': 'video',
-                  'maxResults': 10,
-                  'order': 'date',
-                  'key': youtube_key,
+                  'part': 'snippet', 'channelId': channel_id, 'q': title,
+                  'type': 'video', 'maxResults': 10, 'order': 'date', 'key': youtube_key,
               })
               try:
                   with urlopen('https://www.googleapis.com/youtube/v3/search?' + params, timeout=20) as response:
@@ -76,20 +87,33 @@ jobs:
               for row in payload.get('items', []):
                   vid = str((row.get('id') or {}).get('videoId') or '').strip()
                   found_title = str((row.get('snippet') or {}).get('title') or '').strip()
-                  if not vid or not found_title:
-                      continue
-                  score = SequenceMatcher(None, target, key_text(found_title)).ratio()
-                  candidates.append((score, vid, found_title))
+                  if vid and found_title:
+                      candidates.append((SequenceMatcher(None, target, key_text(found_title)).ratio(), vid, found_title))
               if not candidates:
                   return False
               score, vid, found_title = max(candidates)
               if score < 0.72:
                   print(f'YouTube title match too weak for {item.get("brand_name")}: {score:.2f} / {found_title}')
                   return False
+              item['source_platform'] = 'YouTube'
               item['video_url'] = f'https://www.youtube.com/watch?v={vid}'
               item['video_id'] = vid
               print(f'Resolved YouTube video for {item.get("brand_name")}: {found_title} / {vid}')
               return True
+
+          def validate_direct_creator_evidence(item):
+              platform = str(item.get('source_platform') or 'YouTube').strip().lower()
+              if platform == 'youtube':
+                  return resolve_youtube_video(item)
+              if platform in {'tiktok', 'instagram'}:
+                  cid = direct_social_id(item)
+                  if not cid:
+                      return False
+                  item['video_url'] = str(item.get('video_url') or item.get('source_url') or item.get('post_url') or '').strip()
+                  item['video_id'] = cid
+                  item['source_platform'] = platform.title()
+                  return True
+              return False
 
           existing_brands = {key_text(x.get('brand_name')) for x in researched if isinstance(x, dict)}
           existing_domains = {str(x.get('brand_domain') or '').lower().strip() for x in researched if isinstance(x, dict)}
@@ -113,8 +137,8 @@ jobs:
                       continue
                   if f'brand:{brand}' in sent or f'domain:{domain}' in sent:
                       continue
-                  if not resolve_youtube_video(item):
-                      print(f'Skipped staged sponsor without resolvable direct YouTube evidence: {item.get("brand_name")}')
+                  if not validate_direct_creator_evidence(item):
+                      print(f'Skipped staged sponsor without valid direct creator evidence: {item.get("brand_name")}')
                       continue
                   researched.append(item)
                   existing_brands.add(brand)
