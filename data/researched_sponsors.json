@@ -3523,5 +3523,45 @@
       "physical health/wellness retail"
     ],
     "date_found": "2026-08-22"
+  },
+  {
+    "brand_name": "boohooMAN",
+    "brand_domain": "boohooman.com",
+    "source_platform": "YouTube",
+    "creator_name": "TWOSYNC",
+    "creator_url": "https://www.youtube.com/@TWOSYNC",
+    "creator_channel_id": "",
+    "creator_subscribers": 1600000,
+    "creator_genre": "Gaming / Entertainment",
+    "creator_tags": [
+      "gaming",
+      "entertainment",
+      "football",
+      "EA FC",
+      "fashion",
+      "menswear"
+    ],
+    "video_id": "Qqt0Cw8PWzQ",
+    "video_url": "https://youtube.com/watch?v=Qqt0Cw8PWzQ",
+    "video_title": "INSANE PACKS BEFORE HIS CONFESSION... (FC 26 CO OP RTG)",
+    "sponsored_date": "2026-08-14",
+    "evidence": "SponsorRadar identifies boohooMAN sponsoring TWOSYNC's August 14, 2026 English-language YouTube video 'INSANE PACKS BEFORE HIS CONFESSION... (FC 26 CO OP RTG)' with a creator-specific boohooMAN link and TWOSYNC discount code. SponsorRadar tracks 224 boohooMAN sponsorships across 10 creators, including Fred Talks Fighting (~167K subscribers), Saeed TV (~228K), Braderz (~576K), and TWOSYNC (~1.6M), showing active spend across creator sizes relevant to the roster. boohooMAN is a physical fashion/menswear brand. Its current US & Canada Awin affiliate program publishes uk-boohooman@awin.com specifically as the boohooMAN affiliate-team contact. Repository search immediately before staging returned no existing boohooMAN/boohooman.com record.",
+    "paid_product_placement": true,
+    "sponsor_category": "Fashion",
+    "sponsor_subcategory": "Men's Fashion / Streetwear",
+    "contact_name": "boohooMAN Affiliate Team",
+    "contact_title": "Affiliate Partnerships",
+    "contact_email": "uk-boohooman@awin.com",
+    "email_type": "Public affiliate program email",
+    "contact_source": "https://ui.awin.com/merchant-profile/60701",
+    "contact_source_url": "https://ui.awin.com/merchant-profile/60701",
+    "signals": [
+      "Recent August 2026 YouTube sponsorship",
+      "active repeat creator sponsor",
+      "sponsors ~167K and ~228K channels",
+      "verified affiliate-team email",
+      "physical fashion brand"
+    ],
+    "date_found": "2026-08-22"
   }
 ]
