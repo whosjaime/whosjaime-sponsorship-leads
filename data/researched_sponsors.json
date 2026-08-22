@@ -3156,5 +3156,32 @@
     "contact_source": "https://ui.awin.com/merchant-profile-terms/84037",
     "contact_source_url": "https://ui.awin.com/merchant-profile-terms/84037",
     "video_id": "amdrAZrenwo"
+  },
+  {
+    "brand_name": "Myvitamins",
+    "brand_domain": "myvitamins.com",
+    "source_platform": "YouTube",
+    "creator_name": "Gemma Louise Miles",
+    "creator_url": "https://www.youtube.com/@gemmalouisemiles",
+    "creator_channel_id": "",
+    "creator_subscribers": 604000,
+    "creator_genre": "Lifestyle / Vlog / Wellness",
+    "creator_tags": [
+      "lifestyle",
+      "vlog",
+      "wellness",
+      "health",
+      "home"
+    ],
+    "video_url": "https://www.youtube.com/watch?v=WgnsvXw1GbM",
+    "video_id": "WgnsvXw1GbM",
+    "video_title": "Cosy Day At Home | B&m Autumn Haul, Homemade Granola, Cooking & House Reset",
+    "sponsored_date": "2026-08-01",
+    "evidence": "SponsorRadar identifies Myvitamins as the sponsor of Gemma Louise Miles' August 1, 2026 English-language YouTube video and shows Myvitamins as a repeat sponsor on her channel with 10 tracked sponsored videos. Myvitamins' official Brand Ambassadors page states it is actively recruiting new brand ambassadors, offering commission, product access and influencer events, and explicitly directs interested creators to opportunities@myvitamins.com with their social profiles and following.",
+    "paid_product_placement": true,
+    "contact_email": "opportunities@myvitamins.com",
+    "contact_source_url": "https://www.myvitamins.ie/c/customer-service/affiliate-programme/",
+    "sponsor_category": "Health & Wellness",
+    "sponsor_subcategory": "Vitamins & Supplements"
   }
 ]
