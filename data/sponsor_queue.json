@@ -1,1 +1,22 @@
-[]
+[
+  {
+    "brand_name": "Anthros",
+    "brand_domain": "anthros.com",
+    "creator_name": "Live Lean TV",
+    "creator_url": "https://www.youtube.com/LiveLeanTV",
+    "creator_channel_id": "",
+    "creator_subscribers": 525000,
+    "creator_genre": "Health & Fitness / Lifestyle",
+    "creator_tags": ["health", "fitness", "wellness", "ergonomics", "home office", "physical consumer product"],
+    "sponsor_category": "Health & Wellness",
+    "video_url": "https://youtu.be/qo4taOOlL-Y",
+    "video_title": "Anthros Chair Review: The Actual Fix for Bad Posture?",
+    "sponsored_date": "2026-07-31",
+    "evidence": "Live Lean TV's July 31, 2026 English-language YouTube video states that Anthros partnered with the creator on the video and includes a creator-specific Anthros link. SponsorRadar independently identifies the same July 31 video as sponsored by Anthros. Anthros sells a tangible ergonomic office chair. Anthros' official 2026 Team Anthros affiliate page explicitly recruits health/wellness creators, desk workers, podcasters and other creators and instructs applicants to email affiliates@anthros.com. GitHub brand/domain search was rechecked before staging and surfaced no Anthros match.",
+    "paid_product_placement": true,
+    "contact_title": "Team Anthros Affiliate Program",
+    "contact_email": "affiliates@anthros.com",
+    "contact_source_url": "https://www.anthros.com/affiliate",
+    "source_platform": "YouTube"
+  }
+]
