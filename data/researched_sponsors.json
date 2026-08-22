@@ -3287,5 +3287,43 @@
       "named affiliate contact"
     ],
     "date_found": "2026-08-22"
+  },
+  {
+    "brand_name": "Wildgrain",
+    "brand_domain": "wildgrain.com",
+    "source_platform": "YouTube",
+    "creator_name": "Crime Weekly",
+    "creator_url": "https://www.youtube.com/@crimeweeklypodcast",
+    "creator_channel_id": "",
+    "creator_subscribers": 367000,
+    "creator_genre": "Entertainment / True Crime / Podcast",
+    "creator_tags": [
+      "entertainment",
+      "true crime",
+      "podcast",
+      "food/drink",
+      "lifestyle"
+    ],
+    "video_id": "2VyPO4TJ4jw",
+    "video_url": "https://www.youtube.com/watch?v=2VyPO4TJ4jw",
+    "video_title": "Cop Uses Flock Cameras to Track Her Boyfriend’s Ex-Wife",
+    "sponsored_date": "2026-08-12",
+    "evidence": "SponsorRadar identifies Wildgrain as the sponsor of Crime Weekly's August 12, 2026 English-language YouTube video 'Cop Uses Flock Cameras to Track Her Boyfriend’s Ex-Wife' and shows Wildgrain as a repeat sponsor on the channel with six tracked deals, including another July 29, 2026 deal. Crime Weekly has about 367K subscribers. Wildgrain sells physical bake-from-frozen breads, pastries and pasta. Current public sources identify Ali Mooradian as Wildgrain's VP of Marketing, and a public Wildgrain recruiting post provides her company email ali@wildgrain.com. Wildgrain also has a documented creator/affiliate program and current affiliate-network presence.",
+    "paid_product_placement": true,
+    "sponsor_category": "Food & Beverage",
+    "sponsor_subcategory": "Bread / Pastries / Food Subscription",
+    "contact_name": "Ali Mooradian",
+    "contact_title": "VP of Marketing",
+    "contact_email": "ali@wildgrain.com",
+    "email_type": "Named public work email",
+    "contact_source": "https://www.linkedin.com/in/lejla-sudar-a4b582b",
+    "contact_source_url": "https://www.linkedin.com/in/lejla-sudar-a4b582b",
+    "signals": [
+      "Recent August 2026 YouTube sponsorship",
+      "repeat sponsor of mid-size entertainment creator",
+      "documented creator/affiliate program",
+      "named current VP Marketing contact"
+    ],
+    "date_found": "2026-08-22"
   }
 ]
