@@ -1,0 +1,57 @@
+name: Merge Sponsor Discovery via PR
+
+on:
+  pull_request:
+    types: [opened, synchronize]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sponsor-discovery-pr-merge
+  cancel-in-progress: false
+
+jobs:
+  merge:
+    if: startsWith(github.event.pull_request.title, 'MERGE DISCOVERY INVENTORY')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Merge verified discovery candidate batch
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          researched_path = Path('data/researched_sponsors.json')
+          batch_path = Path('data/discovery_candidate_batch.json')
+          sent_path = Path('data/sent_sponsor_keys.json')
+          researched = json.loads(researched_path.read_text(encoding='utf-8')) if researched_path.exists() else []
+          batch = json.loads(batch_path.read_text(encoding='utf-8')) if batch_path.exists() else []
+          sent = json.loads(sent_path.read_text(encoding='utf-8')) if sent_path.exists() else []
+          def norm(v): return ''.join(ch for ch in (v or '').lower() if ch.isalnum())
+          existing_brands = {norm(x.get('brand_name')) for x in researched}
+          existing_domains = {norm(x.get('brand_domain')) for x in researched}
+          sent_norm = {norm(x) for x in sent}
+          added=[]
+          for lead in batch:
+              brand=norm(lead.get('brand_name')); domain=norm(lead.get('brand_domain'))
+              if not brand or not domain or brand in existing_brands or domain in existing_domains: continue
+              if norm('brand:'+lead.get('brand_name','')) in sent_norm or norm('domain:'+lead.get('brand_domain','')) in sent_norm: continue
+              researched.append(lead); existing_brands.add(brand); existing_domains.add(domain); added.append(lead.get('brand_name'))
+          researched_path.write_text(json.dumps(researched, indent=2, ensure_ascii=False)+'\n', encoding='utf-8')
+          print('ADDED:', ', '.join(added) if added else 'none')
+          PY
+      - name: Persist merged research inventory
+        run: |
+          git config user.name "sponsor-discovery-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/researched_sponsors.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "Merge verified sponsor discovery candidates [skip ci]"
+          git pull --rebase origin main
+          git push origin HEAD:main
