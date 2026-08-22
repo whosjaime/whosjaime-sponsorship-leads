@@ -3445,5 +3445,44 @@
       "physical consumer product"
     ],
     "date_found": "2026-08-22"
+  },
+  {
+    "brand_name": "KiiBOOM",
+    "brand_domain": "kiiboom.com",
+    "source_platform": "YouTube",
+    "creator_name": "NoodleNick",
+    "creator_url": "https://www.youtube.com/@noodlenick",
+    "creator_channel_id": "",
+    "creator_subscribers": 1140000,
+    "creator_genre": "Gaming / Physical Consumer Tech",
+    "creator_tags": [
+      "gaming",
+      "mechanical keyboards",
+      "PC hardware",
+      "desk setup",
+      "physical consumer tech"
+    ],
+    "video_id": "sponsorradar-noodlenick-2026-08-16-kiiboom",
+    "video_url": "https://sponsorradar.com/brands/kiiboom",
+    "video_title": "This Keyboard Is Guaranteed To Bring You Good Luck - KiiBOOM Phantom 98 Lite",
+    "sponsored_date": "2026-08-16",
+    "evidence": "SponsorRadar identifies KiiBOOM sponsoring NoodleNick's August 16, 2026 English-language YouTube video 'This Keyboard Is Guaranteed To Bring You Good Luck - KiiBOOM Phantom 98 Lite' and shows the creator-specific product link and discount code. KiiBOOM has 18 tracked YouTube sponsorships across 10 creators, including creators around 9K, 18K, 53K, 94K and 135K subscribers, making it realistic for smaller and mid-size roster creators rather than only mega-channels. KiiBOOM sells tangible mechanical keyboards, keycaps, switches and gaming/desk hardware. Its official contact page publishes marketing@kiiboom.com specifically for Marketing Inquiries. GitHub repository searches immediately before staging returned no existing KiiBOOM or kiiboom.com record.",
+    "paid_product_placement": true,
+    "sponsor_category": "Consumer Tech",
+    "sponsor_subcategory": "Gaming Keyboards / Desk Hardware",
+    "contact_name": "",
+    "contact_title": "Marketing",
+    "contact_email": "marketing@kiiboom.com",
+    "email_type": "Public work email",
+    "contact_source": "https://www.kiiboom.com/pages/contact",
+    "contact_source_url": "https://www.kiiboom.com/pages/contact",
+    "signals": [
+      "Recent August 2026 creator sponsorship",
+      "sponsors creators as small as ~9K subscribers",
+      "18 tracked creator sponsorships",
+      "qualified marketing email",
+      "physical gaming hardware"
+    ],
+    "date_found": "2026-08-22"
   }
 ]
