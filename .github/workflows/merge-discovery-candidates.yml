@@ -3,10 +3,13 @@ name: Merge Sponsor Discovery Candidates
 on:
   issues:
     types: [opened]
+  pull_request:
+    types: [opened]
 
 permissions:
   contents: write
   issues: read
+  pull-requests: read
 
 concurrency:
   group: sponsor-discovery-merge
@@ -14,7 +17,9 @@ concurrency:
 
 jobs:
   merge:
-    if: startsWith(github.event.issue.title, 'MERGE SPONSOR DISCOVERY CANDIDATES')
+    if: >-
+      (github.event_name == 'issues' && startsWith(github.event.issue.title, 'MERGE SPONSOR DISCOVERY CANDIDATES')) ||
+      (github.event_name == 'pull_request' && startsWith(github.event.pull_request.title, 'MERGE SPONSOR DISCOVERY CANDIDATES'))
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
