@@ -292,6 +292,8 @@ def run() -> None:
         f"SPONSOR_QUEUE_DISPATCH: {created} delivered, {skipped} duplicate/stale/rejected removed, "
         f"{len(queue)} remaining, {len(sent_keys)} GitHub sent keys."
     )
+    if created != 1:
+        raise RuntimeError("Forced sponsor delivery completed without delivering exactly one sponsor")
 
 
 if __name__ == "__main__":
