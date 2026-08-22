@@ -1,0 +1,1 @@
+Trigger verified discovery inventory merge for FSA Store.
