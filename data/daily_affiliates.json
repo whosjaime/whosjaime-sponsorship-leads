@@ -1,182 +1,155 @@
 [
   {
-    "brand_name": "Automattic",
+    "brand_name": "Snapmaker",
     "brand_size": "large",
-    "category": "Software / Website / Ecommerce / Creator Tools",
-    "commission": "Up to $300 per referral; percentage-based offers vary by product and reach up to 40%",
-    "website": "https://automattic.com/",
-    "apply_url": "https://automattic.com/creators/",
-    "source_url": "https://automattic.com/creators/"
+    "category": "Consumer Tech / Maker Tech / 3D Printing / Creator Hardware",
+    "commission": "Up to 10%",
+    "website": "https://www.snapmaker.com/",
+    "apply_url": "https://www.snapmaker.com/affiliate-program",
+    "source_url": "https://www.snapmaker.com/affiliate-program"
   },
   {
-    "brand_name": "Elementor",
+    "brand_name": "Creality",
     "brand_size": "large",
-    "category": "Software / Website Builder / WordPress / Creator Tools",
-    "commission": "45% on first purchases of Editor Pro and Elementor Host; 55% on eligible Elementor One first purchases during the current launch offer",
-    "website": "https://elementor.com/",
-    "apply_url": "https://elementor.com/affiliates/signup/",
-    "source_url": "https://elementor.com/affiliates/"
-  },
-  {
-    "brand_name": "Bitdefender",
-    "brand_size": "large",
-    "category": "Software / Cybersecurity / VPN / Creator Security",
-    "commission": "Base offer starts at 20% revenue share for new consumer customers and 50% commission for business products; custom deals may vary",
-    "website": "https://www.bitdefender.com/",
-    "apply_url": "https://www.bitdefender.com/en-ca/partners/affiliate-partners",
-    "source_url": "https://www.bitdefender.com/en-ca/partners/affiliate-partners"
-  },
-  {
-    "brand_name": "Malwarebytes",
-    "brand_size": "large",
-    "category": "Software / Cybersecurity / Privacy / Consumer Tech",
-    "commission": "Up to 30% commission per sale",
-    "website": "https://www.malwarebytes.com/",
-    "apply_url": "https://www.malwarebytes.com/affiliates",
-    "source_url": "https://www.malwarebytes.com/affiliates"
-  },
-  {
-    "brand_name": "1Password",
-    "brand_size": "large",
-    "category": "Software / Password Manager / Cybersecurity / Productivity",
-    "commission": "$2 per completed signup plus 25% of the first year or first month's payment, with a $2 minimum",
-    "website": "https://1password.com/",
-    "apply_url": "https://1password.com/affiliate",
-    "source_url": "https://1password.com/affiliate"
-  },
-  {
-    "brand_name": "Shokz",
-    "brand_size": "mid-size",
-    "category": "Consumer Tech / Audio / Headphones / Creator Gear",
-    "commission": "Minimum 5% on eligible sales, with rates up to 10%",
-    "website": "https://ca.shokz.com/",
-    "apply_url": "https://ca.shokz.com/pages/become-an-affiliate",
-    "source_url": "https://ca.shokz.com/pages/become-an-affiliate"
-  },
-  {
-    "brand_name": "FreshBooks",
-    "brand_size": "mid-size",
-    "category": "Software / Accounting / Freelancer / Creator Business",
-    "commission": "Up to $200 per paid subscriber",
-    "website": "https://www.freshbooks.com/",
-    "apply_url": "https://www.freshbooks.com/affiliate-program",
-    "source_url": "https://www.freshbooks.com/affiliate-program"
-  },
-  {
-    "brand_name": "Printify",
-    "brand_size": "mid-size",
-    "category": "Software / Print-on-Demand / Ecommerce / Creator Merch",
-    "commission": "5% on referred orders for 12 months",
-    "website": "https://printify.com/",
-    "apply_url": "https://printify.com/affiliate/",
-    "source_url": "https://printify.com/affiliate/"
-  },
-  {
-    "brand_name": "JLab",
-    "brand_size": "mid-size",
-    "category": "Consumer Tech / Audio / Earbuds / Headphones / Gaming",
+    "category": "Consumer Tech / Maker Tech / 3D Printing / Creator Hardware",
     "commission": "Not publicly listed",
-    "website": "https://www.jlab.com/",
-    "apply_url": "https://www.jlab.com/pages/jlab-affiliate-program",
-    "source_url": "https://www.jlab.com/pages/jlab-affiliate-program"
+    "website": "https://www.creality.com/",
+    "apply_url": "https://www.creality.com/fr/resources/affiliate-program",
+    "source_url": "https://www.creality.com/fr/resources/affiliate-program"
   },
   {
-    "brand_name": "NOMAD",
-    "brand_size": "mid-size",
-    "category": "Consumer Tech / Mobile Accessories / Apple Accessories / Everyday Carry",
-    "commission": "15% baseline commission",
-    "website": "https://nomadgoods.com/",
-    "apply_url": "https://nomadgoods.com/ca/pages/affiliate-and-partners",
-    "source_url": "https://nomadgoods.com/ca/pages/affiliate-and-partners"
+    "brand_name": "ELEGOO",
+    "brand_size": "large",
+    "category": "Consumer Tech / Maker Tech / 3D Printing / STEM",
+    "commission": "5%+",
+    "website": "https://www.elegoo.com/",
+    "apply_url": "https://www.elegoo.com/pages/elegoo-affiliate-impact-awin",
+    "source_url": "https://www.elegoo.com/pages/elegoo-affiliate-impact-awin"
   },
   {
-    "brand_name": "WP Rocket",
-    "brand_size": "mid-size",
-    "category": "Software / WordPress / Website Performance / Creator Tools",
-    "commission": "20% commission per sale",
-    "website": "https://wp-rocket.me/",
-    "apply_url": "https://wp-rocket.me/wp-rocket-affiliate-program/",
-    "source_url": "https://wp-rocket.me/wp-rocket-affiliate-program/"
-  },
-  {
-    "brand_name": "ThemeIsle",
-    "brand_size": "mid-size",
-    "category": "Software / WordPress / Themes & Plugins / Creator Tools",
-    "commission": "55% commission on qualifying sales",
-    "website": "https://themeisle.com/",
-    "apply_url": "https://themeisle.com/affiliates/",
-    "source_url": "https://themeisle.com/affiliates/"
-  },
-  {
-    "brand_name": "Twelve South",
-    "brand_size": "mid-size",
-    "category": "Consumer Tech / Apple Accessories / Mobile & Desk Gear",
+    "brand_name": "Namecheap",
+    "brand_size": "large",
+    "category": "Software / Domains / Web Hosting / Creator Tools",
     "commission": "Not publicly listed",
-    "website": "https://www.twelvesouth.com/",
-    "apply_url": "https://www.twelvesouth.com/pages/affiliates",
-    "source_url": "https://www.twelvesouth.com/pages/affiliates"
+    "website": "https://www.namecheap.com/",
+    "apply_url": "https://www.namecheap.com/affiliates/",
+    "source_url": "https://mktg.namecheap.com/marketing/2020/affiliate/Affiliate_Guides/Namecheap_Affiliate_Marketing_Guide.pdf"
   },
   {
-    "brand_name": "SocialPilot",
-    "brand_size": "emerging",
-    "category": "Software / Social Media / Creator Tools / Marketing",
-    "commission": "20% recurring commission for one year",
-    "website": "https://www.socialpilot.co/",
-    "apply_url": "https://affiliate.socialpilot.co/",
-    "source_url": "https://www.socialpilot.co/affiliate"
+    "brand_name": "DreamHost",
+    "brand_size": "large",
+    "category": "Software / Web Hosting / WordPress / Creator Tools",
+    "commission": "Up to $1,000 per referral depending on product and performance tier",
+    "website": "https://www.dreamhost.com/",
+    "apply_url": "https://partners.dreamhost.com/",
+    "source_url": "https://www.dreamhost.com/affiliates/"
   },
   {
-    "brand_name": "Akko",
-    "brand_size": "emerging",
-    "category": "Gaming / PC Gear / Mechanical Keyboards / Accessories",
+    "brand_name": "BigCommerce",
+    "brand_size": "mid-size",
+    "category": "Software / Ecommerce / Creator Business / Website Tools",
     "commission": "Not publicly listed",
-    "website": "https://en.akkogear.com/",
-    "apply_url": "https://en.akkogear.com/affiliate-apply/",
-    "source_url": "https://en.akkogear.com/affiliate-apply/"
+    "website": "https://www.bigcommerce.com/",
+    "apply_url": "https://www.bigcommerce.com/partners/affiliate/",
+    "source_url": "https://assets.ctfassets.net/wowgx05xsdrr/6r1OMLBexJxV3taIfW1Mc/e2f2f75c3aac6b4b8ca4d4fd872a7794/BigCommerce-en-GB-affiliate-marketing.pdf"
   },
   {
-    "brand_name": "Publer",
-    "brand_size": "emerging",
-    "category": "Software / Social Media / Creator Tools / Scheduling",
-    "commission": "Up to 70% on new paying customers plus up to 30% recurring commission",
-    "website": "https://publer.com/",
-    "apply_url": "https://publer.com/ambassador",
-    "source_url": "https://publer.com/ambassador"
+    "brand_name": "Jasper",
+    "brand_size": "mid-size",
+    "category": "Software / AI / Marketing / Creator Tools",
+    "commission": "25% of qualifying commissionable subscription plans",
+    "website": "https://www.jasper.ai/",
+    "apply_url": "https://partners.jasper.ai/",
+    "source_url": "https://www.jasper.ai/legal/affiliates"
   },
   {
-    "brand_name": "Mangools",
-    "brand_size": "emerging",
-    "category": "Software / SEO / Creator Tools / Marketing",
-    "commission": "25%-35% recurring commission based on affiliate tier",
-    "website": "https://mangools.com/",
-    "apply_url": "https://mangools.com/affiliate-program",
-    "source_url": "https://mangools.com/affiliate-program"
-  },
-  {
-    "brand_name": "Missinglettr",
-    "brand_size": "emerging",
-    "category": "Software / Social Media / Content Marketing / Creator Tools",
-    "commission": "30% recurring commission",
-    "website": "https://missinglettr.com/",
-    "apply_url": "https://missinglettr.com/affiliate/signup/",
-    "source_url": "https://missinglettr.com/affiliate/signup/"
-  },
-  {
-    "brand_name": "The Carbon Bar",
-    "brand_size": "emerging",
-    "category": "Food & Drinks / BBQ / Meal Delivery / Local Food",
+    "brand_name": "SiteGround",
+    "brand_size": "mid-size",
+    "category": "Software / Web Hosting / WordPress / Creator Tools",
     "commission": "Not publicly listed",
-    "website": "https://shop.thecarbonbar.ca/",
-    "apply_url": "https://shop.thecarbonbar.ca/pages/affiliate-program",
-    "source_url": "https://shop.thecarbonbar.ca/pages/affiliate-program"
+    "website": "https://www.siteground.com/",
+    "apply_url": "https://www.siteground.com/affiliates",
+    "source_url": "https://www.siteground.com/pdf/AffiliateProgram.pdf"
   },
   {
-    "brand_name": "ContentStudio",
+    "brand_name": "SmallRig",
+    "brand_size": "mid-size",
+    "category": "Consumer Tech / Camera Gear / Video Production / Creator Hardware",
+    "commission": "10%",
+    "website": "https://www.smallrig.com/",
+    "apply_url": "https://www.smallrig.com/affiliate-program/",
+    "source_url": "https://www.smallrig.com/affiliate-program/"
+  },
+  {
+    "brand_name": "AnkerWork",
+    "brand_size": "mid-size",
+    "category": "Consumer Tech / Audio / Webcam / Office & Creator Gear",
+    "commission": "8%",
+    "website": "https://us.ankerwork.com/",
+    "apply_url": "https://us.ankerwork.com/pages/become-an-affiliate",
+    "source_url": "https://us.ankerwork.com/pages/become-an-affiliate"
+  },
+  {
+    "brand_name": "Ulanzi",
+    "brand_size": "mid-size",
+    "category": "Consumer Tech / Camera Gear / Mobile Filmmaking / Creator Hardware",
+    "commission": "10%-12%",
+    "website": "https://www.ulanzi.com/",
+    "apply_url": "https://www.ulanzi.com/pages/ulanzi-affiliate-program",
+    "source_url": "https://www.ulanzi.com/pages/ulanzi-affiliate-program"
+  },
+  {
+    "brand_name": "ProWritingAid",
+    "brand_size": "mid-size",
+    "category": "Software / Writing / AI / Creator Tools",
+    "commission": "Up to $20 per confirmed sale",
+    "website": "https://prowritingaid.com/",
+    "apply_url": "https://prowritingaid.com/affiliates",
+    "source_url": "https://prowritingaid.com/affiliates"
+  },
+  {
+    "brand_name": "GAMIVO",
     "brand_size": "emerging",
-    "category": "Software / Social Media / Creator Tools / AI Marketing",
-    "commission": "30% recurring commission for the first year",
-    "website": "https://contentstudio.io/",
-    "apply_url": "https://contentstudio.firstpromoter.com/",
-    "source_url": "https://contentstudio.io/affiliate-program"
+    "category": "Gaming / Digital Games / Software Marketplace",
+    "commission": "Up to 8%",
+    "website": "https://www.gamivo.com/",
+    "apply_url": "https://www.gamivo.com/affiliate",
+    "source_url": "https://www.gamivo.com/affiliate"
+  },
+  {
+    "brand_name": "Buzzsprout",
+    "brand_size": "emerging",
+    "category": "Software / Podcasting / Creator Tools / Audio",
+    "commission": "$20 for each referred account that becomes paid and meets payout requirements",
+    "website": "https://www.buzzsprout.com/",
+    "apply_url": "https://www.buzzsprout.com/signup",
+    "source_url": "https://www.buzzsprout.com/help/58-affiliate-program"
+  },
+  {
+    "brand_name": "NEEWER",
+    "brand_size": "emerging",
+    "category": "Consumer Tech / Camera Gear / Lighting / Creator Hardware",
+    "commission": "Up to 10%",
+    "website": "https://neewer.com/",
+    "apply_url": "https://neewer.com/pages/affiliate-program",
+    "source_url": "https://neewer.com/pages/affiliate-program"
+  },
+  {
+    "brand_name": "FIFINE",
+    "brand_size": "emerging",
+    "category": "Consumer Tech / Gaming Audio / Microphones / Streaming Gear",
+    "commission": "Not publicly listed",
+    "website": "https://fifinemicrophone.com/",
+    "apply_url": "https://fifinemicrophone.com/pages/affiliate",
+    "source_url": "https://fifinemicrophone.com/pages/affiliate"
+  },
+  {
+    "brand_name": "K&F Concept",
+    "brand_size": "emerging",
+    "category": "Consumer Tech / Camera Accessories / Photography / Creator Gear",
+    "commission": "Not publicly listed",
+    "website": "https://www.kentfaith.com/",
+    "apply_url": "https://www.kentfaith.com/affiliate",
+    "source_url": "https://br.kentfaith.com/affiliate"
   }
 ]
