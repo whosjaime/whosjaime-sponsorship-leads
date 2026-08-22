@@ -60,6 +60,7 @@ class SponsorLead:
     contact_email: str = ""
     email_type: str = ""
     contact_source: str = ""
+    contact_source_url: str = ""
     lead_score: int = 0
     lead_temperature: str = ""
     sponsorship_key: str = ""
@@ -92,6 +93,7 @@ class SponsorLead:
             "contact_email": self.contact_email,
             "email_type": self.email_type,
             "contact_source": self.contact_source,
+            "contact_source_url": self.contact_source_url,
             "lead_score": self.lead_score,
             "lead_temperature": self.lead_temperature,
             "sponsorship_key": self.sponsorship_key,
