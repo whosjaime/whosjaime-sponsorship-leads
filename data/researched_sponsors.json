@@ -3684,5 +3684,47 @@
       "Physical consumer product"
     ],
     "date_found": "2026-08-22"
+  },
+  {
+    "brand_name": "Aiper",
+    "brand_domain": "aiper.com",
+    "source_platform": "YouTube",
+    "creator_name": "911Studios - Shopping, Gadgets & Tech",
+    "creator_url": "https://www.youtube.com/channel/UC_74cZqwx2-NppYqrq824UQ",
+    "creator_channel_id": "UC_74cZqwx2-NppYqrq824UQ",
+    "creator_subscribers": 1170000,
+    "creator_genre": "Physical Consumer Tech / Home",
+    "creator_tags": [
+      "physical consumer tech",
+      "home",
+      "smart home",
+      "outdoor",
+      "robotics",
+      "gadgets"
+    ],
+    "video_id": "QXizMIuuefg",
+    "video_url": "https://www.youtube.com/watch?v=QXizMIuuefg",
+    "video_title": "Aiper Scuba V3 Ultra - World's 1st Cognitive AI Powered 6-In-1 Robotic Pool Cleaner",
+    "sponsored_date": "2026-08-12",
+    "evidence": "SponsorRadar identifies Aiper as the sponsor of 911Studios' August 12, 2026 English-language YouTube video about the Scuba V3 Ultra. Aiper has 80 tracked YouTube sponsorships across 52 creators and has sponsored channels as small as Is It Worth It? at about 60K subscribers, showing realistic small/mid-size creator spend. Aiper sells tangible robotic pool-cleaning and smart-yard hardware. Aiper's current official Pro Club creator-collaboration page says it partners with creators and professionals and directs collaboration introductions to marketing@aiper.com; Aiper's current US sustainability page also publicly confirms marketing@aiper.com.",
+    "paid_product_placement": true,
+    "brand_partner_channel_id": "",
+    "sponsor_category": "Physical Consumer Tech",
+    "sponsor_subcategory": "Smart Home / Outdoor Robotics",
+    "contact_name": "",
+    "contact_title": "Marketing / Creator Collaborations",
+    "contact_email": "marketing@aiper.com",
+    "email_type": "Public marketing/collaboration email",
+    "contact_source": "https://aiper.com/us/from-clean-homes-to-a-cleaner-planet",
+    "lead_score": 99,
+    "lead_temperature": "Very Hot",
+    "signals": [
+      "Recent paid YouTube sponsorship",
+      "80 tracked creator deals",
+      "Sponsors creators down to ~60K subscribers",
+      "Official marketing/collaboration contact",
+      "Physical consumer hardware"
+    ],
+    "date_found": "2026-08-22"
   }
 ]
