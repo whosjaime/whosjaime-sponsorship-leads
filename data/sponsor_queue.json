@@ -1,1 +1,33 @@
-[]
+[
+  {
+    "brand_name": "Typhur",
+    "brand_domain": "typhur.com",
+    "source_platform": "YouTube",
+    "creator_name": "Tom Horsman",
+    "creator_url": "https://www.youtube.com/@TomHorsmanAmateurBBQ",
+    "creator_channel_id": "",
+    "creator_subscribers": 0,
+    "creator_genre": "Food / BBQ / Consumer Kitchen Tech",
+    "creator_tags": ["food", "BBQ", "cooking", "kitchen appliances", "physical consumer tech"],
+    "video_id": "f3Wu0fjMadI",
+    "video_url": "https://www.youtube.com/watch?v=f3Wu0fjMadI",
+    "video_title": "Review Of The Typhur Dome 2 Air Fryer! / Upper And Lower Heating Elements! / Self Cleaning!",
+    "sponsored_date": "2026-06-23",
+    "evidence": "SponsorRadar identifies Typhur promotion/sponsorship activity on Tom Horsman's June 23, 2026 English-language YouTube video with creator-specific code HORSMAN10. Typhur sells tangible kitchen appliances and currently operates an official affiliate program explicitly open to food and cooking creators, with affiliate@typhur.com published for program questions.",
+    "paid_product_placement": true,
+    "brand_partner_channel_id": "",
+    "sponsor_category": "Food & Drink",
+    "sponsor_subcategory": "Kitchen Appliances",
+    "contact_name": "",
+    "contact_title": "",
+    "contact_email": "affiliate@typhur.com",
+    "email_type": "Public work email",
+    "contact_source": "https://www.typhur.com/affiliate-program",
+    "lead_score": 100,
+    "lead_temperature": "Very Hot",
+    "sponsorship_key": "youtube:f3wu0fjmadi:typhur.com",
+    "brand_key": "domain:typhur.com",
+    "signals": ["Daily researched sponsorship", "verified public YouTube sponsorship evidence"],
+    "date_found": "2026-08-22"
+  }
+]
