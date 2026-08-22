@@ -3405,5 +3405,45 @@
       "physical consumer hardware"
     ],
     "date_found": "2026-08-22"
+  },
+  {
+    "brand_name": "Branch Basics",
+    "brand_domain": "branchbasics.com",
+    "source_platform": "YouTube",
+    "creator_name": "The Doctor Youn Show",
+    "creator_url": "https://www.youtube.com/@thedoctoryounshow",
+    "creator_channel_id": "",
+    "creator_subscribers": 128000,
+    "creator_genre": "Health & Wellness / Lifestyle",
+    "creator_tags": [
+      "health",
+      "wellness",
+      "lifestyle",
+      "home",
+      "cleaning",
+      "family"
+    ],
+    "video_id": "sponsorradar-doctoryoun-2026-08-04-branch-basics",
+    "video_url": "https://sponsorradar.com/channels/thedoctoryounshow",
+    "video_title": "Why Korean Women Look Younger: The Beauty Secrets Americans Are Missing With Charlotte Cho",
+    "sponsored_date": "2026-08-04",
+    "evidence": "SponsorRadar's freshly indexed The Doctor Youn Show sponsorship data identifies Branch Basics as a sponsor on the August 4, 2026 English-language episode/video and shows the channel at roughly 128K subscribers. The same episode's current iHeart listing explicitly includes a Branch Basics sponsor offer in the episode resources. Branch Basics sells physical household cleaning products. Its official Affiliate Program actively recruits social-media influencers and bloggers, starts creators at 1,000+ followers, and publishes partnerships@branchbasics.com specifically for affiliate/creator partnership questions. The permanent sent ledger was checked immediately before staging and contained no Branch Basics/branchbasics.com key, and the full researched inventory contained mentions of Branch Basics in other creators' sponsor histories but no Branch Basics parent lead record.",
+    "paid_product_placement": true,
+    "sponsor_category": "Home",
+    "sponsor_subcategory": "Household Cleaning Products",
+    "contact_name": "",
+    "contact_title": "Creator / Affiliate Partnerships",
+    "contact_email": "partnerships@branchbasics.com",
+    "email_type": "Public work email",
+    "contact_source": "https://branchbasics.com/pages/partnerships",
+    "contact_source_url": "https://branchbasics.com/pages/partnerships",
+    "signals": [
+      "Recent August 2026 creator sponsorship",
+      "~128K-subscriber creator",
+      "official creator affiliate program",
+      "qualified partnerships email",
+      "physical consumer product"
+    ],
+    "date_found": "2026-08-22"
   }
 ]
