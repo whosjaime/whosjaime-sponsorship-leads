@@ -1,1 +1,33 @@
-[]
+[
+  {
+    "brand_name": "JustBats",
+    "brand_domain": "justbats.com",
+    "source_platform": "YouTube",
+    "creator_name": "Snap Softball by Coach Dan Blewett",
+    "creator_url": "https://www.youtube.com/channel/UCcLPfvQesLM6lVrBkZ14kng",
+    "creator_channel_id": "UCcLPfvQesLM6lVrBkZ14kng",
+    "creator_subscribers": 0,
+    "creator_genre": "Sports / Softball",
+    "creator_tags": ["sports", "softball", "baseball", "sporting goods", "coaching"],
+    "video_id": "vLuUhH8Wf5A",
+    "video_url": "https://www.youtube.com/watch?v=vLuUhH8Wf5A",
+    "video_title": "Easton Hype Fire Slow Pitch Bats Are Very Average",
+    "sponsored_date": "2026-06-23",
+    "evidence": "SponsorRadar identifies JustBats as the sponsor of Snap Softball by Coach Dan Blewett's June 23, 2026 English-language YouTube video, whose sponsorship evidence explicitly thanks JustBats. JustBats currently operates an official affiliate program for eligible influencers with dedicated in-house affiliate management and publishes affiliates@justbats.com for program assistance.",
+    "paid_product_placement": true,
+    "brand_partner_channel_id": "",
+    "sponsor_category": "Sports / Lifestyle",
+    "sponsor_subcategory": "Sporting Goods",
+    "contact_name": "",
+    "contact_title": "",
+    "contact_email": "affiliates@justbats.com",
+    "email_type": "Public work email",
+    "contact_source": "https://www.justbats.com/affiliates/",
+    "lead_score": 0,
+    "lead_temperature": "",
+    "sponsorship_key": "",
+    "brand_key": "",
+    "signals": ["Daily researched sponsorship", "verified public YouTube sponsorship evidence"],
+    "date_found": "2026-08-22"
+  }
+]
