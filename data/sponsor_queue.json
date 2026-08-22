@@ -1,1 +1,43 @@
-[]
+[
+  {
+    "brand_name": "RENPHO",
+    "brand_domain": "renpho.com",
+    "source_platform": "YouTube",
+    "creator_name": "The Athlete Special",
+    "creator_url": "https://www.youtube.com/channel/UCTVjyeSlm3sR3N1fx-NI-Kw",
+    "creator_channel_id": "UCTVjyeSlm3sR3N1fx-NI-Kw",
+    "creator_subscribers": 144000,
+    "creator_genre": "Health & Fitness / Running",
+    "creator_tags": [
+      "health",
+      "fitness",
+      "running",
+      "wellness",
+      "lifestyle",
+      "physical consumer tech"
+    ],
+    "video_id": "dCdgGbGxefE",
+    "video_url": "https://www.youtube.com/watch?v=dCdgGbGxefE",
+    "video_title": "Man Vs Marathon: 100 Mile Weeks Changed Me",
+    "sponsored_date": "2026-08-09",
+    "evidence": "SponsorRadar identifies RENPHO as the sponsor of The Athlete Special's August 9, 2026 English-language YouTube video. The channel has about 144K subscribers. RENPHO sells tangible wellness/fitness hardware and its official Creator Program explicitly recruits YouTube, TikTok and Instagram creators for collabs and campaigns and publishes creators@renpho.com for creator-program inquiries.",
+    "paid_product_placement": true,
+    "brand_partner_channel_id": "",
+    "sponsor_category": "Consumer Tech",
+    "sponsor_subcategory": "Skincare",
+    "contact_name": "",
+    "contact_title": "Creator Program",
+    "contact_email": "creators@renpho.com",
+    "email_type": "Public work email",
+    "contact_source": "https://renpho.com/pages/creator-program",
+    "lead_score": 100,
+    "lead_temperature": "Very Hot",
+    "sponsorship_key": "youtube:dcdggbgxefe:renpho.com",
+    "brand_key": "domain:renpho.com",
+    "signals": [
+      "Daily researched sponsorship",
+      "verified public YouTube sponsorship evidence"
+    ],
+    "date_found": "2026-08-22"
+  }
+]
