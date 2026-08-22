@@ -3183,5 +3183,33 @@
     "contact_source_url": "https://www.myvitamins.ie/c/customer-service/affiliate-programme/",
     "sponsor_category": "Health & Wellness",
     "sponsor_subcategory": "Vitamins & Supplements"
+  },
+  {
+    "brand_name": "Cowboy Colostrum",
+    "brand_domain": "cowboycolostrum.com",
+    "source_platform": "YouTube",
+    "creator_name": "Hannah's Happy Home",
+    "creator_url": "https://www.youtube.com/@hannahshappyhome",
+    "creator_channel_id": "",
+    "creator_genre": "DIY / Home / Lifestyle",
+    "creator_tags": [
+      "home",
+      "lifestyle",
+      "wellness",
+      "family",
+      "organization"
+    ],
+    "video_id": "ZWjVwEJSjvE",
+    "video_url": "https://www.youtube.com/watch?v=ZWjVwEJSjvE",
+    "video_title": "Home Organization Ideas!!😍 Clean & Organize With Me | Decluttering And Organizing Motivation",
+    "sponsored_date": "2026-08-04",
+    "evidence": "SponsorRadar identifies Cowboy Colostrum as the sponsor of Hannah's Happy Home's August 4, 2026 English-language YouTube video. Cowboy Colostrum currently operates an active creator affiliate program on Awin with creator discounts and commissions, and the program publicly directs questions to taylor@cowboycolostrum.com.",
+    "paid_product_placement": true,
+    "sponsor_category": "Health & Wellness",
+    "sponsor_subcategory": "Wellness Consumable",
+    "contact_name": "Taylor",
+    "contact_title": "Affiliate Program Contact",
+    "contact_email": "taylor@cowboycolostrum.com",
+    "contact_source_url": "https://ui.awin.com/merchant-profile/122872"
   }
 ]
