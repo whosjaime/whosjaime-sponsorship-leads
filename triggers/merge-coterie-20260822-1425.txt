@@ -1,0 +1,1 @@
+Trigger safe merge for verified Coterie sponsor candidate.
