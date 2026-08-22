@@ -3211,5 +3211,43 @@
     "contact_title": "Affiliate Program Contact",
     "contact_email": "taylor@cowboycolostrum.com",
     "contact_source_url": "https://ui.awin.com/merchant-profile/122872"
+  },
+  {
+    "brand_name": "PHOIBOS",
+    "brand_domain": "phoiboswatch.com",
+    "source_platform": "YouTube",
+    "creator_name": "Just One More Watch",
+    "creator_url": "https://www.youtube.com/@justonemorewatch",
+    "creator_channel_id": "",
+    "creator_subscribers": 365000,
+    "creator_genre": "Lifestyle / Watches / Fashion",
+    "creator_tags": [
+      "lifestyle",
+      "watches",
+      "fashion",
+      "accessories",
+      "reviews"
+    ],
+    "video_id": "QZmUZY4BeP4",
+    "video_url": "https://www.youtube.com/watch?v=QZmUZY4BeP4",
+    "video_title": "I Bought 100 Watches On Aliexpress. Here's What I Learned.",
+    "sponsored_date": "2026-08-11",
+    "evidence": "SponsorRadar records PHOIBOS sponsoring Just One More Watch's August 11, 2026 English-language YouTube video and shows additional PHOIBOS sponsorships on the same channel on August 7 and August 5, demonstrating active repeated creator spend. PHOIBOS's current affiliate program explicitly invites ambassadors/content creators, supports YouTube/TikTok/Instagram applications, and publishes ethan@phoiboswatch.com as the affiliate program contact.",
+    "paid_product_placement": true,
+    "sponsor_category": "Fashion",
+    "sponsor_subcategory": "Watches / Accessories",
+    "contact_name": "Ethan",
+    "contact_title": "Affiliate Program Contact",
+    "contact_email": "ethan@phoiboswatch.com",
+    "email_type": "Named public work email",
+    "contact_source": "https://www.affiliatly.com/af-1029793/affiliate.panel?mode=register",
+    "lead_score": 96,
+    "lead_temperature": "Very Hot",
+    "signals": [
+      "Repeated August 2026 YouTube sponsorships",
+      "Active affiliate/ambassador program",
+      "Named public affiliate contact"
+    ],
+    "date_found": "2026-08-22"
   }
 ]
