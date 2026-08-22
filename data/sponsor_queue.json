@@ -1,1 +1,45 @@
-[]
+[
+  {
+    "brand_name": "XGIMI",
+    "brand_domain": "xgimi.com",
+    "source_platform": "YouTube",
+    "creator_name": "Becca Farsace",
+    "creator_url": "https://www.youtube.com/@BeccaFarsace",
+    "creator_channel_id": "",
+    "creator_subscribers": 0,
+    "creator_genre": "Physical Consumer Tech / Lifestyle",
+    "creator_tags": [
+      "physical consumer tech",
+      "projectors",
+      "cameras",
+      "creator gear",
+      "lifestyle",
+      "tech reviews"
+    ],
+    "video_id": "8S7t7Rs4i9c",
+    "video_url": "https://www.youtube.com/watch?v=8S7t7Rs4i9c",
+    "video_title": "The Insta360 Luna Ultra review they didn't pay for",
+    "sponsored_date": "2026-07-07",
+    "evidence": "SponsorRadar identifies XGIMI as the sponsor of Becca Farsace's July 7, 2026 English-language YouTube video, with the disclosure 'thank you, @XGIMITech for sponsoring this video.' XGIMI makes tangible smart projectors. Its official Affiliate Program is open to influencers, reviewers and content creators, explicitly welcomes deeper collaborations, and publishes affiliate@xgimi.com for the program.",
+    "paid_product_placement": true,
+    "brand_partner_channel_id": "",
+    "sponsor_category": "Physical Consumer Tech",
+    "sponsor_subcategory": "Projectors / Home Entertainment Hardware",
+    "contact_name": "",
+    "contact_title": "",
+    "contact_email": "affiliate@xgimi.com",
+    "email_type": "Public work email",
+    "contact_source": "https://us.xgimi.com/pages/affiliate-guide",
+    "lead_score": 85,
+    "lead_temperature": "Hot",
+    "sponsorship_key": "youtube:8S7t7Rs4i9c:xgimi.com",
+    "brand_key": "xgimi",
+    "signals": [
+      "Daily researched sponsorship",
+      "verified public YouTube sponsorship evidence",
+      "physical consumer hardware",
+      "verified public work email"
+    ],
+    "date_found": "2026-08-21"
+  }
+]
