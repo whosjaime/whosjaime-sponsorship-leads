@@ -1,0 +1,1 @@
+merge verified discovery inventory
