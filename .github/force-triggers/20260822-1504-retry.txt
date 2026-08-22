@@ -1,0 +1,1 @@
+trigger sponsor delivery retry 2026-08-22 15:04 America/Toronto
