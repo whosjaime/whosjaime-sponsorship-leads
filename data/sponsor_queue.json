@@ -1,1 +1,30 @@
-[]
+[
+  {
+    "brand_name": "True Nutrition",
+    "brand_domain": "truenutrition.com",
+    "source_platform": "YouTube",
+    "creator_name": "The Athlete Special",
+    "creator_url": "https://www.youtube.com/@theathletespecial",
+    "creator_channel_id": "",
+    "creator_subscribers": 144000,
+    "creator_genre": "Health & Fitness / Running",
+    "creator_tags": ["health", "fitness", "running", "nutrition", "wellness"],
+    "video_id": "XQQei3joy-s",
+    "video_url": "https://www.youtube.com/watch?v=XQQei3joy-s",
+    "video_title": "Man Vs Marathon: Taking On My Biggest 10k Yet",
+    "sponsored_date": "2026-07-23",
+    "evidence": "SponsorRadar identifies True Nutrition as the sponsor of The Athlete Special's July 23, 2026 English-language YouTube video. The channel has about 144K subscribers. True Nutrition's official affiliate program actively recruits health and fitness creators and publishes affiliate@truenutrition.com for affiliate-team support and custom creator discount codes.",
+    "paid_product_placement": true,
+    "sponsor_category": "Health & Wellness",
+    "sponsor_subcategory": "Sports Nutrition",
+    "contact_title": "Affiliate Team",
+    "contact_email": "affiliate@truenutrition.com",
+    "email_type": "Public affiliate partnership email",
+    "contact_source": "https://truenutrition.com/en-ca/pages/affiliate-program",
+    "contact_source_url": "https://truenutrition.com/en-ca/pages/affiliate-program",
+    "lead_score": 100,
+    "lead_temperature": "Very Hot",
+    "signals": ["Recent paid YouTube sponsorship", "Official active affiliate program", "Dedicated affiliate outreach email"],
+    "date_found": "2026-08-22"
+  }
+]
