@@ -1,1 +1,33 @@
-[]
+[
+  {
+    "brand_name": "Sundays for Dogs",
+    "brand_domain": "sundaysfordogs.com",
+    "source_platform": "YouTube",
+    "creator_name": "RUDAN BROTHERS",
+    "creator_url": "https://www.youtube.com/@rudanbrothers",
+    "creator_channel_id": "UCYKM1RwsI6nhQrWPbP5MKCA",
+    "creator_subscribers": 0,
+    "creator_genre": "Lifestyle / Home",
+    "creator_tags": ["pet", "dogs", "lifestyle", "home renovation", "vlog"],
+    "video_id": "XthcjFl1_S0",
+    "video_url": "https://www.youtube.com/watch?v=XthcjFl1_S0",
+    "video_title": "Asking Strangers To Renovate Their Broken House.. For Free",
+    "sponsored_date": "2026-07-03",
+    "evidence": "SponsorRadar records Sundays for Dogs sponsoring RUDAN BROTHERS' July 3, 2026 English-language YouTube video with a creator-specific Sundays link and code. Sundays also currently operates an Ambassador Program with partner links, commissions, creator-content requirements and influencer guidance; its Awin affiliate profile publicly directs partnership inquiries to affiliates@sundaysfordogs.com.",
+    "paid_product_placement": true,
+    "brand_partner_channel_id": "",
+    "sponsor_category": "Pet",
+    "sponsor_subcategory": "Dog Food",
+    "contact_name": "",
+    "contact_title": "Affiliate Partnerships",
+    "contact_email": "affiliates@sundaysfordogs.com",
+    "email_type": "Public work email",
+    "contact_source": "https://ui.awin.com/merchant-profile/91523?setLocale=en_GB",
+    "lead_score": 93,
+    "lead_temperature": "Very Hot",
+    "sponsorship_key": "",
+    "brand_key": "",
+    "signals": ["Daily researched sponsorship", "verified public YouTube sponsorship evidence"],
+    "date_found": "2026-08-21"
+  }
+]
