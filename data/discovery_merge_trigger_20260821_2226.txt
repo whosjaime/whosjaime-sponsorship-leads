@@ -1,0 +1,1 @@
+Trigger reliable discovery inventory merge for verified Vego Garden candidate.
