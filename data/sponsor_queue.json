@@ -1,1 +1,33 @@
-[]
+[
+  {
+    "brand_name": "boohooMAN",
+    "brand_domain": "boohooman.com",
+    "source_platform": "YouTube",
+    "creator_name": "TWOSYNC",
+    "creator_url": "https://www.youtube.com/@TWOSYNC",
+    "creator_channel_id": "",
+    "creator_subscribers": 1600000,
+    "creator_genre": "Gaming / Entertainment",
+    "creator_tags": ["gaming", "entertainment", "football", "EA FC", "fashion", "menswear"],
+    "video_id": "Qqt0Cw8PWzQ",
+    "video_url": "https://youtube.com/watch?v=Qqt0Cw8PWzQ",
+    "video_title": "INSANE PACKS BEFORE HIS CONFESSION... (FC 26 CO OP RTG)",
+    "sponsored_date": "2026-08-14",
+    "evidence": "SponsorRadar identifies boohooMAN sponsoring TWOSYNC's August 14, 2026 English-language YouTube video with a creator-specific boohooMAN link and TWOSYNC discount code. boohooMAN is a physical fashion/menswear brand. Its current US & Canada Awin affiliate program publishes uk-boohooman@awin.com specifically as the boohooMAN affiliate-team contact.",
+    "paid_product_placement": true,
+    "brand_partner_channel_id": "",
+    "sponsor_category": "Fashion",
+    "sponsor_subcategory": "Men's Fashion / Streetwear",
+    "contact_name": "boohooMAN Affiliate Team",
+    "contact_title": "Affiliate Partnerships",
+    "contact_email": "uk-boohooman@awin.com",
+    "email_type": "affiliate",
+    "contact_source": "https://ui.awin.com/merchant-profile/60701",
+    "lead_score": 90,
+    "lead_temperature": "Hot",
+    "sponsorship_key": "youtube:Qqt0Cw8PWzQ:boohooman",
+    "brand_key": "brand:boohooman",
+    "signals": ["recent_creator_sponsorship", "qualified_affiliate_contact", "physical_fashion_brand"],
+    "date_found": "2026-08-22"
+  }
+]
