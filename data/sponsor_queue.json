@@ -1,1 +1,33 @@
-[]
+[
+  {
+    "brand_name": "KIKAGoods",
+    "brand_domain": "kikagoods.com",
+    "source_platform": "YouTube",
+    "creator_name": "Hazel Soda",
+    "creator_url": "https://www.youtube.com/@hazelsoda",
+    "creator_channel_id": "",
+    "creator_subscribers": 0,
+    "creator_genre": "Collectibles / Toys / Lifestyle",
+    "creator_tags": ["toys", "collectibles", "blind boxes", "figures", "lifestyle", "unboxing"],
+    "video_id": "5VTejL3UBCY",
+    "video_url": "https://youtube.com/watch?v=5VTejL3UBCY",
+    "video_title": "My FAVE Dolls! Tinyfox Jinku Violet Unboxing (Kikagoods)",
+    "sponsored_date": "2026-07-28",
+    "evidence": "SponsorRadar records KIKAGoods sponsoring Hazel Soda's July 28, 2026 English-language YouTube video and shows repeated KIKAGoods creator spend on the channel. KIKAGoods sells physical collectible toys, blind boxes and figures. Its official Influencer Cooperation page explicitly recruits YouTube, Instagram, TikTok and other creators, while its official business cooperation page publishes marketing@kikagoods.com for marketing and branding partnerships.",
+    "paid_product_placement": true,
+    "brand_partner_channel_id": "",
+    "sponsor_category": "Entertainment",
+    "sponsor_subcategory": "Collectibles / Toys",
+    "contact_name": "",
+    "contact_title": "Marketing / Creator Partnerships",
+    "contact_email": "marketing@kikagoods.com",
+    "email_type": "Public work email",
+    "contact_source": "https://www.kikagoods.com/pages/business-cooperation",
+    "lead_score": 95,
+    "lead_temperature": "Very Hot",
+    "sponsorship_key": "youtube:5vtejl3ubcy:kikagoods",
+    "brand_key": "brand:kikagoods",
+    "signals": ["Recent creator sponsorship", "Repeated creator spend", "Official influencer cooperation program", "Qualified marketing contact"],
+    "date_found": "2026-08-22"
+  }
+]
