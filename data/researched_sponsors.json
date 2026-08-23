@@ -4271,5 +4271,81 @@
       "Qualified official influencer inbox",
       "Physical home product"
     ]
+  },
+  {
+    "brand_name": "Callsun",
+    "brand_domain": "callsunsolar.com",
+    "source_platform": "YouTube",
+    "creator_name": "JOHNNY'S WEEKENDS-Power Your World! Solar & More!",
+    "creator_url": "https://www.youtube.com/@johnnysweekends",
+    "creator_channel_id": "",
+    "creator_subscribers": 75600,
+    "creator_genre": "Technology / Home / Outdoors",
+    "creator_tags": [
+      "solar",
+      "home",
+      "outdoors",
+      "RV",
+      "physical tech",
+      "small creator"
+    ],
+    "video_id": "BiEmZMlfRLo",
+    "video_url": "https://www.youtube.com/watch?v=BiEmZMlfRLo",
+    "video_title": "CallSuns New Higher Voltage Solar Panel- Most Universal?",
+    "sponsored_date": "2026-08-14",
+    "evidence": "SponsorRadar records Callsun sponsoring JOHNNY'S WEEKENDS-Power Your World! Solar & More! on August 14, 2026. The US creator has about 75.6K subscribers, and SponsorRadar also records another Callsun sponsorship on July 19, 2026, showing repeat recent creator spend. Callsun sells physical solar hardware. Its official contact page explicitly lists marketing@callsunsolar.com and marketing@callsunenergy.com for Influencer & PR Collabs (Sponsorships/Media).",
+    "paid_product_placement": true,
+    "sponsor_category": "Physical Consumer Tech",
+    "sponsor_subcategory": "Solar Panels / Off-Grid Power",
+    "contact_name": "",
+    "contact_title": "Influencer & Sponsorship Marketing",
+    "contact_email": "marketing@callsunsolar.com",
+    "email_type": "Public work email",
+    "contact_source": "https://callsunsolar.com/pages/contact",
+    "contact_source_url": "https://callsunsolar.com/pages/contact",
+    "signals": [
+      "Recent small-creator sponsorship",
+      "Repeat creator spend",
+      "Physical consumer hardware",
+      "Official sponsorship marketing contact"
+    ]
+  },
+  {
+    "brand_name": "ZOUPW",
+    "brand_domain": "zoupw.com",
+    "source_platform": "YouTube",
+    "creator_name": "JOHNNY'S WEEKENDS-Power Your World! Solar & More!",
+    "creator_url": "https://www.youtube.com/@johnnysweekends",
+    "creator_channel_id": "",
+    "creator_subscribers": 75600,
+    "creator_genre": "Technology / Home / Outdoors",
+    "creator_tags": [
+      "solar",
+      "home",
+      "outdoors",
+      "RV",
+      "physical tech",
+      "small creator"
+    ],
+    "video_id": "pLBvS_Q2Euo",
+    "video_url": "https://www.youtube.com/watch?v=pLBvS_Q2Euo",
+    "video_title": "New Light Weight Compact 230 Watt BiFacial Solar Panel- ZOUPW",
+    "sponsored_date": "2026-07-10",
+    "evidence": "SponsorRadar records ZOUPW sponsoring JOHNNY'S WEEKENDS-Power Your World! Solar & More! on July 10, 2026. The US creator has about 75.6K subscribers. ZOUPW sells tangible solar panels and portable-power hardware and currently runs an official affiliate program for social-platform promotion. Its official contact page explicitly lists marketing@zoupw.com for Influencer & PR Collabs (Sponsorships/Media).",
+    "paid_product_placement": true,
+    "sponsor_category": "Physical Consumer Tech",
+    "sponsor_subcategory": "Solar Panels / Portable Power",
+    "contact_name": "",
+    "contact_title": "Influencer & Sponsorship Marketing",
+    "contact_email": "marketing@zoupw.com",
+    "email_type": "Public work email",
+    "contact_source": "https://zoupw.com/pages/contact",
+    "contact_source_url": "https://zoupw.com/pages/contact",
+    "signals": [
+      "Recent small-creator sponsorship",
+      "Physical consumer hardware",
+      "Official affiliate program",
+      "Official sponsorship marketing contact"
+    ]
   }
 ]
