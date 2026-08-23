@@ -28,11 +28,19 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
+      - run: pip install requests
       - name: Merge verified candidates without losing existing inventory
+        env:
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
         run: |
           python - <<'PY'
           import json
+          import os
+          import re
+          from difflib import SequenceMatcher
           from pathlib import Path
+
+          import requests
 
           researched_path = Path('data/researched_sponsors.json')
           batch_path = Path('data/discovery_candidate_batch.json')
@@ -45,12 +53,74 @@ jobs:
           def norm(value):
               return ''.join(ch for ch in (value or '').lower() if ch.isalnum())
 
+          def norm_title(value):
+              return re.sub(r'[^a-z0-9]+', ' ', (value or '').lower()).strip()
+
+          def resolve_youtube(lead):
+              platform = (lead.get('source_platform') or 'YouTube').strip().lower()
+              if platform != 'youtube':
+                  return lead
+              video_id = (lead.get('video_id') or '').strip()
+              video_url = (lead.get('video_url') or '').strip()
+              if video_id and ('youtube.com/watch' in video_url or 'youtu.be/' in video_url):
+                  return lead
+              api_key = os.environ.get('YOUTUBE_API_KEY', '').strip()
+              title = (lead.get('video_title') or '').strip()
+              creator = (lead.get('creator_name') or '').strip()
+              if not api_key or not title:
+                  print(f"SKIP unresolved YouTube candidate: {lead.get('brand_name')} (missing API key/title)")
+                  return None
+              query = f'{title} {creator}'.strip()
+              response = requests.get(
+                  'https://www.googleapis.com/youtube/v3/search',
+                  params={
+                      'part': 'snippet',
+                      'type': 'video',
+                      'maxResults': 10,
+                      'order': 'relevance',
+                      'q': query,
+                      'key': api_key,
+                  },
+                  timeout=30,
+              )
+              if response.status_code >= 400:
+                  print(f"SKIP unresolved YouTube candidate: {lead.get('brand_name')} (API {response.status_code})")
+                  return None
+              target = norm_title(title)
+              best = None
+              best_score = 0.0
+              for item in response.json().get('items', []):
+                  candidate_title = item.get('snippet', {}).get('title', '')
+                  score = SequenceMatcher(None, target, norm_title(candidate_title)).ratio()
+                  channel_title = item.get('snippet', {}).get('channelTitle', '')
+                  if creator and norm(creator) and norm(creator) in norm(channel_title):
+                      score += 0.15
+                  if score > best_score:
+                      best = item
+                      best_score = score
+              if not best or best_score < 0.72:
+                  print(f"SKIP unresolved YouTube candidate: {lead.get('brand_name')} (best score {best_score:.2f})")
+                  return None
+              resolved_id = best.get('id', {}).get('videoId', '')
+              if not resolved_id:
+                  return None
+              snippet = best.get('snippet', {})
+              lead['video_id'] = resolved_id
+              lead['video_url'] = f'https://www.youtube.com/watch?v={resolved_id}'
+              lead['creator_channel_id'] = lead.get('creator_channel_id') or snippet.get('channelId', '')
+              lead['creator_name'] = lead.get('creator_name') or snippet.get('channelTitle', '')
+              print(f"RESOLVED: {lead.get('brand_name')} -> {resolved_id} ({best_score:.2f})")
+              return lead
+
           existing_brands = {norm(x.get('brand_name')) for x in researched}
           existing_domains = {norm(x.get('brand_domain')) for x in researched}
           sent_norm = {norm(x) for x in sent}
 
           added = []
-          for lead in batch:
+          for raw_lead in batch:
+              lead = resolve_youtube(dict(raw_lead))
+              if not lead:
+                  continue
               brand = norm(lead.get('brand_name'))
               domain = norm(lead.get('brand_domain'))
               if not brand or not domain:
