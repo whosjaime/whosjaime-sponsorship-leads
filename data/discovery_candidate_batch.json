@@ -1,1 +1,45 @@
-[]
+[
+  {
+    "brand_name": "GEEKOM",
+    "brand_domain": "geekompc.com",
+    "source_platform": "YouTube",
+    "creator_name": "NoodleNick",
+    "creator_url": "https://www.youtube.com/@noodlenick",
+    "creator_channel_id": "",
+    "creator_subscribers": 1140000,
+    "creator_genre": "Technology / Gaming",
+    "creator_tags": [
+      "physical consumer tech",
+      "gaming",
+      "PC hardware",
+      "mini PC",
+      "laptops",
+      "tech reviews"
+    ],
+    "video_id": "mOIT91ohDWM",
+    "video_url": "https://www.youtube.com/watch?v=mOIT91ohDWM",
+    "video_title": "This $800 Laptop Has Insane Battery Life, And Plays Almost Any Game.",
+    "sponsored_date": "2026-08-09",
+    "evidence": "SponsorRadar records GEEKOM sponsoring NoodleNick's August 9, 2026 English-language YouTube video. GEEKOM has 16 tracked creator sponsorships, with 64% of its last-12-month deals going to channels in the 50K-250K subscriber tier, including August 2026 deals with The Stock Pot (~129K), EEVblog2 (~115K), and iVoltex (~192K). GEEKOM sells tangible mini PCs and laptops. Its official affiliate/cooperation pages publish affiliate@geekom.tw specifically for the affiliate program.",
+    "paid_product_placement": true,
+    "brand_partner_channel_id": "",
+    "sponsor_category": "Consumer Tech",
+    "sponsor_subcategory": "Mini PCs / Laptops",
+    "contact_name": "GEEKOM Affiliate Team",
+    "contact_title": "Affiliate / Creator Partnerships",
+    "contact_email": "affiliate@geekom.tw",
+    "email_type": "Qualified affiliate partnership email",
+    "contact_source": "https://www.geekom.fr/contact-us/",
+    "contact_source_url": "https://www.geekom.fr/contact-us/",
+    "lead_score": 96,
+    "lead_temperature": "Very Hot",
+    "signals": [
+      "Recent August 2026 paid creator sponsorship",
+      "Majority of recent deals with 50K-250K creators",
+      "Official affiliate program for creators/reviewers",
+      "Verified dedicated affiliate contact",
+      "Physical consumer hardware"
+    ],
+    "date_found": "2026-08-23"
+  }
+]
