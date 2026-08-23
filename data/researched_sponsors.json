@@ -3809,5 +3809,47 @@
       "Maker/fabrication fit"
     ],
     "date_found": "2026-08-22"
+  },
+  {
+    "brand_name": "Hex Gaming",
+    "brand_domain": "hexgaming.com",
+    "source_platform": "YouTube",
+    "creator_name": "Crazymrpipz",
+    "creator_url": "https://www.youtube.com/@crazymrpipz",
+    "creator_channel_id": "",
+    "creator_subscribers": 91900,
+    "creator_genre": "Gaming",
+    "creator_tags": [
+      "gaming",
+      "controllers",
+      "esports",
+      "PC/console gaming",
+      "streaming",
+      "physical consumer tech"
+    ],
+    "video_id": "Q2PV2OVUQAQ",
+    "video_url": "https://www.youtube.com/watch?v=Q2PV2OVUQAQ",
+    "video_title": "Mistfall Hunter - MOST BROKEN SORCERER BUILD DESTROYS EVERYTHING - Best Sorcerer build guide",
+    "sponsored_date": "2026-08-15",
+    "evidence": "SponsorRadar identifies Hex Gaming sponsoring Crazymrpipz's August 15, 2026 English-language YouTube video and tracks 74 Hex Gaming sponsorships with this creator. Crazymrpipz has approximately 91.9K subscribers, making this a strong small/mid-size roster-fit signal. Hex Gaming sells tangible custom gaming controllers. Its official affiliate program actively recruits gamers/creators and publishes sns@hexgaming.com and affiliate@hexgaming.com specifically for Affiliate Program or partnership questions.",
+    "paid_product_placement": true,
+    "brand_partner_channel_id": "",
+    "sponsor_category": "Gaming",
+    "sponsor_subcategory": "Gaming Controllers / Physical Hardware",
+    "contact_name": "",
+    "contact_title": "Affiliate & Partnerships",
+    "contact_email": "affiliate@hexgaming.com",
+    "email_type": "Public affiliate/partnership email",
+    "contact_source": "https://www.hexgaming.com/pages/affiliate",
+    "lead_score": 100,
+    "lead_temperature": "Very Hot",
+    "signals": [
+      "Recent paid YouTube sponsorship",
+      "74 repeat deals with ~92K creator",
+      "Official creator affiliate program",
+      "Dedicated affiliate/partnership contact",
+      "Physical gaming hardware"
+    ],
+    "date_found": "2026-08-22"
   }
 ]
