@@ -4046,5 +4046,49 @@
       "Physical consumer product"
     ],
     "date_found": "2026-08-23"
+  },
+  {
+    "brand_name": "AFERIY",
+    "brand_domain": "aferiy.com",
+    "source_platform": "YouTube",
+    "creator_name": "My PlayHouse (Morten Hjorth)",
+    "creator_url": "https://www.youtube.com/@MyPlayHouse",
+    "creator_channel_id": "",
+    "creator_subscribers": 91000,
+    "creator_genre": "DIY & Crafts",
+    "creator_tags": [
+      "DIY",
+      "home",
+      "off-grid",
+      "solar",
+      "outdoor",
+      "physical tech"
+    ],
+    "video_id": "XAyyI_4e_8E",
+    "video_url": "https://www.youtube.com/watch?v=XAyyI_4e_8E",
+    "video_title": "AFERIY P280 2800Watt Power Station - IT DID EVERYTHING - 1599",
+    "sponsored_date": "2026-08-11",
+    "evidence": "SponsorRadar records AFERIY sponsoring My PlayHouse (Morten Hjorth)'s English-language YouTube video on August 11, 2026. The channel has approximately 91K subscribers, and SponsorRadar tracks 38 AFERIY sponsorships across 29 creators with most recent-year deals concentrated in the 50K-250K subscriber range. AFERIY sells physical portable power stations and solar hardware. AFERIY's official site publishes partnership@aferiy.com specifically for YouTube creators, influencers, media reviews, affiliate campaigns, and brand collaborations.",
+    "paid_product_placement": true,
+    "brand_partner_channel_id": "",
+    "sponsor_category": "Consumer Tech",
+    "sponsor_subcategory": "Portable Power / Solar Hardware",
+    "contact_name": "AFERIY Creator Partnerships",
+    "contact_title": "Creator Partnerships",
+    "contact_email": "partnership@aferiy.com",
+    "email_type": "Qualified creator partnerships email",
+    "contact_source": "https://www.aferiy.com/pages/video",
+    "contact_source_url": "https://www.aferiy.com/pages/video",
+    "lead_score": 100,
+    "lead_temperature": "Very Hot",
+    "signals": [
+      "August 11, 2026 paid creator sponsorship",
+      "~91K-subscriber creator",
+      "38 tracked sponsorships across 29 creators",
+      "Most recent-year deals favor 50K-250K channels",
+      "Official creator partnerships email",
+      "Physical consumer hardware"
+    ],
+    "date_found": "2026-08-23"
   }
 ]
