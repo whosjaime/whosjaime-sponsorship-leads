@@ -35,11 +35,11 @@
     "creator_subscribers": 148000,
     "creator_genre": "DIY / Solar / Home",
     "creator_tags": ["DIY", "solar", "home", "off-grid", "physical consumer tech", "renewable energy"],
-    "video_id": "",
-    "video_url": "",
-    "video_title": "Is Pecron's F500 Actually Better Than DIY Solar? Here's the Truth",
+    "video_id": "fAexsAm5NNI",
+    "video_url": "https://www.youtube.com/watch?v=fAexsAm5NNI",
+    "video_title": "Is Pecron's F5000LFP Actually Better Than DIY Solar? Here's the Truth",
     "sponsored_date": "2026-08-08",
-    "evidence": "SponsorRadar records PECRON sponsoring Projects With Everyday Dave's August 8, 2026 English-language YouTube video. The channel has about 148K subscribers. SponsorRadar tracks 75 PECRON sponsorships across 17 creators, including several channels around 76K-149K subscribers, with deals as recent as August 14, 2026. PECRON sells physical portable power stations, batteries and solar-generator hardware. PECRON's official Ambassador/Affiliate Program explicitly recruits social-media influencers and content creators and publishes herman@pecron.com for deeper business collaboration.",
+    "evidence": "SponsorRadar records PECRON sponsoring Projects With Everyday Dave's August 8, 2026 English-language YouTube video. The creator's own Projects With Everyday Dave site links the PECRON F5000LFP review to exact YouTube video fAexsAm5NNI and publishes the PECRON discount code DAVEF5000LFP. The channel has about 148K subscribers. SponsorRadar tracks 75 PECRON sponsorships across 17 creators, including several channels around 76K-149K subscribers, with deals as recent as August 14, 2026. PECRON sells physical portable power stations, batteries and solar-generator hardware. PECRON's official Ambassador/Affiliate Program explicitly recruits social-media influencers and content creators and publishes herman@pecron.com for deeper business collaboration.",
     "paid_product_placement": true,
     "sponsor_category": "Physical Consumer Tech",
     "sponsor_subcategory": "Portable Power / Solar Hardware",
@@ -49,6 +49,6 @@
     "email_type": "Named public work email",
     "contact_source": "https://www.pecron.com/pages/affiliate-program",
     "contact_source_url": "https://www.pecron.com/pages/affiliate-program",
-    "signals": ["Recent creator sponsorship", "Active creator ambassador program", "Qualified business collaboration email", "Physical consumer hardware"]
+    "signals": ["Recent creator sponsorship", "Exact creator-side YouTube evidence", "Active creator ambassador program", "Qualified business collaboration email", "Physical consumer hardware"]
   }
 ]
