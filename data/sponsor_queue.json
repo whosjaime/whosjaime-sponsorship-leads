@@ -1,1 +1,44 @@
-[]
+[
+  {
+    "brand_name": "ThermoWorks",
+    "brand_domain": "thermoworks.com",
+    "source_platform": "YouTube",
+    "creator_name": "2 Krazy Ketos",
+    "creator_url": "https://www.youtube.com/@2krazyketos",
+    "creator_channel_id": "UCQ5Dh6Wuvt4b9BFYXigWKvA",
+    "creator_subscribers": 78000,
+    "creator_genre": "Food / Wellness / Lifestyle",
+    "creator_tags": [
+      "food",
+      "cooking",
+      "wellness",
+      "lifestyle",
+      "kitchen tools"
+    ],
+    "video_id": "THMtfq5gnfc",
+    "video_url": "https://www.youtube.com/watch?v=THMtfq5gnfc",
+    "video_title": "2kk Live: Answering your Keto/Carnivore questions",
+    "sponsored_date": "2026-08-14",
+    "evidence": "SponsorRadar identifies ThermoWorks promotion/sponsorship activity on 2 Krazy Ketos' August 14, 2026 English-language YouTube video. SponsorRadar tracks 106 ThermoWorks deals across 11 creators, including 2 Krazy Ketos (~78K subscribers), demonstrating active spend with a small/mid-size creator. ThermoWorks sells tangible precision kitchen thermometers and temperature hardware. ThermoWorks' official Affiliate Program explicitly recruits creators, and its official About Us page identifies Kyle Halvorson as Marketing Manager; an official ThermoWorks industry-partner page publishes his work email kyle.halvorson@thermoworks.com.",
+    "paid_product_placement": true,
+    "brand_partner_channel_id": "",
+    "sponsor_category": "Food & Beverage",
+    "sponsor_subcategory": "",
+    "contact_name": "Kyle Halvorson",
+    "contact_title": "Marketing Manager",
+    "contact_email": "kyle.halvorson@thermoworks.com",
+    "email_type": "Named public work email",
+    "contact_source": "https://www.thermoworks.com/pages/industry-discount",
+    "contact_source_url": "",
+    "lead_score": 100,
+    "lead_temperature": "Very Hot",
+    "sponsorship_key": "youtube:thmtfq5gnfc:thermoworks.com",
+    "brand_key": "domain:thermoworks.com",
+    "signals": [
+      "Daily researched sponsorship",
+      "verified public YouTube sponsorship evidence",
+      "verified named public work email"
+    ],
+    "date_found": "2026-08-23"
+  }
+]
