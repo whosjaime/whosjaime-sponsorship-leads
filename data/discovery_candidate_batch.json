@@ -24,5 +24,31 @@
     "contact_source": "https://sbm-company.com/uploads/2026/03/2026-03-10-SBM-and-Harpe-Partnership.pdf",
     "contact_source_url": "https://sbm-company.com/uploads/2026/03/2026-03-10-SBM-and-Harpe-Partnership.pdf",
     "signals": ["Recent creator sponsorship", "Named current partnerships executive", "Physical home/garden consumer brand"]
+  },
+  {
+    "brand_name": "GameSir",
+    "brand_domain": "gamesir.com",
+    "source_platform": "YouTube",
+    "creator_name": "Indominator94",
+    "creator_url": "https://www.youtube.com/@Indominator94",
+    "creator_channel_id": "",
+    "creator_subscribers": 85400,
+    "creator_genre": "Gaming",
+    "creator_tags": ["gaming", "eFootball", "controllers", "gaming hardware", "sports gaming"],
+    "video_id": "",
+    "video_url": "",
+    "video_title": "I Packed These INSANE F2P Cards!!",
+    "sponsored_date": "2026-08-22",
+    "evidence": "Indominator94's current public English-language YouTube listing explicitly labels GameSir under Sponsors and promotes the GameSir G7 PRO controller with a creator-specific discount code. The channel has about 85.4K subscribers. SponsorRadar separately tracks 333 GameSir sponsorships across 57 creators and shows GameSir repeatedly sponsoring sub-250K gaming channels including Indominator94 (~93K), GreatLobbyist (~107K), Android Addicts (~63K), and UrCasualGamer (~215K), confirming active spend at roster-relevant sizes. GameSir sells tangible gaming controllers and accessories. GameSir's official corporate page states its marketing cooperation includes market promotion, professional gaming media, influencers and game integrations, and names Leon as the overseas market cooperation contact at leon@gamesir.com.",
+    "paid_product_placement": true,
+    "sponsor_category": "Gaming",
+    "sponsor_subcategory": "Gaming Controllers / Accessories",
+    "contact_name": "Leon",
+    "contact_title": "Overseas Market Cooperation",
+    "contact_email": "leon@gamesir.com",
+    "email_type": "Named public work email",
+    "contact_source": "https://www.xiaoji.com/about",
+    "contact_source_url": "https://www.xiaoji.com/about",
+    "signals": ["Current creator sponsorship", "Repeat spend with 50K-250K gaming creators", "Named overseas marketing cooperation contact", "Physical gaming hardware"]
   }
 ]
