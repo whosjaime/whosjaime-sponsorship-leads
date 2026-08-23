@@ -4090,5 +4090,44 @@
       "Physical consumer hardware"
     ],
     "date_found": "2026-08-23"
+  },
+  {
+    "brand_name": "Kasandrinos",
+    "brand_domain": "kasandrinos.com",
+    "source_platform": "YouTube",
+    "creator_name": "Adapt 2030",
+    "creator_url": "https://www.youtube.com/@adapt2030",
+    "creator_channel_id": "",
+    "creator_subscribers": 189000,
+    "creator_genre": "Education / Preparedness",
+    "creator_tags": [
+      "education",
+      "preparedness",
+      "food",
+      "lifestyle"
+    ],
+    "video_id": "c2YoybzZLg0",
+    "video_url": "https://www.youtube.com/watch?v=c2YoybzZLg0",
+    "video_title": "Why They Are Banning Air Conditioning",
+    "sponsored_date": "2026-07-01",
+    "evidence": "SponsorRadar identifies Kasandrinos as the sponsor of Adapt 2030's July 1, 2026 video 'Why They Are Banning Air Conditioning.' Adapt 2030 has about 189K subscribers and SponsorRadar tracks four Kasandrinos-sponsored videos on the channel. Kasandrinos currently operates an official creator collab/affiliate program offering campaigns, gifting, discount codes and content creation opportunities.",
+    "paid_product_placement": true,
+    "brand_partner_channel_id": "",
+    "sponsor_category": "Food & Beverage",
+    "sponsor_subcategory": "Olive Oil / Pantry",
+    "contact_name": "",
+    "contact_title": "Affiliate Team",
+    "contact_email": "affiliate@kasandrinos.com",
+    "email_type": "Public affiliate partnership email",
+    "contact_source": "https://kasandrinos.idevaffiliate.com/register",
+    "lead_score": 96,
+    "lead_temperature": "Very Hot",
+    "signals": [
+      "Recent verified YouTube sponsorship within 60 days",
+      "Repeat sponsor on a 189K-subscriber creator",
+      "Active official creator collab program",
+      "Verified affiliate partnership email"
+    ],
+    "date_found": "2026-08-23"
   }
 ]
