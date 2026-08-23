@@ -1,0 +1,1 @@
+trigger merge for verified discovery candidates 2026-08-23 03:23 America/Toronto
