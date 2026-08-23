@@ -50,5 +50,31 @@
     "contact_source": "https://au.bagsmart.com/pages/affiliate-program-make-money",
     "contact_source_url": "https://au.bagsmart.com/pages/affiliate-program-make-money",
     "signals": ["Recent small-creator sponsorship", "Active large-scale influencer program", "Official content-partner affiliate program", "Qualified marketing contact"]
+  },
+  {
+    "brand_name": "Breescape",
+    "brand_domain": "breescape.com",
+    "source_platform": "Instagram",
+    "creator_name": "millionaire_nanny",
+    "creator_url": "https://www.instagram.com/millionaire_nanny/",
+    "creator_channel_id": "",
+    "creator_subscribers": 130000,
+    "creator_genre": "Home / Lifestyle",
+    "creator_tags": ["home", "lifestyle", "bedding", "sleep", "family", "Instagram"],
+    "video_id": "collabfeed-instagram-millionaire_nanny-breescape-2026-07-26",
+    "video_url": "https://collabfeed.io/creators/millionaire-nanny",
+    "video_title": "Breescape paid Instagram partnership with millionaire_nanny",
+    "sponsored_date": "2026-07-26",
+    "evidence": "CollabFeed tracks Breescape as a paid Instagram partnership for @millionaire_nanny on July 26, 2026, with another Breescape paid partnership on July 25, 2026. The creator has roughly 130K Instagram followers and also publishes Breescape cooling-bedding links/discount offers through her public Linktree, reinforcing the commercial relationship. Breescape sells physical cooling sheets and bedding. Breescape's official contact page separately lists creators@shinebed.com specifically for Influencer Inquiries, distinct from customer service and press contacts. The stored content identifier is an internal source-record ID derived from the exact CollabFeed partnership record, not an Instagram shortcode.",
+    "paid_product_placement": true,
+    "sponsor_category": "Home",
+    "sponsor_subcategory": "Bedding / Sleep",
+    "contact_name": "",
+    "contact_title": "Influencer Partnerships",
+    "contact_email": "creators@shinebed.com",
+    "email_type": "Public work email",
+    "contact_source": "https://breescape.com/pages/contact-us",
+    "contact_source_url": "https://breescape.com/pages/contact-us",
+    "signals": ["Recent paid Instagram partnership", "Repeat creator partnership", "Qualified official influencer inbox", "Physical home product"]
   }
 ]
