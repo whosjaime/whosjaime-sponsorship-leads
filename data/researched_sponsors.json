@@ -3960,5 +3960,48 @@
     "email_type": "Named public work email",
     "contact_source": "https://preferrednet.net/media/513epnq0/2025_q3-alliance-partner_at-a-glance-brochure.pdf",
     "contact_source_url": "https://preferrednet.net/media/513epnq0/2025_q3-alliance-partner_at-a-glance-brochure.pdf"
+  },
+  {
+    "brand_name": "MelGeek",
+    "brand_domain": "melgeek.com",
+    "source_platform": "YouTube",
+    "creator_name": "NoodleNick",
+    "creator_url": "https://www.youtube.com/@noodlenick",
+    "creator_channel_id": "",
+    "creator_subscribers": 1140000,
+    "creator_genre": "Technology / Gaming",
+    "creator_tags": [
+      "gaming",
+      "keyboards",
+      "PC hardware",
+      "physical consumer tech",
+      "desk setup",
+      "tech reviews"
+    ],
+    "video_id": "LyJ1RazCdZk",
+    "video_url": "https://www.youtube.com/watch?v=LyJ1RazCdZk",
+    "video_title": "The MelGeek X Evangelion Bundle Is Out Of This World - Centauri80 Rei Edition Review",
+    "sponsored_date": "2026-08-13",
+    "evidence": "SponsorRadar records MelGeek sponsoring NoodleNick's August 13, 2026 English-language YouTube video and shows 34 tracked sponsorships across 21 creators, including Jaeky (~110K), Kanga (~144K), Carter2k (~403K), and NoodleNick. The sponsored description includes a creator-specific MelGeek link and discount code. MelGeek sells tangible gaming keyboards and peripherals. MelGeek's official contact page publishes marketing@melgeek.com specifically as its Marketing email.",
+    "paid_product_placement": true,
+    "brand_partner_channel_id": "",
+    "sponsor_category": "Gaming",
+    "sponsor_subcategory": "Gaming Keyboards / Peripherals",
+    "contact_name": "MelGeek Marketing Team",
+    "contact_title": "Marketing",
+    "contact_email": "marketing@melgeek.com",
+    "email_type": "Qualified marketing email",
+    "contact_source": "https://www.melgeek.com/pages/contact",
+    "contact_source_url": "https://www.melgeek.com/pages/contact",
+    "lead_score": 97,
+    "lead_temperature": "Very Hot",
+    "signals": [
+      "Recent August 2026 paid creator sponsorship",
+      "Repeat creator spend",
+      "Deals with 100K-400K creators",
+      "Verified official marketing contact",
+      "Physical gaming hardware"
+    ],
+    "date_found": "2026-08-23"
   }
 ]
