@@ -1,25 +1,31 @@
 [
   {
-    "brand_name": "Benks",
-    "brand_domain": "benks.com",
+    "brand_name": "HOTWAV",
+    "brand_domain": "hotwav.com",
     "source_platform": "YouTube",
-    "creator_name": "MTG Productions",
-    "creator_url": "https://www.youtube.com/@mtgproductions",
+    "creator_name": "Teoh on Tech",
+    "creator_url": "https://www.youtube.com/@teohontech7141",
     "creator_channel_id": "",
-    "creator_subscribers": 59500,
-    "creator_genre": "Technology / Lifestyle",
-    "creator_tags": ["physical consumer tech", "mobile accessories", "smartphones", "tech reviews", "lifestyle"],
-    "video_id": "TmJIXaVv8og",
-    "video_url": "https://www.youtube.com/watch?v=TmJIXaVv8og",
-    "video_title": "Galaxy S26 Ultra 5 Months Later: The One & Only! (Honest Thoughts)",
-    "sponsored_date": "2026-08-09",
-    "evidence": "SponsorRadar identifies Benks as the sponsor of MTG Productions' August 9, 2026 English-language YouTube video. MTG Productions has about 59.5K subscribers, making this a strong small/mid-size creator-spend signal. SponsorRadar's direct video link resolves to YouTube ID TmJIXaVv8og. Benks sells tangible mobile/consumer-tech accessories. Its active affiliate program explicitly recruits influencers and content creators and lists Affiliate Manager Lynn at Lynn@benks.com; Benks' official affiliate page also publishes affiliate@benks.com for creator-program questions.",
+    "creator_subscribers": 86500,
+    "creator_genre": "Technology",
+    "creator_tags": [
+      "physical consumer tech",
+      "rugged tablets",
+      "mobile devices",
+      "tech reviews",
+      "creator tech"
+    ],
+    "video_id": "qJW54FKTikM",
+    "video_url": "https://www.youtube.com/watch?v=qJW54FKTikM",
+    "video_title": "Hotwav R9 Pro Max (review): Best Of Rugged Tablet?",
+    "sponsored_date": "2026-07-29",
+    "evidence": "SponsorRadar identifies HOTWAV as the sponsor of Teoh on Tech's July 29, 2026 English-language YouTube review. Teoh on Tech has about 86.5K subscribers, making this a strong small/mid-size creator-spend signal. SponsorRadar's direct sponsored-video link resolves to YouTube ID qJW54FKTikM. HOTWAV sells tangible rugged smartphones and tablets. HOTWAV's official contact page separately lists marketing@hotwav.com specifically for Marketing/Promotion Collaborations, alongside separate support, general-inquiry, and B2B inboxes.",
     "paid_product_placement": true,
     "sponsor_category": "Physical Consumer Tech",
-    "sponsor_subcategory": "Mobile Accessories",
-    "contact_name": "Lynn",
-    "contact_title": "Affiliate Manager",
-    "contact_email": "Lynn@benks.com",
-    "contact_source_url": "https://ui.awin.com/merchant-profile/94089"
+    "sponsor_subcategory": "Rugged Tablets / Mobile Devices",
+    "contact_name": "",
+    "contact_title": "Marketing / Promotion Collaborations",
+    "contact_email": "marketing@hotwav.com",
+    "contact_source_url": "https://www.hotwav.com/pages/contact-us"
   }
 ]
