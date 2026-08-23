@@ -4157,5 +4157,42 @@
     "contact_title": "Media / Marketing",
     "contact_email": "media@cammus.com",
     "contact_source_url": "https://cammus.com/"
+  },
+  {
+    "brand_name": "Nacon",
+    "brand_domain": "nacongaming.com",
+    "source_platform": "YouTube",
+    "creator_name": "PWR",
+    "creator_url": "https://www.youtube.com/@PWR",
+    "creator_channel_id": "",
+    "creator_subscribers": 3160000,
+    "creator_genre": "Gaming / Entertainment",
+    "creator_tags": [
+      "gaming",
+      "controllers",
+      "gaming hardware",
+      "entertainment",
+      "esports"
+    ],
+    "video_id": "IxHMPN8uLZo",
+    "video_url": "https://www.youtube.com/watch?v=IxHMPN8uLZo",
+    "video_title": "Among Us but we CHOOSE our Roles!",
+    "sponsored_date": "2026-07-19",
+    "evidence": "PWR's July 19, 2026 English-language YouTube video publicly lists Nacon as its official controller partner and links the Nacon Revolution 5 Pro. PWR's own official partners page describes an ongoing two-year multi-platform partnership with Nacon and RIG, including Nacon controller promotion across creator content and retail. SponsorRadar tracks 73 Nacon YouTube sponsorships across 23 creators and includes roster-relevant creators such as Ruba (~131K) and GamersPrey (~244K), confirming creator spend below mega-channel scale as well. Nacon sells tangible gaming controllers and peripherals. Nacon's official accessories partnership support page, updated in 2026, explicitly invites content creators, influencers and streamers to contact creators-accessories@nacon.fr for product-review partnerships.",
+    "paid_product_placement": true,
+    "sponsor_category": "Gaming",
+    "sponsor_subcategory": "Gaming Controllers / Peripherals",
+    "contact_name": "Nacon Creator Partnerships",
+    "contact_title": "Accessories Creator / Influencer Partnerships",
+    "contact_email": "creators-accessories@nacon.fr",
+    "email_type": "Public creator partnerships email",
+    "contact_source": "https://nacon-accessories.zendesk.com/hc/en-us/articles/27121201678353-Partnerships-Content-Creators-Influencers-Streamers-B2B",
+    "contact_source_url": "https://nacon-accessories.zendesk.com/hc/en-us/articles/27121201678353-Partnerships-Content-Creators-Influencers-Streamers-B2B",
+    "signals": [
+      "Active creator partnership",
+      "Official creator/influencer contact",
+      "Physical gaming hardware",
+      "Creator spend includes sub-250K gaming channels"
+    ]
   }
 ]
