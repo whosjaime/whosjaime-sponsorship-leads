@@ -5141,5 +5141,43 @@
       "Active affiliate registration for social creators"
     ],
     "date_found": "2026-08-24"
+  },
+  {
+    "brand_name": "Bedsure",
+    "brand_domain": "bedsurehome.com",
+    "source_platform": "Instagram",
+    "creator_name": "Karen Garcia (@karen_homestyle)",
+    "creator_url": "https://www.instagram.com/karen_homestyle/",
+    "creator_channel_id": "",
+    "creator_subscribers": 0,
+    "creator_genre": "Home / DIY / Lifestyle",
+    "creator_tags": [
+      "home",
+      "DIY",
+      "interior decor",
+      "bedding",
+      "lifestyle"
+    ],
+    "video_id": "DadwC7KhDMI",
+    "video_url": "https://www.instagram.com/p/DadwC7KhDMI/",
+    "video_title": "Bedsure bedding creator partnership post",
+    "sponsored_date": "2026-07-06",
+    "evidence": "CollabFeed tracks a July 6, 2026 paid Instagram creator partnership between Bedsure and @karen_homestyle in the Home & DIY / Bedding category. The evidence is within the permitted 60-day window and is corroborated by Bedsure's currently active official Ambassador Program, which offers free products, affiliate commission, monthly products, creator campaigns and content challenges. Bedsure's official affiliate program publishes affiliate@bedsurehome.com for program and partnership inquiries. Bedsure is a private mid-market home brand rather than a mega-enterprise advertiser.",
+    "paid_product_placement": true,
+    "sponsor_category": "Home",
+    "sponsor_subcategory": "Bedding / Home Textiles",
+    "contact_name": "",
+    "contact_title": "Affiliate / Creator Partnerships",
+    "contact_email": "affiliate@bedsurehome.com",
+    "email_type": "Public affiliate / creator program email",
+    "contact_source": "https://bedsurehome.com/pages/affiliate",
+    "contact_source_url": "https://bedsurehome.com/pages/affiliate",
+    "signals": [
+      "Recent 60-day Instagram creator partnership",
+      "Active official ambassador program",
+      "Official affiliate/creator contact",
+      "Mid-market home brand",
+      "Home/lifestyle roster fit"
+    ]
   }
 ]
