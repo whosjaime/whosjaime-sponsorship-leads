@@ -5254,5 +5254,43 @@
       "Official influencer program",
       "Qualified marketing contact"
     ]
+  },
+  {
+    "brand_name": "KontrolFreek",
+    "brand_domain": "kontrolfreek.com",
+    "source_platform": "YouTube",
+    "creator_name": "Its Playful",
+    "creator_url": "",
+    "creator_channel_id": "",
+    "creator_subscribers": 222000,
+    "creator_genre": "Gaming / Sports Gaming",
+    "creator_tags": [
+      "gaming",
+      "MLB The Show",
+      "sports gaming",
+      "controller",
+      "streaming"
+    ],
+    "video_id": "",
+    "video_url": "",
+    "video_title": "🔴 LIVE - I Unlocked 99 Jesus Made!",
+    "sponsored_date": "2026-08-22",
+    "evidence": "SponsorRadar records KontrolFreek sponsoring Its Playful's August 22, 2026 English-language YouTube video with a KontrolFreek product/code placement. SponsorRadar tracks 2,524 KontrolFreek sponsorships across 44 creators, including Its Playful at about 222K subscribers and hitman_JDA at about 95K, showing strong small/mid-size gaming creator spend. KontrolFreek's official creator page actively recruits gaming creators and describes commissions, influencer kits and additional paid opportunities. Its official sponsorship FAQ routes creator sponsorship proposals to s.creatorsupport@kontrolfreek.com.",
+    "paid_product_placement": true,
+    "sponsor_category": "Gaming",
+    "sponsor_subcategory": "Controller Accessories / Physical Gaming Gear",
+    "contact_name": "",
+    "contact_title": "Creator Sponsorships / Partnerships",
+    "contact_email": "s.creatorsupport@kontrolfreek.com",
+    "email_type": "Public creator sponsorship email",
+    "contact_source": "https://support.kontrolfreek.com/hc/en-us/articles/202124626-How-Do-I-Apply-for-Sponsorship",
+    "contact_source_url": "https://support.kontrolfreek.com/hc/en-us/articles/202124626-How-Do-I-Apply-for-Sponsorship",
+    "signals": [
+      "Recent creator sponsorship",
+      "Small/mid-size gaming creator spend",
+      "Official creator program",
+      "Qualified sponsorship contact",
+      "Physical gaming hardware"
+    ]
   }
 ]
