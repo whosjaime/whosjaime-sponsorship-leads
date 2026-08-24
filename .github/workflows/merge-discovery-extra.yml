@@ -49,8 +49,10 @@ jobs:
             brand=norm(lead.get('brand_name')); domain=norm(lead.get('brand_domain'))
             if not brand or not domain or brand in existing_brands or domain in existing_domains: continue
             if norm('brand:'+lead.get('brand_name','')) in sent_norm or norm('domain:'+lead.get('brand_domain','')) in sent_norm: continue
-            if not (lead.get('contact_email') or '').strip():
-              print('SKIP missing qualified email', lead.get('brand_name'))
+            email=(lead.get('contact_email') or '').strip()
+            named_contact=(lead.get('contact_name') or '').strip() and (lead.get('contact_title') or '').strip() and ((lead.get('contact_source_url') or lead.get('contact_source') or '').strip())
+            if not email and not named_contact:
+              print('SKIP missing qualified contact', lead.get('brand_name'))
               continue
             if (lead.get('source_platform') or 'YouTube').lower()=='youtube' and not lead.get('video_id'):
               key=os.environ.get('YOUTUBE_API_KEY','').strip(); title=(lead.get('video_title') or '').strip(); creator=(lead.get('creator_name') or '').strip()
