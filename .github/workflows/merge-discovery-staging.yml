@@ -43,10 +43,11 @@ jobs:
               d = d.removeprefix('https://').removeprefix('http://').split('/')[0]
               return d.removeprefix('www.')
 
-          existing_brands = {norm_brand(x.get('brand_name')) for x in research if isinstance(x, dict)}
-          existing_domains = {norm_domain(x.get('brand_domain')) for x in research if isinstance(x, dict)}
+          index_by_brand = {norm_brand(x.get('brand_name')): i for i, x in enumerate(research) if isinstance(x, dict)}
+          index_by_domain = {norm_domain(x.get('brand_domain')): i for i, x in enumerate(research) if isinstance(x, dict)}
 
           added = 0
+          updated = 0
           for item in staged:
               if not isinstance(item, dict):
                   continue
@@ -56,16 +57,32 @@ jobs:
                   continue
               if f'brand:{b}' in sent or f'domain:{d}' in sent:
                   continue
-              if b in existing_brands or d in existing_domains:
+
+              existing_i = index_by_brand.get(b)
+              if existing_i is None:
+                  existing_i = index_by_domain.get(d)
+
+              if existing_i is not None:
+                  current = research[existing_i]
+                  staged_video_id = (item.get('video_id') or '').strip()
+                  current_video_id = (current.get('video_id') or '').strip()
+                  if staged_video_id and not current_video_id:
+                      merged = dict(current)
+                      for key, value in item.items():
+                          if value not in (None, '', [], {}):
+                              merged[key] = value
+                      research[existing_i] = merged
+                      updated += 1
                   continue
+
               research.append(item)
-              existing_brands.add(b)
-              existing_domains.add(d)
+              index_by_brand[b] = len(research) - 1
+              index_by_domain[d] = len(research) - 1
               added += 1
 
           research_path.write_text(json.dumps(research, indent=2, ensure_ascii=False) + '\n')
           staging_path.write_text('[]\n')
-          print(f'Added {added} sponsor(s).')
+          print(f'Added {added} sponsor(s); updated {updated} sponsor(s).')
           PY
       - name: Commit merged inventory
         run: |
