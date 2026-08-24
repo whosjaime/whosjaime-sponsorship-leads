@@ -128,5 +128,31 @@
     "contact_source": "https://zoupw.com/pages/contact",
     "contact_source_url": "https://zoupw.com/pages/contact",
     "signals": ["Recent small-creator sponsorship", "Physical consumer hardware", "Official affiliate program", "Official sponsorship marketing contact"]
+  },
+  {
+    "brand_name": "Paleovalley",
+    "brand_domain": "paleovalley.com",
+    "source_platform": "YouTube",
+    "creator_name": "Dr. Drew",
+    "creator_url": "https://www.youtube.com/@DrDrew",
+    "creator_channel_id": "",
+    "creator_subscribers": 220000,
+    "creator_genre": "Health / Entertainment / Podcast",
+    "creator_tags": ["health", "wellness", "podcast", "lifestyle", "nutrition"],
+    "video_id": "",
+    "video_url": "",
+    "video_title": "Fauci's Vaccine Injury Denial Is \"Criminal\" w/ Kat Timpf & Dr. Ram Yogendra – Ask Dr. Drew",
+    "sponsored_date": "2026-08-03",
+    "evidence": "SponsorRadar records Paleovalley sponsoring Dr. Drew's August 3, 2026 English-language YouTube video; the channel has about 220K subscribers and Paleovalley has repeatedly sponsored the channel. Paleovalley's official partnership program says it sponsors health and wellness creators and accepts affiliates, social-media creators and podcast sponsorships. Its official affiliate materials publish affiliates@paleovalley.com for partnership and promotion coordination.",
+    "paid_product_placement": true,
+    "sponsor_category": "Health & Wellness",
+    "sponsor_subcategory": "Nutrition / Whole-Food Supplements & Snacks",
+    "contact_name": "",
+    "contact_title": "Affiliate Partnerships",
+    "contact_email": "affiliates@paleovalley.com",
+    "email_type": "Public work email",
+    "contact_source": "https://paleovalley.com/partnerships/affiliate",
+    "contact_source_url": "https://paleovalley.com/partnerships/affiliate",
+    "signals": ["Recent creator sponsorship", "Repeat creator spend", "Official sponsorship/affiliate program", "Qualified affiliate contact"]
   }
 ]
