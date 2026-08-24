@@ -44,10 +44,13 @@ jobs:
 
           researched_path = Path('data/researched_sponsors.json')
           batch_path = Path('data/discovery_candidate_batch.json')
+          staging_path = Path('data/discovery_staging.json')
           sent_path = Path('data/sent_sponsor_keys.json')
 
           researched = json.loads(researched_path.read_text(encoding='utf-8')) if researched_path.exists() else []
           batch = json.loads(batch_path.read_text(encoding='utf-8')) if batch_path.exists() else []
+          staging = json.loads(staging_path.read_text(encoding='utf-8')) if staging_path.exists() else []
+          batch = [*batch, *staging]
           sent = json.loads(sent_path.read_text(encoding='utf-8')) if sent_path.exists() else []
 
           def norm(value):
@@ -135,13 +138,14 @@ jobs:
               added.append(lead.get('brand_name'))
 
           researched_path.write_text(json.dumps(researched, indent=2, ensure_ascii=False) + '\n', encoding='utf-8')
+          staging_path.write_text('[]\n', encoding='utf-8')
           print('ADDED:', ', '.join(added) if added else 'none')
           PY
       - name: Commit merged researched inventory
         run: |
           git config user.name "sponsor-discovery-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add data/researched_sponsors.json
+          git add data/researched_sponsors.json data/discovery_staging.json
           if git diff --cached --quiet; then
             echo "No new verified sponsor candidates to merge."
             exit 0
