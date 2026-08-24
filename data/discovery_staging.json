@@ -1,1 +1,28 @@
-[]
+[
+  {
+    "brand_name": "ClickClack",
+    "brand_domain": "clickclack.io",
+    "source_platform": "YouTube",
+    "creator_name": "Better Creating",
+    "creator_url": "https://www.youtube.com/@bettercreating",
+    "creator_channel_id": "",
+    "creator_subscribers": 264000,
+    "creator_genre": "Lifestyle / Vlog / Physical Consumer Tech",
+    "creator_tags": ["lifestyle", "desk setup", "workspace", "physical consumer tech", "Apple", "productivity"],
+    "video_id": "ZRClb25RTfY",
+    "video_url": "https://www.youtube.com/watch?v=ZRClb25RTfY",
+    "video_title": "The 6k Monitor Apple Doesn't Want You To Find",
+    "sponsored_date": "2026-08-21",
+    "evidence": "SponsorRadar records ClickClack sponsoring Better Creating's August 21, 2026 English-language YouTube video. Better Creating has about 264K subscribers and SponsorRadar shows ClickClack has sponsored the channel twice. ClickClack sells tangible workspace hardware including monitors, mechanical keyboards, desk gear and accessories. ClickClack's official Collabs page explicitly invites YouTubers, influencers and streamers for product seeding and affiliate partnerships, and its official contact page publishes partnership@clickclack.io specifically for creator, designer and brand partnerships.",
+    "paid_product_placement": true,
+    "sponsor_category": "Physical Consumer Tech",
+    "sponsor_subcategory": "Workspace / Monitors / Mechanical Keyboards",
+    "contact_name": "",
+    "contact_title": "Creator Partnerships",
+    "contact_email": "partnership@clickclack.io",
+    "email_type": "Public work email",
+    "contact_source": "https://clickclack.io/pages/contact-us",
+    "contact_source_url": "https://clickclack.io/pages/contact-us",
+    "signals": ["Very recent August 2026 creator sponsorship", "Repeat creator spend", "Physical consumer hardware", "Official creator collaboration program", "Dedicated partnership email"]
+  }
+]
