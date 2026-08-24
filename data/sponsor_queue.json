@@ -1,1 +1,44 @@
-[]
+[
+  {
+    "brand_name": "Seymour Paint",
+    "brand_domain": "seymourpaint.com",
+    "source_platform": "YouTube",
+    "creator_name": "Prop Department",
+    "creator_url": "https://www.youtube.com/channel/UCU0wOR4RQA9L7ZBOeyQI20A",
+    "creator_channel_id": "UCU0wOR4RQA9L7ZBOeyQI20A",
+    "creator_subscribers": 395000,
+    "creator_genre": "DIY / Engineering / Automotive",
+    "creator_tags": [
+      "DIY",
+      "engineering",
+      "automotive",
+      "home",
+      "physical products"
+    ],
+    "video_id": "Kg572s1wQS0",
+    "video_url": "https://www.youtube.com/watch?v=Kg572s1wQS0",
+    "video_title": "My Tesla Powered Boat Gets MAJOR Upgrades",
+    "sponsored_date": "2026-08-06",
+    "evidence": "SponsorRadar identifies Seymour Paint as the sponsor of Prop Department's August 6, 2026 English-language YouTube video. Prop Department is a 394K-subscriber DIY/engineering creator. Seymour Paint sells tangible aerosol paints and coatings, operates an active affiliate registration program for social creators/projects, and its official site identifies Rodion Galperin as Chief Marketing Officer. A current public company announcement lists Rodion Galperin, Chief Marketing Officer, at rgalperin@seymourpaint.com.",
+    "paid_product_placement": true,
+    "brand_partner_channel_id": "",
+    "sponsor_category": "Consumer Tech",
+    "sponsor_subcategory": "Computer Hardware",
+    "contact_name": "Rodion Galperin",
+    "contact_title": "Chief Marketing Officer",
+    "contact_email": "rgalperin@seymourpaint.com",
+    "email_type": "Named public work email",
+    "contact_source": "https://www.webnewswire.com/2025/02/06/introducing-the-quintessential-group-a-new-era-of-excellence-in-industrial-and-commercial-solutions/",
+    "contact_source_url": "",
+    "lead_score": 100,
+    "lead_temperature": "Very Hot",
+    "sponsorship_key": "youtube:kg572s1wqs0:seymourpaint.com",
+    "brand_key": "domain:seymourpaint.com",
+    "signals": [
+      "Daily researched sponsorship",
+      "verified public YouTube sponsorship evidence",
+      "verified named public work email"
+    ],
+    "date_found": "2026-08-24"
+  }
+]
