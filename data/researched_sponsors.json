@@ -5026,5 +5026,42 @@
       "Physical workwear brand",
       "Verified named partnerships director"
     ]
+  },
+  {
+    "brand_name": "Black Forest Supplements",
+    "brand_domain": "blackforestsupplements.com",
+    "source_platform": "YouTube",
+    "creator_name": "America's Untold Stories",
+    "creator_url": "",
+    "creator_channel_id": "",
+    "creator_subscribers": 134000,
+    "creator_genre": "News & Politics",
+    "creator_tags": [
+      "news",
+      "commentary",
+      "wellness"
+    ],
+    "video_id": "",
+    "video_url": "",
+    "video_title": "Fauci Aide Pleads Guilty + FBI Raids Eric Swalwell",
+    "sponsored_date": "2026-08-21",
+    "evidence": "SponsorRadar tracks Black Forest Supplements as the sponsor of America's Untold Stories' August 21, 2026 YouTube video 'Fauci Aide Pleads Guilty + FBI Raids Eric Swalwell'. SponsorRadar reports the creator at approximately 134K subscribers. Black Forest Supplements also has hundreds of tracked YouTube sponsorships across dozens of creators, confirming active creator spend.",
+    "paid_product_placement": true,
+    "brand_partner_channel_id": "",
+    "sponsor_category": "Health & Wellness",
+    "sponsor_subcategory": "Supplements",
+    "contact_name": "Alejandro Cabrera",
+    "contact_title": "Chief Marketing Officer",
+    "contact_email": "",
+    "email_type": "Verified named marketing contact",
+    "contact_source": "https://www.linkedin.com/in/alejandro-cabrera-2a84b9188",
+    "lead_score": 90,
+    "lead_temperature": "Hot",
+    "signals": [
+      "Recent direct YouTube sponsorship on 2026-08-21",
+      "Repeat active creator sponsorship buyer",
+      "Current verified Chief Marketing Officer"
+    ],
+    "date_found": "2026-08-24"
   }
 ]
