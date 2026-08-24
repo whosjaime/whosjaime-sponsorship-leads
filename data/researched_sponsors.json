@@ -4539,5 +4539,43 @@
       "Paid creator campaigns",
       "Verified current partnerships contact"
     ]
+  },
+  {
+    "brand_name": "Shop-Vac",
+    "brand_domain": "shopvac.com",
+    "source_platform": "YouTube",
+    "creator_name": "Catherine Elaine",
+    "creator_url": "https://www.youtube.com/@catherineelaine",
+    "creator_channel_id": "",
+    "creator_subscribers": 153000,
+    "creator_genre": "Lifestyle / Vlog / Home",
+    "creator_tags": [
+      "lifestyle",
+      "vlog",
+      "home",
+      "cleaning",
+      "organization",
+      "physical consumer hardware"
+    ],
+    "video_id": "gIN9odxRhBQ",
+    "video_url": "https://www.youtube.com/watch?v=gIN9odxRhBQ",
+    "video_title": "Tired Of Living In Clutter / Declutter & Organize Everything / Finding Routine / Get Rid Of It All",
+    "sponsored_date": "2026-07-25",
+    "evidence": "SponsorRadar records Shop-Vac sponsoring Catherine Elaine's July 25, 2026 English-language YouTube video. Catherine Elaine has about 153K subscribers, making this a small/mid-size creator fit. Shop-Vac sells tangible home/cleaning hardware. NATS' current vendor directory publicly lists Robin Keller at rkeller@shopvac.com, while current company-directory data identifies Robin Keller as Director Sales and Marketing at Shop Vac USA, LLC.",
+    "paid_product_placement": true,
+    "sponsor_category": "Home",
+    "sponsor_subcategory": "Cleaning Hardware / Wet-Dry Vacuums",
+    "contact_name": "Robin Keller",
+    "contact_title": "Director Sales and Marketing",
+    "contact_email": "rkeller@shopvac.com",
+    "email_type": "Verified named public work email",
+    "contact_source": "https://www.natsonline.org/vendors/",
+    "contact_source_url": "https://www.natsonline.org/vendors/",
+    "signals": [
+      "Recent creator sponsorship",
+      "Small/mid-size creator fit",
+      "Physical consumer hardware",
+      "Verified named sales and marketing contact"
+    ]
   }
 ]
