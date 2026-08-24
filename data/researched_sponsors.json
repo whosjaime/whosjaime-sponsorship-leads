@@ -5103,5 +5103,43 @@
       "Official ambassador program",
       "Verified named creator/collabs contact"
     ]
+  },
+  {
+    "brand_name": "Seymour Paint",
+    "brand_domain": "seymourpaint.com",
+    "source_platform": "YouTube",
+    "creator_name": "Prop Department",
+    "creator_url": "https://www.youtube.com/@propdepartment",
+    "creator_channel_id": "",
+    "creator_subscribers": 394000,
+    "creator_genre": "DIY / Engineering / Automotive",
+    "creator_tags": [
+      "DIY",
+      "engineering",
+      "automotive",
+      "home",
+      "physical products"
+    ],
+    "video_id": "Kg572s1wQS0",
+    "video_url": "https://www.youtube.com/watch?v=Kg572s1wQS0",
+    "video_title": "My Tesla Powered Boat Gets MAJOR Upgrades",
+    "sponsored_date": "2026-08-06",
+    "evidence": "SponsorRadar identifies Seymour Paint as the sponsor of Prop Department's August 6, 2026 English-language YouTube video. Prop Department is a 394K-subscriber DIY/engineering creator. Seymour Paint sells tangible aerosol paints and coatings, operates an active affiliate registration program for social creators/projects, and its official site identifies Rodion Galperin as Chief Marketing Officer. A current public company announcement lists Rodion Galperin, Chief Marketing Officer, at rgalperin@seymourpaint.com.",
+    "paid_product_placement": true,
+    "sponsor_category": "Home",
+    "sponsor_subcategory": "DIY / Paint & Coatings",
+    "contact_name": "Rodion Galperin",
+    "contact_title": "Chief Marketing Officer",
+    "contact_email": "rgalperin@seymourpaint.com",
+    "email_type": "Named public work email",
+    "contact_source": "https://www.seymourpaint.com/seymour-paint-revs-up-for-king-of-the-hammers-2025-as-official-paints-and-coatings-partner/",
+    "contact_source_url": "https://www.webnewswire.com/2025/02/06/introducing-the-quintessential-group-a-new-era-of-excellence-in-industrial-and-commercial-solutions/",
+    "signals": [
+      "Recent creator sponsorship",
+      "Physical consumer product",
+      "Verified named marketing executive",
+      "Active affiliate registration for social creators"
+    ],
+    "date_found": "2026-08-24"
   }
 ]
