@@ -1,1 +1,28 @@
-[]
+[
+  {
+    "brand_name": "The Pet Lab Co",
+    "brand_domain": "thepetlabco.com",
+    "source_platform": "Instagram",
+    "creator_name": "therockymtnmomma",
+    "creator_url": "https://www.instagram.com/therockymtnmomma/",
+    "creator_channel_id": "",
+    "creator_subscribers": 81000,
+    "creator_genre": "Pet / Family Lifestyle / Travel",
+    "creator_tags": ["pet", "dogs", "family", "lifestyle", "travel", "wellness"],
+    "video_id": "DaNvc9YSpa8",
+    "video_url": "https://www.instagram.com/p/DaNvc9YSpa8/",
+    "video_title": "The Pet Lab Co paid partnership — dog dental care",
+    "sponsored_date": "2026-06-30",
+    "evidence": "CollabFeed tracks The Pet Lab Co as a paid Instagram partnership with @therockymtnmomma on June 30, 2026; current CollabFeed results also show a fresh August 21, 2026 Pet Lab Co paid partnership with @samgradoville, corroborating continued active creator spend. @therockymtnmomma has about 81K Instagram followers. PetLab Co's current Awin affiliate-program terms publish affiliates@thepetlabco.com specifically for program questions and explicitly reference direct partnerships.",
+    "paid_product_placement": true,
+    "sponsor_category": "Pet",
+    "sponsor_subcategory": "Pet Supplements / Dog Dental Care",
+    "contact_name": "",
+    "contact_title": "Affiliate Partnerships",
+    "contact_email": "affiliates@thepetlabco.com",
+    "email_type": "Public work email",
+    "contact_source": "https://ui.awin.com/merchant-profile-terms/58051",
+    "contact_source_url": "https://ui.awin.com/merchant-profile-terms/58051",
+    "signals": ["Verified paid creator partnership", "Fresh August 2026 creator activity", "Small/mid-size creator fit", "Official affiliate partnership contact"]
+  }
+]
