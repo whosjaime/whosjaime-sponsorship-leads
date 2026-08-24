@@ -102,5 +102,31 @@
     "contact_source": "https://thermalmaster.com/blogs/blog/thermal-master-brand-ambassador-recruitment-now-open",
     "contact_source_url": "https://thermalmaster.com/blogs/blog/thermal-master-brand-ambassador-recruitment-now-open",
     "signals": ["Very recent creator sponsorship", "Repeat creator spend", "Physical consumer hardware", "Official active brand ambassador program", "Qualified marketing contact"]
+  },
+  {
+    "brand_name": "Olight",
+    "brand_domain": "olight.com",
+    "source_platform": "YouTube",
+    "creator_name": "The Technology Man",
+    "creator_url": "https://www.youtube.com/@thetechnologyman",
+    "creator_channel_id": "",
+    "creator_subscribers": 40300,
+    "creator_genre": "Physical Consumer Tech / Reviews",
+    "creator_tags": ["physical consumer tech", "flashlights", "outdoor gear", "technology reviews", "gadgets"],
+    "video_id": "",
+    "video_url": "",
+    "video_title": "These Olight Deals Are Actually Worth Buying",
+    "sponsored_date": "2026-07-14",
+    "evidence": "SponsorRadar identifies Olight as the sponsor of The Technology Man's July 14, 2026 English-language YouTube video and shows Olight has sponsored this creator repeatedly. The Technology Man has about 40.3K subscribers, demonstrating Olight buys sponsorships from small channels. Olight sells tangible portable lighting hardware. Olight Canada's current Awin affiliate program lists Vicky Zhuang as account manager at vicky_zhuang@olightworld.com and says Olight considers private commissions and rewards for the right exposure.",
+    "paid_product_placement": true,
+    "sponsor_category": "Physical Consumer Tech",
+    "sponsor_subcategory": "Portable Lighting / Outdoor Hardware",
+    "contact_name": "Vicky Zhuang",
+    "contact_title": "Affiliate Account Manager, Olight Canada",
+    "contact_email": "vicky_zhuang@olightworld.com",
+    "email_type": "Named public work email",
+    "contact_source": "https://ui.awin.com/merchant-profile/20530?setLocale=en_GB",
+    "contact_source_url": "https://ui.awin.com/merchant-profile/20530?setLocale=en_GB",
+    "signals": ["Recent creator sponsorship", "Repeat creator spend", "Small creator fit", "Physical consumer hardware", "Named affiliate account manager"]
   }
 ]
