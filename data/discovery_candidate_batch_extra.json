@@ -24,5 +24,31 @@
     "contact_source": "https://armra.com/pages/practitioner-program",
     "contact_source_url": "https://armra.com/pages/practitioner-program",
     "signals": ["Recent creator sponsorship", "Active August 2026 creator spend", "Small/mid-size creator fit", "Official ambassador program", "Official partnerships contact"]
+  },
+  {
+    "brand_name": "Kettle & Fire",
+    "brand_domain": "kettleandfire.com",
+    "source_platform": "YouTube",
+    "creator_name": "Flexible Dieting Lifestyle",
+    "creator_url": "https://www.youtube.com/@FlexibleDietingLifestyle",
+    "creator_channel_id": "",
+    "creator_subscribers": 554000,
+    "creator_genre": "Food / Fitness / Lifestyle",
+    "creator_tags": ["food", "fitness", "lifestyle", "meal prep", "health", "cooking"],
+    "video_id": "",
+    "video_url": "",
+    "video_title": "100 Fat Loss Hacks I Wish I Knew Sooner",
+    "sponsored_date": "2026-08-09",
+    "evidence": "SponsorRadar records Kettle & Fire sponsoring Flexible Dieting Lifestyle's August 9, 2026 English-language YouTube video and shows repeat sponsorships with the same creator. Kettle & Fire's current Kettler Community recruits creators/ambassadors, offers 20% commission, free monthly product, and paid campaigns. Current public profiles identify Kelsey Torr as Senior Partnerships Manager / Partnerships Manager at Kettle & Fire, with responsibilities and availability tied directly to collaborations and event sponsorships.",
+    "paid_product_placement": true,
+    "sponsor_category": "Food & Beverage",
+    "sponsor_subcategory": "Bone Broth / Wellness Food",
+    "contact_name": "Kelsey Torr",
+    "contact_title": "Senior Partnerships Manager",
+    "contact_email": "",
+    "email_type": "Verified named partnerships contact",
+    "contact_source": "https://www.linkedin.com/in/kelseytorr",
+    "contact_source_url": "https://www.linkedin.com/in/kelseytorr",
+    "signals": ["Recent August 2026 creator sponsorship", "Repeat creator spend", "Official creator/ambassador program", "Paid creator campaigns", "Verified current partnerships contact"]
   }
 ]
