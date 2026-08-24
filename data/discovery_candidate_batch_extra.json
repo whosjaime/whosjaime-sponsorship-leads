@@ -154,5 +154,31 @@
     "contact_source": "https://www.linkedin.com/in/sara-kaeppler-2aba181a0",
     "contact_source_url": "https://www.linkedin.com/in/sara-kaeppler-2aba181a0",
     "signals": ["Very recent creator sponsorship", "Repeat creator spend", "Active official creator programme", "Named current influencer marketing contact", "Food/drink roster fit"]
+  },
+  {
+    "brand_name": "Vessi",
+    "brand_domain": "vessi.com",
+    "source_platform": "YouTube",
+    "creator_name": "The Casual Criminalist",
+    "creator_url": "https://www.youtube.com/@TheCasualCriminalist",
+    "creator_channel_id": "",
+    "creator_subscribers": 708000,
+    "creator_genre": "Entertainment / True Crime",
+    "creator_tags": ["entertainment", "true crime", "lifestyle", "travel", "footwear"],
+    "video_id": "sZAzPPw0qss",
+    "video_url": "https://www.youtube.com/watch?v=sZAzPPw0qss",
+    "video_title": "Michael Peterson: The Staircase Killer Who Went Free",
+    "sponsored_date": "2026-08-13",
+    "evidence": "SponsorRadar records The Casual Criminalist's August 13, 2026 English-language YouTube video as explicitly #sponsored by Vessi. SponsorRadar tracks 553+ Vessi YouTube sponsorships across 97 creators, including SoCal Disney Dad (~88K) and Paul Ulibarri (~79K), showing meaningful spend with smaller/mid-size creators. Vessi sells physical waterproof footwear and its official contact page publishes partnerships@vessi.com specifically for partnership enquiries and links its ambassador program.",
+    "paid_product_placement": true,
+    "sponsor_category": "Fashion",
+    "sponsor_subcategory": "Footwear",
+    "contact_name": "",
+    "contact_title": "Partnerships",
+    "contact_email": "partnerships@vessi.com",
+    "email_type": "Public partnership email",
+    "contact_source": "https://vessi.com/pages/contact",
+    "contact_source_url": "https://vessi.com/pages/contact",
+    "signals": ["Recent paid YouTube sponsorship", "Official partnerships email", "Active ambassador program", "Small/mid-size creator spend"]
   }
 ]
