@@ -1,1 +1,30 @@
-[]
+[
+  {
+    "brand_name": "Olight",
+    "brand_domain": "olight.com",
+    "creator_name": "The Technology Man",
+    "creator_url": "https://www.youtube.com/@thetechnologyman",
+    "creator_channel_id": "",
+    "creator_subscribers": 40300,
+    "creator_genre": "Physical Consumer Tech / Reviews",
+    "creator_tags": [
+      "physical consumer tech",
+      "flashlights",
+      "outdoor gear",
+      "technology reviews",
+      "gadgets"
+    ],
+    "source_platform": "YouTube",
+    "video_url": "",
+    "video_title": "These Olight Deals Are Actually Worth Buying",
+    "sponsored_date": "2026-07-14",
+    "evidence": "SponsorRadar identifies Olight as the sponsor of The Technology Man's July 14, 2026 English-language YouTube video 'These Olight Deals Are Actually Worth Buying'. The creator has about 40.3K subscribers, demonstrating Olight buys sponsorships from small channels. Olight sells tangible portable lighting hardware. Olight Canada's current Awin affiliate program lists Vicky Zhuang as account manager at vicky_zhuang@olightworld.com and explicitly says Olight considers private commissions and rewards for the right exposure.",
+    "paid_product_placement": true,
+    "sponsor_category": "Consumer Tech",
+    "sponsor_subcategory": "Portable Lighting / Outdoor Hardware",
+    "contact_name": "Vicky Zhuang",
+    "contact_title": "Affiliate Account Manager, Olight Canada",
+    "contact_email": "vicky_zhuang@olightworld.com",
+    "contact_source_url": "https://ui.awin.com/merchant-profile/20530?setLocale=en_GB"
+  }
+]
