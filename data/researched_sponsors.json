@@ -4347,5 +4347,42 @@
       "Official affiliate program",
       "Official sponsorship marketing contact"
     ]
+  },
+  {
+    "brand_name": "COSORI",
+    "brand_domain": "cosori.com",
+    "source_platform": "YouTube",
+    "creator_name": "CJKnowsTECH",
+    "creator_url": "https://www.youtube.com/@cjknowstech",
+    "creator_channel_id": "",
+    "creator_subscribers": 156000,
+    "creator_genre": "Food / Lifestyle / Physical Consumer Tech",
+    "creator_tags": [
+      "food",
+      "cooking",
+      "kitchen",
+      "lifestyle",
+      "physical consumer tech"
+    ],
+    "video_id": "tCLXivcCRhM",
+    "video_url": "https://www.youtube.com/watch?v=tCLXivcCRhM",
+    "video_title": "This REALLY Brings BARISTA-Level Coffee to Your Kitchen? Cosori Juni",
+    "sponsored_date": "2026-07-17",
+    "evidence": "SponsorRadar records COSORI sponsoring CJKnowsTECH's July 17, 2026 English-language YouTube video. The channel has about 156K subscribers. COSORI sells tangible kitchen appliances. COSORI's official affiliate page says it wants to partner with creators and publishes Affiliate@vesync.com for affiliate-program questions; its official collaborator page also explicitly accepts sponsorship and collaboration proposals.",
+    "paid_product_placement": true,
+    "sponsor_category": "Food & Beverage / Home",
+    "sponsor_subcategory": "Kitchen Appliances / Coffee",
+    "contact_name": "",
+    "contact_title": "Affiliate Partnerships",
+    "contact_email": "affiliate@vesync.com",
+    "email_type": "Public work email",
+    "contact_source": "https://cosori.com/pages/affiliates",
+    "contact_source_url": "https://cosori.com/pages/affiliates",
+    "signals": [
+      "Recent creator sponsorship",
+      "Physical consumer appliance brand",
+      "Official affiliate program",
+      "Qualified affiliate contact"
+    ]
   }
 ]
