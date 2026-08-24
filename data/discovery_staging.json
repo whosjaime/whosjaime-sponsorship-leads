@@ -1,1 +1,28 @@
-[]
+[
+  {
+    "brand_name": "Thermal Master",
+    "brand_domain": "thermalmaster.com",
+    "source_platform": "YouTube",
+    "creator_name": "Electronics Repair School",
+    "creator_url": "https://www.youtube.com/@electronicsrepairschool",
+    "creator_channel_id": "",
+    "creator_subscribers": 488000,
+    "creator_genre": "Education / Physical Consumer Tech",
+    "creator_tags": ["electronics", "repair", "thermal imaging", "physical consumer tech", "tools", "hardware"],
+    "video_id": "sEQn-jtkN84",
+    "video_url": "https://www.youtube.com/watch?v=sEQn-jtkN84",
+    "video_title": "Customer tried to replace the port - I'm so frustrated for what the customer did ...",
+    "sponsored_date": "2026-08-21",
+    "evidence": "SponsorRadar records Thermal Master sponsoring Electronics Repair School's August 21, 2026 English-language YouTube video and multiple additional videos on August 20, August 18, August 15, and August 8, showing repeat current creator spend. Electronics Repair School has about 488K subscribers. Thermal Master sells tangible thermal-imaging hardware for electronics, home inspection, automotive, HVAC and outdoor use. Thermal Master's official partnership and contact pages publish Mcgrady@thermalmaster.com specifically for PR & Influencer outreach, and its current Brand Ambassador recruitment page also directs creators to marketing@thermalmaster.com.",
+    "paid_product_placement": true,
+    "sponsor_category": "Physical Consumer Tech",
+    "sponsor_subcategory": "Thermal Imaging Cameras / Inspection Hardware",
+    "contact_name": "Mcgrady",
+    "contact_title": "PR & Influencer",
+    "contact_email": "Mcgrady@thermalmaster.com",
+    "email_type": "Public work email",
+    "contact_source": "https://thermalmaster.com/pages/become-our-partner",
+    "contact_source_url": "https://thermalmaster.com/pages/become-our-partner",
+    "signals": ["Very recent creator sponsorship", "Repeat creator spend", "Physical consumer hardware", "Official PR & Influencer contact", "Active brand ambassador program"]
+  }
+]
