@@ -5179,5 +5179,41 @@
       "Mid-market home brand",
       "Home/lifestyle roster fit"
     ]
+  },
+  {
+    "brand_name": "Hiya Health",
+    "brand_domain": "hiyahealth.com",
+    "source_platform": "YouTube",
+    "creator_name": "The Bossticks",
+    "creator_url": "https://www.youtube.com/@theskinnyconfidential",
+    "creator_channel_id": "",
+    "creator_subscribers": 314000,
+    "creator_genre": "Lifestyle / Health & Wellness",
+    "creator_tags": [
+      "lifestyle",
+      "family",
+      "parenting",
+      "health",
+      "wellness"
+    ],
+    "video_id": "",
+    "video_url": "",
+    "video_title": "Cancer Expert: The Truth About Grocery Food, Chronic Disease & Prevention",
+    "sponsored_date": "2026-08-06",
+    "evidence": "SponsorRadar identifies The Bossticks' August 6, 2026 English-language YouTube episode as sponsored by Hiya Health. SponsorRadar tracks 49 Hiya Health YouTube sponsorships across 19 creators and reports that 67% of its last-12-month deals were with 50K-250K subscriber channels. Hiya Health's current Impact affiliate program explicitly accepts Creator / Influencer partners and lists the Hiya Affiliate Team at hiya@moxiegrouppr.com for creators, publishers and other partners.",
+    "paid_product_placement": true,
+    "sponsor_category": "Health & Wellness",
+    "sponsor_subcategory": "Kids Nutrition / Vitamins",
+    "contact_name": "Hiya Affiliate Team",
+    "contact_title": "Creator / Affiliate Partnerships",
+    "contact_email": "hiya@moxiegrouppr.com",
+    "email_type": "Qualified creator/affiliate program email",
+    "contact_source": "https://app.impact.com/advertiser-advertiser-info/Hiya-Health.brand",
+    "contact_source_url": "https://app.impact.com/advertiser-advertiser-info/Hiya-Health.brand",
+    "signals": [
+      "August 2026 creator sponsorship",
+      "creator/influencer affiliate program",
+      "strong 50K-250K channel spend"
+    ]
   }
 ]
