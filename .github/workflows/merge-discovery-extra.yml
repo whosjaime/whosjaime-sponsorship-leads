@@ -1,0 +1,82 @@
+name: Merge Sponsor Discovery Extra
+
+on:
+  pull_request:
+    types: [opened]
+
+permissions:
+  contents: write
+  pull-requests: read
+
+jobs:
+  merge:
+    if: startsWith(github.event.pull_request.title, 'MERGE SPONSOR DISCOVERY EXTRA')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install requests
+      - name: Merge extra verified candidates safely
+        env:
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+        run: |
+          python - <<'PY'
+          import json, os, re
+          from difflib import SequenceMatcher
+          from pathlib import Path
+          import requests
+
+          researched_path = Path('data/researched_sponsors.json')
+          batch_path = Path('data/discovery_candidate_batch_extra.json')
+          sent_path = Path('data/sent_sponsor_keys.json')
+          researched = json.loads(researched_path.read_text()) if researched_path.exists() else []
+          batch = json.loads(batch_path.read_text()) if batch_path.exists() else []
+          sent = json.loads(sent_path.read_text()) if sent_path.exists() else []
+
+          def norm(v): return ''.join(ch for ch in (v or '').lower() if ch.isalnum())
+          def nt(v): return re.sub(r'[^a-z0-9]+',' ',(v or '').lower()).strip()
+          existing_brands={norm(x.get('brand_name')) for x in researched}
+          existing_domains={norm(x.get('brand_domain')) for x in researched}
+          sent_norm={norm(x) for x in sent}
+          added=[]
+
+          for raw in batch:
+            lead=dict(raw)
+            brand=norm(lead.get('brand_name')); domain=norm(lead.get('brand_domain'))
+            if not brand or not domain or brand in existing_brands or domain in existing_domains: continue
+            if norm('brand:'+lead.get('brand_name','')) in sent_norm or norm('domain:'+lead.get('brand_domain','')) in sent_norm: continue
+            if (lead.get('source_platform') or 'YouTube').lower()=='youtube' and not lead.get('video_id'):
+              key=os.environ.get('YOUTUBE_API_KEY','').strip(); title=(lead.get('video_title') or '').strip(); creator=(lead.get('creator_name') or '').strip()
+              if not key or not title: continue
+              r=requests.get('https://www.googleapis.com/youtube/v3/search',params={'part':'snippet','type':'video','maxResults':10,'order':'relevance','q':f'{title} {creator}','key':key},timeout=30)
+              if r.status_code>=400:
+                print('SKIP API',lead.get('brand_name'),r.status_code); continue
+              target=nt(title); best=None; score=0
+              for item in r.json().get('items',[]):
+                s=SequenceMatcher(None,target,nt(item.get('snippet',{}).get('title',''))).ratio()
+                if creator and norm(creator) in norm(item.get('snippet',{}).get('channelTitle','')): s+=0.15
+                if s>score: best=item; score=s
+              if not best or score<0.72: print('SKIP unresolved',lead.get('brand_name'),score); continue
+              vid=best.get('id',{}).get('videoId','')
+              if not vid: continue
+              lead['video_id']=vid; lead['video_url']=f'https://www.youtube.com/watch?v={vid}'
+              lead['creator_channel_id']=lead.get('creator_channel_id') or best.get('snippet',{}).get('channelId','')
+              print('RESOLVED:',lead.get('brand_name'),vid,score)
+            researched.append(lead); existing_brands.add(brand); existing_domains.add(domain); added.append(lead.get('brand_name'))
+
+          researched_path.write_text(json.dumps(researched,indent=2,ensure_ascii=False)+'\n')
+          print('ADDED:', ', '.join(added) if added else 'none')
+          PY
+      - name: Commit merged inventory
+        run: |
+          git config user.name "sponsor-discovery-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/researched_sponsors.json
+          if git diff --cached --quiet; then echo "No new candidates"; exit 0; fi
+          git commit -m "Merge extra verified sponsor candidates [skip ci]"
+          git pull --rebase origin main
+          git push origin HEAD:main
