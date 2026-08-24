@@ -1,1 +1,35 @@
-[]
+[
+  {
+    "brand_name": "Black Forest Supplements",
+    "brand_domain": "blackforestsupplements.com",
+    "source_platform": "YouTube",
+    "creator_name": "Ryan McBeth",
+    "creator_url": "https://www.youtube.com/@ryanmcbethprogramming",
+    "creator_channel_id": "UC8URMa1fI4rlaLc-Lhev2fQ",
+    "creator_subscribers": 1060000,
+    "creator_genre": "News / Technology",
+    "creator_tags": ["news", "technology", "commentary", "wellness"],
+    "video_id": "68ucjcaKoQM",
+    "video_url": "https://www.youtube.com/watch?v=68ucjcaKoQM",
+    "video_title": "Canada’s Halifax-Class Frigate Is More Dangerous Than It Looks",
+    "sponsored_date": "2026-08-14",
+    "evidence": "SponsorRadar directly links Ryan McBeth's August 14, 2026 YouTube video 'Canada’s Halifax-Class Frigate Is More Dangerous Than It Looks' to YouTube video ID 68ucjcaKoQM and identifies Black Forest Supplements as the sponsor. SponsorRadar also reports 366+ Black Forest Supplements YouTube sponsorships across 55 creators in 2026, confirming active recurring creator spend.",
+    "paid_product_placement": true,
+    "brand_partner_channel_id": "",
+    "sponsor_category": "Health & Wellness",
+    "sponsor_subcategory": "Supplements",
+    "contact_name": "Alejandro Cabrera",
+    "contact_title": "Chief Marketing Officer",
+    "contact_email": "",
+    "email_type": "Verified named marketing contact",
+    "contact_source": "https://www.linkedin.com/in/alejandro-cabrera-2a84b9188",
+    "lead_score": 90,
+    "lead_temperature": "Hot",
+    "signals": [
+      "Exact direct YouTube sponsorship evidence",
+      "Active repeat creator buyer",
+      "Current verified Chief Marketing Officer"
+    ],
+    "date_found": "2026-08-24"
+  }
+]
