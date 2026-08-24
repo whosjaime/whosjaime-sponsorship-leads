@@ -1,0 +1,88 @@
+name: Merge Durable Sponsor Discovery
+
+on:
+  pull_request:
+    types: [opened]
+
+permissions:
+  contents: write
+  pull-requests: read
+
+concurrency:
+  group: sponsor-discovery-durable-merge
+  cancel-in-progress: false
+
+jobs:
+  merge:
+    if: startsWith(github.event.pull_request.title, 'MERGE DURABLE SPONSOR DISCOVERY')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Merge durable verified candidates
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          researched_path = Path('data/researched_sponsors.json')
+          durable_path = Path('data/discovery_durable.json')
+          sent_path = Path('data/sent_sponsor_keys.json')
+
+          researched = json.loads(researched_path.read_text(encoding='utf-8')) if researched_path.exists() else []
+          durable = json.loads(durable_path.read_text(encoding='utf-8')) if durable_path.exists() else []
+          sent = json.loads(sent_path.read_text(encoding='utf-8')) if sent_path.exists() else []
+
+          def norm(value):
+              return ''.join(ch for ch in (value or '').lower() if ch.isalnum())
+
+          existing_brands = {norm(x.get('brand_name')) for x in researched}
+          existing_domains = {norm(x.get('brand_domain')) for x in researched}
+          sent_norm = {norm(x) for x in sent}
+          added = []
+          keep = []
+
+          for lead in durable:
+              brand_name = lead.get('brand_name', '')
+              domain_name = lead.get('brand_domain', '')
+              brand = norm(brand_name)
+              domain = norm(domain_name)
+              if not brand or not domain:
+                  keep.append(lead)
+                  continue
+              if brand in existing_brands or domain in existing_domains:
+                  continue
+              if norm('brand:' + brand_name) in sent_norm or norm('domain:' + domain_name) in sent_norm:
+                  continue
+              if (lead.get('source_platform') or '').strip().lower() == 'youtube':
+                  if not (lead.get('video_id') and lead.get('video_url')):
+                      keep.append(lead)
+                      continue
+              if not (lead.get('contact_email') or (lead.get('contact_name') and lead.get('contact_title'))):
+                  keep.append(lead)
+                  continue
+              researched.append(lead)
+              existing_brands.add(brand)
+              existing_domains.add(domain)
+              added.append(brand_name)
+
+          researched_path.write_text(json.dumps(researched, indent=2, ensure_ascii=False) + '\n', encoding='utf-8')
+          durable_path.write_text(json.dumps(keep, indent=2, ensure_ascii=False) + '\n', encoding='utf-8')
+          print('ADDED:', ', '.join(added) if added else 'none')
+          PY
+      - name: Commit durable discovery merge
+        run: |
+          git config user.name "sponsor-discovery-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/researched_sponsors.json data/discovery_durable.json
+          if git diff --cached --quiet; then
+            echo "No durable candidates merged."
+            exit 0
+          fi
+          git commit -m "Merge durable verified sponsor discovery [skip ci]"
+          git pull --rebase origin main
+          git push origin HEAD:main
