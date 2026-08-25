@@ -38,10 +38,11 @@ jobs:
           CREATORDB_PAGE_SIZE: ${{ vars.CREATORDB_PAGE_SIZE || '50' }}
           SPONSOR_SEARCH_REGION: ${{ vars.SPONSOR_SEARCH_REGION || 'US' }}
           SPONSOR_SEARCH_LANGUAGE: ${{ vars.SPONSOR_SEARCH_LANGUAGE || 'en' }}
+          ENABLE_TIKTOK_SPONSOR_SCAN: 'true'
         shell: bash
         run: |
           set -o pipefail
-          python src/run_sponsor_discovery_batch.py | tee sponsor_batch.log
+          python src/run_sponsor_discovery_multisource.py | tee sponsor_batch.log
       - name: Persist refreshed sponsor queue
         run: |
           if git diff --quiet -- data/sponsor_queue.json; then
