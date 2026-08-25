@@ -1,22 +1,92 @@
 [
-{"brand_name":"Unity","brand_size":"large","category":"Gaming / Game Development / Creator Software","commission":"5% on Asset Store sales; $62.50 per Unity Pro subscription","website":"https://unity.com/","apply_url":"https://unity.com/partners/affiliates","source_url":"https://unity.com/partners/affiliates"},
-{"brand_name":"Corsair","brand_size":"large","category":"Gaming / PC Hardware / Peripherals","commission":"2.4% of online sales","website":"https://www.corsair.com/","apply_url":"https://www.flexoffers.com/affiliate-programs/corsair-affiliate-program/","source_url":"https://www.flexoffers.com/affiliate-programs/corsair-affiliate-program/"},
-{"brand_name":"Dell","brand_size":"large","category":"Consumer Tech / PCs / Laptops / Creator Hardware","commission":"0.8%-5.6% depending on item","website":"https://www.dell.com/","apply_url":"https://www.flexoffers.com/affiliate-programs/dell-home-home-office-affiliate-program/","source_url":"https://www.flexoffers.com/affiliate-programs/dell-home-home-office-affiliate-program/"},
-{"brand_name":"Corel","brand_size":"large","category":"Software / Design / Photo / Creator Tools","commission":"10% base; up to 25%","website":"https://www.corel.com/","apply_url":"https://www.corel.com/en/affiliate/","source_url":"https://www.corel.com/en/affiliate/"},
-{"brand_name":"Wacom","brand_size":"large","category":"Consumer Tech / Drawing Tablets / Creative Hardware","commission":"Not publicly listed","website":"https://www.wacom.com/","apply_url":"https://community.wacom.com/en-us/wacom-impact-affiliate-program/","source_url":"https://community.wacom.com/en-us/wacom-impact-affiliate-program/"},
-{"brand_name":"TechSmith","brand_size":"mid-size","category":"Software / Video Editing / Screen Recording / Creator Tools","commission":"Up to 12%","website":"https://www.techsmith.com/","apply_url":"https://www.techsmith.com/resources/affiliate-partners/","source_url":"https://www.techsmith.com/resources/affiliate-partners/"},
-{"brand_name":"Renderforest","brand_size":"mid-size","category":"Software / Video / Design / Creator Tools","commission":"Up to 40% on monthly subscriptions; up to 20% on yearly subscriptions","website":"https://www.renderforest.com/","apply_url":"https://www.renderforest.com/partners/affiliates","source_url":"https://www.renderforest.com/partners/affiliates"},
-{"brand_name":"Reolink","brand_size":"mid-size","category":"Consumer Tech / Cameras / Smart Home / Creator Tech","commission":"6%-20%","website":"https://reolink.com/","apply_url":"https://reolink.com/ca/affiliate/","source_url":"https://reolink.com/ca/affiliate/"},
-{"brand_name":"Huion","brand_size":"mid-size","category":"Consumer Tech / Drawing Tablets / Creative Hardware","commission":"3%-6%","website":"https://www.huion.com/","apply_url":"https://store.huion.com/ca/pages/affiliate-program","source_url":"https://store.huion.com/ca/pages/affiliate-program"},
-{"brand_name":"Skylum","brand_size":"mid-size","category":"Software / Photo Editing / AI / Creator Tools","commission":"20% starting commission; up to 45%","website":"https://skylum.com/","apply_url":"https://skylum.com/affiliates","source_url":"https://skylum.com/affiliates"},
-{"brand_name":"noblechairs","brand_size":"mid-size","category":"Gaming / Gaming Chairs / PC Setup","commission":"5%","website":"https://www.noblechairs.com/","apply_url":"https://ui.awin.com/merchant-profile/31127","source_url":"https://www.noblechairs.com/en-us/affiliate-program"},
-{"brand_name":"OBSBOT","brand_size":"mid-size","category":"Consumer Tech / Webcams / Streaming / Creator Hardware","commission":"8% base commission","website":"https://www.obsbot.com/","apply_url":"https://obsbotofficial.refersion.com/affiliate/registration","source_url":"https://obsbotofficial.refersion.com/affiliate/registration"},
-{"brand_name":"SANDMARC","brand_size":"mid-size","category":"Consumer Tech / Mobile Filmmaking / Camera Gear / Creator Hardware","commission":"Not publicly listed","website":"https://www.sandmarc.com/","apply_url":"https://www.sandmarc.com/pages/sandmarc-affiliate-program","source_url":"https://www.sandmarc.com/pages/sandmarc-affiliate-program"},
-{"brand_name":"Death Wish Coffee","brand_size":"emerging","category":"Food & Drinks / Coffee","commission":"Not publicly listed","website":"https://deathwishcoffee.com/","apply_url":"https://commerce.sovrn.com/merchants/199034/death-wish-coffee-affiliate-program","source_url":"https://commerce.sovrn.com/merchants/199034/death-wish-coffee-affiliate-program"},
-{"brand_name":"Chamberlain Coffee","brand_size":"emerging","category":"Food & Drinks / Coffee / Creator Lifestyle","commission":"Not publicly listed","website":"https://chamberlaincoffee.com/","apply_url":"https://commerce.sovrn.com/merchants/217861/chamberlain-coffee-affiliate-program","source_url":"https://commerce.sovrn.com/merchants/217861/chamberlain-coffee-affiliate-program"},
-{"brand_name":"Submagic","brand_size":"emerging","category":"Software / AI Video Editing / Creator Tools","commission":"30% recurring for the lifetime of referred customers","website":"https://www.submagic.co/","apply_url":"https://affiliate.submagic.co/","source_url":"https://www.submagic.co/affiliate"},
-{"brand_name":"Captions","brand_size":"emerging","category":"Software / AI Video / Creator Tools","commission":"25% for the first three months of a referred customer's subscription","website":"https://www.captions.ai/","apply_url":"https://www.captions.ai/features/affiliate-marketing-program","source_url":"https://www.captions.ai/features/affiliate-marketing-program"},
-{"brand_name":"PITAKA","brand_size":"emerging","category":"Consumer Tech / Mobile Accessories / Creator Gear","commission":"Up to 10%","website":"https://www.ipitaka.com/","apply_url":"https://www.ipitaka.com/pages/affiliate-program","source_url":"https://www.ipitaka.com/pages/affiliate-program"},
-{"brand_name":"MechKeys","brand_size":"emerging","category":"Gaming / Mechanical Keyboards / PC Peripherals","commission":"5%","website":"https://mechkeys.com/","apply_url":"https://mechkeys.com/pages/affiliate","source_url":"https://mechkeys.com/pages/affiliate"},
-{"brand_name":"TourBox","brand_size":"emerging","category":"Consumer Tech / Creative Controllers / Creator Hardware","commission":"Not publicly listed","website":"https://www.tourboxtech.com/","apply_url":"https://public.cj.com/signup/publisher?advertiserId=7245946","source_url":"https://www.tourboxtech.com/ca/"}
+  {
+    "brand_name": "XPPen",
+    "brand_size": "large",
+    "category": "Consumer Tech / Drawing Tablets / Creative Hardware",
+    "commission": "5%-20%",
+    "website": "https://www.xp-pen.com/",
+    "apply_url": "https://www.xp-pen.com/affiliate/programs",
+    "source_url": "https://www.xp-pen.com/affiliate/programs"
+  },
+  {
+    "brand_name": "Visme",
+    "brand_size": "large",
+    "category": "Software / Design / Presentations / Creator Tools",
+    "commission": "25% recurring for 12 months",
+    "website": "https://www.visme.co/",
+    "apply_url": "https://www.visme.co/partners/",
+    "source_url": "https://www.visme.co/partners/"
+  },
+  {
+    "brand_name": "LearnWorlds",
+    "brand_size": "mid-size",
+    "category": "Software / Courses / Creator Monetization",
+    "commission": "Up to 30% recurring for life",
+    "website": "https://www.learnworlds.com/",
+    "apply_url": "https://www.learnworlds.com/resources/partners/partners-club/",
+    "source_url": "https://www.learnworlds.com/resources/partners/partners-club/"
+  },
+  {
+    "brand_name": "Hollyland",
+    "brand_size": "mid-size",
+    "category": "Consumer Tech / Wireless Audio / Video / Creator Hardware",
+    "commission": "5%-8%",
+    "website": "https://www.hollyland.com/",
+    "apply_url": "https://store.hollyland.com/pages/hollyland-affiliate-program",
+    "source_url": "https://store.hollyland.com/pages/hollyland-affiliate-program"
+  },
+  {
+    "brand_name": "Kapwing",
+    "brand_size": "mid-size",
+    "category": "Software / Video Editing / AI / Creator Tools",
+    "commission": "Not publicly listed",
+    "website": "https://www.kapwing.com/",
+    "apply_url": "https://www.kapwing.com/affiliates",
+    "source_url": "https://www.kapwing.com/affiliates"
+  },
+  {
+    "brand_name": "GEEKOM",
+    "brand_size": "mid-size",
+    "category": "Consumer Tech / Mini PCs / Creator Hardware",
+    "commission": "Up to 6%",
+    "website": "https://www.geekompc.com/",
+    "apply_url": "https://www.geekompc.com/affiliate-program/",
+    "source_url": "https://www.geekompc.com/affiliate-program/"
+  },
+  {
+    "brand_name": "FlexClip",
+    "brand_size": "mid-size",
+    "category": "Software / Video Editing / AI / Creator Tools",
+    "commission": "35% or above",
+    "website": "https://www.flexclip.com/",
+    "apply_url": "https://www.flexclip.com/affiliates.html",
+    "source_url": "https://www.flexclip.com/affiliates.html"
+  },
+  {
+    "brand_name": "JSAUX",
+    "brand_size": "emerging",
+    "category": "Gaming / Handheld Accessories / Consumer Tech",
+    "commission": "7%",
+    "website": "https://jsaux.com/",
+    "apply_url": "https://jsaux.com/pages/affililate",
+    "source_url": "https://jsaux.com/pages/affililate"
+  },
+  {
+    "brand_name": "Planable",
+    "brand_size": "emerging",
+    "category": "Software / Social Media / Creator & Marketing Tools",
+    "commission": "15%-25% of active subscriptions for the first 6 months",
+    "website": "https://planable.io/",
+    "apply_url": "https://planable.io/ambassadors/",
+    "source_url": "https://planable.io/ambassadors/"
+  },
+  {
+    "brand_name": "Vista Social",
+    "brand_size": "emerging",
+    "category": "Software / Social Media Management / Creator Tools",
+    "commission": "20% recurring for 12 months",
+    "website": "https://vistasocial.com/",
+    "apply_url": "https://vistasocial.com/affiliate-marketing/",
+    "source_url": "https://vistasocial.com/affiliate-marketing/"
+  }
 ]
