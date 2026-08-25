@@ -39,7 +39,17 @@ jobs:
           if [ -s data/sponsor_delivery_pending.json ] && [ "$(cat data/sponsor_delivery_pending.json)" != "{}" ]; then
             echo "Pending Monday-success checkpoint exists; resume Discord without rebuilding."
           elif [ ! -s data/sponsor_queue.json ] || [ "$(cat data/sponsor_queue.json)" = "[]" ]; then
-            python src/run_sponsor_discovery_batch.py
+            echo "Queue empty; rebuilding from persistent researched inventory without YouTube discovery/hydration."
+            python - <<'PY'
+          import sys
+          sys.path.insert(0, 'src')
+          import run_sponsor_discovery_batch as batch
+
+          batch._hydrate_creator_metrics = lambda leads, youtube: None
+          batch.YouTubeSponsorScanner.discover_batch = lambda self, *args, **kwargs: ([], {})
+          batch.YouTubeSponsorScanner.discover_backup_batch = lambda self, *args, **kwargs: ([], {})
+          batch.run()
+          PY
           fi
       - name: Dispatch one sponsor transactionally
         env:
