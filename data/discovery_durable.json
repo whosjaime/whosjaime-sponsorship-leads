@@ -8,13 +8,7 @@
     "creator_channel_id": "",
     "creator_subscribers": 428000,
     "creator_genre": "Automotive / Lifestyle / Physical Consumer Tech",
-    "creator_tags": [
-      "automotive",
-      "cars",
-      "lifestyle",
-      "physical consumer tech",
-      "auto accessories"
-    ],
+    "creator_tags": ["automotive", "cars", "lifestyle", "physical consumer tech", "auto accessories"],
     "video_id": "",
     "video_url": "",
     "video_title": "2026 Audi SQ5 Premium Plus: POV Start Up, Test Drive, Walkaround and Review",
@@ -29,13 +23,7 @@
     "email_type": "Public work email",
     "contact_source": "https://www.lasfit.com/pages/official-affiliate-program",
     "contact_source_url": "https://www.lasfit.com/pages/official-affiliate-program",
-    "signals": [
-      "Very recent creator sponsorship",
-      "Repeat small/mid-size creator spend",
-      "Physical consumer hardware",
-      "Official sponsorship program",
-      "Qualified affiliate/influencer contact"
-    ]
+    "signals": ["Very recent creator sponsorship", "Repeat small/mid-size creator spend", "Physical consumer hardware", "Official sponsorship program", "Qualified affiliate/influencer contact"]
   },
   {
     "brand_name": "AndaSeat",
@@ -46,13 +34,7 @@
     "creator_channel_id": "",
     "creator_subscribers": 106000,
     "creator_genre": "Gaming / Physical Consumer Tech",
-    "creator_tags": [
-      "gaming",
-      "PC gaming",
-      "gaming chair",
-      "streaming",
-      "physical consumer tech"
-    ],
+    "creator_tags": ["gaming", "PC gaming", "gaming chair", "streaming", "physical consumer tech"],
     "video_id": "",
     "video_url": "",
     "video_title": "D2r Rotw Unique Item Changes (season 15 Launch Date August 21)",
@@ -67,12 +49,32 @@
     "email_type": "Public work email",
     "contact_source": "https://support.andaseat.com/hc/en-us/requests/new",
     "contact_source_url": "https://support.andaseat.com/hc/en-us/requests/new",
-    "signals": [
-      "Very recent creator sponsorship",
-      "Repeat small/mid-size creator spend",
-      "Physical gaming hardware",
-      "Official sponsorship program",
-      "Qualified marketing collaboration contact"
-    ]
+    "signals": ["Very recent creator sponsorship", "Repeat small/mid-size creator spend", "Physical gaming hardware", "Official sponsorship program", "Qualified marketing collaboration contact"]
+  },
+  {
+    "brand_name": "SHARGE",
+    "brand_domain": "sharge.com",
+    "source_platform": "YouTube",
+    "creator_name": "Specter",
+    "creator_url": "https://www.youtube.com/@spectertech",
+    "creator_channel_id": "",
+    "creator_subscribers": 54000,
+    "creator_genre": "Gaming / Consumer Tech",
+    "creator_tags": ["gaming", "Steam Deck", "physical consumer tech", "charging hardware", "portable power"],
+    "video_id": "",
+    "video_url": "",
+    "video_title": "I Keep Coming Back To These 50 Games On Steamdeck.",
+    "sponsored_date": "2026-07-08",
+    "evidence": "SponsorRadar records SHARGE sponsoring Specter's July 8, 2026 English-language YouTube video 'I Keep Coming Back To These 50 Games On Steamdeck.' Specter has about 54K subscribers. SHARGE sells tangible charging/storage hardware. SHARGE's current official affiliate program explicitly welcomes content creators and social media influencers, offers at least 8% commission, and publishes affiliate@sharge.com for program questions. SponsorGap also identifies SHARGE as a new YouTube advertiser in its August 2026 30-day tracking window, with a placement on Nick Kendall.",
+    "paid_product_placement": true,
+    "sponsor_category": "Consumer Tech",
+    "sponsor_subcategory": "Charging / Portable Power Hardware",
+    "contact_name": "SHARGE Affiliate Team",
+    "contact_title": "Affiliate / Creator Partnerships",
+    "contact_email": "affiliate@sharge.com",
+    "email_type": "Public work email",
+    "contact_source": "https://sharge.com/pages/affiliate-program",
+    "contact_source_url": "https://sharge.com/pages/affiliate-program",
+    "signals": ["Recent creator sponsorship", "Small/mid-size creator spend", "Physical consumer hardware", "Official creator affiliate program", "Qualified affiliate contact", "Fresh August 2026 advertiser activity"]
   }
 ]
