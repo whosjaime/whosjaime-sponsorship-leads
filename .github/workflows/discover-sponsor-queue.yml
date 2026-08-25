@@ -42,6 +42,7 @@ jobs:
         shell: bash
         run: |
           set -o pipefail
+          # run_sponsor_discovery_batch.py remains the YouTube-first engine called by the multisource runner.
           python src/run_sponsor_discovery_multisource.py | tee sponsor_batch.log
       - name: Persist refreshed sponsor queue
         run: |
