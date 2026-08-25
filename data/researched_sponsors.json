@@ -5555,5 +5555,46 @@
       "Official influencer/KOL contact",
       "Active affiliate program"
     ]
+  },
+  {
+    "brand_name": "Snackish",
+    "brand_domain": "eatsnackish.com",
+    "source_platform": "YouTube",
+    "creator_name": "Jeannie B. ASMR",
+    "creator_url": "https://www.youtube.com/channel/UCH5j7XdwR-aEa3O8yTR0I_Q",
+    "creator_channel_id": "UCH5j7XdwR-aEa3O8yTR0I_Q",
+    "creator_subscribers": 172000,
+    "creator_genre": "ASMR / Lifestyle",
+    "creator_tags": [
+      "ASMR",
+      "lifestyle",
+      "food/drink",
+      "snacks",
+      "wellness"
+    ],
+    "video_id": "wSFQ97kbe84",
+    "video_url": "https://www.youtube.com/watch?v=wSFQ97kbe84",
+    "video_title": "Reading More From 1917 Ladies Home Journal!",
+    "sponsored_date": "2026-07-06",
+    "evidence": "Jeannie B. ASMR's public English-language July 6, 2026 video description states 'Thank you, Snackish, for sponsoring this video' and uses #snackishpartner. SponsorRadar currently tracks 19 Snackish YouTube sponsorships across 12 channels with fresh August 2026 activity, including 7 deals in the 50K-250K subscriber tier. Snackish also operates a current Creator Agreement and has an active Director of Influencer & Brand Partnerships.",
+    "paid_product_placement": true,
+    "sponsor_category": "Food & Beverage",
+    "sponsor_subcategory": "Snacks / Potato Chips",
+    "contact_name": "Shelby Newell",
+    "contact_title": "Director of Influencer & Brand Partnerships",
+    "contact_email": "",
+    "email_type": "Verified named partnership contact",
+    "contact_source": "https://www.linkedin.com/posts/shelby-newell-34507459_i-am-so-excited-to-share-that-ive-joined-activity-7460360587819155456-1H09",
+    "contact_source_url": "https://www.linkedin.com/posts/shelby-newell-34507459_i-am-so-excited-to-share-that-ive-joined-activity-7460360587819155456-1H09",
+    "lead_score": 94,
+    "lead_temperature": "Very Hot",
+    "signals": [
+      "Fresh August 2026 creator spend",
+      "Verified direct sponsorship",
+      "Active creator agreement",
+      "Named influencer partnerships director",
+      "Works with 50K-250K creators"
+    ],
+    "date_found": "2026-08-25"
   }
 ]
