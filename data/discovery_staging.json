@@ -1,1 +1,40 @@
-[]
+[
+  {
+    "brand_name": "AndaSeat",
+    "brand_domain": "andaseat.com",
+    "source_platform": "YouTube",
+    "creator_name": "Ginger Gaming Mentor",
+    "creator_url": "https://www.youtube.com/@ggmentor",
+    "creator_channel_id": "",
+    "creator_subscribers": 106000,
+    "creator_genre": "Gaming / Physical Consumer Tech",
+    "creator_tags": [
+      "gaming",
+      "PC gaming",
+      "gaming chair",
+      "streaming",
+      "physical consumer tech"
+    ],
+    "video_id": "",
+    "video_url": "",
+    "video_title": "D2r Rotw Unique Item Changes (season 15 Launch Date August 21)",
+    "sponsored_date": "2026-08-14",
+    "evidence": "SponsorRadar records AndaSeat sponsoring/promoting Ginger Gaming Mentor's August 14, 2026 English-language YouTube video; the description states he has a new chair from AndaSeat and includes an AndaSeat creator link/discount. SponsorRadar tracks repeat AndaSeat creator spend across small and mid-size channels, including Ginger Gaming Mentor (~106K subscribers). AndaSeat sells tangible gaming and ergonomic chairs. AndaSeat's official sponsorship/help pages actively recruit creators and publish marketing@andaseat.com for marketing collaborations and sponsorship applications.",
+    "paid_product_placement": true,
+    "sponsor_category": "Gaming",
+    "sponsor_subcategory": "Gaming Chairs / Ergonomic Furniture",
+    "contact_name": "",
+    "contact_title": "Marketing Collaborations / Sponsorships",
+    "contact_email": "marketing@andaseat.com",
+    "email_type": "Public work email",
+    "contact_source": "https://support.andaseat.com/hc/en-us/requests/new",
+    "contact_source_url": "https://support.andaseat.com/hc/en-us/requests/new",
+    "signals": [
+      "Very recent creator sponsorship",
+      "Repeat small/mid-size creator spend",
+      "Physical gaming hardware",
+      "Official sponsorship program",
+      "Qualified marketing collaboration contact"
+    ]
+  }
+]
