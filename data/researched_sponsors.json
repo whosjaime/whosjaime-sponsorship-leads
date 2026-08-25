@@ -5596,5 +5596,44 @@
       "Works with 50K-250K creators"
     ],
     "date_found": "2026-08-25"
+  },
+  {
+    "brand_name": "Makera",
+    "brand_domain": "makera.com",
+    "source_platform": "YouTube",
+    "creator_name": "Mister Patina",
+    "creator_url": "https://www.youtube.com/@misterpatina",
+    "creator_channel_id": "",
+    "creator_subscribers": 266000,
+    "creator_genre": "DIY & Crafts / Restoration / Maker",
+    "creator_tags": [
+      "DIY",
+      "crafts",
+      "maker",
+      "restoration",
+      "CNC",
+      "physical consumer tech"
+    ],
+    "video_id": "LwmV4mqu1O0",
+    "video_url": "https://www.youtube.com/watch?v=LwmV4mqu1O0",
+    "video_title": "Cnc Milling Bmw Gs Parts With The New Makera Z1!",
+    "sponsored_date": "2026-08-07",
+    "evidence": "SponsorRadar records Makera sponsoring Mister Patina's August 7, 2026 English-titled YouTube video, and identifies the channel at about 266K subscribers. SponsorRadar tracks 61 Makera sponsorships across 37 creators, including Canuck Creator (~72K), Aurora Tech (~124K), and Michael Klements (~125K), showing real small/mid-size creator spend. Makera sells tangible desktop CNC hardware. Makera's official affiliate program explicitly recruits creators and influencers and publishes affiliate@makera.com for program questions.",
+    "paid_product_placement": true,
+    "sponsor_category": "Physical Consumer Tech",
+    "sponsor_subcategory": "Desktop CNC / Maker Hardware",
+    "contact_name": "",
+    "contact_title": "Affiliate / Creator Partnerships",
+    "contact_email": "affiliate@makera.com",
+    "email_type": "Public work email",
+    "contact_source": "https://www.makera.com/pages/affiliate-page",
+    "contact_source_url": "https://www.makera.com/pages/affiliate-page",
+    "signals": [
+      "Recent verified creator sponsorship",
+      "Small/mid-size creator spend",
+      "Physical consumer hardware",
+      "Official creator/influencer affiliate program",
+      "Qualified affiliate contact"
+    ]
   }
 ]
