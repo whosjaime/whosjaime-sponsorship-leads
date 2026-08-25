@@ -1,0 +1,78 @@
+name: Merge Inline Sponsor Discovery
+
+on:
+  issues:
+    types: [opened]
+
+permissions:
+  contents: write
+  issues: read
+
+jobs:
+  merge:
+    if: startsWith(github.event.issue.title, 'MERGE INLINE SPONSOR DISCOVERY')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Merge exact verified candidate from issue payload
+        env:
+          CANDIDATE_JSON: ${{ github.event.issue.body }}
+        run: |
+          python - <<'PY'
+          import json
+          import os
+          from pathlib import Path
+
+          researched_path = Path('data/researched_sponsors.json')
+          sent_path = Path('data/sent_sponsor_keys.json')
+          researched = json.loads(researched_path.read_text(encoding='utf-8')) if researched_path.exists() else []
+          sent = json.loads(sent_path.read_text(encoding='utf-8')) if sent_path.exists() else []
+          lead = json.loads(os.environ['CANDIDATE_JSON'])
+
+          def norm(value):
+              return ''.join(ch for ch in (value or '').lower() if ch.isalnum())
+
+          brand_name = str(lead.get('brand_name') or '').strip()
+          domain_name = str(lead.get('brand_domain') or '').strip()
+          platform = str(lead.get('source_platform') or '').strip().lower()
+          if not brand_name or not domain_name:
+              raise SystemExit('INVALID: missing brand/domain')
+          if platform == 'youtube' and not (lead.get('video_id') and lead.get('video_url')):
+              raise SystemExit('INVALID: YouTube candidate requires exact video_id and video_url')
+          if not (lead.get('contact_email') or (lead.get('contact_name') and lead.get('contact_title'))):
+              raise SystemExit('INVALID: missing qualified outreach contact')
+
+          brand = norm(brand_name)
+          domain = norm(domain_name)
+          existing_brands = {norm(x.get('brand_name')) for x in researched}
+          existing_domains = {norm(x.get('brand_domain')) for x in researched}
+          sent_norm = {norm(x) for x in sent}
+
+          if brand in existing_brands or domain in existing_domains:
+              print(f'DUPLICATE_RESEARCH: {brand_name}')
+              raise SystemExit(0)
+          if norm('brand:' + brand_name) in sent_norm or norm('domain:' + domain_name) in sent_norm:
+              print(f'DUPLICATE_SENT: {brand_name}')
+              raise SystemExit(0)
+
+          researched.append(lead)
+          researched_path.write_text(json.dumps(researched, indent=2, ensure_ascii=False) + '\n', encoding='utf-8')
+          print(f'ADDED: {brand_name}')
+          PY
+      - name: Commit inline discovery merge
+        run: |
+          git config user.name "sponsor-discovery-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/researched_sponsors.json
+          if git diff --cached --quiet; then
+            echo "No new inline sponsor candidate to merge."
+            exit 0
+          fi
+          git commit -m "Merge inline verified sponsor discovery [skip ci]"
+          git pull --rebase origin main
+          git push origin HEAD:main
