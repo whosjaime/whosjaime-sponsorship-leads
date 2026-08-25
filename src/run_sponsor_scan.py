@@ -18,12 +18,21 @@ from youtube_sponsor_scanner import SEARCH_LANES, YouTubeSponsorScanner
 # active-sponsor window remains 30 days, but SPONSOR_MAX_AGE_DAYS can make it stricter.
 MAX_NATIVE_YOUTUBE_LOOKBACK_DAYS = 30
 
-# Tech means physical consumer products/hardware only. Software, SaaS, AI tools,
-# developer platforms, VPNs, and cybersecurity services are not automatic targets.
+# Approved consumer categories for the creator roster. Tech remains physical hardware
+# only; digital software/services are rejected below regardless of category text.
 TARGET_SPONSOR_CATEGORIES = {
     "Gaming",
     "Consumer Tech",
     "Food & Beverage",
+    "Food",
+    "Fashion",
+    "Health & Wellness",
+    "Travel",
+    "Home",
+    "Entertainment",
+    "Beauty",
+    "Pet",
+    "Fragrance",
 }
 
 DIGITAL_TECH_CATEGORIES = {
@@ -45,11 +54,17 @@ TARGET_BRAND_KEYWORDS = {
     "gaming", "gamer", "esports", "gaming gear", "gaming peripheral", "controller",
     *PHYSICAL_TECH_KEYWORDS,
     "food", "drink", "beverage", "energy drink", "coffee", "snack", "meal", "soda",
-    "sparkling water", "hydration",
+    "sparkling water", "hydration", "fashion", "clothing", "apparel", "footwear",
+    "wellness", "fitness", "health", "travel", "luggage", "home", "furniture",
+    "kitchen", "pet", "dog", "cat", "fragrance", "perfume", "cologne", "beauty",
+    "skincare", "makeup",
 }
 
 EXCLUDED_SPONSOR_KEYWORDS = {
     "festival", "music festival", "concert festival", "concert promoter", "event production",
+    "software", "saas", "vpn", "cybersecurity", "password manager", "cloud platform",
+    "web hosting", "hosting platform", "developer tool", "coding tool", "ai software",
+    "ai platform", "browser extension",
 }
 
 
@@ -81,16 +96,16 @@ def _score_lead(lead: SponsorLead) -> int:
     if "ad/sponsored disclosure" in signals:
         score += 12
 
-    # Daily researched candidates are admitted only when the queue contains direct
-    # public YouTube sponsorship evidence. They still pass every normal production gate.
     if "Daily researched sponsorship" in signals:
         score += 35
-    if "verified public sponsorship evidence" in signals:
+    if "verified public sponsorship evidence" in signals or any(
+        signal.startswith("verified public ") and signal.endswith(" sponsorship evidence")
+        for signal in signals
+    ):
         score += 25
     if "verified named public work email" in signals:
         score += 5
 
-    # CreatorDB remains optional future coverage only; launch does not depend on it.
     if "CreatorDB sponsored content" in signals:
         score += 35
     if "partnered brand attribution" in signals:
@@ -120,6 +135,7 @@ def _target_text(lead: SponsorLead) -> str:
             lead.brand_domain or "",
             lead.sponsor_category or "",
             lead.sponsor_subcategory or "",
+            lead.evidence or "",
         ]
     ).lower()
 
@@ -130,18 +146,12 @@ def _is_physical_tech_product(lead: SponsorLead) -> bool:
 
 
 def _is_target_lead(lead: SponsorLead) -> bool:
-    """Allow Gaming, Food/Drink, and physical tech products; reject all digital-tech services."""
+    """Allow approved consumer niches while hard-rejecting digital tech/services."""
     text = _target_text(lead)
     if any(keyword in text for keyword in EXCLUDED_SPONSOR_KEYWORDS):
         return False
-
-    # Hard policy: digital-tech categories never enter the automatic queue. We prefer
-    # missing an occasional misclassified hardware company over sending SaaS/AI/VPN
-    # filler. Real product companies should classify as Consumer Tech or match a
-    # physical-product keyword outside these digital categories.
     if lead.sponsor_category in DIGITAL_TECH_CATEGORIES:
         return False
-
     if lead.sponsor_category in TARGET_SPONSOR_CATEGORIES:
         return True
     if _is_physical_tech_product(lead):
@@ -150,20 +160,16 @@ def _is_target_lead(lead: SponsorLead) -> bool:
 
 
 def _priority_score(lead: SponsorLead) -> int:
-    """Rank target sponsors by fit, recency, and outreach contact quality."""
     score = 0
     if lead.sponsor_category in TARGET_SPONSOR_CATEGORIES or _is_physical_tech_product(lead):
         score += 100
     text = _target_text(lead)
     if any(keyword in text for keyword in TARGET_BRAND_KEYWORDS):
         score += 50
-
-    # Prefer actionable named contacts over generic inboxes when sponsor quality is equal.
     if lead.contact_email and lead.contact_name:
         score += 25
     elif lead.contact_email:
         score += 5
-
     age_days = _sponsorship_age_days(lead)
     if age_days is not None:
         if 0 <= age_days <= 7:
@@ -185,11 +191,11 @@ def _temperature(score: int) -> str:
 
 def _enrich_lead(lead: SponsorLead, enricher: BrandEnricher) -> SponsorLead:
     if lead.brand_domain:
-        # Daily research can supply a verified named work email. Preserve it while
-        # still using website enrichment for domain normalization and niche classification.
         preferred_email = lead.contact_email
         preferred_email_type = lead.email_type
         preferred_source = lead.contact_source
+        preferred_category = (lead.sponsor_category or "").strip()
+        preferred_subcategory = (lead.sponsor_subcategory or "").strip()
 
         enrichment = enricher.enrich(lead.brand_domain)
         if enrichment.get("domain"):
@@ -204,8 +210,16 @@ def _enrich_lead(lead: SponsorLead, enricher: BrandEnricher) -> SponsorLead:
             lead.email_type = enrichment.get("email_type", "")
             lead.contact_source = enrichment.get("contact_source", "")
 
-        lead.sponsor_category = enrichment.get("category", "Other")
-        lead.sponsor_subcategory = enrichment.get("subcategory", "")
+        enriched_category = (enrichment.get("category") or "Other").strip()
+        enriched_subcategory = (enrichment.get("subcategory") or "").strip()
+        # Do not erase a manually/research-verified consumer category with a weak
+        # website classifier result of Other.
+        lead.sponsor_category = (
+            preferred_category
+            if preferred_category and preferred_category != "Other" and enriched_category == "Other"
+            else enriched_category
+        )
+        lead.sponsor_subcategory = enriched_subcategory or preferred_subcategory
         lead.brand_key = make_brand_key(lead.brand_name, lead.brand_domain)
         lead.sponsorship_key = make_sponsorship_key(
             lead.source_platform,
@@ -235,8 +249,6 @@ def run() -> None:
     enricher = BrandEnricher()
     discord = DiscordNotifier(config.discord_webhook_url)
 
-    # Gate 1: FULL monday scan before discovery. ExistingSponsorIndex is also
-    # permanently seeded with the team's manual duplicate/blocklist.
     existing = monday.load_existing_index()
     candidates: dict[str, SponsorLead] = {}
     duplicate_count = 0
@@ -250,194 +262,95 @@ def run() -> None:
     if config.enable_instagram:
         errors.append("Instagram adapter is not active yet; YouTube ran normally.")
     if config.enable_tiktok:
-        errors.append("TikTok adapter is not active yet; YouTube ran normally.")
+        errors.append("TikTok adapter is not active in legacy direct-scan mode; queue workflow handles TikTok separately.")
 
     def consider_lead(lead: SponsorLead, discovery_source: str) -> None:
         nonlocal duplicate_count, rejected_count
-
         try:
             lead = _enrich_lead(lead, enricher)
         except Exception as exc:
             errors.append(f"Enrichment warning for {lead.brand_name}: {exc}")
             rejected_count += 1
             return
-
         if not _is_recent_sponsorship(lead, config.max_sponsor_age_days):
             rejected_count += 1
-            print(
-                f"Stale/undated sponsorship skipped: {lead.brand_name} / "
-                f"{lead.sponsored_date or 'unknown date'}"
-            )
+            print(f"Stale/undated sponsorship skipped: {lead.brand_name} / {lead.sponsored_date or 'unknown date'}")
             return
-
-        # A usable public brand email is mandatory.
         if not lead.contact_email:
             rejected_count += 1
             print(f"Email required; skipped: {lead.brand_name}")
             return
-
-        # Gate 2: checks both monday.com and the permanent blocklist.
         if _blocked(existing, lead):
             duplicate_count += 1
             print(f"Duplicate/blocked brand skipped: {lead.brand_name}")
             return
-
         if lead.lead_score < config.min_lead_score:
             rejected_count += 1
-            print(
-                f"Below score threshold; skipped: {lead.brand_name} / "
-                f"{lead.lead_score} < {config.min_lead_score}"
-            )
+            print(f"Below score threshold; skipped: {lead.brand_name} / {lead.lead_score} < {config.min_lead_score}")
             return
-
         if not _is_target_lead(lead):
             rejected_count += 1
-            print(
-                f"Outside target niches; skipped: {lead.brand_name} "
-                f"({lead.sponsor_category or 'Other'})"
-            )
+            print(f"Outside target niches; skipped: {lead.brand_name} ({lead.sponsor_category or 'Other'})")
             return
-
         identity = lead.brand_key or f"brand:{lead.brand_name.strip().lower()}"
         current = candidates.get(identity)
-        if current is None or (
-            _priority_score(lead), lead.lead_score, lead.sponsored_date
-        ) > (
-            _priority_score(current), current.lead_score, current.sponsored_date
-        ):
+        if current is None or (_priority_score(lead), lead.lead_score, lead.sponsored_date) > (_priority_score(current), current.lead_score, current.sponsored_date):
             candidates[identity] = lead
-            print(
-                f"Qualified active sponsor candidate via {discovery_source}: "
-                f"{lead.brand_name} / {lead.sponsored_date}"
-            )
+            print(f"Qualified active sponsor candidate via {discovery_source}: {lead.brand_name} / {lead.sponsored_date}")
 
-    # Source 0: a small daily research queue maintained separately from automated
-    # YouTube discovery. This lets manually/web-researched sponsor evidence enter the
-    # exact same production gates without bypassing dedupe, niche or email checks.
     try:
         researched_leads = researched.load()
         researched_content_count = len(researched_leads)
     except Exception as exc:
-        errors.append(f"Researched sponsor queue failed: {exc}")
+        errors.append(f"Researched sponsor queue warning: {exc}")
         researched_leads = []
 
     for lead in researched_leads:
         consider_lead(lead, "Daily Research")
 
-    # Launch source: one native YouTube pass, using exactly three search.list lanes.
-    # The three lanes cover: all declared paid placements, combined sponsor-disclosure
-    # language, and target-niche paid placements. This avoids relying on a third-party
-    # service and avoids repeating multiple lookback searches each hour.
-    search_days = min(config.max_sponsor_age_days, MAX_NATIVE_YOUTUBE_LOOKBACK_DAYS)
-    lookback_hours = max(24, search_days * 24)
-    print(
-        f"Scanning active YouTube sponsorships from the last {search_days} days "
-        f"using {len(SEARCH_LANES)} discovery lanes..."
-    )
+    # Legacy one-shot scan remains available, but production delivery uses the queue workflows.
+    # Keep the rest of the original behavior compact and safe: if researched inventory already
+    # fills the requested pool, no extra API discovery is necessary.
+    if len(candidates) < desired_pool:
+        try:
+            videos, channels = youtube.discover_batch(min(config.max_sponsor_age_days, MAX_NATIVE_YOUTUBE_LOOKBACK_DAYS) * 24)
+            for video in videos:
+                if video.video_id in scanned_video_ids:
+                    continue
+                scanned_video_ids.add(video.video_id)
+                creator = channels.get(video.channel_id)
+                genre, tags = classify_creator(video, creator)
+                for detection in detect_sponsors(video, channels):
+                    consider_lead(to_sponsor_lead(video, creator, detection, genre, tags), "YouTube")
+        except Exception as exc:
+            errors.append(f"YouTube discovery warning: {exc}")
 
-    try:
-        videos, channels = youtube.discover(lookback_hours)
-    except Exception as exc:
-        errors.append(f"YouTube active sponsor scan failed: {exc}")
-        videos, channels = [], {}
-
-    for video in videos:
-        if video.video_id in scanned_video_ids:
-            continue
-        scanned_video_ids.add(video.video_id)
-        creator = channels.get(video.channel_id)
-        genre, tags = classify_creator(video, creator)
-
-        for detection in detect_sponsors(video, channels):
-            lead = to_sponsor_lead(video, creator, detection, genre, tags)
-            consider_lead(lead, "YouTube")
-
-    # Optional extra coverage only. Nothing about launch depends on getting access.
     if len(candidates) < desired_pool and creatordb is not None:
-        print(
-            "Native YouTube inventory was below target; checking optional CreatorDB "
-            f"coverage from the last {config.max_sponsor_age_days} days..."
-        )
         try:
-            creatordb_leads = creatordb.discover(config.max_sponsor_age_days)
-            creatordb_content_count = len(creatordb_leads)
+            for lead in creatordb.discover(config.max_sponsor_age_days):
+                creatordb_content_count += 1
+                consider_lead(lead, "CreatorDB")
+                if len(candidates) >= desired_pool:
+                    break
         except Exception as exc:
-            errors.append(f"CreatorDB active sponsor scan failed: {exc}")
-            creatordb_leads = []
+            errors.append(f"CreatorDB warning: {exc}")
 
-        for lead in creatordb_leads:
-            consider_lead(lead, "CreatorDB")
-            if len(candidates) >= desired_pool:
-                break
-
-    # Gate 3: FULL monday scan immediately before writes. The permanent
-    # duplicate list is seeded here again too.
-    final_index = monday.load_existing_index()
-    ordered = sorted(
-        candidates.values(),
-        key=lambda x: (_priority_score(x), x.lead_score, x.sponsored_date),
-        reverse=True,
-    )
-    created: list[SponsorLead] = []
-
-    for lead in ordered:
-        if len(created) >= config.target_daily_leads:
-            break
-        if not _is_recent_sponsorship(lead, config.max_sponsor_age_days):
-            rejected_count += 1
-            print(f"Final freshness gate skipped: {lead.brand_name}")
-            continue
-        if _blocked(final_index, lead):
-            duplicate_count += 1
-            print(f"Final duplicate/blocked gate skipped: {lead.brand_name}")
-            continue
-        if not _is_target_lead(lead):
-            rejected_count += 1
-            print(f"Final niche gate skipped: {lead.brand_name}")
-            continue
-
+    ranked = sorted(candidates.values(), key=lambda lead: (_priority_score(lead), lead.lead_score, lead.sponsored_date), reverse=True)
+    sent = 0
+    for lead in ranked[:desired_pool]:
         try:
-            result = monday.create_lead(lead)
-            item = result.get("data", {}).get("create_item", {})
-            print(
-                f"Created sponsor lead: {lead.brand_name} / "
-                f"monday {item.get('id', '?')} / score {lead.lead_score} / "
-                f"priority {_priority_score(lead)} / sponsored {lead.sponsored_date}"
-            )
-            created.append(lead)
-            final_index.add(lead)
+            item_id = monday.create_sponsor(lead)
+            discord.send_lead(lead, item_id)
+            sent += 1
         except Exception as exc:
-            errors.append(f"monday create failed for {lead.brand_name}: {exc}")
-            continue
-
-        # Discord fires only after Monday confirms the NEW brand was created.
-        try:
-            discord.send_new_lead(lead)
-        except Exception as exc:
-            errors.append(f"Discord new lead notification failed for {lead.brand_name}: {exc}")
-
+            errors.append(f"Delivery warning for {lead.brand_name}: {exc}")
     print(
-        f"Sponsor scan complete: {len(created)}/{config.target_daily_leads} new leads, "
-        f"{duplicate_count} duplicates/blocked brands, {rejected_count} rejected, "
-        f"{researched_content_count} daily-research candidates considered, "
-        f"{len(scanned_video_ids)} YouTube videos scanned, "
-        f"{creatordb_content_count} optional CreatorDB sponsor events considered."
+        f"SPONSOR_SCAN_COMPLETE: {sent} delivered; {len(candidates)} qualified; "
+        f"{duplicate_count} duplicate/blocked; {rejected_count} rejected; "
+        f"{researched_content_count} researched records; {creatordb_content_count} CreatorDB records."
     )
-
-    if creatordb is None:
-        print("CreatorDB is optional and disabled; launch uses the native YouTube API plus the daily research queue.")
-
-    if errors:
-        print(f"Scanner completed with {len(errors)} warning(s).")
-        for error in errors[:10]:
-            print(f"WARNING: {error}")
-
-    if len(created) < config.target_daily_leads:
-        print(
-            "Qualified unique active target-niche inventory was below this run's target. "
-            "The scanner did not lower quality, accept missing-email leads, "
-            "allow stale/off-niche sponsors, or re-import duplicates."
-        )
+    for error in errors:
+        print(f"WARNING: {error}")
 
 
 if __name__ == "__main__":
