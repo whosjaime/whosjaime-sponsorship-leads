@@ -1,0 +1,1 @@
+Trigger protected discovery merge for verified Prusa candidate.
