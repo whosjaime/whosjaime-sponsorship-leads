@@ -1,1 +1,31 @@
-[]
+[
+  {
+    "brand_name": "SHARGE",
+    "brand_domain": "sharge.com",
+    "source_platform": "YouTube",
+    "creator_name": "Specter",
+    "creator_url": "https://www.youtube.com/@spectertech",
+    "creator_channel_id": "",
+    "creator_subscribers": 54000,
+    "creator_genre": "Gaming / Consumer Tech",
+    "creator_tags": [
+      "gaming",
+      "Steam Deck",
+      "physical consumer tech",
+      "charging hardware",
+      "portable power"
+    ],
+    "video_id": "",
+    "video_url": "",
+    "video_title": "I Keep Coming Back To These 50 Games On Steamdeck.",
+    "sponsored_date": "2026-07-08",
+    "evidence": "SponsorRadar records SHARGE sponsoring Specter's July 8, 2026 English-language YouTube video 'I Keep Coming Back To These 50 Games On Steamdeck.' Specter has about 54K subscribers. SHARGE sells tangible charging/storage hardware. SHARGE's current official affiliate program explicitly welcomes content creators and social media influencers, offers at least 8% commission, and publishes affiliate@sharge.com for program questions. SponsorGap also identifies SHARGE as a new YouTube advertiser in its August 2026 30-day tracking window, with a placement on Nick Kendall.",
+    "paid_product_placement": true,
+    "sponsor_category": "Consumer Tech",
+    "sponsor_subcategory": "Charging / Portable Power Hardware",
+    "contact_name": "SHARGE Affiliate Team",
+    "contact_title": "Affiliate / Creator Partnerships",
+    "contact_email": "affiliate@sharge.com",
+    "contact_source_url": "https://sharge.com/pages/affiliate-program"
+  }
+]
