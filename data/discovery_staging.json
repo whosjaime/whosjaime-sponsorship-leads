@@ -1,1 +1,28 @@
-[]
+[
+  {
+    "brand_name": "Redwood Outdoors",
+    "brand_domain": "redwoodoutdoors.com",
+    "creator_name": "sethwilmoth",
+    "creator_url": "https://www.instagram.com/sethwilmoth/",
+    "creator_channel_id": "",
+    "creator_genre": "Home & DIY / Wellness",
+    "creator_tags": [
+      "home",
+      "DIY",
+      "wellness",
+      "sauna",
+      "outdoor living"
+    ],
+    "source_platform": "Instagram",
+    "video_url": "https://www.instagram.com/p/Db4akeAAAwJ/",
+    "video_id": "Db4akeAAAwJ",
+    "video_title": "Redwood Outdoors paid sauna partnership post",
+    "sponsored_date": "2026-08-11",
+    "evidence": "CollabFeed tracks a verified paid Instagram partnership between @sethwilmoth and Redwood Outdoors posted August 11, 2026. Redwood Outdoors' official affiliate program is active and explicitly says it is most suitable for influencers or brand advocates promoting via social accounts including Instagram, Twitch and YouTube. Qualified outreach contact is Evelyn Crespin, current Brand Marketing Manager at Redwood Outdoors, verified by The Org's current Marketing and Sales team listing.",
+    "paid_product_placement": true,
+    "contact_name": "Evelyn Crespin",
+    "contact_title": "Brand Marketing Manager",
+    "contact_email": "",
+    "contact_source_url": "https://theorg.com/org/redwood-outdoors/teams/marketing-and-sales"
+  }
+]
