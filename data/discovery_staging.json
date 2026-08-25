@@ -1,1 +1,31 @@
-[]
+[
+  {
+    "brand_name": "Prusa",
+    "brand_domain": "prusa3d.com",
+    "source_platform": "YouTube",
+    "creator_name": "Canuck Creator",
+    "creator_url": "https://www.youtube.com/@CanuckCreator",
+    "creator_channel_id": "",
+    "creator_subscribers": 72000,
+    "creator_genre": "Physical Consumer Tech / 3D Printing",
+    "creator_tags": [
+      "physical consumer tech",
+      "3D printing",
+      "maker",
+      "DIY",
+      "hardware"
+    ],
+    "video_id": "osC4111AUvQ",
+    "video_url": "https://www.youtube.com/watch?v=osC4111AUvQ",
+    "video_title": "PRUSA CORE ONE+ INDX - Unbox and SETUP #livestream #3dprinting",
+    "sponsored_date": "2026-08-23",
+    "evidence": "SponsorRadar currently identifies Prusa as the sponsor of Canuck Creator's PRUSA CORE ONE+ INDX livestream and tracks 67 Prusa sponsorships across 24 creators, including multiple creators around 57K-72K subscribers. A current public video index resolves the exact August 23, 2026 YouTube video as osC4111AUvQ. Prusa sells tangible 3D-printer hardware and operates an official affiliate program that explicitly allows promotion through social media and recorded videos. Prusa Research's current official LinkedIn company profile identifies Rudolf Krcmar as CMO, providing a verified named current marketing decision-maker for outreach.",
+    "paid_product_placement": true,
+    "sponsor_category": "Consumer Tech",
+    "sponsor_subcategory": "3D Printing Hardware",
+    "contact_name": "Rudolf Krcmar",
+    "contact_title": "CMO",
+    "contact_email": "",
+    "contact_source_url": "https://www.linkedin.com/company/prusa3d"
+  }
+]
