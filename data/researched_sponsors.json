@@ -5725,5 +5725,41 @@
     "email_type": "Public partnership email",
     "contact_source": "https://radiacode.com/support",
     "contact_source_url": "https://radiacode.com/support"
+  },
+  {
+    "brand_name": "CHITA LIVING",
+    "brand_domain": "chitaliving.com",
+    "source_platform": "YouTube",
+    "creator_name": "Designed to the Nines",
+    "creator_url": "https://www.youtube.com/@designedtothenines",
+    "creator_channel_id": "",
+    "creator_subscribers": 464000,
+    "creator_genre": "DIY / Home / Lifestyle",
+    "creator_tags": [
+      "home",
+      "DIY",
+      "lifestyle",
+      "interior design",
+      "furniture"
+    ],
+    "video_id": "VFMxHuvkWTk",
+    "video_url": "https://www.youtube.com/watch?v=VFMxHuvkWTk",
+    "video_title": "Surprise Small Living Room Makeover For My Daughter!",
+    "sponsored_date": "2026-07-02",
+    "evidence": "SponsorRadar identifies CHITA LIVING as the sponsor of Designed to the Nines' July 2, 2026 English-language YouTube video. The channel has approximately 464K subscribers. CHITA LIVING currently operates an official influencer sponsorship program inviting creators to collaborate on campaigns and an affiliate program for content influencers. Current public professional sources identify Yve Zheng as Brand Marketing Director at CHITA LIVING, a qualified named marketing contact.",
+    "paid_product_placement": true,
+    "sponsor_category": "Home",
+    "sponsor_subcategory": "Furniture / Home Furnishings",
+    "contact_name": "Yve Zheng",
+    "contact_title": "Brand Marketing Director",
+    "contact_email": "",
+    "email_type": "",
+    "contact_source": "https://www.linkedin.com/in/yve-yi-zheng-1843bb142",
+    "contact_source_url": "https://www.linkedin.com/in/yve-yi-zheng-1843bb142",
+    "signals": [
+      "Verified recent creator sponsorship",
+      "Official influencer program",
+      "Current named brand marketing contact"
+    ]
   }
 ]
