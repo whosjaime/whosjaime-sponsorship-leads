@@ -1,1 +1,28 @@
-[]
+[
+  {
+    "brand_name": "VTOMAN",
+    "brand_domain": "vtoman.com",
+    "source_platform": "YouTube",
+    "creator_name": "Do It With Dan",
+    "creator_url": "https://www.youtube.com/@doitwithdan",
+    "creator_channel_id": "UCrAmAHSuRHtlZx8zTW3Au9Q",
+    "creator_subscribers": 1260000,
+    "creator_genre": "Automotive / DIY / Lifestyle",
+    "creator_tags": ["automotive", "DIY", "outdoors", "RV", "power stations", "physical consumer tech"],
+    "video_id": "gu13bjOHgRY",
+    "video_url": "https://www.youtube.com/watch?v=gu13bjOHgRY",
+    "video_title": "We're Converting A Massive Box Truck Into An Rv",
+    "sponsored_date": "2026-08-01",
+    "evidence": "SponsorRadar identifies VTOMAN sponsoring Do It With Dan's August 1, 2026 English-language YouTube video 'We're Converting A Massive Box Truck Into An Rv' with a VTOMAN FlashSpeed 2400 creator promotion. SponsorRadar tracks 28 VTOMAN sponsorships across 24 creators and shows VTOMAN also sponsoring smaller channels including Urban Vanlife (~61K), Little Spanish Farmstead (~96K), and Mike Fn Garage (~97K). VTOMAN sells tangible portable power stations, batteries, solar panels and automotive power hardware. VTOMAN's official contact page publishes influencer@vtoman.com specifically for KOL/influencer collaboration and affiliate@vtoman.com for its active affiliate program.",
+    "paid_product_placement": true,
+    "sponsor_category": "Physical Consumer Tech",
+    "sponsor_subcategory": "Portable Power / Outdoor Automotive Hardware",
+    "contact_name": "",
+    "contact_title": "KOL / Influencer Collaboration",
+    "contact_email": "influencer@vtoman.com",
+    "email_type": "Public work email",
+    "contact_source": "https://vtoman.com/pages/contact-us",
+    "contact_source_url": "https://vtoman.com/pages/contact-us",
+    "signals": ["Recent August 2026 creator sponsorship", "Small/mid-size creator spend", "Physical consumer hardware", "Official influencer/KOL contact", "Active affiliate program"]
+  }
+]
