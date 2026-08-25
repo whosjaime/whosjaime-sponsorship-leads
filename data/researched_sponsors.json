@@ -1458,26 +1458,38 @@
     "contact_source_url": "https://ohuhu.com/pages/affiliate"
   },
   {
-    "brand_name": "Level8 Luggage",
+    "brand_name": "LEVEL8",
     "brand_domain": "level8cases.com",
     "creator_name": "Nonstop Eurotrip",
     "creator_url": "https://www.youtube.com/@nonstopeurotrip",
     "creator_channel_id": "",
-    "creator_genre": "Travel",
+    "creator_genre": "Travel / Lifestyle",
     "creator_tags": [
       "travel",
-      "trains",
-      "luggage",
-      "travel gear",
-      "transport"
+      "lifestyle",
+      "vlog",
+      "luggage"
     ],
-    "video_url": "https://www.youtube.com/watch?v=-Y2syahNMik",
-    "video_title": "Should You Take China's MOST POPULAR Sleeper Train Route?",
-    "sponsored_date": "2026-07-10",
-    "evidence": "SponsorRadar records Nonstop Eurotrip's July 10, 2026 English-language YouTube video 'Should You Take China's MOST POPULAR Sleeper Train Route?' as sponsored by Level8 Luggage, and tracks repeated Level8 sponsorships on the channel. LEVEL8 sells physical luggage/travel gear; its official site publishes juncy.zeng@level8cases.com specifically for Brand Cooperation / cross-brand collaborations. The GitHub repository was rechecked immediately before staging and surfaced no Level8 or level8cases.com match.",
+    "video_url": "https://www.youtube.com/watch?v=4GaEVK43I6M",
+    "video_title": "Inside Brazil’s Incredible Luxury Bus! (São Paulo to Rio) 🇧🇷",
+    "sponsored_date": "2026-08-14",
+    "evidence": "SponsorRadar identifies LEVEL8 / Level 8 Cases as the sponsor of Nonstop Eurotrip's August 14, 2026 English-language YouTube video. SponsorRadar tracks LEVEL8 buying travel creators in the 50K–250K range, including Nonstop Eurotrip. LEVEL8 sells physical luggage/travel gear. Its official contact page publishes level8group@level8cases.com specifically as the Media Partnership email, separate from customer service, and its active affiliate program explicitly supports content creators and YouTube promotion.",
     "paid_product_placement": true,
-    "contact_email": "juncy.zeng@level8cases.com",
-    "contact_source_url": "https://www.level8.com.cn/service.html"
+    "contact_email": "level8group@level8cases.com",
+    "contact_source_url": "https://www.level8.com.cn/service.html",
+    "source_platform": "YouTube",
+    "creator_subscribers": 163000,
+    "video_id": "4GaEVK43I6M",
+    "sponsor_category": "Travel",
+    "sponsor_subcategory": "Luggage / Travel Gear",
+    "email_type": "Official media partnership email",
+    "contact_source": "https://uk.level8cases.com/pages/contactdetails-2",
+    "signals": [
+      "Recent creator sponsorship",
+      "Small/mid-size creator spend",
+      "Official media partnership contact",
+      "Active creator affiliate program"
+    ]
   },
   {
     "brand_name": "WORX",
