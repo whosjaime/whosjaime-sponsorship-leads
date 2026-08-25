@@ -4,7 +4,7 @@ import html
 import re
 from dataclasses import dataclass
 from datetime import datetime, timedelta, timezone
-from urllib.parse import quote_plus, urlparse
+from urllib.parse import quote_plus
 
 import requests
 
@@ -80,7 +80,7 @@ class TikTokSponsorScanner:
         urls: list[str] = []
         seen: set[str] = set()
         for match in re.finditer(r'https?://(?:www\.)?tiktok\.com/@[^\s"&<>]+/video/\d+', text):
-            candidate = match.group(0).rstrip('.,;:!?)\\\"\'')
+            candidate = match.group(0).rstrip(".,;:!?)]}\\\"'")
             parsed = VIDEO_URL_RE.search(candidate)
             if not parsed:
                 continue
