@@ -12,7 +12,22 @@ from sponsor_dedupe import make_brand_key, make_sponsorship_key, normalize_brand
 from sponsor_models import SponsorLead
 
 
-TIKTOK_SEARCH_LANES = (
+# Food/drink is intentionally searched first because it is broadly compatible with
+# the current creator roster and was underrepresented in the sponsor delivery mix.
+TIKTOK_FOOD_DRINK_SEARCH_LANES = (
+    'site:tiktok.com/@*/video/ "#ad" "snack"',
+    'site:tiktok.com/@*/video/ "#ad" "drink"',
+    'site:tiktok.com/@*/video/ "#ad" "coffee"',
+    'site:tiktok.com/@*/video/ "#ad" "food"',
+    'site:tiktok.com/@*/video/ "#sponsored" "snack"',
+    'site:tiktok.com/@*/video/ "#sponsored" "drink"',
+    'site:tiktok.com/@*/video/ "paid partnership" "coffee"',
+    'site:tiktok.com/@*/video/ "paid partnership" "food"',
+    'site:tiktok.com/@*/video/ "sponsored by" "protein"',
+    'site:tiktok.com/@*/video/ "sponsored by" "beverage"',
+)
+
+TIKTOK_GENERAL_SEARCH_LANES = (
     'site:tiktok.com/@*/video/ "#ad"',
     'site:tiktok.com/@*/video/ "#sponsored"',
     'site:tiktok.com/@*/video/ "paid partnership"',
@@ -22,6 +37,8 @@ TIKTOK_SEARCH_LANES = (
     'site:tiktok.com/@*/video/ "sponsored by"',
     'site:tiktok.com/@*/video/ "partnering with"',
 )
+
+TIKTOK_SEARCH_LANES = (*TIKTOK_FOOD_DRINK_SEARCH_LANES, *TIKTOK_GENERAL_SEARCH_LANES)
 
 DISCLOSURE_RE = re.compile(
     r'(?i)(?:^|[\s#])(?:ad|sponsored|paidpartner|paidpartnership|brandpartner)(?:\b|_)|'
@@ -129,6 +146,18 @@ class TikTokSponsorScanner:
     def _brand_from_caption(caption: str, creator_username: str) -> str:
         if not DISCLOSURE_RE.search(caption or ''):
             return ''
+
+        # Prefer a brand explicitly named in the sponsorship phrase before falling
+        # back to tagged handles. This avoids choosing an unrelated creator mention.
+        explicit = re.search(
+            r'(?i)(?:sponsored\s+by|paid\s+partnership\s+with|partnering\s+with|ad\s+with)\s+@?([A-Za-z0-9][A-Za-z0-9 &+._-]{1,50})',
+            caption or '',
+        )
+        if explicit:
+            value = explicit.group(1).strip(' .,!?:;#')
+            if value:
+                return value.replace('_', ' ').replace('.', ' ').strip().title()
+
         handles = HANDLE_RE.findall(caption or '')
         creator_key = creator_username.strip('@').lower()
         for handle in handles:
@@ -136,16 +165,9 @@ class TikTokSponsorScanner:
             if key == creator_key or key in NON_BRAND_HANDLES:
                 continue
             return handle.replace('_', ' ').replace('.', ' ').strip().title()
-
-        explicit = re.search(
-            r'(?i)(?:sponsored\s+by|paid\s+partnership\s+with|partnering\s+with)\s+([A-Za-z0-9][A-Za-z0-9 &+._-]{1,50})',
-            caption or '',
-        )
-        if explicit:
-            return explicit.group(1).strip(' .,!?:;#')
         return ''
 
-    def discover(self, lookback_days: int = 30, max_posts: int = 80) -> list[TikTokPost]:
+    def discover(self, lookback_days: int = 30, max_posts: int = 120) -> list[TikTokPost]:
         cutoff = datetime.now(timezone.utc).date() - timedelta(days=max(1, lookback_days))
         urls: list[str] = []
         seen_urls: set[str] = set()
