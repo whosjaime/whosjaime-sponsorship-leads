@@ -1,1 +1,43 @@
-[]
+[
+  {
+    "brand_name": "Garmin",
+    "brand_domain": "garmin.com",
+    "source_platform": "YouTube",
+    "creator_name": "The Running Channel",
+    "creator_url": "https://www.youtube.com/channel/UCX7dV4OPDSutwMUauSD5AAA",
+    "creator_channel_id": "UCX7dV4OPDSutwMUauSD5AAA",
+    "creator_subscribers": 838000,
+    "creator_genre": "Health & Fitness",
+    "creator_tags": [
+      "running",
+      "fitness",
+      "wearables",
+      "sports",
+      "physical consumer tech"
+    ],
+    "video_id": "2Lbo7QVDahw",
+    "video_url": "https://www.youtube.com/watch?v=2Lbo7QVDahw",
+    "video_title": "The Fastest Way To Improve Running Economy",
+    "sponsored_date": "2026-08-13",
+    "evidence": "SponsorRadar identifies Garmin as the sponsor/partner on The Running Channel's August 13, 2026 English-language YouTube video and shows Garmin as an active repeat creator sponsor in August 2026. Garmin sells tangible GPS, fitness wearable, outdoor and sports hardware. Garmin's official Netherlands contact page publishes NLMarketing@garmin.com specifically for marketing, advertising, sponsorships and collaborations, while Garmin's official affiliate program explicitly recruits social-media creators.",
+    "paid_product_placement": true,
+    "brand_partner_channel_id": "",
+    "sponsor_category": "Consumer Tech",
+    "sponsor_subcategory": "Computer Hardware",
+    "contact_name": "",
+    "contact_title": "",
+    "contact_email": "nlmarketing@garmin.com",
+    "email_type": "Public work email",
+    "contact_source": "https://www.garmin.cn/nl-NL/company/contact/",
+    "contact_source_url": "",
+    "lead_score": 100,
+    "lead_temperature": "Very Hot",
+    "sponsorship_key": "youtube:2lbo7qvdahw:garmin.com",
+    "brand_key": "domain:garmin.com",
+    "signals": [
+      "Daily researched sponsorship",
+      "verified public YouTube sponsorship evidence"
+    ],
+    "date_found": "2026-08-25"
+  }
+]
