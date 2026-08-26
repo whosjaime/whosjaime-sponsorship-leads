@@ -1,0 +1,39 @@
+[
+  {
+    "brand_name": "Ultenic",
+    "brand_domain": "ultenic.com",
+    "source_platform": "YouTube",
+    "creator_name": "What's For Tea?",
+    "creator_url": "https://www.youtube.com/@whatsfortea",
+    "creator_channel_id": "",
+    "creator_subscribers": 262000,
+    "creator_genre": "Food & Cooking",
+    "creator_tags": ["food", "cooking", "family meals", "lifestyle", "small-mid creator"],
+    "video_id": "N0AE9nlvyvs",
+    "video_url": "https://www.youtube.com/watch?v=N0AE9nlvyvs",
+    "video_title": "Can You Make Lasagne In An Air Fryer? | Easy Air Fryer Lasagna Recipe",
+    "sponsored_date": "2026-08-04",
+    "evidence": "SponsorRadar detected Ultenic as the sponsor of What's For Tea?'s August 4, 2026 English-language YouTube video. The channel had about 262K subscribers, matching the small/mid-size creator target. Ultenic sells tangible home-cleaning hardware and runs a current official affiliate program with a dedicated affiliate support team and public affiliate contact.",
+    "paid_product_placement": true,
+    "brand_partner_channel_id": "",
+    "sponsor_category": "Physical Consumer Tech",
+    "sponsor_subcategory": "Home Cleaning Appliances",
+    "contact_name": "",
+    "contact_title": "Affiliate Partnerships",
+    "contact_email": "affiliate@ultenic.com",
+    "email_type": "Public work email",
+    "contact_source": "https://www.ultenic.com/pages/ultenic-affiliate-program",
+    "contact_source_url": "https://www.ultenic.com/pages/ultenic-affiliate-program",
+    "lead_score": 100,
+    "lead_temperature": "Very Hot",
+    "sponsorship_key": "youtube:n0ae9nlvyvs:ultenic.com",
+    "brand_key": "domain:ultenic.com",
+    "signals": [
+      "Daily researched sponsorship",
+      "verified public YouTube sponsorship evidence",
+      "active official affiliate program",
+      "qualified public affiliate contact"
+    ],
+    "date_found": "2026-08-26"
+  }
+]
