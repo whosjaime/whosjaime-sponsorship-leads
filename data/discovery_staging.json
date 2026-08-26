@@ -1,1 +1,43 @@
-[]
+[
+  {
+    "brand_name": "Speediance",
+    "brand_domain": "speediance.com",
+    "source_platform": "YouTube",
+    "creator_name": "Michelle Choi",
+    "creator_url": "https://www.youtube.com/@michellechoii",
+    "creator_channel_id": "",
+    "creator_subscribers": 0,
+    "creator_genre": "Lifestyle / Vlog / Health & Wellness",
+    "creator_tags": [
+      "lifestyle",
+      "vlog",
+      "fitness",
+      "health & wellness",
+      "home gym",
+      "physical consumer tech"
+    ],
+    "video_id": "5nbNEEFfQ1I",
+    "video_url": "https://www.youtube.com/watch?v=5nbNEEFfQ1I",
+    "video_title": "Homebody In New York | A Chaotic Summer In Nyc, Stressful Wedding Countdown, Becoming A Bts Army!",
+    "sponsored_date": "2026-08-07",
+    "evidence": "SponsorRadar records Speediance sponsoring Michelle Choi's August 7, 2026 English-language YouTube video with the explicit disclosure 'FTC- Thank you Speediance for sponsoring this video.' SponsorRadar shows 27 tracked Speediance sponsorships across 20 creators, including small/mid-size channels such as KevTheTrainer (84K), Goran Winblad (205K), and Alex Ah Sue (410K). Speediance sells tangible smart home-gym hardware. Its official Affiliate Program explicitly recruits creators and publishes affiliate@speediance.com for program questions and assistance.",
+    "paid_product_placement": true,
+    "sponsor_category": "Health & Wellness",
+    "sponsor_subcategory": "Smart Home Gym / Physical Fitness Hardware",
+    "contact_name": "",
+    "contact_title": "Affiliate / Creator Partnerships",
+    "contact_email": "affiliate@speediance.com",
+    "email_type": "Public work email",
+    "contact_source": "Speediance official Affiliate Program",
+    "contact_source_url": "https://www.speediance.com/pages/affiliate",
+    "lead_score": 100,
+    "lead_temperature": "Very Hot",
+    "signals": [
+      "verified public YouTube sponsorship evidence",
+      "official creator affiliate program",
+      "qualified public affiliate contact",
+      "physical consumer hardware"
+    ],
+    "date_found": "2026-08-26"
+  }
+]
