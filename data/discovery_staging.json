@@ -1,1 +1,33 @@
-[]
+[
+  {
+    "brand_name": "Moose Toys",
+    "brand_domain": "moosetoys.com",
+    "source_platform": "Instagram",
+    "creator_name": "ivonehendarta",
+    "creator_url": "https://www.instagram.com/ivonehendarta/",
+    "creator_channel_id": "",
+    "creator_genre": "Entertainment / Toys / Family",
+    "creator_tags": ["entertainment", "toys", "family", "lifestyle", "instagram"],
+    "video_id": "",
+    "video_url": "https://collabfeed.io/brands/moose-toys",
+    "video_title": "Moose Toys paid creator partnership tracked with @ivonehendarta",
+    "sponsored_date": "2026-08-21",
+    "evidence": "CollabFeed's live paid-partnership feed records Moose Toys working with creator @ivonehendarta on Instagram on August 21, 2026, and reports three Moose Toys creator campaigns in the prior 30 days. This is creator-side paid partnership evidence, not a brand-owned post. Moose Toys also announced a long-term creator-led partnership with Salish Matter in February 2026. Qualified outreach contact: partnerships@moosetoys.com, publicly published for partnership inquiries. The brand and domain were checked against the permanent GitHub sent/block ledger and repository search before staging and were not found.",
+    "paid_product_placement": true,
+    "brand_partner_channel_id": "",
+    "sponsor_category": "Entertainment",
+    "sponsor_subcategory": "Toys / Family Entertainment",
+    "contact_name": "",
+    "contact_title": "Partnerships",
+    "contact_email": "partnerships@moosetoys.com",
+    "email_type": "Public partnership email",
+    "contact_source": "Moose Toys partnership contact",
+    "contact_source_url": "https://toybook.com/moose-toys-launches-mergers-acquisitions-team/",
+    "lead_score": 95,
+    "lead_temperature": "Very Hot",
+    "sponsorship_key": "instagram:ivonehendarta:2026-08-21:moosetoys.com",
+    "brand_key": "domain:moosetoys.com",
+    "signals": ["Recent creator-side paid partnership", "Multiple creator campaigns in 30d", "Public partnership email", "Physical consumer toy brand"],
+    "date_found": "2026-08-26"
+  }
+]
