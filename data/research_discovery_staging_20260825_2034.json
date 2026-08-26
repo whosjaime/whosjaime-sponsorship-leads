@@ -1,0 +1,33 @@
+[
+  {
+    "brand_name": "Warframe",
+    "brand_domain": "warframe.com",
+    "source_platform": "YouTube",
+    "creator_name": "Grind Hard Squad",
+    "creator_url": "https://www.youtube.com/@thegrindshack",
+    "creator_subscribers": 228000,
+    "creator_genre": "Gaming",
+    "creator_tags": ["gaming", "warframe"],
+    "video_title": "This Warframe Headline Is Misleading... The Truth Behind Its Massive Growth",
+    "sponsored_date": "2026-08-02",
+    "evidence": "SponsorRadar detected Warframe as the sponsor of Grind Hard Squad's August 2, 2026 upload. The current official Warframe Creator Program states that Warframe actively works with creators, considers sponsorships for content creators beyond its formal creator program, and provides a dedicated creator-program inquiry email.",
+    "paid_product_placement": true,
+    "sponsor_category": "Gaming",
+    "sponsor_subcategory": "Video game publisher / live-service game",
+    "contact_name": "Warframe Creator Program Team",
+    "contact_title": "Creator Program / Community Partnerships",
+    "contact_email": "community@warframe.com",
+    "contact_source_url": "https://support.warframe.com/hc/en-us/articles/38632948116365-Warframe-Creator-Program",
+    "contact_source": "Official Warframe Creator Program support page",
+    "sponsorship_source_url": "https://sponsorradar.com/channels/thegrindshack",
+    "official_creator_program_url": "https://www.warframe.com/en/community/creators",
+    "signals": [
+      "Direct creator sponsorship evidence dated 2026-08-02",
+      "Active official creator program",
+      "Official program states sponsorships are considered for creators",
+      "Dedicated creator-program inquiry email",
+      "Strong small/mid-size gaming creator spend"
+    ],
+    "date_found": "2026-08-25"
+  }
+]
