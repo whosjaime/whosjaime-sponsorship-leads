@@ -29,7 +29,7 @@ jobs:
         with:
           python-version: "3.11"
       - run: pip install -r requirements.txt
-      - name: Top up qualified sponsor queue from YouTube and TikTok
+      - name: Ensure at least one qualified sponsor is ready
         env:
           YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
           CREATORDB_API_KEY: ${{ secrets.CREATORDB_API_KEY }}
@@ -43,9 +43,11 @@ jobs:
         run: |
           set -o pipefail
           if [ -s data/sponsor_delivery_pending.json ] && [ "$(cat data/sponsor_delivery_pending.json)" != "{}" ]; then
-            echo "Pending delivery checkpoint exists; skipping queue rebuild so Discord retry can resume safely."
+            echo "Pending delivery checkpoint exists; Discord retry will resume immediately."
+          elif [ -s data/sponsor_queue.json ] && [ "$(cat data/sponsor_queue.json)" != "[]" ]; then
+            echo "Qualified sponsor queue already has inventory; dispatching immediately without waiting on discovery."
           else
-            echo "Refreshing sponsor queue from researched inventory, YouTube, then TikTok before dispatch."
+            echo "Sponsor queue is empty; emergency top-up from researched inventory, YouTube, then TikTok."
             python src/run_sponsor_discovery_multisource.py
           fi
       - name: Deliver exactly one qualified queued sponsor
