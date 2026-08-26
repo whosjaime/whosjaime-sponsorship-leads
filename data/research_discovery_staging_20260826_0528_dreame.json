@@ -1,0 +1,45 @@
+[
+  {
+    "brand_name": "Dreame",
+    "brand_domain": "dreame.tech",
+    "source_platform": "YouTube",
+    "creator_name": "AnnieJaffrey",
+    "creator_url": "https://www.youtube.com/@anniejaffrey",
+    "creator_channel_id": "",
+    "creator_subscribers": 823000,
+    "creator_genre": "Lifestyle / Beauty & Fashion",
+    "creator_tags": [
+      "lifestyle",
+      "beauty",
+      "fashion",
+      "home",
+      "physical consumer tech"
+    ],
+    "video_id": "9Z-PnC90TDY",
+    "video_url": "https://www.youtube.com/watch?v=9Z-PnC90TDY",
+    "video_title": "Vacation With Me In Greece | Our Annual Family Trip | Annie Jaffrey",
+    "sponsored_date": "2026-07-16",
+    "evidence": "SponsorRadar identifies Dreame as the sponsor of AnnieJaffrey's English-language July 16, 2026 YouTube video. AnnieJaffrey has about 823K subscribers. Dreame sells tangible smart-home hardware including robot vacuums and cleaning devices. Dreame's official affiliate program explicitly welcomes influencers on Instagram and YouTube and publishes affiliate@dreame.tech as the affiliate-program contact.",
+    "paid_product_placement": true,
+    "brand_partner_channel_id": "",
+    "sponsor_category": "Physical Consumer Tech",
+    "sponsor_subcategory": "Smart Home / Robot Vacuums",
+    "contact_name": "",
+    "contact_title": "Affiliate Program",
+    "contact_email": "affiliate@dreame.tech",
+    "email_type": "Public work email",
+    "contact_source": "https://www.dreametech.com/pages/affiliate-program",
+    "contact_source_url": "https://www.dreametech.com/pages/affiliate-program",
+    "lead_score": 100,
+    "lead_temperature": "Very Hot",
+    "sponsorship_key": "youtube:9z-pnc90tdy:dreame.tech",
+    "brand_key": "domain:dreame.tech",
+    "signals": [
+      "Daily researched sponsorship",
+      "verified public YouTube sponsorship evidence",
+      "official active affiliate program",
+      "qualified affiliate outreach email"
+    ],
+    "date_found": "2026-08-26"
+  }
+]
