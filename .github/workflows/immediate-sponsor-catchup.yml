@@ -7,6 +7,7 @@ on:
 permissions:
   contents: write
   issues: read
+  actions: write
 
 concurrency:
   group: sponsor-catchup-immediate
@@ -76,3 +77,12 @@ jobs:
           git commit -m "Persist immediate sponsor delivery state [skip ci]"
           git pull --rebase origin main
           git push origin HEAD:main
+
+  research-staging-merge:
+    if: startsWith(github.event.issue.title, 'RUN RESEARCH STAGING MERGE')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Dispatch safe research staging merge
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run merge-research-staging.yml --repo "${{ github.repository }}"
