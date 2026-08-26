@@ -18,6 +18,33 @@
     "source_url": "https://www.visme.co/partners/"
   },
   {
+    "brand_name": "Hollyland",
+    "brand_size": "large",
+    "category": "Consumer Tech / Wireless Audio / Video / Creator Hardware",
+    "commission": "5%-8%",
+    "website": "https://www.hollyland.com/",
+    "apply_url": "https://store.hollyland.com/pages/hollyland-affiliate-program",
+    "source_url": "https://store.hollyland.com/pages/hollyland-affiliate-program"
+  },
+  {
+    "brand_name": "BOYA",
+    "brand_size": "large",
+    "category": "Consumer Tech / Microphones / Creator Audio",
+    "commission": "10%",
+    "website": "https://www.boyamic.com/",
+    "apply_url": "https://www.boyamic.com/community/influence",
+    "source_url": "https://www.boyamic.com/community/influence"
+  },
+  {
+    "brand_name": "GoDaddy",
+    "brand_size": "large",
+    "category": "Software / Domains / Hosting / Website & Creator Tools",
+    "commission": "Not publicly listed",
+    "website": "https://www.godaddy.com/",
+    "apply_url": "https://www.godaddy.com/en-in/affiliate-programs",
+    "source_url": "https://www.godaddy.com/en-ca/help/set-up-the-godaddy-web-pro-affiliate-program-42291"
+  },
+  {
     "brand_name": "LearnWorlds",
     "brand_size": "mid-size",
     "category": "Software / Courses / Creator Monetization",
@@ -25,15 +52,6 @@
     "website": "https://www.learnworlds.com/",
     "apply_url": "https://www.learnworlds.com/resources/partners/partners-club/",
     "source_url": "https://www.learnworlds.com/resources/partners/partners-club/"
-  },
-  {
-    "brand_name": "Hollyland",
-    "brand_size": "mid-size",
-    "category": "Consumer Tech / Wireless Audio / Video / Creator Hardware",
-    "commission": "5%-8%",
-    "website": "https://www.hollyland.com/",
-    "apply_url": "https://store.hollyland.com/pages/hollyland-affiliate-program",
-    "source_url": "https://store.hollyland.com/pages/hollyland-affiliate-program"
   },
   {
     "brand_name": "Kapwing",
@@ -64,12 +82,39 @@
   },
   {
     "brand_name": "JSAUX",
-    "brand_size": "emerging",
+    "brand_size": "mid-size",
     "category": "Gaming / Handheld Accessories / Consumer Tech",
     "commission": "7%",
     "website": "https://jsaux.com/",
     "apply_url": "https://jsaux.com/pages/affililate",
     "source_url": "https://jsaux.com/pages/affililate"
+  },
+  {
+    "brand_name": "ATTACK SHARK",
+    "brand_size": "mid-size",
+    "category": "Gaming / Keyboards / Mice / PC Peripherals",
+    "commission": "8%",
+    "website": "https://attackshark.ca/",
+    "apply_url": "https://attackshark.ca/pages/affiliate-program",
+    "source_url": "https://attackshark.ca/pages/affiliate-program"
+  },
+  {
+    "brand_name": "Ethical Bean Coffee",
+    "brand_size": "mid-size",
+    "category": "Food & Drinks / Coffee",
+    "commission": "5%",
+    "website": "https://www.ethicalbean.com/",
+    "apply_url": "https://www.ethicalbean.com/pages/affiliates",
+    "source_url": "https://www.ethicalbean.com/pages/affiliates"
+  },
+  {
+    "brand_name": "Sonarworks",
+    "brand_size": "mid-size",
+    "category": "Software / Audio / Music & Creator Tools",
+    "commission": "Up to 20%",
+    "website": "https://www.sonarworks.com/",
+    "apply_url": "https://www.sonarworks.com/affiliate-program",
+    "source_url": "https://www.sonarworks.com/affiliate-program"
   },
   {
     "brand_name": "Planable",
@@ -88,5 +133,50 @@
     "website": "https://vistasocial.com/",
     "apply_url": "https://vistasocial.com/affiliate-marketing/",
     "source_url": "https://vistasocial.com/affiliate-marketing/"
+  },
+  {
+    "brand_name": "Keybay Tech",
+    "brand_size": "emerging",
+    "category": "Gaming / Mechanical Keyboards / Desk Setup Gear",
+    "commission": "Not publicly listed",
+    "website": "https://keybay.tech/",
+    "apply_url": "https://keybay.tech/pages/keybay-affiliate-program",
+    "source_url": "https://keybay.tech/pages/keybay-affiliate-program"
+  },
+  {
+    "brand_name": "RoastPlan",
+    "brand_size": "emerging",
+    "category": "Food & Drinks / Coffee / Subscriptions",
+    "commission": "20% of the first order",
+    "website": "https://roastplan.com/",
+    "apply_url": "https://roastplan.com/affiliates",
+    "source_url": "https://roastplan.com/affiliates"
+  },
+  {
+    "brand_name": "Craft Coffee Canada",
+    "brand_size": "emerging",
+    "category": "Food & Drinks / Specialty Coffee",
+    "commission": "Up to 5%",
+    "website": "https://craftcoffeecanada.com/",
+    "apply_url": "https://craftcoffeecanada.com/en-us/pages/specialty-coffee-affiliate-program",
+    "source_url": "https://craftcoffeecanada.com/en-us/pages/specialty-coffee-affiliate-program"
+  },
+  {
+    "brand_name": "GadgetHyper",
+    "brand_size": "emerging",
+    "category": "Gaming / Controllers / PC & Consumer Tech",
+    "commission": "3% base commission",
+    "website": "https://gadgethyper.com/",
+    "apply_url": "https://gadgethyper.com/pages/affiliate-program",
+    "source_url": "https://gadgethyper.com/blogs/news/gadgethyper-official-affiliate-program-launch"
+  },
+  {
+    "brand_name": "Temso",
+    "brand_size": "emerging",
+    "category": "Software / AI / Marketing & Creator Tools",
+    "commission": "20% lifetime recurring",
+    "website": "https://www.temso.ai/",
+    "apply_url": "https://www.temso.ai/affiliate",
+    "source_url": "https://www.temso.ai/affiliate"
   }
 ]
