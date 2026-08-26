@@ -1,0 +1,1 @@
+merge existing verified discovery batch
