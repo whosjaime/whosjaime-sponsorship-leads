@@ -6263,5 +6263,44 @@
       "Official active affiliate program",
       "Official partnerships contact"
     ]
+  },
+  {
+    "brand_name": "BedStory",
+    "brand_domain": "bedstory.com",
+    "source_platform": "YouTube",
+    "creator_name": "Lynn White",
+    "creator_url": "https://www.youtube.com/@mrslynnwhite",
+    "creator_channel_id": "",
+    "creator_subscribers": 109000,
+    "creator_genre": "Lifestyle & Vlog",
+    "creator_tags": [
+      "lifestyle",
+      "vlog",
+      "home",
+      "cleaning",
+      "sleep",
+      "mattress"
+    ],
+    "video_id": "",
+    "video_url": "",
+    "video_title": "EXTREME BEDROOM RESET! 😱 Messy Deep Clean & Motivation",
+    "sponsored_date": "2026-08-21",
+    "evidence": "SponsorRadar records BedStory sponsoring Lynn White's August 21, 2026 English-language YouTube video. Lynn White has about 109K subscribers, fitting the small/mid-size creator target. BedStory's official affiliate program actively recruits partners and creators, offers samples for reviews, and publishes affiliates@bedstory.com specifically for affiliate-program questions and collaborations.",
+    "paid_product_placement": true,
+    "sponsor_category": "Home",
+    "sponsor_subcategory": "Mattresses / Sleep",
+    "contact_name": "",
+    "contact_title": "Affiliate Partnerships",
+    "contact_email": "affiliates@bedstory.com",
+    "email_type": "Public work email",
+    "contact_source": "Official BedStory affiliate program",
+    "contact_source_url": "https://ca.bedstory.com/en/content/affiliate-program",
+    "lead_score": 100,
+    "lead_temperature": "Very Hot",
+    "signals": [
+      "verified public YouTube sponsorship evidence",
+      "active official affiliate program",
+      "qualified affiliate contact"
+    ]
   }
 ]
