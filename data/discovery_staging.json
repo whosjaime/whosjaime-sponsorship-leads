@@ -1,1 +1,34 @@
-[]
+[
+  {
+    "brand_name": "Narwal",
+    "brand_domain": "narwal.com",
+    "source_platform": "YouTube",
+    "creator_name": "CJKnowsTECH",
+    "creator_url": "https://www.youtube.com/@cjknowstech",
+    "creator_channel_id": "UC0IqRM2Mwybj7XV9YPnJn1Q",
+    "creator_subscribers": 156000,
+    "creator_genre": "Physical Consumer Tech / Smart Home",
+    "creator_tags": ["physical consumer tech", "smart home", "robot vacuum", "home", "tech reviews"],
+    "video_id": "",
+    "video_url": "",
+    "video_title": "I Tested the Narwal Freo 20 for a Week - Here's What Happened",
+    "sponsored_date": "2026-08-08",
+    "evidence": "SponsorRadar records Narwal sponsoring CJKnowsTECH's August 8, 2026 English-language YouTube video. CJKnowsTECH has about 156K subscribers and reviews tangible consumer hardware. Narwal's official Canada affiliate program actively recruits influential affiliates and social-media partners and publicly lists affiliate.na@global.narwal.com for affiliate-program questions.",
+    "paid_product_placement": true,
+    "brand_partner_channel_id": "",
+    "sponsor_category": "Home",
+    "sponsor_subcategory": "Smart Home / Robot Vacuums",
+    "contact_name": "",
+    "contact_title": "Affiliate Partnerships",
+    "contact_email": "affiliate.na@global.narwal.com",
+    "email_type": "Official affiliate program email",
+    "contact_source": "https://ca.narwal.com/pages/affiliate-program",
+    "contact_source_url": "https://ca.narwal.com/pages/affiliate-program",
+    "lead_score": 100,
+    "lead_temperature": "Very Hot",
+    "sponsorship_key": "youtube:pending:narwal.com",
+    "brand_key": "domain:narwal.com",
+    "signals": ["Daily researched sponsorship", "verified public YouTube sponsorship evidence", "official active affiliate program", "qualified public affiliate outreach email"],
+    "date_found": "2026-08-27"
+  }
+]
