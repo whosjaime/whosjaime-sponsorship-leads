@@ -1,1 +1,34 @@
-[]
+[
+  {
+    "brand_name": "UPERFECT",
+    "brand_domain": "uperfect.com",
+    "source_platform": "YouTube",
+    "creator_name": "Teoh on Tech",
+    "creator_url": "https://www.youtube.com/@teohontech7141",
+    "creator_channel_id": "",
+    "creator_subscribers": 86600,
+    "creator_genre": "Physical Consumer Tech",
+    "creator_tags": ["physical consumer tech", "portable monitors", "display hardware", "tech reviews"],
+    "video_id": "",
+    "video_url": "",
+    "video_title": "Uperfect 14-inch Portable Touchscreen Oled (review)",
+    "sponsored_date": "2026-07-12",
+    "evidence": "SponsorRadar identifies UPERFECT as the sponsor of Teoh on Tech's July 12, 2026 English-language YouTube review. Teoh on Tech is a small/mid-size technology creator with about 86.6K subscribers. UPERFECT sells tangible portable-monitor/display hardware. UPERFECT's official contact information publishes marketing@uperfectmonitor.com specifically for Marketing & Partnerships, and its official affiliate program is active for social creators, including Instagram, TikTok and YouTube fields.",
+    "paid_product_placement": true,
+    "brand_partner_channel_id": "",
+    "sponsor_category": "Physical Consumer Tech",
+    "sponsor_subcategory": "Portable Monitors / Displays",
+    "contact_name": "",
+    "contact_title": "Marketing & Partnerships",
+    "contact_email": "marketing@uperfectmonitor.com",
+    "email_type": "Public work email",
+    "contact_source": "UPERFECT official contact information",
+    "contact_source_url": "https://uperfect.com/policies/contact-information",
+    "lead_score": 100,
+    "lead_temperature": "Very Hot",
+    "sponsorship_key": "youtube:uperfect:teoh-on-tech:2026-07-12",
+    "brand_key": "domain:uperfect.com",
+    "signals": ["verified public YouTube sponsorship evidence", "official marketing/partnership contact", "active affiliate program", "physical consumer hardware"],
+    "date_found": "2026-08-26"
+  }
+]
