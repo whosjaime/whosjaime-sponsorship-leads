@@ -1,1 +1,45 @@
-[]
+[
+  {
+    "brand_name": "Winspace",
+    "brand_domain": "winspace.cc",
+    "source_platform": "YouTube",
+    "creator_name": "GC Performance",
+    "creator_url": "https://www.youtube.com/@GCPerformance18",
+    "creator_channel_id": "",
+    "creator_subscribers": 147000,
+    "creator_genre": "Cycling / Lifestyle",
+    "creator_tags": [
+      "cycling",
+      "bikes",
+      "lifestyle",
+      "sports",
+      "physical consumer products"
+    ],
+    "video_id": "",
+    "video_url": "",
+    "video_title": "Is Shimano 13 Speed Group Right Around The Corner??",
+    "sponsored_date": "2026-08-17",
+    "evidence": "SponsorRadar records Winspace sponsoring GC Performance's August 17, 2026 English-language YouTube video, with a Winspace wheels/frames discount-code integration. SponsorRadar shows 116 Winspace sponsorships across 5 creators, including GC Performance (147K subscribers), Peak Torque (70K), durianrider (257K), ETOE (191K), and Roy Velo (633K), demonstrating active creator spend. Winspace's official contact page separately directs sponsorship & collaboration inquiries to marketing@winspace.cc, and its official affiliate program explicitly welcomes YouTube and other content creators.",
+    "paid_product_placement": true,
+    "brand_partner_channel_id": "",
+    "sponsor_category": "Lifestyle & Vlog",
+    "sponsor_subcategory": "Cycling / Physical Consumer Products",
+    "contact_name": "",
+    "contact_title": "Marketing / Sponsorship & Collaboration",
+    "contact_email": "marketing@winspace.cc",
+    "email_type": "Public work email",
+    "contact_source": "https://www.winspace.cc/pages/contact",
+    "contact_source_url": "https://www.winspace.cc/pages/contact",
+    "lead_score": 100,
+    "lead_temperature": "Very Hot",
+    "sponsorship_key": "youtube:pending:winspace.cc",
+    "brand_key": "domain:winspace.cc",
+    "signals": [
+      "Daily researched sponsorship",
+      "verified public YouTube sponsorship evidence",
+      "verified public marketing/sponsorship email",
+      "active official affiliate program"
+    ],
+    "date_found": "2026-08-27"
+  }
+]
