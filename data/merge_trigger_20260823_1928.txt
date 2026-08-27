@@ -1,0 +1,1 @@
+trigger merge sponsor discovery candidates
