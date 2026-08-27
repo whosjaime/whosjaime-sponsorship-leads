@@ -1,1 +1,80 @@
-[]
+[
+  {
+    "brand_name": "HOTWAV",
+    "brand_domain": "hotwav.com",
+    "source_platform": "YouTube",
+    "creator_name": "Teoh on Tech",
+    "creator_url": "https://www.youtube.com/@teohontech7141",
+    "creator_channel_id": "",
+    "creator_subscribers": 86500,
+    "creator_genre": "Physical Consumer Tech / Art & Design Tech",
+    "creator_tags": [
+      "physical consumer tech",
+      "tablets",
+      "rugged electronics",
+      "tech reviews",
+      "art and design"
+    ],
+    "video_id": "qJW54FKTikM",
+    "video_url": "https://www.youtube.com/watch?v=qJW54FKTikM",
+    "video_title": "Hotwav R9 Pro Max (review): Best Of Rugged Tablet?",
+    "sponsored_date": "2026-07-29",
+    "evidence": "SponsorRadar identifies HOTWAV as the sponsor of Teoh on Tech's July 29, 2026 English-language YouTube review. Teoh on Tech is a small/mid-size technology creator with about 86.5K subscribers. HOTWAV sells tangible smartphones, rugged phones and tablets. HOTWAV's official contact page separately lists customer support and publishes marketing@hotwav.com specifically for Marketing/Promotion Collaborations; its official affiliate program also accepts social-media ambassadors and affiliates.",
+    "paid_product_placement": true,
+    "sponsor_category": "Physical Consumer Tech",
+    "sponsor_subcategory": "Rugged Tablets / Mobile Hardware",
+    "contact_name": "",
+    "contact_title": "Marketing / Promotion Collaborations",
+    "contact_email": "marketing@hotwav.com",
+    "email_type": "Public work email",
+    "contact_source": "https://www.hotwav.com/pages/contact-us",
+    "contact_source_url": "https://www.hotwav.com/pages/contact-us",
+    "lead_score": 100,
+    "lead_temperature": "Very Hot",
+    "signals": [
+      "verified recent creator sponsorship evidence",
+      "official marketing collaboration email",
+      "active affiliate/ambassador program"
+    ],
+    "date_found": "2026-08-27"
+  },
+  {
+    "brand_name": "TWOPAGES Curtains",
+    "brand_domain": "twopagescurtains.com",
+    "source_platform": "Instagram",
+    "creator_name": "harikaugc",
+    "creator_url": "https://www.instagram.com/harikaugc/",
+    "creator_channel_id": "harikaugc",
+    "creator_subscribers": 0,
+    "creator_genre": "Home / DIY / Lifestyle",
+    "creator_tags": [
+      "home",
+      "DIY",
+      "interior design",
+      "lifestyle",
+      "curtains"
+    ],
+    "video_id": "DcCzpe-ANbE",
+    "video_url": "https://www.instagram.com/p/DcCzpe-ANbE/",
+    "video_title": "TWOPAGES Curtains creator partnership post",
+    "sponsored_date": "2026-08-15",
+    "evidence": "CollabFeed tracks a paid creator partnership between TWOPAGES Curtains and Instagram creator harikaugc posted August 15, 2026, with another TWOPAGES creator post detected on August 6, showing current creator activity. TWOPAGES' official Creator & Influencer page recruits Instagram, YouTube, Facebook and Pinterest influencers, offers gifted products, commissions and long-term collaborations, and publishes collab@twopagescurtains.com specifically for collaboration inquiries.",
+    "paid_product_placement": true,
+    "sponsor_category": "Home",
+    "sponsor_subcategory": "Home Decor / Window Treatments",
+    "contact_name": "",
+    "contact_title": "Creator & Influencer Collaborations",
+    "contact_email": "collab@twopagescurtains.com",
+    "email_type": "Public work email",
+    "contact_source": "https://twopagescurtains.com/pages/contact-us",
+    "contact_source_url": "https://twopagescurtains.com/pages/contact-us",
+    "lead_score": 100,
+    "lead_temperature": "Very Hot",
+    "signals": [
+      "verified recent creator partnership evidence",
+      "official creator/influencer collaboration email",
+      "active affiliate and influencer program"
+    ],
+    "date_found": "2026-08-27"
+  }
+]
