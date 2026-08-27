@@ -24,7 +24,10 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: main
+          # Use the repository snapshot attached to this trigger. Checking out moving
+          # main allowed unrelated concurrent pushes to clear discovery_staging.json
+          # before this merge job could consume the candidate that triggered it.
+          ref: ${{ github.sha }}
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
