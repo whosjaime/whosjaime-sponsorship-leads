@@ -2314,26 +2314,40 @@
   {
     "brand_name": "HOTWAV",
     "brand_domain": "hotwav.com",
-    "sponsor_category": "Technology",
+    "sponsor_category": "Physical Consumer Tech",
     "creator_name": "Teoh on Tech",
     "creator_url": "https://www.youtube.com/@teohontech7141",
     "creator_channel_id": "",
     "creator_subscribers": 86500,
-    "creator_genre": "Technology",
+    "creator_genre": "Physical Consumer Tech / Art & Design Tech",
     "creator_tags": [
       "physical consumer tech",
       "tablets",
-      "rugged devices",
-      "gadgets"
+      "rugged electronics",
+      "tech reviews",
+      "art and design"
     ],
-    "video_url": "https://youtube.com/watch?v=qJW54FKTikM",
+    "video_url": "https://www.youtube.com/watch?v=qJW54FKTikM",
     "video_title": "Hotwav R9 Pro Max (review): Best Of Rugged Tablet?",
     "sponsored_date": "2026-07-29",
-    "evidence": "SponsorRadar identifies HOTWAV as the sponsor of Teoh on Tech's July 29, 2026 English-language YouTube review. HOTWAV sells physical smartphones, rugged phones and tablets. HOTWAV's official contact page publishes marketing@hotwav.com specifically for Marketing/Promotion Collaborations, and its official affiliate program is active for social-media promoters.",
+    "evidence": "SponsorRadar identifies HOTWAV as the sponsor of Teoh on Tech's July 29, 2026 English-language YouTube review. Teoh on Tech is a small/mid-size technology creator with about 86.5K subscribers. HOTWAV sells tangible smartphones, rugged phones and tablets. HOTWAV's official contact page separately lists customer support and publishes marketing@hotwav.com specifically for Marketing/Promotion Collaborations; its official affiliate program also accepts social-media ambassadors and affiliates.",
     "paid_product_placement": true,
     "contact_email": "marketing@hotwav.com",
     "contact_source_url": "https://www.hotwav.com/pages/contact-us",
-    "source_platform": "YouTube"
+    "source_platform": "YouTube",
+    "video_id": "qJW54FKTikM",
+    "sponsor_subcategory": "Rugged Tablets / Mobile Hardware",
+    "contact_title": "Marketing / Promotion Collaborations",
+    "email_type": "Public work email",
+    "contact_source": "https://www.hotwav.com/pages/contact-us",
+    "lead_score": 100,
+    "lead_temperature": "Very Hot",
+    "signals": [
+      "verified recent creator sponsorship evidence",
+      "official marketing collaboration email",
+      "active affiliate/ambassador program"
+    ],
+    "date_found": "2026-08-27"
   },
   {
     "brand_name": "GameSir",
