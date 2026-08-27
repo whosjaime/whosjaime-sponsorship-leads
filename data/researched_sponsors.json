@@ -6529,5 +6529,38 @@
       "verified public sponsorship email"
     ],
     "date_found": "2026-08-27"
+  },
+  {
+    "brand_name": "Screen ProTech",
+    "brand_domain": "screenprotech.com",
+    "source_platform": "YouTube",
+    "creator_name": "GT: Garage Talk",
+    "creator_url": "https://www.youtube.com/@gtgaragetalk",
+    "creator_channel_id": "",
+    "creator_genre": "Automotive / Reviews / Lifestyle",
+    "creator_tags": [
+      "automotive",
+      "car reviews",
+      "physical consumer products",
+      "lifestyle"
+    ],
+    "video_id": "",
+    "video_url": "https://sponsorradar.com/channels/gtgaragetalk",
+    "video_title": "2026 Hyundai Elantra Hybrid: 50 MPG for Under $32K?!",
+    "sponsored_date": "2026-08-07",
+    "evidence": "SponsorRadar records Screen ProTech sponsoring GT: Garage Talk's August 7, 2026 English-language YouTube video and shows repeated creator spend on the same small/mid-size channel, including additional Screen ProTech integrations on August 4 and throughout July 2026. Screen ProTech sells tangible automotive screen-protection film. Its official site explicitly routes partnership and affiliate inquiries, and its official help center invites creators who want to make videos to contact affiliate@screenprotech.com. Screen ProTech/screenprotech.com were checked against both data/researched_sponsors.json and the permanent sent/block ledger immediately before staging and were not present.",
+    "paid_product_placement": true,
+    "sponsor_category": "Automotive",
+    "sponsor_subcategory": "Automotive screen protection / accessories",
+    "contact_name": "Screen ProTech Affiliate Team",
+    "contact_title": "Affiliate / Creator Partnerships",
+    "contact_email": "affiliate@screenprotech.com",
+    "contact_source_url": "https://screenprotech.zendesk.com/hc/en-us/articles/42929476015379-How-do-I-install-my-film",
+    "contact_source": "https://screenprotech.com/pages/contact",
+    "signals": [
+      "recent YouTube sponsorship",
+      "repeat creator integrations",
+      "official affiliate/creator contact"
+    ]
   }
 ]
