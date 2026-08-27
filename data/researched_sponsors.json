@@ -6318,5 +6318,46 @@
       "active official affiliate program",
       "qualified affiliate contact"
     ]
+  },
+  {
+    "brand_name": "Redmond Agriculture",
+    "brand_domain": "redmondagriculture.com",
+    "source_platform": "YouTube",
+    "creator_name": "The Seasonal Homestead",
+    "creator_url": "https://www.youtube.com/@theseasonalhomestead",
+    "creator_channel_id": "",
+    "creator_subscribers": 314000,
+    "creator_genre": "Lifestyle / Vlog / Homestead",
+    "creator_tags": [
+      "lifestyle",
+      "vlog",
+      "homestead",
+      "gardening",
+      "food preservation",
+      "family"
+    ],
+    "video_id": "",
+    "video_url": "",
+    "video_title": "Preserving 200+ Lbs of Food Before It Spoils! (Giant Homestead Harvest)",
+    "sponsored_date": "2026-08-07",
+    "evidence": "SponsorRadar identifies Redmond Agriculture as the sponsor of The Seasonal Homestead's August 7, 2026 English-language YouTube video; the same channel also carried another Redmond Agriculture integration on July 23, 2026, showing recurring creator spend. Redmond Agriculture's current public Social Media Collaboration Guide explicitly governs creator collaborations, discount codes, collaborative content and paid invoices, and names Kendra Reeve as the collaboration contact at kendrar@redmondminerals.com. Redmond Agriculture and redmondagriculture.com were checked against the permanent sent ledger and current researched inventory before staging and were not present.",
+    "paid_product_placement": true,
+    "sponsor_category": "Home",
+    "sponsor_subcategory": "Homestead / Agriculture / Garden",
+    "contact_name": "Kendra Reeve",
+    "contact_title": "Social Media Collaboration Contact",
+    "contact_email": "kendrar@redmondminerals.com",
+    "email_type": "Verified named public work email",
+    "contact_source": "Redmond Agriculture Social Media Collaboration Guide",
+    "contact_source_url": "https://5830144.fs1.hubspotusercontent-na1.net/hubfs/5830144/Social%20Media%20Collaboration%20Guide%20%281%29.pdf",
+    "lead_score": 100,
+    "lead_temperature": "Very Hot",
+    "signals": [
+      "verified public YouTube sponsorship evidence",
+      "repeat creator integration within 30 days",
+      "active official creator collaboration program",
+      "verified named public collaboration contact"
+    ],
+    "date_found": "2026-08-26"
   }
 ]
