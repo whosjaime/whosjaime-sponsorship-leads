@@ -6562,5 +6562,47 @@
       "repeat creator integrations",
       "official affiliate/creator contact"
     ]
+  },
+  {
+    "brand_name": "KastKing",
+    "brand_domain": "kastking.com",
+    "source_platform": "YouTube",
+    "creator_name": "Intuitive Angling With Randy Blaukat",
+    "creator_url": "https://www.youtube.com/@IntuitiveAnglingWithRandyBlaukat",
+    "creator_channel_id": "",
+    "creator_subscribers": 175000,
+    "creator_genre": "Fishing / Outdoors",
+    "creator_tags": [
+      "fishing",
+      "outdoors",
+      "sports",
+      "physical consumer gear",
+      "lifestyle"
+    ],
+    "video_id": "",
+    "video_url": "https://sponsorradar.com/brands/kastking",
+    "video_title": "Got A Good One For You Guys…",
+    "sponsored_date": "2026-08-24",
+    "evidence": "SponsorRadar records KastKing sponsoring Intuitive Angling With Randy Blaukat's August 24, 2026 English-language YouTube video, with KastKing reel links and creator promo code Randy10. SponsorRadar shows 238 tracked KastKing sponsorships across 15 creators and reports that 52% of its last-12-month deals went to channels with 50K-250K subscribers. KastKing's official U.S. contact page separately invites collaborations, creative partnerships, and marketing inquiries at marketing@eposeidon.com, and its current terms confirm active affiliate, ambassador, creator, and influencer programs.",
+    "paid_product_placement": true,
+    "sponsor_category": "Sports / Outdoors",
+    "sponsor_subcategory": "Fishing Gear",
+    "contact_name": "",
+    "contact_title": "Marketing / Collaborations",
+    "contact_email": "marketing@eposeidon.com",
+    "email_type": "Public work email",
+    "contact_source": "KastKing official Contact Us page",
+    "contact_source_url": "https://kastking.com/pages/contact-us",
+    "lead_score": 100,
+    "lead_temperature": "Very Hot",
+    "sponsorship_key": "youtube:kastking:2026-08-24:intuitive-angling",
+    "brand_key": "domain:kastking.com",
+    "signals": [
+      "verified recent creator sponsorship evidence",
+      "repeat active creator spend",
+      "official creator/influencer program",
+      "qualified public marketing collaboration email"
+    ],
+    "date_found": "2026-08-27"
   }
 ]
