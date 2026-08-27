@@ -1,1 +1,29 @@
-[]
+[
+  {
+    "brand_name": "GameSir",
+    "brand_domain": "gamesir.com",
+    "source_platform": "SponsorRadar",
+    "creator_name": "NICKMERCS",
+    "creator_url": "https://www.youtube.com/@NICKMERCS",
+    "creator_channel_id": "",
+    "creator_subscribers": 4100000,
+    "creator_genre": "Gaming / Streaming",
+    "creator_tags": ["gaming", "streaming", "controllers", "gaming hardware", "FPS"],
+    "video_id": "",
+    "video_url": "https://sponsorradar.com/brands/gamesir",
+    "video_title": "Peanut Is Tryin' To Teach Me & Timthetatman Tarkov... 😂",
+    "sponsored_date": "2026-08-15",
+    "evidence": "SponsorRadar records GameSir sponsoring NICKMERCS' August 15, 2026 English-language YouTube video and shows a creator-specific GameSir URL plus MFAM discount code. SponsorRadar tracks 335 GameSir sponsorships across 59 channels and shows current August 2026 buying, including mid-size gaming creators. GameSir's official Contact Us page separately lists customer support and publishes partnership@gamesir.com specifically under Marketing & Sponsorship.",
+    "paid_product_placement": true,
+    "sponsor_category": "Gaming",
+    "sponsor_subcategory": "Gaming Controllers / Physical Consumer Hardware",
+    "contact_name": "",
+    "contact_title": "Marketing & Sponsorship",
+    "contact_email": "partnership@gamesir.com",
+    "email_type": "Public work email",
+    "contact_source": "GameSir official Contact Us page - Marketing & Sponsorship",
+    "contact_source_url": "https://gamesir.com/pages/contact-us",
+    "signals": ["verified public YouTube sponsorship evidence", "active recurring creator spend", "official marketing and sponsorship contact"],
+    "date_found": "2026-08-27"
+  }
+]
