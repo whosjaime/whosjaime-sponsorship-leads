@@ -1,1 +1,30 @@
-[]
+[
+  {
+    "brand_name": "Sundays for Dogs",
+    "brand_domain": "sundaysfordogs.com",
+    "source_platform": "YouTube",
+    "creator_name": "Philip DeFranco",
+    "creator_url": "https://www.youtube.com/@PhilipDeFranco",
+    "creator_channel_id": "",
+    "creator_subscribers": 6600000,
+    "creator_genre": "Entertainment / Commentary",
+    "creator_tags": ["entertainment", "commentary", "pet", "lifestyle"],
+    "video_id": "",
+    "video_url": "",
+    "video_title": "Horrible Mom's Abusive Meltdown Accidentally Saved This Teen's Life",
+    "sponsored_date": "2026-08-24",
+    "evidence": "SponsorRadar records Sundays for Dogs sponsoring Philip DeFranco's August 24, 2026 English-language YouTube video. CreatorDB reports 28 new sponsored posts for Sundays for Dogs in the last 30 days across an English-language creator pool, confirming active creator spend. Sundays for Dogs also operates an active ambassador program and Awin affiliate program; Awin publicly lists affiliates@sundaysfordogs.com for affiliate inquiries and creator discount-code setup.",
+    "paid_product_placement": true,
+    "sponsor_category": "Pet",
+    "sponsor_subcategory": "Dog Food",
+    "contact_name": "",
+    "contact_title": "Affiliate Partnerships",
+    "contact_email": "affiliates@sundaysfordogs.com",
+    "email_type": "Public work email",
+    "contact_source": "Sundays for Dogs Awin affiliate program",
+    "contact_source_url": "https://ui.awin.com/merchant-profile/91523?setLocale=en_GB",
+    "lead_score": 100,
+    "lead_temperature": "Very Hot",
+    "signals": ["verified recent YouTube sponsorship evidence", "28 creator sponsorship posts in last 30 days", "active ambassador/affiliate program", "qualified affiliate contact"]
+  }
+]
