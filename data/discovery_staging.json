@@ -1,1 +1,43 @@
-[]
+[
+  {
+    "brand_name": "HOTWAV",
+    "brand_domain": "hotwav.com",
+    "source_platform": "YouTube",
+    "creator_name": "Teoh on Tech",
+    "creator_url": "https://www.youtube.com/@teohontech7141",
+    "creator_channel_id": "",
+    "creator_subscribers": 86500,
+    "creator_genre": "Physical Consumer Tech / Tech Reviews",
+    "creator_tags": [
+      "physical consumer tech",
+      "rugged tablet",
+      "tablets",
+      "tech reviews",
+      "digital art"
+    ],
+    "video_id": "qJW54FKTikM",
+    "video_url": "https://www.youtube.com/watch?v=qJW54FKTikM",
+    "video_title": "Hotwav R9 Pro Max (review): Best Of Rugged Tablet?",
+    "sponsored_date": "2026-07-29",
+    "evidence": "SponsorRadar identifies HOTWAV as the sponsor of Teoh on Tech's July 29, 2026 English-language YouTube video 'Hotwav R9 Pro Max (review): Best Of Rugged Tablet?'. Teoh on Tech has about 86.5K subscribers, fitting the small/mid-size discovery target. HOTWAV sells tangible physical consumer hardware including rugged tablets and smartphones. HOTWAV's official site currently operates an affiliate program for websites, blogs and social media creators, and its official contact page publishes marketing@hotwav.com specifically for Marketing/Promotion Collaborations. The permanent GitHub repo search and sent-sponsor ledger were checked immediately before staging and contained no HOTWAV/hotwav.com match.",
+    "paid_product_placement": true,
+    "sponsor_category": "Physical Consumer Tech",
+    "sponsor_subcategory": "Rugged Tablets / Smartphones",
+    "contact_name": "",
+    "contact_title": "Marketing / Promotion Collaborations",
+    "contact_email": "marketing@hotwav.com",
+    "email_type": "Public work email",
+    "contact_source": "https://www.hotwav.com/pages/contact-us",
+    "contact_source_url": "https://www.hotwav.com/pages/contact-us",
+    "lead_score": 100,
+    "lead_temperature": "Very Hot",
+    "signals": [
+      "verified public YouTube sponsorship evidence",
+      "small/mid-size creator sponsorship",
+      "active official affiliate program",
+      "verified marketing collaboration email",
+      "physical consumer hardware"
+    ],
+    "date_found": "2026-08-27"
+  }
+]
