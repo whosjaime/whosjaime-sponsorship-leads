@@ -1,1 +1,42 @@
-[]
+[
+  {
+    "brand_name": "ZenoWell",
+    "brand_domain": "zenowell.ai",
+    "source_platform": "YouTube",
+    "creator_name": "Ali Spagnola's Fitness Outrageous",
+    "creator_url": "https://www.youtube.com/@fitnessoutrageous",
+    "creator_channel_id": "",
+    "creator_subscribers": 67100,
+    "creator_genre": "Health & Fitness / Wellness",
+    "creator_tags": [
+      "health",
+      "fitness",
+      "wellness",
+      "biohacking",
+      "physical consumer tech"
+    ],
+    "video_id": "",
+    "video_url": "",
+    "video_title": "Can This SHOCK ME TO SLEEP?",
+    "sponsored_date": "2026-08-03",
+    "evidence": "SponsorRadar identifies ZenoWell as the sponsor of Ali Spagnola's Fitness Outrageous's August 3, 2026 English-language YouTube video 'Can This SHOCK ME TO SLEEP?' and records the 67.1K-subscriber channel using a creator-specific ZenoWell link and code. SponsorRadar also tracks four ZenoWell creator sponsorships in 2026, including another explicit sponsored video on August 9, 2026. ZenoWell sells a tangible wearable vagus-nerve stimulation device. Its official affiliate page actively recruits partners and publicly lists reya@zenowell.ai for Business Partnership inquiries.",
+    "paid_product_placement": true,
+    "sponsor_category": "Health & Wellness",
+    "sponsor_subcategory": "Wearable Wellness Hardware",
+    "contact_name": "Reya",
+    "contact_title": "Business Partnership",
+    "contact_email": "reya@zenowell.ai",
+    "email_type": "Public work email",
+    "contact_source": "ZenoWell official affiliate/contact pages",
+    "contact_source_url": "https://zenowell.ai/pages/zenowell-affiliate",
+    "lead_score": 100,
+    "lead_temperature": "Very Hot",
+    "signals": [
+      "verified public YouTube sponsorship evidence",
+      "active official affiliate/partner program",
+      "official business partnership email",
+      "physical consumer wellness hardware"
+    ],
+    "date_found": "2026-08-27"
+  }
+]
