@@ -6931,5 +6931,45 @@
       "Verified current Head of Partnerships",
       "Food/drink roster fit"
     ]
+  },
+  {
+    "brand_name": "Crossrope",
+    "brand_domain": "crossrope.com",
+    "source_platform": "YouTube",
+    "creator_name": "Jump Rope Dudes",
+    "creator_url": "https://www.youtube.com/@JumpRopeDudes",
+    "creator_channel_id": "",
+    "creator_subscribers": 1400000,
+    "creator_genre": "Health & Fitness / Lifestyle",
+    "creator_tags": [
+      "health",
+      "fitness",
+      "lifestyle",
+      "workout",
+      "physical consumer product",
+      "sports"
+    ],
+    "video_id": "",
+    "video_url": "https://sponsorradar.com/brands/crossrope",
+    "video_title": "Do This Workout 3x Per Week To Get Shredded",
+    "sponsored_date": "2026-08-24",
+    "evidence": "SponsorRadar records Crossrope sponsoring Jump Rope Dudes' August 24, 2026 English-language YouTube video with a creator-specific Crossrope link and code JRD. SponsorRadar tracks 160 Crossrope sponsorships across 9 creators, including smaller/mid-size channels such as Eric Leija (~104K) and AfrikanHairGod (~208K), showing repeat creator spend. Crossrope sells tangible weighted jump-rope fitness hardware. Crossrope's official affiliate program explicitly recruits YouTube and Instagram social-media affiliates and its Awin merchant profile publicly lists partnerships@crossrope.com and ivan@crossrope.com for affiliate-program questions.",
+    "paid_product_placement": true,
+    "sponsor_category": "Health & Fitness",
+    "sponsor_subcategory": "Fitness Equipment / Jump Ropes",
+    "contact_name": "",
+    "contact_title": "Affiliate / Creator Partnerships",
+    "contact_email": "partnerships@crossrope.com",
+    "email_type": "Public partnership email",
+    "contact_source": "Crossrope Awin Affiliate Program",
+    "contact_source_url": "https://ui.awin.com/merchant-profile/92065",
+    "signals": [
+      "Recent creator sponsorship",
+      "Repeat creator spend",
+      "Small/mid-size creator spend",
+      "Physical consumer fitness hardware",
+      "Official affiliate program",
+      "Dedicated partnerships email"
+    ]
   }
 ]
