@@ -1,1 +1,27 @@
-[]
+[
+  {
+    "brand_name": "Starforge Systems",
+    "brand_domain": "starforgesystems.com",
+    "creator_name": "Bushy",
+    "creator_url": "https://www.youtube.com/@Bushy",
+    "creator_channel_id": "",
+    "creator_genre": "Gaming",
+    "creator_tags": [
+      "gaming",
+      "PC hardware",
+      "physical consumer tech",
+      "streaming",
+      "gaming PCs"
+    ],
+    "video_url": "https://www.youtube.com/watch?v=-uHUJQSDti8",
+    "video_title": "I Went Back to Elden Ring's Day 1 Patch...",
+    "sponsored_date": "2026-08-20",
+    "evidence": "SponsorRadar identifies Starforge Systems as the sponsor of Bushy's August 20, 2026 English-language YouTube video, with a creator-specific Starforge link in the sponsorship text. Starforge sells tangible gaming PCs and operates an active official Creator Program for creators of all sizes. Qualified outreach contact is Ariel Luna, VP Business Development at Starforge Systems, verified by a current licensing/collaboration partner page describing his role and Starforge partnership strategy. Starforge/starforgesystems.com were checked against the permanent GitHub sponsor ledger and existing repo search before staging and were not present.",
+    "paid_product_placement": true,
+    "contact_email": "",
+    "contact_name": "Ariel Luna",
+    "contact_title": "VP Business Development",
+    "contact_source_url": "https://etrnlstudio.com/",
+    "partnership_program_url": "https://starforgesystems.com/pages/creator-program"
+  }
+]
