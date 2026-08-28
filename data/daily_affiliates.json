@@ -1,182 +1,182 @@
 [
   {
-    "brand_name": "Bluehost",
+    "brand_name": "TP-Link Tapo",
     "brand_size": "large",
-    "category": "Software / Web Hosting / Creator & Website Tools",
-    "commission": "$65+ per qualified sale",
-    "website": "https://www.bluehost.com/",
-    "apply_url": "https://www.bluehost.com/en-ca/affiliates",
-    "source_url": "https://www.bluehost.com/en-ca/affiliates"
-  },
-  {
-    "brand_name": "WP Engine",
-    "brand_size": "large",
-    "category": "Software / Managed WordPress Hosting / Creator & Website Tools",
-    "commission": "$100 on Lite; $200 minimum or first month's payment (whichever is higher) on other eligible plans",
-    "website": "https://wpengine.com/",
-    "apply_url": "https://wpengine.everflowclient.io/",
-    "source_url": "https://wpengine.com/affiliate-program/"
-  },
-  {
-    "brand_name": "Buffer",
-    "brand_size": "large",
-    "category": "Software / Social Media Management / Creator Tools",
-    "commission": "25% recurring for 12 months",
-    "website": "https://buffer.com/",
-    "apply_url": "https://buffer.com/partners",
-    "source_url": "https://buffer.com/partners"
-  },
-  {
-    "brand_name": "Fotor",
-    "brand_size": "large",
-    "category": "Software / AI Design / Photo Editing / Creator Tools",
-    "commission": "25%-35% recurring for 12 months",
-    "website": "https://www.fotor.com/",
-    "apply_url": "https://www.fotor.com/affiliates.html",
-    "source_url": "https://www.fotor.com/affiliates.html"
-  },
-  {
-    "brand_name": "Western Digital",
-    "brand_size": "large",
-    "category": "Consumer Tech / PC Storage / Gaming & Creator Hardware",
-    "commission": "Up to 10%",
-    "website": "https://www.westerndigital.com/",
-    "apply_url": "https://www.westerndigital.com/en-ca/company/programs/affiliate-program",
-    "source_url": "https://www.westerndigital.com/en-ca/company/programs/affiliate-program"
-  },
-  {
-    "brand_name": "HexClad",
-    "brand_size": "mid-size",
-    "category": "Food & Drinks / Kitchen / Cooking Creator Gear",
-    "commission": "Up to 15%",
-    "website": "https://hexclad.ca/",
-    "apply_url": "https://hexclad.ca/pages/affiliate",
-    "source_url": "https://hexclad.ca/pages/affiliate"
-  },
-  {
-    "brand_name": "Moment",
-    "brand_size": "mid-size",
-    "category": "Consumer Tech / Cameras / Mobile Photography / Creator Gear",
-    "commission": "Up to 15%",
-    "website": "https://www.shopmoment.com/",
-    "apply_url": "https://www.shopmoment.com/pages/affiliates",
-    "source_url": "https://www.shopmoment.com/pages/affiliates"
-  },
-  {
-    "brand_name": "Tilta",
-    "brand_size": "mid-size",
-    "category": "Consumer Tech / Camera Rigs / Filmmaking & Creator Gear",
-    "commission": "5%",
-    "website": "https://tilta.com/",
-    "apply_url": "https://tilta.com/affiliate-program/",
-    "source_url": "https://tilta.com/affiliate-program/"
-  },
-  {
-    "brand_name": "Native Union",
-    "brand_size": "mid-size",
-    "category": "Consumer Tech / Mobile Accessories / Charging & Creator Lifestyle",
+    "category": "Consumer Tech / Smart Home / Cameras & Accessories",
     "commission": "10%",
-    "website": "https://www.nativeunion.com/",
-    "apply_url": "https://www.nativeunion.com/pages/collab",
-    "source_url": "https://www.nativeunion.com/pages/collab"
+    "website": "https://www.tapo.com/",
+    "apply_url": "https://us.store.tapo.com/pages/affiliates",
+    "source_url": "https://us.store.tapo.com/pages/affiliates"
   },
   {
-    "brand_name": "SIRUI",
-    "brand_size": "mid-size",
-    "category": "Consumer Tech / Camera Lenses / Tripods / Creator Gear",
-    "commission": "5%-15%",
-    "website": "https://store.sirui.com/",
-    "apply_url": "https://store.sirui.com/pages/join-us",
-    "source_url": "https://store.sirui.com/pages/join-us"
+    "brand_name": "Keurig Canada",
+    "brand_size": "large",
+    "category": "Food & Drinks / Coffee / Appliances",
+    "commission": "10% per sale; $1 per qualifying contest or sweepstakes lead",
+    "website": "https://www.keurig.ca/",
+    "apply_url": "https://www.keurig.ca/affiliates",
+    "source_url": "https://www.keurig.ca/affiliates"
   },
   {
-    "brand_name": "iOttie",
-    "brand_size": "mid-size",
-    "category": "Consumer Tech / Mobile Accessories / Mounts & Charging",
-    "commission": "Up to 10%",
-    "website": "https://www.iottie.com/",
-    "apply_url": "https://www.iottie.com/affiliates/",
-    "source_url": "https://www.iottie.com/affiliates/"
+    "brand_name": "Jotform",
+    "brand_size": "large",
+    "category": "Software / Forms / Business & Creator Tools",
+    "commission": "30%",
+    "website": "https://www.jotform.com/",
+    "apply_url": "https://www.jotform.com/partnership/affiliate/",
+    "source_url": "https://www.jotform.com/partnership/affiliate/"
   },
   {
-    "brand_name": "APEXEL",
-    "brand_size": "mid-size",
-    "category": "Consumer Tech / Mobile Photography / Creator Camera Accessories",
-    "commission": "10%",
-    "website": "https://www.shopapexel.com/",
-    "apply_url": "https://www.shopapexel.com/pages/affiliate-program",
-    "source_url": "https://www.shopapexel.com/pages/affiliate-program"
+    "brand_name": "GetResponse",
+    "brand_size": "large",
+    "category": "Software / Email Marketing / Creator & Business Tools",
+    "commission": "40%-60% recurring for 12 months",
+    "website": "https://www.getresponse.com/",
+    "apply_url": "https://www.getresponse.com/affiliate-programs",
+    "source_url": "https://www.getresponse.com/affiliate-programs"
   },
   {
-    "brand_name": "eufy",
-    "brand_size": "mid-size",
-    "category": "Consumer Tech / Smart Home / Cameras & Electronics",
-    "commission": "Starts at 7%",
-    "website": "https://www.eufy.com/",
-    "apply_url": "https://release.eufy.com/ca/affiliate",
-    "source_url": "https://release.eufy.com/ca/affiliate"
-  },
-  {
-    "brand_name": "Sēkwl",
-    "brand_size": "emerging",
-    "category": "Food & Drinks / Functional Beverages / Wellness",
-    "commission": "Up to 20%",
-    "website": "https://drinksekwl.com/",
-    "apply_url": "https://drinksekwl.com/pages/affiliate-program",
-    "source_url": "https://drinksekwl.com/pages/affiliate-program"
-  },
-  {
-    "brand_name": "TurbX",
-    "brand_size": "emerging",
-    "category": "Gaming / Desk Setup / Gaming Accessories",
-    "commission": "Up to 18%",
-    "website": "https://www.playturbx.com/",
-    "apply_url": "https://www.playturbx.com/pages/be-an-affiliate",
-    "source_url": "https://www.playturbx.com/pages/be-an-affiliate"
-  },
-  {
-    "brand_name": "LocoYoko Coffee",
-    "brand_size": "emerging",
-    "category": "Food & Drinks / Coffee / Canadian Brand",
-    "commission": "12%-30%",
-    "website": "https://locoyoko.com/",
-    "apply_url": "https://locoyoko.com/pages/affiliate-program",
-    "source_url": "https://locoyoko.com/pages/affiliate-program"
-  },
-  {
-    "brand_name": "Whoscale",
-    "brand_size": "emerging",
-    "category": "Software / Creator Economy / Analytics & Creator Tools",
+    "brand_name": "MailerLite",
+    "brand_size": "large",
+    "category": "Software / Email Marketing / Creator Tools",
     "commission": "30% recurring for life",
-    "website": "https://whoscale.io/",
-    "apply_url": "https://whoscale.io/en/affiliate",
-    "source_url": "https://whoscale.io/en/affiliate"
+    "website": "https://www.mailerlite.com/",
+    "apply_url": "https://www.mailerlite.com/affiliate",
+    "source_url": "https://www.mailerlite.com/affiliate"
   },
   {
-    "brand_name": "Viralze",
-    "brand_size": "emerging",
-    "category": "Software / AI / Social Media & Creator Tools",
-    "commission": "20% recurring",
-    "website": "https://viralze.com/",
-    "apply_url": "https://viralze.com/affiliate",
-    "source_url": "https://viralze.com/affiliate"
+    "brand_name": "vidIQ",
+    "brand_size": "mid-size",
+    "category": "Software / YouTube Growth / Creator Tools",
+    "commission": "15%-25% recurring",
+    "website": "https://vidiq.com/",
+    "apply_url": "https://vidiq.com/affiliate/",
+    "source_url": "https://vidiq.com/affiliate/"
   },
   {
-    "brand_name": "CreatorFlow",
+    "brand_name": "Restream",
+    "brand_size": "mid-size",
+    "category": "Software / Livestreaming / Creator Tools",
+    "commission": "$10 per qualifying paid referral",
+    "website": "https://restream.io/",
+    "apply_url": "https://support.restream.io/en/articles/4893782-does-restream-have-a-referral-program",
+    "source_url": "https://support.restream.io/en/articles/4893782-does-restream-have-a-referral-program"
+  },
+  {
+    "brand_name": "Livestorm",
+    "brand_size": "mid-size",
+    "category": "Software / Webinars / Video & Creator Business Tools",
+    "commission": "Up to 20% on eligible purchases during the first 12 months",
+    "website": "https://livestorm.co/",
+    "apply_url": "https://livestorm.co/partners/affiliate-partners",
+    "source_url": "https://livestorm.co/partners/affiliate-partners"
+  },
+  {
+    "brand_name": "Repurpose.io",
+    "brand_size": "mid-size",
+    "category": "Software / Content Repurposing / Creator Tools",
+    "commission": "25% recurring for 12 months",
+    "website": "https://repurpose.io/",
+    "apply_url": "https://repurpose.io/become-an-affiliate/",
+    "source_url": "https://repurpose.io/become-an-affiliate/"
+  },
+  {
+    "brand_name": "PandaDoc",
+    "brand_size": "mid-size",
+    "category": "Software / Documents / Business & Creator Tools",
+    "commission": "Not publicly listed",
+    "website": "https://www.pandadoc.com/",
+    "apply_url": "https://www.pandadoc.com/partners/",
+    "source_url": "https://www.pandadoc.com/partners/"
+  },
+  {
+    "brand_name": "IGItems",
+    "brand_size": "mid-size",
+    "category": "Gaming / Digital Marketplace / Gaming Services",
+    "commission": "5%-10%",
+    "website": "https://igitems.com/",
+    "apply_url": "https://igitems.com/affiliate",
+    "source_url": "https://igitems.com/affiliate"
+  },
+  {
+    "brand_name": "Mockey AI",
+    "brand_size": "mid-size",
+    "category": "Software / AI Design / Mockups & Creator Tools",
+    "commission": "30% recurring for life",
+    "website": "https://mockey.ai/",
+    "apply_url": "https://mockey.ai/mockey-affiliate-program/",
+    "source_url": "https://mockey.ai/mockey-affiliate-program/"
+  },
+  {
+    "brand_name": "Who's Brew",
+    "brand_size": "mid-size",
+    "category": "Food & Drinks / Coffee & Tea / Creator-Friendly Retail",
+    "commission": "5%-10%",
+    "website": "https://whosbrewshop.com/",
+    "apply_url": "https://whosbrewshop.com/affiliates",
+    "source_url": "https://whosbrewshop.com/affiliates"
+  },
+  {
+    "brand_name": "Satura",
     "brand_size": "emerging",
-    "category": "Software / Instagram Automation / Creator Monetization",
+    "category": "Software / AI Video / YouTube & Creator Tools",
+    "commission": "30% recurring for life",
+    "website": "https://saturaai.com/",
+    "apply_url": "https://saturaai.com/affiliate",
+    "source_url": "https://saturaai.com/affiliate"
+  },
+  {
+    "brand_name": "Mukiya",
+    "brand_size": "emerging",
+    "category": "Consumer Tech / Workspace Accessories / Docks & Creator Gear",
+    "commission": "8%-12%",
+    "website": "https://mukiya.com/",
+    "apply_url": "https://mukiya.com/pages/affiliate-program",
+    "source_url": "https://mukiya.com/pages/affiliate-program"
+  },
+  {
+    "brand_name": "Skreed",
+    "brand_size": "emerging",
+    "category": "Consumer Tech / Phone Accessories / Creator Lifestyle",
+    "commission": "12%-15%",
+    "website": "https://www.skreed.com/",
+    "apply_url": "https://www.skreed.com/pages/affiliate-partnerships",
+    "source_url": "https://www.skreed.com/pages/affiliate-partnerships"
+  },
+  {
+    "brand_name": "Elory",
+    "brand_size": "emerging",
+    "category": "Consumer Tech / Everyday Carry / Creator Gear",
+    "commission": "10%",
+    "website": "https://elory.co/",
+    "apply_url": "https://elory.co/pages/affiliate-program",
+    "source_url": "https://elory.co/pages/affiliate-program"
+  },
+  {
+    "brand_name": "TinyAffiliate",
+    "brand_size": "emerging",
+    "category": "Software / Affiliate Management / SaaS & Creator Business Tools",
+    "commission": "40% recurring for 12 months",
+    "website": "https://www.tinyaffiliate.com/",
+    "apply_url": "https://www.tinyaffiliate.com/affiliate-program",
+    "source_url": "https://www.tinyaffiliate.com/affiliate-program"
+  },
+  {
+    "brand_name": "RapidNative",
+    "brand_size": "emerging",
+    "category": "Software / AI App Builder / Developer & Creator Tools",
+    "commission": "30% recurring for up to 12 months",
+    "website": "https://www.rapidnative.com/",
+    "apply_url": "https://www.rapidnative.com/affiliates",
+    "source_url": "https://www.rapidnative.com/affiliates"
+  },
+  {
+    "brand_name": "Xyla",
+    "brand_size": "emerging",
+    "category": "Software / AI Social Media / Ecommerce Creator Tools",
     "commission": "30% recurring for 12 months",
-    "website": "https://creatorflow.so/",
-    "apply_url": "https://creatorflow.so/affiliate-program",
-    "source_url": "https://creatorflow.so/affiliate-program"
-  },
-  {
-    "brand_name": "PostNitro",
-    "brand_size": "emerging",
-    "category": "Software / AI Content Creation / Social Media Creator Tools",
-    "commission": "20% recurring for life",
-    "website": "https://postnitro.ai/",
-    "apply_url": "https://postnitro.ai/affiliates",
-    "source_url": "https://postnitro.ai/affiliates"
+    "website": "https://www.xyla.ai/",
+    "apply_url": "https://www.xyla.ai/affiliates/",
+    "source_url": "https://www.xyla.ai/affiliates/"
   }
 ]
