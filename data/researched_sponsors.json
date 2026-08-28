@@ -745,25 +745,27 @@
   {
     "brand_name": "Fanttik",
     "brand_domain": "fanttik.com",
-    "creator_name": "Enchanterium",
-    "creator_url": "https://www.youtube.com/@Enchanterium",
+    "creator_name": "SYD and MACKY",
+    "creator_url": "https://www.youtube.com/@SYDandMACKY",
     "creator_channel_id": "",
-    "creator_genre": "Lifestyle / DIY / Crafts",
+    "creator_genre": "Mountain Biking / Sports / Lifestyle",
     "creator_tags": [
-      "lifestyle",
-      "DIY",
-      "crafts",
-      "maker",
+      "sports",
+      "mountain biking",
+      "outdoors",
       "automotive tools",
-      "physical consumer tech"
+      "physical consumer tech",
+      "lifestyle"
     ],
-    "video_url": "https://sponsorradar.com/brands/fanttik",
-    "video_title": "We made Garnet from Steven Universe (with THICC thighs)",
-    "sponsored_date": "2026-06-27",
-    "evidence": "SponsorRadar identifies Fanttik sponsorship activity on Enchanterium's June 27, 2026 English-language YouTube video, with a creator-specific Fanttik F2 Master discount code. Fanttik sells tangible automotive, outdoor and home-improvement tools. Because the sponsorship is within 60 days rather than 30, it is paired with Fanttik's currently active official affiliate and ambassador programs; the official affiliate program publishes publish@fanttik.com as the Affiliate Team contact. The permanent GitHub sent/block ledger and current research inventory were rechecked immediately before addition and contained no Fanttik or fanttik.com key.",
+    "video_url": "https://www.youtube.com/watch?v=RVtAWIErkQE",
+    "video_title": "It's time to go big or go home...or maybe a bit of both",
+    "sponsored_date": "2026-08-08",
+    "evidence": "SponsorRadar identifies Fanttik as the sponsor of SYD and MACKY's August 8, 2026 English-language YouTube video and quotes the disclosure: 'This video is sponsored by Fanttik, the maker of the X10 Ace Mini and X10 Ace Tiny air compressors.' SponsorRadar tracks Fanttik across 140 YouTube creators, including SYD and MACKY (~131K subscribers). Fanttik's official Affiliate Program actively supports social-platform promotion and publishes publish@fanttik.com as its official affiliate-team email; its official contact page separately lists marketing@fanttik.com for Marketing. Fanttik sells tangible automotive tools and consumer hardware.",
     "paid_product_placement": true,
-    "contact_email": "publish@fanttik.com",
-    "contact_source_url": "https://fanttik.com/pages/main-affiliate-program"
+    "contact_email": "marketing@fanttik.com",
+    "contact_source_url": "https://fanttik.com/pages/contact-us",
+    "source_platform": "YouTube",
+    "video_id": "RVtAWIErkQE"
   },
   {
     "brand_name": "Blackview",
