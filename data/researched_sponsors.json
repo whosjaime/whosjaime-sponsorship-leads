@@ -6996,5 +6996,36 @@
     "contact_email": "collab@sandbergwallpaper.com",
     "contact_source_url": "https://sandbergwallpaper.com/dk/samarbejder",
     "evidence_source_url": "https://collabfeed.io/"
+  },
+  {
+    "brand_name": "CASETiFY",
+    "brand_domain": "casetify.com",
+    "source_platform": "YouTube",
+    "creator_name": "Stanz",
+    "creator_url": "https://www.youtube.com/@stanz",
+    "creator_channel_id": "",
+    "creator_subscribers": 251000,
+    "creator_genre": "Entertainment / Gaming / Reactions",
+    "creator_tags": [
+      "entertainment",
+      "gaming",
+      "reactions",
+      "streaming",
+      "physical consumer tech",
+      "phone accessories"
+    ],
+    "video_id": "",
+    "video_url": "",
+    "video_title": "What REALLY Happened at Ludwig's Streamer Games...",
+    "sponsored_date": "2026-08-26",
+    "evidence": "SponsorRadar records CASETiFY sponsoring Stanz's August 26, 2026 English-language YouTube video. Stanz has about 251K subscribers, making this direct recent creator-side evidence from a mid-size entertainment/gaming creator. CASETiFY sells tangible physical consumer tech accessories including phone cases and device accessories. A current public LinkedIn profile identifies Stella Ozaki as CASETiFY Senior Partnership Marketing Manager, in role since August 2025, qualifying as a verified named partnership contact. CASETiFY and casetify.com were checked against the permanent GitHub sent sponsor ledger and repository code search before staging and were not found.",
+    "paid_product_placement": true,
+    "sponsor_category": "Physical Consumer Tech / Fashion",
+    "sponsor_subcategory": "Phone & Device Accessories",
+    "contact_name": "Stella Ozaki",
+    "contact_title": "Senior Partnership Marketing Manager",
+    "contact_email": "",
+    "contact_source_url": "https://jp.linkedin.com/in/stella-ozaki",
+    "evidence_source_url": "https://sponsorradar.com/channels/stanz"
   }
 ]
