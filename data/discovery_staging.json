@@ -1,1 +1,29 @@
-[]
+[
+  {
+    "brand_name": "PuK Gaming",
+    "brand_domain": "pukgaming.com",
+    "source_platform": "YouTube",
+    "creator_name": "Mr AP Gaming",
+    "creator_url": "https://www.youtube.com/@mrapgaming",
+    "creator_channel_id": "",
+    "creator_subscribers": 1150000,
+    "creator_genre": "Gaming / Mobile Gaming",
+    "creator_tags": ["gaming", "mobile gaming", "gaming accessories", "physical consumer tech"],
+    "video_id": "",
+    "video_url": "https://sponsorradar.com/channels/mrapgaming",
+    "video_title": "New Supercell Game: PROJECT R.I.S.E",
+    "sponsored_date": "2026-08-23",
+    "evidence": "SponsorRadar records PuK Gaming sponsoring Mr AP Gaming's August 23, 2026 English-language YouTube video and shows a second PuK Gaming sponsorship with the creator on June 23, 2026. SponsorRadar also tracks 76 PuK Gaming YouTube sponsorship deals across 11 channels, with sustained 2026 buying and strong spend in gaming. PuK Gaming sells tangible mobile-gaming hardware including thumbsticks, grips and triggers. PuK's official creator-partnership materials document strategic creator relationships with iFerg and Ali-A. A February 12, 2026 PuK Gaming announcement confirms Scotty Tidwell as current CEO after serving as CMO, states his current focus includes deepening partnerships, and publicly lists scotty@pukgaming.com.",
+    "paid_product_placement": true,
+    "sponsor_category": "Gaming",
+    "sponsor_subcategory": "Mobile Gaming Accessories / Physical Hardware",
+    "contact_name": "Scotty Tidwell",
+    "contact_title": "Chief Executive Officer (former CMO; current partnership focus)",
+    "contact_email": "scotty@pukgaming.com",
+    "email_type": "Named public work email",
+    "contact_source": "https://www.newswire.com/news/puk-gaming-promotes-scotty-tidwell-from-cmo-to-chief-executive-officer",
+    "contact_source_url": "https://www.newswire.com/news/puk-gaming-promotes-scotty-tidwell-from-cmo-to-chief-executive-officer",
+    "signals": ["Fresh August 2026 creator sponsorship", "Repeat creator spend", "Physical gaming hardware", "Active creator strategic partnerships", "Verified current partnership-focused executive with public work email"],
+    "date_found": "2026-08-28"
+  }
+]
