@@ -7311,5 +7311,30 @@
       "Named influencer marketing contact",
       "Beauty/lifestyle fit"
     ]
+  },
+  {
+    "brand_name": "Cometeer",
+    "brand_domain": "cometeer.com",
+    "creator_name": "Nicholas Garofola",
+    "creator_url": "https://www.youtube.com/@nicholasgarofola",
+    "creator_channel_id": "UCLiAWvpRFtNiVOu6OyEfmDA",
+    "creator_genre": "Lifestyle / Minimalism / Tech",
+    "creator_tags": [
+      "lifestyle",
+      "minimalism",
+      "coffee",
+      "food/drink",
+      "tech",
+      "vlog"
+    ],
+    "video_url": "https://www.youtube.com/watch?v=UYYl8rRlTWg",
+    "video_title": "8 Simple Living Rules I Wish I Learned Sooner | Minimalism",
+    "sponsored_date": "2026-08-16",
+    "evidence": "SponsorRadar records Cometeer sponsoring Nicholas Garofola's August 16, 2026 English-language YouTube video with a creator-specific Cometeer offer and reports 49 tracked sponsorships across 39 creators, confirming active creator spend. Cometeer also has a current Creator Partnerships function dedicated to sourcing and managing creators across YouTube, Instagram, TikTok and Meta. Qualified named outreach contact: Jolie Rosen, Creator Partnerships Manager at Cometeer, publicly listed in a current employee directory.",
+    "paid_product_placement": true,
+    "contact_name": "Jolie Rosen",
+    "contact_title": "Creator Partnerships Manager",
+    "contact_source_url": "https://www.signalhire.com/companies/cometeer/employees",
+    "creator_program_source_url": "https://builtin.com/job/creator-partnerships-associate/8002622"
   }
 ]
