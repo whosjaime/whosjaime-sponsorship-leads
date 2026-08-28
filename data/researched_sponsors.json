@@ -7027,5 +7027,43 @@
     "contact_email": "",
     "contact_source_url": "https://jp.linkedin.com/in/stella-ozaki",
     "evidence_source_url": "https://sponsorradar.com/channels/stanz"
+  },
+  {
+    "brand_name": "Totino's",
+    "brand_domain": "totinos.com",
+    "source_platform": "Instagram",
+    "creator_name": "Julia Molinari",
+    "creator_url": "https://www.instagram.com/juliahmolinari/",
+    "creator_channel_id": "",
+    "creator_subscribers": 1565244,
+    "creator_genre": "Food / Lifestyle / Entertainment",
+    "creator_tags": [
+      "food",
+      "lifestyle",
+      "entertainment",
+      "frozen snacks",
+      "Instagram"
+    ],
+    "video_id": "",
+    "video_url": "https://collabfeed.io/",
+    "video_title": "Totino's paid Instagram partnership with @juliahmolinari",
+    "sponsored_date": "2026-08-27",
+    "evidence": "CollabFeed's live public paid-partnership feed records @juliahmolinari partnering with Totino's on Instagram on August 27, 2026, with 41.5K views and 3.8K likes shown in the feed. The creator has approximately 1.56M Instagram followers according to Social Blade. Totino's is a General Mills physical food/snack brand. Current 2026 award and campaign credits identify Kyla Rabb at General Mills as Head of Entertainment, Music and Fashion Brand Partnerships; a Totino's campaign credit specifically lists Kyla Rabb under General Mills Brand Partnerships, providing a verified named brand-partnership outreach contact. Totino's was checked against current researched inventory and the permanent sent/block ledger before staging and returned no matches.",
+    "paid_product_placement": true,
+    "sponsor_category": "Food & Beverage",
+    "sponsor_subcategory": "Frozen Snacks",
+    "contact_name": "Kyla Rabb",
+    "contact_title": "Head of Entertainment, Music and Fashion Brand Partnerships",
+    "contact_email": "",
+    "email_type": "Verified named brand partnerships contact",
+    "contact_source": "https://americanadvertisingawards.com/awards/fruithead/",
+    "contact_source_url": "https://americanadvertisingawards.com/awards/fruithead/",
+    "signals": [
+      "Paid creator partnership on August 27, 2026",
+      "Current creator-side Instagram evidence",
+      "Physical food product",
+      "Verified current General Mills brand-partnership lead",
+      "Totino's-specific brand-partnership campaign credit"
+    ]
   }
 ]
