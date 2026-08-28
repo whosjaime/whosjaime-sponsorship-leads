@@ -1,1 +1,31 @@
-[]
+[
+  {
+    "brand_name": "Ninja",
+    "brand_domain": "sharkninja.com",
+    "source_platform": "TikTok",
+    "creator_name": "therafflekidofficial",
+    "creator_url": "https://www.tiktok.com/@therafflekidofficial",
+    "creator_channel_id": "",
+    "creator_genre": "Home / Food / Lifestyle",
+    "creator_tags": [
+      "home",
+      "kitchen",
+      "food",
+      "lifestyle",
+      "physical consumer tech"
+    ],
+    "video_url": "https://collabfeed.io/brands/ninja",
+    "video_title": "Ninja paid creator partnership post tracked by CollabFeed",
+    "sponsored_date": "2026-08-21",
+    "evidence": "CollabFeed's live paid-partnership feed records TikTok creator therrafflekidofficial partnering with Ninja on August 21, 2026 in the kitchen-appliance/home category; the tracked post had about 217.6K views and 30.6K likes when indexed. Ninja is a tangible consumer-appliance brand under SharkNinja, so it clears the physical-tech requirement. SharkNinja's official affiliate program explicitly invites influencers and offers opportunities for future campaigns. Qualified outreach contact: Erin Andy, current Influencer Manager, Shark Home at SharkNinja (publicly verified current role as of July 2026). Ninja/sharkninja.com were checked against both the existing researched inventory and permanent sent ledger immediately before staging and no matching brand/domain key was found.",
+    "paid_product_placement": true,
+    "sponsor_category": "Physical Consumer Tech / Home",
+    "sponsor_subcategory": "Kitchen Appliances / Home Appliances",
+    "contact_name": "Erin Andy",
+    "contact_title": "Influencer Manager, Shark Home",
+    "contact_email": "",
+    "email_type": "Verified named current influencer contact",
+    "contact_source": "https://www.signalhire.com/profiles/erin-andy%27s-email/10855570",
+    "contact_source_url": "https://www.signalhire.com/profiles/erin-andy%27s-email/10855570"
+  }
+]
