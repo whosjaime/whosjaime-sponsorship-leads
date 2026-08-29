@@ -7879,5 +7879,44 @@
     "paid_product_placement": true,
     "contact_email": "marketing@aecooly.com",
     "contact_source_url": "https://en.prnasia.com/releases/global/aecooly-unveils-cold-air-series-as-rising-global-heat-redefines-personal-cooling-539552.shtml"
+  },
+  {
+    "brand_name": "Abercrombie & Fitch",
+    "brand_domain": "abercrombie.com",
+    "source_platform": "TikTok",
+    "creator_name": "kellyvillares",
+    "creator_url": "https://www.tiktok.com/@kellyvillares",
+    "creator_channel_id": null,
+    "creator_subscribers": null,
+    "creator_genre": "Fashion / Lifestyle",
+    "creator_tags": [
+      "fashion",
+      "lifestyle",
+      "vlog"
+    ],
+    "video_id": "7672860298470034701",
+    "video_url": "https://www.tiktok.com/@kellyvillares/video/7672860298470034701",
+    "video_title": "Abercrombie & Fitch paid TikTok creator partnership",
+    "sponsored_date": "2026-08-11",
+    "evidence": "CollabFeed tracks kellyvillares × Abercrombie & Fitch as a paid TikTok creator partnership posted Aug 11, 2026 (55.8K views, 6.6K likes), and reports an active campaign in the last 30 days. Abercrombie's official Creator Suite is currently active and explicitly rewards creators through affiliate commission, challenges, products and campaign opportunities.",
+    "evidence_url": "https://collabfeed.io/brands/abercrombie-and-fitch",
+    "paid_product_placement": true,
+    "sponsor_category": "Fashion",
+    "sponsor_subcategory": "Apparel / Lifestyle",
+    "contact_name": "Ashlyn Ansel, MBA",
+    "contact_title": "Associate Specialist, Influencer & Affiliate Marketing",
+    "contact_email": null,
+    "email_type": "verified named influencer/affiliate contact",
+    "contact_source": "Public LinkedIn activity confirming current Abercrombie & Fitch Influencer & Affiliate Marketing role",
+    "contact_source_url": "https://www.linkedin.com/in/kelsey-webster-10914074",
+    "official_creator_program_url": "https://community.abercrombie.com/account/terms",
+    "signals": [
+      "creator-side TikTok paid partnership within 30 days",
+      "active official Creator Suite / affiliate creator program",
+      "current named Influencer & Affiliate Marketing contact",
+      "fashion/lifestyle roster fit",
+      "not present in permanent repo ledger or researched inventory at qualification time"
+    ],
+    "date_found": "2026-08-29"
   }
 ]
