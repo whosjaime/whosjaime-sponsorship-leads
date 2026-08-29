@@ -7857,5 +7857,27 @@
       "Active official Realmakers creator program",
       "Verified current influencer and affiliate lead"
     ]
+  },
+  {
+    "brand_name": "Aecooly",
+    "brand_domain": "aecooly.com",
+    "creator_name": "KLGadgetTV",
+    "creator_url": "https://www.youtube.com/@klgadgettv",
+    "creator_channel_id": "",
+    "creator_genre": "Physical Consumer Tech / Lifestyle",
+    "creator_tags": [
+      "physical consumer tech",
+      "portable cooling",
+      "travel",
+      "lifestyle",
+      "tech reviews"
+    ],
+    "video_url": "https://sponsorradar.com/channels/klgadgettv",
+    "video_title": "Aecooly Cold Air Ultra Review - It Really Blows Cold Air!",
+    "sponsored_date": "2026-08-04",
+    "evidence": "SponsorRadar identifies Aecooly as the sponsor of KLGadgetTV's August 4, 2026 English-language YouTube video and reports Aecooly had an August 2026 tracked deal plus 27 tracked creator sponsorships across 19 channels. Aecooly sells tangible portable cooling hardware. The brand's July 2026 official PR release publishes marketing@aecooly.com for marketing/review outreach, and Softstory's current case study documents 29 Aecooly collaborations across YouTube and Instagram with 20+ outdoor, travel and tech influencers. Aecooly and aecooly.com were checked repo-wide before staging and returned no match.",
+    "paid_product_placement": true,
+    "contact_email": "marketing@aecooly.com",
+    "contact_source_url": "https://en.prnasia.com/releases/global/aecooly-unveils-cold-air-series-as-rising-global-heat-redefines-personal-cooling-539552.shtml"
   }
 ]
