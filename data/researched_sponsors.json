@@ -7404,5 +7404,41 @@
       "Current influencer marketing contact",
       "Official affiliate program"
     ]
+  },
+  {
+    "brand_name": "Charlotte Tilbury",
+    "brand_domain": "charlottetilbury.com",
+    "source_platform": "YouTube",
+    "creator_name": "nabeelajahangir",
+    "creator_url": "https://www.youtube.com/@nabeelajahangir",
+    "creator_channel_id": "",
+    "creator_genre": "Beauty / Lifestyle",
+    "creator_tags": [
+      "beauty",
+      "makeup",
+      "lifestyle",
+      "YouTube"
+    ],
+    "video_url": "https://collabfeed.io/brands/charlotte-tilbury",
+    "video_title": "Charlotte Tilbury paid YouTube creator partnership tracked by CollabFeed",
+    "sponsored_date": "2026-08-26",
+    "evidence": "CollabFeed's current August 2026 paid-partnership data records creator nabeelajahangir partnering with Charlotte Tilbury on YouTube on August 26, 2026 and shows Charlotte Tilbury with multiple paid creator partnerships across YouTube, Instagram and TikTok during August 2026. Charlotte Tilbury's official affiliate programme explicitly accepts Influencer applicants and publishes partnerships@charlottetilbury.com for programme questions; its official help center separately publishes Influencer@charlottetilbury.com specifically for influencer enquiries. The permanent sent/block ledger was checked immediately before staging and contained no Charlotte Tilbury or charlottetilbury.com key, and repository search returned no existing Charlotte Tilbury record.",
+    "paid_product_placement": true,
+    "sponsor_category": "Beauty",
+    "sponsor_subcategory": "Makeup / Cosmetics",
+    "contact_name": "Charlotte Tilbury Influencer Team",
+    "contact_title": "Influencer Partnerships",
+    "contact_email": "Influencer@charlottetilbury.com",
+    "email_type": "Official influencer partnership email",
+    "contact_source": "https://help.charlottetilbury.com/hc/en-us/articles/360012753817-PR",
+    "contact_source_url": "https://help.charlottetilbury.com/hc/en-us/articles/360012753817-PR",
+    "creator_program_url": "https://www.charlottetilbury.com/uk/content/charlotte-tilbury-affiliate-program",
+    "signals": [
+      "Fresh August 26, 2026 creator-side paid partnership",
+      "Multiple current August creator campaigns",
+      "Official influencer programme",
+      "Dedicated official influencer outreach email"
+    ],
+    "date_found": "2026-08-29"
   }
 ]
