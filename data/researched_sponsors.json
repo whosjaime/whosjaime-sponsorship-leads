@@ -7782,5 +7782,43 @@
       "Physical home/furniture brand"
     ],
     "date_found": "2026-08-29"
+  },
+  {
+    "brand_name": "Kenwood",
+    "brand_domain": "kenwoodworld.com",
+    "creator_name": "bakingandstories",
+    "creator_url": "https://www.instagram.com/bakingandstories/",
+    "creator_channel_id": "",
+    "creator_genre": "Home & DIY / Food & Beverage",
+    "creator_tags": [
+      "home",
+      "DIY",
+      "food",
+      "baking",
+      "kitchen appliances",
+      "Instagram"
+    ],
+    "source_platform": "Instagram",
+    "video_url": "https://www.instagram.com/p/DcMInVONhx3/",
+    "video_title": "Kenwood paid creator partnership with @bakingandstories",
+    "sponsored_date": "2026-08-18",
+    "evidence": "CollabFeed tracks @bakingandstories x Kenwood as a paid Instagram creator partnership posted August 18, 2026, with approximately 25.6K tracked views and 606 likes. CollabFeed also tracks a separate Kenwood partnership with @emelia_jackson on August 12, 2026 and reports 18 paid creator partnerships across 9 unique creators. Kenwood's official affiliate program is currently active and explicitly offers dedicated affiliate management and exclusive partnership opportunities. Qualified outreach contact: affiliates@velstar.co.uk, publicly listed on Kenwood UK's Awin merchant profile as the Affiliate Team managing the Kenwood UK program. Kenwood / kenwoodworld.com were checked against the current researched inventory and permanent sent/block ledger immediately before staging, with no existing match found.",
+    "paid_product_placement": true,
+    "sponsor_category": "Home / Physical Consumer Tech",
+    "sponsor_subcategory": "Kitchen Appliances",
+    "contact_name": "Kenwood UK Affiliate Team (Velstar)",
+    "contact_title": "Affiliate Partnerships",
+    "contact_email": "affiliates@velstar.co.uk",
+    "email_type": "Public affiliate program email",
+    "contact_source": "https://ui.awin.com/merchant-profile/25783",
+    "contact_source_url": "https://ui.awin.com/merchant-profile/25783",
+    "signals": [
+      "Recent paid creator partnership",
+      "Multiple recent creator partnerships",
+      "Physical consumer hardware",
+      "Active official affiliate program",
+      "Qualified affiliate contact"
+    ],
+    "date_found": "2026-08-29"
   }
 ]
