@@ -7554,5 +7554,42 @@
       "Fashion/lifestyle roster fit"
     ],
     "date_found": "2026-08-29"
+  },
+  {
+    "brand_name": "Boston Proper",
+    "brand_domain": "bostonproper.com",
+    "source_platform": "Instagram",
+    "creator_name": "simplygailg",
+    "creator_url": "https://www.instagram.com/simplygailg/",
+    "creator_channel_id": "",
+    "creator_genre": "Fashion / Lifestyle",
+    "creator_tags": [
+      "fashion",
+      "womens clothing",
+      "lifestyle",
+      "Instagram",
+      "creator partnership"
+    ],
+    "video_id": "",
+    "video_url": "https://collabfeed.io/",
+    "video_title": "Boston Proper paid Instagram creator partnership with @simplygailg",
+    "sponsored_date": "2026-08-27",
+    "evidence": "CollabFeed's live paid-partnership feed records @simplygailg partnering with Boston Proper on Instagram on August 27, 2026. Boston Proper's August 2026 brand relaunch announcement independently states that its seasonal integrated marketing campaign includes creator partnerships. Boston Proper sells physical women's apparel. Gillian Di Gioia is a current Social Media Manager at Boston Proper and publicly describes her work in social media and influencer marketing for the brand, satisfying the named marketing-contact requirement. Boston Proper/bostonproper.com were checked against the permanent sent ledger and repository search immediately before staging and no match was found.",
+    "paid_product_placement": true,
+    "sponsor_category": "Fashion",
+    "sponsor_subcategory": "Women's Fashion / Apparel",
+    "contact_name": "Gillian Di Gioia",
+    "contact_title": "Social Media Manager",
+    "contact_email": "",
+    "email_type": "Verified named marketing contact",
+    "contact_source": "https://www.linkedin.com/in/gillian-di-gioia-5a9aaa203",
+    "contact_source_url": "https://www.linkedin.com/in/gillian-di-gioia-5a9aaa203",
+    "signals": [
+      "Very recent paid creator partnership",
+      "Current official creator-partnership campaign",
+      "Physical fashion brand",
+      "Verified current social media marketing contact"
+    ],
+    "date_found": "2026-08-29"
   }
 ]
