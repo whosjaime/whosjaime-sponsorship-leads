@@ -1,1 +1,42 @@
-[]
+[
+  {
+    "brand_name": "Lenovo",
+    "brand_domain": "lenovo.com",
+    "source_platform": "YouTube",
+    "creator_name": "peachietech",
+    "creator_url": "https://www.youtube.com/@peachietech",
+    "creator_channel_id": "",
+    "creator_subscribers": null,
+    "creator_genre": "Gaming / Physical Consumer Tech",
+    "creator_tags": [
+      "gaming",
+      "gaming laptop",
+      "physical consumer tech",
+      "PC hardware",
+      "creator tech"
+    ],
+    "video_id": "pVMX0xupM2M",
+    "video_url": "https://www.youtube.com/watch?v=pVMX0xupM2M",
+    "video_title": "Lenovo paid YouTube creator partnership tracked for peachietech",
+    "sponsored_date": "2026-08-12",
+    "evidence": "CollabFeed's public Lenovo partnership feed records peachietech in a paid YouTube Lenovo gaming-laptop partnership posted August 12, 2026, with about 1.3K tracked views and 84 likes when indexed. The same feed records a separate Lenovo YouTube partnership with The Tech Chap on August 8, 2026, confirming active August creator spend rather than a one-off historical integration. Lenovo sells tangible laptops, PCs, tablets and gaming hardware. Lenovo's official Affiliate Program publishes NA_affiliate@lenovo.com specifically for the North America Affiliate Team, satisfying the qualified outreach-contact requirement. Lenovo/lenovo.com were checked against the permanent sent/block ledger and repository immediately before staging and no matching key was found.",
+    "paid_product_placement": true,
+    "sponsor_category": "Physical Consumer Tech",
+    "sponsor_subcategory": "Gaming Laptops / PCs / Consumer Hardware",
+    "contact_name": "Lenovo North America Affiliate Team",
+    "contact_title": "Affiliate Partnerships",
+    "contact_email": "NA_affiliate@lenovo.com",
+    "email_type": "Official affiliate partnership email",
+    "contact_source": "https://www.lenovo.com/ca/en/landingpage/promotions/affiliate/affiliate-program/",
+    "contact_source_url": "https://www.lenovo.com/ca/en/landingpage/promotions/affiliate/affiliate-program/",
+    "evidence_source_url": "https://collabfeed.io/brands/lenovo",
+    "signals": [
+      "Recent August 2026 YouTube creator partnership",
+      "Small creator-side gaming evidence",
+      "Multiple active August creator campaigns",
+      "Physical consumer hardware",
+      "Official qualified affiliate partnership email"
+    ],
+    "date_found": "2026-08-29"
+  }
+]
