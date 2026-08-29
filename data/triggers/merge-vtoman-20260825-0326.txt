@@ -1,0 +1,1 @@
+Trigger protected merge for verified VTOMAN sponsor discovery.
