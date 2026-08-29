@@ -7918,5 +7918,27 @@
       "not present in permanent repo ledger or researched inventory at qualification time"
     ],
     "date_found": "2026-08-29"
+  },
+  {
+    "brand_name": "Abbott Lyon",
+    "brand_domain": "abbottlyon.com",
+    "creator_name": "xmummatothehsx",
+    "creator_url": "https://www.instagram.com/xmummatothehsx/",
+    "creator_channel_id": "",
+    "creator_genre": "Fashion / Jewelry / Lifestyle",
+    "creator_tags": [
+      "fashion",
+      "jewelry",
+      "lifestyle",
+      "Instagram",
+      "accessories"
+    ],
+    "video_url": "https://www.instagram.com/p/Dbg4Z57MX6f/",
+    "video_title": "Abbott Lyon paid creator partnership post",
+    "sponsored_date": "2026-08-01",
+    "evidence": "CollabFeed records @xmummatothehsx × Abbott Lyon as a paid Instagram creator partnership posted August 1, 2026, and reports an active Abbott Lyon campaign within the last 30 days. Abbott Lyon's official contact page explicitly directs collaboration inquiries to ambassadors@abbottlyon.com, and its official creator signup page confirms an active affiliate/creator programme. Abbott Lyon and abbottlyon.com were checked repo-wide against existing researched/sent/block data before staging and returned no match.",
+    "paid_product_placement": true,
+    "contact_email": "ambassadors@abbottlyon.com",
+    "contact_source_url": "https://www.abbottlyon.com/en-ie/pages/contact-us"
   }
 ]
