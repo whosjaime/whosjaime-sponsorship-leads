@@ -7670,5 +7670,43 @@
       "Official influencer manager email"
     ],
     "date_found": "2026-08-29"
+  },
+  {
+    "brand_name": "MINISO",
+    "brand_domain": "miniso.com",
+    "source_platform": "Instagram",
+    "creator_name": "aniqasardar",
+    "creator_url": "https://www.instagram.com/aniqasardar/",
+    "creator_channel_id": "",
+    "creator_genre": "Home & DIY / Lifestyle",
+    "creator_tags": [
+      "home",
+      "DIY",
+      "lifestyle",
+      "collectibles",
+      "retail",
+      "Instagram"
+    ],
+    "video_url": "https://collabfeed.io/brands/miniso",
+    "video_title": "MINISO paid Instagram creator partnership with @aniqasardar",
+    "sponsored_date": "2026-08-21",
+    "evidence": "CollabFeed records a paid Instagram partnership between MINISO and creator @aniqasardar posted August 21, 2026, with approximately 537K tracked views and 19.9K likes when indexed. CollabFeed tracks multiple MINISO creator partnerships and two campaigns in the prior 30 days. MINISO is a physical consumer lifestyle/retail brand. Catherine Wang's current public MINISO Canada profile describes her as a growth-focused digital marketer leading paid social, influencer, and CRM strategy, directly qualifying her as a named influencer-marketing outreach contact. MINISO/miniso.com were checked against the permanent GitHub sent/block ledger and current repository inventory immediately before staging and no existing match was found.",
+    "paid_product_placement": true,
+    "sponsor_category": "Lifestyle / Home",
+    "sponsor_subcategory": "Lifestyle Retail / Collectibles / Home Goods",
+    "contact_name": "Catherine Wang",
+    "contact_title": "Digital Marketing / Influencer Strategy, MINISO Canada",
+    "contact_email": "",
+    "email_type": "Verified named current influencer-marketing contact",
+    "contact_source": "https://ca.linkedin.com/in/catherine-wang-634661163",
+    "contact_source_url": "https://ca.linkedin.com/in/catherine-wang-634661163",
+    "evidence_source_url": "https://collabfeed.io/brands/miniso",
+    "signals": [
+      "Recent August 2026 paid creator partnership",
+      "Small/mid-size creator campaign activity",
+      "Physical consumer lifestyle brand",
+      "Verified named influencer-marketing contact"
+    ],
+    "date_found": "2026-08-29"
   }
 ]
