@@ -1,1 +1,28 @@
-[]
+[
+  {
+    "brand_name": "Orgain",
+    "brand_domain": "orgain.com",
+    "source_platform": "Instagram",
+    "creator_name": "careeohhlinee",
+    "creator_url": "https://www.instagram.com/careeohhlinee/",
+    "creator_channel_id": "",
+    "creator_genre": "Health / Lifestyle / Food",
+    "creator_tags": ["health", "wellness", "food/drink", "lifestyle", "nutrition", "Instagram"],
+    "video_url": "https://collabfeed.io/brands/orgain",
+    "video_title": "Orgain paid creator partnership with @careeohhlinee",
+    "sponsored_date": "2026-07-27",
+    "evidence": "CollabFeed tracks an Orgain paid Instagram creator partnership with @careeohhlinee posted July 27, 2026, with about 30.2K views and 5.1K likes when indexed. Because this direct creator evidence is within the allowed 60-day window rather than 30 days, it is corroborated by Orgain's currently active Affiliate Ambassador Program for influencers and content creators. A public current contact directory identifies ambassadors@orgain.com specifically for Orgain Ambassador Program inquiries. The permanent sent/block ledger and current researched inventory were checked directly immediately before staging and contained no Orgain/orgain.com key.",
+    "paid_product_placement": true,
+    "sponsor_category": "Health & Wellness",
+    "sponsor_subcategory": "Protein / Nutrition Products",
+    "contact_name": "",
+    "contact_title": "Ambassador Program",
+    "contact_email": "ambassadors@orgain.com",
+    "email_type": "Public ambassador program email",
+    "contact_source": "https://www.pissedconsumer.com/company/orgain/customer-service.html",
+    "contact_source_url": "https://www.pissedconsumer.com/company/orgain/customer-service.html",
+    "creator_program_url": "https://healthcare.orgain.com/about/faq.html",
+    "signals": ["Recent paid creator partnership within 60 days", "Active official influencer/content-creator ambassador program", "Qualified ambassador-program email", "Physical nutrition products"],
+    "date_found": "2026-08-29"
+  }
+]
