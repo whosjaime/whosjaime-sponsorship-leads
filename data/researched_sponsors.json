@@ -7440,5 +7440,42 @@
       "Dedicated official influencer outreach email"
     ],
     "date_found": "2026-08-29"
+  },
+  {
+    "brand_name": "PEDIGREE",
+    "brand_domain": "pedigree.com",
+    "source_platform": "Instagram",
+    "creator_name": "diary.of_megh",
+    "creator_url": "https://www.instagram.com/diary.of_megh/",
+    "creator_channel_id": "",
+    "creator_subscribers": null,
+    "creator_genre": "Pet / Lifestyle",
+    "creator_tags": [
+      "pet",
+      "dogs",
+      "lifestyle",
+      "Instagram"
+    ],
+    "video_id": "DcnBJrIEYd7",
+    "video_url": "https://www.instagram.com/p/DcnBJrIEYd7/",
+    "video_title": "PEDIGREE paid creator partnership tracked by CollabFeed",
+    "sponsored_date": "2026-08-29",
+    "evidence": "CollabFeed's live paid-partnership feed updated August 29, 2026 records creator @diary.of_megh partnering with PEDIGREE on Instagram on August 29, 2026. PEDIGREE is a physical pet-food brand under Mars Petcare. Qualified outreach contact: Elizabeth Sherwood, current Corporate Affairs Sr. Manager of Advocacy & Influencer at Mars Petcare; her current public profile states that she builds influence across the Mars Petcare portfolio and previously worked directly on PEDIGREE. The permanent GitHub sent/block ledger and current researched inventory were checked immediately before staging and contained no PEDIGREE/pedigree.com key.",
+    "paid_product_placement": true,
+    "sponsor_category": "Pet",
+    "sponsor_subcategory": "Dog Food / Pet Nutrition",
+    "contact_name": "Elizabeth Sherwood",
+    "contact_title": "Corporate Affairs Sr. Manager, Advocacy & Influencer — Mars Petcare",
+    "contact_email": "",
+    "email_type": "Verified named influencer contact",
+    "contact_source": "https://www.linkedin.com/in/elizabeth-sherwood-a7434a5b",
+    "contact_source_url": "https://www.linkedin.com/in/elizabeth-sherwood-a7434a5b",
+    "signals": [
+      "Same-day paid creator partnership",
+      "Creator-side Instagram evidence",
+      "Verified current influencer lead at Mars Petcare",
+      "Physical pet-food brand"
+    ],
+    "date_found": "2026-08-29"
   }
 ]
