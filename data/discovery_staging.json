@@ -1,1 +1,25 @@
-[]
+[
+  {
+    "brand_name": "Gozney",
+    "brand_domain": "gozney.com",
+    "creator_name": "MATTY MATHESON",
+    "creator_url": "https://www.youtube.com/@mattymatheson",
+    "creator_channel_id": "",
+    "creator_genre": "Food / Cooking / Lifestyle",
+    "creator_tags": [
+      "food",
+      "cooking",
+      "pizza",
+      "outdoor cooking",
+      "lifestyle",
+      "physical consumer product"
+    ],
+    "video_url": "https://www.youtube.com/@mattymatheson",
+    "video_title": "I Made the Best Steak & Potatoes… in a Pizza Oven?!",
+    "sponsored_date": "2026-08-16",
+    "evidence": "SponsorRadar records Gozney sponsoring MATTY MATHESON's August 16, 2026 English-language YouTube video and also records another Gozney integration on the same channel on July 26, 2026, showing repeat creator spend. Gozney sells tangible outdoor pizza ovens. Commission Factory's current Gozney affiliate program listing publishes affiliates@gozney.com for affiliate partnership questions. Gozney and gozney.com were checked repo-wide immediately before staging and returned no matches.",
+    "paid_product_placement": true,
+    "contact_email": "affiliates@gozney.com",
+    "contact_source_url": "https://www.commissionfactory.com/advertiser-directory/gozney-affiliate-program/77519"
+  }
+]
