@@ -1,1 +1,26 @@
-[]
+[
+  {
+    "brand_name": "Birch Living",
+    "brand_domain": "birchliving.com",
+    "creator_name": "Farmhouse on Boone",
+    "creator_url": "https://www.youtube.com/@farmhouseonboone",
+    "creator_channel_id": "",
+    "creator_genre": "DIY / Homestead / Family Lifestyle",
+    "creator_tags": [
+      "home",
+      "lifestyle",
+      "DIY",
+      "homestead",
+      "family",
+      "sleep",
+      "mattress"
+    ],
+    "video_url": "https://www.youtube.com/watch?v=Q1PdHMuqRvM",
+    "video_title": "Let me show you how to get meals on the table with almost no effort",
+    "sponsored_date": "2026-07-17",
+    "evidence": "SponsorRadar identifies Birch Living as the sponsor of Farmhouse on Boone's July 17, 2026 English-language YouTube video and tracks 16 Birch Living sponsorships on the channel, demonstrating repeat creator spend. Birch Living sells physical mattresses and bedding. Its official contact page explicitly lists partnerships@birchliving.com for Press, Influencers & Partnerships. Birch Living and birchliving.com were checked repo-wide immediately before staging and returned no existing match.",
+    "paid_product_placement": true,
+    "contact_email": "partnerships@birchliving.com",
+    "contact_source_url": "https://birchliving.com/pages/contact-us"
+  }
+]
