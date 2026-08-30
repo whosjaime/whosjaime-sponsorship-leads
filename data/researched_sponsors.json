@@ -7953,5 +7953,32 @@
     "paid_product_placement": true,
     "contact_email": "ambassadors@abbottlyon.com",
     "contact_source_url": "https://www.abbottlyon.com/en-ie/pages/contact-us"
+  },
+  {
+    "brand_name": "The Home Depot",
+    "brand_domain": "homedepot.com",
+    "creator_name": "@carmenjohnstongardens",
+    "creator_url": "https://www.instagram.com/carmenjohnstongardens/",
+    "creator_channel_id": "",
+    "creator_genre": "Home & DIY / Gardening / Lifestyle",
+    "creator_tags": [
+      "home",
+      "DIY",
+      "gardening",
+      "lifestyle",
+      "home improvement"
+    ],
+    "video_url": "https://collabfeed.io/brands/the-home-depot",
+    "video_title": "Recent paid creator partnership: @carmenjohnstongardens × The Home Depot",
+    "sponsored_date": "2026-08-29",
+    "evidence": "CollabFeed's live paid-partnership feed lists @carmenjohnstongardens × The Home Depot on Instagram on August 29, 2026 with 24.1K tracked views and 1.1K likes, and reports 2 Home Depot creator campaigns in the last 30 days. The Home Depot also operates an active official Creator program that offers direct brand partnerships and creator earnings. Qualified outreach contact is Mike Cushing, Director, Creator Partnerships at The Home Depot, publicly identified in a current creator-marketing contact directory. The Home Depot and homedepot.com returned no existing repository search match immediately before staging.",
+    "paid_product_placement": true,
+    "contact_email": "",
+    "contact_name": "Mike Cushing",
+    "contact_title": "Director, Creator Partnerships",
+    "contact_source_url": "https://pitchtheplug.com/brands/home-lifestyle/homedepot.com",
+    "program_source_url": "https://creators.homedepot.com/",
+    "platform": "Instagram",
+    "source_url": "https://collabfeed.io/brands/the-home-depot"
   }
 ]
