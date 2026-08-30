@@ -1,1 +1,27 @@
-[]
+[
+  {
+    "brand_name": "xTool",
+    "brand_domain": "xtool.com",
+    "creator_name": "Brothers Make",
+    "creator_url": "https://www.youtube.com/@BrothersMake",
+    "creator_channel_id": "",
+    "creator_genre": "DIY / Sustainability / Lifestyle",
+    "creator_tags": [
+      "DIY",
+      "sustainability",
+      "lifestyle",
+      "physical consumer tech",
+      "maker",
+      "home"
+    ],
+    "video_url": "https://sponsorradar.com/brands/xtool",
+    "video_title": "We Made a Giant Mural from Bottle Tops",
+    "sponsored_date": "2026-08-28",
+    "evidence": "SponsorRadar identifies xTool as the partner/sponsor on Brothers Make's August 28, 2026 English-language YouTube video and quotes the creator stating they partnered with xTool for the video. xTool sells tangible laser engravers and smart cutting machines. xTool's official Partner page explicitly includes a Content Creator Program and Affiliate Program and publishes partner@xtool.com for partnership inquiries; the official contact page separately labels the same address for Brand Cooperation and machine reviews. xTool / xtool.com were checked against the permanent GitHub sent ledger and repository search before staging and no existing brand/domain match was found.",
+    "paid_product_placement": true,
+    "contact_email": "partner@xtool.com",
+    "contact_source_url": "https://ca.xtool.com/pages/xtool-partner",
+    "platform": "YouTube",
+    "evidence_source_url": "https://sponsorradar.com/brands/xtool"
+  }
+]
