@@ -1,1 +1,24 @@
-[]
+[
+  {
+    "brand_name": "HOTWAV",
+    "brand_domain": "hotwav.com",
+    "creator_name": "Teoh on Tech",
+    "creator_url": "https://www.youtube.com/@teohontech7141",
+    "creator_channel_id": "",
+    "creator_genre": "Physical Consumer Tech / Reviews",
+    "creator_tags": [
+      "physical consumer tech",
+      "tablets",
+      "rugged devices",
+      "tech reviews",
+      "creator gear"
+    ],
+    "video_url": "https://www.youtube.com/watch?v=qJW54FKTikM",
+    "video_title": "Hotwav R9 Pro Max (review): Best Of Rugged Tablet?",
+    "sponsored_date": "2026-07-29",
+    "evidence": "SponsorRadar identifies HOTWAV as the sponsor of Teoh on Tech's July 29, 2026 English-language YouTube video. The creator is a mid-size technology channel with approximately 87K subscribers. HOTWAV sells tangible physical consumer hardware including smartphones, rugged phones and tablets. Because the creator evidence is 32 days old, it was corroborated by HOTWAV's currently active official affiliate program, which explicitly recruits partners to promote its physical electronics, and by HOTWAV's official contact page, which publishes marketing@hotwav.com specifically for Marketing/Promotion Collaborations. HOTWAV and hotwav.com were checked against the permanent GitHub repository ledger and existing inventory before staging and returned no matches.",
+    "paid_product_placement": true,
+    "contact_email": "marketing@hotwav.com",
+    "contact_source_url": "https://www.hotwav.com/pages/contact-us"
+  }
+]
