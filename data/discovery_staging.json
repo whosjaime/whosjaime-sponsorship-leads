@@ -1,1 +1,28 @@
-[]
+[
+  {
+    "brand_name": "Cozy Earth",
+    "brand_domain": "cozyearth.com",
+    "creator_name": "Vanessa and Xander Marin | Sex Therapist",
+    "creator_url": "https://www.youtube.com/@vanessaandxander",
+    "creator_channel_id": "UCzf8xqC-GJd5tSPYYOjFiOw",
+    "creator_genre": "Lifestyle / Relationships / Podcast",
+    "creator_tags": [
+      "lifestyle",
+      "relationships",
+      "podcast",
+      "home",
+      "wellness"
+    ],
+    "video_url": "https://youtube.com/watch?v=4LdDOehXtIM",
+    "video_title": "E275: Reasonable or Ridiculous? Sex Quotas, Oral Every Time, and Dirty Talk Dealbreakers",
+    "sponsored_date": "2026-08-27",
+    "evidence": "SponsorRadar identifies Cozy Earth as the sponsor of Vanessa and Xander Marin's August 27, 2026 English-language YouTube video and currently tracks 470 Cozy Earth sponsorships across 50 YouTube creators. Cozy Earth sells physical bamboo bedding, towels, and loungewear. Current outreach contact is McKoy Molyneaux, Director of Strategic Partnerships at Cozy Earth, publicly listed in the company's current org chart; no email pattern was guessed. Cozy Earth/cozyearth.com was checked against the permanent GitHub sent/block ledger and researched inventory before staging and no existing match was found.",
+    "paid_product_placement": true,
+    "contact_name": "McKoy Molyneaux",
+    "contact_title": "Director of Strategic Partnerships",
+    "contact_email": "",
+    "contact_source_url": "https://theorg.com/org/cozy-earth/org-chart/george-davis",
+    "platform": "YouTube",
+    "source_evidence_url": "https://sponsorradar.com/brands/cozy-earth"
+  }
+]
