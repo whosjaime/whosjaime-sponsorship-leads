@@ -1,1 +1,25 @@
-[]
+[
+  {
+    "brand_name": "TOSSWARE",
+    "brand_domain": "tossware.com",
+    "creator_name": "lifewiththewilsonfam",
+    "creator_url": "https://www.instagram.com/lifewiththewilsonfam/",
+    "creator_channel_id": "",
+    "creator_genre": "Home / DIY / Lifestyle",
+    "creator_tags": [
+      "home",
+      "DIY",
+      "lifestyle",
+      "party supplies",
+      "entertaining",
+      "consumer products"
+    ],
+    "video_url": "https://www.instagram.com/p/DbtY2YIRdlw/",
+    "video_title": "Instagram paid partnership post with TOSSWARE",
+    "sponsored_date": "2026-08-06",
+    "evidence": "CollabFeed tracks lifewiththewilsonfam's August 6, 2026 Instagram post as a paid TOSSWARE creator partnership. TOSSWARE sells physical reusable/recyclable drinkware and party supplies. TOSSWARE's official FAQ explicitly invites collaborations and publishes partnerships@tossware.com for collaboration inquiries. TOSSWARE and tossware.com returned no matches in the permanent GitHub sponsor repo before staging.",
+    "paid_product_placement": true,
+    "contact_email": "partnerships@tossware.com",
+    "contact_source_url": "https://www.tossware.com/pages/faq"
+  }
+]
