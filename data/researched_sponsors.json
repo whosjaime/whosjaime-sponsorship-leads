@@ -8006,5 +8006,29 @@
     "contact_source_url": "https://contactout.com/Michelle-Yukhtman-34344",
     "platform": "YouTube",
     "source_url": "https://sponsorradar.com/brands/oceania-cruises"
+  },
+  {
+    "brand_name": "LARQ",
+    "brand_domain": "livelarq.com",
+    "creator_name": "Dr Ben Miles",
+    "creator_url": "https://www.youtube.com/@drbenmiles",
+    "creator_channel_id": "",
+    "creator_genre": "Science / Technology / Education",
+    "creator_tags": [
+      "science",
+      "technology",
+      "education",
+      "travel",
+      "lifestyle",
+      "physical consumer product",
+      "water bottle"
+    ],
+    "video_url": "https://www.youtube.com/watch?v=bPUAKW1Dyek",
+    "video_title": "It's Happening - Europe is Building an Impossible Fusion Reactor",
+    "sponsored_date": "2026-08-16",
+    "evidence": "Dr Ben Miles' English-language YouTube video published August 16, 2026 includes LARQ as the video sponsor; independent transcript/summary indexing identifies LARQ's water-purification product sponsorship in the video. LARQ's official Affiliate Program is currently active and explicitly directs affiliate questions to affiliates@livelarq.com. LARQ/livelarq.com returned no match in repo code search and was not present in the permanent sent sponsor ledger excerpt checked immediately before staging.",
+    "paid_product_placement": true,
+    "contact_email": "affiliates@livelarq.com",
+    "contact_source_url": "https://www.livelarq.com/affiliate-program"
   }
 ]
