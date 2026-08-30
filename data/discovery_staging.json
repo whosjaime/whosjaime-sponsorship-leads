@@ -1,1 +1,26 @@
-[]
+[
+  {
+    "brand_name": "PetSmart",
+    "brand_domain": "petsmart.com",
+    "creator_name": "Brooke Monk",
+    "creator_url": "https://www.youtube.com/@brookemonk",
+    "creator_channel_id": "",
+    "creator_genre": "Lifestyle / Entertainment / Pets",
+    "creator_tags": [
+      "lifestyle",
+      "entertainment",
+      "pets",
+      "vlog",
+      "consumer retail"
+    ],
+    "video_url": "https://www.youtube.com/watch?v=yvf-F0YrD58",
+    "video_title": "",
+    "sponsored_date": "2026-08-25",
+    "evidence": "CollabFeed tracks Brooke Monk x PetSmart as a paid YouTube creator partnership posted August 25, 2026, and lists PetSmart with an active creator campaign in the last 30 days. Qualified outreach contact is Heather Heywood, current Manager, Social Media & Influencer Partnerships at PetSmart, publicly verified by Lead411. PetSmart and petsmart.com were checked against the permanent GitHub repository immediately before staging and returned no existing match.",
+    "paid_product_placement": true,
+    "contact_email": "",
+    "contact_name": "Heather Heywood",
+    "contact_title": "Manager, Social Media & Influencer Partnerships",
+    "contact_source_url": "https://www4.lead411.com/Heather_Heywood_82594430.html"
+  }
+]
