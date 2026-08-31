@@ -7,10 +7,9 @@ from pathlib import Path
 from outreach_contact_policy import is_qualified_outreach_contact
 from researched_sponsor_source import ResearchedSponsorSource
 from run_sponsor_discovery_batch import _identity, _is_queue_target_lead, _priority_score
-from run_sponsor_discovery_multisource import run as run_multisource
 from run_sponsor_scan import _is_recent_sponsorship, _score_lead, _temperature
 from sponsor_config import load_sponsor_config
-from sponsor_daily_policy import DAILY_TARGET, PLATFORM_TARGETS, balance_platforms, platform_key
+from sponsor_daily_policy import DAILY_TARGET, balance_platforms, platform_key
 from sponsor_dedupe import make_brand_key, make_sponsorship_key
 from sponsor_queue import is_duplicate, load_duplicate_keys, load_queue
 
@@ -27,7 +26,7 @@ def _write_queue(leads) -> None:
 
 
 def _prepare(lead) -> None:
-    """Apply deterministic local fields without blocking on live website enrichment."""
+    """Apply deterministic local fields without blocking on live website/API enrichment."""
     if not lead.brand_key:
         lead.brand_key = make_brand_key(lead.brand_name, lead.brand_domain)
     if not lead.sponsorship_key:
@@ -77,43 +76,16 @@ def _qualified_pool(config, duplicate_keys) -> list:
     return candidates
 
 
-def _needs_live_discovery(candidates: list) -> bool:
-    if len(candidates) < DAILY_TARGET:
-        return True
-    counts = Counter(platform_key(lead.source_platform) for lead in candidates)
-    # Live discovery currently helps YouTube/TikTok. Instagram is supplied by the durable
-    # verified research inventory, so do not hold the whole run open trying to fabricate it.
-    return (
-        counts.get("youtube", 0) < PLATFORM_TARGETS["youtube"]
-        or counts.get("tiktok", 0) < PLATFORM_TARGETS["tiktok"]
-    )
-
-
 def run() -> None:
-    """Build a 24-lead daily-ready queue with YouTube/TikTok/Instagram balance.
+    """Build the fastest possible 24-lead queue from already-verified durable inventory.
 
-    Critical reliability rule: drain already-verified durable research first. Live API
-    discovery is only a top-up mechanism and can never block qualified backlog from
-    reaching the delivery queue.
+    Live web/API discovery is intentionally NOT executed here. It now runs in its own
+    bounded workflow so a slow YouTube/TikTok source can never hold verified backlog
+    hostage and stop Monday/Discord delivery.
     """
     config = load_sponsor_config(require_discord=False, require_monday=False)
     duplicate_keys = load_duplicate_keys()
-
     candidates = _qualified_pool(config, duplicate_keys)
-    if _needs_live_discovery(candidates):
-        try:
-            run_multisource()
-        except Exception as exc:
-            print(f"WARNING: multisource discovery failed; using durable verified inventory: {exc}")
-        # Re-read after live discovery because it may have refreshed sponsor_queue.json.
-        duplicate_keys = load_duplicate_keys()
-        candidates = _qualified_pool(config, duplicate_keys)
-    else:
-        print(
-            f"Durable verified inventory already has {len(candidates)} eligible leads; "
-            "skipping slow live discovery for this top-up."
-        )
-
     final_queue = balance_platforms(candidates, DAILY_TARGET)
     _write_queue(final_queue)
 
@@ -130,7 +102,7 @@ def run() -> None:
     if len(final_queue) < DAILY_TARGET:
         print(
             f"WARNING: only {len(final_queue)} verified unsent leads are currently available. "
-            "The scheduled top-up will keep discovering; weak/duplicate leads are never used to fake 24."
+            "Independent live discovery keeps replenishing this inventory; weak or duplicate leads are never used to fake 24."
         )
 
 
