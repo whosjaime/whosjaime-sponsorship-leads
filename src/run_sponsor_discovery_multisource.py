@@ -3,6 +3,8 @@ from __future__ import annotations
 import os
 
 from brand_enrichment import BrandEnricher
+from instagram_sponsor_scanner import InstagramSponsorScanner
+from outreach_contact_policy import is_qualified_outreach_contact
 from run_sponsor_discovery_batch import (
     _build_balanced_queue,
     _enrich_lead,
@@ -32,17 +34,14 @@ def _is_food_drink_lead(lead: SponsorLead) -> bool:
         return True
     text = ' '.join(
         [
-            lead.brand_name or '',
-            lead.sponsor_category or '',
-            lead.sponsor_subcategory or '',
-            lead.video_title or '',
-            lead.evidence or '',
+            lead.brand_name or '', lead.sponsor_category or '', lead.sponsor_subcategory or '',
+            lead.video_title or '', lead.evidence or '',
         ]
     ).lower()
     return any(keyword in text for keyword in FOOD_DRINK_KEYWORDS)
 
 
-def _classify_tiktok(lead: SponsorLead) -> None:
+def _classify_social(lead: SponsorLead) -> None:
     text = f'{lead.video_title} {lead.evidence}'.lower()
     mappings = (
         ('Gaming', ('gaming', 'gamer', 'xbox', 'playstation', 'nintendo', 'steam', 'controller')),
@@ -60,22 +59,20 @@ def _classify_tiktok(lead: SponsorLead) -> None:
         ('Music', ('music', 'guitar', 'singer', 'song', 'studio', 'microphone')),
         ('Entertainment', ('reaction', 'comedy', 'streamer', 'entertainment', 'vlog')),
     )
-    tags = ['tiktok']
+    platform_tag = (lead.source_platform or 'social').strip().lower()
+    tags = [platform_tag]
     for genre, keywords in mappings:
         if any(keyword in text for keyword in keywords):
             lead.creator_genre = genre
             tags.append(genre.lower())
             break
-    if lead.creator_genre == 'Other':
+    if (lead.creator_genre or '').strip().lower() in {'', 'other'}:
         lead.creator_genre = 'Lifestyle'
         tags.append('lifestyle')
     lead.creator_tags = list(dict.fromkeys(tags))
 
 
 def _queue_sort_key(lead: SponsorLead) -> tuple[int, int, int, str]:
-    # Food/drink gets a deliberate first-class lane because it is broadly usable
-    # across gaming, reaction, vlog and lifestyle creators and is currently
-    # underrepresented in the delivery mix.
     return (
         1 if _is_food_drink_lead(lead) else 0,
         _priority_score(lead),
@@ -84,57 +81,42 @@ def _queue_sort_key(lead: SponsorLead) -> tuple[int, int, int, str]:
     )
 
 
-def run() -> None:
-    # Source order is deliberate: YouTube first, TikTok second. CreatorDB is left
-    # available to the existing batch only when TikTok is disabled.
-    initial_config = load_sponsor_config(require_discord=False, require_monday=False)
-    enable_tiktok = initial_config.enable_tiktok
-    saved_creatordb = os.environ.get('CREATORDB_API_KEY')
-    if enable_tiktok:
-        os.environ['CREATORDB_API_KEY'] = ''
-    try:
-        run_youtube_discovery()
-    finally:
-        if saved_creatordb is None:
-            os.environ.pop('CREATORDB_API_KEY', None)
-        else:
-            os.environ['CREATORDB_API_KEY'] = saved_creatordb
-
-    if not enable_tiktok:
-        print('TikTok sponsor discovery disabled.')
-        return
-
-    config = load_sponsor_config(require_discord=False, require_monday=False)
-    scanner = TikTokSponsorScanner(config.search_language, config.search_region)
-    enricher = BrandEnricher()
-    duplicate_keys = load_duplicate_keys()
-    queue = load_queue()
-    queue_ids = {_identity(lead) for lead in queue if _identity(lead)}
-
+def _qualify_social_candidates(
+    scanner,
+    platform: str,
+    config,
+    enricher: BrandEnricher,
+    duplicate_keys: set[str],
+    queue_ids: set[str],
+) -> tuple[list[SponsorLead], int]:
     try:
         posts = scanner.discover(config.max_sponsor_age_days)
     except Exception as exc:
-        print(f'WARNING: TikTok sponsor discovery failed: {exc}')
-        return
+        print(f'WARNING: {platform} sponsor discovery failed: {exc}')
+        return [], 0
 
     candidates: list[SponsorLead] = []
     for post in posts:
         lead = scanner.to_lead(post)
-        _classify_tiktok(lead)
+        _classify_social(lead)
+        if not lead.brand_domain:
+            print(f'{platform} official brand domain unresolved; skipped: {lead.brand_name}')
+            continue
         try:
             lead = _enrich_lead(lead, enricher)
         except Exception as exc:
-            print(f'TikTok enrichment skipped {lead.brand_name}: {exc}')
+            print(f'{platform} enrichment skipped {lead.brand_name}: {exc}')
             continue
         if is_duplicate(lead, duplicate_keys):
-            print(f'TikTok GitHub duplicate/blocklist skipped: {lead.brand_name}')
+            print(f'{platform} GitHub duplicate/blocklist skipped: {lead.brand_name}')
             continue
         if not _is_recent_sponsorship(lead, config.max_sponsor_age_days):
             continue
-        if not lead.contact_email:
-            print(f'TikTok qualified outreach email required; skipped: {lead.brand_name}')
+        if not is_qualified_outreach_contact(lead):
+            print(f'{platform} qualified outreach contact required; skipped: {lead.brand_name}')
             continue
         if lead.lead_score < config.min_lead_score:
+            print(f'{platform} score below threshold; skipped: {lead.brand_name} / {lead.lead_score}')
             continue
         if not _is_queue_target_lead(lead):
             continue
@@ -145,25 +127,76 @@ def run() -> None:
         candidates.append(lead)
         food_label = ' / FOOD-DRINK PRIORITY' if _is_food_drink_lead(lead) else ''
         print(
-            f'Queued candidate via TikTok: {lead.brand_name} / '
-            f'{lead.creator_name} / followers {lead.creator_subscribers or 0} / '
+            f'Queued candidate via {platform}: {lead.brand_name} / {lead.creator_name} / '
             f'score {lead.lead_score}{food_label}'
         )
+    return candidates, len(posts)
 
-    if not candidates:
-        print(f'TikTok scan complete: {len(posts)} qualifying-disclosure posts checked; 0 new queue leads.')
+
+def run() -> None:
+    # YouTube discovery remains its own mature source. TikTok and Instagram are then
+    # added independently so one social platform failing never prevents the other.
+    initial_config = load_sponsor_config(require_discord=False, require_monday=False)
+    saved_creatordb = os.environ.get('CREATORDB_API_KEY')
+    if initial_config.enable_tiktok:
+        os.environ['CREATORDB_API_KEY'] = ''
+    try:
+        run_youtube_discovery()
+    finally:
+        if saved_creatordb is None:
+            os.environ.pop('CREATORDB_API_KEY', None)
+        else:
+            os.environ['CREATORDB_API_KEY'] = saved_creatordb
+
+    config = load_sponsor_config(require_discord=False, require_monday=False)
+    enricher = BrandEnricher()
+    duplicate_keys = load_duplicate_keys()
+    queue = load_queue()
+    queue_ids = {_identity(lead) for lead in queue if _identity(lead)}
+    all_candidates: list[SponsorLead] = []
+
+    if config.enable_tiktok:
+        tiktok_scanner = TikTokSponsorScanner(config.search_language, config.search_region)
+        tiktok_candidates, tiktok_posts = _qualify_social_candidates(
+            tiktok_scanner, 'TikTok', config, enricher, duplicate_keys, queue_ids,
+        )
+        all_candidates.extend(tiktok_candidates)
+        print(
+            f'TikTok scan complete: {tiktok_posts} explicit-disclosure posts checked; '
+            f'{len(tiktok_candidates)} verified new candidate(s).'
+        )
+    else:
+        print('TikTok sponsor discovery disabled.')
+
+    # Instagram is always attempted in live discovery. It emits only dated posts whose
+    # public embed contains an explicit paid/sponsored disclosure, so no weak snippets
+    # are promoted into the queue.
+    instagram_scanner = InstagramSponsorScanner(config.search_language, config.search_region)
+    instagram_candidates, instagram_posts = _qualify_social_candidates(
+        instagram_scanner, 'Instagram', config, enricher, duplicate_keys, queue_ids,
+    )
+    all_candidates.extend(instagram_candidates)
+    print(
+        f'Instagram scan complete: {instagram_posts} explicit-disclosure posts checked; '
+        f'{len(instagram_candidates)} verified new candidate(s).'
+    )
+
+    if not all_candidates:
+        print('Social discovery produced 0 new verified queue leads.')
         return
 
-    combined = [*queue, *candidates]
+    combined = [*queue, *all_candidates]
     combined.sort(key=_queue_sort_key, reverse=True)
     final_queue = _build_balanced_queue(combined)[:MAX_QUEUE_SIZE]
     save_queue(final_queue)
     food_count = sum(1 for lead in final_queue if _is_food_drink_lead(lead))
     tiktok_count = sum(1 for lead in final_queue if (lead.source_platform or '').strip().lower() == 'tiktok')
+    instagram_count = sum(1 for lead in final_queue if (lead.source_platform or '').strip().lower() == 'instagram')
+    youtube_count = sum(1 for lead in final_queue if (lead.source_platform or '').strip().lower() == 'youtube')
     print(
-        f'TikTok scan complete: {len(posts)} qualifying-disclosure posts checked; '
-        f'{len(candidates)} verified new candidate(s); queue now {len(final_queue)}; '
-        f'food/drink {food_count}; TikTok {tiktok_count}.'
+        f'SOCIAL_DISCOVERY_QUEUE: {len(final_queue)} total; YouTube={youtube_count}; '
+        f'TikTok={tiktok_count}; Instagram={instagram_count}; food/drink={food_count}; '
+        f'new social={len(all_candidates)}.'
     )
 
 
