@@ -5,37 +5,24 @@ import re
 from pathlib import Path
 from urllib.parse import parse_qs, urlparse
 
-import requests
-
 from sponsor_dedupe import email_domain, normalize_domain
 from sponsor_models import SponsorLead
 
 DEFAULT_RESEARCH_QUEUE = Path(__file__).resolve().parents[1] / "data" / "researched_sponsors.json"
 
-# These brands are intentionally excluded from the automated queue because they are
-# enterprise-scale buyers that are not a realistic fit for the current creator roster.
 MEGA_ENTERPRISE_DOMAINS = {
-    "target.com",
-    "walmart.com",
-    "amazon.com",
-    "apple.com",
-    "google.com",
-    "meta.com",
-    "microsoft.com",
-    "nike.com",
-    "adidas.com",
-    "samsung.com",
-    "coca-cola.com",
-    "pepsi.com",
+    "target.com", "walmart.com", "amazon.com", "apple.com", "google.com", "meta.com",
+    "microsoft.com", "nike.com", "adidas.com", "samsung.com", "coca-cola.com", "pepsi.com",
 }
 
 
 class ResearchedSponsorSource:
-    """Load agent-researched sponsor candidates from JSON.
+    """Load verified research inventory from YouTube, TikTok, and Instagram.
 
-    Research intake may use direct creator evidence from YouTube, TikTok, or Instagram.
-    Every candidate still passes the normal downstream enrichment, freshness, contact,
-    niche, permanent blocklist/dedupe, and write gates.
+    Audience size is useful enrichment, but it is never a delivery gate. TikTok profile
+    scraping was previously able to stall a whole top-up run and then discard a valid
+    paid-partnership record when follower hydration failed. Verified sponsorship evidence
+    and a qualified outreach contact are the actual required gates.
     """
 
     def __init__(self, path: str | Path = DEFAULT_RESEARCH_QUEUE) -> None:
@@ -76,87 +63,27 @@ class ResearchedSponsorSource:
 
     @staticmethod
     def _verified_contact(item: dict, brand_domain: str) -> tuple[str, str, str, str]:
-        """Preserve either a same-domain qualified email or a sourced named contact.
-
-        The research policy allows a verified named person with a current role tied to
-        sponsorship/creator/influencer/affiliate/marketing/business development even
-        when no public email is available. Previously those records were erased here,
-        which prevented many Instagram/TikTok researched sponsors from ever dispatching.
-        """
         contact_name = str(item.get("contact_name") or "").strip()
         contact_title = str(item.get("contact_title") or "").strip()
         contact_source = str(item.get("contact_source_url") or item.get("contact_source") or "").strip()
         contact_email = str(item.get("contact_email") or "").strip().lower()
 
+        # Never trust/guess a cross-domain email, but preserve an independently sourced
+        # named partnership/marketing contact for downstream role validation.
         if contact_email and email_domain(contact_email) != brand_domain:
             contact_email = ""
 
         if contact_email:
             return contact_name, contact_title, contact_email, contact_source
-
         if contact_name and contact_title and contact_source:
             return contact_name, contact_title, "", contact_source
-
         return "", "", "", ""
 
     @staticmethod
     def _platform_label(value: str) -> str:
         key = (value or "YouTube").strip().lower()
-        labels = {
-            "youtube": "YouTube",
-            "tiktok": "TikTok",
-            "instagram": "Instagram",
-        }
+        labels = {"youtube": "YouTube", "tiktok": "TikTok", "instagram": "Instagram"}
         return labels.get(key, (value or "YouTube").strip())
-
-    @staticmethod
-    def _tiktok_followers(creator_url: str) -> int:
-        """Best-effort public TikTok profile follower hydration.
-
-        TikTok embeds followerCount in its public profile HTML/JSON. If TikTok changes
-        markup or blocks the request, return 0 rather than inventing a value.
-        """
-        url = (creator_url or "").strip()
-        if not url or "tiktok.com/@" not in url.lower():
-            return 0
-        try:
-            response = requests.get(
-                url,
-                headers={
-                    "User-Agent": (
-                        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
-                        "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131 Safari/537.36"
-                    )
-                },
-                timeout=15,
-            )
-            if response.status_code >= 400:
-                return 0
-            text = response.text
-        except requests.RequestException:
-            return 0
-
-        handle_match = re.search(r"tiktok\.com/@([^/?#]+)", url, re.I)
-        handle = handle_match.group(1) if handle_match else ""
-        patterns = []
-        if handle:
-            patterns.append(
-                rf'"uniqueId"\s*:\s*"{re.escape(handle)}".{{0,8000}}?"followerCount"\s*:\s*(\d+)'
-            )
-        patterns.extend(
-            [
-                r'"followerCount"\s*:\s*(\d+)',
-                r'"follower_count"\s*:\s*(\d+)',
-            ]
-        )
-        for pattern in patterns:
-            match = re.search(pattern, text, re.I | re.S)
-            if match:
-                try:
-                    return int(match.group(1))
-                except (TypeError, ValueError):
-                    pass
-        return 0
 
     def load(self) -> list[SponsorLead]:
         if not self.path.exists():
@@ -197,10 +124,16 @@ class ResearchedSponsorSource:
             creator_tags = [str(tag).strip() for tag in raw_tags if str(tag).strip()] if isinstance(raw_tags, list) else []
             creator_url = str(item.get("creator_url") or "").strip()
             audience_count = self._int(item.get("creator_followers") or item.get("creator_subscribers"))
-            if source_platform == "TikTok" and audience_count <= 0:
-                audience_count = self._tiktok_followers(creator_url)
-            if source_platform == "TikTok" and audience_count <= 0:
-                continue
+
+            signals = [
+                "Daily researched sponsorship",
+                "verified public sponsorship evidence",
+                f"verified public {source_platform} sponsorship evidence",
+            ]
+            if contact_email and contact_name:
+                signals.append("verified named public work email")
+            elif contact_name:
+                signals.append("verified named role-linked contact")
 
             leads.append(
                 SponsorLead(
@@ -224,13 +157,14 @@ class ResearchedSponsorSource:
                     contact_name=contact_name,
                     contact_title=contact_title,
                     contact_email=contact_email,
-                    email_type="Named public work email" if contact_email and contact_name else ("Public work email" if contact_email else ("Verified named contact" if contact_name else "")),
+                    email_type=(
+                        "Named public work email"
+                        if contact_email and contact_name
+                        else ("Public work email" if contact_email else ("Verified named contact" if contact_name else ""))
+                    ),
                     contact_source=contact_source,
                     contact_source_url=contact_source,
-                    signals=[
-                        "Daily researched sponsorship",
-                        f"verified public {source_platform} sponsorship evidence",
-                    ] + (["verified named public work email"] if contact_email and contact_name else (["verified named role-linked contact"] if contact_name else [])),
+                    signals=signals,
                 )
             )
         return leads
