@@ -3,12 +3,9 @@ name: Daily Affiliate Discord Digest
 on:
   schedule:
     # Run at both possible UTC equivalents around 10:00 America/Toronto.
-    # The sender now allows delayed starts after 10:00 instead of requiring an exact hour.
+    # The sender allows delayed starts after 10:00 instead of requiring an exact hour.
     - cron: "0 14,15 * * *"
   workflow_dispatch:
-  push:
-    paths:
-      - "data/send_affiliate_now.trigger"
 
 permissions:
   contents: write
@@ -33,7 +30,7 @@ jobs:
           GITHUB_EVENT_NAME: ${{ github.event_name }}
         run: python src/send_daily_affiliates.py
       - name: Persist affiliate duplicate ledger
-        if: github.event_name == 'schedule' || github.event_name == 'push'
+        if: github.event_name == 'schedule'
         run: |
           if git diff --quiet -- data/affiliate_duplicates.json; then
             echo "No affiliate duplicate updates to commit."
