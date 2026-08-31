@@ -127,18 +127,32 @@ def _append_duplicates(duplicates: list[dict], items: list[dict], date_posted: s
     return result
 
 
+def _already_posted_today(duplicates: list[dict], date_posted: str) -> bool:
+    return any(
+        isinstance(item, dict) and str(item.get("date_posted") or "").strip() == date_posted
+        for item in duplicates
+    )
+
+
 def run() -> None:
     webhook = os.getenv("AFFILIATE_DISCORD_WEBHOOK_URL", "").strip()
     if not webhook:
         raise ValueError("Missing AFFILIATE_DISCORD_WEBHOOK_URL")
 
     now = datetime.now(TORONTO)
-    if os.getenv("GITHUB_EVENT_NAME") == "schedule" and now.hour < 10:
+    event_name = os.getenv("GITHUB_EVENT_NAME", "").strip()
+    if event_name == "schedule" and now.hour < 10:
         print(f"Affiliate digest skipped: Toronto local hour is {now.hour}, before 10:00.")
         return
 
     queue = _load_json(QUEUE_PATH)
     duplicates = _load_json(DUPLICATES_PATH)
+    today = now.date().isoformat()
+
+    if event_name == "schedule" and _already_posted_today(duplicates, today):
+        print(f"Affiliate digest skipped: a digest has already been posted for {today}.")
+        return
+
     selected = select_new_affiliates(queue, duplicates, MAX_DAILY)
 
     if not selected:
@@ -148,7 +162,7 @@ def run() -> None:
     for message in format_messages(selected, now):
         _post(webhook, message)
 
-    updated = _append_duplicates(duplicates, selected, now.date().isoformat())
+    updated = _append_duplicates(duplicates, selected, today)
     DUPLICATES_PATH.write_text(json.dumps(updated, indent=2) + "\n", encoding="utf-8")
     print(f"Affiliate digest posted {len(selected)} new program(s) and updated duplicate ledger.")
 
