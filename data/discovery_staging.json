@@ -1,1 +1,30 @@
-[]
+[
+  {
+    "brand_name": "PECRON",
+    "brand_domain": "pecron.com",
+    "creator_name": "Downshift",
+    "creator_url": "https://www.youtube.com/@downshift",
+    "creator_channel_id": "",
+    "creator_genre": "Automotive / Lifestyle / Physical Consumer Tech",
+    "creator_tags": [
+      "automotive",
+      "lifestyle",
+      "travel",
+      "portable power",
+      "physical consumer tech"
+    ],
+    "video_url": "",
+    "video_title": "LIVING WITH THE 2026 SUBARU TRAILSEEKER - 3 Cons & 8 Pros",
+    "sponsored_date": "2026-08-22",
+    "evidence": "SponsorRadar records PECRON sponsoring Downshift's August 22, 2026 English-language YouTube video and shows PECRON with 76 tracked sponsorships across 18 creators, with the majority of recent deals going to 50K-250K subscriber channels. PECRON sells tangible portable power stations and solar-generator hardware. PECRON's official Ambassador/Affiliate Program explicitly recruits social media influencers and content creators and publishes herman@pecron.com for deeper business collaboration; its official FAQ separately identifies the same address as the Marketing Manager contact for business and partnership inquiries.",
+    "paid_product_placement": true,
+    "contact_name": "Herman",
+    "contact_title": "Marketing Manager / Business Partnerships",
+    "contact_email": "herman@pecron.com",
+    "contact_source_url": "https://www.pecron.com/pages/affiliate-program",
+    "source_platform": "YouTube",
+    "sponsor_category": "Physical Consumer Tech",
+    "sponsor_subcategory": "Portable Power Stations / Solar Generators",
+    "creator_subscribers": 125000
+  }
+]
