@@ -16,7 +16,8 @@ permissions:
   contents: write
 
 concurrency:
-  group: sponsor-queue-topup
+  # v2 prevents a pre-fix long-running top-up from blocking the repaired queue today.
+  group: sponsor-queue-topup-v2
   cancel-in-progress: true
 
 jobs:
