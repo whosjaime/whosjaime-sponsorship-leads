@@ -1,1 +1,31 @@
-[]
+[
+  {
+    "brand_name": "Trade Coffee",
+    "brand_domain": "drinktrade.com",
+    "source_platform": "YouTube",
+    "creator_name": "Morgan Eckroth",
+    "creator_url": "https://www.youtube.com/@morgandrinkscoffee",
+    "creator_channel_id": "",
+    "creator_genre": "Food / Coffee / Lifestyle",
+    "creator_tags": [
+      "food/drink",
+      "coffee",
+      "lifestyle",
+      "cooking",
+      "creator education"
+    ],
+    "video_id": "MqvrAMToNEE",
+    "video_url": "https://www.youtube.com/watch?v=MqvrAMToNEE",
+    "video_title": "This Tool Makes The Best Espresso In The World",
+    "sponsored_date": "2026-08-21",
+    "evidence": "SponsorRadar records Trade Coffee / Drink Trade sponsoring Morgan Eckroth's August 21, 2026 English-language YouTube video and shows 11 Drink Trade sponsorships on this creator. Trade Coffee is a physical specialty-coffee subscription/retail brand. Trade Coffee's own public LinkedIn post identifies Jennifer Castellanos as Head of Influencer and says she leads a program rooted in genuine creator partnerships. The permanent GitHub sent-sponsor ledger and existing researched inventory were checked immediately before staging and contained no Trade Coffee / drinktrade.com entry.",
+    "paid_product_placement": true,
+    "sponsor_category": "Food / Drink",
+    "sponsor_subcategory": "Specialty Coffee / Coffee Subscription",
+    "contact_name": "Jennifer Castellanos",
+    "contact_title": "Head of Influencer",
+    "contact_email": "",
+    "contact_source_url": "https://www.linkedin.com/posts/drinktrade_influencermarketing-creatoreconomy-tradecoffeeclub-activity-7369065752353509379-x7dn",
+    "evidence_source_url": "https://sponsorradar.com/channels/morgandrinkscoffee"
+  }
+]
