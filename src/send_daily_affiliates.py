@@ -15,7 +15,7 @@ ROOT = Path(__file__).resolve().parents[1]
 QUEUE_PATH = ROOT / "data" / "daily_affiliates.json"
 DUPLICATES_PATH = ROOT / "data" / "affiliate_duplicates.json"
 TORONTO = ZoneInfo("America/Toronto")
-MAX_DAILY = 20
+MAX_DAILY = 10
 CHUNK_SIZE = 5
 
 
@@ -133,8 +133,8 @@ def run() -> None:
         raise ValueError("Missing AFFILIATE_DISCORD_WEBHOOK_URL")
 
     now = datetime.now(TORONTO)
-    if os.getenv("GITHUB_EVENT_NAME") == "schedule" and now.hour != 11:
-        print(f"Affiliate digest skipped: Toronto local hour is {now.hour}, not 11.")
+    if os.getenv("GITHUB_EVENT_NAME") == "schedule" and now.hour < 10:
+        print(f"Affiliate digest skipped: Toronto local hour is {now.hour}, before 10:00.")
         return
 
     queue = _load_json(QUEUE_PATH)
