@@ -8277,5 +8277,44 @@
     "contact_title": "Director of Creative Talent",
     "contact_email": "",
     "contact_source_url": "https://www.linkedin.com/in/jennifer-hannah-682820204"
+  },
+  {
+    "brand_name": "FocusFuel",
+    "brand_domain": "thefocusfuel.com",
+    "source_platform": "YouTube",
+    "creator_name": "Kruzadar",
+    "creator_url": "https://www.youtube.com/@Kruzadar",
+    "creator_channel_id": "",
+    "creator_subscribers": 501000,
+    "creator_genre": "Gaming / Streaming",
+    "creator_tags": [
+      "gaming",
+      "streaming",
+      "energy",
+      "food/drink"
+    ],
+    "video_id": "",
+    "video_url": "",
+    "video_title": "LIVE: DBD Chorus of Sin update!",
+    "sponsored_date": "2026-08-28",
+    "evidence": "SponsorRadar records FocusFuel sponsoring Kruzadar's August 28, 2026 English-language YouTube content and multiple additional Kruzadar integrations on August 26-27, showing active repeat creator spend. SponsorRadar currently tracks 47 FocusFuel sponsorships across 6 creators, concentrated in gaming/streaming. Current public sources identify John Senn as a FocusFuel co-founder; his public FocusFuel announcement identifies him as Head of Creators, responsible for bringing creators and communities into the brand, and a July 2026 verified work-history source still lists him as Co-Founder at FocusFuel Inc. FocusFuel also publicly announced a major coordinated 2026 campaign involving a group of creators.",
+    "paid_product_placement": true,
+    "sponsor_category": "Food & Beverage",
+    "sponsor_subcategory": "Energy Gummies",
+    "contact_name": "John Senn",
+    "contact_title": "Co-Founder / Head of Creators",
+    "contact_email": "",
+    "email_type": "Verified named creator partnerships contact",
+    "contact_source": "https://www.linkedin.com/posts/john-senn-b101a7132_focusfuel-on-the-go-fun-energy-activity-7220185923932565504-6c5o",
+    "contact_source_url": "https://www.linkedin.com/posts/john-senn-b101a7132_focusfuel-on-the-go-fun-energy-activity-7220185923932565504-6c5o",
+    "source_evidence_url": "https://sponsorradar.com/brands/the-focus-fuel",
+    "signals": [
+      "Very recent creator sponsorship",
+      "Repeat creator spend",
+      "Gaming/streaming roster fit",
+      "Verified named Head of Creators",
+      "Active 2026 creator campaign"
+    ],
+    "date_found": "2026-08-31"
   }
 ]
