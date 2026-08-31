@@ -1,1 +1,41 @@
-[]
+[
+  {
+    "brand_name": "LuxRally Travel",
+    "brand_domain": "luxrallytravel.com",
+    "source_platform": "YouTube",
+    "creator_name": "The Shiplife",
+    "creator_url": "https://www.youtube.com/@jshiplife",
+    "creator_channel_id": "",
+    "creator_subscribers": 346000,
+    "creator_genre": "Travel / Cruise / Lifestyle",
+    "creator_tags": [
+      "travel",
+      "cruise",
+      "lifestyle",
+      "vlog",
+      "luxury travel"
+    ],
+    "video_id": "6mDTnH-AplY",
+    "video_url": "https://www.youtube.com/watch?v=6mDTnH-AplY",
+    "video_title": "Royal Passengers Has A Meltdown In The Casino, Msc Speaker System Hijacked & More | Cruise News",
+    "sponsored_date": "2026-08-10",
+    "evidence": "SponsorRadar identifies LuxRally Travel as the sponsor of The Shiplife's August 10, 2026 English-language YouTube video. The Shiplife is a mid-size US travel creator with about 346K subscribers. SponsorRadar tracks 104 LuxRally Travel sponsorships on this creator, including another August 5, 2026 integration, demonstrating active creator spend. LuxRally Travel's official team page identifies Rachel Chappotin as Director of Partnerships & Talent, and LuxRally Travel's current public LinkedIn company page publishes rachel.chappotin@luxrallytravel.com for her in that role. LuxRally Travel/luxrallytravel.com cleared the permanent GitHub sent-key/repository dedupe before staging.",
+    "paid_product_placement": true,
+    "sponsor_category": "Travel",
+    "sponsor_subcategory": "Luxury Travel Agency",
+    "contact_name": "Rachel Chappotin",
+    "contact_title": "Director of Partnerships & Talent",
+    "contact_email": "rachel.chappotin@luxrallytravel.com",
+    "email_type": "Verified named partnerships work email",
+    "contact_source_url": "https://www.linkedin.com/company/luxrallytravel",
+    "evidence_source_url": "https://sponsorradar.com/channels/jshiplife",
+    "signals": [
+      "Direct creator sponsorship within 30 days",
+      "English-language YouTube evidence",
+      "Mid-size travel creator",
+      "Recurring active creator spend",
+      "Verified named Director of Partnerships & Talent",
+      "Same-domain public work email"
+    ]
+  }
+]
