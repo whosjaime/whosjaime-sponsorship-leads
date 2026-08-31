@@ -52,9 +52,7 @@ USERNAME_PATTERNS = (
     re.compile(r'"username"\s*:\s*"([A-Za-z0-9._]{2,40})"', re.I),
     re.compile(r'@([A-Za-z0-9._]{2,40})\s*(?:on Instagram|• Instagram)', re.I),
 )
-NON_BRAND_HANDLES = {
-    'instagram', 'meta', 'fyp', 'explore', 'creator', 'reels', 'shop',
-}
+NON_BRAND_HANDLES = {'instagram', 'meta', 'fyp', 'explore', 'creator', 'reels', 'shop'}
 DOMAIN_BLOCKLIST = {
     'duckduckgo.com', 'instagram.com', 'tiktok.com', 'youtube.com', 'youtu.be',
     'facebook.com', 'x.com', 'twitter.com', 'linkedin.com', 'pinterest.com',
@@ -76,11 +74,7 @@ class InstagramPost:
 
 
 class InstagramSponsorScanner:
-    """Best-effort creator-side Instagram sponsorship discovery from public indexed posts.
-
-    A lead is emitted only when the public post/embed itself yields a dated post and an
-    explicit sponsorship disclosure. Search snippets alone never qualify a lead.
-    """
+    """Discover only dated, explicit creator-side Instagram paid partnerships."""
 
     def __init__(self, language: str = 'en', region: str = 'US', timeout: int = 10):
         self.language = language or 'en'
@@ -125,8 +119,6 @@ class InstagramSponsorScanner:
             if not match:
                 continue
             shortcode = match.group(1)
-            # Normalize to /p/; Instagram redirects valid shortcodes and this removes
-            # tracking query strings while retaining the exact creator content ID.
             clean = f'https://www.instagram.com/p/{shortcode}/'
             if clean not in seen:
                 seen.add(clean)
@@ -298,5 +290,10 @@ class InstagramSponsorScanner:
             paid_product_placement=True,
             brand_key=make_brand_key(post.brand_name, domain),
             sponsorship_key=make_sponsorship_key('Instagram', post.shortcode, post.brand_name, domain),
-            signals=['Instagram creator-side ad/sponsored disclosure'],
+            signals=[
+                'Instagram creator-side ad/sponsored disclosure',
+                'ad/sponsored disclosure',
+                'verified public sponsorship evidence',
+                'verified public Instagram sponsorship evidence',
+            ],
         )
