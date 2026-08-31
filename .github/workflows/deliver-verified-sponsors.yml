@@ -20,8 +20,10 @@ permissions:
   contents: write
 
 concurrency:
-  group: sponsor-backlog-drain
-  cancel-in-progress: false
+  # v2 prevents old pre-fix backlog jobs from holding the repaired daily delivery lane.
+  # Pending Monday->Discord checkpoints make cancellation/retry transaction-safe.
+  group: sponsor-backlog-drain-v2
+  cancel-in-progress: true
 
 jobs:
   deliver:
