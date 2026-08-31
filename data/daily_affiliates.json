@@ -1,182 +1,182 @@
 [
   {
-    "brand_name": "Anker",
+    "brand_name": "EcoFlow",
     "brand_size": "large",
-    "category": "Consumer Tech / Charging / Power Banks & Accessories",
+    "category": "Consumer Tech / Portable Power / Solar & Backup Power",
+    "commission": "8% on qualifying purchases",
+    "website": "https://ca.ecoflow.com/",
+    "apply_url": "https://ca.ecoflow.com/pages/affiliate-program",
+    "source_url": "https://ca.ecoflow.com/pages/affiliate-program"
+  },
+  {
+    "brand_name": "Govee",
+    "brand_size": "large",
+    "category": "Consumer Tech / Smart Home / RGB Lighting",
+    "commission": "Up to 10%",
+    "website": "https://ca.govee.com/",
+    "apply_url": "https://ca.govee.com/pages/affiliate",
+    "source_url": "https://ca.govee.com/pages/affiliate"
+  },
+  {
+    "brand_name": "Teachable",
+    "brand_size": "large",
+    "category": "Software / Creator Tools / Courses & Digital Products",
+    "commission": "30% recurring for 12 months",
+    "website": "https://www.teachable.com/",
+    "apply_url": "https://www.teachable.com/partners",
+    "source_url": "https://www.teachable.com/partners"
+  },
+  {
+    "brand_name": "Native Instruments",
+    "brand_size": "large",
+    "category": "Creator Tools / Music Production / Audio Software & Hardware",
+    "commission": "Not publicly listed",
+    "website": "https://www.native-instruments.com/",
+    "apply_url": "https://support.native-instruments.com/support/solutions/articles/69000879991-native-instruments-how-to-become-a-native-instruments-affiliate",
+    "source_url": "https://support.native-instruments.com/support/solutions/articles/69000879991-native-instruments-how-to-become-a-native-instruments-affiliate"
+  },
+  {
+    "brand_name": "OWC",
+    "brand_size": "large",
+    "category": "Consumer Tech / PC & Mac Gear / Storage, Docks & Upgrades",
+    "commission": "3% non-Apple products; 1%-2% Apple-branded products",
+    "website": "https://www.owc.com/",
+    "apply_url": "https://www.owc.com/affiliate-program",
+    "source_url": "https://www.owc.com/affiliate-program"
+  },
+  {
+    "brand_name": "Setapp",
+    "brand_size": "mid-size",
+    "category": "Software / Creator & Productivity Tools / Mac Apps",
+    "commission": "$25 per new paid subscriber",
+    "website": "https://setapp.com/",
+    "apply_url": "https://setapp.com/affiliate-program",
+    "source_url": "https://setapp.com/affiliate-program"
+  },
+  {
+    "brand_name": "Ecamm",
+    "brand_size": "mid-size",
+    "category": "Software / Creator Tools / Live Streaming & Video Production",
+    "commission": "30% on new subscriptions; monthly plans recurring up to 12 months",
+    "website": "https://www.ecamm.com/",
+    "apply_url": "https://affiliates.ecamm.com/",
+    "source_url": "https://support.ecamm.com/en/articles/3217764-ecamm-affiliate-program"
+  },
+  {
+    "brand_name": "Podia",
+    "brand_size": "mid-size",
+    "category": "Software / Creator Tools / Courses, Memberships & Digital Products",
+    "commission": "20% for up to 12 months",
+    "website": "https://www.podia.com/",
+    "apply_url": "https://affiliates.podia.com/",
+    "source_url": "https://affiliates.podia.com/"
+  },
+  {
+    "brand_name": "Mackie",
+    "brand_size": "mid-size",
+    "category": "Creator Tech / Audio / Microphones, Mixers & Studio Gear",
     "commission": "8%",
-    "website": "https://www.anker.com/",
-    "apply_url": "https://www.anker.com/become-an-affiliate",
-    "source_url": "https://www.anker.com/become-an-affiliate"
+    "website": "https://mackie.com/",
+    "apply_url": "https://mackie.com/intl/artist-program/",
+    "source_url": "https://mackie.com/intl/artist-program/"
   },
   {
-    "brand_name": "UGREEN",
-    "brand_size": "large",
-    "category": "Consumer Tech / PC Accessories / Chargers, Hubs & Docks",
-    "commission": "8%-15%",
-    "website": "https://www.ugreen.com/",
-    "apply_url": "https://www.ugreen.com/pages/affiliate",
-    "source_url": "https://www.ugreen.com/pages/affiliate"
-  },
-  {
-    "brand_name": "ASUS",
-    "brand_size": "large",
-    "category": "Gaming / Consumer Tech / PCs, Laptops & Components",
-    "commission": "Up to 15%",
-    "website": "https://www.asus.com/",
-    "apply_url": "https://takeads.com/merchants/asus/",
-    "source_url": "https://takeads.com/merchants/asus/"
-  },
-  {
-    "brand_name": "Acronis",
-    "brand_size": "large",
-    "category": "Software / Cybersecurity / Backup & Data Protection",
-    "commission": "From 20%",
-    "website": "https://www.acronis.com/",
-    "apply_url": "https://www.acronis.com/en/partners/affiliates/",
-    "source_url": "https://www.acronis.com/en/partners/affiliates/"
-  },
-  {
-    "brand_name": "Avast",
-    "brand_size": "large",
-    "category": "Software / Cybersecurity / Antivirus & Privacy",
-    "commission": "Not publicly listed",
-    "website": "https://www.avast.com/",
-    "apply_url": "https://www.avast.com/en-eu/business/affiliates",
-    "source_url": "https://www.avast.com/en-eu/business/affiliates"
-  },
-  {
-    "brand_name": "Satechi",
+    "brand_name": "Maono",
     "brand_size": "mid-size",
-    "category": "Consumer Tech / PC & Apple Accessories / Hubs, Chargers & Keyboards",
-    "commission": "Not publicly listed",
-    "website": "https://satechi.net/",
-    "apply_url": "https://www.affilitizer.com/programs/satechi.com",
-    "source_url": "https://www.affilitizer.com/programs/satechi.com"
+    "category": "Creator Tech / Audio / Microphones & Podcast Gear",
+    "commission": "5%-20%",
+    "website": "https://www.maono.com/",
+    "apply_url": "https://www.maono.com/pages/affiliate-program",
+    "source_url": "https://www.maono.com/pages/affiliate-program"
   },
   {
-    "brand_name": "Vertagear",
+    "brand_name": "Nitrado",
     "brand_size": "mid-size",
-    "category": "Gaming / Gaming Chairs & Creator Setups",
-    "commission": "Not publicly listed",
-    "website": "https://www.vertagear.com/",
-    "apply_url": "https://www.vertagear.com/pages/affiliate-program",
-    "source_url": "https://www.vertagear.com/pages/affiliate-program"
+    "category": "Gaming / Game Server Hosting",
+    "commission": "From €0.17 up to €228 per transaction; recurring commissions available",
+    "website": "https://server.nitrado.net/",
+    "apply_url": "https://server.nitrado.net/en-US/affiliates/sign-up",
+    "source_url": "https://server.nitrado.net/en-US/affiliates/sign-up"
   },
   {
-    "brand_name": "WOLFBOX",
+    "brand_name": "OneStream Live",
     "brand_size": "mid-size",
-    "category": "Consumer Tech / Dash Cams / Automotive Tech",
-    "commission": "Up to 12%",
-    "website": "https://wolfbox.com/",
-    "apply_url": "https://wolfbox.com/pages/affiliate-program",
-    "source_url": "https://wolfbox.com/pages/affiliate-program"
+    "category": "Software / Creator Tools / Live Streaming & Multistreaming",
+    "commission": "25% recurring",
+    "website": "https://onestream.live/",
+    "apply_url": "https://onestream.live/affiliate-program/",
+    "source_url": "https://onestream.live/affiliate-program/"
   },
   {
-    "brand_name": "Cybeart",
+    "brand_name": "systeme.io",
     "brand_size": "mid-size",
-    "category": "Gaming / Gaming Chairs, Mice & Keyboards",
+    "category": "Software / Creator & Business Tools / Funnels, Email & Courses",
+    "commission": "60% lifetime commission",
+    "website": "https://systeme.io/",
+    "apply_url": "https://systeme.io/affiliate-program-af488683",
+    "source_url": "https://help.systeme.io/article/162-how-the-systeme-io-affiliate-program-works"
+  },
+  {
+    "brand_name": "Xidax",
+    "brand_size": "emerging",
+    "category": "Gaming / Consumer Tech / Custom Gaming PCs",
+    "commission": "2%",
+    "website": "https://www.xidax.com/",
+    "apply_url": "https://www.xidax.com/affiliate",
+    "source_url": "https://www.xidax.com/affiliate"
+  },
+  {
+    "brand_name": "CleanShot X",
+    "brand_size": "emerging",
+    "category": "Software / Creator Tools / Screenshots & Screen Recording",
+    "commission": "25% per license sale; 25% of Cloud Pro payments for 12 months",
+    "website": "https://cleanshot.com/",
+    "apply_url": "https://cleanshot.com/affiliate",
+    "source_url": "https://cleanshot.com/affiliate"
+  },
+  {
+    "brand_name": "Kuju Coffee",
+    "brand_size": "emerging",
+    "category": "Food & Drinks / Coffee / Outdoor & Travel",
+    "commission": "10%",
+    "website": "https://www.kujucoffee.com/",
+    "apply_url": "https://www.kujucoffee.com/pages/kuju-affiliate-program",
+    "source_url": "https://www.kujucoffee.com/pages/kuju-affiliate-program"
+  },
+  {
+    "brand_name": "Wild Infusion Coffee",
+    "brand_size": "emerging",
+    "category": "Food & Drinks / Functional & Mushroom Coffee",
     "commission": "Up to 10%",
-    "website": "https://cybeart.com/",
-    "apply_url": "https://cybeart.com/pages/affiliates",
-    "source_url": "https://cybeart.com/pages/affiliates"
+    "website": "https://wildinfusioncoffee.com/",
+    "apply_url": "https://wildinfusioncoffee.com/pages/affiliate-program",
+    "source_url": "https://wildinfusioncoffee.com/pages/affiliate-program"
   },
   {
-    "brand_name": "Blaze",
-    "brand_size": "mid-size",
-    "category": "Software / AI Content Creation / Marketing Tools",
-    "commission": "Up to 30% recurring",
-    "website": "https://www.blaze.ai/",
-    "apply_url": "https://help.blaze.ai/en/articles/9612725-blaze-affiliate-program",
-    "source_url": "https://help.blaze.ai/en/articles/9612725-blaze-affiliate-program"
-  },
-  {
-    "brand_name": "GameSeal",
-    "brand_size": "mid-size",
-    "category": "Gaming / Digital Games, Software & Gift Cards",
-    "commission": "Up to 10%",
-    "website": "https://gameseal.com/",
-    "apply_url": "https://gameseal.com/affliate-program/",
-    "source_url": "https://gameseal.com/affliate-program/"
-  },
-  {
-    "brand_name": "Teleprompter.com",
-    "brand_size": "mid-size",
-    "category": "Software / Creator Tools / Video & Teleprompter",
-    "commission": "30% of payments for 12 months",
-    "website": "https://www.teleprompter.com/",
-    "apply_url": "https://www.teleprompter.com/affiliate",
-    "source_url": "https://www.teleprompter.com/affiliate"
-  },
-  {
-    "brand_name": "Upside Drinks",
-    "brand_size": "mid-size",
-    "category": "Food & Drinks / Non-Alcoholic Beverages",
-    "commission": "Up to 15%",
-    "website": "https://upsidedrinks.com/",
-    "apply_url": "https://upsidedrinks.com/pages/affiliate-program",
-    "source_url": "https://upsidedrinks.com/pages/affiliate-program"
-  },
-  {
-    "brand_name": "Zvid",
+    "brand_name": "Call3D",
     "brand_size": "emerging",
-    "category": "Software / AI Video / Creator & Developer Tools",
-    "commission": "30%-50% lifetime recurring",
-    "website": "https://zvid.io/",
-    "apply_url": "https://zvid.io/affiliate",
-    "source_url": "https://zvid.io/affiliate"
+    "category": "Consumer Tech / 3D Printing / Maker Accessories",
+    "commission": "10%",
+    "website": "https://www.call-3d.com/",
+    "apply_url": "https://www.call-3d.com/pages/affiliate-program",
+    "source_url": "https://www.call-3d.com/pages/affiliate-program"
   },
   {
-    "brand_name": "Colipse Coffee",
+    "brand_name": "Supercraft",
     "brand_size": "emerging",
-    "category": "Food & Drinks / Specialty Coffee",
-    "commission": "25%",
-    "website": "https://colipsecoffee.com/",
-    "apply_url": "https://colipsecoffee.com/pages/affiliate",
-    "source_url": "https://colipsecoffee.com/pages/affiliate"
+    "category": "Gaming / Game Server Hosting",
+    "commission": "40% first month + 10% lifetime recurring",
+    "website": "https://7d2d.net/",
+    "apply_url": "https://7d2d.net/affiliate-program",
+    "source_url": "https://7d2d.net/affiliate-program"
   },
   {
-    "brand_name": "Odie's Roasters",
+    "brand_name": "Nerd or Die",
     "brand_size": "emerging",
-    "category": "Food & Drinks / Specialty Coffee",
-    "commission": "12%",
-    "website": "https://www.odiesroasters.com/",
-    "apply_url": "https://www.odiesroasters.com/affiliate-program",
-    "source_url": "https://www.odiesroasters.com/affiliate-program"
-  },
-  {
-    "brand_name": "OneBite Japan",
-    "brand_size": "emerging",
-    "category": "Food & Drinks / Japanese Snacks & Subscription Boxes",
-    "commission": "$5 per successful order; selected Gold creators $10",
-    "website": "https://onebite-jp.com/",
-    "apply_url": "https://onebite-jp.com/affiliate",
-    "source_url": "https://onebite-jp.com/affiliate"
-  },
-  {
-    "brand_name": "Solmi",
-    "brand_size": "emerging",
-    "category": "Software / AI Music Video / Creator Tools",
-    "commission": "20% of first payment",
-    "website": "https://solmi.ai/",
-    "apply_url": "https://solmi.ai/affiliate-program",
-    "source_url": "https://solmi.ai/affiliate-program"
-  },
-  {
-    "brand_name": "Puppetry",
-    "brand_size": "emerging",
-    "category": "Software / AI Video / Talking Avatar Creator Tools",
-    "commission": "30%",
-    "website": "https://www.puppetry.com/",
-    "apply_url": "https://beta.puppetry.com/affiliate",
-    "source_url": "https://beta.puppetry.com/affiliate"
-  },
-  {
-    "brand_name": "Eden",
-    "brand_size": "emerging",
-    "category": "Software / Creator Research / Content Ideation Tools",
-    "commission": "20%-35% lifetime recurring",
-    "website": "https://eden.so/",
-    "apply_url": "https://eden.so/affiliates/",
-    "source_url": "https://eden.so/affiliates/"
+    "category": "Gaming / Creator Tools / Stream Overlays & Graphics",
+    "commission": "10%-30% tiered",
+    "website": "https://nerdordie.com/",
+    "apply_url": "https://nerdordie.com/become-an-affiliate/",
+    "source_url": "https://nerdordie.com/become-an-affiliate/"
   }
 ]
