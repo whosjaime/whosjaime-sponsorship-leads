@@ -1,1 +1,25 @@
-[]
+[
+  {
+    "brand_name": "Whisker",
+    "brand_domain": "whisker.com",
+    "creator_name": "H3 Podcast",
+    "creator_url": "https://www.youtube.com/@H3Podcast",
+    "creator_channel_id": "",
+    "creator_genre": "Entertainment / Podcast / Reactions",
+    "creator_tags": [
+      "entertainment",
+      "podcast",
+      "reactions",
+      "pets",
+      "cats",
+      "physical consumer tech"
+    ],
+    "video_url": "https://sponsorradar.com/brands/whisker",
+    "video_title": "Perez Hilton's Disturbing Tiktok Live - H3 Show #293",
+    "sponsored_date": "2026-08-05",
+    "evidence": "SponsorRadar identifies Whisker as the sponsor of H3 Podcast's August 5, 2026 English-language YouTube episode, with a creator-specific H3 offer linking to whisker.com/H3. SponsorRadar tracks 53 Whisker sponsorships across 4 creators, including smaller channels such as The Purring Journal (~244K) and Android Digest (~61K), showing active creator spend beyond only large channels. Whisker sells tangible pet hardware including Litter-Robot products. Whisker's official affiliate program publishes influencers@whisker.com specifically for influencers, and its official partnerships page states that its programs are designed for publishers and creators. Whisker / whisker.com were checked against the permanent GitHub sent ledger and existing researched inventory before staging and were not present.",
+    "paid_product_placement": true,
+    "contact_email": "influencers@whisker.com",
+    "contact_source_url": "https://www.litter-robot.com/ca/fr/affiliates.html"
+  }
+]
