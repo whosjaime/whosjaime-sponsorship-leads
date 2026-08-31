@@ -25,8 +25,6 @@ TIKTOK_FOOD_DRINK_SEARCH_LANES = (
     'site:tiktok.com/@*/video/ "sponsored by" "beverage"',
 )
 
-# More niche lanes = less dependence on the same giant brands and more usable creator-side
-# TikTok inventory for the 8-per-day TikTok target.
 TIKTOK_GENERAL_SEARCH_LANES = (
     'site:tiktok.com/@*/video/ "#ad" gaming',
     'site:tiktok.com/@*/video/ "#ad" lifestyle',
@@ -136,12 +134,6 @@ class TikTokSponsorScanner:
         return value
 
     def _resolve_brand_domain(self, brand_name: str) -> str:
-        """Resolve an official-looking brand domain from public search results.
-
-        A domain is accepted only when a meaningful normalized brand token appears in
-        the hostname. This is intentionally conservative; unresolved brands remain
-        unqualified rather than fabricating a domain or email.
-        """
         brand_key = normalize_brand_name(brand_name)
         if not brand_key:
             return ''
@@ -297,7 +289,13 @@ class TikTokSponsorScanner:
             video_title=post.caption[:180],
             sponsored_date=post.published_at,
             evidence=post.evidence,
+            paid_product_placement=True,
             brand_key=brand_key,
             sponsorship_key=make_sponsorship_key('TikTok', post.video_id, post.brand_name, brand_domain),
-            signals=['TikTok creator-side ad/sponsored disclosure'],
+            signals=[
+                'TikTok creator-side ad/sponsored disclosure',
+                'ad/sponsored disclosure',
+                'verified public sponsorship evidence',
+                'verified public TikTok sponsorship evidence',
+            ],
         )
