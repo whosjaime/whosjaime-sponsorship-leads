@@ -37,7 +37,7 @@ class ResearchedSponsorSourceTests(unittest.TestCase):
         self.assertEqual(lead.brand_domain, "examplegaming.com")
         self.assertEqual(lead.video_id, "abcDEF12345")
         self.assertIn("Daily researched sponsorship", lead.signals)
-        self.assertIn("verified public sponsorship evidence", lead.signals)
+        self.assertIn("verified public YouTube sponsorship evidence", lead.signals)
 
     def test_named_same_domain_work_email_is_preserved(self):
         lead = self._load([
@@ -58,7 +58,7 @@ class ResearchedSponsorSourceTests(unittest.TestCase):
         self.assertEqual(lead.contact_source, "https://examplegaming.com/team")
         self.assertIn("verified named public work email", lead.signals)
 
-    def test_cross_domain_researched_email_is_discarded(self):
+    def test_cross_domain_email_is_discarded_but_verified_named_contact_survives(self):
         lead = self._load([
             {
                 "brand_name": "Example Gaming Gear",
@@ -72,8 +72,26 @@ class ResearchedSponsorSourceTests(unittest.TestCase):
             }
         ])[0]
         self.assertEqual(lead.contact_email, "")
-        self.assertEqual(lead.contact_name, "")
-        self.assertEqual(lead.contact_title, "")
+        self.assertEqual(lead.contact_name, "Jane Smith")
+        self.assertEqual(lead.contact_title, "Creator Partnerships")
+        self.assertIn("verified named role-linked contact", lead.signals)
+
+    def test_named_contact_without_public_email_is_preserved(self):
+        lead = self._load([
+            {
+                "brand_name": "Example Gaming Gear",
+                "brand_domain": "examplegaming.com",
+                "sponsored_date": date.today().isoformat(),
+                "video_url": "https://www.youtube.com/watch?v=abcDEF12345",
+                "contact_name": "Jane Smith",
+                "contact_title": "Influencer Partnerships Manager",
+                "contact_source_url": "https://examplegaming.com/team",
+            }
+        ])[0]
+        self.assertEqual(lead.contact_email, "")
+        self.assertEqual(lead.contact_name, "Jane Smith")
+        self.assertEqual(lead.contact_title, "Influencer Partnerships Manager")
+        self.assertEqual(lead.contact_source_url, "https://examplegaming.com/team")
 
     def test_missing_youtube_evidence_is_rejected(self):
         leads = self._load([
