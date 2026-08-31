@@ -10,9 +10,10 @@ on:
       - Merge Discovery PR
       - Merge Inline Sponsor Discovery
       - Merge Research Staging
+      - Sponsor Queue Top-Up
     types: [completed]
   schedule:
-    - cron: "35 * * * *"
+    - cron: "5,20,35,50 * * * *"
   workflow_dispatch:
 
 permissions:
@@ -36,7 +37,7 @@ jobs:
           python-version: '3.11'
       - run: pip install -r requirements.txt
 
-      - name: Deliver every qualified unsent researched sponsor to Monday and Discord
+      - name: Deliver up to 24 verified sponsors daily to Monday and Discord
         env:
           YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
           CREATORDB_API_KEY: ${{ secrets.CREATORDB_API_KEY }}
@@ -50,37 +51,78 @@ jobs:
           CREATORDB_PAGE_SIZE: ${{ vars.CREATORDB_PAGE_SIZE || '50' }}
           SPONSOR_SEARCH_REGION: ${{ vars.SPONSOR_SEARCH_REGION || 'US' }}
           SPONSOR_SEARCH_LANGUAGE: ${{ vars.SPONSOR_SEARCH_LANGUAGE || 'en' }}
+          ENABLE_TIKTOK_SPONSOR_SCAN: 'true'
+          SPONSOR_DAILY_TARGET: '24'
+          SPONSOR_YOUTUBE_DAILY_TARGET: '8'
+          SPONSOR_TIKTOK_DAILY_TARGET: '8'
+          SPONSOR_INSTAGRAM_DAILY_TARGET: '8'
         shell: bash
         run: |
           set -euo pipefail
-          delivered=0
-          for i in $(seq 1 60); do
-            if [ -s data/sponsor_delivery_pending.json ] && [ "$(cat data/sponsor_delivery_pending.json)" != "{}" ]; then
-              python src/run_sponsor_queue_dispatch.py
-              delivered=$((delivered+1))
-              continue
-            fi
 
-            if [ ! -s data/sponsor_queue.json ] || [ "$(cat data/sponsor_queue.json)" = "[]" ]; then
-              python src/run_sponsor_discovery_batch.py
-            fi
+          for i in $(seq 1 24); do
+            today_count=$(python - <<'PY'
+          import sys
+          sys.path.insert(0, 'src')
+          from sponsor_queue import load_sent_keys
+          from sponsor_daily_policy import total_delivered_today
+          print(total_delivered_today(load_sent_keys()))
+          PY
+          )
 
-            if [ ! -s data/sponsor_queue.json ] || [ "$(cat data/sponsor_queue.json)" = "[]" ]; then
-              echo "No qualified unsent sponsors remain."
+            if [ "$today_count" -ge 24 ]; then
+              echo "Daily target reached: $today_count/24"
               break
             fi
 
-            before=$(python -c "import json,pathlib; p=pathlib.Path('data/sent_sponsor_keys.json'); d=json.loads(p.read_text()) if p.exists() else []; print(len(d) if isinstance(d,(list,dict)) else 0)")
-            python src/run_sponsor_queue_dispatch.py
-            after=$(python -c "import json,pathlib; p=pathlib.Path('data/sent_sponsor_keys.json'); d=json.loads(p.read_text()) if p.exists() else []; print(len(d) if isinstance(d,(list,dict)) else 0)")
+            if [ ! -s data/sponsor_queue.json ] || [ "$(cat data/sponsor_queue.json)" = "[]" ]; then
+              echo "Queue empty at $today_count/24; topping up before next delivery."
+              python src/run_sponsor_daily_topup.py
+            fi
+
+            before="$today_count"
+            python src/run_sponsor_daily_dispatch.py
+            after=$(python - <<'PY'
+          import sys
+          sys.path.insert(0, 'src')
+          from sponsor_queue import load_sent_keys
+          from sponsor_daily_policy import total_delivered_today
+          print(total_delivered_today(load_sent_keys()))
+          PY
+          )
 
             if [ "$after" -le "$before" ]; then
-              echo "ERROR: dispatch did not increase sent ledger; stopping delivery drain."
-              exit 1
+              echo "No delivery progress after dispatch; run one fresh top-up and retry once."
+              python src/run_sponsor_daily_topup.py
+              python src/run_sponsor_daily_dispatch.py
+              after_retry=$(python - <<'PY'
+          import sys
+          sys.path.insert(0, 'src')
+          from sponsor_queue import load_sent_keys
+          from sponsor_daily_policy import total_delivered_today
+          print(total_delivered_today(load_sent_keys()))
+          PY
+          )
+              if [ "$after_retry" -le "$before" ]; then
+                echo "No additional verified sponsor available right now; preserving state for next scheduled run."
+                break
+              fi
             fi
-            delivered=$((delivered+1))
           done
-          echo "Verified sponsor deliveries completed: $delivered"
+
+          python - <<'PY'
+          import sys
+          sys.path.insert(0, 'src')
+          from sponsor_queue import load_sent_keys
+          from sponsor_daily_policy import delivery_counts, total_delivered_today
+          keys = load_sent_keys()
+          counts = delivery_counts(keys)
+          print(
+              f"DAILY DELIVERY STATUS: {total_delivered_today(keys)}/24 | "
+              f"YouTube={counts.get('youtube',0)} | TikTok={counts.get('tiktok',0)} | "
+              f"Instagram={counts.get('instagram',0)}"
+          )
+          PY
 
       - name: Persist sponsor delivery state
         if: always()
@@ -93,6 +135,6 @@ jobs:
             echo "No sponsor delivery state changes."
             exit 0
           fi
-          git commit -m "Deliver verified sponsors to Monday and Discord [skip ci]"
+          git commit -m "Deliver daily sponsor batch to Monday and Discord [skip ci]"
           git pull --rebase origin main
           git push origin HEAD:main
