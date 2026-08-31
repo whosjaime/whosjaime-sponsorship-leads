@@ -36,6 +36,8 @@ OUTREACH_EMAIL_TYPES = {
     "marketing",
     "business development",
     "partnership page contact",
+    "named public work email",
+    "public work email",
 }
 
 # Generic service / PR inboxes are not useful sponsorship outreach contacts.
@@ -88,9 +90,32 @@ def _normalized_compact(value: str) -> str:
     return normalize_text(value).replace("_", "").replace(".", "").replace("-", "").replace(" ", "")
 
 
+def _role_linked_title(lead: SponsorLead) -> bool:
+    title = normalize_text(lead.contact_title)
+    return bool(title and any(term in title for term in OUTREACH_ROLE_TERMS))
+
+
+def _verified_named_contact(lead: SponsorLead) -> bool:
+    """Named people are valid even without a public email when role + source are verified."""
+    name = (lead.contact_name or "").strip()
+    source = (lead.contact_source_url or lead.contact_source or "").strip()
+    return bool(name and source and _role_linked_title(lead))
+
+
 def is_qualified_outreach_contact(lead: SponsorLead) -> bool:
-    """Return True only for actionable sponsorship/partnership/brand outreach contacts."""
+    """Return True only for actionable sponsorship/partnership/brand outreach contacts.
+
+    The research policy explicitly allows either a qualified email OR a verified named
+    person whose current title/source ties them to sponsorship, creator, influencer,
+    affiliate, partnerships, marketing, or business development. Do not silently drop
+    named partnership contacts just because the brand has not published their email.
+    """
     email = normalize_text(lead.contact_email)
+
+    # A verified named role-linked person is independently sufficient.
+    if _verified_named_contact(lead):
+        return True
+
     if "@" not in email:
         return False
 
@@ -113,13 +138,12 @@ def is_qualified_outreach_contact(lead: SponsorLead) -> bool:
     if compact_local in {"bd", "bizdev", "mktg", "business", "brand", "brands"}:
         return True
 
-    # A named person's email is acceptable only when their title or the page it came
-    # from clearly identifies sponsorship/creator/partnership responsibility.
-    title = normalize_text(lead.contact_title)
-    if title and any(term in title for term in OUTREACH_ROLE_TERMS):
+    # A named person's email is acceptable when their title or the page it came from
+    # clearly identifies sponsorship/creator/partnership responsibility.
+    if _role_linked_title(lead):
         return True
 
-    source = normalize_text(lead.contact_source)
+    source = normalize_text(lead.contact_source_url or lead.contact_source)
     if source and any(term in source for term in DIRECT_SOURCE_TERMS):
         return True
 
