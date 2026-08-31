@@ -2,7 +2,8 @@ name: Sponsor Queue Top-Up
 
 on:
   schedule:
-    - cron: "0,15,30,45 * * * *"
+    - cron: "15 * * * *"
+    - cron: "0,30,45 * * * *"
   workflow_dispatch:
   push:
     branches:
