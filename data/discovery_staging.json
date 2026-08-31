@@ -1,1 +1,27 @@
-[]
+[
+  {
+    "brand_name": "PetSmart",
+    "brand_domain": "petsmart.com",
+    "creator_name": "Abram Engle",
+    "creator_url": "https://www.youtube.com/@abrameng",
+    "creator_channel_id": "",
+    "creator_genre": "Pet / Lifestyle / Vlog",
+    "creator_tags": [
+      "pet",
+      "cats",
+      "lifestyle",
+      "vlog",
+      "consumer retail"
+    ],
+    "video_url": "https://sponsorradar.com/channels/abrameng",
+    "video_title": "Are Cardboard Boxes the Greatest Cat Toy of All Time?",
+    "sponsored_date": "2026-08-21",
+    "evidence": "SponsorRadar records PetSmart sponsoring Abram Engle's August 21, 2026 English-language YouTube video and captures the creator-side disclosure '#PetSmartPartner #Ad #anythingforpets'. It also records another PetSmart integration with Abram Engle on August 7, 2026, demonstrating an active recurring creator relationship. Qualified outreach contact is Heather Heywood, current Manager, Social Media & Influencer Partnerships at PetSmart; her LinkedIn profile confirms current PetSmart employment and a current-data contact directory updated August 24, 2026 identifies the exact influencer-partnership title. No email pattern was guessed.",
+    "paid_product_placement": true,
+    "contact_email": "",
+    "contact_name": "Heather Heywood",
+    "contact_title": "Manager, Social Media & Influencer Partnerships",
+    "contact_source_url": "https://www.linkedin.com/in/heather-heywood-a579199b",
+    "sponsorship_source_url": "https://sponsorradar.com/channels/abrameng"
+  }
+]
