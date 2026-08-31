@@ -2,13 +2,14 @@ name: Sponsor Queue Top-Up
 
 on:
   schedule:
-    - cron: "15 * * * *"
+    - cron: "0,15,30,45 * * * *"
   workflow_dispatch:
   push:
     branches:
       - main
     paths:
       - ".github/sponsor-batch-trigger"
+      - "data/researched_sponsors.json"
 
 permissions:
   contents: write
@@ -29,21 +30,24 @@ jobs:
         with:
           python-version: "3.11"
       - run: pip install -r requirements.txt
-      - name: Top up and diversify sponsor queue
+      - name: Top up 24 daily sponsors across YouTube TikTok Instagram
         env:
           YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
           CREATORDB_API_KEY: ${{ secrets.CREATORDB_API_KEY }}
           SPONSOR_MIN_LEAD_SCORE: ${{ vars.SPONSOR_MIN_LEAD_SCORE || '70' }}
-          SPONSOR_MAX_AGE_DAYS: ${{ vars.SPONSOR_MAX_AGE_DAYS || '30' }}
+          SPONSOR_MAX_AGE_DAYS: ${{ vars.SPONSOR_MAX_AGE_DAYS || '60' }}
           CREATORDB_PAGE_SIZE: ${{ vars.CREATORDB_PAGE_SIZE || '50' }}
           SPONSOR_SEARCH_REGION: ${{ vars.SPONSOR_SEARCH_REGION || 'US' }}
           SPONSOR_SEARCH_LANGUAGE: ${{ vars.SPONSOR_SEARCH_LANGUAGE || 'en' }}
           ENABLE_TIKTOK_SPONSOR_SCAN: 'true'
+          SPONSOR_DAILY_TARGET: '24'
+          SPONSOR_YOUTUBE_DAILY_TARGET: '8'
+          SPONSOR_TIKTOK_DAILY_TARGET: '8'
+          SPONSOR_INSTAGRAM_DAILY_TARGET: '8'
         shell: bash
         run: |
-          set -o pipefail
-          # run_sponsor_discovery_batch.py remains the YouTube-first engine called by the multisource runner.
-          python src/run_sponsor_discovery_multisource.py | tee sponsor_batch.log
+          set -euo pipefail
+          python src/run_sponsor_daily_topup.py | tee sponsor_batch.log
       - name: Persist refreshed sponsor queue
         run: |
           if git diff --quiet -- data/sponsor_queue.json; then
@@ -53,6 +57,6 @@ jobs:
           git config user.name "sponsor-queue-bot"
           git config user.email "actions@users.noreply.github.com"
           git add data/sponsor_queue.json
-          git commit -m "Refresh sponsor queue [skip ci]"
+          git commit -m "Refresh 24-a-day sponsor queue [skip ci]"
           git pull --rebase origin main
           git push origin HEAD:main
