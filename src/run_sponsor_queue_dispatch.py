@@ -4,6 +4,7 @@ import json
 from pathlib import Path
 
 from discord_notifier import DiscordNotifier
+from outreach_contact_policy import is_qualified_outreach_contact
 from run_sponsor_discovery_batch import _hydrate_creator_metrics, _is_beauty_lead, _is_music_lead
 from run_sponsor_scan import _is_recent_sponsorship, _is_target_lead
 from sponsor_config import load_sponsor_config
@@ -33,35 +34,15 @@ RELIGION_BLOCK_TERMS = (
 )
 
 DISALLOWED_DIGITAL_CATEGORIES = {
-    "software / saas",
-    "cybersecurity / vpn",
-    "ai software",
-    "developer tools",
-    "web hosting",
-    "cloud software",
+    "software / saas", "cybersecurity / vpn", "ai software", "developer tools",
+    "web hosting", "cloud software",
 }
 
 APPROVED_SPONSOR_CATEGORIES = {
-    "gaming",
-    "consumer tech",
-    "physical consumer tech",
-    "food & beverage",
-    "food/drink",
-    "fashion",
-    "home",
-    "home & garden",
-    "health & wellness",
-    "wellness",
-    "travel",
-    "pet",
-    "pets",
-    "fragrance",
-    "beauty",
-    "music",
-    "entertainment",
-    "lifestyle",
-    "sports",
-    "fitness",
+    "gaming", "consumer tech", "physical consumer tech", "food & beverage", "food/drink",
+    "fashion", "home", "home & garden", "health & wellness", "wellness", "travel",
+    "pet", "pets", "fragrance", "beauty", "music", "entertainment", "lifestyle",
+    "sports", "fitness",
 }
 
 APPROVED_NONTECH_KEYWORDS = {
@@ -76,11 +57,11 @@ APPROVED_NONTECH_KEYWORDS = {
 def _is_religion_sponsor(lead) -> bool:
     text = " ".join(
         [
-            lead.brand_name or "",
-            lead.brand_domain or "",
-            lead.sponsor_category or "",
-            lead.sponsor_subcategory or "",
-            lead.evidence or "",
+            getattr(lead, "brand_name", "") or "",
+            getattr(lead, "brand_domain", "") or "",
+            getattr(lead, "sponsor_category", "") or "",
+            getattr(lead, "sponsor_subcategory", "") or "",
+            getattr(lead, "evidence", "") or "",
         ]
     ).lower()
     return any(term in text for term in RELIGION_BLOCK_TERMS)
@@ -89,26 +70,20 @@ def _is_religion_sponsor(lead) -> bool:
 def _is_dispatch_target_lead(lead) -> bool:
     if _is_religion_sponsor(lead):
         return False
-
-    category = (lead.sponsor_category or "").strip().lower()
+    category = (getattr(lead, "sponsor_category", "") or "").strip().lower()
     text = " ".join(
         [
-            lead.brand_name or "",
-            lead.brand_domain or "",
-            lead.sponsor_category or "",
-            lead.sponsor_subcategory or "",
-            lead.evidence or "",
+            getattr(lead, "brand_name", "") or "",
+            getattr(lead, "brand_domain", "") or "",
+            getattr(lead, "sponsor_category", "") or "",
+            getattr(lead, "sponsor_subcategory", "") or "",
+            getattr(lead, "evidence", "") or "",
         ]
     ).lower()
-
-    # Permanent rule: digital-tech services never dispatch automatically.
     if category in DISALLOWED_DIGITAL_CATEGORIES:
         return False
     if any(term in text for term in (" vpn ", " saas ", "developer tool", "coding tool", "web hosting", "password manager")):
         return False
-
-    # Keep the original high-priority gaming/food/physical-tech gate, but also allow
-    # the non-tech sponsor categories explicitly approved for the research pipeline.
     if _is_target_lead(lead) or _is_beauty_lead(lead) or _is_music_lead(lead):
         return True
     if category in APPROVED_SPONSOR_CATEGORIES:
@@ -168,12 +143,9 @@ def run() -> None:
     queue = load_queue()
     sent_keys = load_sent_keys()
     duplicate_keys = load_duplicate_keys()
-
     skipped = 0
     created = 0
 
-    # Resume a partial delivery safely. If Monday already succeeded on a previous run,
-    # retry Discord only; do not create another Monday item.
     pending = _load_pending()
     if pending.get("lead"):
         try:
@@ -192,7 +164,6 @@ def run() -> None:
                 save_sent_keys(sent_keys)
                 _save_pending(pending)
                 raise RuntimeError(f"Discord retry failed for {lead.brand_name}: {exc}") from exc
-
             queue = _complete_delivery(lead, queue, sent_keys)
             print(
                 f"SPONSOR_QUEUE_DISPATCH: 1 delivered from pending checkpoint, "
@@ -202,15 +173,11 @@ def run() -> None:
 
     while queue:
         lead = queue[0]
-
-        # Invalid or permanently blocked leads may be removed immediately because they
-        # are not delivery candidates and should never be retried.
         if _is_religion_sponsor(lead):
             skipped += 1
             print(f"Religion-policy sponsor skipped before delivery: {lead.brand_name}")
             queue.pop(0)
             continue
-
         if is_duplicate(lead, duplicate_keys):
             skipped += 1
             print(f"GitHub duplicate/blocklist skipped before delivery: {lead.brand_name}")
@@ -221,20 +188,19 @@ def run() -> None:
 
         if _is_religion_sponsor(lead):
             skipped += 1
-            print(f"Religion-policy sponsor skipped after hydration: {lead.brand_name}")
             queue.pop(0)
             continue
         if is_duplicate(lead, duplicate_keys):
             skipped += 1
-            print(f"GitHub duplicate skipped after creator hydration: {lead.brand_name}")
             queue.pop(0)
             continue
         if not _is_recent_sponsorship(lead, config.max_sponsor_age_days):
             skipped += 1
             queue.pop(0)
             continue
-        if not lead.contact_email:
+        if not is_qualified_outreach_contact(lead):
             skipped += 1
+            print(f"Qualified outreach contact required; skipped: {lead.brand_name}")
             queue.pop(0)
             continue
         if lead.lead_score < config.min_lead_score:
@@ -247,26 +213,16 @@ def run() -> None:
             queue.pop(0)
             continue
 
-        # Delivery is transactional: keep the lead in queue until BOTH destinations
-        # succeed. Monday success is checkpointed so a Discord retry does not create a
-        # duplicate Monday item.
         try:
             result = monday.create_lead(lead)
             item = result.get("data", {}).get("create_item", {})
             item_id = str(item.get("id", ""))
             print(
-                f"Created queued sponsor lead: {lead.brand_name} / "
-                f"monday {item_id or '?'} / score {lead.lead_score} / "
-                f"creator subscribers {lead.creator_subscribers or 0:,}"
+                f"Created queued sponsor lead: {lead.brand_name} / monday {item_id or '?'} / "
+                f"score {lead.lead_score} / creator subscribers {lead.creator_subscribers or 0:,}"
             )
             created = 1
-            _save_pending(
-                {
-                    "stage": "monday_created",
-                    "monday_item_id": item_id,
-                    "lead": lead.as_dict(),
-                }
-            )
+            _save_pending({"stage": "monday_created", "monday_item_id": item_id, "lead": lead.as_dict()})
         except Exception as exc:
             save_queue(queue)
             save_sent_keys(sent_keys)
@@ -276,8 +232,6 @@ def run() -> None:
         try:
             discord.send_new_lead(lead)
         except Exception as exc:
-            # Keep both queue and pending checkpoint intact. Next run retries Discord
-            # only and will not create another Monday item.
             save_queue(queue)
             save_sent_keys(sent_keys)
             raise RuntimeError(f"Discord new lead notification failed for {lead.brand_name}: {exc}") from exc
@@ -286,14 +240,15 @@ def run() -> None:
         duplicate_keys.update(sent_keys)
         break
 
-    save_queue(queue)
-    save_sent_keys(sent_keys)
+    # _complete_delivery already persisted a successful queue exactly once. Persist here
+    # only when the run removed invalid/duplicate leads without sending a sponsor.
+    if not created:
+        save_queue(queue)
+        save_sent_keys(sent_keys)
     print(
         f"SPONSOR_QUEUE_DISPATCH: {created} delivered, {skipped} duplicate/stale/rejected removed, "
         f"{len(queue)} remaining, {len(sent_keys)} GitHub sent keys."
     )
-    if created != 1:
-        raise RuntimeError("Forced sponsor delivery completed without delivering exactly one sponsor")
 
 
 if __name__ == "__main__":
