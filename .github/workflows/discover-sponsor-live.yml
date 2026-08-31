@@ -4,6 +4,11 @@ on:
   schedule:
     - cron: "7,22,37,52 * * * *"
   workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - ".github/live-sponsor-trigger"
 
 permissions:
   contents: write
@@ -24,7 +29,7 @@ jobs:
         with:
           python-version: '3.11'
       - run: pip install -r requirements.txt
-      - name: Discover fresh YouTube and TikTok sponsor inventory
+      - name: Discover fresh YouTube TikTok and Instagram sponsor inventory
         env:
           YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
           CREATORDB_API_KEY: ${{ secrets.CREATORDB_API_KEY }}
@@ -37,8 +42,6 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          # Hard wall-clock cap: live APIs may be slow, but verified backlog delivery
-          # must never wait indefinitely for them.
           timeout --signal=TERM --kill-after=30s 8m python src/run_sponsor_discovery_multisource.py || {
             status=$?
             if [ "$status" -eq 124 ] || [ "$status" -eq 137 ]; then
