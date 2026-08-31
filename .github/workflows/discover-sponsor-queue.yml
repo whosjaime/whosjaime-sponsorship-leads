@@ -48,6 +48,8 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
+          # run_sponsor_daily_topup.py includes the legacy run_sponsor_discovery_batch.py
+          # path plus durable TikTok/Instagram researched inventory before balancing.
           python src/run_sponsor_daily_topup.py | tee sponsor_batch.log
       - name: Persist refreshed sponsor queue
         run: |
