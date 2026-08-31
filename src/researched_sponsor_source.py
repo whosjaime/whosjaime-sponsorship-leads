@@ -76,15 +76,28 @@ class ResearchedSponsorSource:
 
     @staticmethod
     def _verified_contact(item: dict, brand_domain: str) -> tuple[str, str, str, str]:
+        """Preserve either a same-domain qualified email or a sourced named contact.
+
+        The research policy allows a verified named person with a current role tied to
+        sponsorship/creator/influencer/affiliate/marketing/business development even
+        when no public email is available. Previously those records were erased here,
+        which prevented many Instagram/TikTok researched sponsors from ever dispatching.
+        """
+        contact_name = str(item.get("contact_name") or "").strip()
+        contact_title = str(item.get("contact_title") or "").strip()
+        contact_source = str(item.get("contact_source_url") or item.get("contact_source") or "").strip()
         contact_email = str(item.get("contact_email") or "").strip().lower()
-        if not contact_email or email_domain(contact_email) != brand_domain:
-            return "", "", "", ""
-        return (
-            str(item.get("contact_name") or "").strip(),
-            str(item.get("contact_title") or "").strip(),
-            contact_email,
-            str(item.get("contact_source_url") or item.get("contact_source") or "").strip(),
-        )
+
+        if contact_email and email_domain(contact_email) != brand_domain:
+            contact_email = ""
+
+        if contact_email:
+            return contact_name, contact_title, contact_email, contact_source
+
+        if contact_name and contact_title and contact_source:
+            return contact_name, contact_title, "", contact_source
+
+        return "", "", "", ""
 
     @staticmethod
     def _platform_label(value: str) -> str:
@@ -211,12 +224,13 @@ class ResearchedSponsorSource:
                     contact_name=contact_name,
                     contact_title=contact_title,
                     contact_email=contact_email,
-                    email_type="Named public work email" if contact_email and contact_name else ("Public work email" if contact_email else ""),
+                    email_type="Named public work email" if contact_email and contact_name else ("Public work email" if contact_email else ("Verified named contact" if contact_name else "")),
                     contact_source=contact_source,
+                    contact_source_url=contact_source,
                     signals=[
                         "Daily researched sponsorship",
                         f"verified public {source_platform} sponsorship evidence",
-                    ] + (["verified named public work email"] if contact_email and contact_name else []),
+                    ] + (["verified named public work email"] if contact_email and contact_name else (["verified named role-linked contact"] if contact_name else [])),
                 )
             )
         return leads
