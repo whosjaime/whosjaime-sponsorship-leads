@@ -1,92 +1,92 @@
 [
   {
-    "brand_name": "EcoFlow",
+    "brand_name": "CyberLink",
     "brand_size": "large",
-    "category": "Consumer Tech / Portable Power / Solar & Backup Power",
-    "commission": "8% on qualifying purchases",
-    "website": "https://ca.ecoflow.com/",
-    "apply_url": "https://ca.ecoflow.com/pages/affiliate-program",
-    "source_url": "https://ca.ecoflow.com/pages/affiliate-program"
+    "category": "Software / Creator Tools / Video & Photo Editing",
+    "commission": "Up to 30%",
+    "website": "https://www.cyberlink.com/",
+    "apply_url": "https://www.cyberlink.com/cyberlink-affiliate-program",
+    "source_url": "https://www.cyberlink.com/cyberlink-affiliate-program"
   },
   {
-    "brand_name": "Govee",
+    "brand_name": "Movavi",
     "brand_size": "large",
-    "category": "Consumer Tech / Smart Home / RGB Lighting",
-    "commission": "Up to 10%",
-    "website": "https://ca.govee.com/",
-    "apply_url": "https://ca.govee.com/pages/affiliate",
-    "source_url": "https://ca.govee.com/pages/affiliate"
+    "category": "Software / Creator Tools / Video Editing & Multimedia",
+    "commission": "Up to 60%",
+    "website": "https://www.movavi.com/",
+    "apply_url": "https://www.movavi.com/partners/affiliate-program/",
+    "source_url": "https://www.movavi.com/partners/affiliate-program/"
   },
   {
-    "brand_name": "Teachable",
+    "brand_name": "Skool",
     "brand_size": "large",
-    "category": "Software / Creator Tools / Courses & Digital Products",
-    "commission": "30% recurring for 12 months",
-    "website": "https://www.teachable.com/",
-    "apply_url": "https://www.teachable.com/partners",
-    "source_url": "https://www.teachable.com/partners"
+    "category": "Software / Creator Tools / Communities & Courses",
+    "commission": "40% recurring revenue for life",
+    "website": "https://www.skool.com/",
+    "apply_url": "https://www.skool.com/affiliate-program",
+    "source_url": "https://www.skool.com/affiliate-program"
   },
   {
-    "brand_name": "Native Instruments",
-    "brand_size": "large",
-    "category": "Creator Tools / Music Production / Audio Software & Hardware",
+    "brand_name": "Circle",
+    "brand_size": "mid-size",
+    "category": "Software / Creator Tools / Communities & Memberships",
+    "commission": "$100 per referred customer + 10%-20% recurring commission depending on tier",
+    "website": "https://circle.so/",
+    "apply_url": "https://circle.so/affiliate-program",
+    "source_url": "https://circle.so/affiliate-program"
+  },
+  {
+    "brand_name": "Vecteezy",
+    "brand_size": "mid-size",
+    "category": "Creator Tools / Stock Graphics, Photos & Video",
+    "commission": "30% per new Vecteezy Pro subscriber",
+    "website": "https://www.vecteezy.com/",
+    "apply_url": "https://www.vecteezy.com/affiliates",
+    "source_url": "https://www.vecteezy.com/affiliates"
+  },
+  {
+    "brand_name": "Lofree",
+    "brand_size": "mid-size",
+    "category": "Consumer Tech / PC Gear / Mechanical Keyboards & Desk Accessories",
+    "commission": "5% standard commission; up to 15% through tier incentives",
+    "website": "https://www.lofree.co/",
+    "apply_url": "https://www.lofree.co/pages/affiliate-program",
+    "source_url": "https://www.lofree.co/pages/affiliate-program"
+  },
+  {
+    "brand_name": "Fantech",
+    "brand_size": "mid-size",
+    "category": "Gaming / PC Gear / Gaming Peripherals",
+    "commission": "10% per sale",
+    "website": "https://fantechworld.com/",
+    "apply_url": "https://fantechworld.com/pages/fantech-affiliate-program",
+    "source_url": "https://fantechworld.com/pages/fantech-affiliate-program"
+  },
+  {
+    "brand_name": "MCHOSE",
+    "brand_size": "emerging",
+    "category": "Gaming / PC Gear / Keyboards, Mice & Peripherals",
+    "commission": "5% per sale",
+    "website": "https://www.mchose.store/",
+    "apply_url": "https://www.mchose.store/pages/affiliates",
+    "source_url": "https://www.mchose.store/pages/affiliates"
+  },
+  {
+    "brand_name": "WALLHACK",
+    "brand_size": "emerging",
+    "category": "Gaming / PC Gear / Glass Mousepads & Performance Accessories",
+    "commission": "10% per sale",
+    "website": "https://wallhack.com/",
+    "apply_url": "https://wallhack.com/en-ca/pages/affiliate",
+    "source_url": "https://wallhack.com/en-ca/pages/affiliate"
+  },
+  {
+    "brand_name": "Javvy Coffee",
+    "brand_size": "emerging",
+    "category": "Food & Drinks / Coffee / Creator-Friendly Consumer Brand",
     "commission": "Not publicly listed",
-    "website": "https://www.native-instruments.com/",
-    "apply_url": "https://support.native-instruments.com/support/solutions/articles/69000879991-native-instruments-how-to-become-a-native-instruments-affiliate",
-    "source_url": "https://support.native-instruments.com/support/solutions/articles/69000879991-native-instruments-how-to-become-a-native-instruments-affiliate"
-  },
-  {
-    "brand_name": "OWC",
-    "brand_size": "large",
-    "category": "Consumer Tech / PC & Mac Gear / Storage, Docks & Upgrades",
-    "commission": "3% non-Apple products; 1%-2% Apple-branded products",
-    "website": "https://www.owc.com/",
-    "apply_url": "https://www.owc.com/affiliate-program",
-    "source_url": "https://www.owc.com/affiliate-program"
-  },
-  {
-    "brand_name": "Setapp",
-    "brand_size": "mid-size",
-    "category": "Software / Creator & Productivity Tools / Mac Apps",
-    "commission": "$25 per new paid subscriber",
-    "website": "https://setapp.com/",
-    "apply_url": "https://setapp.com/affiliate-program",
-    "source_url": "https://setapp.com/affiliate-program"
-  },
-  {
-    "brand_name": "Ecamm",
-    "brand_size": "mid-size",
-    "category": "Software / Creator Tools / Live Streaming & Video Production",
-    "commission": "30% on new subscriptions; monthly plans recurring up to 12 months",
-    "website": "https://www.ecamm.com/",
-    "apply_url": "https://affiliates.ecamm.com/",
-    "source_url": "https://support.ecamm.com/en/articles/3217764-ecamm-affiliate-program"
-  },
-  {
-    "brand_name": "Podia",
-    "brand_size": "mid-size",
-    "category": "Software / Creator Tools / Courses, Memberships & Digital Products",
-    "commission": "20% for up to 12 months",
-    "website": "https://www.podia.com/",
-    "apply_url": "https://affiliates.podia.com/",
-    "source_url": "https://affiliates.podia.com/"
-  },
-  {
-    "brand_name": "Mackie",
-    "brand_size": "mid-size",
-    "category": "Creator Tech / Audio / Microphones, Mixers & Studio Gear",
-    "commission": "8%",
-    "website": "https://mackie.com/",
-    "apply_url": "https://mackie.com/intl/artist-program/",
-    "source_url": "https://mackie.com/intl/artist-program/"
-  },
-  {
-    "brand_name": "Maono",
-    "brand_size": "mid-size",
-    "category": "Creator Tech / Audio / Microphones & Podcast Gear",
-    "commission": "5%-20%",
-    "website": "https://www.maono.com/",
-    "apply_url": "https://www.maono.com/pages/affiliate-program",
-    "source_url": "https://www.maono.com/pages/affiliate-program"
+    "website": "https://javvycoffee.com/",
+    "apply_url": "https://javvycoffee.com/pages/javvy-affiliate-program",
+    "source_url": "https://javvycoffee.com/pages/javvy-affiliate-program"
   }
 ]
