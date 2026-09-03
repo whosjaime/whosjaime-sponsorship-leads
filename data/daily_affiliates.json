@@ -1,92 +1,92 @@
 [
   {
-    "brand_name": "Wistia",
+    "brand_name": "Skullcandy",
     "brand_size": "large",
-    "category": "Software / Creator Tools / Video Hosting & Marketing",
-    "commission": "20% of every payment for the first 12 months",
-    "website": "https://wistia.com/",
-    "apply_url": "https://wistia.com/partner-program/affiliates",
-    "source_url": "https://wistia.com/partner-program/affiliates"
-  },
-  {
-    "brand_name": "Medal",
-    "brand_size": "large",
-    "category": "Gaming / Creator Tools / Gameplay Clipping & Community",
-    "commission": "$2 per activated new clipper; $5 monthly or $25 annual Premium subscriber",
-    "website": "https://medal.tv/",
-    "apply_url": "https://medal.tv/affiliates",
-    "source_url": "https://medal.tv/affiliates"
-  },
-  {
-    "brand_name": "Viggle AI",
-    "brand_size": "large",
-    "category": "Software / Creator Tools / AI Video & Social Content",
-    "commission": "20% recurring on referred subscribers",
-    "website": "https://viggle.ai/",
-    "apply_url": "https://viggle.ai/affiliate",
-    "source_url": "https://viggle.ai/affiliate"
-  },
-  {
-    "brand_name": "Vivideo",
-    "brand_size": "mid-size",
-    "category": "Software / Creator Tools / AI Video Studio",
-    "commission": "20% on every referred customer subscription",
-    "website": "https://vivideo.ai/",
-    "apply_url": "https://vivideo.ai/affiliate-program",
-    "source_url": "https://vivideo.ai/affiliate-program"
-  },
-  {
-    "brand_name": "PodcastAI",
-    "brand_size": "mid-size",
-    "category": "Software / Creator Tools / Podcast Production & Repurposing",
-    "commission": "30% recurring commission",
-    "website": "https://podcastai.com/",
-    "apply_url": "https://podcastai.com/affiliates",
-    "source_url": "https://podcastai.com/affiliates"
-  },
-  {
-    "brand_name": "VideoAny",
-    "brand_size": "mid-size",
-    "category": "Software / Creator Tools / AI Video Generation",
-    "commission": "20% recurring commission on paid referrals",
-    "website": "https://videoany.io/",
-    "apply_url": "https://videoany.io/affiliates",
-    "source_url": "https://videoany.io/affiliates"
-  },
-  {
-    "brand_name": "Fannabe",
-    "brand_size": "mid-size",
-    "category": "Software / Creator Tools / AI Image & Influencer Content",
-    "commission": "30% lifetime revenue share on referred credit purchases",
-    "website": "https://www.fannabe.com/",
-    "apply_url": "https://www.fannabe.com/affiliate",
-    "source_url": "https://www.fannabe.com/affiliate"
-  },
-  {
-    "brand_name": "Widemile",
-    "brand_size": "emerging",
-    "category": "Software / Creator Tools / AI Video & Image Creation",
-    "commission": "15% creator-code revenue share on subscriptions",
-    "website": "https://widemile.ai/",
-    "apply_url": "https://widemile.ai/creator-partner-program",
-    "source_url": "https://widemile.ai/creator-partner-program"
-  },
-  {
-    "brand_name": "YouArt",
-    "brand_size": "emerging",
-    "category": "Software / Creator Tools / AI Creative & Video Agents",
+    "category": "Consumer Tech / Audio / Headphones & Gaming Audio",
     "commission": "Not publicly listed",
-    "website": "https://youart.ai/",
-    "apply_url": "https://youart.ai/affiliate",
-    "source_url": "https://youart.ai/affiliate"
+    "website": "https://www.skullcandy.com/",
+    "apply_url": "https://www.skullcandy.com/pages/affiliates-and-creators",
+    "source_url": "https://www.skullcandy.com/pages/affiliates-and-creators"
   },
   {
-    "brand_name": "Chraft",
+    "brand_name": "G FUEL",
+    "brand_size": "large",
+    "category": "Food & Drinks / Gaming / Energy Drinks",
+    "commission": "Not publicly listed",
+    "website": "https://gfuel.com/",
+    "apply_url": "https://gfuel.com/pages/community",
+    "source_url": "https://gfuel.com/pages/community"
+  },
+  {
+    "brand_name": "Guitar Center",
+    "brand_size": "large",
+    "category": "Music / Creator Gear / Instruments, Recording & Pro Audio",
+    "commission": "Not publicly listed",
+    "website": "https://www.guitarcenter.com/",
+    "apply_url": "https://commerce.sovrn.com/merchants/464/guitar-center-affiliate-program",
+    "source_url": "https://commerce.sovrn.com/merchants/464/guitar-center-affiliate-program"
+  },
+  {
+    "brand_name": "World Wide Stereo",
+    "brand_size": "mid-size",
+    "category": "Consumer Tech / Audio & Video / Premium Electronics",
+    "commission": "3% on referred sales",
+    "website": "https://www.worldwidestereo.com/",
+    "apply_url": "https://www.worldwidestereo.com/pages/affiliate-program",
+    "source_url": "https://www.worldwidestereo.com/pages/affiliate-program"
+  },
+  {
+    "brand_name": "Mubert",
+    "brand_size": "mid-size",
+    "category": "Software / Creator Tools / AI Music & Audio",
+    "commission": "30% from every sale and recurring revenue",
+    "website": "https://mubert.com/",
+    "apply_url": "https://mubert.com/affiliate-program",
+    "source_url": "https://mubert.com/affiliate-program"
+  },
+  {
+    "brand_name": "OpenArt",
+    "brand_size": "mid-size",
+    "category": "Software / Creator Tools / AI Image & Video Creation",
+    "commission": "Not publicly listed",
+    "website": "https://openart.ai/",
+    "apply_url": "https://openart.ai/programs/affiliate",
+    "source_url": "https://openart.ai/programs/affiliate"
+  },
+  {
+    "brand_name": "HBADA",
+    "brand_size": "mid-size",
+    "category": "Consumer Tech / Gaming & Office / Ergonomic Chairs",
+    "commission": "5% standard commission on approved sales",
+    "website": "https://hbada.com/",
+    "apply_url": "https://hbada.com/en-ca/pages/hbada-affiliate-program",
+    "source_url": "https://hbada.com/en-ca/pages/hbada-affiliate-program"
+  },
+  {
+    "brand_name": "3dkeycap",
     "brand_size": "emerging",
-    "category": "Software / Creator Tools / AI Creative Tools",
-    "commission": "30% on the first 3 payments per referred customer within 12 months",
-    "website": "https://www.chraft.ai/",
-    "apply_url": "https://www.chraft.ai/affiliate",
-    "source_url": "https://www.chraft.ai/affiliate"
+    "category": "Gaming / PC Gear / Mechanical Keyboard Keycaps",
+    "commission": "Up to 15%",
+    "website": "https://3dkeycap.com/",
+    "apply_url": "https://3dkeycap.com/pages/affiliate-program",
+    "source_url": "https://3dkeycap.com/pages/affiliate-program"
+  },
+  {
+    "brand_name": "DojoClip",
+    "brand_size": "emerging",
+    "category": "Software / Creator Tools / AI Video, Music & Content Studio",
+    "commission": "30% recurring for up to 12 months per referred subscriber",
+    "website": "https://dojoclip.com/",
+    "apply_url": "https://dojoclip.com/en/affiliate",
+    "source_url": "https://dojoclip.com/en/affiliate"
+  },
+  {
+    "brand_name": "PrintMyPad",
+    "brand_size": "emerging",
+    "category": "Gaming / Creator Merch / Custom Desk Mats",
+    "commission": "Not publicly listed",
+    "website": "https://printmypad.com/",
+    "apply_url": "https://printmypad.com/pages/collab",
+    "source_url": "https://printmypad.com/pages/collab"
   }
 ]
