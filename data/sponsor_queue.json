@@ -1,37 +1,5 @@
 [
   {
-    "brand_name": "Yango Play",
-    "brand_domain": "play.yango.com",
-    "source_platform": "TikTok",
-    "creator_name": "Amina Hussein",
-    "creator_url": "https://www.tiktok.com/@aminahussein5_",
-    "creator_channel_id": "aminahussein5_",
-    "creator_subscribers": 2000000,
-    "creator_genre": "Entertainment",
-    "creator_tags": ["tiktok", "entertainment", "creator campaign"],
-    "video_id": "yango-bershama-20260826",
-    "video_url": "https://ads.tiktok.com/business/en/inspiration/yango-play-spark-ads-case-study",
-    "video_title": "Yango Play: Bershama creator-powered TikTok campaign",
-    "sponsored_date": "2026-08-26",
-    "evidence": "TikTok for Business documents Yango Play working with regional creator Amina Hussein (2M+ followers) and activating 1,419 Egyptian creators through Branded Buzz for the Bershama streaming premiere.",
-    "paid_product_placement": true,
-    "brand_partner_channel_id": "",
-    "sponsor_category": "Entertainment",
-    "sponsor_subcategory": "Streaming",
-    "contact_name": "Ksenia Alekseeva",
-    "contact_title": "Head of paid media - Yango",
-    "contact_email": "",
-    "email_type": "",
-    "contact_source": "TikTok for Business case study",
-    "contact_source_url": "https://ads.tiktok.com/business/en/inspiration/yango-play-spark-ads-case-study",
-    "lead_score": 96,
-    "lead_temperature": "Hot",
-    "sponsorship_key": "tiktok:yango-bershama-20260826:play.yango.com",
-    "brand_key": "domain:play.yango.com",
-    "signals": ["TikTok creator campaign", "1,419 creators activated", "creator-powered buzz", "verified public TikTok sponsorship evidence"],
-    "date_found": "2026-09-03"
-  },
-  {
     "brand_name": "adidas",
     "brand_domain": "adidas.com",
     "source_platform": "TikTok",
@@ -40,7 +8,12 @@
     "creator_channel_id": "",
     "creator_subscribers": 0,
     "creator_genre": "Fashion",
-    "creator_tags": ["tiktok", "fashion", "sports", "lifestyle"],
+    "creator_tags": [
+      "tiktok",
+      "fashion",
+      "sports",
+      "lifestyle"
+    ],
     "video_id": "adidas-white-friday-20260827",
     "video_url": "https://ads.tiktok.com/business/en-US/inspiration/adidas-white-friday-case-study",
     "video_title": "adidas White Friday TikTok creator activation",
@@ -60,7 +33,13 @@
     "lead_temperature": "Hot",
     "sponsorship_key": "tiktok:adidas-white-friday-20260827:adidas.com",
     "brand_key": "domain:adidas.com",
-    "signals": ["TikTok creator campaign", "creator storytelling", "TikTok LIVE", "Spark Ads", "verified public TikTok sponsorship evidence"],
+    "signals": [
+      "TikTok creator campaign",
+      "creator storytelling",
+      "TikTok LIVE",
+      "Spark Ads",
+      "verified public TikTok sponsorship evidence"
+    ],
     "date_found": "2026-09-03"
   }
 ]
