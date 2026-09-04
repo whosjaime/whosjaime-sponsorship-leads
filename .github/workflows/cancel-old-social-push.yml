@@ -13,7 +13,9 @@ jobs:
     if: startsWith(github.event.issue.title, 'CANCEL OLD SOCIAL PUSH')
     runs-on: ubuntu-latest
     steps:
-      - name: Cancel pre-filter social night run
+      - name: Cancel broad sponsor runs
         env:
           GH_TOKEN: ${{ github.token }}
-        run: gh run cancel 33827254339 --repo "${{ github.repository }}" || true
+        run: |
+          gh run cancel 33827254339 --repo "${{ github.repository }}" || true
+          gh run cancel 33828715141 --repo "${{ github.repository }}" || true
