@@ -1,0 +1,19 @@
+name: Cancel Old Social Push
+
+on:
+  issues:
+    types: [opened]
+
+permissions:
+  actions: write
+  issues: read
+
+jobs:
+  cancel:
+    if: startsWith(github.event.issue.title, 'CANCEL OLD SOCIAL PUSH')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Cancel pre-filter social night run
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh run cancel 33827254339 --repo "${{ github.repository }}" || true
