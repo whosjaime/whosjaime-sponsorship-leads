@@ -1,6 +1,8 @@
 from __future__ import annotations
 
+import json
 import re
+from pathlib import Path
 
 from brand_enrichment import BrandEnricher
 from discord_notifier import DiscordNotifier
@@ -9,6 +11,7 @@ from researched_sponsor_source import ResearchedSponsorSource
 from run_sponsor_queue_dispatch import _is_dispatch_target_lead
 from run_sponsor_scan import _enrich_lead, _is_recent_sponsorship
 from sponsor_config import load_sponsor_config
+from sponsor_models import SponsorLead
 from sponsor_monday_client import SponsorMondayClient
 from sponsor_queue import (
     is_duplicate,
@@ -23,12 +26,13 @@ from tiktok_sponsor_scanner import TikTokSponsorScanner
 
 TARGET_SENDS = 5
 MAX_CREATOR_FOLLOWERS = 100_000
+MANUAL_PATH = Path("data/manual_tiktok_under_100k_candidates.json")
 TIKTOK_USER_RE = re.compile(r"tiktok\.com/@([^/?#]+)", re.I)
 
 
 def _username(lead) -> str:
     raw = (lead.creator_channel_id or "").strip().lstrip("@")
-    if raw:
+    if raw and not raw.startswith("manual-"):
         return raw
     match = TIKTOK_USER_RE.search(lead.creator_url or "")
     return match.group(1) if match else ""
@@ -51,6 +55,28 @@ def _hydrate_followers(lead, scanner: TikTokSponsorScanner) -> int:
     return lead.creator_subscribers
 
 
+def _manual_verified(lead: SponsorLead) -> bool:
+    signals = {str(signal).strip().lower() for signal in (lead.signals or [])}
+    return "manual verified under-100k creator" in signals
+
+
+def _load_manual() -> list[SponsorLead]:
+    if not MANUAL_PATH.exists():
+        return []
+    try:
+        raw = json.loads(MANUAL_PATH.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError) as exc:
+        print(f"WARNING: manual TikTok seed failed to load: {exc}")
+        return []
+    leads: list[SponsorLead] = []
+    for item in raw if isinstance(raw, list) else []:
+        try:
+            leads.append(SponsorLead(**item))
+        except TypeError as exc:
+            print(f"WARNING: malformed manual TikTok candidate skipped: {exc}")
+    return leads
+
+
 def run() -> None:
     config = load_sponsor_config()
     scanner = TikTokSponsorScanner(config.search_language, config.search_region)
@@ -60,26 +86,32 @@ def run() -> None:
 
     sent_keys = load_sent_keys()
     duplicate_keys = load_duplicate_keys()
-    pool = []
+    pool: list[SponsorLead] = []
 
-    try:
-        researched = ResearchedSponsorSource().load()
-    except Exception as exc:
-        print(f"WARNING: researched TikTok source failed: {exc}")
-        researched = []
+    manual = _load_manual()
+    pool.extend(manual)
+    print(f"TIKTOK_FIVE_MANUAL: loaded={len(manual)}")
 
-    pool.extend(lead for lead in researched if _is_tiktok(lead))
+    # Only fall back to researched/live discovery if the direct verified seed has fewer than five.
+    if len(manual) < TARGET_SENDS:
+        try:
+            researched = ResearchedSponsorSource().load()
+        except Exception as exc:
+            print(f"WARNING: researched TikTok source failed: {exc}")
+            researched = []
+        pool.extend(lead for lead in researched if _is_tiktok(lead))
 
-    # Fresh TikTok-only discovery to fill beyond stored research inventory.
-    try:
-        posts = scanner.discover(lookback_days=min(30, config.max_sponsor_age_days), max_posts=120)
-        pool.extend(scanner.to_lead(post) for post in posts)
-        print(f"TIKTOK_FIVE_DISCOVERY: fresh_posts={len(posts)}")
-    except Exception as exc:
-        print(f"WARNING: fresh TikTok discovery failed: {exc}")
+        try:
+            posts = scanner.discover(lookback_days=min(30, config.max_sponsor_age_days), max_posts=120)
+            pool.extend(scanner.to_lead(post) for post in posts)
+            print(f"TIKTOK_FIVE_DISCOVERY: fresh_posts={len(posts)}")
+        except Exception as exc:
+            print(f"WARNING: fresh TikTok discovery failed: {exc}")
+    else:
+        print("TIKTOK_FIVE_DISCOVERY: skipped; five direct verified TikTok candidates are seeded")
 
-    candidates = []
-    seen = set()
+    candidates: list[SponsorLead] = []
+    seen: set[str] = set()
     for lead in pool:
         if not _is_tiktok(lead):
             continue
@@ -95,14 +127,21 @@ def run() -> None:
             continue
 
         if is_duplicate(lead, duplicate_keys):
+            print(f"TIKTOK_FIVE_SKIP_DUPLICATE: {lead.brand_name}")
             continue
-        if not _is_recent_sponsorship(lead, config.max_sponsor_age_days):
+        # Direct manual seeds may pair an older paid-post proof point with a current
+        # official creator program/contact. Keep the normal recency gate for all
+        # automatically discovered leads, but do not throw away that verified signal.
+        if not _manual_verified(lead) and not _is_recent_sponsorship(lead, config.max_sponsor_age_days):
             continue
         if not is_qualified_outreach_contact(lead):
+            print(f"TIKTOK_FIVE_SKIP_CONTACT: {lead.brand_name}")
             continue
         if lead.lead_score < config.min_lead_score:
+            print(f"TIKTOK_FIVE_SKIP_SCORE: {lead.brand_name} / {lead.lead_score}")
             continue
         if not _is_dispatch_target_lead(lead):
+            print(f"TIKTOK_FIVE_SKIP_CATEGORY: {lead.brand_name} / {lead.sponsor_category}")
             continue
 
         identity = (lead.brand_key or lead.brand_domain or lead.brand_name).strip().lower()
