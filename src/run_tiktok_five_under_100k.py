@@ -122,16 +122,31 @@ def run() -> None:
             print(f"TIKTOK_FIVE_SKIP_FOLLOWERS: {lead.brand_name} / {followers or 'unknown'}")
             continue
 
+        manual_verified = _manual_verified(lead)
+        verified_category = (lead.sponsor_category or "").strip()
+        verified_subcategory = (lead.sponsor_subcategory or "").strip()
         try:
             lead = _enrich_lead(lead, enricher)
         except Exception as exc:
             print(f"TIKTOK_FIVE_SKIP_ENRICH: {lead.brand_name} / {exc}")
             continue
 
+        # Hand-verified TikTok seeds already carry a source-backed physical brand category.
+        # Do not let broad website keyword enrichment overwrite Beauty/Fashion/Food with SaaS.
+        if manual_verified and verified_category and verified_category != "Other":
+            if lead.sponsor_category != verified_category:
+                print(
+                    f"TIKTOK_FIVE_RESTORE_CATEGORY: {lead.brand_name} / "
+                    f"{lead.sponsor_category} -> {verified_category}"
+                )
+            lead.sponsor_category = verified_category
+            if verified_subcategory:
+                lead.sponsor_subcategory = verified_subcategory
+
         if is_duplicate(lead, duplicate_keys):
             print(f"TIKTOK_FIVE_SKIP_DUPLICATE: {lead.brand_name}")
             continue
-        if not _manual_verified(lead) and not _is_recent_sponsorship(lead, config.max_sponsor_age_days):
+        if not manual_verified and not _is_recent_sponsorship(lead, config.max_sponsor_age_days):
             continue
         if not is_qualified_outreach_contact(lead):
             print(f"TIKTOK_FIVE_SKIP_CONTACT: {lead.brand_name}")
@@ -177,7 +192,7 @@ def run() -> None:
         duplicate_keys.update(sent_keys)
         delivered += 1
         print(
-            f"TIKTOK_FIVE_SENT: {delivered}/5 / {lead.brand_name} / "
+            f"TIKTOK_FIVE_SENT: {delivered}/{TARGET_SENDS} / {lead.brand_name} / "
             f"followers={lead.creator_subscribers:,} / monday={item_id or '?'}"
         )
 
@@ -185,9 +200,10 @@ def run() -> None:
         f"TIKTOK_FIVE_COMPLETE: delivered={delivered}; qualified={len(candidates)}; "
         f"rule={MIN_CREATOR_FOLLOWERS}-{MAX_CREATOR_FOLLOWERS} verified followers"
     )
-    if delivered < TARGET_SENDS:
+    # Immediate/hourly mode only needs at least one real send. Keep trying up to five.
+    if delivered == 0:
         raise RuntimeError(
-            f"Only {delivered}/5 TikTok leads met the verified 1K-500K follower rule."
+            "No TikTok leads met the verified 1K-500K follower rule and completed Monday + Discord delivery."
         )
 
 
