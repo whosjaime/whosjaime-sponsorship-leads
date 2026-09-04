@@ -17,6 +17,8 @@ OUTREACH_ROLE_TERMS = {
     "affiliate",
     "brand",
     "marketing",
+    "paid media",
+    "social media",
     "bizdev",
     "businessdevelopment",
     "business-development",
@@ -107,8 +109,7 @@ def is_qualified_outreach_contact(lead: SponsorLead) -> bool:
 
     The research policy explicitly allows either a qualified email OR a verified named
     person whose current title/source ties them to sponsorship, creator, influencer,
-    affiliate, partnerships, marketing, or business development. Do not silently drop
-    named partnership contacts just because the brand has not published their email.
+    affiliate, partnerships, marketing, paid/social media, or business development.
     """
     email = normalize_text(lead.contact_email)
 
