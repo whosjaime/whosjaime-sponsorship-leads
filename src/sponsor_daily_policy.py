@@ -2,7 +2,8 @@ from __future__ import annotations
 
 import os
 from collections import Counter
-from datetime import date
+from datetime import date, datetime
+from zoneinfo import ZoneInfo
 
 from sponsor_dedupe import normalize_text
 from sponsor_models import SponsorLead
@@ -15,6 +16,16 @@ PLATFORM_TARGETS = {
     "instagram": int(os.getenv("SPONSOR_INSTAGRAM_DAILY_TARGET", "8")),
 }
 PLATFORM_ORDER = ("youtube", "tiktok", "instagram")
+DAILY_TIMEZONE = os.getenv("SPONSOR_DAILY_TIMEZONE", "America/Toronto")
+
+
+def current_delivery_date() -> date:
+    """Return the sponsor delivery day in the configured business timezone."""
+    try:
+        timezone = ZoneInfo(DAILY_TIMEZONE)
+    except Exception:
+        timezone = ZoneInfo("America/Toronto")
+    return datetime.now(timezone).date()
 
 
 def platform_key(value: str) -> str:
@@ -29,14 +40,14 @@ def platform_key(value: str) -> str:
 
 
 def delivery_history_key(lead: SponsorLead, delivered_on: date | None = None) -> str:
-    day = delivered_on or date.today()
+    day = delivered_on or current_delivery_date()
     platform = platform_key(lead.source_platform)
     brand = normalize_text(lead.brand_key or lead.brand_domain or lead.brand_name)
     return f"delivery-used:{day.isoformat()}:{platform}:{brand}"
 
 
 def delivery_counts(sent_keys: set[str], delivered_on: date | None = None) -> Counter:
-    day = (delivered_on or date.today()).isoformat()
+    day = (delivered_on or current_delivery_date()).isoformat()
     prefix = f"delivery-used:{day}:"
     counts: Counter = Counter()
     for raw in sent_keys:
