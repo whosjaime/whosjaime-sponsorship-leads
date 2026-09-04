@@ -15,7 +15,7 @@ ROOT = Path(__file__).resolve().parents[1]
 QUEUE_PATH = ROOT / "data" / "daily_affiliates.json"
 DUPLICATES_PATH = ROOT / "data" / "affiliate_duplicates.json"
 TORONTO = ZoneInfo("America/Toronto")
-MAX_DAILY = 10
+MAX_DAILY = 20
 CHUNK_SIZE = 5
 
 
