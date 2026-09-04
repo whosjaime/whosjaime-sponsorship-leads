@@ -58,6 +58,11 @@ HANDLE_RE = re.compile(r'@([A-Za-z0-9._]{2,40})')
 VIDEO_URL_RE = re.compile(r'https?://(?:www\.)?tiktok\.com/@([^/?#]+)/video/(\d+)')
 DATE_RE = re.compile(r'(?i)\b(20\d{2})[-/](\d{1,2})[-/](\d{1,2})\b')
 HREF_RE = re.compile(r'href=["\']([^"\']+)["\']', re.I)
+FOLLOWER_PATTERNS = (
+    re.compile(r'"followerCount"\s*:\s*(\d+)'),
+    re.compile(r'\\"followerCount\\"\s*:\s*(\d+)'),
+    re.compile(r'"follower_count"\s*:\s*(\d+)'),
+)
 
 NON_BRAND_HANDLES = {
     'tiktok', 'fyp', 'foryou', 'foryoupage', 'capcut', 'creator', 'shop', 'tiktokshop',
@@ -87,7 +92,7 @@ class TikTokPost:
 class TikTokSponsorScanner:
     """Discover creator-side TikTok sponsorship posts from public indexed pages."""
 
-    def __init__(self, language: str = 'en', region: str = 'US', timeout: int = 10):
+    def __init__(self, language: str = 'en', region: str = 'US', timeout: int = 8):
         self.language = language or 'en'
         self.region = region or 'US'
         self.timeout = timeout
@@ -100,6 +105,7 @@ class TikTokSponsorScanner:
             'Accept-Language': 'en-US,en;q=0.9',
         })
         self._domain_cache: dict[str, str] = {}
+        self._follower_cache: dict[str, int] = {}
 
     def _search_html(self, query: str) -> str:
         url = f'https://html.duckduckgo.com/html/?q={quote_plus(query)}'
@@ -164,6 +170,27 @@ class TikTokSponsorScanner:
         self._domain_cache[brand_key] = ''
         return ''
 
+    def _profile_followers(self, username: str) -> int:
+        key = username.strip('@').lower()
+        if not key:
+            return 0
+        if key in self._follower_cache:
+            return self._follower_cache[key]
+        try:
+            response = self.session.get(f'https://www.tiktok.com/@{key}', timeout=self.timeout)
+            response.raise_for_status()
+            text = response.text
+            for pattern in FOLLOWER_PATTERNS:
+                match = pattern.search(text)
+                if match:
+                    value = int(match.group(1))
+                    self._follower_cache[key] = value
+                    return value
+        except Exception as exc:
+            print(f'WARNING: TikTok follower lookup skipped @{key}: {exc}')
+        self._follower_cache[key] = 0
+        return 0
+
     def _oembed(self, video_url: str) -> dict:
         endpoint = f'https://www.tiktok.com/oembed?url={quote_plus(video_url)}'
         response = self.session.get(endpoint, timeout=self.timeout)
@@ -209,7 +236,7 @@ class TikTokSponsorScanner:
             return handle.replace('_', ' ').replace('.', ' ').strip().title()
         return ''
 
-    def discover(self, lookback_days: int = 30, max_posts: int = 180) -> list[TikTokPost]:
+    def discover(self, lookback_days: int = 30, max_posts: int = 90) -> list[TikTokPost]:
         cutoff = datetime.now(timezone.utc).date() - timedelta(days=max(1, lookback_days))
         urls: list[str] = []
         seen_urls: set[str] = set()
@@ -255,6 +282,7 @@ class TikTokSponsorScanner:
                 continue
             creator_name = (metadata.get('author_name') or username).strip()
             creator_url = (metadata.get('author_url') or f'https://www.tiktok.com/@{username}').strip()
+            creator_followers = self._profile_followers(username)
             disclosure = DISCLOSURE_RE.search(caption)
             evidence = caption[max(0, disclosure.start() - 80): disclosure.end() + 140] if disclosure else caption[:220]
             posts.append(TikTokPost(
@@ -263,7 +291,7 @@ class TikTokSponsorScanner:
                 creator_username=username,
                 creator_name=creator_name,
                 creator_url=creator_url,
-                creator_followers=0,
+                creator_followers=creator_followers,
                 caption=caption,
                 published_at=published,
                 brand_name=brand_name,
@@ -274,6 +302,17 @@ class TikTokSponsorScanner:
     def to_lead(self, post: TikTokPost) -> SponsorLead:
         brand_domain = self._resolve_brand_domain(post.brand_name)
         brand_key = make_brand_key(post.brand_name, brand_domain)
+        size_signal = ''
+        if post.creator_followers > 0:
+            size_signal = f'verified creator followers:{post.creator_followers}'
+        signals = [
+            'TikTok creator-side ad/sponsored disclosure',
+            'ad/sponsored disclosure',
+            'verified public sponsorship evidence',
+            'verified public TikTok sponsorship evidence',
+        ]
+        if size_signal:
+            signals.append(size_signal)
         return SponsorLead(
             brand_name=post.brand_name,
             brand_domain=brand_domain,
@@ -292,10 +331,5 @@ class TikTokSponsorScanner:
             paid_product_placement=True,
             brand_key=brand_key,
             sponsorship_key=make_sponsorship_key('TikTok', post.video_id, post.brand_name, brand_domain),
-            signals=[
-                'TikTok creator-side ad/sponsored disclosure',
-                'ad/sponsored disclosure',
-                'verified public sponsorship evidence',
-                'verified public TikTok sponsorship evidence',
-            ],
+            signals=signals,
         )
