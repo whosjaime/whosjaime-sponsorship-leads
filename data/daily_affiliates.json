@@ -1,92 +1,92 @@
 [
   {
-    "brand_name": "Skullcandy",
+    "brand_name": "ESR",
     "brand_size": "large",
-    "category": "Consumer Tech / Audio / Headphones & Gaming Audio",
-    "commission": "Not publicly listed",
-    "website": "https://www.skullcandy.com/",
-    "apply_url": "https://www.skullcandy.com/pages/affiliates-and-creators",
-    "source_url": "https://www.skullcandy.com/pages/affiliates-and-creators"
+    "category": "Consumer Tech / Mobile Accessories / Cases, Chargers & MagSafe Gear",
+    "commission": "Up to 15% commission plus performance bonuses",
+    "website": "https://www.esrtech.com/",
+    "apply_url": "https://www.esrtech.com/pages/affiliate",
+    "source_url": "https://www.esrtech.com/pages/affiliate"
   },
   {
-    "brand_name": "G FUEL",
+    "brand_name": "Raycon",
     "brand_size": "large",
-    "category": "Food & Drinks / Gaming / Energy Drinks",
+    "category": "Consumer Tech / Audio / Earbuds & Headphones",
     "commission": "Not publicly listed",
-    "website": "https://gfuel.com/",
-    "apply_url": "https://gfuel.com/pages/community",
-    "source_url": "https://gfuel.com/pages/community"
+    "website": "https://rayconglobal.com/",
+    "apply_url": "https://rayconglobal.com/pages/partnerships",
+    "source_url": "https://rayconglobal.com/pages/partnerships"
   },
   {
-    "brand_name": "Guitar Center",
+    "brand_name": "Ditto Music",
     "brand_size": "large",
-    "category": "Music / Creator Gear / Instruments, Recording & Pro Audio",
+    "category": "Music / Creator Tools / Music Distribution & Artist Services",
+    "commission": "Up to $10 per referred subscription signup",
+    "website": "https://dittomusic.com/",
+    "apply_url": "https://dittomusic.com/en/affiliates",
+    "source_url": "https://dittomusic.com/en/affiliates"
+  },
+  {
+    "brand_name": "Rokid",
+    "brand_size": "mid-size",
+    "category": "Consumer Tech / AR & AI / Smart Glasses",
+    "commission": "8%-12% tiered commission",
+    "website": "https://global.rokid.com/",
+    "apply_url": "https://global.rokid.com/en-jp/pages/creator-program",
+    "source_url": "https://global.rokid.com/en-jp/pages/creator-program"
+  },
+  {
+    "brand_name": "Zencastr",
+    "brand_size": "mid-size",
+    "category": "Software / Creator Tools / Podcast & Video Recording",
+    "commission": "20% recurring for up to 12 months",
+    "website": "https://zencastr.com/",
+    "apply_url": "https://affiliate.zencastr.com/",
+    "source_url": "https://affiliate.zencastr.com/"
+  },
+  {
+    "brand_name": "ACEMAGIC",
+    "brand_size": "mid-size",
+    "category": "Consumer Tech / PC Gear / Mini PCs & Laptops",
+    "commission": "2% base commission",
+    "website": "https://acemagic.com/",
+    "apply_url": "https://acemagic.com/pages/affiliate",
+    "source_url": "https://acemagic.com/pages/affiliate"
+  },
+  {
+    "brand_name": "MOFT",
+    "brand_size": "mid-size",
+    "category": "Consumer Tech / Mobile & Laptop Accessories / Stands, Cases & Productivity Gear",
     "commission": "Not publicly listed",
-    "website": "https://www.guitarcenter.com/",
-    "apply_url": "https://commerce.sovrn.com/merchants/464/guitar-center-affiliate-program",
-    "source_url": "https://commerce.sovrn.com/merchants/464/guitar-center-affiliate-program"
+    "website": "https://www.moft.us/",
+    "apply_url": "https://www.moft.us/pages/influencer-affiliate-program",
+    "source_url": "https://www.moft.us/pages/influencer-affiliate-program"
   },
   {
-    "brand_name": "World Wide Stereo",
-    "brand_size": "mid-size",
-    "category": "Consumer Tech / Audio & Video / Premium Electronics",
-    "commission": "3% on referred sales",
-    "website": "https://www.worldwidestereo.com/",
-    "apply_url": "https://www.worldwidestereo.com/pages/affiliate-program",
-    "source_url": "https://www.worldwidestereo.com/pages/affiliate-program"
-  },
-  {
-    "brand_name": "Mubert",
-    "brand_size": "mid-size",
-    "category": "Software / Creator Tools / AI Music & Audio",
-    "commission": "30% from every sale and recurring revenue",
-    "website": "https://mubert.com/",
-    "apply_url": "https://mubert.com/affiliate-program",
-    "source_url": "https://mubert.com/affiliate-program"
-  },
-  {
-    "brand_name": "OpenArt",
-    "brand_size": "mid-size",
-    "category": "Software / Creator Tools / AI Image & Video Creation",
+    "brand_name": "MonsGeek",
+    "brand_size": "emerging",
+    "category": "Gaming / PC Gear / Mechanical Keyboards & Accessories",
     "commission": "Not publicly listed",
-    "website": "https://openart.ai/",
-    "apply_url": "https://openart.ai/programs/affiliate",
-    "source_url": "https://openart.ai/programs/affiliate"
+    "website": "https://www.monsgeek.com/",
+    "apply_url": "https://www.monsgeek.com/become-an-affiliate/",
+    "source_url": "https://www.monsgeek.com/become-an-affiliate/"
   },
   {
-    "brand_name": "HBADA",
-    "brand_size": "mid-size",
-    "category": "Consumer Tech / Gaming & Office / Ergonomic Chairs",
-    "commission": "5% standard commission on approved sales",
-    "website": "https://hbada.com/",
-    "apply_url": "https://hbada.com/en-ca/pages/hbada-affiliate-program",
-    "source_url": "https://hbada.com/en-ca/pages/hbada-affiliate-program"
-  },
-  {
-    "brand_name": "3dkeycap",
+    "brand_name": "GravaStar",
     "brand_size": "emerging",
-    "category": "Gaming / PC Gear / Mechanical Keyboard Keycaps",
-    "commission": "Up to 15%",
-    "website": "https://3dkeycap.com/",
-    "apply_url": "https://3dkeycap.com/pages/affiliate-program",
-    "source_url": "https://3dkeycap.com/pages/affiliate-program"
-  },
-  {
-    "brand_name": "DojoClip",
-    "brand_size": "emerging",
-    "category": "Software / Creator Tools / AI Video, Music & Content Studio",
-    "commission": "30% recurring for up to 12 months per referred subscriber",
-    "website": "https://dojoclip.com/",
-    "apply_url": "https://dojoclip.com/en/affiliate",
-    "source_url": "https://dojoclip.com/en/affiliate"
-  },
-  {
-    "brand_name": "PrintMyPad",
-    "brand_size": "emerging",
-    "category": "Gaming / Creator Merch / Custom Desk Mats",
+    "category": "Gaming / Consumer Tech / Audio & Gaming Peripherals",
     "commission": "Not publicly listed",
-    "website": "https://printmypad.com/",
-    "apply_url": "https://printmypad.com/pages/collab",
-    "source_url": "https://printmypad.com/pages/collab"
+    "website": "https://www.gravastar.com/",
+    "apply_url": "https://www.gravastar.com/pages/affiliates",
+    "source_url": "https://www.gravastar.com/pages/affiliates"
+  },
+  {
+    "brand_name": "Taja AI",
+    "brand_size": "emerging",
+    "category": "Software / Creator Tools / Video Repurposing & YouTube Optimization",
+    "commission": "50% commission for every paying customer referred",
+    "website": "https://www.taja.ai/",
+    "apply_url": "https://taja-ai.getrewardful.com/signup",
+    "source_url": "https://taja-ai.getrewardful.com/signup"
   }
 ]
