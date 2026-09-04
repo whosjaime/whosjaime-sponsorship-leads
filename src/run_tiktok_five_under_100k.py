@@ -25,7 +25,8 @@ from tiktok_sponsor_scanner import TikTokSponsorScanner
 
 
 TARGET_SENDS = 5
-MAX_CREATOR_FOLLOWERS = 100_000
+MIN_CREATOR_FOLLOWERS = 1_000
+MAX_CREATOR_FOLLOWERS = 500_000
 MANUAL_PATH = Path("data/manual_tiktok_under_100k_candidates.json")
 TIKTOK_USER_RE = re.compile(r"tiktok\.com/@([^/?#]+)", re.I)
 
@@ -92,23 +93,24 @@ def run() -> None:
     pool.extend(manual)
     print(f"TIKTOK_FIVE_MANUAL: loaded={len(manual)}")
 
-    # Only fall back to researched/live discovery if the direct verified seed has fewer than five.
-    if len(manual) < TARGET_SENDS:
-        try:
-            researched = ResearchedSponsorSource().load()
-        except Exception as exc:
-            print(f"WARNING: researched TikTok source failed: {exc}")
-            researched = []
-        pool.extend(lead for lead in researched if _is_tiktok(lead))
+    # Always include researched TikTok inventory. The old flow skipped this lane when
+    # five manual seeds existed, even if those seeds were duplicates or otherwise unusable.
+    try:
+        researched = ResearchedSponsorSource().load()
+    except Exception as exc:
+        print(f"WARNING: researched TikTok source failed: {exc}")
+        researched = []
+    researched_tiktok = [lead for lead in researched if _is_tiktok(lead)]
+    pool.extend(researched_tiktok)
+    print(f"TIKTOK_FIVE_RESEARCHED: loaded={len(researched_tiktok)}")
 
-        try:
-            posts = scanner.discover(lookback_days=min(30, config.max_sponsor_age_days), max_posts=120)
-            pool.extend(scanner.to_lead(post) for post in posts)
-            print(f"TIKTOK_FIVE_DISCOVERY: fresh_posts={len(posts)}")
-        except Exception as exc:
-            print(f"WARNING: fresh TikTok discovery failed: {exc}")
-    else:
-        print("TIKTOK_FIVE_DISCOVERY: skipped; five direct verified TikTok candidates are seeded")
+    # Live discovery is supplemental. Search-rate limits must not block already-researched leads.
+    try:
+        posts = scanner.discover(lookback_days=min(30, config.max_sponsor_age_days), max_posts=80)
+        pool.extend(scanner.to_lead(post) for post in posts)
+        print(f"TIKTOK_FIVE_DISCOVERY: fresh_posts={len(posts)}")
+    except Exception as exc:
+        print(f"WARNING: fresh TikTok discovery failed: {exc}")
 
     candidates: list[SponsorLead] = []
     seen: set[str] = set()
@@ -116,7 +118,7 @@ def run() -> None:
         if not _is_tiktok(lead):
             continue
         followers = _hydrate_followers(lead, scanner)
-        if followers <= 0 or followers > MAX_CREATOR_FOLLOWERS:
+        if followers < MIN_CREATOR_FOLLOWERS or followers > MAX_CREATOR_FOLLOWERS:
             print(f"TIKTOK_FIVE_SKIP_FOLLOWERS: {lead.brand_name} / {followers or 'unknown'}")
             continue
 
@@ -129,9 +131,6 @@ def run() -> None:
         if is_duplicate(lead, duplicate_keys):
             print(f"TIKTOK_FIVE_SKIP_DUPLICATE: {lead.brand_name}")
             continue
-        # Direct manual seeds may pair an older paid-post proof point with a current
-        # official creator program/contact. Keep the normal recency gate for all
-        # automatically discovered leads, but do not throw away that verified signal.
         if not _manual_verified(lead) and not _is_recent_sponsorship(lead, config.max_sponsor_age_days):
             continue
         if not is_qualified_outreach_contact(lead):
@@ -184,11 +183,11 @@ def run() -> None:
 
     print(
         f"TIKTOK_FIVE_COMPLETE: delivered={delivered}; qualified={len(candidates)}; "
-        f"rule=1-{MAX_CREATOR_FOLLOWERS} verified followers"
+        f"rule={MIN_CREATOR_FOLLOWERS}-{MAX_CREATOR_FOLLOWERS} verified followers"
     )
     if delivered < TARGET_SENDS:
         raise RuntimeError(
-            f"Only {delivered}/5 TikTok leads met the verified <=100K follower rule."
+            f"Only {delivered}/5 TikTok leads met the verified 1K-500K follower rule."
         )
 
 
