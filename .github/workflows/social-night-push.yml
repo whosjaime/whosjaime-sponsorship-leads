@@ -1,0 +1,92 @@
+name: Social Night Sponsor Push
+
+on:
+  issues:
+    types: [opened]
+
+permissions:
+  contents: write
+  issues: read
+
+concurrency:
+  group: social-night-sponsor-push
+  cancel-in-progress: false
+
+jobs:
+  push:
+    if: startsWith(github.event.issue.title, 'RUN SOCIAL NIGHT PUSH')
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -r requirements.txt
+
+      - name: Discover TikTok first, Instagram backup, YouTube last resort
+        env:
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+          CREATORDB_API_KEY: ${{ secrets.CREATORDB_API_KEY }}
+          SPONSOR_MIN_LEAD_SCORE: ${{ vars.SPONSOR_MIN_LEAD_SCORE || '70' }}
+          SPONSOR_MAX_AGE_DAYS: ${{ vars.SPONSOR_MAX_AGE_DAYS || '60' }}
+          SPONSOR_SEARCH_REGION: ${{ vars.SPONSOR_SEARCH_REGION || 'US' }}
+          SPONSOR_SEARCH_LANGUAGE: ${{ vars.SPONSOR_SEARCH_LANGUAGE || 'en' }}
+          ENABLE_TIKTOK_SPONSOR_SCAN: 'true'
+          SPONSOR_SOCIAL_MIN_READY: '10'
+          SPONSOR_SOCIAL_TARGET_READY: '20'
+          SPONSOR_ALLOW_YOUTUBE_FALLBACK: 'true'
+        shell: bash
+        run: |
+          set -euo pipefail
+          timeout --signal=TERM --kill-after=30s 20m python src/run_social_first_topup.py || {
+            status=$?
+            echo "Social-first discovery returned $status; using any verified queue inventory already saved."
+          }
+
+      - name: Send tonight's sponsor catch-up to Monday and Discord
+        env:
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+          SPONSOR_MONDAY_TOKEN: ${{ secrets.SPONSOR_MONDAY_TOKEN }}
+          SPONSOR_MONDAY_API_KEY: ${{ secrets.SPONSOR_MONDAY_API_KEY }}
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          SPONSOR_MONDAY_BOARD_ID: ${{ vars.SPONSOR_MONDAY_BOARD_ID || '18424367188' }}
+          SPONSOR_MONDAY_GROUP_ID: ${{ vars.SPONSOR_MONDAY_GROUP_ID || 'topics' }}
+          SPONSOR_MIN_LEAD_SCORE: ${{ vars.SPONSOR_MIN_LEAD_SCORE || '70' }}
+          SPONSOR_MAX_AGE_DAYS: ${{ vars.SPONSOR_MAX_AGE_DAYS || '60' }}
+          SPONSOR_SEARCH_REGION: ${{ vars.SPONSOR_SEARCH_REGION || 'US' }}
+          SPONSOR_SEARCH_LANGUAGE: ${{ vars.SPONSOR_SEARCH_LANGUAGE || 'en' }}
+          SPONSOR_DAILY_TIMEZONE: 'America/Toronto'
+          SPONSOR_DAILY_TARGET: '24'
+          SPONSOR_TIKTOK_DAILY_TARGET: '24'
+          SPONSOR_INSTAGRAM_DAILY_TARGET: '24'
+          SPONSOR_YOUTUBE_DAILY_TARGET: '24'
+        shell: bash
+        run: |
+          set +e
+          for i in $(seq 1 20); do
+            echo "Night push delivery attempt $i/20"
+            python src/run_sponsor_daily_dispatch.py
+            status=$?
+            if [ "$status" -ne 0 ]; then
+              echo "Attempt $i returned $status; retrying so pending Monday/Discord checkpoint can resume."
+            fi
+          done
+          exit 0
+
+      - name: Persist tonight's queue and delivery ledger
+        if: always()
+        shell: bash
+        run: |
+          git config user.name "sponsor-queue-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/sponsor_queue.json data/sent_sponsor_keys.json data/sponsor_delivery_pending.json
+          if git diff --cached --quiet; then
+            echo "No sponsor state changes to persist."
+            exit 0
+          fi
+          git commit -m "Persist social-first night sponsor push [skip ci]"
+          git pull --rebase origin main
+          git push origin HEAD:main
