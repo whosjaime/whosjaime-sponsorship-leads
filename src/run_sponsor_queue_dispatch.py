@@ -42,7 +42,7 @@ APPROVED_SPONSOR_CATEGORIES = {
     "gaming", "consumer tech", "physical consumer tech", "food & beverage", "food/drink",
     "fashion", "home", "home & garden", "health & wellness", "wellness", "travel",
     "pet", "pets", "fragrance", "beauty", "music", "entertainment", "lifestyle",
-    "sports", "fitness",
+    "sports", "fitness", "financial services", "finance", "banking", "fintech",
 }
 
 APPROVED_NONTECH_KEYWORDS = {
@@ -51,6 +51,7 @@ APPROVED_NONTECH_KEYWORDS = {
     "wellness", "fitness", "apparel", "clothing", "fashion", "shoes", "footwear",
     "travel", "hotel", "resort", "luggage", "pet", "dog", "cat", "fragrance",
     "perfume", "cologne", "beauty", "skincare", "makeup", "sports", "outdoor",
+    "bank", "banking", "financial", "finance", "credit card", "payments",
 }
 
 
