@@ -15,7 +15,7 @@ PLATFORM_TARGETS = {
     "tiktok": int(os.getenv("SPONSOR_TIKTOK_DAILY_TARGET", "8")),
     "instagram": int(os.getenv("SPONSOR_INSTAGRAM_DAILY_TARGET", "8")),
 }
-# TikTok is the first delivery lane when platforms are equally under target.
+# TikTok is the first delivery lane and is filled before the other platform lanes.
 PLATFORM_ORDER = ("tiktok", "youtube", "instagram")
 DAILY_TIMEZONE = os.getenv("SPONSOR_DAILY_TIMEZONE", "America/Toronto")
 
@@ -66,14 +66,19 @@ def total_delivered_today(sent_keys: set[str], delivered_on: date | None = None)
 
 
 def choose_next_platform(sent_keys: set[str], available: set[str]) -> str:
-    """Pick the platform furthest below its daily target; TikTok wins ties."""
+    """Fill TikTok first, then choose the most underfilled remaining platform."""
     counts = delivery_counts(sent_keys)
+
+    if "tiktok" in available and counts.get("tiktok", 0) < PLATFORM_TARGETS.get("tiktok", 0):
+        return "tiktok"
+
+    remaining_order = ("youtube", "instagram")
     ranked = sorted(
-        PLATFORM_ORDER,
+        remaining_order,
         key=lambda platform: (
             counts.get(platform, 0) / max(1, PLATFORM_TARGETS.get(platform, 0)),
             counts.get(platform, 0),
-            PLATFORM_ORDER.index(platform),
+            remaining_order.index(platform),
         ),
     )
     for platform in ranked:
@@ -86,12 +91,7 @@ def choose_next_platform(sent_keys: set[str], available: set[str]) -> str:
 
 
 def balance_platforms(leads: list[SponsorLead], limit: int = DAILY_TARGET) -> list[SponsorLead]:
-    """Build an 8/8/8 daily-ready queue, then use fallback inventory to still reach 24.
-
-    The first pass reserves up to each platform's target. The second pass fills any
-    shortage from the remaining qualified platforms, so lack of one source never stops
-    the total daily SLA from reaching 24 when enough verified leads exist overall.
-    """
+    """Build a TikTok-first daily-ready queue, then fill YouTube and Instagram."""
     by_platform: dict[str, list[SponsorLead]] = {platform: [] for platform in PLATFORM_ORDER}
     other: list[SponsorLead] = []
     seen: set[str] = set()
@@ -110,23 +110,18 @@ def balance_platforms(leads: list[SponsorLead], limit: int = DAILY_TARGET) -> li
     selected: list[SponsorLead] = []
     consumed: dict[str, int] = {platform: 0 for platform in PLATFORM_ORDER}
 
-    # Interleave the three platforms, starting with TikTok.
-    while len(selected) < limit:
-        made_progress = False
-        for platform in PLATFORM_ORDER:
-            target = PLATFORM_TARGETS.get(platform, 0)
-            index = consumed[platform]
-            if index >= target or index >= len(by_platform[platform]):
-                continue
-            selected.append(by_platform[platform][index])
-            consumed[platform] += 1
-            made_progress = True
-            if len(selected) >= limit:
-                break
-        if not made_progress:
-            break
+    # Fill each platform lane in priority order; TikTok gets its daily slots first.
+    for platform in PLATFORM_ORDER:
+        target = PLATFORM_TARGETS.get(platform, 0)
+        take = min(target, len(by_platform[platform]), max(0, limit - len(selected)))
+        if take <= 0:
+            continue
+        selected.extend(by_platform[platform][:take])
+        consumed[platform] = take
+        if len(selected) >= limit:
+            return selected[:limit]
 
-    # Fill shortages from any remaining verified inventory so the daily total remains 24.
+    # Fill shortages from any remaining verified inventory so the daily total can still reach 24.
     remaining: list[SponsorLead] = []
     for platform in PLATFORM_ORDER:
         remaining.extend(by_platform[platform][consumed[platform]:])
