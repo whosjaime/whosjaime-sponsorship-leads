@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import os
+from collections import Counter
 
 from brand_enrichment import BrandEnricher
 from instagram_sponsor_scanner import InstagramSponsorScanner
@@ -15,6 +16,7 @@ from run_sponsor_discovery_batch import (
     run as run_youtube_discovery,
 )
 from sponsor_config import load_sponsor_config
+from sponsor_dedupe import normalize_brand_name
 from sponsor_models import SponsorLead
 from sponsor_queue import MAX_QUEUE_SIZE, is_duplicate, load_duplicate_keys, load_queue, save_queue
 from tiktok_sponsor_scanner import TikTokSponsorScanner
@@ -72,8 +74,54 @@ def _classify_social(lead: SponsorLead) -> None:
     lead.creator_tags = list(dict.fromkeys(tags))
 
 
-def _queue_sort_key(lead: SponsorLead) -> tuple[int, int, int, str]:
+def _creator_size_priority(lead: SponsorLead) -> int:
+    """Smaller verified creator audiences are stronger outreach signals."""
+    followers = int(getattr(lead, 'creator_subscribers', 0) or 0)
+    if followers <= 0:
+        return 0
+    if followers <= 10_000:
+        return 140
+    if followers <= 25_000:
+        return 125
+    if followers <= 50_000:
+        return 110
+    if followers <= 100_000:
+        return 95
+    if followers <= 250_000:
+        return 70
+    if followers <= 500_000:
+        return 45
+    if followers <= 1_000_000:
+        return 20
+    return 0
+
+
+def _repeat_sponsor_priority(lead: SponsorLead) -> int:
+    count = 1
+    for signal in (lead.signals or []):
+        prefix = 'sponsor appearance count:'
+        if str(signal).startswith(prefix):
+            try:
+                count = max(count, int(str(signal)[len(prefix):]))
+            except ValueError:
+                pass
+    if count >= 6:
+        return 140
+    if count >= 4:
+        return 110
+    if count >= 3:
+        return 85
+    if count == 2:
+        return 55
+    return 0
+
+
+def _queue_sort_key(lead: SponsorLead) -> tuple[int, int, int, int, int, int, str]:
+    platform = (lead.source_platform or '').strip().lower()
     return (
+        1 if platform == 'tiktok' else 0,
+        _repeat_sponsor_priority(lead),
+        _creator_size_priority(lead),
         1 if _is_food_drink_lead(lead) else 0,
         _priority_score(lead),
         lead.lead_score,
@@ -95,9 +143,18 @@ def _qualify_social_candidates(
         print(f'WARNING: {platform} sponsor discovery failed: {exc}')
         return [], 0
 
+    brand_counts = Counter(
+        normalize_brand_name(getattr(post, 'brand_name', '') or '')
+        for post in posts
+        if normalize_brand_name(getattr(post, 'brand_name', '') or '')
+    )
+
     candidates: list[SponsorLead] = []
     for post in posts:
         lead = scanner.to_lead(post)
+        repeat_count = brand_counts.get(normalize_brand_name(lead.brand_name), 1)
+        if repeat_count > 1:
+            lead.signals = list(lead.signals or []) + [f'sponsor appearance count:{repeat_count}']
         _classify_social(lead)
         if not lead.brand_domain:
             print(f'{platform} official brand domain unresolved; skipped: {lead.brand_name}')
@@ -125,10 +182,13 @@ def _qualify_social_candidates(
             continue
         queue_ids.add(identity)
         candidates.append(lead)
+        followers = int(lead.creator_subscribers or 0)
+        follower_label = f'{followers:,} followers' if followers > 0 else 'followers unknown'
+        repeat_label = f' / {repeat_count} sponsor posts' if repeat_count > 1 else ''
         food_label = ' / FOOD-DRINK PRIORITY' if _is_food_drink_lead(lead) else ''
         print(
             f'Queued candidate via {platform}: {lead.brand_name} / {lead.creator_name} / '
-            f'score {lead.lead_score}{food_label}'
+            f'{follower_label}{repeat_label} / score {lead.lead_score}{food_label}'
         )
     return candidates, len(posts)
 
@@ -168,9 +228,6 @@ def run() -> None:
     else:
         print('TikTok sponsor discovery disabled.')
 
-    # Instagram is always attempted in live discovery. It emits only dated posts whose
-    # public embed contains an explicit paid/sponsored disclosure, so no weak snippets
-    # are promoted into the queue.
     instagram_scanner = InstagramSponsorScanner(config.search_language, config.search_region)
     instagram_candidates, instagram_posts = _qualify_social_candidates(
         instagram_scanner, 'Instagram', config, enricher, duplicate_keys, queue_ids,
