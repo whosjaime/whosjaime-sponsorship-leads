@@ -15,7 +15,8 @@ PLATFORM_TARGETS = {
     "tiktok": int(os.getenv("SPONSOR_TIKTOK_DAILY_TARGET", "8")),
     "instagram": int(os.getenv("SPONSOR_INSTAGRAM_DAILY_TARGET", "8")),
 }
-PLATFORM_ORDER = ("youtube", "tiktok", "instagram")
+# TikTok is the first delivery lane when platforms are equally under target.
+PLATFORM_ORDER = ("tiktok", "youtube", "instagram")
 DAILY_TIMEZONE = os.getenv("SPONSOR_DAILY_TIMEZONE", "America/Toronto")
 
 
@@ -65,7 +66,7 @@ def total_delivered_today(sent_keys: set[str], delivered_on: date | None = None)
 
 
 def choose_next_platform(sent_keys: set[str], available: set[str]) -> str:
-    """Pick the platform furthest below its daily target; fall back to any available."""
+    """Pick the platform furthest below its daily target; TikTok wins ties."""
     counts = delivery_counts(sent_keys)
     ranked = sorted(
         PLATFORM_ORDER,
@@ -109,7 +110,7 @@ def balance_platforms(leads: list[SponsorLead], limit: int = DAILY_TARGET) -> li
     selected: list[SponsorLead] = []
     consumed: dict[str, int] = {platform: 0 for platform in PLATFORM_ORDER}
 
-    # Interleave the three platforms instead of sending eight of one source in a block.
+    # Interleave the three platforms, starting with TikTok.
     while len(selected) < limit:
         made_progress = False
         for platform in PLATFORM_ORDER:
