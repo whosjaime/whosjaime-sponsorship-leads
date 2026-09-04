@@ -1,0 +1,49 @@
+name: Send Five TikTok Discord Leads
+
+on:
+  issues:
+    types: [opened]
+
+permissions:
+  contents: write
+  issues: read
+
+concurrency:
+  group: send-five-tiktok-discord
+  cancel-in-progress: false
+
+jobs:
+  send:
+    if: startsWith(github.event.issue.title, 'SEND 5 TIKTOK DISCORD')
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -r requirements.txt
+      - name: Send five TikTok leads under 100K followers to Discord
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          SPONSOR_MIN_LEAD_SCORE: ${{ vars.SPONSOR_MIN_LEAD_SCORE || '70' }}
+          SPONSOR_MAX_AGE_DAYS: ${{ vars.SPONSOR_MAX_AGE_DAYS || '60' }}
+          SPONSOR_SEARCH_REGION: ${{ vars.SPONSOR_SEARCH_REGION || 'US' }}
+          SPONSOR_SEARCH_LANGUAGE: ${{ vars.SPONSOR_SEARCH_LANGUAGE || 'en' }}
+        run: python src/send_five_tiktok_discord.py
+      - name: Persist Discord TikTok dedupe ledger
+        if: always()
+        shell: bash
+        run: |
+          git config user.name "sponsor-queue-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/tiktok_discord_sent_keys.json
+          if git diff --cached --quiet; then
+            echo "No Discord TikTok ledger changes."
+            exit 0
+          fi
+          git commit -m "Persist TikTok Discord sends [skip ci]"
+          git pull --rebase origin main
+          git push origin HEAD:main
