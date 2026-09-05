@@ -122,12 +122,15 @@ def run() -> None:
         manual_verified = _manual_verified(lead)
         verified_category = (lead.sponsor_category or "").strip()
         verified_subcategory = (lead.sponsor_subcategory or "").strip()
+        verified_lead_score = int(lead.lead_score or 0)
         try:
             lead = _enrich_lead(lead, enricher)
         except Exception as exc:
             print(f"TIKTOK_FIVE_SKIP_ENRICH: {lead.brand_name} / {exc}")
             continue
 
+        if manual_verified:
+            lead.lead_score = max(int(lead.lead_score or 0), verified_lead_score)
         if manual_verified and verified_category and verified_category != "Other":
             if lead.sponsor_category != verified_category:
                 print(
