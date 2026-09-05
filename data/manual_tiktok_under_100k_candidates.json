@@ -108,5 +108,32 @@
     "lead_score": 94,
     "lead_temperature": "Hot",
     "signals": ["verified public TikTok creator brand partnership evidence", "manual verified under-100k creator", "verified 293.3K TikTok followers", "current official creator affiliate program", "named verified marketing decision-maker"]
+  },
+  {
+    "brand_name": "Temu",
+    "brand_domain": "temu.com",
+    "source_platform": "TikTok",
+    "creator_name": "sonicxmaxfinds",
+    "creator_url": "https://www.tiktok.com/@sonicxmaxfinds",
+    "creator_channel_id": "sonicxmaxfinds",
+    "creator_subscribers": 285900,
+    "creator_genre": "Fashion / Shopping / Lifestyle",
+    "creator_tags": ["tiktok", "fashion", "shopping", "lifestyle", "micro creator"],
+    "video_id": "temu-sonicxmaxfinds-2026-06-19",
+    "video_url": "https://collabfeed.io/creators/sonicxmaxfinds",
+    "video_title": "sonicxmaxfinds x Temu TikTok paid partnership",
+    "sponsored_date": "2026-06-19",
+    "evidence": "CollabFeed tracks nine paid TikTok partnerships between @sonicxmaxfinds and Temu and reports the creator at 285.9K TikTok followers, including a June 19, 2026 paid partnership. Temu currently operates an official Affiliate & Influencer Program that explicitly offers creators free samples, flat fees per video and commissions, and its official support center publishes marketing@temu.com for sponsorship inquiries.",
+    "paid_product_placement": true,
+    "sponsor_category": "Fashion",
+    "sponsor_subcategory": "Online Shopping / Marketplace",
+    "contact_title": "Marketing / Sponsorships",
+    "contact_email": "marketing@temu.com",
+    "email_type": "Marketing",
+    "contact_source": "Official Temu Affiliate & Influencer Program and sponsorship support",
+    "contact_source_url": "https://www.temu.com/nz/affiliate_influencer_program.html",
+    "lead_score": 97,
+    "lead_temperature": "Hot",
+    "signals": ["verified public TikTok paid partnership evidence", "manual verified under-100k creator", "verified 285.9K TikTok followers", "nine tracked paid TikTok partnerships", "current official influencer program", "official marketing sponsorship inbox"]
   }
 ]
