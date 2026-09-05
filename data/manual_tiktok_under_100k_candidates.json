@@ -53,5 +53,32 @@
     "lead_score": 92,
     "lead_temperature": "Hot",
     "signals": ["verified public TikTok paid partnership evidence", "manual verified under-100k creator", "verified 218.7K TikTok followers", "named current marketing decision-maker"]
+  },
+  {
+    "brand_name": "Nuuly",
+    "brand_domain": "nuuly.com",
+    "source_platform": "TikTok",
+    "creator_name": "Kenzie Mac (@kenziritotheburrito)",
+    "creator_url": "https://www.tiktok.com/@kenziritotheburrito",
+    "creator_channel_id": "kenziritotheburrito",
+    "creator_subscribers": 196300,
+    "creator_genre": "Fashion / Lifestyle / Thrifting",
+    "creator_tags": ["tiktok", "fashion", "lifestyle", "clothing rental", "micro creator"],
+    "video_id": "nuuly-kenzie-mac-2026",
+    "video_url": "https://motionapp.com/creator/kenzie-mac/",
+    "video_title": "Kenzie Mac creator profile showing Nuuly brand partnership",
+    "sponsored_date": "",
+    "evidence": "Motion's current 2026 creator profile lists Kenzie Mac (@kenziritotheburrito) at 196.3K TikTok followers and lists Nuuly among the brands she has worked with. Nuuly's official current Terms + Conditions operate The Cluub for Instagram and TikTok creators, require at least 2,000 followers, pay up to $1,600 in rewards per calendar year, and publish influencers@nuuly.com for ambassador program contact.",
+    "paid_product_placement": true,
+    "sponsor_category": "Fashion",
+    "sponsor_subcategory": "Clothing Rental / Lifestyle",
+    "contact_title": "Influencer / Creator Partnerships",
+    "contact_email": "influencers@nuuly.com",
+    "email_type": "Influencer Partnerships",
+    "contact_source": "Official Nuuly Cluub Terms + Conditions",
+    "contact_source_url": "https://www.nuuly.com/legal/terms-conditions",
+    "lead_score": 96,
+    "lead_temperature": "Hot",
+    "signals": ["verified public TikTok creator brand partnership evidence", "manual verified under-100k creator", "current official TikTok creator rewards program", "verified 196.3K TikTok followers", "official influencer partnership inbox"]
   }
 ]
