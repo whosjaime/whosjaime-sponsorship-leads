@@ -25,5 +25,33 @@
     "lead_score": 95,
     "lead_temperature": "Hot",
     "signals": ["verified public TikTok sponsorship evidence", "manual verified under-100k creator", "current official TikTok ambassador program", "verified 148.7K TikTok followers"]
+  },
+  {
+    "brand_name": "Stop & Shop",
+    "brand_domain": "stopandshop.com",
+    "source_platform": "TikTok",
+    "creator_name": "Alex Foxx (@alex_foxx__)",
+    "creator_url": "https://www.tiktok.com/@alex_foxx__",
+    "creator_channel_id": "alex_foxx__",
+    "creator_subscribers": 218700,
+    "creator_genre": "Food & Beverage / Grocery / Lifestyle",
+    "creator_tags": ["tiktok", "food", "grocery", "lifestyle", "micro creator"],
+    "video_id": "stopandshop-alex-foxx-2026-05-13",
+    "video_url": "https://collabfeed.io/creators/alex-foxx",
+    "video_title": "Alex Foxx x Stop & Shop TikTok paid partnership",
+    "sponsored_date": "2026-05-13",
+    "evidence": "CollabFeed tracks a paid Stop & Shop TikTok partnership from @alex_foxx__ on May 13, 2026 and reports Alex Foxx at 218.7K TikTok followers. Stop & Shop has a public marketing decision-maker contact: Lisa Martinelli, Vice President, Marketing & Brand Experience, at lisa.martinelli@stopandshop.com, maintained by Elliott Advocacy.",
+    "paid_product_placement": true,
+    "sponsor_category": "Food & Drink",
+    "sponsor_subcategory": "Grocery / Retail",
+    "contact_name": "Lisa Martinelli",
+    "contact_title": "Vice President, Marketing & Brand Experience",
+    "contact_email": "lisa.martinelli@stopandshop.com",
+    "email_type": "Marketing Partnerships",
+    "contact_source": "Elliott Advocacy verified company contacts",
+    "contact_source_url": "https://www.elliott.org/company-contacts/stop-shop/",
+    "lead_score": 92,
+    "lead_temperature": "Hot",
+    "signals": ["verified public TikTok paid partnership evidence", "manual verified under-100k creator", "verified 218.7K TikTok followers", "named current marketing decision-maker"]
   }
 ]
