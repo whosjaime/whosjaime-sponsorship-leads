@@ -1,4 +1,4 @@
-name: TikTok Five 1K-500K
+name: TikTok Five 10K-500K
 
 on:
   issues:
@@ -9,12 +9,12 @@ permissions:
   issues: read
 
 concurrency:
-  group: tiktok-five-1k-500k
+  group: tiktok-five-10k-500k
   cancel-in-progress: false
 
 jobs:
   send-five:
-    if: startsWith(github.event.issue.title, 'SEND TIKTOK 1K-500K NOW')
+    if: startsWith(github.event.issue.title, 'STRICT TIKTOK 10K-500K NOW')
     runs-on: ubuntu-latest
     timeout-minutes: 30
     steps:
@@ -25,7 +25,7 @@ jobs:
         with:
           python-version: '3.11'
       - run: pip install -r requirements.txt
-      - name: Send five verified TikTok sponsors from 1K to 500K followers
+      - name: Send five verified TikTok sponsors from 10K to 500K followers
         env:
           YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
           SPONSOR_MONDAY_TOKEN: ${{ secrets.SPONSOR_MONDAY_TOKEN }}
@@ -49,6 +49,6 @@ jobs:
             echo "No sponsor ledger changes."
             exit 0
           fi
-          git commit -m "Persist TikTok 1K-500K sponsor sends [skip ci]"
+          git commit -m "Persist TikTok 10K-500K sponsor sends [skip ci]"
           git pull --rebase origin main
           git push origin HEAD:main
