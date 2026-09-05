@@ -25,7 +25,7 @@ from tiktok_sponsor_scanner import TikTokSponsorScanner
 
 
 TARGET_SENDS = 5
-MIN_CREATOR_FOLLOWERS = 1_000
+MIN_CREATOR_FOLLOWERS = 10_000
 MAX_CREATOR_FOLLOWERS = 500_000
 MANUAL_PATH = Path("data/manual_tiktok_under_100k_candidates.json")
 TIKTOK_USER_RE = re.compile(r"tiktok\.com/@([^/?#]+)", re.I)
@@ -93,8 +93,6 @@ def run() -> None:
     pool.extend(manual)
     print(f"TIKTOK_FIVE_MANUAL: loaded={len(manual)}")
 
-    # Always include researched TikTok inventory. The old flow skipped this lane when
-    # five manual seeds existed, even if those seeds were duplicates or otherwise unusable.
     try:
         researched = ResearchedSponsorSource().load()
     except Exception as exc:
@@ -104,7 +102,6 @@ def run() -> None:
     pool.extend(researched_tiktok)
     print(f"TIKTOK_FIVE_RESEARCHED: loaded={len(researched_tiktok)}")
 
-    # Live discovery is supplemental. Search-rate limits must not block already-researched leads.
     try:
         posts = scanner.discover(lookback_days=min(30, config.max_sponsor_age_days), max_posts=80)
         pool.extend(scanner.to_lead(post) for post in posts)
@@ -131,8 +128,6 @@ def run() -> None:
             print(f"TIKTOK_FIVE_SKIP_ENRICH: {lead.brand_name} / {exc}")
             continue
 
-        # Hand-verified TikTok seeds already carry a source-backed physical brand category.
-        # Do not let broad website keyword enrichment overwrite Beauty/Fashion/Food with SaaS.
         if manual_verified and verified_category and verified_category != "Other":
             if lead.sponsor_category != verified_category:
                 print(
@@ -164,7 +159,6 @@ def run() -> None:
         seen.add(identity)
         candidates.append(lead)
 
-    # Smaller creators first, then hotter/recent leads.
     candidates.sort(
         key=lambda lead: (
             int(lead.creator_subscribers or 0),
@@ -200,10 +194,9 @@ def run() -> None:
         f"TIKTOK_FIVE_COMPLETE: delivered={delivered}; qualified={len(candidates)}; "
         f"rule={MIN_CREATOR_FOLLOWERS}-{MAX_CREATOR_FOLLOWERS} verified followers"
     )
-    # Immediate/hourly mode only needs at least one real send. Keep trying up to five.
     if delivered == 0:
         raise RuntimeError(
-            "No TikTok leads met the verified 1K-500K follower rule and completed Monday + Discord delivery."
+            "No TikTok leads met the verified 10K-500K follower rule and completed Monday + Discord delivery."
         )
 
 
