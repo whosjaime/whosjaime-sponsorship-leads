@@ -80,5 +80,33 @@
     "lead_score": 96,
     "lead_temperature": "Hot",
     "signals": ["verified public TikTok creator brand partnership evidence", "manual verified under-100k creator", "current official TikTok creator rewards program", "verified 196.3K TikTok followers", "official influencer partnership inbox"]
+  },
+  {
+    "brand_name": "CALPAK",
+    "brand_domain": "calpaktravel.com",
+    "source_platform": "TikTok",
+    "creator_name": "Hanna Noelle (@hanna_noellee)",
+    "creator_url": "https://www.tiktok.com/@hanna_noellee",
+    "creator_channel_id": "hanna_noellee",
+    "creator_subscribers": 293300,
+    "creator_genre": "Lifestyle / Fashion / Travel",
+    "creator_tags": ["tiktok", "lifestyle", "fashion", "travel", "micro creator"],
+    "video_id": "calpak-hanna-noelle-2026",
+    "video_url": "https://motionapp.com/creator/hanna-noelle/",
+    "video_title": "Hanna Noelle creator profile showing CALPAK brand partnership",
+    "sponsored_date": "",
+    "evidence": "Motion's current 2026 creator profile lists Hanna Noelle (@hanna_noellee) at 293.3K TikTok followers and lists CALPAK among the brands she has worked with. CALPAK currently operates an official affiliate creator program and Elliott Advocacy maintains Sounun Tek, Senior Director of Marketing, at Sounun@calpaktravel.com as a verified marketing contact.",
+    "paid_product_placement": true,
+    "sponsor_category": "Travel",
+    "sponsor_subcategory": "Luggage / Travel Accessories",
+    "contact_name": "Sounun Tek",
+    "contact_title": "Senior Director of Marketing",
+    "contact_email": "Sounun@calpaktravel.com",
+    "email_type": "Marketing Partnerships",
+    "contact_source": "Elliott Advocacy verified company contacts",
+    "contact_source_url": "https://www.elliott.org/company-contacts/calpak-customer-service-contacts/",
+    "lead_score": 94,
+    "lead_temperature": "Hot",
+    "signals": ["verified public TikTok creator brand partnership evidence", "manual verified under-100k creator", "verified 293.3K TikTok followers", "current official creator affiliate program", "named verified marketing decision-maker"]
   }
 ]
