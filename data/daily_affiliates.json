@@ -1,92 +1,92 @@
 [
   {
-    "brand_name": "Logitech",
+    "brand_name": "Fotor",
     "brand_size": "large",
-    "category": "Gaming / Consumer Tech / PC Peripherals, Streaming & Audio",
-    "commission": "4%-10% standard commission depending on brand",
-    "website": "https://www.logitech.com/",
-    "apply_url": "https://app.impact.com/campaign-campaign-info-v2/Logitech.brand",
-    "source_url": "https://logitech-stage-65a.adobecqms.net/en-ca/promo/affiliate-program.html"
+    "category": "Software / Creator Tools / Photo Editing & AI Design",
+    "commission": "25%-35% recurring for 12 months",
+    "website": "https://www.fotor.com/",
+    "apply_url": "https://www.fotor.com/affiliates.html",
+    "source_url": "https://www.fotor.com/affiliates.html"
   },
   {
-    "brand_name": "Belkin",
+    "brand_name": "Buffer",
     "brand_size": "large",
-    "category": "Consumer Tech / Mobile & PC Accessories / Chargers, Docks & Connectivity",
-    "commission": "Up to 8% on every sale",
-    "website": "https://www.belkin.com/",
-    "apply_url": "https://app.impact.com/campaign-promo-signup/Belkin-US.brand",
-    "source_url": "https://www.belkin.com/clp-affiliates.html"
+    "category": "Software / Creator Tools / Social Media Management",
+    "commission": "25% recurring for 12 months",
+    "website": "https://buffer.com/",
+    "apply_url": "https://buffer.com/partners",
+    "source_url": "https://buffer.com/partners"
   },
   {
-    "brand_name": "Samsung Canada",
+    "brand_name": "Keurig Canada",
     "brand_size": "large",
-    "category": "Consumer Tech / Electronics / Phones, TVs, Monitors & Smart Devices",
-    "commission": "1% standard commission with potential for increased commission",
-    "website": "https://www.samsung.com/ca/",
-    "apply_url": "https://ui.awin.com/publisher-signup/us/awin?advertiser=18530",
-    "source_url": "https://ui.awin.com/merchant-profile/18530"
+    "category": "Food & Drinks / Coffee / Brewers & Beverages",
+    "commission": "10% per qualifying sale; $1 per qualifying contest or sweepstakes lead",
+    "website": "https://www.keurig.ca/",
+    "apply_url": "https://www.keurig.ca/affiliates",
+    "source_url": "https://www.keurig.ca/affiliates"
   },
   {
-    "brand_name": "JLab",
+    "brand_name": "PowerA",
     "brand_size": "mid-size",
-    "category": "Consumer Tech / Gaming & Audio / Earbuds, Headphones & Headsets",
-    "commission": "10% per sale through the creator Launchpad program",
-    "website": "https://www.jlab.com/",
-    "apply_url": "https://jlabjlablaunchpad.superfiliate.com/portal/sign-up",
-    "source_url": "https://www.jlab.com/en-ca/pages/jlab-affiliate-program"
+    "category": "Gaming / Consumer Tech / Controllers & Gaming Accessories",
+    "commission": "Up to 10%",
+    "website": "https://www.powera.com/",
+    "apply_url": "https://app.impact.com/campaign-campaign-info-v2/PowerA.brand",
+    "source_url": "https://www.powera.com/affiliates/"
   },
   {
-    "brand_name": "GEEKOM",
+    "brand_name": "Skytech Gaming",
     "brand_size": "mid-size",
-    "category": "Consumer Tech / PC Gear / Mini PCs",
-    "commission": "5%-10% commission per referred sale",
-    "website": "https://www.geekom.ca/",
-    "apply_url": "https://ui.awin.com/publisher-signup/us/awin?advertiser=70891",
-    "source_url": "https://www.geekom.ca/affiliate-program/"
+    "category": "Gaming / Consumer Tech / Prebuilt Gaming PCs",
+    "commission": "Up to 6%",
+    "website": "https://skytechgaming.com/",
+    "apply_url": "https://skytechgaming.com/affiliate-program/",
+    "source_url": "https://skytechgaming.com/affiliate-program/"
   },
   {
-    "brand_name": "ORICO",
+    "brand_name": "PureTrak",
     "brand_size": "mid-size",
-    "category": "Consumer Tech / PC Gear / Storage, Docks, Hubs & Power Accessories",
-    "commission": "6% base commission; up to 10%-15% on selected categories",
-    "website": "https://oricotechs.com/",
-    "apply_url": "https://oricotechs.com/pl/pages/affiliate",
-    "source_url": "https://oricotechs.com/pl/pages/affiliate"
+    "category": "Gaming / PC Gear / Mice, Mousepads & Peripherals",
+    "commission": "10%-15% tiered commission",
+    "website": "https://www.puretrak.com/",
+    "apply_url": "https://www.puretrak.com/pages/affiliate",
+    "source_url": "https://www.puretrak.com/pages/affiliate"
   },
   {
-    "brand_name": "Ulanzi",
+    "brand_name": "QRDGAME",
     "brand_size": "mid-size",
-    "category": "Creator Tech / Camera & Video Gear / Tripods, Lights & Accessories",
-    "commission": "10%-12% commission",
-    "website": "https://www.ulanzi.com/",
-    "apply_url": "https://www.shareasale.com/shareasale.cfm?merchantID=130354",
-    "source_url": "https://www.ulanzi.com/pages/ulanzi-affiliate-program"
+    "category": "Gaming / Consumer Tech / Game Controllers",
+    "commission": "Up to 10%",
+    "website": "https://qrdgame.com/",
+    "apply_url": "https://ui.awin.com/express-signup/en/awin/57149/9f7ed8eb-721e-47fa-9f14-8659c0efe6c6?t=IGC-Sh5z1NtzO2nwEM6AyB5IY4QF3PHf6EvTNlNlgCA",
+    "source_url": "https://qrdgame.com/pages/qrd-affiliate-program"
   },
   {
-    "brand_name": "LocoYoko",
+    "brand_name": "CreatorFlow",
     "brand_size": "emerging",
-    "category": "Food & Drinks / Coffee / Specialty Coffee",
-    "commission": "12% starting commission, scaling up to 30%; subscription renewals also earn commission",
-    "website": "https://locoyoko.com/",
-    "apply_url": "https://locoyoko.com/pages/affiliate-program",
-    "source_url": "https://locoyoko.com/pages/affiliate-program"
+    "category": "Software / Creator Tools / Instagram DM Automation & Lead Capture",
+    "commission": "30% recurring for 12 months",
+    "website": "https://creatorflow.so/",
+    "apply_url": "https://creatorflow.getrewardful.com/signup",
+    "source_url": "https://creatorflow.so/affiliate-program"
   },
   {
-    "brand_name": "Cut.Pro",
+    "brand_name": "OptimaClip",
     "brand_size": "emerging",
-    "category": "Software / Creator Tools / AI Video Clipping & Repurposing",
-    "commission": "25%+ recurring commission, default first 12 months",
-    "website": "https://cut.pro/",
-    "apply_url": "https://cut.pro/en/affiliate",
-    "source_url": "https://cut.pro/en/affiliate"
+    "category": "Software / Creator Tools / Video Clipping & Repurposing",
+    "commission": "20% recurring for 12 months",
+    "website": "https://www.optimaclip.com/",
+    "apply_url": "https://www.optimaclip.com/affiliates",
+    "source_url": "https://www.optimaclip.com/affiliates"
   },
   {
-    "brand_name": "Riovis",
+    "brand_name": "RoastPlan",
     "brand_size": "emerging",
-    "category": "Software / Creator & Marketing Tools / Social Media, Influencer & AI Content",
-    "commission": "25% of every sale, one-time commission",
-    "website": "https://riovis.com/",
-    "apply_url": "https://riovis.com/en/affiliate",
-    "source_url": "https://riovis.com/en/affiliate"
+    "category": "Food & Drinks / Coffee / Specialty Coffee Subscription",
+    "commission": "20% of the referred customer's first order",
+    "website": "https://roastplan.com/",
+    "apply_url": "https://roastplan.com/affiliates",
+    "source_url": "https://roastplan.com/affiliates"
   }
 ]
