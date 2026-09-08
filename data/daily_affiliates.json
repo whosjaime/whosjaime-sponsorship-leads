@@ -1,92 +1,92 @@
 [
   {
-    "brand_name": "Acer",
+    "brand_name": "Canon Shop Canada",
     "brand_size": "large",
-    "category": "Consumer Tech / PC Gear / Laptops, Desktops & Monitors",
-    "commission": "Up to 4%",
-    "website": "https://www.acer.com/",
-    "apply_url": "https://public.cj.com/signup/publisher?advertiserId=4017900",
-    "source_url": "https://store.acer.com/fr-ca/partner-program"
-  },
-  {
-    "brand_name": "GoPro",
-    "brand_size": "large",
-    "category": "Consumer Tech / Creator Gear / Action Cameras & Accessories",
+    "category": "Consumer Tech / Creator Gear / Cameras, Lenses & Imaging",
     "commission": "3%",
-    "website": "https://gopro.com/",
-    "apply_url": "https://gopro.com/fr/lu/legal/gopro-affiliate-program",
-    "source_url": "https://gopro.com/fr/lu/legal/gopro-affiliate-program"
+    "website": "https://shop.canon.ca/en_ca/home",
+    "apply_url": "https://www.ascendpartner.com/affiliate/registration?refid=141064",
+    "source_url": "https://www.opmpros.com/host/canon/affiliate/Become_Affiliate_CANN.html"
   },
   {
-    "brand_name": "Anker",
+    "brand_name": "NEEWER",
     "brand_size": "large",
-    "category": "Consumer Tech / Charging, Power & Mobile Accessories",
-    "commission": "Up to 8%",
-    "website": "https://www.anker.com/",
-    "apply_url": "https://app.impact.com/campaign-campaign-info-v2/Anker.brand",
-    "source_url": "https://www.ankersolix.com/ca/become-an-affiliate"
-  },
-  {
-    "brand_name": "Native Union",
-    "brand_size": "mid-size",
-    "category": "Consumer Tech / Creator & Desk Gear / Chargers, Cases & Accessories",
-    "commission": "10%",
-    "website": "https://www.nativeunion.com/",
-    "apply_url": "https://api.collabs.shopify.com/creator/signup/community_application/202d5079ecaa0d6d?origin=THEME_EXTENSION",
-    "source_url": "https://www.nativeunion.com/pages/collab"
-  },
-  {
-    "brand_name": "Sonarworks",
-    "brand_size": "mid-size",
-    "category": "Software / Creator Tools / Audio Production & Monitoring",
-    "commission": "Up to 20%",
-    "website": "https://www.sonarworks.com/",
-    "apply_url": "https://sonarworks.everflowclient.io/affiliate/signup",
-    "source_url": "https://www.sonarworks.com/affiliate-program"
-  },
-  {
-    "brand_name": "EasySMX",
-    "brand_size": "mid-size",
-    "category": "Gaming / Consumer Tech / Controllers & Gaming Peripherals",
+    "category": "Consumer Tech / Creator Gear / Lighting, Camera & Studio Accessories",
     "commission": "Not publicly listed",
-    "website": "https://www.easysmx.com/",
-    "apply_url": "https://easysmx.goaffpro.com/",
-    "source_url": "https://www.easysmx.com/pages/affiliate-program"
+    "website": "https://neewer.com/",
+    "apply_url": "https://neewer.com/pages/affiliate-program",
+    "source_url": "https://neewer.com/pages/affiliate-program"
   },
   {
-    "brand_name": "Cinch Gaming",
+    "brand_name": "Libsyn",
     "brand_size": "mid-size",
-    "category": "Gaming / Consumer Tech / Custom & Pro Controllers",
-    "commission": "Not publicly listed",
-    "website": "https://www.cinchgaming.com/",
-    "apply_url": "https://cinch-gaming.goaffpro.com/",
-    "source_url": "https://www.cinchgaming.com/pages/cinch-gaming-partnerships-1"
+    "category": "Software / Creator Tools / Podcast Hosting & Monetization",
+    "commission": "25% revenue share for 6 months",
+    "website": "https://libsyn.com/",
+    "apply_url": "https://libsyn.com/affiliate/",
+    "source_url": "https://libsyn.com/affiliate/"
   },
   {
-    "brand_name": "GadgetHyper",
-    "brand_size": "emerging",
-    "category": "Gaming / Consumer Tech / Gaming Gear & Accessories",
-    "commission": "3% base commission",
-    "website": "https://gadgethyper.com/",
-    "apply_url": "https://gadgethyper.com/blogs/news/gadgethyper-official-affiliate-program-launch",
-    "source_url": "https://gadgethyper.com/blogs/news/gadgethyper-official-affiliate-program-launch"
+    "brand_name": "Eden",
+    "brand_size": "mid-size",
+    "category": "Software / Creator Tools / Content Research & Planning",
+    "commission": "20%-35% recurring for life",
+    "website": "https://eden.so/",
+    "apply_url": "https://eden.so/affiliates/",
+    "source_url": "https://eden.so/affiliates/"
   },
   {
-    "brand_name": "Sēkwl",
-    "brand_size": "emerging",
-    "category": "Food & Drinks / Functional Beverages / Mushroom Drinks",
-    "commission": "Up to 20%",
-    "website": "https://drinksekwl.com/",
-    "apply_url": "https://drinksekwl.com/pages/affiliate-program",
-    "source_url": "https://drinksekwl.com/pages/affiliate-program"
+    "brand_name": "Colipse Coffee",
+    "brand_size": "mid-size",
+    "category": "Food & Drinks / Specialty Coffee",
+    "commission": "25%",
+    "website": "https://colipsecoffee.com/",
+    "apply_url": "https://colipsecoffee.com/pages/affiliate",
+    "source_url": "https://colipsecoffee.com/pages/affiliate"
   },
   {
-    "brand_name": "DarkBeacon",
+    "brand_name": "Who's Brew",
+    "brand_size": "mid-size",
+    "category": "Food & Drinks / Coffee & Tea Marketplace",
+    "commission": "5%-10%",
+    "website": "https://whosbrewshop.com/",
+    "apply_url": "https://whosbrewshop.com/affiliates",
+    "source_url": "https://whosbrewshop.com/affiliates"
+  },
+  {
+    "brand_name": "Vidpal",
     "brand_size": "emerging",
-    "category": "Gaming / PC Gear / Keyboards & Performance Peripherals",
-    "commission": "5%",
-    "website": "https://darkbeacon.ai/",
-    "apply_url": "https://darkbeacon.ai/pages/affiliate-program",
-    "source_url": "https://darkbeacon.ai/pages/affiliate-program"
+    "category": "Software / Creator Tools / Video & Content Creation",
+    "commission": "30% recurring for life",
+    "website": "https://www.vidpal.ai/",
+    "apply_url": "https://www.vidpal.ai/affiliates",
+    "source_url": "https://www.vidpal.ai/affiliates"
+  },
+  {
+    "brand_name": "Planify",
+    "brand_size": "emerging",
+    "category": "Software / Creator Tools / Social Media Scheduling",
+    "commission": "50% recurring for life",
+    "website": "https://planifyapps.com/",
+    "apply_url": "https://planifyapps.com/affiliates",
+    "source_url": "https://planifyapps.com/affiliates"
+  },
+  {
+    "brand_name": "ReplySwarm AI",
+    "brand_size": "emerging",
+    "category": "Software / Creator Tools / Social Media Engagement & AI",
+    "commission": "30% recurring for 12 months",
+    "website": "https://www.replyswarm.ai/",
+    "apply_url": "https://www.replyswarm.ai/affiliate-program",
+    "source_url": "https://www.replyswarm.ai/affiliate-program"
+  },
+  {
+    "brand_name": "CamClo3D",
+    "brand_size": "emerging",
+    "category": "Software / Creator Tools / AI Fashion, Virtual Try-On & Ads",
+    "commission": "10%-30% recurring for 3 months",
+    "website": "https://camclo3d.com/",
+    "apply_url": "https://camclo3d.com/affiliate-program",
+    "source_url": "https://camclo3d.com/affiliate-program"
   }
 ]
