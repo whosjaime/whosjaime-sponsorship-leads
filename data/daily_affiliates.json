@@ -1,92 +1,92 @@
 [
   {
-    "brand_name": "Canon Shop Canada",
+    "brand_name": "Dell",
     "brand_size": "large",
-    "category": "Consumer Tech / Creator Gear / Cameras, Lenses & Imaging",
-    "commission": "3%",
-    "website": "https://shop.canon.ca/en_ca/home",
-    "apply_url": "https://www.ascendpartner.com/affiliate/registration?refid=141064",
-    "source_url": "https://www.opmpros.com/host/canon/affiliate/Become_Affiliate_CANN.html"
-  },
-  {
-    "brand_name": "NEEWER",
-    "brand_size": "large",
-    "category": "Consumer Tech / Creator Gear / Lighting, Camera & Studio Accessories",
+    "category": "Consumer Tech / PC Gear / Laptops, Desktops & Monitors",
     "commission": "Not publicly listed",
-    "website": "https://neewer.com/",
-    "apply_url": "https://neewer.com/pages/affiliate-program",
-    "source_url": "https://neewer.com/pages/affiliate-program"
+    "website": "https://www.dell.com/",
+    "apply_url": "https://www.viglink.com/merchants/4/dell-affiliate-program",
+    "source_url": "https://www.viglink.com/merchants/4/dell-affiliate-program"
   },
   {
-    "brand_name": "Libsyn",
-    "brand_size": "mid-size",
-    "category": "Software / Creator Tools / Podcast Hosting & Monetization",
-    "commission": "25% revenue share for 6 months",
-    "website": "https://libsyn.com/",
-    "apply_url": "https://libsyn.com/affiliate/",
-    "source_url": "https://libsyn.com/affiliate/"
+    "brand_name": "Motion",
+    "brand_size": "large",
+    "category": "Software / Productivity / AI Calendar & Task Management",
+    "commission": "25% of each referred customer's first purchase",
+    "website": "https://www.usemotion.com/",
+    "apply_url": "https://motion.so/affiliates",
+    "source_url": "https://motion.so/affiliates"
   },
   {
-    "brand_name": "Eden",
+    "brand_name": "Adagio Teas",
     "brand_size": "mid-size",
-    "category": "Software / Creator Tools / Content Research & Planning",
-    "commission": "20%-35% recurring for life",
-    "website": "https://eden.so/",
-    "apply_url": "https://eden.so/affiliates/",
-    "source_url": "https://eden.so/affiliates/"
+    "category": "Food & Drinks / Tea, Coffee, Spices & Honey",
+    "commission": "Up to 10%",
+    "website": "https://www.adagio.com/",
+    "apply_url": "https://www.adagio.com/affiliates/index.html",
+    "source_url": "https://www.adagio.com/affiliates/index.html"
   },
   {
-    "brand_name": "Colipse Coffee",
+    "brand_name": "Reclaim.ai",
     "brand_size": "mid-size",
+    "category": "Software / Productivity / AI Calendar & Scheduling",
+    "commission": "40% on customers from work emails; 25% on customers from personal emails; $1 per referred work-email signup",
+    "website": "https://reclaim.ai/",
+    "apply_url": "https://partner.reclaim.ai/get-started",
+    "source_url": "https://help.reclaim.ai/en/articles/8370417-reclaim-ai-affiliate-program"
+  },
+  {
+    "brand_name": "Auphonic",
+    "brand_size": "mid-size",
+    "category": "Software / Creator Tools / Audio Post-Production",
+    "commission": "20% on referred purchases",
+    "website": "https://auphonic.com/",
+    "apply_url": "https://auphonic.com/licensing/affiliate",
+    "source_url": "https://auphonic.com/licensing/affiliate"
+  },
+  {
+    "brand_name": "MmoGah",
+    "brand_size": "mid-size",
+    "category": "Gaming / Marketplace / In-Game Currency & Services",
+    "commission": "Up to 15% per sale",
+    "website": "https://www.mmogah.com/",
+    "apply_url": "https://www.mmogah.com/affiliate-program",
+    "source_url": "https://www.mmogah.com/affiliate-program"
+  },
+  {
+    "brand_name": "UGC Scripts",
+    "brand_size": "emerging",
+    "category": "Software / Creator Tools / UGC Script Writing",
+    "commission": "25% of subscription payments for the first 12 months",
+    "website": "https://www.ugcscripts.com/",
+    "apply_url": "https://www.ugcscripts.com/affiliate",
+    "source_url": "https://www.ugcscripts.com/affiliate"
+  },
+  {
+    "brand_name": "Caffeine Army",
+    "brand_size": "emerging",
+    "category": "Food & Drinks / Functional Coffee & Wellness",
+    "commission": "10%-20% tiered",
+    "website": "https://caffeinearmy.com/",
+    "apply_url": "https://caffeinearmy.com/pages/affiliate-program",
+    "source_url": "https://caffeinearmy.com/pages/affiliate-program"
+  },
+  {
+    "brand_name": "Odie's Roasters",
+    "brand_size": "emerging",
     "category": "Food & Drinks / Specialty Coffee",
-    "commission": "25%",
-    "website": "https://colipsecoffee.com/",
-    "apply_url": "https://colipsecoffee.com/pages/affiliate",
-    "source_url": "https://colipsecoffee.com/pages/affiliate"
+    "commission": "12% per sale",
+    "website": "https://www.odiesroasters.com/",
+    "apply_url": "https://www.odiesroasters.com/affiliate-program",
+    "source_url": "https://www.odiesroasters.com/affiliate-program"
   },
   {
-    "brand_name": "Who's Brew",
-    "brand_size": "mid-size",
-    "category": "Food & Drinks / Coffee & Tea Marketplace",
-    "commission": "5%-10%",
-    "website": "https://whosbrewshop.com/",
-    "apply_url": "https://whosbrewshop.com/affiliates",
-    "source_url": "https://whosbrewshop.com/affiliates"
-  },
-  {
-    "brand_name": "Vidpal",
+    "brand_name": "Lifetime Coffee",
     "brand_size": "emerging",
-    "category": "Software / Creator Tools / Video & Content Creation",
-    "commission": "30% recurring for life",
-    "website": "https://www.vidpal.ai/",
-    "apply_url": "https://www.vidpal.ai/affiliates",
-    "source_url": "https://www.vidpal.ai/affiliates"
-  },
-  {
-    "brand_name": "Planify",
-    "brand_size": "emerging",
-    "category": "Software / Creator Tools / Social Media Scheduling",
-    "commission": "50% recurring for life",
-    "website": "https://planifyapps.com/",
-    "apply_url": "https://planifyapps.com/affiliates",
-    "source_url": "https://planifyapps.com/affiliates"
-  },
-  {
-    "brand_name": "ReplySwarm AI",
-    "brand_size": "emerging",
-    "category": "Software / Creator Tools / Social Media Engagement & AI",
-    "commission": "30% recurring for 12 months",
-    "website": "https://www.replyswarm.ai/",
-    "apply_url": "https://www.replyswarm.ai/affiliate-program",
-    "source_url": "https://www.replyswarm.ai/affiliate-program"
-  },
-  {
-    "brand_name": "CamClo3D",
-    "brand_size": "emerging",
-    "category": "Software / Creator Tools / AI Fashion, Virtual Try-On & Ads",
-    "commission": "10%-30% recurring for 3 months",
-    "website": "https://camclo3d.com/",
-    "apply_url": "https://camclo3d.com/affiliate-program",
-    "source_url": "https://camclo3d.com/affiliate-program"
+    "category": "Food & Drinks / Coffee & Tea",
+    "commission": "15% per sale",
+    "website": "https://mylifetimecoffee.com/",
+    "apply_url": "https://mylifetimecoffee.com/pages/collab",
+    "source_url": "https://mylifetimecoffee.com/pages/collab"
   }
 ]
