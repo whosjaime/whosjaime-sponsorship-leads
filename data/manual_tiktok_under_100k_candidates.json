@@ -26,5 +26,33 @@
     "lead_score": 93,
     "lead_temperature": "Hot",
     "signals": ["manual verified under-100k creator", "recent sponsored creator evidence", "verified 149K TikTok followers", "39 tracked Conair creator collaborations", "named marketing director contact", "not present in permanent sent ledger"]
+  },
+  {
+    "brand_name": "Poppi",
+    "brand_domain": "drinkpoppi.com",
+    "source_platform": "TikTok",
+    "creator_name": "Kylie Darling (@kylieann.n)",
+    "creator_url": "https://www.tiktok.com/@kylieann.n",
+    "creator_channel_id": "kylieann.n",
+    "creator_subscribers": 136770,
+    "creator_genre": "Lifestyle / Food / Wellness",
+    "creator_tags": ["tiktok", "lifestyle", "food", "beverage", "micro creator"],
+    "video_id": "poppi-kylieannn-2025-10-26",
+    "video_url": "https://www.modash.io/breakdowns/poppi-influencer-marketing-strategy",
+    "video_title": "Kylie Darling x Poppi TikTok sponsored collaboration",
+    "sponsored_date": "2025-10-26",
+    "evidence": "Modash's 2026 Poppi influencer marketing report identifies @kylieann.n's October 26, 2025 TikTok as a sponsored Poppi collaboration with #poppipartner. The same report tracks roughly 6.7K Poppi-sponsored TikTok posts and shows Poppi heavily uses smaller creators. Urlebird's current indexed TikTok profile data, crawled September 2026, verifies @kylieann.n at 136.77K followers. Jenny Danzi is publicly listed in 2026 as Vice President of Marketing, poppi, providing a role-qualified outreach contact.",
+    "paid_product_placement": true,
+    "sponsor_category": "Food & Beverage",
+    "sponsor_subcategory": "Soda / Better-for-you Beverage",
+    "contact_name": "Jenny Danzi",
+    "contact_title": "Vice President of Marketing, poppi",
+    "contact_email": "",
+    "email_type": "Named Public Work Contact",
+    "contact_source": "The Org 2026 poppi leadership listing",
+    "contact_source_url": "https://theorg.com/org/pepsico/person/erica-grundish",
+    "lead_score": 96,
+    "lead_temperature": "Hot",
+    "signals": ["manual verified under-100k creator", "verified TikTok sponsored collaboration", "verified 136.77K TikTok followers", "6.7K tracked Poppi TikTok sponsor posts", "repeat small-creator sponsor", "named VP marketing contact", "not present in permanent sent ledger"]
   }
 ]
