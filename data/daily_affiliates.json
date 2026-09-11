@@ -1,182 +1,164 @@
 [
   {
-    "brand_name": "SanDisk",
+    "brand_name": "GoDaddy",
     "brand_size": "large",
-    "category": "Consumer Tech / Storage / Memory Cards & SSDs",
-    "commission": "Up to 10%",
-    "website": "https://www.sandisk.com/",
-    "apply_url": "https://www.sandisk.com/company/programs/affiliate-program",
-    "source_url": "https://www.sandisk.com/company/programs/affiliate-program"
-  },
-  {
-    "brand_name": "Bluehost",
-    "brand_size": "large",
-    "category": "Software / Web Hosting & Websites",
-    "commission": "$65+ per qualified sale",
-    "website": "https://www.bluehost.com/",
-    "apply_url": "https://www.bluehost.com/affiliates",
-    "source_url": "https://www.bluehost.com/affiliates"
-  },
-  {
-    "brand_name": "DXRacer",
-    "brand_size": "large",
-    "category": "Gaming / Gaming Chairs & Desks",
-    "commission": "Up to 20% per purchase",
-    "website": "https://www.dxracer.ca/",
-    "apply_url": "https://www.dxracer.ca/pages/affiliates",
-    "source_url": "https://www.dxracer.ca/pages/affiliates"
-  },
-  {
-    "brand_name": "Bentgo",
-    "brand_size": "large",
-    "category": "Food & Drinks / Meal Prep & Lunch Gear",
+    "category": "Software / Web Hosting, Domains & Website Tools",
     "commission": "Not publicly listed",
-    "website": "https://bentgo.com/",
-    "apply_url": "https://bentgo.com/pages/affiliates",
-    "source_url": "https://bentgo.com/pages/affiliates"
+    "website": "https://www.godaddy.com/",
+    "apply_url": "https://www.godaddy.com/en-ca/affiliate-programs",
+    "source_url": "https://www.godaddy.com/en-ca/affiliate-programs"
   },
   {
-    "brand_name": "TTRacing",
+    "brand_name": "Wix",
     "brand_size": "large",
-    "category": "Gaming / Gaming Chairs & Desks",
-    "commission": "Up to 18% per sale",
-    "website": "https://ttracing.co/",
-    "apply_url": "https://ttracing.co/pages/affiliates",
-    "source_url": "https://ttracing.co/pages/affiliates"
+    "category": "Software / Website Builder & Creator Business Tools",
+    "commission": "Not publicly listed",
+    "website": "https://www.wix.com/",
+    "apply_url": "https://www.wix.com/about/affiliates",
+    "source_url": "https://www.wix.com/about/affiliates"
   },
   {
-    "brand_name": "Gemini Sound",
+    "brand_name": "BlueStacks",
+    "brand_size": "large",
+    "category": "Gaming / Android Gaming & Creator Tools",
+    "commission": "Not publicly listed",
+    "website": "https://www.bluestacks.com/",
+    "apply_url": "https://www.bluestacks.com/influencer.html",
+    "source_url": "https://www.bluestacks.com/influencer.html"
+  },
+  {
+    "brand_name": "OLIPOP",
+    "brand_size": "large",
+    "category": "Food & Drinks / Functional Soda",
+    "commission": "10% baseline, up to 20%",
+    "website": "https://drinkolipop.com/",
+    "apply_url": "https://drinkolipop.com/pages/affiliate-program",
+    "source_url": "https://drinkolipop.com/pages/affiliate-program"
+  },
+  {
+    "brand_name": "Speechify",
+    "brand_size": "large",
+    "category": "Software / AI Voice, Text-to-Speech & Creator Audio",
+    "commission": "30% per referred sale",
+    "website": "https://speechify.com/",
+    "apply_url": "https://speechify.com/affiliates/",
+    "source_url": "https://speechify.com/affiliates/"
+  },
+  {
+    "brand_name": "SparkFun Electronics",
     "brand_size": "mid-size",
-    "category": "Consumer Tech / Audio / DJ & Creator Gear",
-    "commission": "7% per referred sale",
-    "website": "https://www.geminisound.com/",
-    "apply_url": "https://www.geminisound.com/pages/gemini-affiliate-program",
-    "source_url": "https://www.geminisound.com/pages/gemini-affiliate-program"
+    "category": "Consumer Tech / Electronics, Maker & STEM Hardware",
+    "commission": "Not publicly listed",
+    "website": "https://www.sparkfun.com/",
+    "apply_url": "https://www.sparkfun.com/affiliate-program",
+    "source_url": "https://www.sparkfun.com/affiliate-program"
   },
   {
-    "brand_name": "OWN3D",
+    "brand_name": "Creatify",
     "brand_size": "mid-size",
-    "category": "Software / Streaming / Overlays & Creator Assets",
-    "commission": "30% on all products",
-    "website": "https://www.own3d.tv/",
-    "apply_url": "https://www.own3d.tv/en/own3d-tv-partner-program/",
-    "source_url": "https://www.own3d.tv/en/own3d-tv-partner-program/"
-  },
-  {
-    "brand_name": "Streams Charts",
-    "brand_size": "mid-size",
-    "category": "Software / Streaming Analytics / Twitch, YouTube & Kick",
-    "commission": "20% of the first successful subscription payment",
-    "website": "https://streamscharts.com/",
-    "apply_url": "https://streamscharts.com/news/streams-charts-launches-partner-program-offering-20-referral-commissions",
-    "source_url": "https://streamscharts.com/news/streams-charts-launches-partner-program-offering-20-referral-commissions"
-  },
-  {
-    "brand_name": "ADVANCED",
-    "brand_size": "mid-size",
-    "category": "Food & Drinks / Gaming Energy, Hydration & Supplements",
-    "commission": "20% revenue share for Ambassadors",
-    "website": "https://advanced.gg/",
-    "apply_url": "https://advanced.gg/pages/partner-with-advanced",
-    "source_url": "https://advanced.gg/pages/partner-with-advanced"
-  },
-  {
-    "brand_name": "Rogue Energy",
-    "brand_size": "mid-size",
-    "category": "Food & Drinks / Gaming Energy & Hydration",
-    "commission": "Up to 7% for Affiliates",
-    "website": "https://rogueenergy.com/",
-    "apply_url": "https://rogueenergy.com/en-ca/pages/sponsorship",
-    "source_url": "https://rogueenergy.com/en-ca/pages/sponsorship"
-  },
-  {
-    "brand_name": "DUBBY",
-    "brand_size": "mid-size",
-    "category": "Food & Drinks / Gaming Energy & Focus Drinks",
-    "commission": "10% for starting Partners",
-    "website": "https://www.dubby.gg/",
-    "apply_url": "https://www.dubby.gg/pages/dubby-partner",
-    "source_url": "https://www.dubby.gg/pages/dubby-partner"
-  },
-  {
-    "brand_name": "Foodzilla",
-    "brand_size": "mid-size",
-    "category": "Software / Food & Nutrition / Meal Planning",
-    "commission": "20% recurring for up to one year or until the subscription ends",
-    "website": "https://foodzilla.com/",
-    "apply_url": "https://foodzilla.com/affiliate-program",
-    "source_url": "https://foodzilla.com/affiliate-program"
-  },
-  {
-    "brand_name": "AIVeed",
-    "brand_size": "mid-size",
-    "category": "Software / Creator Tools / AI Video Generation",
-    "commission": "25% first month, then 15% for up to 12 months",
-    "website": "https://aiveed.io/",
-    "apply_url": "https://aiveed.io/affiliates",
-    "source_url": "https://aiveed.io/affiliates"
-  },
-  {
-    "brand_name": "Puppetry",
-    "brand_size": "emerging",
-    "category": "Software / Creator Tools / AI Talking-Face Video",
-    "commission": "30% on referral sales",
-    "website": "https://www.puppetry.com/",
-    "apply_url": "https://www.puppetry.com/affiliate",
-    "source_url": "https://www.puppetry.com/affiliate"
-  },
-  {
-    "brand_name": "Clonio",
-    "brand_size": "emerging",
-    "category": "Software / Creator Tools / AI Video",
-    "commission": "20% recurring for life",
-    "website": "https://www.clonio.io/",
-    "apply_url": "https://www.clonio.io/affiliates",
-    "source_url": "https://www.clonio.io/affiliates"
-  },
-  {
-    "brand_name": "VidAU",
-    "brand_size": "emerging",
     "category": "Software / Creator Tools / AI Video Ads",
+    "commission": "25% recurring",
+    "website": "https://creatify.ai/",
+    "apply_url": "https://creatify.ai/affiliate",
+    "source_url": "https://creatify.ai/affiliate"
+  },
+  {
+    "brand_name": "Gamma",
+    "brand_size": "mid-size",
+    "category": "Software / Creator Tools / AI Presentations & Websites",
     "commission": "Not publicly listed",
-    "website": "https://www.vidau.ai/",
-    "apply_url": "https://www.vidau.ai/affiliate/",
-    "source_url": "https://www.vidau.ai/affiliate/"
+    "website": "https://gamma.app/",
+    "apply_url": "https://gammaapp.partnerstack.com/?group=affiliates",
+    "source_url": "https://help.gamma.app/en/articles/11048092-how-do-i-join-the-gamma-affiliate-program"
   },
   {
-    "brand_name": "FilmSpark.ai",
-    "brand_size": "emerging",
-    "category": "Software / Creator Tools / AI Filmmaking",
-    "commission": "20% recurring for 12 months",
-    "website": "https://filmspark.ai/",
-    "apply_url": "https://filmspark.ai/affiliates",
-    "source_url": "https://filmspark.ai/affiliates"
+    "brand_name": "Beeble",
+    "brand_size": "mid-size",
+    "category": "Software / Creator Tools / AI Video & VFX",
+    "commission": "20% recurring for up to 12 months",
+    "website": "https://beeble.ai/",
+    "apply_url": "https://beeble.ai/creator-program",
+    "source_url": "https://beeble.ai/creator-program"
   },
   {
-    "brand_name": "8frame",
-    "brand_size": "emerging",
-    "category": "Software / Creator Tools / AI Creative Platform",
-    "commission": "20% of referral spend for 12 months",
-    "website": "https://www.8frame.co/",
-    "apply_url": "https://www.8frame.co/creators",
-    "source_url": "https://www.8frame.co/creators"
+    "brand_name": "Pimax",
+    "brand_size": "mid-size",
+    "category": "Consumer Tech / Gaming / VR Headsets",
+    "commission": "Up to $135 per successful referral",
+    "website": "https://pimax.com/",
+    "apply_url": "https://affiliate.pimax.com/",
+    "source_url": "https://affiliate.pimax.com/"
   },
   {
-    "brand_name": "AI Video Cut",
-    "brand_size": "emerging",
-    "category": "Software / Creator Tools / AI Short-Form Repurposing",
-    "commission": "30% first month, then 20% recurring",
-    "website": "https://www.aivideocut.com/",
-    "apply_url": "https://www.aivideocut.com/affiliate-program",
-    "source_url": "https://www.aivideocut.com/affiliate-program"
+    "brand_name": "Higgsfield",
+    "brand_size": "mid-size",
+    "category": "Software / Creator Tools / AI Video",
+    "commission": "Up to 25% recurring for up to 12 months",
+    "website": "https://higgsfield.ai/",
+    "apply_url": "https://higgsfield.ai/affiliate",
+    "source_url": "https://higgsfield.ai/affiliate"
   },
   {
-    "brand_name": "Nimbus",
+    "brand_name": "VidMage",
+    "brand_size": "mid-size",
+    "category": "Software / Creator Tools / AI Video & Face Swap",
+    "commission": "30% on qualifying online sales",
+    "website": "https://vidmage.ai/",
+    "apply_url": "https://vidmage.ai/affiliate-program",
+    "source_url": "https://vidmage.ai/affiliate-program"
+  },
+  {
+    "brand_name": "Satura",
     "brand_size": "emerging",
-    "category": "Software / Creator Tools / Streaming & Community Tools",
-    "commission": "20% lifetime revenue share",
-    "website": "https://www.getnimbus.net/",
-    "apply_url": "https://www.getnimbus.net/affiliates",
-    "source_url": "https://www.getnimbus.net/affiliates"
+    "category": "Software / Creator Tools / AI Video, Editing & YouTube Tools",
+    "commission": "30% recurring",
+    "website": "https://saturaai.com/",
+    "apply_url": "https://saturaai.com/affiliate",
+    "source_url": "https://saturaai.com/affiliate"
+  },
+  {
+    "brand_name": "ViceForge",
+    "brand_size": "emerging",
+    "category": "Software / Gaming & Creator Tools / AI Clip Editing",
+    "commission": "Not publicly listed",
+    "website": "https://viceforge.app/",
+    "apply_url": "https://viceforge.app/affiliates",
+    "source_url": "https://viceforge.app/affiliates"
+  },
+  {
+    "brand_name": "Esport Certified",
+    "brand_size": "emerging",
+    "category": "Gaming / Refurbished Gaming PCs & Peripherals",
+    "commission": "10% base; 6% on orders over $200",
+    "website": "https://esportcertified.com/",
+    "apply_url": "https://esportcertified.refersion.com/affiliate/registration",
+    "source_url": "https://esportcertified.refersion.com/affiliate/registration"
+  },
+  {
+    "brand_name": "Kineo",
+    "brand_size": "emerging",
+    "category": "Software / Creator Tools / AI Short-Form Video",
+    "commission": "30% recurring while referred customers remain subscribed",
+    "website": "https://www.usekineo.com/",
+    "apply_url": "https://www.usekineo.com/partners",
+    "source_url": "https://www.usekineo.com/partners"
+  },
+  {
+    "brand_name": "Wildflower Coffee Company",
+    "brand_size": "emerging",
+    "category": "Food & Drinks / Specialty Coffee",
+    "commission": "Not publicly listed",
+    "website": "https://wildflowercoffeecompany.com/",
+    "apply_url": "https://wildflowercoffeecompany.com/pages/affiliate-program",
+    "source_url": "https://wildflowercoffeecompany.com/pages/affiliate-program"
+  },
+  {
+    "brand_name": "Folk Coffee Club",
+    "brand_size": "emerging",
+    "category": "Food & Drinks / Specialty Coffee Subscription",
+    "commission": "$10 on every referred customer's first purchase",
+    "website": "https://folkcoffeeclub.com/",
+    "apply_url": "https://folkcoffeeclub.com/pages/affiliates",
+    "source_url": "https://folkcoffeeclub.com/pages/affiliates"
   }
 ]
