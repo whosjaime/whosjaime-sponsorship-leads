@@ -1,182 +1,83 @@
 [
   {
-    "brand_name": "AVG",
+    "brand_name": "Lexar",
     "brand_size": "large",
-    "category": "Software / Cybersecurity & Privacy",
-    "commission": "Up to 30%",
-    "website": "https://www.avg.com/",
-    "apply_url": "https://www.avg.com/en-us/affiliate/become-an-avg-affiliate",
-    "source_url": "https://www.avg.com/en-us/affiliate/become-an-avg-affiliate"
-  },
-  {
-    "brand_name": "Acronis",
-    "brand_size": "large",
-    "category": "Software / Cybersecurity, Backup & Data Protection",
-    "commission": "From 20%",
-    "website": "https://www.acronis.com/",
-    "apply_url": "https://www.acronis.com/en/partners/affiliates/",
-    "source_url": "https://www.acronis.com/en/partners/affiliates/"
-  },
-  {
-    "brand_name": "Avast",
-    "brand_size": "large",
-    "category": "Software / Cybersecurity & Privacy",
-    "commission": "Not publicly listed",
-    "website": "https://www.avast.com/",
-    "apply_url": "https://www.avast.com/en-eu/business/affiliates",
-    "source_url": "https://www.avast.com/en-eu/business/affiliates"
-  },
-  {
-    "brand_name": "ESET",
-    "brand_size": "large",
-    "category": "Software / Cybersecurity & Antivirus",
-    "commission": "Up to 30% per sale",
-    "website": "https://www.eset.com/",
-    "apply_url": "https://www.eset.com/uk/partner/online-affiliates/",
-    "source_url": "https://www.eset.com/uk/partner/online-affiliates/"
-  },
-  {
-    "brand_name": "Trend Micro",
-    "brand_size": "large",
-    "category": "Software / Cybersecurity & Internet Security",
-    "commission": "Up to 20%",
-    "website": "https://www.trendmicro.com/",
-    "apply_url": "https://www.trendmicro.com/en_ph/forHome/affiliate-program.html",
-    "source_url": "https://www.trendmicro.com/en_ph/forHome/affiliate-program.html"
-  },
-  {
-    "brand_name": "GameSir",
-    "brand_size": "mid-size",
-    "category": "Gaming / Controllers & Gaming Accessories",
-    "commission": "Not publicly listed",
-    "website": "https://gamesir.com/",
-    "apply_url": "https://app.impact.com/campaign-campaign-info-v2/WISE-TEAM-TECHNOLOGY-DEVELOPMENT-LIMITED.brand",
-    "source_url": "https://gamesir.com/support/contact"
-  },
-  {
-    "brand_name": "AndaSeat",
-    "brand_size": "mid-size",
-    "category": "Gaming / Gaming Chairs & Setup Gear",
-    "commission": "Up to 15%",
-    "website": "https://www.andaseat.com/",
-    "apply_url": "https://www.andaseat.com/pages/affiliate-program",
-    "source_url": "https://www.andaseat.com/pages/affiliate-program"
-  },
-  {
-    "brand_name": "XGIMI",
-    "brand_size": "mid-size",
-    "category": "Consumer Tech / Projectors & Home Entertainment",
-    "commission": "5%",
-    "website": "https://ca.xgimi.com/",
-    "apply_url": "https://ca.xgimi.com/pages/affiliate-guide",
-    "source_url": "https://ca.xgimi.com/pages/affiliate-guide"
-  },
-  {
-    "brand_name": "SwitchBot",
-    "brand_size": "mid-size",
-    "category": "Consumer Tech / Smart Home & Automation",
-    "commission": "Up to 15%",
-    "website": "https://ca.switch-bot.com/",
-    "apply_url": "https://ca.switch-bot.com/pages/switchbot-affiliate-program",
-    "source_url": "https://ca.switch-bot.com/pages/switchbot-affiliate-program"
-  },
-  {
-    "brand_name": "RAPOO",
-    "brand_size": "mid-size",
-    "category": "Gaming / Keyboards, Mice & PC Peripherals",
-    "commission": "At least 10%",
-    "website": "https://shop.rapoo.com/",
-    "apply_url": "https://shop.rapoo.com/pages/affiliate",
-    "source_url": "https://shop.rapoo.com/pages/affiliate"
-  },
-  {
-    "brand_name": "SIRUI",
-    "brand_size": "mid-size",
-    "category": "Consumer Tech / Cameras, Lenses & Creator Gear",
+    "category": "Consumer Tech / Storage, Memory & PC Components",
     "commission": "Up to 10%",
-    "website": "https://store.sirui.com/",
-    "apply_url": "https://store.sirui.com/pages/affiliate-program",
-    "source_url": "https://store.sirui.com/pages/affiliate-program"
+    "website": "https://www.lexar.com/",
+    "apply_url": "https://www.lexar.com/gb/affiliate-program/",
+    "source_url": "https://www.lexar.com/gb/affiliate-program/"
   },
   {
-    "brand_name": "Humanscale",
+    "brand_name": "Shapr3D",
     "brand_size": "mid-size",
-    "category": "Consumer Tech / Creator Workspaces & Ergonomics",
-    "commission": "Starting at 5%",
-    "website": "https://shop.humanscale.com/",
-    "apply_url": "https://shop.humanscale.com/pages/affiliate-program",
-    "source_url": "https://shop.humanscale.com/pages/affiliate-program"
+    "category": "Software / 3D Design, CAD & Creator Tools",
+    "commission": "20%",
+    "website": "https://www.shapr3d.com/",
+    "apply_url": "https://www.shapr3d.com/affiliate/program",
+    "source_url": "https://www.shapr3d.com/affiliate/program"
   },
   {
-    "brand_name": "Upside Drinks",
+    "brand_name": "Blaze",
     "brand_size": "mid-size",
-    "category": "Food & Drinks / Alcohol-Free Beverages",
-    "commission": "Up to 20% per sale + up to 3% recurring on repeat orders",
-    "website": "https://upsidedrinks.com/",
-    "apply_url": "https://upsidedrinks.com/pages/affiliate-program",
-    "source_url": "https://upsidedrinks.com/pages/affiliate-program"
+    "category": "Software / AI Marketing & Creator Tools",
+    "commission": "30% for the first two months, then 15% recurring",
+    "website": "https://www.blaze.ai/",
+    "apply_url": "https://www.blaze.ai/affiliates",
+    "source_url": "https://www.blaze.ai/affiliates"
   },
   {
-    "brand_name": "Whoscale",
-    "brand_size": "emerging",
-    "category": "Software / Creator Tools & Creator Intelligence",
+    "brand_name": "Castmagic",
+    "brand_size": "mid-size",
+    "category": "Software / AI Podcast, Video & Content Repurposing",
     "commission": "30% recurring",
-    "website": "https://www.whoscale.io/",
-    "apply_url": "https://www.whoscale.io/en/affiliate",
-    "source_url": "https://www.whoscale.io/en/affiliate"
+    "website": "https://www.castmagic.io/",
+    "apply_url": "https://castmagic.firstpromoter.com/",
+    "source_url": "https://castmagic.firstpromoter.com/"
   },
   {
-    "brand_name": "Vyndra AI",
-    "brand_size": "emerging",
-    "category": "Software / Creator Tools / AI Video & Image Generation",
-    "commission": "25% recurring",
-    "website": "https://vyndra.ai/",
-    "apply_url": "https://vyndra.ai/affiliate-program",
-    "source_url": "https://vyndra.ai/affiliate-program"
+    "brand_name": "quso.ai",
+    "brand_size": "mid-size",
+    "category": "Software / AI Video Clipping & Social Content",
+    "commission": "30% recurring for life",
+    "website": "https://quso.ai/",
+    "apply_url": "https://quso.ai/affiliate-program",
+    "source_url": "https://quso.ai/affiliate-program"
   },
   {
-    "brand_name": "TurboCut",
-    "brand_size": "emerging",
-    "category": "Software / Creator Tools / AI Video Editing",
-    "commission": "20% for the first 12 paid months",
-    "website": "https://turbocut.ai/",
-    "apply_url": "https://turbocut.ai/affiliates/",
-    "source_url": "https://turbocut.ai/affiliates/"
+    "brand_name": "Hohem",
+    "brand_size": "mid-size",
+    "category": "Consumer Tech / Gimbals, Cameras & Creator Gear",
+    "commission": "10% average commission",
+    "website": "https://www.hohem.com/",
+    "apply_url": "https://www.hohem.com/affiliate",
+    "source_url": "https://www.hohem.com/affiliate"
   },
   {
-    "brand_name": "Rendley",
+    "brand_name": "DrawPost AI",
     "brand_size": "emerging",
-    "category": "Software / Creator Tools / AI Video Editing",
-    "commission": "30% recurring for 12 months",
-    "website": "https://rendley.com/",
-    "apply_url": "https://rendley.com/affiliates",
-    "source_url": "https://rendley.com/affiliates"
+    "category": "Software / AI Social Media & Creator Tools",
+    "commission": "30% recurring for up to 12 months",
+    "website": "https://www.drawpost.app/",
+    "apply_url": "https://www.drawpost.app/affiliates",
+    "source_url": "https://www.drawpost.app/affiliates"
   },
   {
-    "brand_name": "The Flavor Gang Canada",
+    "brand_name": "CaptionX",
     "brand_size": "emerging",
-    "category": "Food & Drinks / Seasonings & Flavor Products",
-    "commission": "Not publicly listed",
-    "website": "https://www.theflavorgang.ca/",
-    "apply_url": "https://www.theflavorgang.ca/pages/affiliate-program",
-    "source_url": "https://www.theflavorgang.ca/pages/affiliate-program"
+    "category": "Software / Video Editing & Auto-Captioning",
+    "commission": "30% recurring",
+    "website": "https://caption-x.com/",
+    "apply_url": "https://caption-x.com/affiliates",
+    "source_url": "https://caption-x.com/affiliates"
   },
   {
-    "brand_name": "Pick and Print",
+    "brand_name": "Hipclip",
     "brand_size": "emerging",
-    "category": "Creator Commerce / Custom Photo Gifts & Merchandise",
-    "commission": "12%",
-    "website": "https://pickandprint.ca/",
-    "apply_url": "https://pickandprint.ca/affiliate/",
-    "source_url": "https://pickandprint.ca/affiliate/"
-  },
-  {
-    "brand_name": "Assembly",
-    "brand_size": "emerging",
-    "category": "Software / Business & Creator Operations Tools",
-    "commission": "20% of referred payments for 12 months",
-    "website": "https://assembly.com/",
-    "apply_url": "https://assembly.com/affiliates-program",
-    "source_url": "https://assembly.com/affiliates-program"
+    "category": "Software / AI Video Editing & Content Repurposing",
+    "commission": "25% for the first year",
+    "website": "https://www.hipclip.ai/",
+    "apply_url": "https://www.hipclip.ai/affiliates",
+    "source_url": "https://www.hipclip.ai/affiliates"
   }
 ]
