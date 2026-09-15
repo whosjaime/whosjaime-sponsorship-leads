@@ -1,83 +1,164 @@
 [
   {
-    "brand_name": "Lexar",
+    "brand_name": "RØDE",
     "brand_size": "large",
-    "category": "Consumer Tech / Storage, Memory & PC Components",
-    "commission": "Up to 10%",
-    "website": "https://www.lexar.com/",
-    "apply_url": "https://www.lexar.com/gb/affiliate-program/",
-    "source_url": "https://www.lexar.com/gb/affiliate-program/"
+    "category": "Consumer Tech / Microphones, Audio & Creator Gear",
+    "commission": "15%",
+    "website": "https://rode.com/",
+    "apply_url": "https://af.uppromote.com/rodeaffiliateprogram/register",
+    "source_url": "https://help.rode.com/hc/en-us/articles/14241968264079-How-to-Request-Sponsorship-or-Partnership-with-R%C3%98DE"
   },
   {
-    "brand_name": "Shapr3D",
-    "brand_size": "mid-size",
-    "category": "Software / 3D Design, CAD & Creator Tools",
-    "commission": "20%",
-    "website": "https://www.shapr3d.com/",
-    "apply_url": "https://www.shapr3d.com/affiliate/program",
-    "source_url": "https://www.shapr3d.com/affiliate/program"
+    "brand_name": "Krisp",
+    "brand_size": "large",
+    "category": "Software / AI Audio, Meetings & Creator Tools",
+    "commission": "30% recurring for 12 months",
+    "website": "https://krisp.ai/",
+    "apply_url": "https://krisp.ai/partners/",
+    "source_url": "https://krisp.ai/partners/"
   },
   {
-    "brand_name": "Blaze",
+    "brand_name": "ScreenPal",
+    "brand_size": "large",
+    "category": "Software / Screen Recording & Video Editing",
+    "commission": "Not publicly listed",
+    "website": "https://screenpal.com/",
+    "apply_url": "https://screenpal.com/affiliate",
+    "source_url": "https://support.screenpal.com/portal/en/kb/articles/do-you-have-an-affiliate-program"
+  },
+  {
+    "brand_name": "Gamesplanet",
+    "brand_size": "large",
+    "category": "Gaming / PC Games & Digital Store",
+    "commission": "Not publicly listed",
+    "website": "https://us.gamesplanet.com/",
+    "apply_url": "https://gplnk.com/224869",
+    "source_url": "https://us.gamesplanet.com/community/news_updates/224867-the-gamesplanet-partner-program-for-affiliates"
+  },
+  {
+    "brand_name": "Eldorado.gg",
+    "brand_size": "large",
+    "category": "Gaming / Gaming Marketplace",
+    "commission": "Up to 50%",
+    "website": "https://www.eldorado.gg/",
+    "apply_url": "https://affiliates.eldorado.gg/",
+    "source_url": "https://affiliates.eldorado.gg/"
+  },
+  {
+    "brand_name": "ZENIKO",
     "brand_size": "mid-size",
+    "category": "Consumer Tech / Photography Lighting & Camera Accessories",
+    "commission": "Not publicly listed",
+    "website": "https://www.zeniko.com/",
+    "apply_url": "https://www.zeniko.com/pages/affiliate-program",
+    "source_url": "https://www.zeniko.com/pages/affiliate-program"
+  },
+  {
+    "brand_name": "Foxy AI",
+    "brand_size": "mid-size",
+    "category": "Software / AI Image, Video & Creator Tools",
+    "commission": "Up to 30% recurring",
+    "website": "https://foxy.ai/",
+    "apply_url": "https://foxy.ai/affiliates",
+    "source_url": "https://foxy.ai/affiliates"
+  },
+  {
+    "brand_name": "YouArt",
+    "brand_size": "mid-size",
+    "category": "Software / AI Video, Image & Creative Workflows",
+    "commission": "Not publicly listed",
+    "website": "https://youart.ai/",
+    "apply_url": "https://youart.ai/affiliate",
+    "source_url": "https://youart.ai/affiliate"
+  },
+  {
+    "brand_name": "Fannabe",
+    "brand_size": "mid-size",
+    "category": "Software / AI Image Generation & Virtual Creators",
+    "commission": "30% lifetime revenue share",
+    "website": "https://www.fannabe.com/",
+    "apply_url": "https://www.fannabe.com/affiliate",
+    "source_url": "https://www.fannabe.com/affiliate"
+  },
+  {
+    "brand_name": "VOSU.AI",
+    "brand_size": "mid-size",
+    "category": "Software / AI Video, Image, Music & Creator Workflows",
+    "commission": "30% including renewals",
+    "website": "https://vosu.ai/",
+    "apply_url": "https://vosu.ai/affiliate",
+    "source_url": "https://vosu.ai/affiliate"
+  },
+  {
+    "brand_name": "Elory",
+    "brand_size": "mid-size",
+    "category": "Consumer Gear / EDC, Tech Carry & Accessories",
+    "commission": "10%",
+    "website": "https://elory.co/",
+    "apply_url": "https://elory.co/pages/affiliate-program",
+    "source_url": "https://elory.co/pages/affiliate-program"
+  },
+  {
+    "brand_name": "Twin",
+    "brand_size": "mid-size",
+    "category": "Software / AI Agents & Automation",
+    "commission": "20% recurring for 12 months",
+    "website": "https://twin.so/",
+    "apply_url": "https://twin.so/affiliates/",
+    "source_url": "https://twin.so/affiliates/"
+  },
+  {
+    "brand_name": "Foodstocks",
+    "brand_size": "mid-size",
+    "category": "Food / Snacks & Creator Commerce",
+    "commission": "5%–10%+ starting commission",
+    "website": "https://foodstocks.id/",
+    "apply_url": "https://foodstocks.id/en/solutions/kol/",
+    "source_url": "https://foodstocks.id/en/solutions/kol/"
+  },
+  {
+    "brand_name": "Widemile",
+    "brand_size": "emerging",
+    "category": "Software / AI Video, Image & Creator Tools",
+    "commission": "25% creator code revenue share",
+    "website": "https://www.widemile.ai/",
+    "apply_url": "https://www.widemile.ai/creator-partner-program",
+    "source_url": "https://www.widemile.ai/creator-partner-program"
+  },
+  {
+    "brand_name": "Dume.ai",
+    "brand_size": "emerging",
+    "category": "Software / AI Productivity & Executive Assistant",
+    "commission": "Up to 15% recurring",
+    "website": "https://www.dume.ai/",
+    "apply_url": "https://www.dume.ai/affiliate",
+    "source_url": "https://www.dume.ai/affiliate"
+  },
+  {
+    "brand_name": "OneBite Japan",
+    "brand_size": "emerging",
+    "category": "Food / Japanese Snacks, Matcha & Subscription Boxes",
+    "commission": "Not publicly listed",
+    "website": "https://onebite-jp.com/",
+    "apply_url": "https://onebite-jp.com/affiliate",
+    "source_url": "https://onebite-jp.com/affiliate"
+  },
+  {
+    "brand_name": "Temso AI",
+    "brand_size": "emerging",
     "category": "Software / AI Marketing & Creator Tools",
-    "commission": "30% for the first two months, then 15% recurring",
-    "website": "https://www.blaze.ai/",
-    "apply_url": "https://www.blaze.ai/affiliates",
-    "source_url": "https://www.blaze.ai/affiliates"
+    "commission": "20% lifetime recurring",
+    "website": "https://www.temso.ai/",
+    "apply_url": "https://www.temso.ai/affiliate",
+    "source_url": "https://www.temso.ai/affiliate"
   },
   {
-    "brand_name": "Castmagic",
-    "brand_size": "mid-size",
-    "category": "Software / AI Podcast, Video & Content Repurposing",
-    "commission": "30% recurring",
-    "website": "https://www.castmagic.io/",
-    "apply_url": "https://castmagic.firstpromoter.com/",
-    "source_url": "https://castmagic.firstpromoter.com/"
-  },
-  {
-    "brand_name": "quso.ai",
-    "brand_size": "mid-size",
-    "category": "Software / AI Video Clipping & Social Content",
-    "commission": "30% recurring for life",
-    "website": "https://quso.ai/",
-    "apply_url": "https://quso.ai/affiliate-program",
-    "source_url": "https://quso.ai/affiliate-program"
-  },
-  {
-    "brand_name": "Hohem",
-    "brand_size": "mid-size",
-    "category": "Consumer Tech / Gimbals, Cameras & Creator Gear",
-    "commission": "10% average commission",
-    "website": "https://www.hohem.com/",
-    "apply_url": "https://www.hohem.com/affiliate",
-    "source_url": "https://www.hohem.com/affiliate"
-  },
-  {
-    "brand_name": "DrawPost AI",
+    "brand_name": "Lumesoon",
     "brand_size": "emerging",
-    "category": "Software / AI Social Media & Creator Tools",
-    "commission": "30% recurring for up to 12 months",
-    "website": "https://www.drawpost.app/",
-    "apply_url": "https://www.drawpost.app/affiliates",
-    "source_url": "https://www.drawpost.app/affiliates"
-  },
-  {
-    "brand_name": "CaptionX",
-    "brand_size": "emerging",
-    "category": "Software / Video Editing & Auto-Captioning",
-    "commission": "30% recurring",
-    "website": "https://caption-x.com/",
-    "apply_url": "https://caption-x.com/affiliates",
-    "source_url": "https://caption-x.com/affiliates"
-  },
-  {
-    "brand_name": "Hipclip",
-    "brand_size": "emerging",
-    "category": "Software / AI Video Editing & Content Repurposing",
-    "commission": "25% for the first year",
-    "website": "https://www.hipclip.ai/",
-    "apply_url": "https://www.hipclip.ai/affiliates",
-    "source_url": "https://www.hipclip.ai/affiliates"
+    "category": "Software / AI Voice, Scripts & Creator Tools",
+    "commission": "20% recurring for customer lifetime",
+    "website": "https://lumesoon.com/",
+    "apply_url": "https://lumesoon.com/affiliates",
+    "source_url": "https://lumesoon.com/affiliates"
   }
 ]
