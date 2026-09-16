@@ -1,164 +1,182 @@
 [
   {
-    "brand_name": "RØDE",
+    "brand_name": "Logitech",
     "brand_size": "large",
-    "category": "Consumer Tech / Microphones, Audio & Creator Gear",
-    "commission": "15%",
-    "website": "https://rode.com/",
-    "apply_url": "https://af.uppromote.com/rodeaffiliateprogram/register",
-    "source_url": "https://help.rode.com/hc/en-us/articles/14241968264079-How-to-Request-Sponsorship-or-Partnership-with-R%C3%98DE"
+    "category": "Consumer Tech / Gaming, PC Peripherals & Creator Gear",
+    "commission": "4%–10% standard commission",
+    "website": "https://www.logitech.com/",
+    "apply_url": "https://www.logitech.com/en-us/programs/affiliate-program",
+    "source_url": "https://www.logitech.com/en-us/programs/affiliate-program"
   },
   {
-    "brand_name": "Krisp",
+    "brand_name": "Belkin",
     "brand_size": "large",
-    "category": "Software / AI Audio, Meetings & Creator Tools",
-    "commission": "30% recurring for 12 months",
-    "website": "https://krisp.ai/",
-    "apply_url": "https://krisp.ai/partners/",
-    "source_url": "https://krisp.ai/partners/"
+    "category": "Consumer Tech / Charging, Mobile & Computer Accessories",
+    "commission": "Up to 8%",
+    "website": "https://www.belkin.com/",
+    "apply_url": "https://www.belkin.com/company/affiliates/",
+    "source_url": "https://www.belkin.com/company/affiliates/"
   },
   {
-    "brand_name": "ScreenPal",
+    "brand_name": "Writesonic",
     "brand_size": "large",
-    "category": "Software / Screen Recording & Video Editing",
-    "commission": "Not publicly listed",
-    "website": "https://screenpal.com/",
-    "apply_url": "https://screenpal.com/affiliate",
-    "source_url": "https://support.screenpal.com/portal/en/kb/articles/do-you-have-an-affiliate-program"
-  },
-  {
-    "brand_name": "Gamesplanet",
-    "brand_size": "large",
-    "category": "Gaming / PC Games & Digital Store",
-    "commission": "Not publicly listed",
-    "website": "https://us.gamesplanet.com/",
-    "apply_url": "https://gplnk.com/224869",
-    "source_url": "https://us.gamesplanet.com/community/news_updates/224867-the-gamesplanet-partner-program-for-affiliates"
-  },
-  {
-    "brand_name": "Eldorado.gg",
-    "brand_size": "large",
-    "category": "Gaming / Gaming Marketplace",
-    "commission": "Up to 50%",
-    "website": "https://www.eldorado.gg/",
-    "apply_url": "https://affiliates.eldorado.gg/",
-    "source_url": "https://affiliates.eldorado.gg/"
-  },
-  {
-    "brand_name": "ZENIKO",
-    "brand_size": "mid-size",
-    "category": "Consumer Tech / Photography Lighting & Camera Accessories",
-    "commission": "Not publicly listed",
-    "website": "https://www.zeniko.com/",
-    "apply_url": "https://www.zeniko.com/pages/affiliate-program",
-    "source_url": "https://www.zeniko.com/pages/affiliate-program"
-  },
-  {
-    "brand_name": "Foxy AI",
-    "brand_size": "mid-size",
-    "category": "Software / AI Image, Video & Creator Tools",
-    "commission": "Up to 30% recurring",
-    "website": "https://foxy.ai/",
-    "apply_url": "https://foxy.ai/affiliates",
-    "source_url": "https://foxy.ai/affiliates"
-  },
-  {
-    "brand_name": "YouArt",
-    "brand_size": "mid-size",
-    "category": "Software / AI Video, Image & Creative Workflows",
-    "commission": "Not publicly listed",
-    "website": "https://youart.ai/",
-    "apply_url": "https://youart.ai/affiliate",
-    "source_url": "https://youart.ai/affiliate"
-  },
-  {
-    "brand_name": "Fannabe",
-    "brand_size": "mid-size",
-    "category": "Software / AI Image Generation & Virtual Creators",
-    "commission": "30% lifetime revenue share",
-    "website": "https://www.fannabe.com/",
-    "apply_url": "https://www.fannabe.com/affiliate",
-    "source_url": "https://www.fannabe.com/affiliate"
-  },
-  {
-    "brand_name": "VOSU.AI",
-    "brand_size": "mid-size",
-    "category": "Software / AI Video, Image, Music & Creator Workflows",
-    "commission": "30% including renewals",
-    "website": "https://vosu.ai/",
-    "apply_url": "https://vosu.ai/affiliate",
-    "source_url": "https://vosu.ai/affiliate"
-  },
-  {
-    "brand_name": "Elory",
-    "brand_size": "mid-size",
-    "category": "Consumer Gear / EDC, Tech Carry & Accessories",
-    "commission": "10%",
-    "website": "https://elory.co/",
-    "apply_url": "https://elory.co/pages/affiliate-program",
-    "source_url": "https://elory.co/pages/affiliate-program"
-  },
-  {
-    "brand_name": "Twin",
-    "brand_size": "mid-size",
-    "category": "Software / AI Agents & Automation",
+    "category": "Software / AI Marketing, SEO & Creator Tools",
     "commission": "20% recurring for 12 months",
-    "website": "https://twin.so/",
-    "apply_url": "https://twin.so/affiliates/",
-    "source_url": "https://twin.so/affiliates/"
+    "website": "https://writesonic.com/",
+    "apply_url": "https://affiliates.writesonic.com/",
+    "source_url": "https://writesonic.com/affiliate"
   },
   {
-    "brand_name": "Foodstocks",
+    "brand_name": "Murf AI",
+    "brand_size": "large",
+    "category": "Software / AI Voice, Audio & Creator Tools",
+    "commission": "20% recurring for up to 24 months",
+    "website": "https://murf.ai/",
+    "apply_url": "https://murf.ai/partner-with-us/affiliate",
+    "source_url": "https://murf.ai/partner-with-us/affiliate"
+  },
+  {
+    "brand_name": "Synthesia",
+    "brand_size": "large",
+    "category": "Software / AI Video & Creator Tools",
+    "commission": "25%",
+    "website": "https://www.synthesia.io/",
+    "apply_url": "https://www.synthesia.io/partners/affiliates",
+    "source_url": "https://www.synthesia.io/partners/affiliates"
+  },
+  {
+    "brand_name": "Mackie",
     "brand_size": "mid-size",
-    "category": "Food / Snacks & Creator Commerce",
-    "commission": "5%–10%+ starting commission",
-    "website": "https://foodstocks.id/",
-    "apply_url": "https://foodstocks.id/en/solutions/kol/",
-    "source_url": "https://foodstocks.id/en/solutions/kol/"
+    "category": "Consumer Tech / Microphones, Audio & Creator Gear",
+    "commission": "8%",
+    "website": "https://mackie.com/",
+    "apply_url": "https://mackie.com/en/artist-program/",
+    "source_url": "https://mackie.com/en/artist-program/"
   },
   {
-    "brand_name": "Widemile",
-    "brand_size": "emerging",
-    "category": "Software / AI Video, Image & Creator Tools",
-    "commission": "25% creator code revenue share",
-    "website": "https://www.widemile.ai/",
-    "apply_url": "https://www.widemile.ai/creator-partner-program",
-    "source_url": "https://www.widemile.ai/creator-partner-program"
+    "brand_name": "ORICO",
+    "brand_size": "mid-size",
+    "category": "Consumer Tech / Storage, Docks & PC Accessories",
+    "commission": "6% base; up to 10%–15% on selected categories",
+    "website": "https://oricotechs.com/",
+    "apply_url": "https://oricotechs.com/pages/affiliate",
+    "source_url": "https://oricotechs.com/pages/affiliate"
   },
   {
-    "brand_name": "Dume.ai",
-    "brand_size": "emerging",
-    "category": "Software / AI Productivity & Executive Assistant",
-    "commission": "Up to 15% recurring",
-    "website": "https://www.dume.ai/",
-    "apply_url": "https://www.dume.ai/affiliate",
-    "source_url": "https://www.dume.ai/affiliate"
+    "brand_name": "EverBee",
+    "brand_size": "mid-size",
+    "category": "Software / E-commerce, Creator Commerce & Analytics",
+    "commission": "30% recurring for 12 months",
+    "website": "https://www.everbee.io/",
+    "apply_url": "https://www.everbee.io/affiliates",
+    "source_url": "https://www.everbee.io/affiliates"
   },
   {
-    "brand_name": "OneBite Japan",
-    "brand_size": "emerging",
-    "category": "Food / Japanese Snacks, Matcha & Subscription Boxes",
-    "commission": "Not publicly listed",
-    "website": "https://onebite-jp.com/",
-    "apply_url": "https://onebite-jp.com/affiliate",
-    "source_url": "https://onebite-jp.com/affiliate"
+    "brand_name": "Zens",
+    "brand_size": "mid-size",
+    "category": "Consumer Tech / Wireless Charging & Mobile Accessories",
+    "commission": "At least 7%",
+    "website": "https://zens.tech/",
+    "apply_url": "https://zens.tech/pages/affiliate-program",
+    "source_url": "https://zens.tech/pages/affiliate-program"
   },
   {
-    "brand_name": "Temso AI",
-    "brand_size": "emerging",
-    "category": "Software / AI Marketing & Creator Tools",
-    "commission": "20% lifetime recurring",
-    "website": "https://www.temso.ai/",
-    "apply_url": "https://www.temso.ai/affiliate",
-    "source_url": "https://www.temso.ai/affiliate"
+    "brand_name": "Ulanzi",
+    "brand_size": "mid-size",
+    "category": "Consumer Tech / Camera, Mobile & Creator Gear",
+    "commission": "10%–12%",
+    "website": "https://www.ulanzi.com/",
+    "apply_url": "https://www.ulanzi.com/pages/ulanzi-affiliate-program",
+    "source_url": "https://www.ulanzi.com/pages/ulanzi-affiliate-program"
   },
   {
-    "brand_name": "Lumesoon",
+    "brand_name": "systeme.io",
+    "brand_size": "mid-size",
+    "category": "Software / Marketing, Funnels & Creator Business Tools",
+    "commission": "60% lifetime recurring",
+    "website": "https://systeme.io/",
+    "apply_url": "https://systeme.io/affiliate-program",
+    "source_url": "https://systeme.io/affiliate-program"
+  },
+  {
+    "brand_name": "Sniped",
+    "brand_size": "mid-size",
+    "category": "Consumer Tech / Phone Accessories, Charging & Camera Gear",
+    "commission": "Up to 10% per sale; 12% at $10K/month",
+    "website": "https://sniped.com/",
+    "apply_url": "https://sniped.com/creators",
+    "source_url": "https://sniped.com/creators"
+  },
+  {
+    "brand_name": "VidMachine",
     "brand_size": "emerging",
-    "category": "Software / AI Voice, Scripts & Creator Tools",
-    "commission": "20% recurring for customer lifetime",
-    "website": "https://lumesoon.com/",
-    "apply_url": "https://lumesoon.com/affiliates",
-    "source_url": "https://lumesoon.com/affiliates"
+    "category": "Software / AI Video Automation & Short-Form Creator Tools",
+    "commission": "20% recurring",
+    "website": "https://vidmachine.ai/",
+    "apply_url": "https://vidmachine.ai/affiliate-program",
+    "source_url": "https://vidmachine.ai/affiliate-program"
+  },
+  {
+    "brand_name": "CreateNew AI",
+    "brand_size": "emerging",
+    "category": "Software / AI Video & Creator Tools",
+    "commission": "20% recurring",
+    "website": "https://createnew.ai/",
+    "apply_url": "https://createnew.ai/affiliate-program",
+    "source_url": "https://createnew.ai/affiliate-program"
+  },
+  {
+    "brand_name": "GenFlick",
+    "brand_size": "emerging",
+    "category": "Software / AI Video Generation & Filmmaking Tools",
+    "commission": "20% recurring",
+    "website": "https://www.genflick.com/",
+    "apply_url": "https://www.genflick.com/affiliates",
+    "source_url": "https://www.genflick.com/affiliates"
+  },
+  {
+    "brand_name": "Blipix",
+    "brand_size": "emerging",
+    "category": "Software / AI Faceless Video & Creator Tools",
+    "commission": "30% recurring",
+    "website": "https://blipix.pro/",
+    "apply_url": "https://blipix.pro/affiliate",
+    "source_url": "https://blipix.pro/affiliate"
+  },
+  {
+    "brand_name": "UGCVideo AI",
+    "brand_size": "emerging",
+    "category": "Software / AI UGC Video & Advertising Tools",
+    "commission": "30% lifetime commissions",
+    "website": "https://www.ugcvideo.ai/",
+    "apply_url": "https://www.ugcvideo.ai/affiliate-program",
+    "source_url": "https://www.ugcvideo.ai/affiliate-program"
+  },
+  {
+    "brand_name": "LocoYoko Coffee",
+    "brand_size": "emerging",
+    "category": "Food & Drinks / Coffee",
+    "commission": "12% starting; up to 30%",
+    "website": "https://locoyoko.com/",
+    "apply_url": "https://locoyoko.com/pages/affiliate-program",
+    "source_url": "https://locoyoko.com/pages/affiliate-program"
+  },
+  {
+    "brand_name": "3DKeycap",
+    "brand_size": "emerging",
+    "category": "Gaming / Mechanical Keyboards & Custom Keycaps",
+    "commission": "Up to 15%",
+    "website": "https://3dkeycap.com/",
+    "apply_url": "https://3dkeycap.com/pages/affiliate-program",
+    "source_url": "https://3dkeycap.com/pages/affiliate-program"
+  },
+  {
+    "brand_name": "FlowDictate",
+    "brand_size": "emerging",
+    "category": "Software / Voice Dictation & Productivity Tools",
+    "commission": "30% recurring for 12 months",
+    "website": "https://www.flowdictate.com/",
+    "apply_url": "https://www.flowdictate.com/affiliates",
+    "source_url": "https://www.flowdictate.com/affiliates"
   }
 ]
