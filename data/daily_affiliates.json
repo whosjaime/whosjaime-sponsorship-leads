@@ -1,182 +1,182 @@
 [
   {
-    "brand_name": "Logitech",
+    "brand_name": "Namecheap",
     "brand_size": "large",
-    "category": "Consumer Tech / Gaming, PC Peripherals & Creator Gear",
-    "commission": "4%–10% standard commission",
-    "website": "https://www.logitech.com/",
-    "apply_url": "https://www.logitech.com/en-us/programs/affiliate-program",
-    "source_url": "https://www.logitech.com/en-us/programs/affiliate-program"
+    "category": "Software / Domains, Hosting & Creator Websites",
+    "commission": "20% on domains/private email/PremiumDNS; 35% on hosting and SSL for qualifying first purchases",
+    "website": "https://www.namecheap.com/",
+    "apply_url": "https://www.namecheap.com/affiliates/",
+    "source_url": "https://www.namecheap.com/affiliates/"
   },
   {
-    "brand_name": "Belkin",
+    "brand_name": "MPB",
     "brand_size": "large",
-    "category": "Consumer Tech / Charging, Mobile & Computer Accessories",
-    "commission": "Up to 8%",
-    "website": "https://www.belkin.com/",
-    "apply_url": "https://www.belkin.com/company/affiliates/",
-    "source_url": "https://www.belkin.com/company/affiliates/"
+    "category": "Consumer Tech / Used Camera & Video Gear",
+    "commission": "2% base on purchases; $10 new-customer and $5 returning-customer gear-sale bounties",
+    "website": "https://www.mpb.com/",
+    "apply_url": "https://www.mpb.com/en-us/info/affiliates",
+    "source_url": "https://www.mpb.com/en-us/info/affiliates"
   },
   {
-    "brand_name": "Writesonic",
+    "brand_name": "Sync.com",
     "brand_size": "large",
-    "category": "Software / AI Marketing, SEO & Creator Tools",
+    "category": "Software / Cloud Storage & Creator File Management",
+    "commission": "Up to $150 per sale",
+    "website": "https://www.sync.com/",
+    "apply_url": "https://www.sync.com/affiliates/",
+    "source_url": "https://www.sync.com/affiliates/"
+  },
+  {
+    "brand_name": "Skytech Gaming",
+    "brand_size": "large",
+    "category": "Gaming / Prebuilt Gaming PCs",
+    "commission": "Up to 6%",
+    "website": "https://skytechgaming.com/",
+    "apply_url": "https://skytechgaming.com/affiliate-program",
+    "source_url": "https://skytechgaming.com/affiliate-program"
+  },
+  {
+    "brand_name": "Carnivore Crisps",
+    "brand_size": "large",
+    "category": "Food & Drinks / High-Protein Snacks",
+    "commission": "Not publicly listed",
+    "website": "https://carnivorecrisps.com/",
+    "apply_url": "https://carnivorecrisps.com/pages/collab",
+    "source_url": "https://carnivorecrisps.com/pages/collab"
+  },
+  {
+    "brand_name": "Mavix",
+    "brand_size": "mid-size",
+    "category": "Gaming / Gaming Chairs, Desks & Accessories",
+    "commission": "Not publicly listed",
+    "website": "https://www.mavix.com/",
+    "apply_url": "https://www.mavix.com/pages/affiliate-program",
+    "source_url": "https://www.mavix.com/pages/affiliate-program"
+  },
+  {
+    "brand_name": "NiSi Optics USA",
+    "brand_size": "mid-size",
+    "category": "Consumer Tech / Camera Filters, Lenses & Creator Gear",
+    "commission": "10% on most sales; 5% on lenses",
+    "website": "https://nisiopticsusa.com/",
+    "apply_url": "https://nisiopticsusa.com/affiliate-registration/",
+    "source_url": "https://nisiopticsusa.com/affiliate-registration/"
+  },
+  {
+    "brand_name": "Leofoto USA",
+    "brand_size": "mid-size",
+    "category": "Consumer Tech / Tripods & Photography Gear",
+    "commission": "Up to 8%–10%",
+    "website": "https://leofotousa.com/",
+    "apply_url": "https://leofotousa.com/pages/affiliate",
+    "source_url": "https://leofotousa.com/pages/affiliate"
+  },
+  {
+    "brand_name": "HEIPI",
+    "brand_size": "mid-size",
+    "category": "Consumer Tech / Photography Tripods & Creator Gear",
+    "commission": "10% per sale",
+    "website": "https://heipivision.com/",
+    "apply_url": "https://ui.awin.com/merchant-profile/125190",
+    "source_url": "https://ui.awin.com/merchant-profile/125190"
+  },
+  {
+    "brand_name": "TuiSnack",
+    "brand_size": "mid-size",
+    "category": "Food & Drinks / Imported Snacks & Drinks",
+    "commission": "Not publicly listed",
+    "website": "https://tuisnack.com/",
+    "apply_url": "https://tuisnack.com/pages/affiliate-program",
+    "source_url": "https://tuisnack.com/pages/affiliate-program"
+  },
+  {
+    "brand_name": "Japan Candy Box",
+    "brand_size": "mid-size",
+    "category": "Food & Drinks / Japanese Snacks & Subscription Boxes",
+    "commission": "10% per new signup",
+    "website": "https://www.japancandybox.com/",
+    "apply_url": "https://www.japancandybox.com/pages/affiliate",
+    "source_url": "https://www.japancandybox.com/pages/affiliate"
+  },
+  {
+    "brand_name": "Munch Better",
+    "brand_size": "mid-size",
+    "category": "Food & Drinks / High-Protein Functional Snacks",
+    "commission": "10% of net sales",
+    "website": "https://munchbetter.com/",
+    "apply_url": "https://ui.awin.com/merchant-profile-terms/116061",
+    "source_url": "https://ui.awin.com/merchant-profile-terms/116061"
+  },
+  {
+    "brand_name": "Milano Munchies",
+    "brand_size": "mid-size",
+    "category": "Food & Drinks / Italian Snack Subscription Boxes",
+    "commission": "$10 per new subscription purchase",
+    "website": "https://milanomunchies.com/",
+    "apply_url": "https://milanomunchies.refersion.com/affiliate/registration",
+    "source_url": "https://milanomunchies.com/pages/join-our-affiliate-program"
+  },
+  {
+    "brand_name": "ReelForge AI",
+    "brand_size": "emerging",
+    "category": "Software / AI Video & Creator Tools",
+    "commission": "30% recurring for 12 months",
+    "website": "https://reelforgeai.io/",
+    "apply_url": "https://reelforgeai.io/become-affiliate",
+    "source_url": "https://reelforgeai.io/become-affiliate"
+  },
+  {
+    "brand_name": "AITuber",
+    "brand_size": "emerging",
+    "category": "Software / Faceless AI Video & YouTube Tools",
+    "commission": "30% lifetime recurring",
+    "website": "https://aituber.app/",
+    "apply_url": "https://aituber.app/affiliates/",
+    "source_url": "https://aituber.app/affiliates/"
+  },
+  {
+    "brand_name": "DojoClip",
+    "brand_size": "emerging",
+    "category": "Software / AI Video, Music & Creator Tools",
+    "commission": "30% recurring for up to 12 months",
+    "website": "https://dojoclip.com/",
+    "apply_url": "https://dojoclip.com/en/affiliate",
+    "source_url": "https://dojoclip.com/en/affiliate"
+  },
+  {
+    "brand_name": "Creaswipe",
+    "brand_size": "emerging",
+    "category": "Software / Creator Research & Content Inspiration",
+    "commission": "Not publicly listed",
+    "website": "https://www.creaswipe.com/",
+    "apply_url": "https://www.creaswipe.com/affiliates",
+    "source_url": "https://www.creaswipe.com/affiliates"
+  },
+  {
+    "brand_name": "OptimaClip",
+    "brand_size": "emerging",
+    "category": "Software / Video Clipping & Creator Tools",
     "commission": "20% recurring for 12 months",
-    "website": "https://writesonic.com/",
-    "apply_url": "https://affiliates.writesonic.com/",
-    "source_url": "https://writesonic.com/affiliate"
+    "website": "https://www.optimaclip.com/",
+    "apply_url": "https://www.optimaclip.com/affiliates",
+    "source_url": "https://www.optimaclip.com/affiliates"
   },
   {
-    "brand_name": "Murf AI",
-    "brand_size": "large",
-    "category": "Software / AI Voice, Audio & Creator Tools",
-    "commission": "20% recurring for up to 24 months",
-    "website": "https://murf.ai/",
-    "apply_url": "https://murf.ai/partner-with-us/affiliate",
-    "source_url": "https://murf.ai/partner-with-us/affiliate"
-  },
-  {
-    "brand_name": "Synthesia",
-    "brand_size": "large",
-    "category": "Software / AI Video & Creator Tools",
-    "commission": "25%",
-    "website": "https://www.synthesia.io/",
-    "apply_url": "https://www.synthesia.io/partners/affiliates",
-    "source_url": "https://www.synthesia.io/partners/affiliates"
-  },
-  {
-    "brand_name": "Mackie",
-    "brand_size": "mid-size",
-    "category": "Consumer Tech / Microphones, Audio & Creator Gear",
-    "commission": "8%",
-    "website": "https://mackie.com/",
-    "apply_url": "https://mackie.com/en/artist-program/",
-    "source_url": "https://mackie.com/en/artist-program/"
-  },
-  {
-    "brand_name": "ORICO",
-    "brand_size": "mid-size",
-    "category": "Consumer Tech / Storage, Docks & PC Accessories",
-    "commission": "6% base; up to 10%–15% on selected categories",
-    "website": "https://oricotechs.com/",
-    "apply_url": "https://oricotechs.com/pages/affiliate",
-    "source_url": "https://oricotechs.com/pages/affiliate"
-  },
-  {
-    "brand_name": "EverBee",
-    "brand_size": "mid-size",
-    "category": "Software / E-commerce, Creator Commerce & Analytics",
-    "commission": "30% recurring for 12 months",
-    "website": "https://www.everbee.io/",
-    "apply_url": "https://www.everbee.io/affiliates",
-    "source_url": "https://www.everbee.io/affiliates"
-  },
-  {
-    "brand_name": "Zens",
-    "brand_size": "mid-size",
-    "category": "Consumer Tech / Wireless Charging & Mobile Accessories",
-    "commission": "At least 7%",
-    "website": "https://zens.tech/",
-    "apply_url": "https://zens.tech/pages/affiliate-program",
-    "source_url": "https://zens.tech/pages/affiliate-program"
-  },
-  {
-    "brand_name": "Ulanzi",
-    "brand_size": "mid-size",
-    "category": "Consumer Tech / Camera, Mobile & Creator Gear",
-    "commission": "10%–12%",
-    "website": "https://www.ulanzi.com/",
-    "apply_url": "https://www.ulanzi.com/pages/ulanzi-affiliate-program",
-    "source_url": "https://www.ulanzi.com/pages/ulanzi-affiliate-program"
-  },
-  {
-    "brand_name": "systeme.io",
-    "brand_size": "mid-size",
-    "category": "Software / Marketing, Funnels & Creator Business Tools",
-    "commission": "60% lifetime recurring",
-    "website": "https://systeme.io/",
-    "apply_url": "https://systeme.io/affiliate-program",
-    "source_url": "https://systeme.io/affiliate-program"
-  },
-  {
-    "brand_name": "Sniped",
-    "brand_size": "mid-size",
-    "category": "Consumer Tech / Phone Accessories, Charging & Camera Gear",
-    "commission": "Up to 10% per sale; 12% at $10K/month",
-    "website": "https://sniped.com/",
-    "apply_url": "https://sniped.com/creators",
-    "source_url": "https://sniped.com/creators"
-  },
-  {
-    "brand_name": "VidMachine",
+    "brand_name": "DRIPZ Energy",
     "brand_size": "emerging",
-    "category": "Software / AI Video Automation & Short-Form Creator Tools",
-    "commission": "20% recurring",
-    "website": "https://vidmachine.ai/",
-    "apply_url": "https://vidmachine.ai/affiliate-program",
-    "source_url": "https://vidmachine.ai/affiliate-program"
+    "category": "Food & Drinks / Energy & Caffeine",
+    "commission": "Not publicly listed",
+    "website": "https://dripzenergy.com/",
+    "apply_url": "https://dripzenergy.com/pages/affiliate",
+    "source_url": "https://dripzenergy.com/pages/affiliate"
   },
   {
-    "brand_name": "CreateNew AI",
+    "brand_name": "DRYBOX",
     "brand_size": "emerging",
-    "category": "Software / AI Video & Creator Tools",
-    "commission": "20% recurring",
-    "website": "https://createnew.ai/",
-    "apply_url": "https://createnew.ai/affiliate-program",
-    "source_url": "https://createnew.ai/affiliate-program"
-  },
-  {
-    "brand_name": "GenFlick",
-    "brand_size": "emerging",
-    "category": "Software / AI Video Generation & Filmmaking Tools",
-    "commission": "20% recurring",
-    "website": "https://www.genflick.com/",
-    "apply_url": "https://www.genflick.com/affiliates",
-    "source_url": "https://www.genflick.com/affiliates"
-  },
-  {
-    "brand_name": "Blipix",
-    "brand_size": "emerging",
-    "category": "Software / AI Faceless Video & Creator Tools",
-    "commission": "30% recurring",
-    "website": "https://blipix.pro/",
-    "apply_url": "https://blipix.pro/affiliate",
-    "source_url": "https://blipix.pro/affiliate"
-  },
-  {
-    "brand_name": "UGCVideo AI",
-    "brand_size": "emerging",
-    "category": "Software / AI UGC Video & Advertising Tools",
-    "commission": "30% lifetime commissions",
-    "website": "https://www.ugcvideo.ai/",
-    "apply_url": "https://www.ugcvideo.ai/affiliate-program",
-    "source_url": "https://www.ugcvideo.ai/affiliate-program"
-  },
-  {
-    "brand_name": "LocoYoko Coffee",
-    "brand_size": "emerging",
-    "category": "Food & Drinks / Coffee",
-    "commission": "12% starting; up to 30%",
-    "website": "https://locoyoko.com/",
-    "apply_url": "https://locoyoko.com/pages/affiliate-program",
-    "source_url": "https://locoyoko.com/pages/affiliate-program"
-  },
-  {
-    "brand_name": "3DKeycap",
-    "brand_size": "emerging",
-    "category": "Gaming / Mechanical Keyboards & Custom Keycaps",
-    "commission": "Up to 15%",
-    "website": "https://3dkeycap.com/",
-    "apply_url": "https://3dkeycap.com/pages/affiliate-program",
-    "source_url": "https://3dkeycap.com/pages/affiliate-program"
-  },
-  {
-    "brand_name": "FlowDictate",
-    "brand_size": "emerging",
-    "category": "Software / Voice Dictation & Productivity Tools",
-    "commission": "30% recurring for 12 months",
-    "website": "https://www.flowdictate.com/",
-    "apply_url": "https://www.flowdictate.com/affiliates",
-    "source_url": "https://www.flowdictate.com/affiliates"
+    "category": "Food & Drinks / Snacks",
+    "commission": "10% per approved sale",
+    "website": "https://www.tastedrybox.com/",
+    "apply_url": "https://www.tastedrybox.com/pages/drybox-affiliate-program",
+    "source_url": "https://www.tastedrybox.com/pages/drybox-affiliate-program"
   }
 ]
