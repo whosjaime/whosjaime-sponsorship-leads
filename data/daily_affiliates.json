@@ -1,182 +1,182 @@
 [
   {
-    "brand_name": "Anker",
+    "brand_name": "GoPro",
     "brand_size": "large",
-    "category": "Consumer Tech / Charging, Power Banks & Accessories",
-    "commission": "8% on qualifying sales",
-    "website": "https://www.anker.com/",
-    "apply_url": "https://www.anker.com/become-an-affiliate",
-    "source_url": "https://www.anker.com/become-an-affiliate"
+    "category": "Consumer Tech / Action Cameras & Creator Gear",
+    "commission": "3% per qualifying sale",
+    "website": "https://gopro.com/",
+    "apply_url": "https://gopro.com/en/us/legal/gopro-affiliate-program",
+    "source_url": "https://gopro.com/en/nl/legal/gopro-affiliate-program"
   },
   {
-    "brand_name": "Acer",
+    "brand_name": "Malwarebytes",
     "brand_size": "large",
-    "category": "Consumer Tech / PCs, Laptops & Gaming Hardware",
-    "commission": "3.5% baseline on confirmed sales (Acer India program)",
-    "website": "https://www.acer.com/",
-    "apply_url": "https://store.acer.com/en-in/acer-affiliate-program",
-    "source_url": "https://store.acer.com/en-in/acer-affiliate-program"
+    "category": "Software / Cybersecurity & Privacy",
+    "commission": "Up to 30% per sale",
+    "website": "https://www.malwarebytes.com/",
+    "apply_url": "https://www.malwarebytes.com/affiliates",
+    "source_url": "https://www.malwarebytes.com/affiliates"
   },
   {
-    "brand_name": "Buffer",
+    "brand_name": "WP Engine",
     "brand_size": "large",
-    "category": "Software / Social Media & Creator Tools",
-    "commission": "25% recurring on new customers for 12 months",
-    "website": "https://buffer.com/",
-    "apply_url": "https://buffer.com/partners",
-    "source_url": "https://buffer.com/partners"
+    "category": "Software / Web Hosting & Creator Websites",
+    "commission": "$100 on Lite; $200 minimum or first month's payment, whichever is higher, on other qualifying hosting plans",
+    "website": "https://wpengine.com/",
+    "apply_url": "https://wpengine.com/affiliate-program/",
+    "source_url": "https://wpengine.com/affiliate-program/"
   },
   {
-    "brand_name": "Hootsuite",
+    "brand_name": "PowerA",
     "brand_size": "large",
-    "category": "Software / Social Media Management",
-    "commission": "20% of first-month revenue for qualifying Standard referrals; higher payout available on Advanced plans",
-    "website": "https://www.hootsuite.com/",
-    "apply_url": "https://www.hootsuite.com/affiliate-program",
-    "source_url": "https://www.hootsuite.com/affiliate-program"
+    "category": "Gaming / Controllers & Accessories",
+    "commission": "Up to 10% on qualifying sales",
+    "website": "https://www.powera.com/",
+    "apply_url": "https://www.powera.com/affiliates/",
+    "source_url": "https://www.powera.com/affiliates/"
   },
   {
-    "brand_name": "Circle",
+    "brand_name": "NEEWER",
     "brand_size": "large",
-    "category": "Software / Creator Communities & Memberships",
-    "commission": "$100 per referred customer plus 10%-20% recurring depending on tier",
-    "website": "https://circle.so/",
-    "apply_url": "https://circle.so/affiliate-program",
-    "source_url": "https://circle.so/fr/affiliate-program"
+    "category": "Consumer Tech / Camera, Lighting & Creator Gear",
+    "commission": "Not publicly listed",
+    "website": "https://neewer.com/",
+    "apply_url": "https://neewer.com/pages/affiliate-program",
+    "source_url": "https://neewer.com/en-kr/pages/affiliate-program"
   },
   {
-    "brand_name": "MCHOSE",
+    "brand_name": "Satechi",
     "brand_size": "mid-size",
-    "category": "Gaming / Keyboards, Mice & Peripherals",
-    "commission": "5% per sale",
-    "website": "https://www.mchose.store/",
-    "apply_url": "https://www.mchose.store/pages/affiliates",
-    "source_url": "https://www.mchose.store/pages/affiliates"
+    "category": "Consumer Tech / Hubs, Charging & PC Accessories",
+    "commission": "Up to 3% per sale via Takeads",
+    "website": "https://satechi.net/",
+    "apply_url": "https://takeads.com/merchants/satechi-us/",
+    "source_url": "https://takeads.com/merchants/satechi-us/"
   },
   {
-    "brand_name": "Tilta",
+    "brand_name": "Native Union",
     "brand_size": "mid-size",
-    "category": "Consumer Tech / Camera Rigs & Filmmaking Gear",
-    "commission": "5% on sales",
-    "website": "https://tilta.com/",
-    "apply_url": "https://tilta.com/affiliate-program/",
-    "source_url": "https://tilta.com/affiliate-program/"
+    "category": "Consumer Tech / Mobile & Desk Accessories",
+    "commission": "10% per sale",
+    "website": "https://www.nativeunion.com/",
+    "apply_url": "https://www.nativeunion.com/pages/collab",
+    "source_url": "https://www.nativeunion.com/pages/collab"
   },
   {
-    "brand_name": "Hailuo AI",
+    "brand_name": "PureTrak",
     "brand_size": "mid-size",
-    "category": "Software / AI Video & Creator Tools",
-    "commission": "10%-30% per paid referral",
-    "website": "https://hailuoai.video/",
-    "apply_url": "https://hailuoai.video/affiliate",
-    "source_url": "https://hailuoai.video/affiliate"
+    "category": "Gaming / Mice, Mousepads & Peripherals",
+    "commission": "10%-15% depending on sales tier",
+    "website": "https://www.puretrak.com/",
+    "apply_url": "https://www.puretrak.com/pages/affiliate",
+    "source_url": "https://www.puretrak.com/pages/affiliate"
   },
   {
-    "brand_name": "Zebracat",
+    "brand_name": "SUPCASE",
     "brand_size": "mid-size",
-    "category": "Software / AI Video Creation",
-    "commission": "30% recurring for the lifetime of each referred customer",
-    "website": "https://zebracat.ai/",
-    "apply_url": "https://zebracat.ai/affiliate",
-    "source_url": "https://zebracat.ai/affiliate"
+    "category": "Consumer Tech / Phone, Tablet & Device Accessories",
+    "commission": "Not publicly listed",
+    "website": "https://supcase.com/",
+    "apply_url": "https://supcase.com/pages/creator-affiliate-program",
+    "source_url": "https://supcase.com/pages/creator-affiliate-program"
   },
   {
-    "brand_name": "Castos",
+    "brand_name": "EasySMX",
     "brand_size": "mid-size",
-    "category": "Software / Podcast Hosting & Creator Tools",
-    "commission": "25% for the first 12 months of each referral",
-    "website": "https://castos.com/",
-    "apply_url": "https://castos.com/affiliates/",
-    "source_url": "https://castos.com/affiliates/"
+    "category": "Gaming / Controllers & Gaming Accessories",
+    "commission": "Not publicly listed",
+    "website": "https://www.easysmx.com/",
+    "apply_url": "https://www.easysmx.com/pages/affiliate-program",
+    "source_url": "https://www.easysmx.com/pages/affiliate-program"
   },
   {
-    "brand_name": "PodcastAI",
+    "brand_name": "LAMZU",
     "brand_size": "mid-size",
+    "category": "Gaming / Mice & Esports Peripherals",
+    "commission": "Up to 5% per sale",
+    "website": "https://lamzu.com/",
+    "apply_url": "https://lamzu.com/pages/affiliate-program",
+    "source_url": "https://lamzu.com/pages/affiliate-program"
+  },
+  {
+    "brand_name": "Fliki",
+    "brand_size": "mid-size",
+    "category": "Software / AI Video, Voice & Creator Tools",
+    "commission": "30% lifetime commission",
+    "website": "https://fliki.ai/",
+    "apply_url": "https://fliki.ai/affiliate-program",
+    "source_url": "https://fliki.ai/affiliate-program"
+  },
+  {
+    "brand_name": "OutlierKit",
+    "brand_size": "mid-size",
+    "category": "Software / YouTube Research & Creator Growth",
+    "commission": "Recurring commission on the first 12 payments; rate not publicly listed",
+    "website": "https://outlierkit.com/",
+    "apply_url": "https://outlierkit.com/p/affiliate",
+    "source_url": "https://outlierkit.com/p/affiliate"
+  },
+  {
+    "brand_name": "QRDGame",
+    "brand_size": "emerging",
+    "category": "Gaming / Controllers & Handheld Accessories",
+    "commission": "Up to 10% per sale",
+    "website": "https://qrdgame.com/",
+    "apply_url": "https://qrdgame.com/pages/qrd-affiliate-program",
+    "source_url": "https://qrdgame.com/pages/qrd-affiliate-program"
+  },
+  {
+    "brand_name": "PlexiCam",
+    "brand_size": "emerging",
+    "category": "Consumer Tech / Webcam & Camera Mounts",
+    "commission": "10% per sale",
+    "website": "https://www.plexicam.com/",
+    "apply_url": "https://www.plexicam.com/en-ca/pages/affiliate-program",
+    "source_url": "https://www.plexicam.com/en-ca/pages/affiliate-program"
+  },
+  {
+    "brand_name": "PodcastorAI",
+    "brand_size": "emerging",
     "category": "Software / AI Podcast & Creator Tools",
-    "commission": "30% recurring",
-    "website": "https://podcastai.com/",
-    "apply_url": "https://podcastai.com/affiliates",
-    "source_url": "https://podcastai.com/affiliates"
-  },
-  {
-    "brand_name": "Podseeker",
-    "brand_size": "mid-size",
-    "category": "Software / Podcast Research, PR & Outreach",
-    "commission": "20% recurring for the lifetime of each referred customer",
-    "website": "https://www.podseeker.co/",
-    "apply_url": "https://www.podseeker.co/affiliate",
-    "source_url": "https://www.podseeker.co/affiliate"
-  },
-  {
-    "brand_name": "Northflow",
-    "brand_size": "mid-size",
-    "category": "Software / Podcast Production & Creator Operations",
-    "commission": "25% recurring",
-    "website": "https://northflow.io/",
-    "apply_url": "https://northflow.io/affiliates",
-    "source_url": "https://northflow.io/affiliates"
-  },
-  {
-    "brand_name": "Creator AI",
-    "brand_size": "emerging",
-    "category": "Software / AI Creator Tools",
-    "commission": "20% recurring for up to 12 months per customer",
-    "website": "https://trycreatorai.com/",
-    "apply_url": "https://trycreatorai.com/affiliate-program",
-    "source_url": "https://trycreatorai.com/affiliate-program"
-  },
-  {
-    "brand_name": "DarkBeacon",
-    "brand_size": "emerging",
-    "category": "Gaming / PC Gear & Desk Setups",
-    "commission": "5% per qualified sale",
-    "website": "https://darkbeacon.ai/",
-    "apply_url": "https://darkbeacon.ai/pages/affiliate-program",
-    "source_url": "https://darkbeacon.ai/pages/affiliate-program"
-  },
-  {
-    "brand_name": "Vlog Me",
-    "brand_size": "emerging",
-    "category": "Software / AI Video & Creator Tools",
     "commission": "30% recurring for 12 months",
-    "website": "https://vlogme.ai/",
-    "apply_url": "https://vlogme.ai/affiliate",
-    "source_url": "https://vlogme.ai/affiliate"
+    "website": "https://podcastor.ai/",
+    "apply_url": "https://podcastor.ai/affiliate",
+    "source_url": "https://podcastor.ai/affiliate"
   },
   {
-    "brand_name": "EasyVid",
+    "brand_name": "Voibe",
     "brand_size": "emerging",
-    "category": "Software / AI Video Creation",
-    "commission": "30% recurring for the lifetime of the subscription",
-    "website": "https://easyvid.app/",
-    "apply_url": "https://easyvid.app/affiliate",
-    "source_url": "https://easyvid.app/affiliate"
+    "category": "Software / AI Dictation & Productivity",
+    "commission": "25% recurring on subscription payments",
+    "website": "https://www.getvoibe.com/",
+    "apply_url": "https://store.getvoibe.com/affiliates",
+    "source_url": "https://www.getvoibe.com/resources/affiliate-program/"
   },
   {
-    "brand_name": "PortraitLabs",
+    "brand_name": "Who's Brew",
     "brand_size": "emerging",
-    "category": "Software / AI Video Creation",
-    "commission": "30% recurring for the lifetime of each referred customer",
-    "website": "https://portraitlabs.ai/",
-    "apply_url": "https://portraitlabs.ai/affiliate",
-    "source_url": "https://portraitlabs.ai/affiliate"
+    "category": "Food & Drinks / Specialty Coffee & Tea",
+    "commission": "5%-10% depending on tier",
+    "website": "https://www.whosbrewshop.com/",
+    "apply_url": "https://www.whosbrewshop.com/affiliates",
+    "source_url": "https://www.whosbrewshop.com/affiliates"
   },
   {
-    "brand_name": "Clipvale",
+    "brand_name": "PULSAR Coffee",
     "brand_size": "emerging",
-    "category": "Software / AI Product Video & Ecommerce Creator Tools",
-    "commission": "30% per qualifying affiliate referral",
-    "website": "https://clipvale.com/",
-    "apply_url": "https://clipvale.com/affiliate",
-    "source_url": "https://clipvale.com/affiliate"
+    "category": "Food & Drinks / Functional Coffee",
+    "commission": "Not publicly listed",
+    "website": "https://www.drinkpulsar.com/",
+    "apply_url": "https://www.drinkpulsar.com/affiliate",
+    "source_url": "https://www.drinkpulsar.com/affiliate"
   },
   {
-    "brand_name": "SpinsPro Coffee",
+    "brand_name": "Debatly",
     "brand_size": "emerging",
-    "category": "Food & Drinks / Coffee & Coffee Gear",
-    "commission": "15% per referred customer sale",
-    "website": "https://spinspro-coffee.com/",
-    "apply_url": "https://spinspro-coffee.com/pages/affiliate-program",
-    "source_url": "https://spinspro-coffee.com/pages/affiliate-program"
+    "category": "Software / AI Creator & Productivity Tools",
+    "commission": "30% lifetime recurring commission",
+    "website": "https://debatly.com/",
+    "apply_url": "https://debatly.com/ai-affiliate-program",
+    "source_url": "https://debatly.com/ai-affiliate-program"
   }
 ]
