@@ -1,182 +1,182 @@
 [
   {
-    "brand_name": "GoPro",
+    "brand_name": "PlayStation",
     "brand_size": "large",
-    "category": "Consumer Tech / Action Cameras & Creator Gear",
-    "commission": "3% per qualifying sale",
-    "website": "https://gopro.com/",
-    "apply_url": "https://gopro.com/en/us/legal/gopro-affiliate-program",
-    "source_url": "https://gopro.com/en/nl/legal/gopro-affiliate-program"
-  },
-  {
-    "brand_name": "Malwarebytes",
-    "brand_size": "large",
-    "category": "Software / Cybersecurity & Privacy",
-    "commission": "Up to 30% per sale",
-    "website": "https://www.malwarebytes.com/",
-    "apply_url": "https://www.malwarebytes.com/affiliates",
-    "source_url": "https://www.malwarebytes.com/affiliates"
-  },
-  {
-    "brand_name": "WP Engine",
-    "brand_size": "large",
-    "category": "Software / Web Hosting & Creator Websites",
-    "commission": "$100 on Lite; $200 minimum or first month's payment, whichever is higher, on other qualifying hosting plans",
-    "website": "https://wpengine.com/",
-    "apply_url": "https://wpengine.com/affiliate-program/",
-    "source_url": "https://wpengine.com/affiliate-program/"
-  },
-  {
-    "brand_name": "PowerA",
-    "brand_size": "large",
-    "category": "Gaming / Controllers & Accessories",
-    "commission": "Up to 10% on qualifying sales",
-    "website": "https://www.powera.com/",
-    "apply_url": "https://www.powera.com/affiliates/",
-    "source_url": "https://www.powera.com/affiliates/"
-  },
-  {
-    "brand_name": "NEEWER",
-    "brand_size": "large",
-    "category": "Consumer Tech / Camera, Lighting & Creator Gear",
+    "category": "Gaming / Consoles, Games & Accessories",
     "commission": "Not publicly listed",
-    "website": "https://neewer.com/",
-    "apply_url": "https://neewer.com/pages/affiliate-program",
-    "source_url": "https://neewer.com/en-kr/pages/affiliate-program"
+    "website": "https://www.playstation.com/",
+    "apply_url": "https://direct.playstation.com/en-us/playstation-affiliate-programme",
+    "source_url": "https://direct.playstation.com/en-us/playstation-affiliate-programme"
   },
   {
-    "brand_name": "Satechi",
-    "brand_size": "mid-size",
-    "category": "Consumer Tech / Hubs, Charging & PC Accessories",
-    "commission": "Up to 3% per sale via Takeads",
-    "website": "https://satechi.net/",
-    "apply_url": "https://takeads.com/merchants/satechi-us/",
-    "source_url": "https://takeads.com/merchants/satechi-us/"
-  },
-  {
-    "brand_name": "Native Union",
-    "brand_size": "mid-size",
-    "category": "Consumer Tech / Mobile & Desk Accessories",
-    "commission": "10% per sale",
-    "website": "https://www.nativeunion.com/",
-    "apply_url": "https://www.nativeunion.com/pages/collab",
-    "source_url": "https://www.nativeunion.com/pages/collab"
-  },
-  {
-    "brand_name": "PureTrak",
-    "brand_size": "mid-size",
-    "category": "Gaming / Mice, Mousepads & Peripherals",
-    "commission": "10%-15% depending on sales tier",
-    "website": "https://www.puretrak.com/",
-    "apply_url": "https://www.puretrak.com/pages/affiliate",
-    "source_url": "https://www.puretrak.com/pages/affiliate"
-  },
-  {
-    "brand_name": "SUPCASE",
-    "brand_size": "mid-size",
-    "category": "Consumer Tech / Phone, Tablet & Device Accessories",
+    "brand_name": "Panasonic",
+    "brand_size": "large",
+    "category": "Consumer Tech / Cameras, Audio & Electronics",
     "commission": "Not publicly listed",
-    "website": "https://supcase.com/",
-    "apply_url": "https://supcase.com/pages/creator-affiliate-program",
-    "source_url": "https://supcase.com/pages/creator-affiliate-program"
+    "website": "https://www.panasonic.com/",
+    "apply_url": "https://www.viglink.com/merchants/4019/panasonic-affiliate-program",
+    "source_url": "https://www.viglink.com/merchants/4019/panasonic-affiliate-program"
   },
   {
-    "brand_name": "EasySMX",
+    "brand_name": "LG Electronics",
+    "brand_size": "large",
+    "category": "Consumer Tech / Monitors, TVs & Electronics",
+    "commission": "Up to 1.8% per sale via Takeads",
+    "website": "https://www.lg.com/",
+    "apply_url": "https://takeads.com/merchants/lg/",
+    "source_url": "https://takeads.com/merchants/lg/"
+  },
+  {
+    "brand_name": "Bose",
+    "brand_size": "large",
+    "category": "Consumer Tech / Headphones, Speakers & Audio",
+    "commission": "2.4% of sales via FlexOffers Canada listing",
+    "website": "https://www.bose.ca/",
+    "apply_url": "https://www.flexoffers.com/affiliate-programs/bose-ca-affiliate-program/",
+    "source_url": "https://www.flexoffers.com/affiliate-programs/bose-ca-affiliate-program/"
+  },
+  {
+    "brand_name": "JBL",
+    "brand_size": "large",
+    "category": "Consumer Tech / Speakers, Headphones & Audio",
+    "commission": "Up to 6% per sale via LinkApprove",
+    "website": "https://www.jbl.com/",
+    "apply_url": "https://linkapprove.com/affiliate-programs/jbl-affiliate-program",
+    "source_url": "https://linkapprove.com/affiliate-programs/jbl-affiliate-program"
+  },
+  {
+    "brand_name": "Decktopus",
     "brand_size": "mid-size",
-    "category": "Gaming / Controllers & Gaming Accessories",
+    "category": "Software / AI Presentations & Creator Tools",
+    "commission": "50% per qualifying sale",
+    "website": "https://www.decktopus.com/",
+    "apply_url": "https://www.decktopus.com/affiliate",
+    "source_url": "https://www.decktopus.com/affiliate"
+  },
+  {
+    "brand_name": "VdoCipher",
+    "brand_size": "mid-size",
+    "category": "Software / Secure Video Hosting & Creator Platforms",
     "commission": "Not publicly listed",
-    "website": "https://www.easysmx.com/",
-    "apply_url": "https://www.easysmx.com/pages/affiliate-program",
-    "source_url": "https://www.easysmx.com/pages/affiliate-program"
+    "website": "https://www.vdocipher.com/",
+    "apply_url": "https://www.vdocipher.com/affiliate/",
+    "source_url": "https://www.vdocipher.com/affiliate/"
   },
   {
-    "brand_name": "LAMZU",
+    "brand_name": "STREAMPANEL",
     "brand_size": "mid-size",
-    "category": "Gaming / Mice & Esports Peripherals",
-    "commission": "Up to 5% per sale",
-    "website": "https://lamzu.com/",
-    "apply_url": "https://lamzu.com/pages/affiliate-program",
-    "source_url": "https://lamzu.com/pages/affiliate-program"
+    "category": "Software / Audio Streaming, Hosting & Creator Infrastructure",
+    "commission": "10% lifetime recurring commission",
+    "website": "https://www.streampanel.net/",
+    "apply_url": "https://www.streampanel.net/en/affiliate/",
+    "source_url": "https://www.streampanel.net/en/affiliate/"
   },
   {
-    "brand_name": "Fliki",
+    "brand_name": "GardePro",
     "brand_size": "mid-size",
-    "category": "Software / AI Video, Voice & Creator Tools",
-    "commission": "30% lifetime commission",
-    "website": "https://fliki.ai/",
-    "apply_url": "https://fliki.ai/affiliate-program",
-    "source_url": "https://fliki.ai/affiliate-program"
-  },
-  {
-    "brand_name": "OutlierKit",
-    "brand_size": "mid-size",
-    "category": "Software / YouTube Research & Creator Growth",
-    "commission": "Recurring commission on the first 12 payments; rate not publicly listed",
-    "website": "https://outlierkit.com/",
-    "apply_url": "https://outlierkit.com/p/affiliate",
-    "source_url": "https://outlierkit.com/p/affiliate"
-  },
-  {
-    "brand_name": "QRDGame",
-    "brand_size": "emerging",
-    "category": "Gaming / Controllers & Handheld Accessories",
+    "category": "Consumer Tech / Trail Cameras & Outdoor Creator Gear",
     "commission": "Up to 10% per sale",
-    "website": "https://qrdgame.com/",
-    "apply_url": "https://qrdgame.com/pages/qrd-affiliate-program",
-    "source_url": "https://qrdgame.com/pages/qrd-affiliate-program"
+    "website": "https://gardepro.com/",
+    "apply_url": "https://gardepro.com/en-fr/pages/affiliate-program",
+    "source_url": "https://gardepro.com/en-fr/pages/affiliate-program"
   },
   {
-    "brand_name": "PlexiCam",
-    "brand_size": "emerging",
-    "category": "Consumer Tech / Webcam & Camera Mounts",
-    "commission": "10% per sale",
-    "website": "https://www.plexicam.com/",
-    "apply_url": "https://www.plexicam.com/en-ca/pages/affiliate-program",
-    "source_url": "https://www.plexicam.com/en-ca/pages/affiliate-program"
+    "brand_name": "Postcrest",
+    "brand_size": "mid-size",
+    "category": "Software / AI Content Creation & Social Media Tools",
+    "commission": "30% recurring for the first year",
+    "website": "https://postcrest.com/",
+    "apply_url": "https://postcrest.com/affiliates",
+    "source_url": "https://postcrest.com/affiliates"
   },
   {
-    "brand_name": "PodcastorAI",
-    "brand_size": "emerging",
-    "category": "Software / AI Podcast & Creator Tools",
-    "commission": "30% recurring for 12 months",
-    "website": "https://podcastor.ai/",
-    "apply_url": "https://podcastor.ai/affiliate",
-    "source_url": "https://podcastor.ai/affiliate"
-  },
-  {
-    "brand_name": "Voibe",
-    "brand_size": "emerging",
-    "category": "Software / AI Dictation & Productivity",
-    "commission": "25% recurring on subscription payments",
-    "website": "https://www.getvoibe.com/",
-    "apply_url": "https://store.getvoibe.com/affiliates",
-    "source_url": "https://www.getvoibe.com/resources/affiliate-program/"
-  },
-  {
-    "brand_name": "Who's Brew",
-    "brand_size": "emerging",
-    "category": "Food & Drinks / Specialty Coffee & Tea",
-    "commission": "5%-10% depending on tier",
-    "website": "https://www.whosbrewshop.com/",
-    "apply_url": "https://www.whosbrewshop.com/affiliates",
-    "source_url": "https://www.whosbrewshop.com/affiliates"
-  },
-  {
-    "brand_name": "PULSAR Coffee",
-    "brand_size": "emerging",
-    "category": "Food & Drinks / Functional Coffee",
-    "commission": "Not publicly listed",
-    "website": "https://www.drinkpulsar.com/",
-    "apply_url": "https://www.drinkpulsar.com/affiliate",
-    "source_url": "https://www.drinkpulsar.com/affiliate"
-  },
-  {
-    "brand_name": "Debatly",
-    "brand_size": "emerging",
-    "category": "Software / AI Creator & Productivity Tools",
+    "brand_name": "CollabFeed",
+    "brand_size": "mid-size",
+    "category": "Software / Influencer Marketing & Creator Discovery",
     "commission": "30% lifetime recurring commission",
-    "website": "https://debatly.com/",
-    "apply_url": "https://debatly.com/ai-affiliate-program",
-    "source_url": "https://debatly.com/ai-affiliate-program"
+    "website": "https://collabfeed.io/",
+    "apply_url": "https://collabfeed.io/affiliates",
+    "source_url": "https://collabfeed.io/affiliates"
+  },
+  {
+    "brand_name": "PublishReady",
+    "brand_size": "mid-size",
+    "category": "Software / Publishing & Creator Tools",
+    "commission": "30% lifetime recurring commission",
+    "website": "https://publishready.io/",
+    "apply_url": "https://publishready.io/affiliates",
+    "source_url": "https://publishready.io/affiliates"
+  },
+  {
+    "brand_name": "ShortPurify",
+    "brand_size": "mid-size",
+    "category": "Software / AI Short-Form Video & Creator Tools",
+    "commission": "30% lifetime recurring commission",
+    "website": "https://www.shortpurify.com/",
+    "apply_url": "https://www.shortpurify.com/affiliates",
+    "source_url": "https://www.shortpurify.com/affiliates"
+  },
+  {
+    "brand_name": "MediaBlaster",
+    "brand_size": "emerging",
+    "category": "Software / Streaming Platforms & Creator Infrastructure",
+    "commission": "20% one-time commission on eligible purchases",
+    "website": "https://www.mediablaster.io/",
+    "apply_url": "https://www.mediablaster.io/affiliates",
+    "source_url": "https://www.mediablaster.io/affiliates"
+  },
+  {
+    "brand_name": "Clipflow",
+    "brand_size": "emerging",
+    "category": "Software / Video Workflow & Creator Tools",
+    "commission": "30% lifetime recurring commission",
+    "website": "https://clipflow.to/",
+    "apply_url": "https://clipflow.to/affiliate",
+    "source_url": "https://clipflow.to/affiliate"
+  },
+  {
+    "brand_name": "MuteDeck",
+    "brand_size": "emerging",
+    "category": "Software / Streaming, Meetings & Creator Productivity",
+    "commission": "20% of net referred sales",
+    "website": "https://mutedeck.com/",
+    "apply_url": "https://mutedeck.com/affiliates",
+    "source_url": "https://mutedeck.com/affiliates"
+  },
+  {
+    "brand_name": "CreatorFlowX",
+    "brand_size": "emerging",
+    "category": "Software / Creator Brand Deals & Pricing Tools",
+    "commission": "30% lifetime recurring commission",
+    "website": "https://creatorflowx.com/",
+    "apply_url": "https://creatorflowx.com/affiliates",
+    "source_url": "https://creatorflowx.com/affiliates"
+  },
+  {
+    "brand_name": "Comeld",
+    "brand_size": "emerging",
+    "category": "Software / Creator Campaign Management & UGC Workflows",
+    "commission": "20% recurring for 12 months",
+    "website": "https://comeld.app/",
+    "apply_url": "https://comeld.app/affiliate",
+    "source_url": "https://comeld.app/affiliate"
+  },
+  {
+    "brand_name": "Shhots AI",
+    "brand_size": "emerging",
+    "category": "Software / AI Advertising & Creative Tools",
+    "commission": "20% recurring for 12 months",
+    "website": "https://shhots.ai/",
+    "apply_url": "https://shhots.ai/affiliates/",
+    "source_url": "https://shhots.ai/affiliates/"
+  },
+  {
+    "brand_name": "VisBoost",
+    "brand_size": "emerging",
+    "category": "Software / AI Search Visibility & Marketing Tools",
+    "commission": "20% lifetime recurring revenue share",
+    "website": "https://visboost.com/",
+    "apply_url": "https://visboost.com/affiliates",
+    "source_url": "https://visboost.com/affiliates"
   }
 ]
