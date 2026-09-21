@@ -1,182 +1,182 @@
 [
   {
-    "brand_name": "PlayStation",
+    "brand_name": "Roku",
     "brand_size": "large",
-    "category": "Gaming / Consoles, Games & Accessories",
+    "category": "Consumer Tech / Streaming Devices & Entertainment",
+    "commission": "Up to 5% per qualifying purchase",
+    "website": "https://www.roku.com/",
+    "apply_url": "https://www.roku.com/en-us/about/affiliate",
+    "source_url": "https://www.roku.com/en-us/about/affiliate"
+  },
+  {
+    "brand_name": "Philips Hue",
+    "brand_size": "large",
+    "category": "Consumer Tech / Smart Lighting & Gaming Setups",
+    "commission": "7% baseline; up to 10% during the first month",
+    "website": "https://www.philips-hue.com/",
+    "apply_url": "https://www.philips-hue.com/en-us/explore-hue/affiliate-programme",
+    "source_url": "https://www.philips-hue.com/en-us/explore-hue/affiliate-programme"
+  },
+  {
+    "brand_name": "Sephora",
+    "brand_size": "large",
+    "category": "Beauty / Cosmetics & Creator Lifestyle",
     "commission": "Not publicly listed",
-    "website": "https://www.playstation.com/",
-    "apply_url": "https://direct.playstation.com/en-us/playstation-affiliate-programme",
-    "source_url": "https://direct.playstation.com/en-us/playstation-affiliate-programme"
+    "website": "https://www.sephora.com/ca/en/",
+    "apply_url": "https://www.sephora.com/ca/en/beauty/affiliates",
+    "source_url": "https://www.sephora.com/ca/en/beauty/affiliates"
   },
   {
-    "brand_name": "Panasonic",
+    "brand_name": "LEGO",
     "brand_size": "large",
-    "category": "Consumer Tech / Cameras, Audio & Electronics",
+    "category": "Gaming & Entertainment / Collectibles, Builds & Family Content",
     "commission": "Not publicly listed",
-    "website": "https://www.panasonic.com/",
-    "apply_url": "https://www.viglink.com/merchants/4019/panasonic-affiliate-program",
-    "source_url": "https://www.viglink.com/merchants/4019/panasonic-affiliate-program"
+    "website": "https://www.lego.com/",
+    "apply_url": "https://www.lego.com/en-us/page/affiliate-program",
+    "source_url": "https://www.lego.com/en-us/page/affiliate-program"
   },
   {
-    "brand_name": "LG Electronics",
+    "brand_name": "eufy",
     "brand_size": "large",
-    "category": "Consumer Tech / Monitors, TVs & Electronics",
-    "commission": "Up to 1.8% per sale via Takeads",
-    "website": "https://www.lg.com/",
-    "apply_url": "https://takeads.com/merchants/lg/",
-    "source_url": "https://takeads.com/merchants/lg/"
+    "category": "Consumer Tech / Smart Home, Security & Robotics",
+    "commission": "Starts at 7% on approved sales",
+    "website": "https://www.eufy.com/",
+    "apply_url": "https://www.eufy.com/affiliate",
+    "source_url": "https://www.eufy.com/affiliate"
   },
   {
-    "brand_name": "Bose",
-    "brand_size": "large",
+    "brand_name": "soundcore",
+    "brand_size": "mid-size",
     "category": "Consumer Tech / Headphones, Speakers & Audio",
-    "commission": "2.4% of sales via FlexOffers Canada listing",
-    "website": "https://www.bose.ca/",
-    "apply_url": "https://www.flexoffers.com/affiliate-programs/bose-ca-affiliate-program/",
-    "source_url": "https://www.flexoffers.com/affiliate-programs/bose-ca-affiliate-program/"
+    "commission": "3%-15% on approved sales",
+    "website": "https://www.soundcore.com/",
+    "apply_url": "https://www.soundcore.com/become-an-affiliate",
+    "source_url": "https://www.soundcore.com/become-an-affiliate"
   },
   {
-    "brand_name": "JBL",
-    "brand_size": "large",
-    "category": "Consumer Tech / Speakers, Headphones & Audio",
-    "commission": "Up to 6% per sale via LinkApprove",
-    "website": "https://www.jbl.com/",
-    "apply_url": "https://linkapprove.com/affiliate-programs/jbl-affiliate-program",
-    "source_url": "https://linkapprove.com/affiliate-programs/jbl-affiliate-program"
-  },
-  {
-    "brand_name": "Decktopus",
+    "brand_name": "Nanoleaf",
     "brand_size": "mid-size",
-    "category": "Software / AI Presentations & Creator Tools",
-    "commission": "50% per qualifying sale",
-    "website": "https://www.decktopus.com/",
-    "apply_url": "https://www.decktopus.com/affiliate",
-    "source_url": "https://www.decktopus.com/affiliate"
-  },
-  {
-    "brand_name": "VdoCipher",
-    "brand_size": "mid-size",
-    "category": "Software / Secure Video Hosting & Creator Platforms",
+    "category": "Consumer Tech / Smart Lighting, Gaming Rooms & Creator Setups",
     "commission": "Not publicly listed",
-    "website": "https://www.vdocipher.com/",
-    "apply_url": "https://www.vdocipher.com/affiliate/",
-    "source_url": "https://www.vdocipher.com/affiliate/"
+    "website": "https://nanoleaf.me/",
+    "apply_url": "https://nanoleaf.me/en-eu/pages/affiliate-program",
+    "source_url": "https://nanoleaf.me/en-eu/pages/affiliate-program"
   },
   {
-    "brand_name": "STREAMPANEL",
+    "brand_name": "Libsyn",
     "brand_size": "mid-size",
-    "category": "Software / Audio Streaming, Hosting & Creator Infrastructure",
-    "commission": "10% lifetime recurring commission",
-    "website": "https://www.streampanel.net/",
-    "apply_url": "https://www.streampanel.net/en/affiliate/",
-    "source_url": "https://www.streampanel.net/en/affiliate/"
+    "category": "Software / Podcast Hosting & Creator Tools",
+    "commission": "25% revenue share for up to 6 months",
+    "website": "https://libsyn.com/",
+    "apply_url": "https://libsyn.com/affiliate/",
+    "source_url": "https://libsyn.com/affiliate/"
   },
   {
-    "brand_name": "GardePro",
+    "brand_name": "Sam Ash",
     "brand_size": "mid-size",
-    "category": "Consumer Tech / Trail Cameras & Outdoor Creator Gear",
-    "commission": "Up to 10% per sale",
-    "website": "https://gardepro.com/",
-    "apply_url": "https://gardepro.com/en-fr/pages/affiliate-program",
-    "source_url": "https://gardepro.com/en-fr/pages/affiliate-program"
+    "category": "Creator Gear / Music, Audio, DJ & Recording Equipment",
+    "commission": "Not publicly listed",
+    "website": "https://www.samash.com/",
+    "apply_url": "https://www.samash.com/sam-ash-affiliate-program",
+    "source_url": "https://www.samash.com/sam-ash-affiliate-program"
   },
   {
-    "brand_name": "Postcrest",
+    "brand_name": "Adagio Teas",
     "brand_size": "mid-size",
-    "category": "Software / AI Content Creation & Social Media Tools",
-    "commission": "30% recurring for the first year",
-    "website": "https://postcrest.com/",
-    "apply_url": "https://postcrest.com/affiliates",
-    "source_url": "https://postcrest.com/affiliates"
+    "category": "Food & Drinks / Tea, Coffee & Specialty Beverages",
+    "commission": "10% on qualifying purchases",
+    "website": "https://www.adagio.com/",
+    "apply_url": "https://www.adagio.com/affiliates/",
+    "source_url": "https://www.adagio.com/affiliates/"
   },
   {
-    "brand_name": "CollabFeed",
+    "brand_name": "Trak Racer",
     "brand_size": "mid-size",
-    "category": "Software / Influencer Marketing & Creator Discovery",
-    "commission": "30% lifetime recurring commission",
-    "website": "https://collabfeed.io/",
-    "apply_url": "https://collabfeed.io/affiliates",
-    "source_url": "https://collabfeed.io/affiliates"
+    "category": "Gaming / Sim Racing & Flight Simulation Hardware",
+    "commission": "Not publicly listed",
+    "website": "https://trakracer.com/",
+    "apply_url": "https://trakracer.ca/pages/affiliates",
+    "source_url": "https://trakracer.ca/pages/affiliates"
   },
   {
-    "brand_name": "PublishReady",
+    "brand_name": "ugee",
     "brand_size": "mid-size",
-    "category": "Software / Publishing & Creator Tools",
-    "commission": "30% lifetime recurring commission",
-    "website": "https://publishready.io/",
-    "apply_url": "https://publishready.io/affiliates",
-    "source_url": "https://publishready.io/affiliates"
+    "category": "Consumer Tech / Drawing Tablets & Creative Hardware",
+    "commission": "5%-15% per validated sale",
+    "website": "https://www.ugee.com/",
+    "apply_url": "https://shop.ugee.com/pages/affiliate-program",
+    "source_url": "https://shop.ugee.com/pages/affiliate-program"
   },
   {
-    "brand_name": "ShortPurify",
+    "brand_name": "WALLHACK",
     "brand_size": "mid-size",
-    "category": "Software / AI Short-Form Video & Creator Tools",
-    "commission": "30% lifetime recurring commission",
-    "website": "https://www.shortpurify.com/",
-    "apply_url": "https://www.shortpurify.com/affiliates",
-    "source_url": "https://www.shortpurify.com/affiliates"
+    "category": "Gaming / Mousepads, Aim Gear & Esports Setups",
+    "commission": "5%-15% per sale",
+    "website": "https://wallhack.com/",
+    "apply_url": "https://wallhack.com/de-de/pages/affiliate",
+    "source_url": "https://wallhack.com/de-de/pages/affiliate"
   },
   {
-    "brand_name": "MediaBlaster",
+    "brand_name": "Deskhero",
     "brand_size": "emerging",
-    "category": "Software / Streaming Platforms & Creator Infrastructure",
-    "commission": "20% one-time commission on eligible purchases",
-    "website": "https://www.mediablaster.io/",
-    "apply_url": "https://www.mediablaster.io/affiliates",
-    "source_url": "https://www.mediablaster.io/affiliates"
+    "category": "Gaming & Consumer Tech / Mechanical Keyboards & Desk Gear",
+    "commission": "3% on qualifying referrals",
+    "website": "https://www.deskhero.ca/",
+    "apply_url": "https://www.deskhero.ca/pages/affiliate-program",
+    "source_url": "https://www.deskhero.ca/pages/affiliate-program"
   },
   {
-    "brand_name": "Clipflow",
+    "brand_name": "KOTIN",
     "brand_size": "emerging",
-    "category": "Software / Video Workflow & Creator Tools",
-    "commission": "30% lifetime recurring commission",
-    "website": "https://clipflow.to/",
-    "apply_url": "https://clipflow.to/affiliate",
-    "source_url": "https://clipflow.to/affiliate"
+    "category": "Gaming / Prebuilt Gaming PCs & PC Hardware",
+    "commission": "2% on eligible Gaming PC sales",
+    "website": "https://kotin.com/",
+    "apply_url": "https://kotin.com/pages/affiliate-program",
+    "source_url": "https://kotin.com/pages/affiliate-program"
   },
   {
-    "brand_name": "MuteDeck",
+    "brand_name": "Corzey",
     "brand_size": "emerging",
-    "category": "Software / Streaming, Meetings & Creator Productivity",
-    "commission": "20% of net referred sales",
-    "website": "https://mutedeck.com/",
-    "apply_url": "https://mutedeck.com/affiliates",
-    "source_url": "https://mutedeck.com/affiliates"
+    "category": "Consumer Tech & Lifestyle / Gadgets, Home & Creator Finds",
+    "commission": "20% per referred order",
+    "website": "https://corzey.com/",
+    "apply_url": "https://corzey.com/pages/affiliate-program",
+    "source_url": "https://corzey.com/pages/affiliate-program"
   },
   {
-    "brand_name": "CreatorFlowX",
+    "brand_name": "Goooey",
     "brand_size": "emerging",
-    "category": "Software / Creator Brand Deals & Pricing Tools",
-    "commission": "30% lifetime recurring commission",
-    "website": "https://creatorflowx.com/",
-    "apply_url": "https://creatorflowx.com/affiliates",
-    "source_url": "https://creatorflowx.com/affiliates"
+    "category": "Food & Drinks / Desserts & Snacks",
+    "commission": "$1 per Goooey sold",
+    "website": "https://goooey.com/",
+    "apply_url": "https://goooey.com/affiliate",
+    "source_url": "https://goooey.com/affiliate"
   },
   {
-    "brand_name": "Comeld",
+    "brand_name": "Amalfi Market",
     "brand_size": "emerging",
-    "category": "Software / Creator Campaign Management & UGC Workflows",
-    "commission": "20% recurring for 12 months",
-    "website": "https://comeld.app/",
-    "apply_url": "https://comeld.app/affiliate",
-    "source_url": "https://comeld.app/affiliate"
+    "category": "Food & Drinks / Italian Sweets & Snacks",
+    "commission": "15% per sale",
+    "website": "https://amalfimarket.com/",
+    "apply_url": "https://amalfimarket.com/pages/affiliate-program",
+    "source_url": "https://amalfimarket.com/pages/affiliate-program"
   },
   {
-    "brand_name": "Shhots AI",
+    "brand_name": "tukr box",
     "brand_size": "emerging",
-    "category": "Software / AI Advertising & Creative Tools",
-    "commission": "20% recurring for 12 months",
-    "website": "https://shhots.ai/",
-    "apply_url": "https://shhots.ai/affiliates/",
-    "source_url": "https://shhots.ai/affiliates/"
+    "category": "Food & Drinks / Meal Kits & Social-Impact Food",
+    "commission": "10%-25% per sale depending on partner type",
+    "website": "https://tukrbox.com/",
+    "apply_url": "https://tukrbox.com/tukr-box-creator-and-affiliate-program/",
+    "source_url": "https://tukrbox.com/tukr-box-creator-and-affiliate-program/"
   },
   {
-    "brand_name": "VisBoost",
+    "brand_name": "ReplySwarm AI",
     "brand_size": "emerging",
-    "category": "Software / AI Search Visibility & Marketing Tools",
-    "commission": "20% lifetime recurring revenue share",
-    "website": "https://visboost.com/",
-    "apply_url": "https://visboost.com/affiliates",
-    "source_url": "https://visboost.com/affiliates"
+    "category": "Software / AI Social Media & Creator Engagement Tools",
+    "commission": "30% recurring for 12 months",
+    "website": "https://www.replyswarm.ai/",
+    "apply_url": "https://www.replyswarm.ai/affiliate-program",
+    "source_url": "https://www.replyswarm.ai/affiliate-program"
   }
 ]
