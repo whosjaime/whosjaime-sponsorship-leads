@@ -1,182 +1,182 @@
 [
   {
-    "brand_name": "ASUS",
+    "brand_name": "SanDisk",
     "brand_size": "large",
-    "category": "Gaming & Consumer Tech / PCs, Laptops, Components & ROG Gear",
-    "commission": "Up to 15% per sale through Takeads; terms vary by GEO",
-    "website": "https://www.asus.com/",
-    "apply_url": "https://takeads.com/merchants/asus/",
-    "source_url": "https://takeads.com/merchants/asus/"
+    "category": "Consumer Tech / Storage, Memory Cards & Creator Storage",
+    "commission": "Up to 10% on eligible purchases",
+    "website": "https://www.sandisk.com/",
+    "apply_url": "https://www.sandisk.com/en-ua/company/programs/affiliate-program",
+    "source_url": "https://www.sandisk.com/en-ua/company/programs/affiliate-program"
   },
   {
-    "brand_name": "Fanatical",
+    "brand_name": "Eneba",
     "brand_size": "large",
-    "category": "Gaming / PC Games, Bundles & Digital Game Keys",
+    "category": "Gaming / Digital Games, Gift Cards & Software",
+    "commission": "2%-5% revenue share per sale for standard affiliates",
+    "website": "https://www.eneba.com/",
+    "apply_url": "https://www.eneba.com/en-my/become-affiliate",
+    "source_url": "https://www.eneba.com/en-my/become-affiliate"
+  },
+  {
+    "brand_name": "Keurig Canada",
+    "brand_size": "large",
+    "category": "Food & Drinks / Coffee, Brewers & K-Cup Pods",
+    "commission": "10% per referred sale; $1 per eligible contest/sweepstakes lead",
+    "website": "https://www.keurig.ca/",
+    "apply_url": "https://www.keurig.ca/affiliates",
+    "source_url": "https://www.keurig.ca/affiliates"
+  },
+  {
+    "brand_name": "Thrive Market",
+    "brand_size": "large",
+    "category": "Food & Drinks / Healthy Grocery & Pantry",
     "commission": "Not publicly listed",
-    "website": "https://www.fanatical.com/",
-    "apply_url": "https://www.fanatical.com/en/affiliates",
-    "source_url": "https://support.fanatical.com/hc/en-us/articles/360001415777-Affiliate-Partner-FAQ"
+    "website": "https://thrivemarket.com/",
+    "apply_url": "https://thrivemarket.com/affiliate-program",
+    "source_url": "https://thrivemarket.com/affiliate-program"
   },
   {
-    "brand_name": "Green Man Gaming",
+    "brand_name": "G FUEL",
     "brand_size": "large",
-    "category": "Gaming / PC Games & Digital Game Keys",
-    "commission": "Up to 5% per sale; 10% on Green Man Gaming Bundles",
-    "website": "https://www.greenmangaming.com/",
-    "apply_url": "https://www.greenmangaming.com/affiliates/",
-    "source_url": "https://www.greenmangaming.com/affiliates/"
+    "category": "Food & Drinks / Gaming Energy Drinks",
+    "commission": "Not publicly listed",
+    "website": "https://gfuel.com/",
+    "apply_url": "https://gfuel.com/en-ca/pages/affiliate-application",
+    "source_url": "https://gfuel.com/en-ca/pages/affiliate-application"
   },
   {
-    "brand_name": "Leica Camera",
-    "brand_size": "large",
-    "category": "Creator Gear / Cameras, Lenses & Photography Accessories",
-    "commission": "1% cameras; 2% lenses; 3% accessories; up to 5% for select partners",
-    "website": "https://leicacamerausa.com/",
-    "apply_url": "https://ui.awin.com/merchant-profile/36118",
-    "source_url": "https://ui.awin.com/merchant-profile-terms/36118"
-  },
-  {
-    "brand_name": "Herman Miller",
-    "brand_size": "large",
-    "category": "Creator Lifestyle / Ergonomic Chairs & Desk Setups",
-    "commission": "Up to 5% through Skimlinks",
-    "website": "https://store.hermanmiller.com/",
-    "apply_url": "https://store.hermanmiller.com/affiliate-signup.html",
-    "source_url": "https://app.hienergyrocket.com/a/herman-miller-ef6acf08-a904-4464-8d8d-90ed87eb773e"
-  },
-  {
-    "brand_name": "DXRacer",
+    "brand_name": "SparkFun Electronics",
     "brand_size": "mid-size",
-    "category": "Gaming / Gaming & Racing Chairs",
-    "commission": "Up to 20% per purchase",
-    "website": "https://www.dxracer.com/",
-    "apply_url": "https://www.dxracer.com/pages/affiliates",
-    "source_url": "https://www.dxracer.com/pages/affiliates"
+    "category": "Consumer Tech / Maker Electronics, Boards & Components",
+    "commission": "10% on eligible SparkFun Original products",
+    "website": "https://www.sparkfun.com/",
+    "apply_url": "https://www.sparkfun.com/affiliate-program",
+    "source_url": "https://www.sparkfun.com/affiliate-program"
   },
   {
-    "brand_name": "TTRacing",
+    "brand_name": "Mega Modz",
     "brand_size": "mid-size",
-    "category": "Gaming / Gaming Chairs, Desks & Creator Setups",
-    "commission": "Up to 18% per sale",
-    "website": "https://ttracing.co/",
-    "apply_url": "https://ttracing.co/pages/affiliates",
-    "source_url": "https://ttracing.co/pages/affiliates"
+    "category": "Gaming / Custom Gaming Controllers & Accessories",
+    "commission": "5%-10% on qualifying purchases",
+    "website": "https://megamodz.com/",
+    "apply_url": "https://megamodz.com/affiliate-program",
+    "source_url": "https://megamodz.com/affiliate-program"
   },
   {
-    "brand_name": "E-WIN Racing",
+    "brand_name": "XTAR",
     "brand_size": "mid-size",
-    "category": "Gaming / Gaming Chairs & Creator Setups",
-    "commission": "10%-20% on sales",
-    "website": "https://www.ewinracing.com/",
-    "apply_url": "https://www.ewinracing.com/pages/affiliate",
-    "source_url": "https://www.ewinracing.com/pages/affiliate"
+    "category": "Consumer Tech / Chargers, Batteries & Power Gear",
+    "commission": "Up to 8% per order",
+    "website": "https://xtardirect.com/",
+    "apply_url": "https://xtardirect.com/pages/xtar-affiliate-program",
+    "source_url": "https://xtardirect.com/pages/xtar-affiliate-program"
   },
   {
-    "brand_name": "Sonarworks",
+    "brand_name": "OneStream Live",
     "brand_size": "mid-size",
-    "category": "Software & Creator Gear / Audio Calibration, Headphones & Studio Tools",
-    "commission": "10% on software products; 5% on hardware products",
-    "website": "https://www.sonarworks.com/",
-    "apply_url": "https://www.sonarworks.com/affiliate-program",
-    "source_url": "https://www.sonarworks.com/affiliate-program"
+    "category": "Software & Creator Tools / Live Streaming & Multistreaming",
+    "commission": "25% lifetime recurring commission",
+    "website": "https://onestream.live/",
+    "apply_url": "https://onestream.live/affiliate-program/",
+    "source_url": "https://helpdesk.onestream.live/hc/knowledgebase/articles/1779310423-how-much-will-i-earn-with-one_stream-live-affiliate-program"
   },
   {
-    "brand_name": "MAONO",
+    "brand_name": "EPOMAKER",
     "brand_size": "mid-size",
-    "category": "Creator Gear / Microphones, Podcasting & Streaming Audio",
-    "commission": "Up to 15% commission",
-    "website": "https://www.maono.com/",
-    "apply_url": "https://www.maono.com/pages/maono-partnership-program",
-    "source_url": "https://www.maono.com/pages/maono-partnership-program"
+    "category": "Gaming & Consumer Tech / Mechanical Keyboards & Accessories",
+    "commission": "5% per referred sale",
+    "website": "https://www.epomaker.pro/",
+    "apply_url": "https://www.epomaker.pro/pages/affiliated",
+    "source_url": "https://www.epomaker.pro/pages/affiliated"
   },
   {
-    "brand_name": "SmallRig",
+    "brand_name": "Puppetry",
     "brand_size": "mid-size",
-    "category": "Creator Gear / Camera Rigs, Lighting & Filmmaking Accessories",
-    "commission": "10% on referral orders",
-    "website": "https://www.smallrig.com/",
-    "apply_url": "https://www.smallrig.com/affiliate-program",
-    "source_url": "https://www.smallrig.com/affiliate-program"
+    "category": "Software & Creator Tools / AI Talking Face & Video Generation",
+    "commission": "30% on referral sales",
+    "website": "https://www.puppetry.com/",
+    "apply_url": "https://www.puppetry.com/affiliate",
+    "source_url": "https://www.puppetry.com/affiliate"
   },
   {
-    "brand_name": "MelGeek",
+    "brand_name": "OpenELAB",
     "brand_size": "mid-size",
-    "category": "Gaming & Consumer Tech / Mechanical Keyboards & Desk Gear",
-    "commission": "5% on all sales",
-    "website": "https://www.melgeek.com/",
-    "apply_url": "https://www.melgeek.com/en-eu/pages/affiliate-program",
-    "source_url": "https://www.melgeek.com/en-eu/pages/affiliate-program"
+    "category": "Consumer Tech / Maker Hardware, IoT, Robotics & 3D Printing",
+    "commission": "5% on qualified referred sales",
+    "website": "https://openelab.com/",
+    "apply_url": "https://openelab.com/pages/affiliate-program",
+    "source_url": "https://openelab.com/pages/affiliate-program"
   },
   {
-    "brand_name": "APEXEL",
+    "brand_name": "KEMOVE",
     "brand_size": "mid-size",
-    "category": "Creator Gear / Mobile Photography Lenses & Accessories",
-    "commission": "10% per sale",
-    "website": "https://www.shopapexel.com/",
-    "apply_url": "https://www.shopapexel.com/pages/affiliate-program",
-    "source_url": "https://www.shopapexel.com/pages/affiliate-program"
+    "category": "Gaming & Consumer Tech / Mechanical Keyboards",
+    "commission": "Up to 10% per completed order; additional 2% when 30-day sales exceed $2,000",
+    "website": "https://www.dieryatech.com/",
+    "apply_url": "https://www.dieryatech.com/collaborate/",
+    "source_url": "https://www.dieryatech.com/collaborate/"
   },
   {
-    "brand_name": "ATTACK SHARK",
+    "brand_name": "Vyndra AI",
     "brand_size": "emerging",
-    "category": "Gaming / Gaming Mice, Mechanical Keyboards & Peripherals",
-    "commission": "8% per sale",
-    "website": "https://attackshark.ca/",
-    "apply_url": "https://attackshark.ca/pages/affiliate-program",
-    "source_url": "https://attackshark.ca/pages/affiliate-program"
+    "category": "Software & Creator Tools / AI Video, Image & Content Workflows",
+    "commission": "25% recurring on subscriptions and credit purchases",
+    "website": "https://vyndra.ai/",
+    "apply_url": "https://vyndra.ai/affiliate-program",
+    "source_url": "https://vyndra.ai/affiliate-program"
   },
   {
-    "brand_name": "AdsTurbo",
+    "brand_name": "Vivideo",
     "brand_size": "emerging",
-    "category": "Software / AI Advertising & Creative Tools",
-    "commission": "30% lifetime recurring",
-    "website": "https://adsturbo.ai/",
-    "apply_url": "https://adsturbo.ai/affiliate",
-    "source_url": "https://adsturbo.ai/affiliate"
+    "category": "Software & Creator Tools / AI Video Creation",
+    "commission": "20% on referred subscriptions",
+    "website": "https://vivideo.ai/",
+    "apply_url": "https://vivideo.ai/affiliate-program",
+    "source_url": "https://vivideo.ai/affiliate-program"
   },
   {
-    "brand_name": "Lovina AI",
+    "brand_name": "VideoAny",
     "brand_size": "emerging",
-    "category": "Software / AI Companion & Consumer AI",
-    "commission": "30% lifetime recurring",
-    "website": "https://lovinaai.com/",
-    "apply_url": "https://lovinaai.com/affiliates",
-    "source_url": "https://lovinaai.com/affiliates"
+    "category": "Software & Creator Tools / AI Video Generation",
+    "commission": "20% recurring on paid referrals",
+    "website": "https://videoany.io/",
+    "apply_url": "https://videoany.io/affiliates",
+    "source_url": "https://videoany.io/affiliates"
   },
   {
-    "brand_name": "MakeInfluencer.ai",
+    "brand_name": "AI Video Cut",
     "brand_size": "emerging",
-    "category": "Software / AI Influencer & Creator Tools",
-    "commission": "50% lifetime recurring",
-    "website": "https://www.makeinfluencer.ai/",
-    "apply_url": "https://www.makeinfluencer.ai/ai-affiliate-program",
-    "source_url": "https://www.makeinfluencer.ai/ai-affiliate-program"
+    "category": "Software & Creator Tools / AI Video Repurposing & Short Clips",
+    "commission": "30% first month, then 20% recurring",
+    "website": "https://www.aivideocut.com/",
+    "apply_url": "https://www.aivideocut.com/affiliate-program",
+    "source_url": "https://www.aivideocut.com/affiliate-program"
   },
   {
-    "brand_name": "ToolScale",
+    "brand_name": "TurbX",
     "brand_size": "emerging",
-    "category": "Software / AI & E-commerce Creator Tools",
-    "commission": "20% recurring",
-    "website": "https://toolscale.io/",
-    "apply_url": "https://toolscale.io/affiliate",
-    "source_url": "https://toolscale.io/affiliate"
+    "category": "Gaming / Controllers & Gaming Accessories",
+    "commission": "12% starting commission, up to 18% with performance bonuses",
+    "website": "https://www.playturbx.com/",
+    "apply_url": "https://www.playturbx.com/pages/be-an-affiliate",
+    "source_url": "https://www.playturbx.com/pages/be-an-affiliate"
   },
   {
-    "brand_name": "CopyBuilder AI",
+    "brand_name": "IINE",
     "brand_size": "emerging",
-    "category": "Software / AI Copywriting & Marketing Tools",
-    "commission": "30% recurring",
-    "website": "https://www.copybuilder.in/",
-    "apply_url": "https://www.copybuilder.in/affiliate",
-    "source_url": "https://www.copybuilder.in/affiliate"
+    "category": "Gaming / Controllers & Gaming Accessories",
+    "commission": "5% starting commission on qualifying orders",
+    "website": "https://iine.store/",
+    "apply_url": "https://iine.store/pages/affiliate-program",
+    "source_url": "https://iine.store/pages/affiliate-program"
   },
   {
-    "brand_name": "VideoWeb AI",
+    "brand_name": "Caffeine Army",
     "brand_size": "emerging",
-    "category": "Software / AI Video, Image & Music Creator Tools",
-    "commission": "20% on first valid paid order; 10% on following valid paid orders within 60 days of registration",
-    "website": "https://videoweb.ai/",
-    "apply_url": "https://videoweb.ai/affiliate-program/",
-    "source_url": "https://videoweb.ai/affiliate-program/"
+    "category": "Food & Drinks / Functional Coffee",
+    "commission": "Not publicly listed",
+    "website": "https://caffeinearmy.com/",
+    "apply_url": "https://caffeinearmy.com/pages/affiliate-program",
+    "source_url": "https://caffeinearmy.com/pages/affiliate-program"
   }
 ]
