@@ -1,18 +1,173 @@
 [
-{"brand_name":"Boris FX","brand_size":"large","category":"Video editing / VFX software","commission":"10% and more","website":"https://borisfx.com","apply_url":"https://boris-fx.postaffiliatepro.com/affiliates/signup.php","source_url":"https://vfx.borisfx.com/affiliate"},
-{"brand_name":"Trupeer","brand_size":"mid-size","category":"AI video / documentation","commission":"30% recurring","website":"https://www.trupeer.ai","apply_url":"https://www.trupeer.ai/affiliate","source_url":"https://www.trupeer.ai/affiliate"},
-{"brand_name":"Tripo AI","brand_size":"mid-size","category":"AI 3D / creator tools","commission":"30% recurring for 12 months","website":"https://www.tripo3d.ai","apply_url":"https://www.tripo3d.ai/affiliate","source_url":"https://www.tripo3d.ai/affiliate"},
-{"brand_name":"SUNSKY","brand_size":"mid-size","category":"Consumer tech / PC and mobile accessories","commission":"Up to 60% (varies by category and customer tier)","website":"https://www.sunsky-online.com","apply_url":"https://www.sunsky-online.com/affiliate","source_url":"https://www.sunsky-online.com/affiliate"},
-{"brand_name":"LF Gaming","brand_size":"mid-size","category":"Gaming chairs / gaming gear","commission":"3%","website":"https://lfgaming.com","apply_url":"https://lfgaming.com/pages/affiliate-program","source_url":"https://lfgaming.com/pages/affiliate-program"},
-{"brand_name":"DaVinci Resolve Titles","brand_size":"mid-size","category":"Video editing assets / creator tools","commission":"30%+","website":"https://davinciresolvetitles.com","apply_url":"https://davinciresolvetitles.com/pages/affiliate-program","source_url":"https://davinciresolvetitles.com/pages/affiliate-program"},
-{"brand_name":"TrackPlay","brand_size":"mid-size","category":"Video hosting / creator marketing software","commission":"20% recurring for 12 months","website":"https://www.trackplay.io","apply_url":"https://www.trackplay.io/partners","source_url":"https://www.trackplay.io/partners"},
-{"brand_name":"Aisle","brand_size":"mid-size","category":"Creator workflow software","commission":"30% recurring for 12 months","website":"https://aisle.studio","apply_url":"https://aisle.studio/affiliates","source_url":"https://aisle.studio/affiliates"},
-{"brand_name":"Farmers Fuel Coffee","brand_size":"emerging","category":"Coffee / drinks","commission":"Up to 20%","website":"https://farmersfuelcoffee.com","apply_url":"https://farmersfuelcoffee.com/pages/become-a-farmers-fuel-affiliate","source_url":"https://farmersfuelcoffee.com/pages/become-a-farmers-fuel-affiliate"},
-{"brand_name":"TalkPix","brand_size":"emerging","category":"AI video / creator tools","commission":"30% in TalkPix credits for approved creators","website":"https://www.talkpix.ai","apply_url":"https://www.talkpix.ai/affiliates","source_url":"https://www.talkpix.ai/affiliates"},
-{"brand_name":"EditOn AI","brand_size":"emerging","category":"AI writing / creator tools","commission":"30% recurring for 12 months","website":"https://editon.co","apply_url":"https://editon.co/affiliate.html","source_url":"https://editon.co/affiliate.html"},
-{"brand_name":"EQIQs","brand_size":"emerging","category":"SaaS","commission":"30% recurring lifetime","website":"https://www.eqiqs.com","apply_url":"https://www.eqiqs.com/affiliates","source_url":"https://www.eqiqs.com/affiliates"},
-{"brand_name":"SnowSEO","brand_size":"emerging","category":"AI SEO / creator marketing software","commission":"30% recurring for 1 year","website":"https://snowseo.com","apply_url":"https://snowseo.com/affiliate-program","source_url":"https://snowseo.com/affiliate-program"},
-{"brand_name":"Ranki.io","brand_size":"emerging","category":"SEO / content marketing software","commission":"30% recurring lifetime","website":"https://ranki.io","apply_url":"https://ranki.io/affiliate-program","source_url":"https://ranki.io/affiliate-program"},
-{"brand_name":"TryPost","brand_size":"emerging","category":"Creator / social publishing software","commission":"30% recurring lifetime","website":"https://trypost.it","apply_url":"https://trypost.it/en/affiliates","source_url":"https://trypost.it/en/affiliates"},
-{"brand_name":"WINGOMART Gaming Chairs","brand_size":"emerging","category":"Gaming chairs / gaming gear","commission":"Not publicly listed","website":"https://gamingchairswm.com","apply_url":"https://gamingchairswm.com/pages/affiliates","source_url":"https://gamingchairswm.com/pages/affiliates"}
+  {
+    "brand_name": "NordPass",
+    "brand_size": "large",
+    "category": "Cybersecurity / password manager",
+    "commission": "30% new B2C sign-ups; 10% B2C renewals; 25% new B2B sign-ups",
+    "website": "https://nordpass.com",
+    "apply_url": "https://nordpass.com/affiliate/",
+    "source_url": "https://nordpass.com/affiliate/"
+  },
+  {
+    "brand_name": "monday.com",
+    "brand_size": "large",
+    "category": "Work management / creator operations software",
+    "commission": "Up to 100% of first-year sales",
+    "website": "https://monday.com",
+    "apply_url": "https://monday.com/affiliate-program",
+    "source_url": "https://monday.com/affiliate-program"
+  },
+  {
+    "brand_name": "Ironside Computers",
+    "brand_size": "mid-size",
+    "category": "Gaming PCs / PC hardware",
+    "commission": "Not publicly listed",
+    "website": "https://www.ironsidecomputers.com",
+    "apply_url": "https://www.ironsidecomputers.com/affiliates/apply",
+    "source_url": "https://www.ironsidecomputers.com/affiliates/apply"
+  },
+  {
+    "brand_name": "AutoCaption",
+    "brand_size": "mid-size",
+    "category": "AI video / captioning creator tool",
+    "commission": "40% recurring",
+    "website": "https://www.autocaption.io",
+    "apply_url": "https://www.autocaption.io/affiliate",
+    "source_url": "https://www.autocaption.io/affiliate"
+  },
+  {
+    "brand_name": "GetShorts",
+    "brand_size": "mid-size",
+    "category": "AI short-form video creator tool",
+    "commission": "30% recurring for life",
+    "website": "https://getshorts.ai",
+    "apply_url": "https://getshorts.ai/affiliate-program",
+    "source_url": "https://getshorts.ai/affiliate-program"
+  },
+  {
+    "brand_name": "VidTube Studio",
+    "brand_size": "mid-size",
+    "category": "YouTube / AI creator tools",
+    "commission": "30% recurring for life",
+    "website": "https://vidtubestudio.com",
+    "apply_url": "https://vidtubestudio.com/affiliates",
+    "source_url": "https://vidtubestudio.com/affiliates"
+  },
+  {
+    "brand_name": "TubeKit AI",
+    "brand_size": "mid-size",
+    "category": "YouTube / AI creator tools",
+    "commission": "30% on purchases and upgrades for 6 months",
+    "website": "https://tubekitai.com",
+    "apply_url": "https://tubekitai.com/affiliate-program",
+    "source_url": "https://tubekitai.com/affiliate-program"
+  },
+  {
+    "brand_name": "HookScores",
+    "brand_size": "mid-size",
+    "category": "Creator analytics / content optimization software",
+    "commission": "30% lifetime recurring",
+    "website": "https://hookscores.com",
+    "apply_url": "https://hookscores.com/affiliates",
+    "source_url": "https://hookscores.com/affiliates"
+  },
+  {
+    "brand_name": "TikPlay",
+    "brand_size": "mid-size",
+    "category": "Gaming / TikTok livestream tools",
+    "commission": "15% recurring for up to 12 months",
+    "website": "https://www.tikplay.games",
+    "apply_url": "https://www.tikplay.games/affiliates",
+    "source_url": "https://www.tikplay.games/affiliates"
+  },
+  {
+    "brand_name": "Strobepro",
+    "brand_size": "mid-size",
+    "category": "Photography / video lighting gear",
+    "commission": "2% base commission with performance incentives",
+    "website": "https://strobepro.com",
+    "apply_url": "https://strobepro.com/pages/referral-program",
+    "source_url": "https://strobepro.com/pages/referral-program"
+  },
+  {
+    "brand_name": "KeoBin",
+    "brand_size": "emerging",
+    "category": "Creator lighting / gaming room lighting",
+    "commission": "Up to 5%",
+    "website": "https://www.keobin.com",
+    "apply_url": "https://www.keobin.com/pages/affiliate-program",
+    "source_url": "https://www.keobin.com/pages/affiliate-program"
+  },
+  {
+    "brand_name": "HIBOITEC",
+    "brand_size": "emerging",
+    "category": "Lighting / creator setup gear",
+    "commission": "Up to 15%",
+    "website": "https://hiboitec.com",
+    "apply_url": "https://hiboitec.com/pages/affiliate-program",
+    "source_url": "https://hiboitec.com/pages/affiliate-program"
+  },
+  {
+    "brand_name": "Keyla AI",
+    "brand_size": "emerging",
+    "category": "AI video advertising / creator tool",
+    "commission": "30% recurring",
+    "website": "https://keyla.ai",
+    "apply_url": "https://keyla.ai/affiliate",
+    "source_url": "https://keyla.ai/affiliate"
+  },
+  {
+    "brand_name": "Dragon Roast Coffee",
+    "brand_size": "emerging",
+    "category": "Coffee / drinks",
+    "commission": "10-15%",
+    "website": "https://dragonroast.coffee",
+    "apply_url": "https://affiliate.dragonroast.coffee/",
+    "source_url": "https://affiliate.dragonroast.coffee/"
+  },
+  {
+    "brand_name": "GoKo",
+    "brand_size": "emerging",
+    "category": "Energy drinks / functional beverages",
+    "commission": "Not publicly listed",
+    "website": "https://drinkgoko.com",
+    "apply_url": "https://drinkgoko.com/pages/collab",
+    "source_url": "https://drinkgoko.com/pages/collab"
+  },
+  {
+    "brand_name": "TEAONIC",
+    "brand_size": "emerging",
+    "category": "Tea / wellness drinks",
+    "commission": "Starts at 10%",
+    "website": "https://teaonic.com",
+    "apply_url": "https://teaonic.com/pages/affiliate",
+    "source_url": "https://teaonic.com/pages/affiliate"
+  },
+  {
+    "brand_name": "eat2explore",
+    "brand_size": "emerging",
+    "category": "Food / cultural cooking kits",
+    "commission": "10%",
+    "website": "https://eat2explore.com",
+    "apply_url": "https://eat2explore.com/pages/affiliates",
+    "source_url": "https://eat2explore.com/pages/affiliates"
+  },
+  {
+    "brand_name": "The MeatStick",
+    "brand_size": "emerging",
+    "category": "Food tech / smart cooking gear",
+    "commission": "15%",
+    "website": "https://themeatstick.com",
+    "apply_url": "https://themeatstick.com/en-ca/pages/the-meatstick-affiliate-program",
+    "source_url": "https://themeatstick.com/en-ca/pages/the-meatstick-affiliate-program"
+  },
+  {
+    "brand_name": "Snap Spritz",
+    "brand_size": "emerging",
+    "category": "Food / grilling accessory",
+    "commission": "10%",
+    "website": "https://www.snapspritz.com",
+    "apply_url": "https://www.snapspritz.com/affiliates",
+    "source_url": "https://www.snapspritz.com/affiliates"
+  }
 ]
